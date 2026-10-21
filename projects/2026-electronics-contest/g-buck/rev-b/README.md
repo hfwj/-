@@ -4,6 +4,7 @@
 
 ## 下载与阅读
 
+- [原理图可行性与题意符合性审查](reports/原理图可行性与题意符合性审查.md)：逐项判断，重点说明控制、瞬时限流、效率和显示要求。
 - [仿真报告 PDF](reports/G题_RevB_仿真验证报告.pdf)
 - [可编辑报告 DOCX](reports/G题_RevB_仿真验证报告.docx)
 - [在线阅读报告 Markdown](reports/G题_RevB_仿真验证报告.md)
