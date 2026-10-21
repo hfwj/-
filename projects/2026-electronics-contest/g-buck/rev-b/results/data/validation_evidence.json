@@ -1,0 +1,13 @@
+{
+  "transient_experiments_completed": 22,
+  "dc_current_points": 4401,
+  "dc_voltage_points": 12001,
+  "ideal_logic_combinations_only": 16,
+  "verification": "Each transient log contains completed data rows; summary JSON and saved NPZ end times checked. PDF rendered and first page visually inspected. ZIP integrity checked.",
+  "limitations": [
+    "No actual STM32 firmware",
+    "No manufacturer MOSFET/driver SPICE models",
+    "No measured total efficiency",
+    "No EDA ERC or PCB DRC"
+  ]
+}

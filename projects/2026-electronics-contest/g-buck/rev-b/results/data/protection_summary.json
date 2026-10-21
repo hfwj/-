@@ -1,0 +1,19 @@
+{
+  "current": {
+    "healthy_min": -1.799,
+    "healthy_max": 1.8,
+    "ref_pos": 2.55,
+    "ref_neg": 0.75,
+    "ref_ov": 1.0,
+    "points": 4401
+  },
+  "voltage": {
+    "healthy_min": 0.0,
+    "healthy_max": 11.0,
+    "ref_pos": 2.55,
+    "ref_neg": 0.75,
+    "ref_ov": 1.0,
+    "points": 12001
+  },
+  "ideal_latch_truth_table_cases": 16
+}

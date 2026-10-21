@@ -1,0 +1,26 @@
+{
+  "load_steps": {
+    "post_vmin": 4.98020808,
+    "post_vmax": 9.93947709,
+    "post_il_min": 0.378758229,
+    "post_il_max": 1.13848797
+  },
+  "line_step": {
+    "post_vmin": 9.98667511,
+    "post_vmax": 10.0368027,
+    "post_il_min": 0.361560298,
+    "post_il_max": 0.673361398
+  },
+  "load_release": {
+    "post_vmin": 8.01993493,
+    "post_vmax": 10.6041178,
+    "post_il_min": -0.194800012,
+    "post_il_max": 1.12650383
+  },
+  "short_no_software": {
+    "post_vmin": 2.57273649e-10,
+    "post_vmax": 1.10745673,
+    "post_il_min": 2.55232828e-08,
+    "post_il_max": 1.80681953
+  }
+}

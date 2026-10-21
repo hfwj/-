@@ -1,0 +1,67 @@
+* RevB PDF-derived synchronous Buck; NOT vendor MOSFET/MCU model
+.param F=100000 T={1/F} DT=520n
+Vsource ext 0 25
+Rfuse ext fused 0.02
+Dinput fused shunt SS56_ASSUMED
+Rin shunt vin 0.05
+C1 vin 0 470u
+C2 vin 0 1u
+Shigh vin sw gh 0 SWMOS
+Slow sw 0 gl 0 SWMOS
+Dhigh sw vin BODY_ASSUMED
+Dlow 0 sw BODY_ASSUMED
+L1 sw lr 220u
+Rdcr lr lraw 0.15
+Ril lraw vcap 0.025
+C3 vcap ce 470u
+Resr ce 0 0.08
+C4 vcap 0 10u
+Rout vcap out 0.05
+Rbleed out 0 2200
+Rdivider out 0 11000
+Bload out 0 I=V(out)*0.05
+* Cascaded continuous PI proxy: outer voltage sets bounded inductor current.
+* Back-calculation antiwindup. These parameters are proposed, NOT supplied firmware.
+Bvset vset 0 V=10*min(1,time/10m)
+Bev ev 0 V=V(vset)-V(out)
+Bff ff 0 V=(time>1m && time<10m) ? 0.48 : 0
+Biref ir 0 V=max(-0.3,min(1,0.5*V(ev)+V(xv)+V(ff)))
+Cxv xv 0 1 ic=0
+Bxv 0 xv I=50*V(ev)+500*(V(ir)-(0.5*V(ev)+V(xv)+V(ff)))
+Bils ils 0 V=I(L1)
+* Functional hardware protection proxy; delay is an assumption, not a vendor timing model.
+Rprotect ils ilp 1k
+Cprotect ilp 0 400p
+Btrip tripraw 0 V=(time>1m && (abs(V(ilp))>1.8 || V(out)>11)) ? 1 : 0
+Rtrip tripraw trip 1k
+Ctrip trip 0 1.3n
+Clatch latch 0 1 ic=0
+Blatch 0 latch I=(V(trip)>0.5 && V(latch)<1) ? 1e6 : 0
+Rfilter ils ilf 1k
+Cfilter ilf 0 4.7n
+Bei ei 0 V=V(ir)-V(ilf)
+Braw raw 0 V=V(vcap)/max(V(vin),1)+0.15*V(ei)+V(xi)
+Bduty duty 0 V=max(0.08,min(0.88,V(raw)))
+Cxi xi 0 1 ic=0
+Bxi 0 xi I=200*V(ei)+1000*(V(duty)-V(raw))
+Bsaw saw 0 V=(time/T-floor(time/T))
+* 1ms auxiliary/boot precharge; then PWM. Gate outputs have 47ns RC assumptions.
+Bgh ghraw 0 V=(V(latch)<0.5 && time>1m && V(saw)>DT/T && V(saw)<V(duty)) ? 1 : 0
+Bgl glraw 0 V=(V(latch)<0.5 && (time<1m || V(saw)>V(duty)+DT/T)) ? 1 : 0
+Rgh ghraw gh 1k
+Cgh gh 0 47p
+Rgl glraw gl 1k
+Cgl gl 0 47p
+.model SWMOS SW(Ron=0.044 Roff=1e9 Vt=0.5 Vh=0)
+.model BODY_ASSUMED D(Is=1n N=1.5 Rs=0.03)
+.model SS56_ASSUMED D(Is=2u N=1.4 Rs=0.025)
+.options reltol=0.001 abstol=1n method=gear
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+tran 100n 0.08 0 100n uic
+wrdata /workspace/-/projects/2026-electronics-contest/g-buck/rev-b/results/data/settled_25V_20ohm.dat v(out) i(L1) v(vin) v(duty) v(ir) v(ext) i(Vsource) v(sw) v(vcap) v(latch)
+quit
+.endc
+.end

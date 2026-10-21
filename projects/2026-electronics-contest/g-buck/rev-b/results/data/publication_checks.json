@@ -1,0 +1,11 @@
+{
+  "purpose": "Verify reorganized paths without changing physical model",
+  "representative_case": "25V / 8 ohm",
+  "absolute_difference_from_original": {
+    "vout_mean": 0.0,
+    "i_load_mean": 0.0,
+    "pin_model": 0.0
+  },
+  "dc_reference_sweep": "rerun completed",
+  "original_transient_experiments": 22
+}

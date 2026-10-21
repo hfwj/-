@@ -1,0 +1,9 @@
+*.pdf binary
+*.docx binary
+*.png binary
+*.zip binary
+*.npz binary
+*.csv text eol=lf
+# Preserve raw solver output formatting, including column alignment/progress CRs.
+**/results/data/*.txt -whitespace
+**/results/logs/*.log -whitespace

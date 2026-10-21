@@ -1,0 +1,15 @@
+Warning: can't find the initialization file spinit.
+
+Note: No compatibility mode selected!
+
+
+Circuit: * revb pdf-derived synchronous buck; not vendor mosfet/mcu model
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+ Reference value :  1.50097e-03 Reference value :  2.36719e-03 Reference value :  3.22230e-03 Reference value :  4.07147e-03 Reference value :  4.88895e-03 Reference value :  5.75532e-03 Reference value :  6.48716e-03 Reference value :  7.25350e-03 Reference value :  7.92713e-03 Reference value :  8.74950e-03 Reference value :  9.58921e-03 Reference value :  1.04267e-02 Reference value :  1.12564e-02 Reference value :  1.19739e-02 Reference value :  1.27872e-02 Reference value :  1.36600e-02 Reference value :  1.44103e-02 Reference value :  1.50668e-02 Reference value :  1.57360e-02 Reference value :  1.65700e-02 Reference value :  1.71630e-02 Reference value :  1.79334e-02 Reference value :  1.85938e-02 Reference value :  1.94738e-02 Reference value :  2.01894e-02 Reference value :  2.08461e-02 Reference value :  2.16033e-02 Reference value :  2.21967e-02 Reference value :  2.27868e-02 Reference value :  2.34135e-02 Reference value :  2.40899e-02 Reference value :  2.47855e-02 Reference value :  2.55333e-02 Reference value :  2.61926e-02 Reference value :  2.69005e-02 Reference value :  2.75961e-02 Reference value :  2.82227e-02 Reference value :  2.89162e-02 Reference value :  2.95511e-02 Reference value :  3.02939e-02 Reference value :  3.09723e-02 Reference value :  3.18518e-02 Reference value :  3.25980e-02 Reference value :  3.34602e-02 Reference value :  3.42633e-02 Reference value :  3.49294e-02 Reference value :  3.57566e-02 Reference value :  3.64428e-02 Reference value :  3.70733e-02 Reference value :  3.78566e-02 Reference value :  3.86828e-02 Reference value :  3.93028e-02
+No. of Data Rows : 760020
+ngspice-44.2 done

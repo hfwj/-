@@ -1,0 +1,15 @@
+Warning: can't find the initialization file spinit.
+
+Note: No compatibility mode selected!
+
+
+Circuit: * revb pdf-derived synchronous buck; not vendor mosfet/mcu model
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+ Reference value :  1.41052e-03 Reference value :  2.21144e-03 Reference value :  2.92308e-03 Reference value :  3.56475e-03 Reference value :  4.40730e-03 Reference value :  5.26418e-03 Reference value :  6.16052e-03 Reference value :  7.04577e-03 Reference value :  7.91135e-03 Reference value :  8.85794e-03 Reference value :  9.89723e-03 Reference value :  1.08710e-02 Reference value :  1.18577e-02 Reference value :  1.28505e-02 Reference value :  1.37901e-02 Reference value :  1.46814e-02 Reference value :  1.55805e-02 Reference value :  1.64689e-02 Reference value :  1.73719e-02 Reference value :  1.82551e-02 Reference value :  1.91883e-02 Reference value :  2.01214e-02 Reference value :  2.10213e-02 Reference value :  2.19120e-02 Reference value :  2.27801e-02 Reference value :  2.36600e-02 Reference value :  2.44958e-02 Reference value :  2.53780e-02 Reference value :  2.62610e-02 Reference value :  2.71500e-02 Reference value :  2.80794e-02 Reference value :  2.92201e-02 Reference value :  3.00430e-02 Reference value :  3.08331e-02 Reference value :  3.19487e-02 Reference value :  3.30381e-02 Reference value :  3.41378e-02 Reference value :  3.50800e-02 Reference value :  3.60409e-02 Reference value :  3.69826e-02 Reference value :  3.77518e-02 Reference value :  3.86808e-02 Reference value :  3.96976e-02
+No. of Data Rows : 640872
+ngspice-44.2 done

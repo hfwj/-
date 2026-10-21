@@ -1,0 +1,32 @@
+* PDF reference network; ideal amplifier/comparator transfer only
+Va a 0 3.3
+R9 a pos 10k
+R10a pos pm 33k
+R10b pm 0 1k
+R15a a nm 33k
+R15b nm neg 1k
+R16 neg 0 10k
+R11 a ov 23k
+R12 ov 0 10k
+Vpull pull 0 3.3
+R13 pull fault 10k
+Bil il 0 V=1.65+0.5*V(itest)
+R4 out div 10k
+R5 div 0 1k
+Bpos cp 0 V=V(il)-V(pos)
+Bneg cn 0 V=V(neg)-V(il)
+Bov co 0 V=V(div)-V(ov)
+Sp fault 0 cp 0 CMP
+Sn fault 0 cn 0 CMP
+So fault 0 co 0 CMP
+.model CMP SW(Ron=5 Roff=1e12 Vt=0 Vh=0)
+Vi itest 0 0
+Vo out 0 0
+.control
+set wr_singlescale
+set wr_vecnames
+dc Vo 0 12 0.001
+wrdata /workspace/-/projects/2026-electronics-contest/g-buck/rev-b/results/data/protection_voltage.txt v(fault) v(pos) v(neg) v(ov) v(il)
+quit
+.endc
+.end
