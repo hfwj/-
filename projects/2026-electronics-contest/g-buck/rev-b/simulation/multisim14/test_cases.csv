@@ -1,0 +1,10 @@
+﻿circuit_file,input_V,initial_load_ohm,event,end_time_s,max_step_s
+01_15V_open.cir,15,1000000000000.0,steady,0.08,1e-7
+02_15V_20ohm.cir,15,20,steady,0.08,1e-7
+03_25V_20ohm.cir,25,20,steady,0.08,1e-7
+04_25V_8ohm.cir,25,8,steady,0.08,1e-7
+05_25V_5ohm.cir,25,5,steady,0.08,1e-7
+06_25V_load_steps.cir,25,20,load,0.16,1e-7
+07_input_15_to_25V.cir,15,20,line,0.12,1e-7
+08_25V_short_test.cir,25,8,short,0.11,1e-7
+09_MCU_disable.cir,25,20,disable,0.12,1e-7

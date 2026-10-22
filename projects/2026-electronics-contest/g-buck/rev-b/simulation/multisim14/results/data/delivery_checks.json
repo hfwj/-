@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-22",
+  "circuit_count": 9,
+  "model_port_count": 17,
+  "current_source_hashes_verified": true,
+  "all_requested_transients_completed": true,
+  "normal_cv_cc_functional_checks_passed": true,
+  "mcu_disable_both_gates_off_checked": true,
+  "multisim_14_native_import_or_execution_verified": false,
+  "manufacturer_transistor_or_driver_model": false,
+  "short_circuit_caused_overcurrent_latch_in_this_model": false,
+  "real_hardware_efficiency_verified": false
+}

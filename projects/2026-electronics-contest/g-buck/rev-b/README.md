@@ -4,6 +4,10 @@
 
 ## 下载与阅读
 
+- [NI Multisim 14.0仿真电路搭建说明](simulation/multisim14/README.md)：4页接线图、导入模型和9个测试工况；不是原生`.ms14`工程。
+- [Multisim电路交付与交叉核验说明](reports/Multisim14_仿真电路交付与核验说明.md)：当前模型9个工况的结果和未验证范围。
+- [Multisim 14.0接线图PDF](simulation/multisim14/diagrams/Multisim14_仿真电路接线图.pdf)
+- [Multisim 14.0专用搭建包ZIP](downloads/Multisim14_仿真电路搭建包.zip)
 - [原理图可行性与题意符合性审查](reports/原理图可行性与题意符合性审查.md)：逐项判断，重点说明控制、瞬时限流、效率和显示要求。
 - [仿真报告 PDF](reports/G题_RevB_仿真验证报告.pdf)
 - [可编辑报告 DOCX](reports/G题_RevB_仿真验证报告.docx)
