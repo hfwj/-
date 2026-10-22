@@ -3,7 +3,7 @@ Uses ngspice only; does not claim a native Multisim regression test.
 """
 from pathlib import Path
 import os,subprocess,tempfile,json,hashlib
-from build_circuits import ROOT,CASES
+from build_circuits import ROOT,CASES,MODEL
 
 NG=os.environ.get('NGSPICE','/workspace/tools/ngspice/usr/bin/ngspice')
 
@@ -36,6 +36,16 @@ def probe(name,src,expected_failure=False):
 def main():
     sample=(ROOT/'circuits/04_25V_8ohm.cir').read_text()
     assert sample.startswith('* G problem ')
+    model=(ROOT/'models/G_BUCK_RevB_EQ.lib').read_bytes()
+    assert model.startswith(b'.SUBCKT GBUCK_REVB_EQ ')
+    assert model==MODEL[MODEL.index('.SUBCKT GBUCK_REVB_EQ '):].encode('ascii')
+    assert model.count(b'.SUBCKT ')==2 and model.count(b'.ENDS ')==2
+    for ext in ['cir','txt']:
+        assert (ROOT/'models'/f'G_BUCK_RevB_EQ.{ext}').read_bytes()==model
+    model_check=probe('model_entry',sample.replace(MODEL,model.decode('ascii')))
+    model_check.update({'model_sha256':hashlib.sha256(model).hexdigest(),
+                        'first_bytes_are_subckt':True,'only_leading_comments_removed':True,
+                        'all_three_model_copies_byte_identical':True})
     legacy=probe('legacy_expected_failure',sample[2:],expected_failure=True)
     results=[]
     for name in CASES:
@@ -44,7 +54,7 @@ def main():
         results.append(probe(name,src))
     evidence={'scope':'Title parsed as ordinary netlist content + 20ns startup, ngspice PSpice mode only',
               **legacy,'corrected_file_count':len(results),'full_transient_rerun':False,
-              'native_multisim_retest':False,'results':results}
+              'native_multisim_retest':False,'model_entry_check':model_check,'results':results}
     (ROOT/'results/data/import_header_checks.json').write_text(json.dumps(evidence,indent=2))
     print('Reproduced legacy import-context failure; all 9 corrected files passed 20ns parse/startup checks.')
 

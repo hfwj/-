@@ -4,6 +4,18 @@
   "corrected_file_count": 9,
   "full_transient_rerun": false,
   "native_multisim_retest": false,
+  "model_entry_check": {
+    "case": "model_entry",
+    "distributed_source_sha256": "d8d40f3d664ffc54592a724fbc18003533fb14f7ea059817d7601e75c1a7c0cf",
+    "title_treated_as_ordinary_netlist_line": true,
+    "short_startup_end_s": 2e-08,
+    "native_multisim_retest": false,
+    "parser_and_short_startup_passed": true,
+    "model_sha256": "09e783d9da902a25141f04f9efc840e7bce8a8035c7b2dce7040416622e60c85",
+    "first_bytes_are_subckt": true,
+    "only_leading_comments_removed": true,
+    "all_three_model_copies_byte_identical": true
+  },
   "results": [
     {
       "case": "01_15V_open",

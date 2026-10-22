@@ -215,9 +215,13 @@ XBUCK VIN_EXT VOUT VSET ISET ARM MCU_EN FAULT_N IL_BI ADC_IL
 def main():
     (ROOT/'models').mkdir(exist_ok=True)
     (ROOT/'circuits').mkdir(exist_ok=True)
-    (ROOT/'models/G_BUCK_RevB_EQ.lib').write_text(MODEL,encoding='ascii')
+    # The wizard requires model data to begin with a declaration, not a comment.
+    # Leave embedded testbench MODEL unchanged to preserve existing provenance.
+    import_model=MODEL[MODEL.index('.SUBCKT GBUCK_REVB_EQ '):]
+    for extension in ['lib','cir','txt']:
+        (ROOT/'models'/f'G_BUCK_RevB_EQ.{extension}').write_text(import_model,encoding='ascii')
     for name,kw in CASES.items():
         (ROOT/'circuits'/f'{name}.cir').write_text(make_top(name,**kw),encoding='ascii')
-    print('Generated 9 self-contained .cir files and the 17-pin .lib component.')
+    print('Generated 9 complete test circuits and identical .lib/.cir/.txt model copies.')
 
 if __name__=='__main__':main()

@@ -2,7 +2,7 @@
 
 依据：用户提供的同步Buck完整原理图Rev B及B3物料清单。目标：在Multisim中搭建可观察10V恒压、约1A恒流自动切换、采样和故障停机的功能仿真电路。
 
-**先打开接线图，再用组件向导导入模型。** 当前交付是PDF/SVG接线图、SPICE模型和9个完整网表，不是原生`.ms14`文件。当前环境不能启动Windows版Multisim，因此未声称Multisim14.0已经导入或求解成功。提供的数值核验由ngspice的PSpice兼容模式完成，不能代替Multisim本机验证。
+**先打开接线图，再用组件向导导入模型。** 针对“数据模型要以.subckt或者.Model开头”报错，当前models目录的模型已去掉声明前的说明注释，直接以`.SUBCKT`开头。原文件可从`.SUBCKT GBUCK_REVB_EQ`开始复制至文件末尾，粘贴进可编辑模型数据框；不能只复制第一段而丢掉依赖。只有文件筛选器不显示.lib时才使用同内容.cir副本，改后缀本身不修复解析错误。当前交付是PDF/SVG接线图、SPICE模型和9个完整网表，不是原生`.ms14`文件。当前环境不能启动Windows版Multisim，因此未声称Multisim14.0已经导入或求解成功。提供的数值核验由ngspice的PSpice兼容模式完成，不能代替Multisim本机验证。
 
 建议把专用ZIP解压到纯英文路径，例如`C:\Multisim\G_Buck_RevB\`。用于导入的`.lib`和`.cir`文件名与内容均为ASCII，减少旧版软件的路径/编码兼容问题。
 
@@ -27,6 +27,8 @@
 - [4页完整接线图PDF](diagrams/Multisim14_仿真电路接线图.pdf)：主功率、驱动自举、采样控制保护、首个测试电路。
 - [01 主功率SVG](diagrams/01_power_stage.svg)、[02 驱动SVG](diagrams/02_driver.svg)、[03 控制采样SVG](diagrams/03_control_sense.svg)、[04 首个测试电路SVG](diagrams/04_multisim_testbench.svg)。
 - [导入模型G_BUCK_RevB_EQ.lib](models/G_BUCK_RevB_EQ.lib)：17引脚功能等效组件，含所需的子模型，不依赖厂家库。
+- [.cir扩展名的相同模型](models/G_BUCK_RevB_EQ.cir)：用于只显示.cir等文件的模型载入窗口，不是circuits目录中的完整测试工况。
+- [.txt全文复制副本](models/G_BUCK_RevB_EQ.txt)：用于复制粘贴到可编辑的模型数据框；以上三份内容逐字节相同。
 - [circuits/](circuits/)：9个自包含PSpice风格`.cir`文件；没有ngspice专用的`.control`命令，也没有外部`.include`路径依赖。
 - [元件表](components.csv)、[组件引脚映射](pin_mapping.csv)、[测试工况表](test_cases.csv)。
 - [交叉求解核验结果](results/data/verification_summary.json)：仅在核验脚本完成后生成；不是Multisim的结果。
@@ -40,7 +42,7 @@
 在Multisim 14.0中使用`Tools → Component Wizard`（工具→元件/组件向导；中文名称可能随版本语言不同）。目标是建立**仅仿真用的自定义组件**，不要分配PCB封装。
 
 1. 组件命名`GBUCK_REVB_EQ`，引脚数量设为17；选择可表示17引脚的矩形符号，给引脚添加下面的名称。
-2. 到SPICE模型步骤，载入`models/G_BUCK_RevB_EQ.lib`，选择顶层子电路`GBUCK_REVB_EQ`。**保留后面的`MOS_SWITCH_EQ`子电路和全部`.MODEL`定义**；它们是被调用的模型，不能只复制第一段后删掉依赖。
+2. 到SPICE模型步骤，载入当前`models/G_BUCK_RevB_EQ.lib`；如果能编辑模型文本，也可粘贴`models/G_BUCK_RevB_EQ.txt`全文。模型数据须直接以`.SUBCKT`开头。只有文件筛选器不显示.lib时才选同内容.cir副本。选择顶层子电路`GBUCK_REVB_EQ`。**保留后面的`MOS_SWITCH_EQ`子电路和全部`.MODEL`定义**；它们是被调用的模型，不能只复制第一段后删掉依赖。具体入口需以本机页面为准。
 3. 按下面表格做“符号引脚→模型端口”的映射。序号取自`.SUBCKT`声明顺序，不是实物芯片脚号。
 4. 保存到User Database（用户数据库）的自定义组，在原理图中放置该组件。
 

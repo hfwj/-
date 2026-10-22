@@ -114,7 +114,7 @@ def main():
     s.line(565,255,650,255)
     s.finish()
     s=Sheet(p,'04_multisim_testbench','04  Multisim首个可搭建电路 / 17-pin component testbench')
-    s.box(590,180,440,640,'GBUCK_REVB_EQ','Import .lib with Component Wizard\nSimulation-only custom component\nCOM must connect to ground 0')
+    s.box(590,180,440,640,'GBUCK_REVB_EQ','Paste model / load models/*.cir\nSimulation-only custom component\nCOM must connect to ground 0')
     left=[('VIN_EXT',730,'DC 25V'),('VSET',650,'DC 10V (10V target)'),('ISET',570,'DC 1V (1A target)'),('ARM',490,'PULSE 0->3.3V at 5ms, 10us wide'),('MCU_EN',410,'0 until 5.1ms, then 3.3V'),('COM',240,'Ground 0')]
     for name,y,label in left:
         s.line(360,y,590,y);s.text(400,y+12,name,15);s.text(60,y+30,label,14)

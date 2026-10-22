@@ -8,6 +8,8 @@
   "mcu_disable_both_gates_off_checked": true,
   "multisim_14_native_import_or_execution_verified": false,
   "manufacturer_transistor_or_driver_model": false,
+  "lib_cir_txt_model_copies_byte_identical": true,
+  "model_begins_with_subckt_and_only_leading_comments_removed": true,
   "short_circuit_caused_overcurrent_latch_in_this_model": false,
   "real_hardware_efficiency_verified": false
 }

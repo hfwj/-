@@ -2,7 +2,7 @@
 from pathlib import Path
 import hashlib,json,csv,re,zipfile
 import numpy as np
-from build_circuits import ROOT,CASES
+from build_circuits import ROOT,CASES,MODEL
 
 def make_zip(path,base,skip_diagnostics=False):
     with zipfile.ZipFile(path,'w',zipfile.ZIP_DEFLATED) as z:
@@ -39,6 +39,9 @@ def main():
     assert np.max(np.abs(off[:,4:6]))<.1,'MCU disable must remove both VGS commands'
     assert by['09_MCU_disable']['vout_mean_V']<.5
     model=(ROOT/'models/G_BUCK_RevB_EQ.lib').read_text(encoding='ascii')
+    assert model.startswith('.SUBCKT GBUCK_REVB_EQ ')
+    assert model==MODEL[MODEL.index('.SUBCKT GBUCK_REVB_EQ '):]
+    assert len({(ROOT/'models'/f'G_BUCK_RevB_EQ.{ext}').read_bytes() for ext in ['lib','cir','txt']})==1
     ports=model.split('.SUBCKT GBUCK_REVB_EQ ',1)[1].split('+ PARAMS:',1)[0].replace('\n+',' ').split()
     with (ROOT/'pin_mapping.csv').open(encoding='utf-8-sig') as f:pinrows=list(csv.DictReader(f))
     assert len(ports)==17 and ports==[r['port_name'] for r in pinrows]
@@ -47,6 +50,8 @@ def main():
             'normal_cv_cc_functional_checks_passed':True,'mcu_disable_both_gates_off_checked':True,
             'multisim_14_native_import_or_execution_verified':False,
             'manufacturer_transistor_or_driver_model':False,
+            'lib_cir_txt_model_copies_byte_identical':True,
+            'model_begins_with_subckt_and_only_leading_comments_removed':True,
             'short_circuit_caused_overcurrent_latch_in_this_model':by['08_25V_short_test']['fault_latched_final'],
             'real_hardware_efficiency_verified':False}
     (data/'delivery_checks.json').write_text(json.dumps(checks,indent=2))
@@ -63,14 +68,16 @@ def main():
 
 - [4页仿真接线图PDF](../simulation/multisim14/diagrams/Multisim14_仿真电路接线图.pdf)：主功率、浮动高侧驱动与自举、采样控制保护、首个17引脚组件测试电路。
 - [Multisim搭建步骤](../simulation/multisim14/README.md)：Component Wizard导入完整.lib、17端口映射、外部电源与脉冲设置及瞬态分析。
-- [导入模型](../simulation/multisim14/models/G_BUCK_RevB_EQ.lib)：ASCII编码、PSpice风格E/G行为源与通用开关/二极管。没有ngspice专用运行控制段。
+- 导入模型：[.cir副本](../simulation/multisim14/models/G_BUCK_RevB_EQ.cir)、[.txt全文复制副本](../simulation/multisim14/models/G_BUCK_RevB_EQ.txt)、[原.lib](../simulation/multisim14/models/G_BUCK_RevB_EQ.lib)。三个文件逐字节相同，用于处理不同文件筛选器；不表示进行了格式转换或已经验证Multisim导入。均为ASCII编码、PSpice风格E/G行为源与通用开关/二极管，没有ngspice专用运行控制段。
 - [9个完整测试网表](../simulation/multisim14/circuits/)：各文件独立包含模型，没有外部include路径依赖。
 - 元件表、引脚映射、CSV/JSON数值、原始求解日志、波形图和NPZ压缩轨迹。
 - [专用ZIP](../downloads/Multisim14_仿真电路搭建包.zip)：不含较大的NPZ与已取代数值失败日志，其余搭建资料均包含。完整波形保存在仓库中。
 
 ## 第一次搭建
 
-先按接线图第4页操作。导入GBUCK_REVB_EQ，COM接全局地0；VIN_EXT接25V、VSET接10V设定源、ISET接1V设定源、VOUT接8Ω；ARM在5ms给10us的3.3V脉冲，MCU_EN在5.1ms后为3.3V。运行0～80ms瞬态，最大步长100ns，零初始电容电压和电感电流。预期进入恒流，输出约8V/1A。VSET/ISET是仿真设定端口，不是实物STM32引脚。
+针对本机提示“数据模型要以.subckt或者.Model开头”，当前models目录三份模型文件已去掉声明前的5行注释，第一字节即为`.SUBCKT`；17端口、参数、全部元件与辅助子电路均未改。改扩展名本身不能解决这个报错。9个完整测试网表逐字节保持原状。模型正文一致性及短时启动核验见import_header_checks.json，不代表Multisim本机通过。
+
+先按接线图第4页操作。从文件载入当前models目录中的.lib；也可在可编辑模型文本框中粘贴.txt全文。只有文件筛选器不显示.lib时才改选同内容.cir副本。导入顶层GBUCK_REVB_EQ，COM接全局地0；VIN_EXT接25V、VSET接10V设定源、ISET接1V设定源、VOUT接8Ω；ARM在5ms给10us的3.3V脉冲，MCU_EN在5.1ms后为3.3V。运行0～80ms瞬态，最大步长100ns，零初始电容电压和电感电流。预期进入恒流，输出约8V/1A。VSET/ISET是仿真设定端口，不是实物STM32引脚。
 
 ## 已执行的交叉核验
 
