@@ -5,6 +5,7 @@
 ## 下载与阅读
 
 - [NI Multisim 14.0仿真电路搭建说明](simulation/multisim14/README.md)：4页接线图、导入模型和9个测试工况；不是原生`.ms14`工程。
+- [元器件向导逐页详细操作](simulation/multisim14/元器件向导逐页操作.md)：逐页填写、17脚映射、保存与首次运行。
 - [Multisim电路交付与交叉核验说明](reports/Multisim14_仿真电路交付与核验说明.md)：当前模型9个工况的结果和未验证范围。
 - [Multisim 14.0接线图PDF](simulation/multisim14/diagrams/Multisim14_仿真电路接线图.pdf)
 - [Multisim 14.0专用搭建包ZIP](downloads/Multisim14_仿真电路搭建包.zip)

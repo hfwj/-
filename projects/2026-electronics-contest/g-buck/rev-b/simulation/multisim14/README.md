@@ -20,6 +20,10 @@
 
 ## 文件入口
 
+- [元器件向导逐页详细操作](元器件向导逐页操作.md)：从新建元件到17脚映射、用户数据库保存及首次接线。
+- [详细操作PDF](元器件向导逐页操作.pdf)：可单独下载，逐页对照。
+- [17脚符号编号示意图](diagrams/05_component_symbol_pinmap.svg)：仅为引脚布局图，不是软件截图。
+- [17脚编号图PDF](diagrams/元器件向导_17脚编号图.pdf)：方便打印对照模型映射。
 - [4页完整接线图PDF](diagrams/Multisim14_仿真电路接线图.pdf)：主功率、驱动自举、采样控制保护、首个测试电路。
 - [01 主功率SVG](diagrams/01_power_stage.svg)、[02 驱动SVG](diagrams/02_driver.svg)、[03 控制采样SVG](diagrams/03_control_sense.svg)、[04 首个测试电路SVG](diagrams/04_multisim_testbench.svg)。
 - [导入模型G_BUCK_RevB_EQ.lib](models/G_BUCK_RevB_EQ.lib)：17引脚功能等效组件，含所需的子模型，不依赖厂家库。
@@ -188,6 +192,7 @@ VIN → C1(470uF) 与 C2(1uF) → GND
 ```bash
 python build_circuits.py
 python draw_circuits.py
+python make_wizard_guide.py
 python check_import_headers.py
 MPLCONFIGDIR=/tmp/buck-mpl python verify_equivalents.py
 ```
