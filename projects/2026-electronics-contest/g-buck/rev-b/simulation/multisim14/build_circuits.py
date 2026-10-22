@@ -212,12 +212,51 @@ XBUCK VIN_EXT VOUT VSET ISET ARM MCU_EN FAULT_N IL_BI ADC_IL
 .END
 '''
 
+def make_import_model():
+    """One top-level model for the Multisim component wizard.
+
+    The standalone testbenches retain their original library layout. The wizard
+    requires the helper subcircuit to be inside the main subcircuit instead.
+    """
+    model=MODEL[MODEL.index('.SUBCKT GBUCK_REVB_EQ '):]
+    boundary='.ENDS GBUCK_REVB_EQ\n\n'
+    assert model.count(boundary)==1
+    return model.replace(boundary,'',1)+'.ENDS GBUCK_REVB_EQ\n'
+
+
+def inspect_model_structure(model):
+    """Check the wizard's declaration, nesting and local model requirements."""
+    assert model.startswith('.SUBCKT GBUCK_REVB_EQ ')
+    stack=[];roots=[];children=[];model_count=0
+    for line in model.splitlines():
+        fields=line.split()
+        if not fields or fields[0].startswith('*'):continue
+        directive=fields[0].upper()
+        if directive=='.SUBCKT':
+            (children if stack else roots).append(fields[1])
+            stack.append(fields[1])
+        elif directive=='.ENDS':
+            assert stack and len(fields)==2 and fields[1]==stack[-1]
+            stack.pop()
+        elif directive=='.MODEL':
+            assert stack,'Dependent .MODEL must be inside the main subcircuit'
+            model_count+=1
+    assert not stack and roots==['GBUCK_REVB_EQ']
+    assert children==['MOS_SWITCH_EQ'] and model_count==7
+    # The only declaration-body change is moving the main .ENDS to the end.
+    old=MODEL[MODEL.index('.SUBCKT GBUCK_REVB_EQ '):]
+    body_lines=lambda text:[s for s in text.splitlines() if s and s!='.ENDS GBUCK_REVB_EQ']
+    assert body_lines(model)==body_lines(old)
+    return {'top_level_subcircuits':roots,'dependent_subcircuits':children,
+            'local_model_definitions':model_count,'only_outer_ends_relocated':True}
+
+
 def main():
     (ROOT/'models').mkdir(exist_ok=True)
     (ROOT/'circuits').mkdir(exist_ok=True)
-    # The wizard requires model data to begin with a declaration, not a comment.
     # Leave embedded testbench MODEL unchanged to preserve existing provenance.
-    import_model=MODEL[MODEL.index('.SUBCKT GBUCK_REVB_EQ '):]
+    import_model=make_import_model()
+    inspect_model_structure(import_model)
     for extension in ['lib','cir','txt']:
         (ROOT/'models'/f'G_BUCK_RevB_EQ.{extension}').write_text(import_model,encoding='ascii')
     for name,kw in CASES.items():

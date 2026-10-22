@@ -9,7 +9,18 @@
   "multisim_14_native_import_or_execution_verified": false,
   "manufacturer_transistor_or_driver_model": false,
   "lib_cir_txt_model_copies_byte_identical": true,
-  "model_begins_with_subckt_and_only_leading_comments_removed": true,
+  "model_begins_with_subckt": true,
+  "wizard_model_structure": {
+    "top_level_subcircuits": [
+      "GBUCK_REVB_EQ"
+    ],
+    "dependent_subcircuits": [
+      "MOS_SWITCH_EQ"
+    ],
+    "local_model_definitions": 7,
+    "only_outer_ends_relocated": true
+  },
+  "nested_wizard_model_25V_8ohm_80ms_ngspice_check_passed": true,
   "short_circuit_caused_overcurrent_latch_in_this_model": false,
   "real_hardware_efficiency_verified": false
 }

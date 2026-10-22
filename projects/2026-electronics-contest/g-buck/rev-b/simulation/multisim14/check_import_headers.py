@@ -3,7 +3,7 @@ Uses ngspice only; does not claim a native Multisim regression test.
 """
 from pathlib import Path
 import os,subprocess,tempfile,json,hashlib
-from build_circuits import ROOT,CASES,MODEL
+from build_circuits import ROOT,CASES,MODEL,make_import_model,inspect_model_structure
 
 NG=os.environ.get('NGSPICE','/workspace/tools/ngspice/usr/bin/ngspice')
 
@@ -38,13 +38,14 @@ def main():
     assert sample.startswith('* G problem ')
     model=(ROOT/'models/G_BUCK_RevB_EQ.lib').read_bytes()
     assert model.startswith(b'.SUBCKT GBUCK_REVB_EQ ')
-    assert model==MODEL[MODEL.index('.SUBCKT GBUCK_REVB_EQ '):].encode('ascii')
+    assert model==make_import_model().encode('ascii')
+    structure=inspect_model_structure(model.decode('ascii'))
     assert model.count(b'.SUBCKT ')==2 and model.count(b'.ENDS ')==2
     for ext in ['cir','txt']:
         assert (ROOT/'models'/f'G_BUCK_RevB_EQ.{ext}').read_bytes()==model
     model_check=probe('model_entry',sample.replace(MODEL,model.decode('ascii')))
     model_check.update({'model_sha256':hashlib.sha256(model).hexdigest(),
-                        'first_bytes_are_subckt':True,'only_leading_comments_removed':True,
+                        'first_bytes_are_subckt':True,'model_structure':structure,
                         'all_three_model_copies_byte_identical':True})
     legacy=probe('legacy_expected_failure',sample[2:],expected_failure=True)
     results=[]

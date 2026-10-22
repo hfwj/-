@@ -13,7 +13,9 @@
 
 ## 第一次搭建
 
-针对本机提示“数据模型要以.subckt或者.Model开头”，当前models目录三份模型文件已去掉声明前的5行注释，第一字节即为`.SUBCKT`；17端口、参数、全部元件与辅助子电路均未改。改扩展名本身不能解决这个报错。9个完整测试网表逐字节保持原状。模型正文一致性及短时启动核验见import_header_checks.json，不代表Multisim本机通过。
+当前models目录三份模型文件均以`.SUBCKT`开头，且只有GBUCK_REVB_EQ一个顶层子电路。针对“multiple top-level .subckt statements”，已将辅助MOS_SWITCH_EQ嵌套在主模型内部：主模型的`.ENDS GBUCK_REVB_EQ`移至整个文件最后，位于`.ENDS MOS_SWITCH_EQ`之后；全部.MODEL位于主模型或其内部辅助子电路中。17端口、参数和元件行不变，9个完整测试网表逐字节保持原状。改扩展名本身不能解决这两个模型结构报错。
+
+新版向导模型另完成25V/8Ω的0～80ms ngspice核验；最后5ms输出均值约7.9647V、外部负载电流约0.9956A。输出波形在3000个比较点相对原始模型的最大差值约0.002057V。结构及短时检查见import_header_checks.json，完整单工况复核见[wizard_nested_model_check.json](../simulation/multisim14/results/data/wizard_nested_model_check.json)。其余8工况未用新版嵌套模型重跑，原9工况数据对应原测试网表；以上检查均不代表Multisim本机通过。
 
 先按接线图第4页操作。从文件载入当前models目录中的.lib；也可在可编辑模型文本框中粘贴.txt全文。只有文件筛选器不显示.lib时才改选同内容.cir副本。导入顶层GBUCK_REVB_EQ，COM接全局地0；VIN_EXT接25V、VSET接10V设定源、ISET接1V设定源、VOUT接8Ω；ARM在5ms给10us的3.3V脉冲，MCU_EN在5.1ms后为3.3V。运行0～80ms瞬态，最大步长100ns，零初始电容电压和电感电流。预期进入恒流，输出约8V/1A。VSET/ISET是仿真设定端口，不是实物STM32引脚。
 

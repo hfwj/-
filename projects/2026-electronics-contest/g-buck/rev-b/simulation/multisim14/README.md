@@ -6,6 +6,12 @@
 
 建议把专用ZIP解压到纯英文路径，例如`C:\Multisim\G_Buck_RevB\`。用于导入的`.lib`和`.cir`文件名与内容均为ASCII，减少旧版软件的路径/编码兼容问题。
 
+## 向导提示 multiple top-level .subckt statements
+
+此报错说明向导只接受一个顶层子电路。当前models目录的三个模型副本均已将辅助`MOS_SWITCH_EQ`嵌套在主`GBUCK_REVB_EQ`内部；所有`.MODEL`也都位于主模型或内部辅助子电路内。文件末尾依次为`.ENDS MOS_SWITCH_EQ`和`.ENDS GBUCK_REVB_EQ`。此前两个子电路并列的文件需要更新，不能只去掉开头注释。
+
+手动修正旧模型时，将辅助子电路前面的那一行`.ENDS GBUCK_REVB_EQ`剪切至文件最末尾即可，保留其余电路。17端口、参数和元件行不变；9个完整测试网表仍保留原布局，以免混淆其完整求解证据。新版向导模型另跑25V/8Ω的0～80ms核验并比较原输出波形，见[wizard_nested_model_check.json](results/data/wizard_nested_model_check.json)；该检查使用ngspice，仍不代表Multisim本机导入通过。
+
 ## 已修复：标题被当作G受控源
 
 旧版`.cir`首行是`G problem Rev B / ...`。某些导入入口不把首行当成标题，会把首个`G`当作元件名，于是把`/`、`PSpice`、`style`等文字误解析为电流源增益表达式。若看到这组错误，先选择不继续，把首行前加`* `，再重新导入；也可重新下载当前修正版。
@@ -42,7 +48,7 @@
 在Multisim 14.0中使用`Tools → Component Wizard`（工具→元件/组件向导；中文名称可能随版本语言不同）。目标是建立**仅仿真用的自定义组件**，不要分配PCB封装。
 
 1. 组件命名`GBUCK_REVB_EQ`，引脚数量设为17；选择可表示17引脚的矩形符号，给引脚添加下面的名称。
-2. 到SPICE模型步骤，载入当前`models/G_BUCK_RevB_EQ.lib`；如果能编辑模型文本，也可粘贴`models/G_BUCK_RevB_EQ.txt`全文。模型数据须直接以`.SUBCKT`开头。只有文件筛选器不显示.lib时才选同内容.cir副本。选择顶层子电路`GBUCK_REVB_EQ`。**保留后面的`MOS_SWITCH_EQ`子电路和全部`.MODEL`定义**；它们是被调用的模型，不能只复制第一段后删掉依赖。具体入口需以本机页面为准。
+2. 到SPICE模型步骤，载入当前`models/G_BUCK_RevB_EQ.lib`；如果能编辑模型文本，也可粘贴`models/G_BUCK_RevB_EQ.txt`全文。模型数据须直接以`.SUBCKT`开头，且只有GBUCK_REVB_EQ一个顶层子电路。只有文件筛选器不显示.lib时才选同内容.cir副本。**保留主模型内部的`MOS_SWITCH_EQ`子电路和全部`.MODEL`定义**，主模型的`.ENDS GBUCK_REVB_EQ`必须位于文件最后。具体入口需以本机页面为准。
 3. 按下面表格做“符号引脚→模型端口”的映射。序号取自`.SUBCKT`声明顺序，不是实物芯片脚号。
 4. 保存到User Database（用户数据库）的自定义组，在原理图中放置该组件。
 
@@ -196,7 +202,11 @@ python build_circuits.py
 python draw_circuits.py
 python make_wizard_guide.py
 python check_import_headers.py
+python check_wizard_model.py
 MPLCONFIGDIR=/tmp/buck-mpl python verify_equivalents.py
+python package_delivery.py
 ```
 
 `verify_equivalents.py`只对临时副本增加ngspice控制命令，使用`ngbehavior=psa`核对PSpice风格表达式、启动、正常工况和指定停机行为，保存原始求解日志、压缩波形和数值汇总。它不会生成`.ms14`，也不会把ngspice结果标为Multisim通过。
+
+`check_wizard_model.py`验证新版向导模型只有一个顶层子电路，全部依赖定义均在其内部，并在原25V/8Ω测试电路中替换成嵌套模型运行0～80ms。完整单工况复核与原9工况证据分别保存，不将原有数据冒充新版全部工况实测。

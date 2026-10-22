@@ -6,14 +6,23 @@
   "native_multisim_retest": false,
   "model_entry_check": {
     "case": "model_entry",
-    "distributed_source_sha256": "d8d40f3d664ffc54592a724fbc18003533fb14f7ea059817d7601e75c1a7c0cf",
+    "distributed_source_sha256": "aa145afdd4c22850d0d03031d5746518f9137b1b5ae957dd78c2eace84085648",
     "title_treated_as_ordinary_netlist_line": true,
     "short_startup_end_s": 2e-08,
     "native_multisim_retest": false,
     "parser_and_short_startup_passed": true,
-    "model_sha256": "09e783d9da902a25141f04f9efc840e7bce8a8035c7b2dce7040416622e60c85",
+    "model_sha256": "939267824fc580124f3161709e326730f33222524edc88385ec46585466571e3",
     "first_bytes_are_subckt": true,
-    "only_leading_comments_removed": true,
+    "model_structure": {
+      "top_level_subcircuits": [
+        "GBUCK_REVB_EQ"
+      ],
+      "dependent_subcircuits": [
+        "MOS_SWITCH_EQ"
+      ],
+      "local_model_definitions": 7,
+      "only_outer_ends_relocated": true
+    },
     "all_three_model_copies_byte_identical": true
   },
   "results": [

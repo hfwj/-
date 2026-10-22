@@ -1,0 +1,27 @@
+{
+  "solver": "ngspice 44.2 / ngbehavior=psa",
+  "native_multisim_retest": false,
+  "case": "04_25V_8ohm",
+  "end_time_s": 0.08,
+  "data_rows": 1675509,
+  "model_sha256": "939267824fc580124f3161709e326730f33222524edc88385ec46585466571e3",
+  "testbench_before_runtime_control_sha256": "aa145afdd4c22850d0d03031d5746518f9137b1b5ae957dd78c2eace84085648",
+  "original_distributed_testbench_sha256": "33e8ddf587dfd6fac0bd113e494e07ab696ab7fc724d489e3e9743d7a2e64221",
+  "model_structure": {
+    "top_level_subcircuits": [
+      "GBUCK_REVB_EQ"
+    ],
+    "dependent_subcircuits": [
+      "MOS_SWITCH_EQ"
+    ],
+    "local_model_definitions": 7,
+    "only_outer_ends_relocated": true
+  },
+  "previous_multiple_root_layout_rejected": true,
+  "last_5ms_vout_mean_V": 7.9647488085689915,
+  "last_5ms_load_current_mean_A": 0.9955936010711239,
+  "simultaneous_vgs_above_6V_samples_after_20ms": 0,
+  "vout_max_difference_from_original_at_3000_samples_V": 0.002056949563469246,
+  "full_transient_passed": true,
+  "other_eight_cases_rerun_with_nested_model": false
+}
