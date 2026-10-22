@@ -2,7 +2,7 @@
   "date": "2026-10-22",
   "circuit_count": 9,
   "model_port_count": 17,
-  "current_source_hashes_verified": true,
+  "source_provenance_and_comment_only_equivalence_verified": true,
   "all_requested_transients_completed": true,
   "normal_cv_cc_functional_checks_passed": true,
   "mcu_disable_both_gates_off_checked": true,

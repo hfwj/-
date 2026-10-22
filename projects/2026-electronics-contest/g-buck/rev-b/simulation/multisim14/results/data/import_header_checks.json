@@ -1,0 +1,81 @@
+{
+  "scope": "Title parsed as ordinary netlist content + 20ns startup, ngspice PSpice mode only",
+  "expected_legacy_parse_failure_reproduced": true,
+  "corrected_file_count": 9,
+  "full_transient_rerun": false,
+  "native_multisim_retest": false,
+  "results": [
+    {
+      "case": "01_15V_open",
+      "distributed_source_sha256": "2076803a412555b52523f7b73de48eedd3e51a93e02473fef1bf069057dfd4d2",
+      "title_treated_as_ordinary_netlist_line": true,
+      "short_startup_end_s": 2e-08,
+      "native_multisim_retest": false,
+      "parser_and_short_startup_passed": true
+    },
+    {
+      "case": "02_15V_20ohm",
+      "distributed_source_sha256": "90a14ebebd03093f639f3ad83a7aa14d60d3e4f33267dced4c0fd84df9e117b6",
+      "title_treated_as_ordinary_netlist_line": true,
+      "short_startup_end_s": 2e-08,
+      "native_multisim_retest": false,
+      "parser_and_short_startup_passed": true
+    },
+    {
+      "case": "03_25V_20ohm",
+      "distributed_source_sha256": "130a79745b52e93366b66bf910098fe8b3684446d258c8875cae84d69bd62908",
+      "title_treated_as_ordinary_netlist_line": true,
+      "short_startup_end_s": 2e-08,
+      "native_multisim_retest": false,
+      "parser_and_short_startup_passed": true
+    },
+    {
+      "case": "04_25V_8ohm",
+      "distributed_source_sha256": "33e8ddf587dfd6fac0bd113e494e07ab696ab7fc724d489e3e9743d7a2e64221",
+      "title_treated_as_ordinary_netlist_line": true,
+      "short_startup_end_s": 2e-08,
+      "native_multisim_retest": false,
+      "parser_and_short_startup_passed": true
+    },
+    {
+      "case": "05_25V_5ohm",
+      "distributed_source_sha256": "3582a1a25c97df1c9b7cf813d8c2eb9c78fa4cb53840183f036e0162f9f76851",
+      "title_treated_as_ordinary_netlist_line": true,
+      "short_startup_end_s": 2e-08,
+      "native_multisim_retest": false,
+      "parser_and_short_startup_passed": true
+    },
+    {
+      "case": "06_25V_load_steps",
+      "distributed_source_sha256": "bd5557c563f3637871b833ca51521ecae44f5a2977f1412787f98cc6292260f8",
+      "title_treated_as_ordinary_netlist_line": true,
+      "short_startup_end_s": 2e-08,
+      "native_multisim_retest": false,
+      "parser_and_short_startup_passed": true
+    },
+    {
+      "case": "07_input_15_to_25V",
+      "distributed_source_sha256": "2428a0a45eef00883a08957c7dccdb0f71608ca47edc38cb3d95de393de29c61",
+      "title_treated_as_ordinary_netlist_line": true,
+      "short_startup_end_s": 2e-08,
+      "native_multisim_retest": false,
+      "parser_and_short_startup_passed": true
+    },
+    {
+      "case": "08_25V_short_test",
+      "distributed_source_sha256": "ffaba08dd6e8cf7393fd2821ea641407df825f0405a177bed57b80ac32c1f22a",
+      "title_treated_as_ordinary_netlist_line": true,
+      "short_startup_end_s": 2e-08,
+      "native_multisim_retest": false,
+      "parser_and_short_startup_passed": true
+    },
+    {
+      "case": "09_MCU_disable",
+      "distributed_source_sha256": "b69d115c77ab6d9599c36f9662c5b66a235374fa0016c0faf3de89ef7f5ec1f0",
+      "title_treated_as_ordinary_netlist_line": true,
+      "short_startup_end_s": 2e-08,
+      "native_multisim_retest": false,
+      "parser_and_short_startup_passed": true
+    }
+  ]
+}

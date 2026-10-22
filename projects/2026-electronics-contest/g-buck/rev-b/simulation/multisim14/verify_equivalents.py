@@ -23,6 +23,13 @@ def run(name):
         result=json.loads(cache.read_text())
         if result.get('source_sha256')==digest:
             print('Reusing validated '+name,flush=True);return result
+        eq=result.get('header_fix_equivalence',{})
+        body_digest=hashlib.sha256(src.split('\n',1)[1].encode()).hexdigest()
+        if (src.startswith('* ') and eq.get('distributed_source_sha256')==digest
+            and eq.get('solver_source_sha256')==result.get('source_sha256')
+            and eq.get('body_before_sha256')==eq.get('body_after_sha256')==body_digest):
+            print('Reusing full-run results; only title comment changed: '+name,flush=True)
+            return result
     print('Starting '+name,flush=True)
     with tempfile.TemporaryDirectory(prefix='gbuck-ms14-',dir='/tmp') as td:
         work=Path(td);raw=work/'trace.txt'
@@ -78,7 +85,8 @@ def main():
     results.sort(key=lambda r:r['case'])
     (DATA/'verification_summary.json').write_text(json.dumps(results,indent=2))
     with (DATA/'verification_summary.csv').open('w',newline='') as f:
-        w=csv.DictWriter(f,fieldnames=list(results[0]));w.writeheader();w.writerows(results)
+        fields=list(dict.fromkeys(k for row in results for k in row))
+        w=csv.DictWriter(f,fieldnames=fields);w.writeheader();w.writerows(results)
     for name in ['04_25V_8ohm','06_25V_load_steps','07_input_15_to_25V','08_25V_short_test','09_MCU_disable']:
         b=np.load(DATA/f'{name}.npz');a=b['trace'];il=b['il']
         fig,ax=plt.subplots(3,1,figsize=(10,7),layout='constrained')

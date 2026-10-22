@@ -22,7 +22,16 @@
     "pin_equivalent_assumptions_W": 0.6416314733772644,
     "pout_W": 9.999317055171007e-11,
     "eta_equivalent_assumptions": null,
-    "simultaneous_vgs_above_6V_samples_after_20ms": 0
+    "simultaneous_vgs_above_6V_samples_after_20ms": 0,
+    "header_fix_equivalence": {
+      "change": "prefix first-line title with SPICE comment marker only",
+      "solver_source_sha256": "396fd3232ca3e76ef8bf637c67dd210a59bb9fb420bb792bbc3f9aa3e955e162",
+      "distributed_source_sha256": "2076803a412555b52523f7b73de48eedd3e51a93e02473fef1bf069057dfd4d2",
+      "body_before_sha256": "ff0ef7e3c3d5863683aa61cb761141beea3062e35d44c4f1f8ab2ee2a7d1af37",
+      "body_after_sha256": "ff0ef7e3c3d5863683aa61cb761141beea3062e35d44c4f1f8ab2ee2a7d1af37",
+      "full_transient_rerun": false,
+      "multisim_native_retest": false
+    }
   },
   {
     "case": "02_15V_20ohm",
@@ -47,7 +56,16 @@
     "pin_equivalent_assumptions_W": 5.955420199710456,
     "pout_W": 4.998387946749685,
     "eta_equivalent_assumptions": 0.8393006335628004,
-    "simultaneous_vgs_above_6V_samples_after_20ms": 0
+    "simultaneous_vgs_above_6V_samples_after_20ms": 0,
+    "header_fix_equivalence": {
+      "change": "prefix first-line title with SPICE comment marker only",
+      "solver_source_sha256": "11c6780f385ed588239f854a6d0f05bae4518fa5c49dda558393a99faedac178",
+      "distributed_source_sha256": "90a14ebebd03093f639f3ad83a7aa14d60d3e4f33267dced4c0fd84df9e117b6",
+      "body_before_sha256": "20859c355fdac570d7a952cfcbd01a171a42cb2cd6b37ae4140ebb6442989c26",
+      "body_after_sha256": "20859c355fdac570d7a952cfcbd01a171a42cb2cd6b37ae4140ebb6442989c26",
+      "full_transient_rerun": false,
+      "multisim_native_retest": false
+    }
   },
   {
     "case": "03_25V_20ohm",
@@ -72,7 +90,16 @@
     "pin_equivalent_assumptions_W": 5.880872780652781,
     "pout_W": 4.996440021557786,
     "eta_equivalent_assumptions": 0.8496085883706497,
-    "simultaneous_vgs_above_6V_samples_after_20ms": 0
+    "simultaneous_vgs_above_6V_samples_after_20ms": 0,
+    "header_fix_equivalence": {
+      "change": "prefix first-line title with SPICE comment marker only",
+      "solver_source_sha256": "940b03ef7767521d231348e9ae15473924e3875f5456ce396e5479d324db1112",
+      "distributed_source_sha256": "130a79745b52e93366b66bf910098fe8b3684446d258c8875cae84d69bd62908",
+      "body_before_sha256": "48f4ef273cf552abcc21b836f777530d66994f55ae735f16bac3f6c4870fa5f5",
+      "body_after_sha256": "48f4ef273cf552abcc21b836f777530d66994f55ae735f16bac3f6c4870fa5f5",
+      "full_transient_rerun": false,
+      "multisim_native_retest": false
+    }
   },
   {
     "case": "04_25V_8ohm",
@@ -97,7 +124,16 @@
     "pin_equivalent_assumptions_W": 9.113804314663627,
     "pout_W": 7.930513625835181,
     "eta_equivalent_assumptions": 0.870165010354173,
-    "simultaneous_vgs_above_6V_samples_after_20ms": 0
+    "simultaneous_vgs_above_6V_samples_after_20ms": 0,
+    "header_fix_equivalence": {
+      "change": "prefix first-line title with SPICE comment marker only",
+      "solver_source_sha256": "3cf65142adcc613f3c39516568b46862e1427848d31eb6aabe08e12f985bb65a",
+      "distributed_source_sha256": "33e8ddf587dfd6fac0bd113e494e07ab696ab7fc724d489e3e9743d7a2e64221",
+      "body_before_sha256": "0526ad8fe8f4a84b87459e08783dcfc0da2e9641f63d9d8cc2bdd999940d5d8a",
+      "body_after_sha256": "0526ad8fe8f4a84b87459e08783dcfc0da2e9641f63d9d8cc2bdd999940d5d8a",
+      "full_transient_rerun": false,
+      "multisim_native_retest": false
+    }
   },
   {
     "case": "05_25V_5ohm",
@@ -122,7 +158,16 @@
     "pin_equivalent_assumptions_W": 6.070797052370246,
     "pout_W": 4.972728705905744,
     "eta_equivalent_assumptions": 0.8191228701944865,
-    "simultaneous_vgs_above_6V_samples_after_20ms": 0
+    "simultaneous_vgs_above_6V_samples_after_20ms": 0,
+    "header_fix_equivalence": {
+      "change": "prefix first-line title with SPICE comment marker only",
+      "solver_source_sha256": "52d4b63c864daac73a3cff82650b5f4ca44fa77251bc49297105760d06e60fb2",
+      "distributed_source_sha256": "3582a1a25c97df1c9b7cf813d8c2eb9c78fa4cb53840183f036e0162f9f76851",
+      "body_before_sha256": "8cebc72ac7e617acfaf26e5b35fb2ae4a0d299eb95968937ddd9b2c73a2da309",
+      "body_after_sha256": "8cebc72ac7e617acfaf26e5b35fb2ae4a0d299eb95968937ddd9b2c73a2da309",
+      "full_transient_rerun": false,
+      "multisim_native_retest": false
+    }
   },
   {
     "case": "06_25V_load_steps",
@@ -147,7 +192,16 @@
     "pin_equivalent_assumptions_W": 6.071239201236136,
     "pout_W": 4.973420479719038,
     "eta_equivalent_assumptions": 0.8191771588749829,
-    "simultaneous_vgs_above_6V_samples_after_20ms": 0
+    "simultaneous_vgs_above_6V_samples_after_20ms": 0,
+    "header_fix_equivalence": {
+      "change": "prefix first-line title with SPICE comment marker only",
+      "solver_source_sha256": "c49391c3ca3f17b32e8f57d965fc72699e2c5e268655dc4d4b30336f4026db56",
+      "distributed_source_sha256": "bd5557c563f3637871b833ca51521ecae44f5a2977f1412787f98cc6292260f8",
+      "body_before_sha256": "bc9a4fc782208526f5254e22a970efbe08ee84e22661e7c5b03f8b18264ec088",
+      "body_after_sha256": "bc9a4fc782208526f5254e22a970efbe08ee84e22661e7c5b03f8b18264ec088",
+      "full_transient_rerun": false,
+      "multisim_native_retest": false
+    }
   },
   {
     "case": "07_input_15_to_25V",
@@ -172,7 +226,16 @@
     "pin_equivalent_assumptions_W": 5.886559245551945,
     "pout_W": 4.999721467319771,
     "eta_equivalent_assumptions": 0.8493453066148456,
-    "simultaneous_vgs_above_6V_samples_after_20ms": 0
+    "simultaneous_vgs_above_6V_samples_after_20ms": 0,
+    "header_fix_equivalence": {
+      "change": "prefix first-line title with SPICE comment marker only",
+      "solver_source_sha256": "8be07c8397291f438bd996aaa030c9b987e6244c57cb2c1c1c724968b237d0d1",
+      "distributed_source_sha256": "2428a0a45eef00883a08957c7dccdb0f71608ca47edc38cb3d95de393de29c61",
+      "body_before_sha256": "8c03011e1aea343b17091b47d399ba9e501cab8ab03af83bcb728a821de9aac4",
+      "body_after_sha256": "8c03011e1aea343b17091b47d399ba9e501cab8ab03af83bcb728a821de9aac4",
+      "full_transient_rerun": false,
+      "multisim_native_retest": false
+    }
   },
   {
     "case": "08_25V_short_test",
@@ -197,7 +260,16 @@
     "pin_equivalent_assumptions_W": 0.9740326960563008,
     "pout_W": 0.010984629147066756,
     "eta_equivalent_assumptions": null,
-    "simultaneous_vgs_above_6V_samples_after_20ms": 0
+    "simultaneous_vgs_above_6V_samples_after_20ms": 0,
+    "header_fix_equivalence": {
+      "change": "prefix first-line title with SPICE comment marker only",
+      "solver_source_sha256": "a936ebacb2c2aaf89cbeb7b41e4f4d5b9ca20a66f2995f1a736cc4b76835fafc",
+      "distributed_source_sha256": "ffaba08dd6e8cf7393fd2821ea641407df825f0405a177bed57b80ac32c1f22a",
+      "body_before_sha256": "9205e06f773dbbda09b78af5fc7a4fc96fd68f04d013d9329678dd7546e36708",
+      "body_after_sha256": "9205e06f773dbbda09b78af5fc7a4fc96fd68f04d013d9329678dd7546e36708",
+      "full_transient_rerun": false,
+      "multisim_native_retest": false
+    }
   },
   {
     "case": "09_MCU_disable",
@@ -222,6 +294,15 @@
     "pin_equivalent_assumptions_W": 0.40887832804936797,
     "pout_W": 0.0020307769669771947,
     "eta_equivalent_assumptions": null,
-    "simultaneous_vgs_above_6V_samples_after_20ms": 0
+    "simultaneous_vgs_above_6V_samples_after_20ms": 0,
+    "header_fix_equivalence": {
+      "change": "prefix first-line title with SPICE comment marker only",
+      "solver_source_sha256": "5597a84d4802a20a8768278ac399215d678984195c05c2bd5f42bba6d7cfd30f",
+      "distributed_source_sha256": "b69d115c77ab6d9599c36f9662c5b66a235374fa0016c0faf3de89ef7f5ec1f0",
+      "body_before_sha256": "7a0cee5569712e13bd66d42e9876f174152378aab95b97033404b413be1d2d61",
+      "body_after_sha256": "7a0cee5569712e13bd66d42e9876f174152378aab95b97033404b413be1d2d61",
+      "full_transient_rerun": false,
+      "multisim_native_retest": false
+    }
   }
 ]

@@ -194,7 +194,7 @@ VLOAD2 LOADCTL2 0 PWL(0 0 110.003m 0 110.004m 1)
 SSHORT SHORTNODE 0 SHORTCTL 0 SW_TEST
 VSHORT SHORTCTL 0 PWL(0 0 80.003m 0 80.004m 1)
 '''
-    return f'''G problem Rev B / {name} / PSpice-style functional circuit
+    return f'''* G problem Rev B / {name} / PSpice-style functional circuit
 * 0 = ground. VSET 10V -> CV 10V; ISET 1V -> CC 1A (inductor reference).
 * First arm at 5ms; precharge 5.1..6ms; soft start 6..16ms.
 VINPUT VIN_EXT 0 {vsource}

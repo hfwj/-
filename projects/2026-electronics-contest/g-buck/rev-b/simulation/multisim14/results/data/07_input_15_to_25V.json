@@ -21,5 +21,14 @@
   "pin_equivalent_assumptions_W": 5.886559245551945,
   "pout_W": 4.999721467319771,
   "eta_equivalent_assumptions": 0.8493453066148456,
-  "simultaneous_vgs_above_6V_samples_after_20ms": 0
+  "simultaneous_vgs_above_6V_samples_after_20ms": 0,
+  "header_fix_equivalence": {
+    "change": "prefix first-line title with SPICE comment marker only",
+    "solver_source_sha256": "8be07c8397291f438bd996aaa030c9b987e6244c57cb2c1c1c724968b237d0d1",
+    "distributed_source_sha256": "2428a0a45eef00883a08957c7dccdb0f71608ca47edc38cb3d95de393de29c61",
+    "body_before_sha256": "8c03011e1aea343b17091b47d399ba9e501cab8ab03af83bcb728a821de9aac4",
+    "body_after_sha256": "8c03011e1aea343b17091b47d399ba9e501cab8ab03af83bcb728a821de9aac4",
+    "full_transient_rerun": false,
+    "multisim_native_retest": false
+  }
 }

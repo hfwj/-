@@ -1,4 +1,4 @@
-G problem Rev B / 04_25V_8ohm / PSpice-style functional circuit
+* G problem Rev B / 04_25V_8ohm / PSpice-style functional circuit
 * 0 = ground. VSET 10V -> CV 10V; ISET 1V -> CC 1A (inductor reference).
 * First arm at 5ms; precharge 5.1..6ms; soft start 6..16ms.
 VINPUT VIN_EXT 0 DC 25

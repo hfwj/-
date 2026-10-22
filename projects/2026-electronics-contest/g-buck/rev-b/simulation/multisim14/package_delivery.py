@@ -18,7 +18,14 @@ def main():
     assert len(rows)==len(CASES)==9
     for name,cfg in CASES.items():
         p=ROOT/'circuits'/f'{name}.cir';s=p.read_text(encoding='ascii');x=by[name]
-        assert hashlib.sha256(p.read_bytes()).hexdigest()==x['source_sha256']
+        digest=hashlib.sha256(p.read_bytes()).hexdigest()
+        if digest!=x['source_sha256']:
+            eq=x.get('header_fix_equivalence',{})
+            body_digest=hashlib.sha256(s.split('\n',1)[1].encode()).hexdigest()
+            assert s.startswith('* ')
+            assert eq.get('distributed_source_sha256')==digest
+            assert eq.get('solver_source_sha256')==x['source_sha256']
+            assert eq.get('body_before_sha256')==eq.get('body_after_sha256')==body_digest
         assert not re.search(r'^\s*\.(control|include)\b',s,re.M|re.I)
         assert x['data_rows']>1000 and x['end_time_s']>=cfg.get('stop',.08)*.999
         assert x['multisim14_execution_verified'] is False
@@ -36,7 +43,7 @@ def main():
     with (ROOT/'pin_mapping.csv').open(encoding='utf-8-sig') as f:pinrows=list(csv.DictReader(f))
     assert len(ports)==17 and ports==[r['port_name'] for r in pinrows]
     checks={'date':'2026-10-22','circuit_count':9,'model_port_count':17,
-            'current_source_hashes_verified':True,'all_requested_transients_completed':True,
+            'source_provenance_and_comment_only_equivalence_verified':True,'all_requested_transients_completed':True,
             'normal_cv_cc_functional_checks_passed':True,'mcu_disable_both_gates_off_checked':True,
             'multisim_14_native_import_or_execution_verified':False,
             'manufacturer_transistor_or_driver_model':False,
@@ -46,6 +53,8 @@ def main():
     table='| 文件 | 输出均值V | 外部电流均值A | 最终SAFE |\n|---|---|---|---|\n'
     for x in rows:table+=f"| {x['case']} | {x['vout_mean_V']:.4f} | {x['i_load_mean_A']:.4f} | {x['safe_final']:.3f} |\n"
     short=by['08_25V_short_test'];step=by['06_25V_load_steps'];p=by['04_25V_8ohm']
+    header_fix=any(x.get('header_fix_equivalence') for x in rows)
+    provenance=('本次修订只给9个文件首行标题加了星号注释；首行以后的电路与分析指令逐字节未改。复用原先9次完整求解的数据，保留实际求解源SHA256，并另记当前分发文件SHA256与首行后正文的一致性证明；没有冒充重新运行完整工况。修正版另外执行了导入上下文中的短时语法/启动回归，见import_header_checks.json。' if header_fix else '当前源文件SHA256与结果逐项匹配。')
     report=f'''# Multisim 14.0仿真电路交付与核验说明
 
 日期：2026-10-22。电路来源为Rev B原理图及B3物料清单。本次提供仿真电路资料，不改变用户原始原理图或采购清单。
@@ -65,7 +74,7 @@ def main():
 
 ## 已执行的交叉核验
 
-以下9项由ngspice 44.2的PSpice兼容模式执行，当前源文件SHA256与结果逐项匹配，实际终止时间和非零数据行数已核对。它们不是Multisim 14.0本机运行结果。
+以下9项由ngspice 44.2的PSpice兼容模式执行，实际终止时间和非零数据行数已核对。{provenance}它们不是Multisim 14.0本机运行结果。
 
 {table}
 

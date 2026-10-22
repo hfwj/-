@@ -6,6 +6,18 @@
 
 建议把专用ZIP解压到纯英文路径，例如`C:\Multisim\G_Buck_RevB\`。用于导入的`.lib`和`.cir`文件名与内容均为ASCII，减少旧版软件的路径/编码兼容问题。
 
+## 已修复：标题被当作G受控源
+
+旧版`.cir`首行是`G problem Rev B / ...`。某些导入入口不把首行当成标题，会把首个`G`当作元件名，于是把`/`、`PSpice`、`style`等文字误解析为电流源增益表达式。若看到这组错误，先选择不继续，把首行前加`* `，再重新导入；也可重新下载当前修正版。
+
+例如`04_25V_8ohm.cir`首行应为：
+
+```spice
+* G problem Rev B / 04_25V_8ohm / PSpice-style functional circuit
+```
+
+只修正这行说明文字，不要删除真正的`GCORE`、`GAUX`、`G_XV`等受控源。本次已同步修正9个网表和生成器；电路与元件参数没有改变。已有完整工况数据保留原实际求解的源哈希，另记注释修订前后正文相同的证明。当前修订仍未在Windows版Multisim实际复测，不能据此承诺其他解析差异也已消除。
+
 ## 文件入口
 
 - [4页完整接线图PDF](diagrams/Multisim14_仿真电路接线图.pdf)：主功率、驱动自举、采样控制保护、首个测试电路。
@@ -164,6 +176,7 @@ VIN → C1(470uF) 与 C2(1uF) → GND
 | 两个栅极看似电压不对 | 观察GH_MON/GL_MON；真实G_H需测G_H−SW，不应只测G_H对地 |
 | 模型找不到MOS_SWITCH_EQ | 导入时丢失了辅助.SUBCKT；载入完整.lib |
 | IF/LIMIT/VALUE语法报错 | 核对载入的是SPICE/PSpice兼容模型、函数大小写和完整大括号；保存错误文本以便按本机14.0解析器调整，不要改成.ms14后缀 |
+| 元件G报未知变量PSpice/style/functional或无法解析斜杠 | 使用修正版，或给首行`G problem...`前加`* `，只修改标题，不要删除真正的G受控源 |
 | 显示悬浮节点/奇异矩阵 | COM必须是全局地；VSET/ISET/ARM/MCU_EN全部有确定源；模型端口顺序必须一致 |
 | 仿真很慢 | 开关频率100kHz且最大步长100ns，80ms包含8000个周期；先单独跑04，观察0～25ms确认启动，再延长至80ms。后者才作为稳态结果 |
 | 故障后恢复负载仍不重启 | 故障锁存的预期行为；需先确认故障解除，再给新的ARM上升沿；真实电路还需检查残压后受控重启 |
@@ -175,6 +188,7 @@ VIN → C1(470uF) 与 C2(1uF) → GND
 ```bash
 python build_circuits.py
 python draw_circuits.py
+python check_import_headers.py
 MPLCONFIGDIR=/tmp/buck-mpl python verify_equivalents.py
 ```
 

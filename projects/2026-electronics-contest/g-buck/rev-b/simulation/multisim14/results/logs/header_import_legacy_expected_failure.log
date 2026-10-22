@@ -1,0 +1,13 @@
+
+Note: Compatibility modes selected: ps a
+
+
+Circuit: header parsing regression
+
+Warning: can't find the initialization file spinit.
+Error on line:
+  a$poly$g %vd [ b / ] %id ( problem rev ) a$poly$g
+ MIF-ERROR - unable to find definition of model a$poly$g
+    Simulation interrupted due to error!
+
+Note: No ".plot", ".print", or ".fourier" lines; no simulations run
