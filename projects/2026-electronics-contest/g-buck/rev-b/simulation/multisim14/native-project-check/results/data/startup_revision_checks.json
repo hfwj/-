@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-24",
+  "source_project": "设计1_IR2104模型修订_待本机验证.ms14",
+  "output_project": "设计1_瞬态容差调整_5ms_待本机验证.ms14",
+  "source_sha256": "34e1cf8cd5f33792c83d8f104a98016063c983b5af0939ff13e3913b34fa262b",
+  "output_sha256": "c7e697ccd50376ad1417a6a77cbbd6995bdfc936ee404e6e04bffc84fb096010",
+  "changes": [
+    {
+      "key": "reltol",
+      "before": "0.001",
+      "after": "0.01",
+      "enabled_before": false,
+      "enabled_after": true
+    },
+    {
+      "key": "abstol",
+      "before": "1e-012",
+      "after": "1e-008",
+      "enabled_before": false,
+      "enabled_after": true
+    },
+    {
+      "key": "vntol",
+      "before": "1e-006",
+      "after": "0.0001",
+      "enabled_before": false,
+      "enabled_after": true
+    },
+    {
+      "key": "chgtol",
+      "before": "1e-014",
+      "after": "1e-013",
+      "enabled_before": false,
+      "enabled_after": true
+    }
+  ],
+  "active_transient_options": {
+    "reltol": {
+      "enabled": true,
+      "value": "0.01"
+    },
+    "abstol": {
+      "enabled": true,
+      "value": "1e-008"
+    },
+    "vntol": {
+      "enabled": true,
+      "value": "0.0001"
+    },
+    "chgtol": {
+      "enabled": true,
+      "value": "1e-013"
+    },
+    "method": {
+      "enabled": false,
+      "value": "trapezoidal"
+    },
+    "itl4": {
+      "enabled": true,
+      "value": "100"
+    }
+  },
+  "hardware_models_sources_and_time_settings_unchanged": true,
+  "exact_inverse_xml_verified": true,
+  "both_independent_decompressors_verified": true,
+  "native_multisim_open_and_run_verified": false,
+  "scope": "Functional transient troubleshooting with relaxed relative tolerance; not precision validation"
+}

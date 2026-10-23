@@ -1,0 +1,25 @@
+{
+  "case": "startup_before_options",
+  "solver": "ngspice 44.2 / ngbehavior=psa",
+  "native_multisim_execution_verified": false,
+  "fuse_trip_simulation": false,
+  "project_sha256": "34e1cf8cd5f33792c83d8f104a98016063c983b5af0939ff13e3913b34fa262b",
+  "solver_source_sha256": "be8e6ed1c317c1cd03581937d71acfaba87f75104d09d5d2e5fdc19d62ce1e0f",
+  "method": "trap",
+  "reltol": 0.001,
+  "absolute_tolerances": {
+    "abstol": 1e-12,
+    "vntol": 1e-06,
+    "chgtol": 1e-14
+  },
+  "itl4": 100,
+  "TMAX_s": 5e-08,
+  "requested_end_time_s": 0.005,
+  "actual_end_time_s": 0.00200001807,
+  "data_rows": 40031,
+  "full_transient_completed": false,
+  "failure_messages": [
+    "doAnalyses: TRAN:  Timestep too small; time = 0.00200002, timestep = 6.25e-20: trouble with node \"v.xq2.vfi1#branch\"",
+    "run simulation(s) aborted"
+  ]
+}

@@ -10,9 +10,9 @@ from ms14_project import ROOT,SOURCE,DEST,PRECHARGE,unpack,parse,components,elem
 from verify_driver import NG,DATA,LOGS,ngspice_compat
 
 
-def run_case(case,path,method):
-    root=parse(unpack(path.read_bytes())[0]);models=elements(root,'CiModel')
-    stop=float(inspect(root)['transient_settings']['TSTOP'])
+def power_stage_source(root):
+    """Extract the user's circuit, without analysis options or control commands."""
+    models=elements(root,'CiModel')
     lines=['* Extracted Multisim power-stage diagnostic, ngspice only',
            '* F1 interaction replaced by embedded conducting resistance; fuse trip NOT simulated']
     for r in components(root):
@@ -30,9 +30,14 @@ def run_case(case,path,method):
         else:raise ValueError(name)
         lines.append(line)
     for e in models.values():lines.append(clean(e.find('.//CiaCString').get('String')))
+    return ngspice_compat('\n'.join(lines)+'\n')
+
+
+def run_case(case,path,method):
+    root=parse(unpack(path.read_bytes())[0])
+    stop=float(inspect(root)['transient_settings']['TSTOP'])
     # Known node IDs are checked against extracted connectivity by ms14_project.
-    lines.extend([f'.options reltol=0.001 method={method}', f'.tran 50n {stop} 0 50n'])
-    source=ngspice_compat('\n'.join(lines)+'\n')
+    source=power_stage_source(root)+f'.options reltol=0.001 method={method}\n.tran 50n {stop} 0 50n\n'
     with tempfile.TemporaryDirectory(prefix='gbuck-full-check-') as td:
         work=Path(td);raw=work/'trace.txt';init=work/'init';init.mkdir()
         library=NG.parent.parent/'lib/x86_64-linux-gnu/ngspice'

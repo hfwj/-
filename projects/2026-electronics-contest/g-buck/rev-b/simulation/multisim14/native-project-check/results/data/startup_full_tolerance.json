@@ -1,0 +1,40 @@
+{
+  "case": "startup_full_tolerance",
+  "solver": "ngspice 44.2 / ngbehavior=psa",
+  "native_multisim_execution_verified": false,
+  "fuse_trip_simulation": false,
+  "project_sha256": "c7e697ccd50376ad1417a6a77cbbd6995bdfc936ee404e6e04bffc84fb096010",
+  "solver_source_sha256": "36b678302bcdc7e16d9a72ec10406e0f4b988a48910722d0d7f2f994accdac5c",
+  "method": "trap",
+  "reltol": 0.01,
+  "absolute_tolerances": {
+    "abstol": 1e-08,
+    "vntol": 0.0001,
+    "chgtol": 1e-13
+  },
+  "itl4": 100,
+  "TMAX_s": 5e-08,
+  "requested_end_time_s": 0.005,
+  "actual_end_time_s": 0.005,
+  "data_rows": 128967,
+  "full_transient_completed": true,
+  "failure_messages": [],
+  "last_half_ms_VOUT_time_mean_V": 2.4021994765572745,
+  "last_half_ms_VOUT_range_V": [
+    2.35317874,
+    2.45361034
+  ],
+  "VOUT_at_5ms_V": 2.35317874,
+  "GL_range_V": [
+    -1.77567364,
+    11.94826
+  ],
+  "VGS_H_range_V": [
+    -1.01940528,
+    8.62234806
+  ],
+  "SW_range_V": [
+    -0.748534097,
+    25.4994177
+  ]
+}

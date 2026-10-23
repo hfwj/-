@@ -1,0 +1,69 @@
+# Multisim：PWM首次切换时步长过小
+
+日期：2026-10-24。来源：用户提供的本机“仿真错误记录信息窗口”截图，以及对原生工程的交叉求解。截图中的本机错误摘录如下；这是人工转录，不是导出的日志文件。
+
+```text
+v3: no DC value, transient time 0 value used
+TRAN: Timestep too small; time = 0.00200002, timestep = 6.25e-018:
+trouble with node vfi1:xq2#branch
+Error: doAnalyses: Timestep too small (Transient time point calculation did not converge)
+tran simulation(s) canceled (Simulation canceled)
+```
+
+第一行说明PWM电压源没有单独指定DC值，求解器采用其t=0的瞬态值，在本工程为0V。这条提示不是本次终止原因。真正终止原因是约2.00002ms处的瞬态计算不收敛，恰逢延时2ms的第一次PWM边沿。
+
+`vfi1:xq2#branch`是Q2内嵌IRF540N模型的内部支路；模型用VFI1、受控源和电容实现栅漏电容特性。日志指出这一支路在当前求解过程中发生困难，不能据此断定实际Q2损坏、选型错误或电路短路，也不能把错误位置直接当作唯一根因。此前本机图中G_L约12V说明启动前低侧驱动已使能，但没有证明PWM切换或完整5ms运行成功。
+
+## 本次修订
+
+下载[瞬态容差调整的5ms原生工程](../downloads/设计1_瞬态容差调整_5ms_待本机验证.ms14)。它以此前IR2104输入模型修订副本为基础，仅启用并调整活动瞬态分析中的四项求解容差：
+
+| 设置 | 之前保存值 | 本次启用值 |
+|---|---|---|
+| 相对误差容差 RELTOL | 0.001，未单独启用 | 0.01 |
+| 电流绝对容差 ABSTOL | 1e-12A，未单独启用 | 1e-8A |
+| 电压绝对容差 VNTOL | 1e-6V，未单独启用 | 1e-4V |
+| 电荷绝对容差 CHGTOL | 1e-14C，未单独启用 | 1e-13C |
+
+积分算法仍保留原来的trapezoidal设置，瞬态迭代次数ITL4仍为原文件已启用的100。结束时间5ms、最大时间步长50ns、直流工作点初始化、0/3.3V信号、PWM延时/脉宽/周期、电源、元件值、连线和全部嵌入模型均不因本次调整而改变。原IR2104输入模型修订仍保留；这次没有再修改芯片或MOSFET模型。
+
+脚本对原始XML直接最小修改；反向替换可逐字节恢复上一版XML。两种独立DCL解码器、容器长度及电路端点检查均通过，见[副本核验记录](../simulation/multisim14/native-project-check/results/data/startup_revision_checks.json)。原工程与上一版修订副本均保留。
+
+## 本机操作
+
+1. 下载上述`.ms14`文件。GitHub文件页面使用“Download raw file”，避免把网页保存为工程。
+2. 关闭旧图示仪和旧设计，使用“文件→打开”打开新副本。
+3. 打开“仿真→分析和仿真→瞬态分析”。在“分析选项”中的自定义设置核对上表四项容差已启用并填写，积分算法保留原梯形算法；选项标签以本机界面为准。
+4. 保持起始0、结束0.005s、最大步长5e-8s，点击Run。图表自动范围下，数据应越过2ms，最终到达5ms。
+5. 若仍停止，保存新的完整错误记录，并提供“分析选项”页面；不要依据旧错误直接更换Q2或改动电感电容。
+
+也可以在现有IR2104修订工程的瞬态分析自定义选项中手动设置上述四项；不必重新放置元件。
+
+## 交叉求解验证与边界
+
+[验证汇总](../simulation/multisim14/native-project-check/results/data/startup_solver_verification.json)、[日志](../simulation/multisim14/native-project-check/results/logs/)、[波形图](../simulation/multisim14/native-project-check/results/figures/startup_full_tolerance_crosscheck.png)记录了修改前的失败、修改后5ms测试及最大步长减半的对照。求解器为ngspice44.2，采用PSpice兼容模式，不是本环境运行Windows Multisim。
+
+| 对照 | 结果 | 最后0.5ms的VOUT时间平均值 |
+|---|---|---|
+| 原分析容差，50ns最大步长 | 仅到2.000018ms；Q2内部VFI1步长过小 | 不计算 |
+| 四项容差修订，50ns最大步长 | 完整到5.000ms，128967行采样 | 2.40220V |
+| 相同修订，25ns最大步长 | 完整到5.000ms，226326行采样 | 2.40416V |
+
+步长减半后，上述时间平均值相对差约0.0814%。这只检查这一工况的数值一致性，不能据此推断所有瞬态尖峰或真实器件参数的精度。完整NPZ波形与按相同列顺序导出的CSV保存在核验目录，列顺序见各CSV首行。
+
+初步探索曾在一种时间参数写法下得到Gear/RELTOL两项调整的5ms完整结果，但按原生工程重新提取复测仍失败，因此没有交付该候选文件。失败的`startup_gear_1pct`及半步长对照记录保留，不能当成通过。最终交付采用上表四项容差；没有把平滑比较器的尝试写入原生工程。
+
+本次完整5ms通过仅指修订求解设置下的交叉测试。ngspice中F1仍仅用1mΩ导通电阻代替，不执行Multisim保险丝脚本；原生副本保留F1。Multisim尚需用户打开新副本并运行，不能由交叉结果保证其一定收敛。
+
+放宽上述容差用于排查开关过程，不代表所有结果都有1%精度保证。本次不能用来确认精确纹波、开关损耗、尖峰应力或整机效率。当前PWM占空比仍是10%，没有恒压恒流闭环，输出不应按已实现10V稳压来验收；本次也不调整占空比，以保留对照条件。
+
+## 复现
+
+在仓库`simulation/multisim14/native-project-check/`目录，按已有依赖说明安装依赖后运行：
+
+```bash
+python stabilize_transient.py
+python verify_startup.py
+```
+
+`stabilize_transient.py`从上一版IR2104修订工程生成新副本；`verify_startup.py`直接从两个原生工程提取模型、电路和已启用分析选项，执行对照，保留实际终止时间与失败信息。之前的求解记录保留其原有状态。

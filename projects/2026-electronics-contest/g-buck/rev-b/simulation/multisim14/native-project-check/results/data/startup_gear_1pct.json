@@ -1,0 +1,20 @@
+{
+  "case": "startup_gear_1pct",
+  "solver": "ngspice 44.2 / ngbehavior=psa",
+  "native_multisim_execution_verified": false,
+  "fuse_trip_simulation": false,
+  "project_sha256": "eac322cd92ab96caacab2a23290776667618fcd63a5b1414845548fe00101718",
+  "solver_source_sha256": "126d5e4db6e6c6b80f6d73b24bb69a549f836f7b5db695481a53c533a0b42a09",
+  "method": "gear",
+  "reltol": 0.01,
+  "itl4": 100,
+  "TMAX_s": 5e-08,
+  "requested_end_time_s": 0.005,
+  "actual_end_time_s": 0.00200002032,
+  "data_rows": 40152,
+  "full_transient_completed": false,
+  "failure_messages": [
+    "doAnalyses: TRAN:  Timestep too small; time = 0.00200002, timestep = 6.25e-20: trouble with node \"v.xq2.vfi2#branch\"",
+    "run simulation(s) aborted"
+  ]
+}

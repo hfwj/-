@@ -1,5 +1,7 @@
 # 用户Multisim工程：IR2104输入电平问题排查
 
+最新反馈：用户本机在旧5ms模型修订副本得到G_L约12V，但在2.00002ms的PWM首次边沿报`Timestep too small`，支路为`vfi1:xq2#branch`。继续测试请优先使用[瞬态容差调整的5ms工程](../../../downloads/设计1_瞬态容差调整_5ms_待本机验证.ms14)，并阅读[本次报错、修改范围与本机步骤](../../../reports/Multisim14_PWM首次切换步长过小_2026-10-24.md)。[新副本结构检查](results/data/startup_revision_checks.json)与[启动求解对照](results/data/startup_solver_verification.json)独立于下面保留的早期记录；新副本本机运行待确认。
+
 2026-10-24，检查用户上传的`设计1.ms14`。确认了一个内嵌模型问题：这版IR2104输入比较网络的上升触发门限约4.986V，工程使用的3.3V信号在独立交叉求解中不能使能驱动。主要连线、PWM参数、瞬态时间及输出变量均已从文件核对。
 
 此前直接按3.3V逻辑配置测试源，没有核验用户数据库内这版模型的输入网络，遗漏了此项兼容性检查。本次提供基于原生工程的模型修订副本，修订范围和验证边界如下。
@@ -10,7 +12,7 @@
 2. [5ms模型修订工程，待本机验证](../../../downloads/设计1_IR2104模型修订_待本机验证.ms14)：保留原来的5ms终止时间、50ns最大步长、直流工作点初始化和原输出选择。用于继续测试2ms后的PWM启动。
 3. [排查与修订工程ZIP](../../../downloads/Multisim14_用户工程排查与修订副本_2026-10-24.zip)：包含原工程、两个修订副本、报告、脚本和验证资料。
 
-浏览器查看GitHub文件页面时，使用“Download raw file”下载。下载后确认扩展名仍为`.ms14`。这些副本由用户上传的真实Multisim压缩XML工程最小编辑并重新封装而来，不是将SPICE文本改后缀。当前环境不能启动Windows Multisim，尚未确认其本机打开和运行。
+浏览器查看GitHub文件页面时，使用“Download raw file”下载。下载后确认扩展名仍为`.ms14`。这些副本由用户上传的真实Multisim压缩XML工程最小编辑并重新封装而来，不是将SPICE文本改后缀。当前环境不能启动Windows Multisim；用户后续截图已确认较早的模型修订文件能打开且启动前G_L约12V，但在2ms首次切换时不收敛。新容差副本本机运行仍待确认。
 
 先关闭旧设计和旧图表窗口，再打开下载的1ms检查副本，确认本机能够打开、得到G_L约12V的直线；1ms期间PWM尚未启动。图表显示使用自动范围。然后再运行5ms副本。若5ms分析仍失败，保存完整的求解器错误信息。这里不将1ms检查或独立驱动结果冒充完整5ms功率级通过。
 
@@ -59,6 +61,8 @@ python verify_driver.py
 python verify_power_stage.py
 python build_delivery.py
 ```
+
+上述是早期模型修订资料的复现流程。继续复现本次容差调整时运行`python stabilize_transient.py`和`python verify_startup.py`，详见[首次PWM切换排查报告](../../../reports/Multisim14_PWM首次切换步长过小_2026-10-24.md)。早期ZIP不包含后续新容差副本，最新文件直接从本页顶部链接下载。
 
 `dclimplode`需要可用的C/C++编译器；若Python环境默认指定了不存在的clang，可设置`CC=gcc CXX=g++`安装。ngspice路径可通过`NGSPICE`设置；脚本加载同安装目录下的XSPICE代码模型。ngspice版本为44.2，使用PSpice兼容模式。
 
