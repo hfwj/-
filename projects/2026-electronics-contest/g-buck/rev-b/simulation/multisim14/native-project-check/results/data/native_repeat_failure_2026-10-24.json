@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-24",
+  "evidence": "User screenshot of native Multisim error log in conversation; no current project uploaded",
+  "reported_time_s": 0.00200002,
+  "reported_timestep_s": 6.25e-18,
+  "reported_branch": "vfi1:xq2#branch",
+  "native_run_completed": false,
+  "current_user_project_sha256": null,
+  "published_candidate_sha256": "c7e697ccd50376ad1417a6a77cbbd6995bdfc936ee404e6e04bffc84fb096010",
+  "published_candidate_stored_transient_options": {
+    "reltol": {
+      "enabled": true,
+      "value": "0.01"
+    },
+    "abstol": {
+      "enabled": true,
+      "value": "1e-008"
+    },
+    "vntol": {
+      "enabled": true,
+      "value": "0.0001"
+    },
+    "chgtol": {
+      "enabled": true,
+      "value": "1e-013"
+    },
+    "method": {
+      "enabled": false,
+      "value": "trapezoidal"
+    },
+    "itl4": {
+      "enabled": true,
+      "value": "100"
+    }
+  },
+  "published_candidate_analysis_selectors": {
+    "USE_ASYS_OPT": 1,
+    "MSM_ASYS_OPT": 1
+  },
+  "native_effective_tolerance_values_verified": false,
+  "selector_enum_meaning_verified": false,
+  "next_check": "Confirm Use custom settings in native Transient Analysis Options and inspect the four enabled tolerances; obtain the current saved project for comparison",
+  "not_established": [
+    "The current run used the published candidate without changes",
+    "Stored options were selected as effective native solver options",
+    "The failure is caused by a defective physical Q2"
+  ]
+}
