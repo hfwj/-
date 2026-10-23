@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-24",
+  "original_and_two_native_copies_decoded_by_two_independent_implementations": true,
+  "only_eight_internal_model_values_and_one_model_modified_flag_changed_in_5ms_copy": true,
+  "all_three_isolated_driver_tests_completed": true,
+  "one_ms_pre_pwm_cross_solver_check_completed": true,
+  "five_ms_power_stage_cross_solver_completed": false,
+  "native_multisim_open_or_run_verified": false,
+  "files": [
+    {
+      "path": "references/user-projects/2026-10-24_设计1.ms14",
+      "sha256": "069ea8839f390757e58e172036e62547119e40ae0ae6efea9da698603acf85f6",
+      "bytes": 248723
+    },
+    {
+      "path": "downloads/设计1_IR2104模型修订_待本机验证.ms14",
+      "sha256": "34e1cf8cd5f33792c83d8f104a98016063c983b5af0939ff13e3913b34fa262b",
+      "bytes": 248728
+    },
+    {
+      "path": "downloads/设计1_IR2104模型修订_1ms检查.ms14",
+      "sha256": "45317be1d12d22c09f726bb4de87631c87839e93d620d328fbf8f9839d6f8771",
+      "bytes": 248722
+    }
+  ]
+}

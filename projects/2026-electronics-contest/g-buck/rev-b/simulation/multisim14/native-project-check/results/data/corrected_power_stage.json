@@ -1,0 +1,25 @@
+{
+  "case": "corrected_power_stage",
+  "solver": "ngspice 44.2 / ngbehavior=psa",
+  "native_multisim_execution_verified": false,
+  "project_sha256": "34e1cf8cd5f33792c83d8f104a98016063c983b5af0939ff13e3913b34fa262b",
+  "solver_source_sha256": "8c54d5c67226f854d1be784f496a1f3dd6f1a590a99683ec5f116d99b9bd7940",
+  "method": "gear",
+  "requested_end_time_s": 0.005,
+  "end_time_s": 0.0020000177,
+  "data_rows": 40063,
+  "full_transient_completed": false,
+  "failure_messages": [
+    "doAnalyses: TRAN:  Timestep too small; time = 0.00200002, timestep = 6.25e-20: trouble with node \"v.xq1.vfi2#branch\"",
+    "run simulation(s) aborted"
+  ],
+  "fuse_trip_simulation": false,
+  "pre_pwm_GL_range_V": [
+    11.9336423,
+    11.9336423
+  ],
+  "pre_pwm_VOUT_range_V": [
+    1.72106245e-06,
+    1.72106245e-06
+  ]
+}

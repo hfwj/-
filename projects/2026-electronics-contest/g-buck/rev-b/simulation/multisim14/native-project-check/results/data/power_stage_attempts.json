@@ -1,0 +1,77 @@
+{
+  "scope": "cross-solver diagnostic only",
+  "results": [
+    {
+      "case": "original_power_stage",
+      "solver": "ngspice 44.2 / ngbehavior=psa",
+      "native_multisim_execution_verified": false,
+      "project_sha256": "069ea8839f390757e58e172036e62547119e40ae0ae6efea9da698603acf85f6",
+      "solver_source_sha256": "edb96612312bb8210598969c97c7e60d26f222dd8e016edc174d0a46acf7df1a",
+      "method": "trap",
+      "requested_end_time_s": 0.005,
+      "end_time_s": 0.00458102015,
+      "data_rows": 97762,
+      "full_transient_completed": false,
+      "failure_messages": [
+        "doAnalyses: TRAN:  Timestep too small; time = 0.00458102, timestep = 6.25e-20: trouble with node \"v.xq2.vfi2#branch\"",
+        "run simulation(s) aborted"
+      ],
+      "fuse_trip_simulation": false,
+      "pre_pwm_GL_range_V": [
+        2.72651565e-06,
+        2.72992359e-06
+      ],
+      "pre_pwm_VOUT_range_V": [
+        0.000963791938,
+        0.000963792171
+      ]
+    },
+    {
+      "case": "corrected_power_stage",
+      "solver": "ngspice 44.2 / ngbehavior=psa",
+      "native_multisim_execution_verified": false,
+      "project_sha256": "34e1cf8cd5f33792c83d8f104a98016063c983b5af0939ff13e3913b34fa262b",
+      "solver_source_sha256": "8c54d5c67226f854d1be784f496a1f3dd6f1a590a99683ec5f116d99b9bd7940",
+      "method": "gear",
+      "requested_end_time_s": 0.005,
+      "end_time_s": 0.0020000177,
+      "data_rows": 40063,
+      "full_transient_completed": false,
+      "failure_messages": [
+        "doAnalyses: TRAN:  Timestep too small; time = 0.00200002, timestep = 6.25e-20: trouble with node \"v.xq1.vfi2#branch\"",
+        "run simulation(s) aborted"
+      ],
+      "fuse_trip_simulation": false,
+      "pre_pwm_GL_range_V": [
+        11.9336423,
+        11.9336423
+      ],
+      "pre_pwm_VOUT_range_V": [
+        1.72106245e-06,
+        1.72106245e-06
+      ]
+    },
+    {
+      "case": "corrected_pre_pwm_check",
+      "solver": "ngspice 44.2 / ngbehavior=psa",
+      "native_multisim_execution_verified": false,
+      "project_sha256": "45317be1d12d22c09f726bb4de87631c87839e93d620d328fbf8f9839d6f8771",
+      "solver_source_sha256": "1d1d32a2af8048cf9b1ea4c2ecde829d8593cd51e3f24e0d78575aa1dc80a3c9",
+      "method": "gear",
+      "requested_end_time_s": 0.001,
+      "end_time_s": 0.001,
+      "data_rows": 20008,
+      "full_transient_completed": true,
+      "failure_messages": [],
+      "fuse_trip_simulation": false,
+      "pre_pwm_GL_range_V": [
+        11.9336423,
+        11.9336423
+      ],
+      "pre_pwm_VOUT_range_V": [
+        1.72106245e-06,
+        1.72106245e-06
+      ]
+    }
+  ]
+}

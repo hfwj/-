@@ -3,6 +3,7 @@
 *.png binary
 *.zip binary
 *.npz binary
+*.ms14 binary
 *.csv text eol=lf
 # Preserve raw solver output formatting, including column alignment/progress CRs.
 **/results/data/*.txt -whitespace

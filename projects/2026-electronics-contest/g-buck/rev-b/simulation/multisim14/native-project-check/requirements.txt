@@ -1,0 +1,4 @@
+dclimplode==0.0.1.0
+lxml>=5
+numpy>=2
+matplotlib>=3.8

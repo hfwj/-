@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-24",
+  "all_three_isolated_tests_completed": true,
+  "native_multisim_execution_verified": false,
+  "full_power_stage_completed": false,
+  "source_project_sha256": "069ea8839f390757e58e172036e62547119e40ae0ae6efea9da698603acf85f6",
+  "corrected_project_sha256": "34e1cf8cd5f33792c83d8f104a98016063c983b5af0939ff13e3913b34fa262b",
+  "ngspice_parser_changes_only": [
+    "driver subcircuit renamed without slash and matched .ENDS",
+    "space before PARAMS, brace negative T1 default"
+  ],
+  "results": [
+    {
+      "case": "original_3v3",
+      "solver": "ngspice 44.2 / ngbehavior=psa",
+      "native_multisim_execution_verified": false,
+      "input_high_V": 3.3,
+      "end_time_s": 0.0001,
+      "data_rows": 5092,
+      "HO_max_V": 2.73576819e-06,
+      "LO_max_V": 2.73576819e-06,
+      "IN_initial_reference_V": 4.98560021,
+      "SD_initial_reference_V": 4.98560021,
+      "source_model_sha256": "cee9f35290a89ff571a53716daeeeb8c0fd09b5fe530ac35cc8da1c7944ce0a4",
+      "completed": true,
+      "scope": "isolated driver; fixed 12V VB and VCC, VS=0, 1nF/100k output loads"
+    },
+    {
+      "case": "original_6v",
+      "solver": "ngspice 44.2 / ngbehavior=psa",
+      "native_multisim_execution_verified": false,
+      "input_high_V": 6,
+      "end_time_s": 0.0001,
+      "data_rows": 14631,
+      "HO_max_V": 11.9945249,
+      "LO_max_V": 11.9945249,
+      "IN_initial_reference_V": 4.98560021,
+      "SD_initial_reference_V": 0.500241803,
+      "source_model_sha256": "cee9f35290a89ff571a53716daeeeb8c0fd09b5fe530ac35cc8da1c7944ce0a4",
+      "completed": true,
+      "scope": "isolated driver; fixed 12V VB and VCC, VS=0, 1nF/100k output loads"
+    },
+    {
+      "case": "corrected_3v3",
+      "solver": "ngspice 44.2 / ngbehavior=psa",
+      "native_multisim_execution_verified": false,
+      "input_high_V": 3.3,
+      "end_time_s": 0.0001,
+      "data_rows": 15533,
+      "HO_max_V": 11.9945249,
+      "LO_max_V": 11.9945249,
+      "IN_initial_reference_V": 2.89215027,
+      "SD_initial_reference_V": 0.798144425,
+      "source_model_sha256": "365ca8d5b38da37d6d71f9495b0b395ba8ecda4c6dac0541a96bfdf6037a95de",
+      "completed": true,
+      "scope": "isolated driver; fixed 12V VB and VCC, VS=0, 1nF/100k output loads"
+    }
+  ]
+}

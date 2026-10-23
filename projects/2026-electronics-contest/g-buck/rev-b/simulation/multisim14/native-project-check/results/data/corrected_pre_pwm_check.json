@@ -1,0 +1,22 @@
+{
+  "case": "corrected_pre_pwm_check",
+  "solver": "ngspice 44.2 / ngbehavior=psa",
+  "native_multisim_execution_verified": false,
+  "project_sha256": "45317be1d12d22c09f726bb4de87631c87839e93d620d328fbf8f9839d6f8771",
+  "solver_source_sha256": "1d1d32a2af8048cf9b1ea4c2ecde829d8593cd51e3f24e0d78575aa1dc80a3c9",
+  "method": "gear",
+  "requested_end_time_s": 0.001,
+  "end_time_s": 0.001,
+  "data_rows": 20008,
+  "full_transient_completed": true,
+  "failure_messages": [],
+  "fuse_trip_simulation": false,
+  "pre_pwm_GL_range_V": [
+    11.9336423,
+    11.9336423
+  ],
+  "pre_pwm_VOUT_range_V": [
+    1.72106245e-06,
+    1.72106245e-06
+  ]
+}

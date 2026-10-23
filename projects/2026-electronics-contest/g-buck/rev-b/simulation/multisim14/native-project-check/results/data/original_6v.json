@@ -1,0 +1,15 @@
+{
+  "case": "original_6v",
+  "solver": "ngspice 44.2 / ngbehavior=psa",
+  "native_multisim_execution_verified": false,
+  "input_high_V": 6,
+  "end_time_s": 0.0001,
+  "data_rows": 14631,
+  "HO_max_V": 11.9945249,
+  "LO_max_V": 11.9945249,
+  "IN_initial_reference_V": 4.98560021,
+  "SD_initial_reference_V": 0.500241803,
+  "source_model_sha256": "cee9f35290a89ff571a53716daeeeb8c0fd09b5fe530ac35cc8da1c7944ce0a4",
+  "completed": true,
+  "scope": "isolated driver; fixed 12V VB and VCC, VS=0, 1nF/100k output loads"
+}

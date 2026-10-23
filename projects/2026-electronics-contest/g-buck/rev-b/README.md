@@ -4,6 +4,8 @@
 
 ## 下载与阅读
 
+- [用户原生Multisim工程排查与模型修订](simulation/multisim14/native-project-check/README.md)：定位IR2104内嵌模型的3.3V输入兼容问题；提供1ms检查及5ms修订副本，待本机打开/运行确认。
+- [1ms原生工程检查副本](downloads/设计1_IR2104模型修订_1ms检查.ms14) · [5ms模型修订副本](downloads/设计1_IR2104模型修订_待本机验证.ms14) · [排查报告](reports/Multisim14_用户工程空白波形排查_2026-10-24.md)。完整5ms功率级交叉求解尚未通过。
 - [按原始原理图逐元件绘制Multisim电路](simulation/multisim14/original-schematic/README.md)：7页绘制参考、96项元件选择、逐引脚及逐网络接线表。
 - [原图逐元件绘制PDF](simulation/multisim14/original-schematic/原始原理图_Multisim逐元件绘制参考.pdf) · [专用资料ZIP](downloads/Multisim14_按原图逐元件绘制资料包.zip)：供本机手工绘制，未生成原生.ms14文件。
 - [NI Multisim 14.0仿真电路搭建说明](simulation/multisim14/README.md)：4页接线图、导入模型和9个测试工况；不是原生`.ms14`工程。

@@ -105,7 +105,7 @@ def main():
 
 当前版本比原ngspice简化模型增加了浮动驱动阻抗、栅极与漏源寄生、自举充电、辅助功耗折算、实际参考网络压降及ADC反馈。它是另一套功能模型，不能直接沿用旧报告中短路触发锁存或功率级效率的结论。4.7nF栅源电容、250pF漏源电容、积分状态网络等都是仿真辅助，不是新增采购元件。
 
-没有提供或伪造原生.ms14文件；当前云环境不能运行Windows版Multisim。Multisim安装中的模型导入、PSpice解析与GUI实际运行仍需在用户本机确认。如本机解析报错，应根据其完整错误调整兼容语法，不能把ngspice通过写成Multisim已通过。也没有验证真实STM32程序、LCD/按键、厂家芯片时序、ERC/DRC或实物效率。
+本报告的功能等效搭建资料未从头生成原生.ms14文件；用户后来上传的真实工程及其模型修订副本见[原生工程排查说明](../simulation/multisim14/native-project-check/README.md)。当前云环境不能运行Windows版Multisim。Multisim安装中的模型导入、PSpice解析与GUI实际运行仍需在用户本机确认。如本机解析报错，应根据其完整错误调整兼容语法，不能把ngspice通过写成Multisim已通过。也没有验证真实STM32程序、LCD/按键、厂家芯片时序、ERC/DRC或实物效率。
 '''
     (reports/'Multisim14_仿真电路交付与核验说明.md').write_text(report)
     make_zip(downloads/'Multisim14_仿真电路搭建包.zip',ROOT,skip_diagnostics=True)
