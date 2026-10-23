@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-24",
+  "evidence": "User-supplied Multisim Grapher screenshot in conversation after selecting custom analysis options",
+  "scope": "User native open-loop startup feedback; not execution by this cloud environment",
+  "visible_design_title": "设计1_IR2104模型修订_待本机验证",
+  "visible_variables": [
+    "V(g_l)",
+    "V(vout)"
+  ],
+  "displayed_time_range_s": [
+    0,
+    0.005
+  ],
+  "visible_traces_reach_displayed_5ms": true,
+  "switching_visibly_begins_near_s": 0.002,
+  "approximate_values_read_from_image": {
+    "GL_before_PWM_V": 12,
+    "VOUT_startup_peak_V": 3,
+    "VOUT_near_5ms_V": 2.4
+  },
+  "preceding_custom_options_screenshot": {
+    "ABSTOL": 1e-08,
+    "VNTOL": 0.0001,
+    "CHGTOL": 1e-13,
+    "RELTOL": 0.01,
+    "four_options_checked": true
+  },
+  "current_saved_project_received": false,
+  "current_saved_project_sha256": null,
+  "numeric_waveform_export_received": false,
+  "native_solver_full_completion_log_received": false,
+  "engineering_claims_not_established": [
+    "Steady-state 10V regulation",
+    "Closed-loop CV/CC operation",
+    "Non-overlap gate timing",
+    "Switching stress or efficiency"
+  ],
+  "next_step": "Save a working native baseline. For an open-loop 25V test near 10V, use D≈10/25=0.4, starting PW=4us for PER=10us; this is an initial estimate, not a verified 10V operating point."
+}
