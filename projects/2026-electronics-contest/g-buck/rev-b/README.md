@@ -4,6 +4,8 @@
 
 ## 下载与阅读
 
+- [按原始原理图逐元件绘制Multisim电路](simulation/multisim14/original-schematic/README.md)：7页绘制参考、96项元件选择、逐引脚及逐网络接线表。
+- [原图逐元件绘制PDF](simulation/multisim14/original-schematic/原始原理图_Multisim逐元件绘制参考.pdf) · [专用资料ZIP](downloads/Multisim14_按原图逐元件绘制资料包.zip)：供本机手工绘制，未生成原生.ms14文件。
 - [NI Multisim 14.0仿真电路搭建说明](simulation/multisim14/README.md)：4页接线图、导入模型和9个测试工况；不是原生`.ms14`工程。
 - [元器件向导逐页详细操作](simulation/multisim14/元器件向导逐页操作.md)：逐页填写、17脚映射、保存与首次运行。
 - [Multisim电路交付与交叉核验说明](reports/Multisim14_仿真电路交付与核验说明.md)：当前模型9个工况的结果和未验证范围。

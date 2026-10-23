@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-23",
+  "source_pdf_sha256": "03536f0852546ccd283a0566188b67243d070d2b2b5555b43cf3a8f24355b5aa",
+  "bom_docx_sha256": "3ec10eaf4192af8eaf7115df56ec5783b5960c6d1383812217471cc3cf734cdb",
+  "source_pdf_pages": 10,
+  "network_table_source_pages": [
+    9,
+    10
+  ],
+  "board_component_count": 96,
+  "board_network_count": 43,
+  "connected_pin_count": 264,
+  "nc_pin_count": 14,
+  "drawing_pin_count": 278,
+  "all_96_board_components_covered_once": true,
+  "all_physical_pins_drawn_once": true,
+  "all_connected_endpoints_match_pdf_appendix": true,
+  "original_sources_modified": false,
+  "native_multisim_file_generated": false,
+  "native_multisim_simulation_verified": false,
+  "manufacturer_models_included": false
+}
