@@ -39,10 +39,12 @@
   },
   "native_effective_tolerance_values_verified": false,
   "selector_enum_meaning_verified": false,
-  "next_check": "Confirm Use custom settings in native Transient Analysis Options and inspect the four enabled tolerances; obtain the current saved project for comparison",
+  "next_check": "Select Use custom settings in native transient analysis; enable RELTOL=0.01, ABSTOL=1e-8, VNTOL=1e-4, CHGTOL=1e-13; save and rerun; a subsequent saved project can establish the internal selector mapping",
   "not_established": [
     "The current run used the published candidate without changes",
     "Stored options were selected as effective native solver options",
     "The failure is caused by a defective physical Q2"
-  ]
+  ],
+  "user_confirmed_analysis_option_selection": "Use global settings",
+  "selection_evidence": "Explicit user reply in conversation"
 }
