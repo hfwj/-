@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-24",
+  "all_delivery_files_match_completed_runs": true,
+  "cases": [
+    {
+      "id": "CV_25V_20R",
+      "binary_and_extracted_source_match_completed_run": true
+    },
+    {
+      "id": "CC_25V_8R",
+      "binary_and_extracted_source_match_completed_run": true
+    },
+    {
+      "id": "CC_25V_5R",
+      "binary_and_extracted_source_match_completed_run": true
+    },
+    {
+      "id": "CV_15V_20R",
+      "binary_and_extracted_source_match_completed_run": true
+    },
+    {
+      "id": "CV_25V_OPEN",
+      "binary_and_extracted_source_match_completed_run": true
+    },
+    {
+      "id": "AUTO_20R_8R_5R",
+      "binary_and_extracted_source_match_completed_run": true
+    }
+  ],
+  "source_file_unchanged": true,
+  "native_multisim_execution_verified": false,
+  "package_file": "downloads/Multisim14_软启动与CVCC控制副本_2026-10-24.zip",
+  "package_sha256": "2df35b77f87abfb422882c99ec341a75844fc7fd124226cb1249cc745dc3ec12",
+  "package_bytes": 3214565,
+  "zip_integrity_verified": true
+}

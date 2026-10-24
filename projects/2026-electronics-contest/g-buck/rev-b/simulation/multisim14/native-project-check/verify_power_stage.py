@@ -17,6 +17,8 @@ def power_stage_source(root):
            '* F1 interaction replaced by embedded conducting resistance; fuse trip NOT simulated']
     for r in components(root):
         name=r['display_ref'];p=r['ports'];values=r['parameters']
+        if p and all(node is None for node in p.values()):continue
+        if any(node is None for node in p.values()):raise ValueError(f'Partly unconnected component: {name}')
         model=clean(models[r['model_id']].get('LocalName')) if r['model_id'] else ''
         if name[0] in 'RCL':line=f'{name} {p["1"]} {p["2"]} {values[1]}'
         elif name.startswith('V'):

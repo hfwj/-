@@ -1,0 +1,55 @@
+{
+  "id": "CV_15V_20R",
+  "vin": 15,
+  "load": "20",
+  "stop": "0.03",
+  "solver": "ngspice 44.2 / ngbehavior=psa",
+  "native_multisim_execution_verified": false,
+  "project_sha256": "b7a929935b736ce3ca4fd62959bbf78a4661bb853ba5c0e3ad4db9be94d63da5",
+  "solver_source_sha256": "d13890579e4cd12e58c2ba4ee92dc264f8798b8f1046898bf174302904235225",
+  "vendor_model_text_preserved_in_extracted_source": true,
+  "requested_end_time_s": 0.03,
+  "actual_end_time_s": 0.03,
+  "data_rows": 741330,
+  "full_transient_completed": true,
+  "failure_messages": [],
+  "scope": "Ideal control and sensing, modified IR2104 input model, user power-stage models, fuse disconnected as in working source",
+  "VOUT_max_V": 10.484952,
+  "IL_max_A": 1.15359229,
+  "IL_min_A": -0.0130709264,
+  "IOUT_max_A": 0.5290140000000321,
+  "VIN_max_V": 14.9660072,
+  "peak_VOUT_time_s": 0.0140493326,
+  "peak_IL_time_s": 0.00573263498,
+  "full_resolution_windows_s": [
+    [
+      0.027999999999999997,
+      0.03
+    ],
+    [
+      0.0140243326,
+      0.014074332600000001
+    ],
+    [
+      0.00570763498,
+      0.00575763498
+    ]
+  ],
+  "last_2ms_time_means": {
+    "VOUT_V": 10.04095055646308,
+    "IOUT_A": 0.5066115960913343,
+    "IL_A": 0.48120293708818906
+  },
+  "steady_target_passed": true,
+  "last_2ms_ranges": {
+    "VOUT_V": [
+      9.93649486,
+      10.10751
+    ],
+    "IOUT_A": [
+      0.5013414000000083,
+      0.509970000000024
+    ]
+  },
+  "last_2ms_full_band_passed": true
+}

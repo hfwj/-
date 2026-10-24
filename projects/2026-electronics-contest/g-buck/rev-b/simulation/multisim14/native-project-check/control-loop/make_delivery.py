@@ -1,0 +1,51 @@
+"""Package only a completed, matching set of extracted delivery tests."""
+from pathlib import Path
+import sys,json,hashlib,zipfile
+sys.path.insert(0,str(Path(__file__).resolve().parent.parent))
+from build_projects import ROOT,PROJECT,SOURCE,CASES,output_path,extract_netlist
+
+
+def main():
+    summary=json.loads((ROOT/'results/data/verification_summary.json').read_text())
+    assert summary['all_transients_completed'] and summary['all_steady_targets_passed']
+    rows=summary['cases'];checks=[]
+    for case,row in zip(CASES,rows):
+        assert case['id']==row['id']
+        path=output_path(case)
+        assert hashlib.sha256(path.read_bytes()).hexdigest()==row['project_sha256']
+        assert hashlib.sha256(extract_netlist(path).encode()).hexdigest()==row['solver_source_sha256']
+        checks.append({'id':case['id'],'binary_and_extracted_source_match_completed_run':True})
+    lines=['# 当前工程：软启动与10V/1A功能控制仿真','',
+           '日期：2026-10-24。基于用户当前已运行的保险丝对照工程，保留原件并加入理想控制模型；Windows Multisim本机运行仍待用户确认。','',
+           '先下载[专用ZIP](../downloads/Multisim14_软启动与CVCC控制副本_2026-10-24.zip)，打开其中的25V/20Ω恒压文件。完整操作、模型绑定与假设见[控制副本说明](../simulation/multisim14/native-project-check/control-loop/README.md)。','',
+           '| 工况 | 实际结束时间/ms | 末2ms输出/V | 末2ms输出电流/A | 输出最大值/V | 稳态目标 |','|---|---:|---:|---:|---:|---|']
+    for row in rows:
+        mean=row['last_2ms_time_means']
+        lines.append(f'| {row["id"]} | {row["actual_end_time_s"]*1000:.1f} | {mean["VOUT_V"]:.4f} | {mean["IOUT_A"]:.4f} | {row["VOUT_max_V"]:.4f} | {"通过" if row["steady_target_passed"] else "未通过"} |')
+    lines+=['','上述均为ngspice开关模型交叉求解，不是本环境运行Multisim。输出电流指RS_OUT之后的总电流；空载工况仍保留2.2kΩ泄放电阻。稳态窗口满足10V±0.5V或1A±0.1A，不代表每个启动/负载变化瞬间满足同一限制。','',
+            '自动负载在18～18.1ms由20Ω变8Ω、28～28.1ms变5Ω，各窗口结果：','',
+            '| 区间 | 输出/V | 输出电流/A | 模式 |','|---|---:|---:|---|']
+    for seg in rows[-1]['segments']:lines.append(f'| {seg["name"]} | {seg["VOUT_mean_V"]:.4f} | {seg["IOUT_mean_A"]:.4f} | {seg["mode"]} |')
+    lines+=['',f'自动负载工况全程输出电流最大值约{rows[-1]["IOUT_max_A"]:.4f}A，必须与1A稳态目标区分。','',
+            '控制源V3的SPICE模板已改为理想电压/电流控制及软启动，固定脉宽参数不再决定闭环PWM。画布沿用原源符号，反馈通过当前网络VOUT、3、7、2绑定；不是逐元件重画了原图控制链。','',
+            '本控制假设允许轻载短时负电感电流指令至−0.15A，不是实际电池的充放电策略。原F1仍断开、R1=1mΩ仍接通，故真实保险丝、过流锁存和保护未验证；原方案2A保险丝不能据此取消。采样理想化，实际固件、INA/ADC误差、显示和总效率尚未验证。','',
+            '原上传工程保存在[用户工程目录](../references/user-projects/2026-10-24_本机可运行_保险丝对照.ms14)，SHA256：`'+summary['source_working_project_sha256']+'`。','',
+            '[最终验证JSON](../simulation/multisim14/native-project-check/control-loop/results/data/verification_summary.json) · [六工况波形](../simulation/multisim14/native-project-check/control-loop/results/figures/closed_loop_overview.png)。','']
+    report=PROJECT/'reports/Multisim14_软启动与CVCC控制仿真_2026-10-24.md';report.write_text('\n'.join(lines))
+    package=PROJECT/'downloads/Multisim14_软启动与CVCC控制副本_2026-10-24.zip'
+    paths=[SOURCE,report,*[output_path(c) for c in CASES]]
+    helper=ROOT.parent
+    paths.extend(helper/n for n in ['ms14_project.py','verify_power_stage.py','verify_driver.py','stabilize_transient.py','requirements.txt'])
+    paths.extend(p for p in ROOT.rglob('*') if p.is_file() and p.suffix in ['.py','.md','.lib','.json','.csv','.log','.png'] and '__pycache__' not in p.parts and p.name!='delivery_checks.json')
+    with zipfile.ZipFile(package,'w',zipfile.ZIP_DEFLATED,compresslevel=7) as archive:
+        archive.writestr('请先阅读.txt','先打开downloads/GBUCK_CTRL_EQ_CV_25V_20R_native_check.ms14，运行30ms瞬态。\n这是软启动和CV/CC功能等效控制模型，尚待Multisim本机确认。\n其他工况、假设与界限见simulation/multisim14/native-project-check/control-loop/README.md。\n轻量包不含NPZ完整分辨率窗口，窗口文件保存在GitHub相应results/data/。\n')
+        for p in sorted(set(paths)):archive.write(p,str(p.relative_to(PROJECT)))
+    with zipfile.ZipFile(package) as archive:assert archive.testzip() is None
+    result={'date':'2026-10-24','all_delivery_files_match_completed_runs':True,'cases':checks,'source_file_unchanged':hashlib.sha256(SOURCE.read_bytes()).hexdigest()==summary['source_working_project_sha256'],
+            'native_multisim_execution_verified':False,'package_file':str(package.relative_to(PROJECT)),
+            'package_sha256':hashlib.sha256(package.read_bytes()).hexdigest(),'package_bytes':package.stat().st_size,'zip_integrity_verified':True}
+    (ROOT/'results/data/delivery_checks.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
+    print(json.dumps(result,ensure_ascii=False,indent=2))
+
+
+if __name__=='__main__':main()

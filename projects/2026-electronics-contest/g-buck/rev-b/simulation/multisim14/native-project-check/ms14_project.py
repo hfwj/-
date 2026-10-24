@@ -72,7 +72,11 @@ def components(root):
     for cid,e in cs.items():
         local=clean(e.get('LocalName'))
         if local=='0':continue
-        ports={clean(ps[p.get('CiID')].get('LocalName')):clean(ns[ps[p.get('CiID')].find('Nodes/Item').get('CiID')].get('LocalName')) for p in e.findall('Ports/Item')}
+        ports={}
+        for p in e.findall('Ports/Item'):
+            port=ps[p.get('CiID')];node=port.find('Nodes/Item')
+            node_id=node.get('CiID') if node is not None else None
+            ports[clean(port.get('LocalName'))]=clean(ns[node_id].get('LocalName')) if node_id in ns else None
         params=[clean(x.get('Value')) for x in e.findall('./Attributes/Item/CiaParamList/parameters/Item')]
         rows.append({'internal_ref':local,'display_ref':names[local],'ports':ports,'parameters':params,'model_id':e.get('Model')})
     return rows

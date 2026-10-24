@@ -1,0 +1,88 @@
+{
+  "date": "2026-10-24",
+  "source_sha256": "5995f248b7683502ee6412937513adcecad85427633854a410c8173c6f2a7050",
+  "controller_model_sha256": "18dc7eacd9b52937b26f6d1219a3f25888408d6ba6239cc82420f3d2989a8892",
+  "source_preserved": true,
+  "cases": [
+    {
+      "id": "CV_25V_20R",
+      "vin": 25,
+      "load": "20",
+      "stop": "0.03",
+      "file": "downloads/GBUCK_CTRL_EQ_CV_25V_20R_native_check.ms14",
+      "project_sha256": "4602168b5f4f4f467ab1e758e30f719653eb91cc18d28c93983f99b6ec7e4e7a",
+      "solver_source_sha256": "79c61119f35a317bae674128f37969d5800f2a5d7fa23b2df402605a2a8e0656",
+      "hardware_connectivity_and_vendor_models_preserved": true,
+      "custom_analysis_selection_preserved": true,
+      "both_DCL_decoders_verified": true,
+      "native_multisim_execution_verified": false
+    },
+    {
+      "id": "CC_25V_8R",
+      "vin": 25,
+      "load": "8",
+      "stop": "0.03",
+      "file": "downloads/GBUCK_CTRL_EQ_CC_25V_8R_native_check.ms14",
+      "project_sha256": "c942d71332d59c347d829cf161133ce9560ff488f8677defe138c04ed64c23de",
+      "solver_source_sha256": "d7ddfa67f2e15ddfb51db8ea361b97bf2018ca602c23b9f0513e58620f6fd4f3",
+      "hardware_connectivity_and_vendor_models_preserved": true,
+      "custom_analysis_selection_preserved": true,
+      "both_DCL_decoders_verified": true,
+      "native_multisim_execution_verified": false
+    },
+    {
+      "id": "CC_25V_5R",
+      "vin": 25,
+      "load": "5",
+      "stop": "0.03",
+      "file": "downloads/GBUCK_CTRL_EQ_CC_25V_5R_native_check.ms14",
+      "project_sha256": "5383df9c16714ec027e51c05a1f959e39eefe5b79f9cc90a6c4cd5db5b6b72a7",
+      "solver_source_sha256": "46df8a4dfd84bc2d0f9018a0d30922a8fd8acc8c123c37b2b989dea815c72564",
+      "hardware_connectivity_and_vendor_models_preserved": true,
+      "custom_analysis_selection_preserved": true,
+      "both_DCL_decoders_verified": true,
+      "native_multisim_execution_verified": false
+    },
+    {
+      "id": "CV_15V_20R",
+      "vin": 15,
+      "load": "20",
+      "stop": "0.03",
+      "file": "downloads/GBUCK_CTRL_EQ_CV_15V_20R_native_check.ms14",
+      "project_sha256": "b7a929935b736ce3ca4fd62959bbf78a4661bb853ba5c0e3ad4db9be94d63da5",
+      "solver_source_sha256": "d13890579e4cd12e58c2ba4ee92dc264f8798b8f1046898bf174302904235225",
+      "hardware_connectivity_and_vendor_models_preserved": true,
+      "custom_analysis_selection_preserved": true,
+      "both_DCL_decoders_verified": true,
+      "native_multisim_execution_verified": false
+    },
+    {
+      "id": "CV_25V_OPEN",
+      "vin": 25,
+      "load": "1e9",
+      "stop": "0.03",
+      "file": "downloads/GBUCK_CTRL_EQ_CV_25V_OPEN_native_check.ms14",
+      "project_sha256": "7847d4e0116464b46874652ed73eb8c01af3dc2735b020b0bc9b90586dbb1fbe",
+      "solver_source_sha256": "f0ad617cda301f5f6c36177fd05449d769353fe2634824e1fca5aeae3e4f713c",
+      "hardware_connectivity_and_vendor_models_preserved": true,
+      "custom_analysis_selection_preserved": true,
+      "both_DCL_decoders_verified": true,
+      "native_multisim_execution_verified": false
+    },
+    {
+      "id": "AUTO_20R_8R_5R",
+      "vin": 25,
+      "load": "steps",
+      "stop": "0.045",
+      "file": "downloads/GBUCK_CTRL_EQ_AUTO_20R_8R_5R_native_check.ms14",
+      "project_sha256": "953779e560abe5adba0dab48f8ba65a43602b4c9531582adfd98b17d8b6633d8",
+      "solver_source_sha256": "33e66b2703c1664afcffb43aaf39486087318c62a28f41cba819e90f99dd758a",
+      "hardware_connectivity_and_vendor_models_preserved": true,
+      "custom_analysis_selection_preserved": true,
+      "both_DCL_decoders_verified": true,
+      "native_multisim_execution_verified": false
+    }
+  ],
+  "fuse_status": "F1 remains disconnected, R1=1mOhm remains connected, as in working source; protection unverified",
+  "control_scope": "Ideal sensing, CV + averaged inductor-current control and soft start; not firmware or sensor-chip validation"
+}

@@ -1,0 +1,98 @@
+{
+  "id": "AUTO_20R_8R_5R",
+  "vin": 25,
+  "load": "steps",
+  "stop": "0.045",
+  "solver": "ngspice 44.2 / ngbehavior=psa",
+  "native_multisim_execution_verified": false,
+  "project_sha256": "953779e560abe5adba0dab48f8ba65a43602b4c9531582adfd98b17d8b6633d8",
+  "solver_source_sha256": "33e66b2703c1664afcffb43aaf39486087318c62a28f41cba819e90f99dd758a",
+  "vendor_model_text_preserved_in_extracted_source": true,
+  "requested_end_time_s": 0.045,
+  "actual_end_time_s": 0.045,
+  "data_rows": 1120981,
+  "full_transient_completed": true,
+  "failure_messages": [],
+  "scope": "Ideal control and sensing, modified IR2104 input model, user power-stage models, fuse disconnected as in working source",
+  "VOUT_max_V": 10.4454243,
+  "IL_max_A": 1.2815656,
+  "IL_min_A": -0.0126459434,
+  "IOUT_max_A": 1.6173952000000114,
+  "VIN_max_V": 24.9540375,
+  "peak_VOUT_time_s": 0.0162179526,
+  "peak_IL_time_s": 0.0272740866,
+  "full_resolution_windows_s": [
+    [
+      0.043,
+      0.045
+    ],
+    [
+      0.016192952599999998,
+      0.0162429526
+    ],
+    [
+      0.0272490866,
+      0.0272990866
+    ],
+    [
+      0.0175,
+      0.019
+    ],
+    [
+      0.0275,
+      0.029
+    ]
+  ],
+  "last_2ms_time_means": {
+    "VOUT_V": 5.038994222201135,
+    "IOUT_A": 1.0100892969607658,
+    "IL_A": 1.049965989587067
+  },
+  "segments": [
+    {
+      "name": "CV20",
+      "mode": "CV",
+      "window_s": [
+        0.016,
+        0.0175
+      ],
+      "VOUT_mean_V": 10.350846020198746,
+      "IOUT_mean_A": 0.5222472272414956,
+      "within_steady_target": true
+    },
+    {
+      "name": "CC8",
+      "mode": "CC",
+      "window_s": [
+        0.026,
+        0.0275
+      ],
+      "VOUT_mean_V": 8.071704844797072,
+      "IOUT_mean_A": 1.0126320618116773,
+      "within_steady_target": true
+    },
+    {
+      "name": "CC5",
+      "mode": "CC",
+      "window_s": [
+        0.043,
+        0.045
+      ],
+      "VOUT_mean_V": 5.038994222201135,
+      "IOUT_mean_A": 1.0100892969607658,
+      "within_steady_target": true
+    }
+  ],
+  "steady_target_passed": true,
+  "last_2ms_ranges": {
+    "VOUT_V": [
+      4.90706875,
+      5.09924744
+    ],
+    "IOUT_A": [
+      0.9836441999999934,
+      1.0221674000000114
+    ]
+  },
+  "last_2ms_full_band_passed": true
+}
