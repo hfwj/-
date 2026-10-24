@@ -285,10 +285,10 @@
   "other_case_native_feedback_pending": [],
   "firmware_protection_efficiency_or_complete_schematic_validated": false,
   "latest_record_change_impact": {
-    "baseline": "Existing delivered Ki20 regression files and preceding C15/open feedback",
-    "schematic": "No changes; records only",
-    "components_BOM_PCB": "No changes",
-    "native_projects_or_models": "All existing binaries/control/settings retained. CV25/20R screenshot added; other Ki20 regression conditions remain pending."
+    "baseline": "Delivered Ki20 static regression files and earlier observations",
+    "schematic": "No change; feedback archive only",
+    "components_BOM_PCB": "No change",
+    "native_projects_or_models": "Unchanged;25V/8ohm native screenshot received,5ohm and remaining static cases pending"
   },
   "unresolved_native_observations": [
     "CV_15V_OPEN 100ms screenshot shows persistent roughly 9.6-10.4V low-frequency variation, period about20ms, startup about11.1V; precise limits and cause not established. CV_25V_OPEN only30ms evidence.",
@@ -363,6 +363,41 @@
       "F1_state_directly_visible": false,
       "summary_zh": "25V/20Ω的Ki20本机100ms图后段约10V/0.5A，无明显大幅启动过冲或持续低频起伏；精确误差、纹波和保险丝状态未从此图验证。",
       "scope": "Supports expected native CV response for this ideal-control test condition only; no precise acceptance or firmware/protection/efficiency claim"
+    },
+    {
+      "date": "2026-10-24",
+      "id": "CC25_8R_KIV20",
+      "case": "CC25_8R",
+      "evidence": "User Multisim Grapher screenshot",
+      "visible_analysis_tab": "KIV20_CC25_8R 100ms",
+      "visible_main_title": "GBUCK_CTRL_EQ_CV_15V_OPEN_native_check",
+      "identity_note": "Distinctive Ki20 CC25/8R tab identifies case; main plot title retains source name. Saved project and actual input measurement not received.",
+      "displayed_time_range_s": [
+        0,
+        0.1
+      ],
+      "traces_visibly_reach_100ms": true,
+      "visible_traces": [
+        "V(vout)",
+        "I(RS_OUT)"
+      ],
+      "model_voltage_Ki": 20,
+      "approximate_VOUT_end_V": 8,
+      "approximate_IOUT_end_A": 1,
+      "approximate_VOUT_peak_V": 8,
+      "late_window_s": [
+        0.06,
+        0.1
+      ],
+      "late_current_visually_near_1A": true,
+      "persistent_large_low_frequency_variation_not_apparent": true,
+      "numeric_export_received": false,
+      "current_saved_project_received": false,
+      "precise_error_ripple_settling_or_full_band_verified": false,
+      "all_instantaneous_output_current_below_1A_verified": false,
+      "F1_state_directly_visible": false,
+      "summary_zh": "25V/8Ω的Ki20本机100ms图后段约8V/1A，未见明显持续大幅低频起伏；支持该静态恒流功能。精确电流误差、纹波、瞬时峰值及F1状态未从此图验证。",
+      "scope": "Native static8ohm CC screenshot observation only; not automatic transition, hard instantaneous current limiting, firmware, fuse or efficiency acceptance"
     }
   ]
 }
