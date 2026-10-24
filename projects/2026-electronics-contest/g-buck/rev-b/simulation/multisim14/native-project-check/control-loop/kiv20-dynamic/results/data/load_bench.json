@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-24",
+  "native_project_sha256": "90c182b511c345c45f8c4aa9e39e5ce3524ff2eb8c2ef1c0aab6a1468ff3eb10",
+  "extracted_load_source_sha256": "f89614e51e7b855a80d51c6c22c398f281403fcdac359debcbba330dfd94c0f0",
+  "solver": "ngspice44.2/psa",
+  "isolated_load_transient_complete": true,
+  "failure_messages": [],
+  "load_stage_tests": [
+    {
+      "window_s": [
+        0.06,
+        0.075
+      ],
+      "external_resistance_ohm": 20,
+      "fixed_bench_voltage_V": 10,
+      "expected_bench_current_A": 0.5,
+      "actual_bench_current_range_A": [
+        0.5,
+        0.5
+      ],
+      "passed": true
+    },
+    {
+      "window_s": [
+        0.11,
+        0.125
+      ],
+      "external_resistance_ohm": 8,
+      "fixed_bench_voltage_V": 10,
+      "expected_bench_current_A": 1.25,
+      "actual_bench_current_range_A": [
+        1.25,
+        1.25
+      ],
+      "passed": true
+    },
+    {
+      "window_s": [
+        0.16,
+        0.175
+      ],
+      "external_resistance_ohm": 5,
+      "fixed_bench_voltage_V": 10,
+      "expected_bench_current_A": 2.0,
+      "actual_bench_current_range_A": [
+        2.0,
+        2.0
+      ],
+      "passed": true
+    }
+  ],
+  "all_load_stages_passed": true,
+  "full_buck_dynamic_transient_verified": false,
+  "native_multisim_execution_verified": false,
+  "scope": "Only extracted external-load template at fixed10V. Bench1.25A/2A values at8ohm/5ohm are imposed10V loads, not closed-loopBuck results."
+}

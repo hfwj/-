@@ -4,7 +4,8 @@
 
 ## 下载与阅读
 
-- [C版改善后的Ki20静态回归](simulation/multisim14/native-project-check/control-loop/kiv20-regression/README.md) · [工况ZIP](downloads/Multisim14_Ki20静态回归工况_2026-10-24.zip)：C15V空载改善；同参数15V/25V的20Ω均约10V/0.5A，8Ω约8V/1A、5Ω约5V/1A均已收100ms图，只剩25V空载静态项。精确数据与动态仍待验证，不改板上器件。
+- [Ki20动态切换工程](simulation/multisim14/native-project-check/control-loop/kiv20-dynamic/README.md) · [动态ZIP](downloads/Multisim14_Ki20动态切换工况_2026-10-24.zip)：六项静态本机截图已收齐，25V空载末段约10V；下一步180ms内20Ω→8Ω→5Ω，控制/驱动/F1保持，动态本机结果待反馈。
+- [C版改善后的Ki20静态回归](simulation/multisim14/native-project-check/control-loop/kiv20-regression/README.md) · [工况ZIP](downloads/Multisim14_Ki20静态回归工况_2026-10-24.zip)：C15V空载改善；同参数15V/25V的20Ω均约10V/0.5A，8Ω约8V/1A、5Ω约5V/1A均已收100ms图，六项静态截图已收齐。精确数据与动态仍待验证，不改板上器件。
 - [空载C版单参数控制对照](simulation/multisim14/native-project-check/control-loop/open-load-diagnostic/C_README.md)：B截图与A起伏接近，C仅改电压外环Ki100→20；不改原理图和器件，不预称稳定性修复。
 - [下一步：空载起伏A/B诊断](simulation/multisim14/native-project-check/control-loop/open-load-diagnostic/README.md) · [独立对照ZIP](downloads/Multisim14_空载起伏_AB对照_2026-10-24.zip)：保持原器件和控制不变，比较RELTOL=0.01与0.003的100ms结果；已做文件结构核对，待本机运行，不是已修复版本。
 - [本机工况反馈阶段结论与原题覆盖](reports/Multisim14_本机工况反馈阶段结论_2026-10-24.md)：早期Ki100空载起伏与后续Ki20改善/回归分别记录；不混合不同控制参数的验证结果。原图固件、保护及效率仍未验证。

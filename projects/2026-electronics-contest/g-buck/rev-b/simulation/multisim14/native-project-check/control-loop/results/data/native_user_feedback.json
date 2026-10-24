@@ -285,10 +285,10 @@
   "other_case_native_feedback_pending": [],
   "firmware_protection_efficiency_or_complete_schematic_validated": false,
   "latest_record_change_impact": {
-    "baseline": "Delivered Ki20 regression projects and previous observations",
-    "schematic": "Unchanged; documentation only",
-    "components_BOM_PCB": "Unchanged",
-    "native_projects_or_models": "Unchanged;15V/20ohm native screenshot archived,25V/open remains pending"
+    "baseline": "Ki20 static regression projects, plus CV25/20R as new dynamic source",
+    "schematic": "Static files unchanged. New dynamic RL stimulus template only; wiring/power parts unchanged",
+    "components_BOM_PCB": "Unchanged; F1 retained connected2A",
+    "native_projects_or_models": "Six static Ki20 native screenshots received; new separate180ms load-sequence copy prepared with same controller/driver. Dynamic native result pending."
   },
   "unresolved_native_observations": [
     "CV_15V_OPEN 100ms screenshot shows persistent roughly 9.6-10.4V low-frequency variation, period about20ms, startup about11.1V; precise limits and cause not established. CV_25V_OPEN only30ms evidence.",
@@ -470,6 +470,47 @@
       "summary_zh": "15V/20Ω的Ki20本机100ms图后段约10V/0.5A，电压有小幅起伏，支持低输入端恒压响应；输入值依据工况标签和已交付工程推定，精确误差、源/负载调整率和纹波未测定。",
       "scope": "Native screenshot supports expected low-input CV response of ideal-control case; not precise source/load regulation or full input-range/firmware/protection/efficiency acceptance",
       "small_late_voltage_variation_visible": true
+    },
+    {
+      "date": "2026-10-24",
+      "id": "CV25_OPEN_KIV20",
+      "evidence": "User Multisim Grapher screenshot afterC run request",
+      "visible_analysis_tab": "KIV20_CV25_OPEN 100ms",
+      "visible_main_title": "GBUCK_KIV20_CC25_5R_100ms",
+      "case_identified_from_distinctive_analysis_tab": true,
+      "saved_project_checksum_verified_for_this_run": false,
+      "displayed_time_range_s": [
+        0,
+        0.1
+      ],
+      "traces_visibly_reach_100ms": true,
+      "visible_traces": [
+        "V(vout)",
+        "I(RS_OUT)"
+      ],
+      "model_voltage_Ki": 20,
+      "approximate_VOUT_peak_V": 10.5,
+      "approximate_VOUT_end_V": 10,
+      "late_window_s": [
+        0.06,
+        0.1
+      ],
+      "late_output_visually_near_10V": true,
+      "successive_voltage_oscillations_visibly_decay": true,
+      "prior_persistent_low_frequency_variation_visibly_reduced": true,
+      "exact_voltage_band_ripple_or_settling_time_verified": false,
+      "numeric_export_received": false,
+      "current_saved_project_received": false,
+      "cause_note": "One-parameter response supports voltage-loop integral gain contributing to prior dynamics; does not establish sole cause or physical firmware behavior",
+      "scope": "Native screenshot supports improved25V/open static response; not exact whole-time band, leakage-current measurement, firmware/protection/efficiency acceptance",
+      "case": "CV25_OPEN",
+      "identity_note": "Active tab identifies25V/open Ki20; main title retains previous5ohm case. Input voltage and saved-project checksum not independently received.",
+      "output_current_trace_near_zero_at_displayed_scale": true,
+      "expected_bleeder_current_at_10V_A": 0.004545454545454545,
+      "bleeder_current_precisely_measured_from_screenshot": false,
+      "exact_current_or_voltage_band_ripple_or_settling_verified": false,
+      "F1_state_directly_visible": false,
+      "summary_zh": "25V外部空载Ki20本机100ms图启动峰值约10.5V，随后起伏衰减，60～100ms接近10V。电流曲线在当前尺度接近零，未精确量出约4.5mA的预计泄放电流；不能据图确认峰值严格≤10.5V或精确纹波。"
     }
   ]
 }

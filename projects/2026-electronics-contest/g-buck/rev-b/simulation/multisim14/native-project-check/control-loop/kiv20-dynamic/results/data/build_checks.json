@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-24",
+  "baseline": "downloads/GBUCK_KIV20_CV25_20R_100ms.ms14",
+  "baseline_sha256": "f64116970a8d1c98a388d3ae7c15e322d32671e5cd395611a2e003d8da735c8d",
+  "output": "downloads/GBUCK_KIV20_AUTO_20R_8R_5R_180ms.ms14",
+  "output_sha256": "90c182b511c345c45f8c4aa9e39e5ce3524ff2eb8c2ef1c0aab6a1468ff3eb10",
+  "source_unchanged": true,
+  "all_component_connections_values_and_vendor_models_preserved": true,
+  "C_Ki20_controller_template_preserved": true,
+  "solver_options_preserved": true,
+  "selected_outputs": [
+    "$vout",
+    "@rrs_out[i]"
+  ],
+  "time_settings": {
+    "TSTOP": "0.18",
+    "TSTART": "0",
+    "TMAX": "5e-008",
+    "IC": "dcop"
+  },
+  "load_model": "GLOAD %t1 %t2 VALUE={V(%t1)*V(GLOAD_CTRL)}\nVLOAD_CTRL GLOAD_CTRL %t2 PWL(0 0.05 80m 0.05 80.1m 0.125 130m 0.125 130.1m 0.2 180m 0.2)",
+  "load_stages_ohm": [
+    20,
+    8,
+    5
+  ],
+  "load_transition_intervals_s": [
+    [
+      0.08,
+      0.0801
+    ],
+    [
+      0.13,
+      0.1301
+    ]
+  ],
+  "proposed_observation_windows_s": [
+    [
+      0.06,
+      0.075
+    ],
+    [
+      0.11,
+      0.125
+    ],
+    [
+      0.16,
+      0.175
+    ]
+  ],
+  "both_DCL_decoders_verified": true,
+  "native_multisim_execution_verified": false,
+  "schematic_impact": "No wire/pin/power-part changes; RL simulation template becomes time-dependent conductance and its cached fixed value is hidden.",
+  "components_BOM_PCB_impact": "No board change; load sequence is an external test stimulus. F1 remains2A connected.",
+  "simulation_model_impact": "Same Ki20 controller, input25V, driver and power parts; only external load template, analysis100->180ms and plot label change. Relative to earlier Ki100 AUTO this is a separate control/fuse/time baseline, not a reused result."
+}
