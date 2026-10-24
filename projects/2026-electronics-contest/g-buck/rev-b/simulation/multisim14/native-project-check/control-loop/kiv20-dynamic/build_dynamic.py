@@ -45,7 +45,7 @@ def package_existing():
     package=PROJECT/'downloads/Multisim14_Ki20动态切换工况_2026-10-24.zip'
     with zipfile.ZipFile(package,'w',zipfile.ZIP_DEFLATED) as z:
         z.write(DEST,DEST.name);z.write(HERE/'README.md','请先阅读.md');z.write(check,'build_checks.json')
-        for name in ['load_bench.json','native_user_feedback.json','cursor_readings_130ms.json','cursor_points_130ms.csv']:
+        for name in ['load_bench.json','native_user_feedback.json','cursor_readings_130ms.json','cursor_points_130ms.csv','cursor_recovery_attempt_137ms.json','cursor_recovery_points_137ms.csv']:
             p=HERE/'results/data'/name
             if p.exists():z.write(p,name)
     with zipfile.ZipFile(package) as z:assert z.testzip() is None

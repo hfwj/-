@@ -48,7 +48,7 @@
   "current_saved_project_received": false,
   "F1_state_directly_visible": false,
   "controller_or_physical_design_changed_by_this_feedback": false,
-  "summary_zh": "Ki20的180ms本机动态图显示约10V/0.5A→8V/1A→5V/1A，支持自动CV→CC及恒流负载变化响应。80ms附近峰值约1.2～1.3A，130ms附近约1.6A，未精确测持续时间；不满足全过程瞬时≤1A的表述，稳态与瞬态须分开报告。 后续光标点：130.1377ms时1.5690A、7.8272V，切换前129.2455ms时0.9992767A。显示Δt=892.2347us不是过流持续时间；真实全局峰值和持续时间尚未由完整数据确认。",
+  "summary_zh": "Ki20的180ms本机动态图显示约10V/0.5A→8V/1A→5V/1A，支持自动CV→CC及恒流负载变化响应。80ms附近峰值约1.2～1.3A，130ms附近约1.6A，未精确测持续时间；不满足全过程瞬时≤1A的表述，稳态与瞬态须分开报告。 后续光标点：130.1377ms时1.5690A、7.8272V，切换前129.2455ms时0.9992767A。显示Δt=892.2347us不是过流持续时间；真实全局峰值和持续时间尚未由完整数据确认。 再次光标点为137.2823ms、1.0283A/5.1296V，切换后7.2823ms该点仍高于1A但已在1±0.1A内；显示Δt7.2904ms不代表过流结束或连续超流时长。",
   "scope": "External native functional screenshot, not exact numerical acceptance, real firmware/sensor/protection/fuse/efficiency or full schematic validation",
   "change_impact": {
     "baseline": "Previously delivered Ki20 dynamic180ms native project",
@@ -65,5 +65,16 @@
     "displayed_dx_s": 0.0008922347,
     "dx_is_overcurrent_duration": false,
     "true_global_peak_or_duration_verified": false
+  },
+  "cursor_recovery_follow_up": {
+    "record": "cursor_recovery_attempt_137ms.json",
+    "right_time_s": 0.1372823,
+    "right_IOUT_A": 1.0283,
+    "right_VOUT_V": 5.1296,
+    "elapsed_since_130ms_ms": 7.2823,
+    "displayed_dx_ms": 7.2904,
+    "overcurrent_duration_verified": false,
+    "right_point_still_above_1A": true,
+    "right_point_within_1A_plusminus_0p1A": true
   }
 }

@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-24",
+  "evidence": "Second user Multisim cursor-table screenshot; not full raw waveform",
+  "case": "AUTO_20R_8R_5R_KIV20",
+  "visible_analysis_tab": "KIV20_AUTO_20R_8R_5R 180ms",
+  "displayed_plot_range_s": [
+    0.11,
+    0.15
+  ],
+  "points": [
+    {
+      "cursor": 1,
+      "displayed_time": "129.9919m",
+      "time_s": 0.1299919,
+      "VOUT_V": 7.9627,
+      "IOUT_A": 0.9989547,
+      "displayed_IOUT": "998.9547m",
+      "load_ohm": 8
+    },
+    {
+      "cursor": 2,
+      "displayed_time": "137.2823m",
+      "time_s": 0.1372823,
+      "VOUT_V": 5.1296,
+      "IOUT_A": 1.0283,
+      "displayed_IOUT": "1.0283",
+      "load_ohm": 5
+    }
+  ],
+  "base_time_unit": "s",
+  "base_current_unit": "A",
+  "displayed_delta_time_s": 0.0072904,
+  "displayed_delta_current_A": 0.0292996,
+  "displayed_delta_voltage_V": -2.8331,
+  "known_test_load_transition_start_s": 0.13,
+  "right_point_elapsed_from_load_transition_ms": 7.2823,
+  "left_point_precedes_transition_us": 8.1,
+  "right_current_excess_above_1A_percent": 2.83,
+  "right_current_within_0p9_to_1p1A": true,
+  "right_point_at_or_below_1A": false,
+  "displayed_dx_is_overcurrent_duration": false,
+  "continuous_overcurrent_lower_bound_established": false,
+  "reason": "Left point is before transition and below1A; right point remains above1A. The two endpoints do not delimit the continuous excess-current interval and do not exclude earlier threshold crossings.",
+  "duration_or_first_threshold_crossing_verified": false,
+  "numeric_native_export_received": false,
+  "saved_project_for_this_run_received": false,
+  "rounding_note": "Displayed point values and deltas retain independently rounded cursor values.",
+  "load_law_consistency": {
+    "predicted_right_current_A": 1.0282516363636363,
+    "matches_displayed_current_within_A": 0.0001
+  },
+  "change_impact": {
+    "baseline": "Delivered Ki20 dynamic180ms native project and prior cursor record",
+    "schematic_components_BOM_PCB": "Unchanged, recording only",
+    "controller_load_solver_native_binary": "Unchanged"
+  }
+}

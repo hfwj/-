@@ -13,7 +13,7 @@ def main():
     csv_path=HERE/'results/data/Ki20_screenshot_observations.csv'
     fields=['case','mode','window_start_s','window_end_s','approx_VOUT_V','approx_IOUT_A','approx_startup_VOUT_peak_V','numeric_native_export_received','note']
     with csv_path.open('w',newline='') as f:
-        writer=csv.DictWriter(f,fieldnames=fields);writer.writeheader()
+        writer=csv.DictWriter(f,fieldnames=fields,lineterminator='\n');writer.writeheader()
         for row in static_rows:
             writer.writerow({'case':row['id'],'mode':'CC' if row['id'].startswith('CC') else 'CV','window_start_s':.06,'window_end_s':.1,'approx_VOUT_V':row['approximate_VOUT_end_V'],'approx_IOUT_A':row.get('approximate_IOUT_end_A',''),'approx_startup_VOUT_peak_V':row['approximate_VOUT_peak_V'],'numeric_native_export_received':False,'note':'Screenshot estimates; not measured window statistics. Open-load output current not resolved.'})
         for stage,win in zip(d['approximate_observed_stages'],[[.06,.075],[.11,.125],[.16,.175]]):
@@ -66,6 +66,10 @@ Ki20动态80/130ms两次切换均有电流冲高，后一次约1.6A。输出电�
     if cursor_file.exists():
         cursor=json.loads(cursor_file.read_text());p1,p2=cursor['points']
         text+=f'\n## 新增光标点读数（不同于整段波形统计）\n\n切换前：{p1["time_s"]*1000:.4f}ms、VOUT={p1["VOUT_V"]:.4f}V、I(RS_OUT)={p1["IOUT_A"]:.7f}A；峰顶附近：{p2["time_s"]*1000:.4f}ms、VOUT={p2["VOUT_V"]:.4f}V、I(RS_OUT)={p2["IOUT_A"]:.4f}A，较1A高56.9%。光标显示Δt=892.2347us，是前点到峰顶附近点的间隔，不是过流持续时间；也未搜索全局峰值。\n\n按已交付连接，7.8272/5+7.8272/2200≈1.5690A，与显示电流一致。完整数据仍未导出。下一步测上升越过1A至下降首次回到1A的同一连续区间；如有纹波多次穿越，应由完整波形分别统计。\n\n[光标读数JSON](../simulation/multisim14/native-project-check/control-loop/kiv20-dynamic/results/data/cursor_readings_130ms.json) · [两点CSV](../simulation/multisim14/native-project-check/control-loop/kiv20-dynamic/results/data/cursor_points_130ms.csv)。本次仍仅归档，不修改工程、器件或控制。\n'
+    recovery_file=HERE/'results/data/cursor_recovery_attempt_137ms.json'
+    if recovery_file.exists():
+        recovery=json.loads(recovery_file.read_text())
+        text+='\n## 第二组回落光标读数\n\n左光标129.9919ms、0.9989547A/7.9627V；右光标137.2823ms、1.0283A/5.1296V。右点在130ms负载变化后7.2823ms，仍高于1A约2.83%，但已在1±0.1A内。显示Δt7.2904ms仍不是确认的连续过流时长，不能由两个点排除中间已发生阈值穿越。\n\n下一步向右移动右光标到该尖峰下降首次≤1.0000A处，记录时间；从130ms到此点仅作为近似恢复时间。精确超限时长需完整波形或真正的上下穿越点。本次仅记录，原理图/器件/模型/求解设置保持。\n\n[第二组光标JSON](../simulation/multisim14/native-project-check/control-loop/kiv20-dynamic/results/data/cursor_recovery_attempt_137ms.json) · [两点CSV](../simulation/multisim14/native-project-check/control-loop/kiv20-dynamic/results/data/cursor_recovery_points_137ms.csv)。\n'
     report.write_text(text)
     c_build=json.loads((R/'open-load-diagnostic/results/C_build_checks.json').read_text());s_build=json.loads((R/'kiv20-regression/results/build_checks.json').read_text());d_build=json.loads((HERE/'results/data/build_checks.json').read_text())
     files=[(c_build['output'],c_build['output_sha256']),*[(row['file'],row['sha256']) for row in s_build['cases']],(d_build['output'],d_build['output_sha256'])]
@@ -75,6 +79,7 @@ Ki20动态80/130ms两次切换均有电流冲高，后一次约1.6A。输出电�
     package=PROJECT/'downloads/Multisim14_Ki20七工况阶段汇总_2026-10-24.zip'
     includes=[PROJECT/p for p,_ in files]+[report,csv_path,manifest_path,source_c,static,dynamic,HERE/'README.md',R/'kiv20-regression/README.md',R/'open-load-diagnostic/C_README.md']
     if cursor_file.exists():includes.extend([cursor_file,HERE/'results/data/cursor_points_130ms.csv'])
+    if recovery_file.exists():includes.extend([recovery_file,HERE/'results/data/cursor_recovery_points_137ms.csv'])
     with zipfile.ZipFile(package,'w',zipfile.ZIP_DEFLATED) as z:
         for p in includes:z.write(p,str(p.relative_to(PROJECT)))
     with zipfile.ZipFile(package) as z:assert z.testzip() is None
