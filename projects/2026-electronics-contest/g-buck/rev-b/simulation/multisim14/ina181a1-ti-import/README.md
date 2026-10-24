@@ -1,5 +1,7 @@
 # INA181A1：用户上传TI模型与6脚候选接口
 
+**向导结构更新：本页旧接口有多个顶层，当前候选改为[单顶层修正版](../ti-sense-wizard-fix/README.md)。U3动态仍未通过；旧文件和测试作为历史基线保留。当前先按修正版指引创建U2/U4。**
+
 2026-10-24。用户上传`sbombb7.zip`，包内`ina181a1.lib`未加密，头部标明TI、PSpice16.2、INA181A1、版本2.0、日期08/16/19。原包完整保存在[references](../../../references/vendor-models/INA181A1/sbombb7.zip)，原版权和全部模型字节保留；未在线核验下载来源。
 
 **当前结论：DC接口/增益检查通过，ngspice瞬态尚未通过；不将本候选标为完整可运行模型。**Windows Multisim导入和求解尚未执行，本环境的失败不能直接认定其在Multisim也必定失败。

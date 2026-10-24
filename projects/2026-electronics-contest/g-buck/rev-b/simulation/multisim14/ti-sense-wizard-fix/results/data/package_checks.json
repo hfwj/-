@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-24",
+  "package": "downloads/Multisim14_TI_CurrentSense_WizardFix_2026-10-24.zip",
+  "sha256": "52965a6c567943b14bd35c459556910de0f53ca30c72557070a35b7ae368e1af",
+  "zip_integrity_verified": true,
+  "packaged_models_match_checks": true,
+  "one_top_level_per_model": true,
+  "native_multisim_import_performed": false,
+  "INA181_transient_completed": false
+}

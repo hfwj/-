@@ -1,0 +1,169 @@
+{
+  "date": "2026-10-24",
+  "models": {
+    "INA240A1": {
+      "baseline_sha256": "9193149244af041e2dc7e6e396a18d6f99ec74ab0b4735fff0ddb4768cc8dd20",
+      "corrected_sha256": "cd47ba80efa059318c61883a4629edd5f359ffb4b58b606b18b0b6a12e36f901",
+      "vendor_core_sha256": "aa16f4a9bab8f769dd234e825cda6bb90865b69bd977c94f2560bf1eeaea6c21",
+      "old_structure": {
+        "roots": [
+          "INA240A1_TI_8PIN",
+          "INA240A1",
+          "VNSE_INA240A1",
+          "TF_INA240A1",
+          "AMETER_INA240A1",
+          "CONTROL_INA240A1",
+          "IIBP_INA240A1",
+          "VICM_INA240A1",
+          "GBW_SLEW_INA240A1",
+          "IQ_INA240A1",
+          "PSRR_INA240A1",
+          "IIBN_INA240A1",
+          "VOUTvsIOUT_NROS_SHDN_INA240A1"
+        ],
+        "dependent_subcircuits": [],
+        "dependent_models": 3
+      },
+      "new_structure": {
+        "roots": [
+          "INA240A1_TI_8PIN"
+        ],
+        "dependent_subcircuits": [
+          "INA240A1",
+          "VNSE_INA240A1",
+          "TF_INA240A1",
+          "AMETER_INA240A1",
+          "CONTROL_INA240A1",
+          "IIBP_INA240A1",
+          "VICM_INA240A1",
+          "GBW_SLEW_INA240A1",
+          "IQ_INA240A1",
+          "PSRR_INA240A1",
+          "IIBN_INA240A1",
+          "VOUTvsIOUT_NROS_SHDN_INA240A1"
+        ],
+        "dependent_models": 3
+      },
+      "original_vendor_bytes_preserved": true,
+      "only_outer_ENDS_relocated": true,
+      "model_name_and_port_order_unchanged": true,
+      "file": "INA240A1_TI_8PIN_WIZARD.lib"
+    },
+    "INA181A1": {
+      "baseline_sha256": "4671ba1aae011b303f09462bdcd251a2e46037c572d3d7eecdf0799e183181cc",
+      "corrected_sha256": "e07acbec0e7c9e81220323b07dc90cbdd582a52cbbec268cfc54cf2ba871321d",
+      "vendor_core_sha256": "b21a12037058848645c9c0569555905686a85a77430ff612dfd87d96caee21a6",
+      "old_structure": {
+        "roots": [
+          "INA181A1_TI_6PIN",
+          "INA181A1",
+          "vnse_INA181A1",
+          "COMPARATOR_INA181A1",
+          "IQ_VICM_INA181A1",
+          "CMRR_INA181A1",
+          "IIBN_INA181A1",
+          "VICM_INA181A1",
+          "IIBP_INA181A1",
+          "AMETER_INA181A1",
+          "PSRR_INA181A1",
+          "CONTROL_INA181A1",
+          "TF_INA181A1",
+          "VOUTVSIOUT_NROS_SHDN_INA181A1",
+          "GBW_SLEW_OUTLIMITS_INA181A1",
+          "ZOUT_OL_INA181A1",
+          "ZOUT_INA181A1",
+          "ZO_SRC_INA181A1"
+        ],
+        "dependent_subcircuits": [],
+        "dependent_models": 5
+      },
+      "new_structure": {
+        "roots": [
+          "INA181A1_TI_6PIN"
+        ],
+        "dependent_subcircuits": [
+          "INA181A1",
+          "vnse_INA181A1",
+          "COMPARATOR_INA181A1",
+          "IQ_VICM_INA181A1",
+          "CMRR_INA181A1",
+          "IIBN_INA181A1",
+          "VICM_INA181A1",
+          "IIBP_INA181A1",
+          "AMETER_INA181A1",
+          "PSRR_INA181A1",
+          "CONTROL_INA181A1",
+          "TF_INA181A1",
+          "VOUTVSIOUT_NROS_SHDN_INA181A1",
+          "GBW_SLEW_OUTLIMITS_INA181A1",
+          "ZOUT_OL_INA181A1",
+          "ZOUT_INA181A1",
+          "ZO_SRC_INA181A1"
+        ],
+        "dependent_models": 5
+      },
+      "original_vendor_bytes_preserved": true,
+      "only_outer_ENDS_relocated": true,
+      "model_name_and_port_order_unchanged": true,
+      "file": "INA181A1_TI_6PIN_WIZARD.lib"
+    }
+  },
+  "checks": {
+    "ina240a1_dc": {
+      "returncode": 0,
+      "errors": [],
+      "rows": 61,
+      "last_scale": 0.06,
+      "solver_completed_without_errors": true,
+      "full_requested_analysis_completed": true,
+      "max_output_difference_from_flat_baseline_V": 0.0,
+      "output_matches_baseline_within_1mV": true
+    },
+    "ina240a1_step": {
+      "returncode": 0,
+      "errors": [],
+      "rows": 2046,
+      "last_scale": 0.0001,
+      "solver_completed_without_errors": true,
+      "full_requested_analysis_completed": true,
+      "max_output_difference_from_flat_baseline_V": 1.0000000161269895e-08,
+      "output_matches_baseline_within_1mV": true
+    },
+    "ina181a1_dc": {
+      "returncode": 0,
+      "errors": [],
+      "rows": 41,
+      "last_scale": 0.06,
+      "solver_completed_without_errors": true,
+      "full_requested_analysis_completed": true,
+      "max_output_difference_from_flat_baseline_V": 0.0,
+      "output_matches_baseline_within_1mV": true
+    },
+    "ina181a1_step": {
+      "returncode": 0,
+      "errors": [
+        "doAnalyses: TRAN:  Timestep too small; time = 7.9993e-09, timestep = 1.09017e-19: trouble with x_w:x_ti:dideal-instance d.x_w.d.x_ti.d_d1",
+        "run simulation(s) aborted"
+      ],
+      "rows": 82,
+      "last_scale": 7.9992993e-09,
+      "solver_completed_without_errors": false,
+      "full_requested_analysis_completed": false
+    },
+    "three_chip_dc": {
+      "returncode": 0,
+      "errors": [],
+      "rows": 1,
+      "last_scale": 3.3,
+      "solver_completed_without_errors": true,
+      "max_difference_from_flat_fixture": 0.0
+    }
+  },
+  "single_top_level_structure_checks_passed": true,
+  "INA240_regression_passed": true,
+  "INA181_DC_regression_passed": true,
+  "INA181_transient_completed": false,
+  "native_multisim_import_or_execution_performed": false,
+  "existing_ms14_physical_parts_BOM_PCB_firmware_changed": false,
+  "scope": "User-reported wizard structural error addressed; independent ngspice rechecks, not native import certification"
+}

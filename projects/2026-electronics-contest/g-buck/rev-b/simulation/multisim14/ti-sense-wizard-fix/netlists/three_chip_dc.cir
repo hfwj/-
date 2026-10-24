@@ -1,0 +1,27 @@
+* Wizard nested model check
+.include "../INA240A1_TI_8PIN_WIZARD.lib"
+.include "../INA181A1_TI_6PIN_WIZARD.lib"
+* Original TI sensing model interface check
+V_SUP VD 0 3.3
+R_VDDA VD VA 10
+C_A1 VA 0 1u
+C_A2 VA 0 100n
+C_A3 VA 0 10u
+C_U2 VA 0 100n
+C_U3 VA 0 100n
+C_U4 VA 0 100n
+V_CM2 CM2 0 25
+V_CM3 CM3 0 10
+V_CM4 CM4 0 10
+V_DIFF2 IP2 CM2 0.01
+V_DIFF3 IP3 CM3 0.025
+V_DIFF4 IP4 CM4 0.025
+X_U2 CM2 0 0 NC2 O2 VA 0 IP2 INA240A1_TI_8PIN
+X_U3 O3 0 IP3 CM3 0 VA INA181A1_TI_6PIN
+X_U4 CM4 0 0 NC4 O4 VA VA IP4 INA240A1_TI_8PIN
+R_L2 O2 0 100k
+R_L3 O3 0 100k
+R_L4 O4 0 100k
+.options method=gear maxord=2 reltol=1e-4 abstol=1e-10 vntol=1e-6
+.op
+.end

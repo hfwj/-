@@ -1,5 +1,7 @@
 # INA240A1：用户上传TI模型的8脚导入接口
 
+**导入修正：用户本机向导拒绝本页旧版的多顶层结构。当前改用[单顶层向导修正版](../ti-sense-wizard-fix/README.md)中的`INA240A1_TI_8PIN_WIZARD.lib`。顶层名和8个引脚不变；本页旧文件/结果作为比较基线保留，以下旧导入步骤不再作为当前指引。**
+
 后续已收到U3的INA181A1 TI模型，见[两个模型的组合包和状态](../ina181a1-ti-import/README.md)。INA181的DC通过、动态检查未完成；当前仍先导入本页INA240模型。下文“本包只含INA240”指本页原独立导入包。
 
 2026-10-24。来源为用户上传的`sbombe4.zip`，原包完整保存在[references](../../../references/vendor-models/INA240A1/sbombe4.zip)。按包内头部识别为TI INA240A1、PSpice16.2、模型版本2.0、日期03/09/17；本环境未访问官网下载核验。版权及原说明保留。

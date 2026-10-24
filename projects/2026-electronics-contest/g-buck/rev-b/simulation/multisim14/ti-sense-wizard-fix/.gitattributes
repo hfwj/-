@@ -1,0 +1,2 @@
+# Keep original vendor bytes, including mixed line endings and trailing spaces.
+*.lib -text whitespace=-blank-at-eol
