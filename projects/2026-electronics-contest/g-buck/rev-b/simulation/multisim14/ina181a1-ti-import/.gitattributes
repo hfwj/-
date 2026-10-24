@@ -1,0 +1,2 @@
+# Preserve original vendor CRLF/LF and trailing spaces byte-for-byte.
+INA181A1_TI_6PIN.lib -text whitespace=-blank-at-eol

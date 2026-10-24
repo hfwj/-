@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-24",
+  "package": "downloads/Multisim14_TI_CurrentSense_Import_2026-10-24.zip",
+  "sha256": "296a44d38d59deb10fd832b46d724a4ed8033ef3c598be23980acaf51e7a87bc",
+  "zip_integrity_verified": true,
+  "original_model_bytes_preserved": true,
+  "INA240_independent_transient_completed": true,
+  "INA181_DC_checks_passed": true,
+  "INA181_transient_completed": false,
+  "three_chip_DC_fixture_passed": true,
+  "native_multisim_import_or_run_performed": false
+}

@@ -1,0 +1,7 @@
+{
+  "case": "zero_to_25mV_step",
+  "solver": "gear,maxord2",
+  "completed": false,
+  "failure_time_s": 5.30099e-10,
+  "reason": "ngspice transient timestep too small; core unchanged; no native Multisim result"
+}

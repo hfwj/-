@@ -1,0 +1,10 @@
+* Original TI sensing model interface check
+.include "../INA181A1_TI_6PIN.lib"
+V_SUP VA 0 3.3
+V_CM CM 0 10
+V_DIFF IP CM PWL(0 0.01 10u 0.01 10.01u 0.025 100u 0.025)
+X_D IP CM VA 0 0 OD INA181A1
+R_D OD 0 100k
+.options method=gear maxord=2 reltol=1e-4 abstol=1e-10 vntol=1e-6
+.tran 50n 100u 0 50n
+.end

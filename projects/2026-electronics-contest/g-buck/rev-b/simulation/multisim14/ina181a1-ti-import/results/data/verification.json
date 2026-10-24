@@ -1,0 +1,153 @@
+{
+  "date": "2026-10-24",
+  "uploaded_archive": "sbombb7.zip",
+  "uploaded_archive_sha256": "e7da3a3c415085db160fcc19ccef5995242781227e2576a926032c0558b00576",
+  "archive_contents": [
+    {
+      "name": "INA181A1 Test Circuit-PSpiceFiles/",
+      "bytes": 0
+    },
+    {
+      "name": "INA181A1 Test Circuit-PSpiceFiles/SCHEMATIC1/",
+      "bytes": 0
+    },
+    {
+      "name": "INA181A1 Test Circuit-PSpiceFiles/SCHEMATIC1/TRANSIENT/",
+      "bytes": 0
+    },
+    {
+      "name": "INA181A1 Test Circuit-PSpiceFiles/SCHEMATIC1/TRANSIENT/TRANSIENT.1OP",
+      "bytes": 2915
+    },
+    {
+      "name": "INA181A1 Test Circuit-PSpiceFiles/SCHEMATIC1/TRANSIENT/TRANSIENT.cir",
+      "bytes": 704
+    },
+    {
+      "name": "INA181A1 Test Circuit-PSpiceFiles/SCHEMATIC1/TRANSIENT/TRANSIENT.mif",
+      "bytes": 1673
+    },
+    {
+      "name": "INA181A1 Test Circuit-PSpiceFiles/SCHEMATIC1/TRANSIENT/TRANSIENT.mrk",
+      "bytes": 422
+    },
+    {
+      "name": "INA181A1 Test Circuit-PSpiceFiles/SCHEMATIC1/TRANSIENT/TRANSIENT.out.1",
+      "bytes": 1383
+    },
+    {
+      "name": "INA181A1 Test Circuit-PSpiceFiles/SCHEMATIC1/TRANSIENT/TRANSIENT.prb",
+      "bytes": 1719
+    },
+    {
+      "name": "INA181A1 Test Circuit-PSpiceFiles/SCHEMATIC1/transient.sim",
+      "bytes": 1690
+    },
+    {
+      "name": "ina181a1 test circuit.dsn",
+      "bytes": 33792
+    },
+    {
+      "name": "ina181a1 test circuit.opj",
+      "bytes": 2830
+    },
+    {
+      "name": "ina181a1.lib",
+      "bytes": 13544
+    },
+    {
+      "name": "library/",
+      "bytes": 0
+    },
+    {
+      "name": "library/ina181a1.olb",
+      "bytes": 8192
+    }
+  ],
+  "original_member": "ina181a1.lib",
+  "original_core_sha256": "b21a12037058848645c9c0569555905686a85a77430ff612dfd87d96caee21a6",
+  "model_header_claim": "TI INA181A1 PSpice16.2,version2.0,08/16/19",
+  "core_subcircuits": 17,
+  "original_port_order": [
+    "INP",
+    "INN",
+    "VCC",
+    "GND",
+    "REF",
+    "OUT"
+  ],
+  "adapter_port_order": [
+    "OUT",
+    "GND",
+    "INP",
+    "INM",
+    "REF",
+    "VS"
+  ],
+  "original_model_bytes_preserved": true,
+  "adapter_sha256": "4671ba1aae011b303f09462bdcd251a2e46037c572d3d7eecdf0799e183181cc",
+  "INA240_adapter_used_sha256": "9193149244af041e2dc7e6e396a18d6f99ec74ab0b4735fff0ddb4768cc8dd20",
+  "cases": {
+    "dc": {
+      "rows": 41,
+      "checks": {
+        "adapter_matches_direct_original": true,
+        "sweep_completed": true,
+        "incremental_gain_near_20": true,
+        "25mV_output_near_0p5V": true
+      },
+      "incremental_gain_V_per_V": 19.997428024999998,
+      "zero_input_output_V": 0.0199852088,
+      "25mV_output_V": 0.49770044300000005,
+      "max_adapter_discrepancy_V": 0.0
+    },
+    "step": {
+      "rows": 16,
+      "checks": {
+        "completed_without_solver_error": false
+      },
+      "actual_end_scale": 5.0764593e-10,
+      "failure_messages": [
+        "doAnalyses: TRAN:  Timestep too small; time = 5.07646e-10, timestep = 2.28848e-19: trouble with x_w.x_ti:dideal-instance d.x_w.x_ti.d_d1",
+        "run simulation(s) aborted"
+      ]
+    },
+    "direct_only_step": {
+      "rows": 82,
+      "checks": {
+        "completed_without_solver_error": false
+      },
+      "actual_end_scale": 7.9992993e-09,
+      "failure_messages": [
+        "doAnalyses: TRAN:  Timestep too small; time = 7.9993e-09, timestep = 1.09017e-19: trouble with x_d:dideal-instance d.x_d.d_d1",
+        "run simulation(s) aborted"
+      ]
+    },
+    "three_chip_dc": {
+      "rows": 1,
+      "checks": {
+        "operating_point_completed": true,
+        "analog_rail_has_expected_load_drop": true,
+        "U2_near_0p2V": true,
+        "U3_near_0p5V": true,
+        "U4_tracks_loaded_rail_midpoint": true,
+        "rail_drop_matches_source_current": true
+      },
+      "analog_rail_V": 3.26141752,
+      "U2_V": 0.19979966,
+      "U3_V": 0.497690629,
+      "U4_V": 2.13057825,
+      "fixture_supply_A": 0.00385824789,
+      "scope": "Three chips, R_VDDA and decoupling only; no protection refs, ADC filters, Buck or MCU"
+    }
+  },
+  "all_checks_passed": false,
+  "native_multisim_import_or_run_performed": false,
+  "existing_ms14_hardware_BOM_PCB_firmware_changed": false,
+  "limits": [
+    "Independent ngspice PSA-mode checks, not native Multisim certification",
+    "Three-chip rail test excludes protection divider/ADC/MCU loads and input supply converter",
+    "Model parameter ranges are not replacements for device datasheet ratings",
+    "Previous FUNC protection and restart results do not establish this TI-model chain has passed"
+  ]
+}

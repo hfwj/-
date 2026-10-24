@@ -1,0 +1,7 @@
+{
+  "case": "zero_to_25mV_step",
+  "solver": "default trapezoidal",
+  "completed": false,
+  "failure_time_s": 5.98026e-10,
+  "reason": "ngspice transient timestep too small; original TI core preserved; no native Multisim result"
+}
