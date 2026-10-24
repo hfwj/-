@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-24",
+  "case": "original_alias_mismatch",
+  "project_sha256": "b1111a377c3ab83b075392189140fbc7a5ca782082280f712a3b1405cdac6f9c",
+  "extracted_source_sha256": "c6d9f99e7385134b01f618925c78dc429664dbbcd70c5ba0a13a8ce912ff100e",
+  "requested_end_s": 0.007,
+  "full_requested_transient_completed": true,
+  "actual_end_s": 0.007,
+  "points": 224319,
+  "raw_declared_points": 224319,
+  "vectors": [
+    "time",
+    "v(vout)",
+    "v(vdda)",
+    "v(iin_raw)",
+    "v(il_bi)",
+    "i(l1)",
+    "v(6)",
+    "v(7)",
+    "v(l_raw)",
+    "v(v_cap)",
+    "v(xctrl.ilraw)",
+    "v(sw)",
+    "v(17)"
+  ],
+  "failure_messages": [],
+  "elapsed_wall_s": 106.87478317299974,
+  "native_multisim_run_performed": false,
+  "cross_solver_TMAX_s": 5e-08,
+  "fuse_thermal_trip_simulated": false,
+  "metrics": {
+    "IL_max_A": 5.227742918689233,
+    "IL_min_A": -0.014288414406427358,
+    "VOUT_end_V": 19.196656135410574,
+    "VDDA_tail_mean_V": 3.263642566988013,
+    "controller_IL_tail_mean_A": 0.0,
+    "physical_IL_tail_mean_A": 3.496775024600043,
+    "IL_BI_tail_mean_V": 2.8790841489992642,
+    "IIN_RAW_tail_mean_V": 1.390369234516849
+  },
+  "passed": false
+}

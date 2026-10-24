@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-24",
+  "case": "fixed_gear",
+  "project_sha256": "ca8bc20a0ee8041834353e4b7ec91a6abc6ebd30451153d281b23aa82e6ac3b0",
+  "extracted_source_sha256": "6ab5a3c45dabc3086da4b8b5749111ccbe0f3e8b6538af71055887d43c6c9250",
+  "requested_end_s": 0.03,
+  "full_requested_transient_completed": false,
+  "actual_end_s": 0.004920000017664613,
+  "points": 169744,
+  "raw_declared_points": 169744,
+  "vectors": [
+    "time",
+    "v(vout)",
+    "v(vdda)",
+    "v(iin_raw)",
+    "v(il_bi)",
+    "i(l1)",
+    "v(6)",
+    "v(7)",
+    "v(l_raw)",
+    "v(v_cap)",
+    "v(xctrl.ilraw)",
+    "v(sw)",
+    "v(17)"
+  ],
+  "failure_messages": [
+    "doAnalyses: TRAN:  Timestep too small; time = 0.00492, timestep = 6.25e-20: trouble with node \"v.xq2.vfi1#branch\"",
+    "run simulation(s) aborted"
+  ],
+  "elapsed_wall_s": 71.86484800800099,
+  "native_multisim_run_performed": false,
+  "cross_solver_TMAX_s": 5e-08,
+  "cross_solver_method": "gear",
+  "fuse_thermal_trip_simulated": false,
+  "metrics": {
+    "IL_max_A": 0.8197808697367662,
+    "IL_min_A": -0.014739103736193731,
+    "VOUT_end_V": 0.5361273256193393,
+    "VDDA_tail_mean_V": 3.263672571972007,
+    "controller_IL_tail_mean_A": 0.1485248248319268,
+    "physical_IL_tail_mean_A": 0.14852493517773752,
+    "IL_BI_tail_mean_V": 1.7055977248714427,
+    "IIN_RAW_tail_mean_V": 0.029512272273407712
+  },
+  "passed": false
+}

@@ -4,6 +4,7 @@
 
 ## 下载与阅读
 
+- [STEP01采样接入反馈别名修正](simulation/multisim14/native-project-check/step01-sense-feedback-fix/README.md) · [原生修正版](downloads/GBUCK_STEP01_IL_SENSE_FEEDBACK_FIX.ms14)：用户U2/U4接线核对正确，修正V3旧数字节点到L_RAW/V_CAP的反馈引用；原接线、器件、Ki20和分析设置保持，本机30ms待复核，独立完整30ms检查进行中。
 - [TI采样模型向导结构修正](simulation/multisim14/ti-sense-wizard-fix/README.md) · [当前导入包](downloads/Multisim14_TI_CurrentSense_WizardFix_2026-10-24.zip)：针对本机multiple top-level .subckt报错，只移动外层.ENDS、嵌套全部依赖；TI模型字节/参数和引脚不变。INA240回归通过，INA181动态仍未完成；本机导入待重试，不改主图/BOM。
 - [两款TI采样模型与当前导入步骤](simulation/multisim14/ina181a1-ti-import/README.md) · [组合包](downloads/Multisim14_TI_CurrentSense_Import_2026-10-24.zip)：U2/U4的INA240独立DC/阶跃通过；U3的INA181 DC通过、瞬态未完成，失败记录保留。先导入INA240，均未运行本机Multisim、未改主图/BOM。
 - [INA240A1上传TI模型与8脚导入说明](simulation/multisim14/ina240a1-ti-import/README.md) · [导入包](downloads/Multisim14_INA240A1_TI_8PIN_2026-10-24.zip)：原TI模型字节保留，只加7端到8脚接口；独立增益/参考/阶跃对照通过，本机导入待确认，用于U2/U4，U3需另模型；未改现有主图/BOM。

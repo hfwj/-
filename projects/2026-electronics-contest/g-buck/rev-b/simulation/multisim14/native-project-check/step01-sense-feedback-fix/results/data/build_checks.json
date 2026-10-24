@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-24",
+  "uploaded_file_name": "GBUCK_STEP01_IL_SENSE.ms14.ms14",
+  "baseline": "references/user-projects/2026-10-24_STEP01_IL_SENSE_异常回传.ms14",
+  "baseline_sha256": "b1111a377c3ab83b075392189140fbc7a5ca782082280f712a3b1405cdac6f9c",
+  "output": "downloads/GBUCK_STEP01_IL_SENSE_FEEDBACK_FIX.ms14",
+  "output_sha256": "ca8bc20a0ee8041834353e4b7ec91a6abc6ebd30451153d281b23aa82e6ac3b0",
+  "aliases": {
+    "4": "VOUT",
+    "15": "SW",
+    "11": "G_H",
+    "13": "G_L",
+    "21": "VDDA",
+    "2": "L_RAW",
+    "3": "V_CAP",
+    "19": "IIN_RAW",
+    "20": "IL_BI"
+  },
+  "controller_call_before": "XCTRL %t1 %t2 VOUT 3 7 2 GBUCK_CTRL_EQ",
+  "controller_call_after": "XCTRL %t1 %t2 VOUT V_CAP 7 L_RAW GBUCK_CTRL_EQ",
+  "active_and_metadata_copies_changed": 2,
+  "exact_inverse_xml_verified": true,
+  "both_DCL_decoders_verified": true,
+  "source_preserved": true,
+  "all_components_values_ports_positions_and_vendor_models_preserved": true,
+  "controller_equations_and_Ki20_coefficients_preserved": true,
+  "analysis_settings_and_selected_outputs_preserved": true,
+  "settings": {
+    "TSTOP": "0.03",
+    "TSTART": "0",
+    "TMAX": "calculate",
+    "IC": "auto_ic"
+  },
+  "selected_outputs": [
+    "$iin_raw",
+    "$il_bi",
+    "$vdda",
+    "ll1#branch"
+  ],
+  "native_multisim_execution_performed": false,
+  "schematic_impact": "No symbol, wire, pin, value, alias or layout change; only internal V3 control-template call fixed",
+  "physical_parts_BOM_PCB_firmware_impact": "No change",
+  "scope": "Sampling observation added by user; comparator/latch protection still not connected; actual firmware not tested"
+}

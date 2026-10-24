@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-24",
+  "case": "fixed",
+  "project_sha256": "ca8bc20a0ee8041834353e4b7ec91a6abc6ebd30451153d281b23aa82e6ac3b0",
+  "extracted_source_sha256": "c8386b59152196ec39c24429bc958a608be8e5fe1fac6935ccee304aef2db829",
+  "requested_end_s": 0.03,
+  "full_requested_transient_completed": false,
+  "actual_end_s": 0.020734353734955583,
+  "points": 847123,
+  "raw_declared_points": 0,
+  "vectors": [
+    "time",
+    "v(vout)",
+    "v(vdda)",
+    "v(iin_raw)",
+    "v(il_bi)",
+    "i(l1)",
+    "v(6)",
+    "v(7)",
+    "v(l_raw)",
+    "v(v_cap)",
+    "v(xctrl.ilraw)",
+    "v(sw)",
+    "v(17)"
+  ],
+  "failure_messages": [
+    "ERROR: wall-time budget exceeded; not a demonstrated convergence failure"
+  ],
+  "elapsed_wall_s": 480.0746027480054,
+  "native_multisim_run_performed": false,
+  "cross_solver_TMAX_s": 5e-08,
+  "fuse_thermal_trip_simulated": false,
+  "metrics": {
+    "IL_max_A": 1.0772904505660832,
+    "IL_min_A": -0.014239865229499778,
+    "VOUT_end_V": 9.504420773496788,
+    "VDDA_tail_mean_V": 3.2636689087640267,
+    "controller_IL_tail_mean_A": 0.49872620789707367,
+    "physical_IL_tail_mean_A": 0.49881021853274043,
+    "IL_BI_tail_mean_V": 1.8801014416176092,
+    "IIN_RAW_tail_mean_V": 0.23104711409014836
+  },
+  "passed": false
+}
