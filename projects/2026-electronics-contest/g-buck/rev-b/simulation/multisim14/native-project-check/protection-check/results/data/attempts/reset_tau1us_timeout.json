@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-24",
+  "native_project_sha256": "0236d7b911dcb4092423bd1b58fe9252f19fae64774714f33dc94fb59da5e24b",
+  "source_sha256": "439fd9966998ec74c53f5a80884b3a1938bd559b3b81e2e4b69f45aa87c9f9d5",
+  "full_requested_transient_completed": false,
+  "requested_end_s": 0.012,
+  "actual_end_s": null,
+  "data_rows": 0,
+  "checks": {},
+  "passed": false,
+  "failure_messages": [
+    "ERROR: Coupled diagnostic exceeded90s wall-time budget; not a demonstrated convergence failure"
+  ],
+  "case": "coupled_reset",
+  "reset_controller_comparison": true,
+  "native_multisim_execution_performed": false,
+  "original_vendor_power_driver_models_preserved": true,
+  "fuse_model": "Fixed1mOhm conducting resistance; thermal trip not simulated",
+  "fault_stimulus": "Apparent IL measurement offset+2.2A, not real short-circuit energy",
+  "scope": "Checks the extracted delivered model including existing power-stage/driver; does not validate manufacturer protection latency, real INA/ADC/MCU or fuse I2t"
+}

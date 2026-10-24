@@ -1,0 +1,25 @@
+{
+  "case": "positive_adc10x",
+  "solver": "ngspice44.2/psa",
+  "source_sha256": "830bf9fa7e5d4fdc4eca5d58fbb079a440ea4145b89bd3c662bf945752f1bff5",
+  "completed": true,
+  "rows": 50268,
+  "last_scale_value": 0.01,
+  "failure_messages": [],
+  "functional_model_only": true,
+  "native_multisim_execution_performed": false,
+  "model_FAULT_low_time_s": 0.00500198118,
+  "illustrative_delay_after_test_edge_s": 1.981180000000006e-06,
+  "checks": {
+    "requested_end_reached": true,
+    "not_enabled_before_ARM": true,
+    "ARM_rising_edge_enables": true,
+    "fault_detected": true,
+    "async_clear_disables": true,
+    "fault_released": true,
+    "ARM_held_high_does_not_restart": true,
+    "no_new_edge_remains_off": true,
+    "new_ARM_edge_reenables": true
+  },
+  "passed": true
+}

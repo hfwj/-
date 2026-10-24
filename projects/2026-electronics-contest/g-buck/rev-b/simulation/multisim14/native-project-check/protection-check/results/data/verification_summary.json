@@ -1,0 +1,406 @@
+{
+  "date": "2026-10-24",
+  "model_sha256": "eaf2dc5e3c53fab67ac1687598229b68b73c2b9d9229a97a7256e705ce438a5f",
+  "solver": "ngspice44.2/psa",
+  "all_cases_completed": true,
+  "all_functional_checks_passed": true,
+  "cross_checks": {
+    "raw_IL_protection_not_routed_through_ADC_filter": true
+  },
+  "case_count": 19,
+  "cases": [
+    {
+      "case": "dc_iin",
+      "solver": "ngspice44.2/psa",
+      "source_sha256": "70bd1879b19df74b5ba9da52029446ed4255c1844fc8eda46f364c23890e3df3",
+      "completed": true,
+      "rows": 301,
+      "last_scale_value": 3.0,
+      "failure_messages": [],
+      "functional_model_only": true,
+      "native_multisim_execution_performed": false,
+      "max_transfer_error_V": 9.9996075e-09,
+      "checks": {
+        "transfer_error_below_0p2mV": true
+      },
+      "passed": true
+    },
+    {
+      "case": "dc_iout",
+      "solver": "ngspice44.2/psa",
+      "source_sha256": "e595c78a8524377c13f4e84f6a2d844cee78a68ea74d129c3f6ee8d509bf833d",
+      "completed": true,
+      "rows": 301,
+      "last_scale_value": 3.0,
+      "failure_messages": [],
+      "functional_model_only": true,
+      "native_multisim_execution_performed": false,
+      "max_transfer_error_V": 9.9996075e-09,
+      "checks": {
+        "transfer_error_below_0p2mV": true
+      },
+      "passed": true
+    },
+    {
+      "case": "dc_il",
+      "solver": "ngspice44.2/psa",
+      "source_sha256": "fd140cccffe5e7a25ffa1a7ac5efe16497002e5f762d0f0c03097a69d4533bb8",
+      "completed": true,
+      "rows": 4801,
+      "last_scale_value": 2.4,
+      "failure_messages": [],
+      "functional_model_only": true,
+      "native_multisim_execution_performed": false,
+      "max_transfer_error_V": 5.000076797045949e-09,
+      "checks": {
+        "transfer_error_below_0p2mV": true
+      },
+      "passed": true
+    },
+    {
+      "case": "dc_vin",
+      "solver": "ngspice44.2/psa",
+      "source_sha256": "ea941d1d088b43c7abef335016c5a86671fbbd68f1df8c0c8c1845b58c297f14",
+      "completed": true,
+      "rows": 301,
+      "last_scale_value": 30.0,
+      "failure_messages": [],
+      "functional_model_only": true,
+      "native_multisim_execution_performed": false,
+      "max_transfer_error_V": 0.000100569328,
+      "checks": {
+        "transfer_error_below_0p2mV": true
+      },
+      "passed": true
+    },
+    {
+      "case": "dc_vout",
+      "solver": "ngspice44.2/psa",
+      "source_sha256": "ef4b918c96d617fac7e8d622a6f5434e323677cfb8ba17eb94b4d2501710e31d",
+      "completed": true,
+      "rows": 1201,
+      "last_scale_value": 12.0,
+      "failure_messages": [],
+      "functional_model_only": true,
+      "native_multisim_execution_performed": false,
+      "max_transfer_error_V": 1.90837844e-05,
+      "checks": {
+        "transfer_error_below_0p2mV": true
+      },
+      "passed": true
+    },
+    {
+      "case": "dc_il_threshold",
+      "solver": "ngspice44.2/psa",
+      "source_sha256": "fd140cccffe5e7a25ffa1a7ac5efe16497002e5f762d0f0c03097a69d4533bb8",
+      "completed": true,
+      "rows": 4801,
+      "last_scale_value": 2.4,
+      "failure_messages": [],
+      "functional_model_only": true,
+      "native_multisim_execution_performed": false,
+      "analog_supply_V": 3.29750189,
+      "positive_trip_grid_A": 1.799,
+      "negative_release_grid_A": -1.798,
+      "expected_positive_A": 1.7986373945454543,
+      "expected_negative_A": -1.7986373945454543,
+      "grid_resolution_A": 0.0009999999999998899,
+      "checks": {
+        "positive_threshold_within_2p1mA": true,
+        "negative_release_within_2p1mA": true
+      },
+      "passed": true
+    },
+    {
+      "case": "dc_ov_threshold",
+      "solver": "ngspice44.2/psa",
+      "source_sha256": "1a269b5ee401915ee571c26f8def0f83e33b10abecda463e3d24d652c54e1042",
+      "completed": true,
+      "rows": 3001,
+      "last_scale_value": 12.0,
+      "failure_messages": [],
+      "functional_model_only": true,
+      "native_multisim_execution_performed": false,
+      "analog_supply_V": 3.29750189,
+      "OV_trip_grid_V": 10.992,
+      "expected_OV_V": 10.991672966666666,
+      "grid_resolution_V": 0.001,
+      "checks": {
+        "OV_threshold_within_1p1mV": true
+      },
+      "passed": true
+    },
+    {
+      "case": "dc_adc_clamp",
+      "solver": "ngspice44.2/psa",
+      "source_sha256": "07723289d5165fe702b51f75aee01190e24bc6cc4944ffe98bbc3721c4cb89e0",
+      "completed": true,
+      "rows": 800,
+      "last_scale_value": 59.9,
+      "failure_messages": [],
+      "functional_model_only": true,
+      "native_multisim_execution_performed": false,
+      "ADC_range_V": [
+        -0.262205233,
+        3.56737873
+      ],
+      "checks": {
+        "ADC_clamped_between_minus0p4_and3p7V": true
+      },
+      "passed": true
+    },
+    {
+      "case": "dc_il_iq_005",
+      "solver": "ngspice44.2/psa",
+      "source_sha256": "1d1fe3cc21531b6f2c390fd6623cacba759b20547e9c544944311fece6daa05a",
+      "completed": true,
+      "rows": 4801,
+      "last_scale_value": 2.4,
+      "failure_messages": [],
+      "functional_model_only": true,
+      "native_multisim_execution_performed": false,
+      "analog_supply_V": 3.24753974,
+      "positive_trip_grid_A": 1.772,
+      "negative_release_grid_A": -1.771,
+      "expected_positive_A": 1.7713853127272727,
+      "expected_negative_A": -1.7713853127272727,
+      "grid_resolution_A": 0.0009999999999998899,
+      "checks": {
+        "positive_threshold_within_2p1mA": true,
+        "negative_release_within_2p1mA": true
+      },
+      "passed": true
+    },
+    {
+      "case": "dc_il_iq_01",
+      "solver": "ngspice44.2/psa",
+      "source_sha256": "662ee637c450a19561c772b15c9bbaf94a47f0320d80ae4e3d39ac1617225b12",
+      "completed": true,
+      "rows": 4801,
+      "last_scale_value": 2.4,
+      "failure_messages": [],
+      "functional_model_only": true,
+      "native_multisim_execution_performed": false,
+      "analog_supply_V": 3.19757759,
+      "positive_trip_grid_A": 1.745,
+      "negative_release_grid_A": -1.744,
+      "expected_positive_A": 1.7441332309090907,
+      "expected_negative_A": -1.7441332309090907,
+      "grid_resolution_A": 0.0009999999999998899,
+      "checks": {
+        "positive_threshold_within_2p1mA": true,
+        "negative_release_within_2p1mA": true
+      },
+      "passed": true
+    },
+    {
+      "case": "positive",
+      "solver": "ngspice44.2/psa",
+      "source_sha256": "79ee2e8b1e1717193708af4e6bff8af16eec78dc8772622945d9d8869f290356",
+      "completed": true,
+      "rows": 50268,
+      "last_scale_value": 0.01,
+      "failure_messages": [],
+      "functional_model_only": true,
+      "native_multisim_execution_performed": false,
+      "model_FAULT_low_time_s": 0.00500198118,
+      "illustrative_delay_after_test_edge_s": 1.981180000000006e-06,
+      "checks": {
+        "requested_end_reached": true,
+        "not_enabled_before_ARM": true,
+        "ARM_rising_edge_enables": true,
+        "fault_detected": true,
+        "async_clear_disables": true,
+        "fault_released": true,
+        "ARM_held_high_does_not_restart": true,
+        "no_new_edge_remains_off": true,
+        "new_ARM_edge_reenables": true
+      },
+      "passed": true
+    },
+    {
+      "case": "negative",
+      "solver": "ngspice44.2/psa",
+      "source_sha256": "4725ccbe8ed44ae43a607df231855e84d8a72e76c2fa467a876c8f0b142118d6",
+      "completed": true,
+      "rows": 50266,
+      "last_scale_value": 0.01,
+      "failure_messages": [],
+      "functional_model_only": true,
+      "native_multisim_execution_performed": false,
+      "model_FAULT_low_time_s": 0.00500298118,
+      "illustrative_delay_after_test_edge_s": 2.9811800000001387e-06,
+      "checks": {
+        "requested_end_reached": true,
+        "not_enabled_before_ARM": true,
+        "ARM_rising_edge_enables": true,
+        "fault_detected": true,
+        "async_clear_disables": true,
+        "fault_released": true,
+        "ARM_held_high_does_not_restart": true,
+        "no_new_edge_remains_off": true,
+        "new_ARM_edge_reenables": true
+      },
+      "passed": true
+    },
+    {
+      "case": "overvoltage",
+      "solver": "ngspice44.2/psa",
+      "source_sha256": "ae4ac05def12ec81a5e9c884892020c8cd8ca64e301dd6deccff8293a60084ff",
+      "completed": true,
+      "rows": 50285,
+      "last_scale_value": 0.01,
+      "failure_messages": [],
+      "functional_model_only": true,
+      "native_multisim_execution_performed": false,
+      "model_FAULT_low_time_s": 0.00500129133,
+      "illustrative_delay_after_test_edge_s": 1.291330000000035e-06,
+      "checks": {
+        "requested_end_reached": true,
+        "not_enabled_before_ARM": true,
+        "ARM_rising_edge_enables": true,
+        "fault_detected": true,
+        "async_clear_disables": true,
+        "fault_released": true,
+        "ARM_held_high_does_not_restart": true,
+        "no_new_edge_remains_off": true,
+        "new_ARM_edge_reenables": true
+      },
+      "passed": true
+    },
+    {
+      "case": "overvoltage_small",
+      "solver": "ngspice44.2/psa",
+      "source_sha256": "19d613044890392e3625b710189ae23f4e6c1f0ed8f1088693deb26fdcab6463",
+      "completed": true,
+      "rows": 50272,
+      "last_scale_value": 0.01,
+      "failure_messages": [],
+      "functional_model_only": true,
+      "native_multisim_execution_performed": false,
+      "model_FAULT_low_time_s": 0.00500948325,
+      "illustrative_delay_after_test_edge_s": 9.483250000000103e-06,
+      "checks": {
+        "requested_end_reached": true,
+        "not_enabled_before_ARM": true,
+        "ARM_rising_edge_enables": true,
+        "fault_detected": true,
+        "async_clear_disables": true,
+        "fault_released": true,
+        "ARM_held_high_does_not_restart": true,
+        "no_new_edge_remains_off": true,
+        "new_ARM_edge_reenables": true
+      },
+      "passed": true
+    },
+    {
+      "case": "positive_adc10x",
+      "solver": "ngspice44.2/psa",
+      "source_sha256": "830bf9fa7e5d4fdc4eca5d58fbb079a440ea4145b89bd3c662bf945752f1bff5",
+      "completed": true,
+      "rows": 50268,
+      "last_scale_value": 0.01,
+      "failure_messages": [],
+      "functional_model_only": true,
+      "native_multisim_execution_performed": false,
+      "model_FAULT_low_time_s": 0.00500198118,
+      "illustrative_delay_after_test_edge_s": 1.981180000000006e-06,
+      "checks": {
+        "requested_end_reached": true,
+        "not_enabled_before_ARM": true,
+        "ARM_rising_edge_enables": true,
+        "fault_detected": true,
+        "async_clear_disables": true,
+        "fault_released": true,
+        "ARM_held_high_does_not_restart": true,
+        "no_new_edge_remains_off": true,
+        "new_ARM_edge_reenables": true
+      },
+      "passed": true
+    },
+    {
+      "case": "default_inputs_open",
+      "solver": "ngspice44.2/psa",
+      "source_sha256": "a2c460d42cc038f43f52e9a3e321edaa996992be3cb64ed041c7aeccf0d78927",
+      "completed": true,
+      "rows": 50073,
+      "last_scale_value": 0.01,
+      "failure_messages": [],
+      "functional_model_only": true,
+      "native_multisim_execution_performed": false,
+      "checks": {
+        "requested_end_reached": true,
+        "not_enabled_before_ARM": true,
+        "open_MCU_inputs_default_off": true
+      },
+      "passed": true
+    },
+    {
+      "case": "mcu_disable",
+      "solver": "ngspice44.2/psa",
+      "source_sha256": "dc8591f91dfe2a5c3ea39b3f5539d07b380bb96c5147e8b354e7b826dd43a827",
+      "completed": true,
+      "rows": 50278,
+      "last_scale_value": 0.01,
+      "failure_messages": [],
+      "functional_model_only": true,
+      "native_multisim_execution_performed": false,
+      "checks": {
+        "requested_end_reached": true,
+        "not_enabled_before_ARM": true,
+        "ARM_rising_edge_enables": true,
+        "MCU_low_disables": true,
+        "MCU_low_does_not_clear_SAFE": true,
+        "MCU_high_resumes_when_SAFE_was_not_cleared": true
+      },
+      "passed": true
+    },
+    {
+      "case": "startup_Q_initial_high",
+      "solver": "ngspice44.2/psa",
+      "source_sha256": "d686ae005b909483311d11ee6767c4c6cbcacd6059e637f76340f364d73a8aae",
+      "completed": true,
+      "rows": 50248,
+      "last_scale_value": 0.01,
+      "failure_messages": [],
+      "functional_model_only": true,
+      "native_multisim_execution_performed": false,
+      "checks": {
+        "requested_end_reached": true,
+        "not_enabled_before_ARM": true,
+        "ARM_rising_edge_enables": true,
+        "POR_and_fault_clear_high_initial_state": true
+      },
+      "passed": true
+    },
+    {
+      "case": "short_oc_pulse",
+      "solver": "ngspice44.2/psa",
+      "source_sha256": "86a948ca41fbdec2febfc689c5af41c30efe84f9465a77694807865b3ab7cb50",
+      "completed": true,
+      "rows": 50246,
+      "last_scale_value": 0.01,
+      "failure_messages": [],
+      "functional_model_only": true,
+      "native_multisim_execution_performed": false,
+      "limitation_observed": "100ns input pulse is filtered by assumed1us amplifier response and does not trip; not a physical minimum pulse-width guarantee.",
+      "checks": {
+        "requested_end_reached": true,
+        "not_enabled_before_ARM": true,
+        "ARM_rising_edge_enables": true,
+        "short_pulse_not_claimed_cycle_by_cycle_protection": true
+      },
+      "passed": true
+    }
+  ],
+  "native_multisim_execution_performed": false,
+  "manufacturer_active_models_used": false,
+  "physical_latency_fuse_thermal_accuracy_or_real_fault_energy_verified": false,
+  "model_assumptions": [
+    "INA nominal gain20/zerooffset, rail clipping,1us pole and1ohm output model",
+    "LM393 open-collector functional polarity with0.3us pole and1uV numerical hysteresis",
+    "HC14 assumed0.3/0.6 relative thresholds; HC74 edge/memory model; output resistances illustrative",
+    "Original passive reference/ADC/POR values and connectivity; analog active quiescent currents omitted, separate5mA/10mA diagnostic loads",
+    "No INA common-mode/PWM rejection or real IC timing qualification; short-circuit energy and fuse I2t not modeled"
+  ]
+}

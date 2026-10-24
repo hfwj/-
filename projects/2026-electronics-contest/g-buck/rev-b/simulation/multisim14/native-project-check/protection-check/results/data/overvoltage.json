@@ -1,0 +1,25 @@
+{
+  "case": "overvoltage",
+  "solver": "ngspice44.2/psa",
+  "source_sha256": "ae4ac05def12ec81a5e9c884892020c8cd8ca64e301dd6deccff8293a60084ff",
+  "completed": true,
+  "rows": 50285,
+  "last_scale_value": 0.01,
+  "failure_messages": [],
+  "functional_model_only": true,
+  "native_multisim_execution_performed": false,
+  "model_FAULT_low_time_s": 0.00500129133,
+  "illustrative_delay_after_test_edge_s": 1.291330000000035e-06,
+  "checks": {
+    "requested_end_reached": true,
+    "not_enabled_before_ARM": true,
+    "ARM_rising_edge_enables": true,
+    "fault_detected": true,
+    "async_clear_disables": true,
+    "fault_released": true,
+    "ARM_held_high_does_not_restart": true,
+    "no_new_edge_remains_off": true,
+    "new_ARM_edge_reenables": true
+  },
+  "passed": true
+}

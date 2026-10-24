@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-24",
+  "baseline": "downloads/GBUCK_REVB_PROT_POS_INJECT_12ms.ms14",
+  "baseline_sha256": "a5ce1f41512e52f59fd0ca44391ad5c656bcbd11a2a1b57b2143e2d8fe28a0c4",
+  "output": "simulation/multisim14/native-project-check/protection-check/experimental/GBUCK_REVB_PROT_POS_INJECT_RESET_12ms.ms14",
+  "output_sha256": "406ab7f7b04983734da25ece1ea32c79c6b270699acb7908dbffe542d88a7131",
+  "baseline_preserved": true,
+  "exact_inverse_XML_verified": true,
+  "hardware_ports_values_vendor_models_and_protection_model_unchanged": true,
+  "solver_and_stimulus_unchanged": true,
+  "control_changes": [
+    "Controller receives actualDRV_EN as extra simulation feedback port",
+    "WhenDRV_EN<1.65V, voltage/current integrator states decay tozero with illustrative100us constant; internal model integrator C/current scaling1e-6 preserves enabled-loop dynamics",
+    "PWM forcedzero while disabled; existing Ki20/Kp/current coefficients and1A average command retained"
+  ],
+  "physical_components_BOM_PCB_change": false,
+  "real_firmware_modified": false,
+  "native_multisim_execution_performed": false,
+  "scope": "Explicit simulation control-state management comparison, not original firmware verification or instantaneous output-current limiter"
+}

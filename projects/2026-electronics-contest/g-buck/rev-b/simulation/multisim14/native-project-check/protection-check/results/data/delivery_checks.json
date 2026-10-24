@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-24",
+  "package": "downloads/Multisim14_RevB采样与保护验证_2026-10-24.zip",
+  "package_sha256": "a048ec0542b6bcd7b58d468c6076c36aa87e6fcd39d49502da47540f8435af5a",
+  "zip_integrity_verified": true,
+  "model_matches_19_completed_checks": true,
+  "native_binary_matches_completed_coupled_run": true,
+  "stable_restart_passed": false,
+  "original_native_baseline_unchanged": true,
+  "native_multisim_execution_performed": false,
+  "experimental_reset_not_in_main_package": true,
+  "experimental_reset_completed": false
+}

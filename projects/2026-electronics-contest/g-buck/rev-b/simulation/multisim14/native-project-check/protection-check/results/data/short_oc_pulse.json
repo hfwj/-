@@ -1,0 +1,19 @@
+{
+  "case": "short_oc_pulse",
+  "solver": "ngspice44.2/psa",
+  "source_sha256": "86a948ca41fbdec2febfc689c5af41c30efe84f9465a77694807865b3ab7cb50",
+  "completed": true,
+  "rows": 50246,
+  "last_scale_value": 0.01,
+  "failure_messages": [],
+  "functional_model_only": true,
+  "native_multisim_execution_performed": false,
+  "limitation_observed": "100ns input pulse is filtered by assumed1us amplifier response and does not trip; not a physical minimum pulse-width guarantee.",
+  "checks": {
+    "requested_end_reached": true,
+    "not_enabled_before_ARM": true,
+    "ARM_rising_edge_enables": true,
+    "short_pulse_not_claimed_cycle_by_cycle_protection": true
+  },
+  "passed": true
+}

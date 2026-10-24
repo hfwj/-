@@ -1,0 +1,19 @@
+{
+  "case": "dc_ov_threshold",
+  "solver": "ngspice44.2/psa",
+  "source_sha256": "1a269b5ee401915ee571c26f8def0f83e33b10abecda463e3d24d652c54e1042",
+  "completed": true,
+  "rows": 3001,
+  "last_scale_value": 12.0,
+  "failure_messages": [],
+  "functional_model_only": true,
+  "native_multisim_execution_performed": false,
+  "analog_supply_V": 3.29750189,
+  "OV_trip_grid_V": 10.992,
+  "expected_OV_V": 10.991672966666666,
+  "grid_resolution_V": 0.001,
+  "checks": {
+    "OV_threshold_within_1p1mV": true
+  },
+  "passed": true
+}

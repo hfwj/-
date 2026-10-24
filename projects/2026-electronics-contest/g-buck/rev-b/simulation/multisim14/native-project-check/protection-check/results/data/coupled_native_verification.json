@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-24",
+  "native_project_sha256": "a5ce1f41512e52f59fd0ca44391ad5c656bcbd11a2a1b57b2143e2d8fe28a0c4",
+  "source_sha256": "17d1bb353c3e942061cb3b1f7768edb440da7322ef87f09ec6fddd4205cf0288",
+  "full_requested_transient_completed": true,
+  "requested_end_s": 0.012,
+  "actual_end_s": 0.012,
+  "data_rows": 278172,
+  "checks": {
+    "off_before_ARM": true,
+    "enabled_after_ARM": true,
+    "fault_lowers_DRV_EN": true,
+    "safe_remains_cleared_after_fault_release_with_ARM_high": true,
+    "new_ARM_edge_initially_asserts_enable": true,
+    "sustained_enable_after_reARM": false,
+    "no_retrip_after_reARM": false,
+    "both_gate_source_drives_low_while_latched": true,
+    "low_gate_switching_before_fault": true
+  },
+  "passed": false,
+  "failure_messages": [],
+  "case": "coupled_native",
+  "reset_controller_comparison": false,
+  "native_multisim_execution_performed": false,
+  "original_vendor_power_driver_models_preserved": true,
+  "fuse_model": "Fixed1mOhm conducting resistance; thermal trip not simulated",
+  "fault_stimulus": "Apparent IL measurement offset+2.2A, not real short-circuit energy",
+  "scope": "Checks the extracted delivered model including existing power-stage/driver; does not validate manufacturer protection latency, real INA/ADC/MCU or fuse I2t",
+  "reARM_window": {
+    "current_integrator_before_ARM": 0.19795088250000006,
+    "voltage_integrator_before_ARM": -0.6905697908560005,
+    "IL_max_A": 1.83751082,
+    "FAULT_N_min_V": -0.0708589893
+  }
+}

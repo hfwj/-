@@ -1,0 +1,16 @@
+{
+  "case": "dc_vout",
+  "solver": "ngspice44.2/psa",
+  "source_sha256": "ef4b918c96d617fac7e8d622a6f5434e323677cfb8ba17eb94b4d2501710e31d",
+  "completed": true,
+  "rows": 1201,
+  "last_scale_value": 12.0,
+  "failure_messages": [],
+  "functional_model_only": true,
+  "native_multisim_execution_performed": false,
+  "max_transfer_error_V": 1.90837844e-05,
+  "checks": {
+    "transfer_error_below_0p2mV": true
+  },
+  "passed": true
+}

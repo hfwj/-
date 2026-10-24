@@ -1,0 +1,22 @@
+{
+  "case": "dc_il_iq_01",
+  "solver": "ngspice44.2/psa",
+  "source_sha256": "662ee637c450a19561c772b15c9bbaf94a47f0320d80ae4e3d39ac1617225b12",
+  "completed": true,
+  "rows": 4801,
+  "last_scale_value": 2.4,
+  "failure_messages": [],
+  "functional_model_only": true,
+  "native_multisim_execution_performed": false,
+  "analog_supply_V": 3.19757759,
+  "positive_trip_grid_A": 1.745,
+  "negative_release_grid_A": -1.744,
+  "expected_positive_A": 1.7441332309090907,
+  "expected_negative_A": -1.7441332309090907,
+  "grid_resolution_A": 0.0009999999999998899,
+  "checks": {
+    "positive_threshold_within_2p1mA": true,
+    "negative_release_within_2p1mA": true
+  },
+  "passed": true
+}

@@ -1,0 +1,19 @@
+{
+  "case": "dc_adc_clamp",
+  "solver": "ngspice44.2/psa",
+  "source_sha256": "07723289d5165fe702b51f75aee01190e24bc6cc4944ffe98bbc3721c4cb89e0",
+  "completed": true,
+  "rows": 800,
+  "last_scale_value": 59.9,
+  "failure_messages": [],
+  "functional_model_only": true,
+  "native_multisim_execution_performed": false,
+  "ADC_range_V": [
+    -0.262205233,
+    3.56737873
+  ],
+  "checks": {
+    "ADC_clamped_between_minus0p4_and3p7V": true
+  },
+  "passed": true
+}

@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-24",
+  "baseline": "downloads/GBUCK_KIV20_CV25_20R_100ms.ms14",
+  "baseline_sha256": "f64116970a8d1c98a388d3ae7c15e322d32671e5cd395611a2e003d8da735c8d",
+  "output": "downloads/GBUCK_REVB_PROT_POS_INJECT_12ms.ms14",
+  "output_sha256": "a5ce1f41512e52f59fd0ca44391ad5c656bcbd11a2a1b57b2143e2d8fe28a0c4",
+  "source_unchanged": true,
+  "all_physical_component_parameters_and_ports_preserved": true,
+  "vendor_models_and_Ki20_control_template_preserved": true,
+  "new_behavior": "V_EN constant source template replaced by functional RevB chain, ideal auxiliary rails, ARM/MCU stimuli and apparent IL fault injection",
+  "fault_injection": "Measured IL input receives +55mV (=+2.2A apparent IL) at5-6ms; does not create a real power short or quantify fault energy",
+  "native_canvas_disclosure": "V_EN symbol reused and old3.3V value hidden; protection internals are SPICE model, not original-sheet components drawn in GUI",
+  "analysis_settings_preserved_except_duration": true,
+  "duration_s": 0.012,
+  "selected_outputs": [
+    "$17",
+    "$g_l",
+    "$vout"
+  ],
+  "both_DCL_decoders_verified": true,
+  "native_multisim_execution_performed": false,
+  "schematic_impact": "Separate simulation copy changes V_EN simulation template and plotting only; no physical wires/pins/power-part values changed",
+  "components_BOM_PCB_impact": "No physical redesign or new board parts; added model RC/diode/switch elements are assumptions, not procurement additions",
+  "limits": "Not manufacturer timing, common-mode/offset, fuse thermal or complete original-chip/firmware validation"
+}

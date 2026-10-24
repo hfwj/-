@@ -1,0 +1,512 @@
+{
+  "date": "2026-10-24",
+  "schematic_pdf_sha256": "03536f0852546ccd283a0566188b67243d070d2b2b5555b43cf3a8f24355b5aa",
+  "BOM_docx_sha256": "3ec10eaf4192af8eaf7115df56ec5783b5960c6d1383812217471cc3cf734cdb",
+  "pin_table_sha256": "ea014201245ef950a25065bc93c09b4eb9151ccdc55185d632ed370f97cb800f",
+  "physical_passive_checks": [
+    {
+      "reference": "R_VDDA",
+      "nets": [
+        "+3V3",
+        "+3V3_A"
+      ],
+      "model_value": "10",
+      "PDF_table_value": "10Ω",
+      "matched": true
+    },
+    {
+      "reference": "C_A1",
+      "nets": [
+        "+3V3_A",
+        "GND"
+      ],
+      "model_value": "1u",
+      "PDF_table_value": "1μF",
+      "matched": true
+    },
+    {
+      "reference": "C_A2",
+      "nets": [
+        "+3V3_A",
+        "GND"
+      ],
+      "model_value": "100n",
+      "PDF_table_value": "100nF",
+      "matched": true
+    },
+    {
+      "reference": "C_A3",
+      "nets": [
+        "+3V3_A",
+        "GND"
+      ],
+      "model_value": "10u",
+      "PDF_table_value": "10μF / 25V",
+      "matched": true
+    },
+    {
+      "reference": "C_U2",
+      "nets": [
+        "+3V3_A",
+        "GND"
+      ],
+      "model_value": "100n",
+      "PDF_table_value": "100nF",
+      "matched": true
+    },
+    {
+      "reference": "C_U3",
+      "nets": [
+        "+3V3_A",
+        "GND"
+      ],
+      "model_value": "100n",
+      "PDF_table_value": "100nF",
+      "matched": true
+    },
+    {
+      "reference": "C_U4",
+      "nets": [
+        "+3V3_A",
+        "GND"
+      ],
+      "model_value": "100n",
+      "PDF_table_value": "100nF",
+      "matched": true
+    },
+    {
+      "reference": "R1",
+      "nets": [
+        "VIN_EXT",
+        "VIN_DIV"
+      ],
+      "model_value": "100k",
+      "PDF_table_value": "100kΩ / 0.1%",
+      "matched": true
+    },
+    {
+      "reference": "R2",
+      "nets": [
+        "VIN_DIV",
+        "GND"
+      ],
+      "model_value": "10k",
+      "PDF_table_value": "10kΩ / 0.1%",
+      "matched": true
+    },
+    {
+      "reference": "R4",
+      "nets": [
+        "VOUT",
+        "VOUT_DIV"
+      ],
+      "model_value": "10k",
+      "PDF_table_value": "10kΩ / 0.1%",
+      "matched": true
+    },
+    {
+      "reference": "R5",
+      "nets": [
+        "VOUT_DIV",
+        "GND"
+      ],
+      "model_value": "1k",
+      "PDF_table_value": "1kΩ / 0.1%",
+      "matched": true
+    },
+    {
+      "reference": "R3",
+      "nets": [
+        "VIN_DIV",
+        "ADC_VIN"
+      ],
+      "model_value": "1k",
+      "PDF_table_value": "1kΩ",
+      "matched": true
+    },
+    {
+      "reference": "C7",
+      "nets": [
+        "ADC_VIN",
+        "GND"
+      ],
+      "model_value": "4.7n",
+      "PDF_table_value": "4.7nF",
+      "matched": true
+    },
+    {
+      "reference": "R7",
+      "nets": [
+        "IIN_RAW",
+        "ADC_IIN"
+      ],
+      "model_value": "1k",
+      "PDF_table_value": "1kΩ",
+      "matched": true
+    },
+    {
+      "reference": "C9",
+      "nets": [
+        "ADC_IIN",
+        "GND"
+      ],
+      "model_value": "4.7n",
+      "PDF_table_value": "4.7nF",
+      "matched": true
+    },
+    {
+      "reference": "R6",
+      "nets": [
+        "VOUT_DIV",
+        "ADC_VOUT"
+      ],
+      "model_value": "1k",
+      "PDF_table_value": "1kΩ",
+      "matched": true
+    },
+    {
+      "reference": "C8",
+      "nets": [
+        "ADC_VOUT",
+        "GND"
+      ],
+      "model_value": "4.7n",
+      "PDF_table_value": "4.7nF",
+      "matched": true
+    },
+    {
+      "reference": "R8",
+      "nets": [
+        "IOUT_RAW",
+        "ADC_IOUT"
+      ],
+      "model_value": "1k",
+      "PDF_table_value": "1kΩ",
+      "matched": true
+    },
+    {
+      "reference": "C10",
+      "nets": [
+        "ADC_IOUT",
+        "GND"
+      ],
+      "model_value": "4.7n",
+      "PDF_table_value": "4.7nF",
+      "matched": true
+    },
+    {
+      "reference": "R_IL_ADC",
+      "nets": [
+        "IL_BI",
+        "ADC_IL"
+      ],
+      "model_value": "1k",
+      "PDF_table_value": "1kΩ",
+      "matched": true
+    },
+    {
+      "reference": "C_IL_ADC",
+      "nets": [
+        "ADC_IL",
+        "GND"
+      ],
+      "model_value": "4.7n",
+      "PDF_table_value": "4.7nF",
+      "matched": true
+    },
+    {
+      "reference": "R9",
+      "nets": [
+        "+3V3_A",
+        "VREF_POS"
+      ],
+      "model_value": "10k",
+      "PDF_table_value": "10kΩ / 0.1%",
+      "matched": true
+    },
+    {
+      "reference": "R10A",
+      "nets": [
+        "VREF_POS",
+        "POS_MID"
+      ],
+      "model_value": "33k",
+      "PDF_table_value": "33kΩ / 0.1%",
+      "matched": true
+    },
+    {
+      "reference": "R10B",
+      "nets": [
+        "POS_MID",
+        "GND"
+      ],
+      "model_value": "1k",
+      "PDF_table_value": "1kΩ / 0.1%",
+      "matched": true
+    },
+    {
+      "reference": "C_REF_POS",
+      "nets": [
+        "VREF_POS",
+        "GND"
+      ],
+      "model_value": "100n",
+      "PDF_table_value": "100nF",
+      "matched": true
+    },
+    {
+      "reference": "R15A",
+      "nets": [
+        "+3V3_A",
+        "NEG_MID"
+      ],
+      "model_value": "33k",
+      "PDF_table_value": "33kΩ / 0.1%",
+      "matched": true
+    },
+    {
+      "reference": "R15B",
+      "nets": [
+        "NEG_MID",
+        "VREF_NEG"
+      ],
+      "model_value": "1k",
+      "PDF_table_value": "1kΩ / 0.1%",
+      "matched": true
+    },
+    {
+      "reference": "R16",
+      "nets": [
+        "VREF_NEG",
+        "GND"
+      ],
+      "model_value": "10k",
+      "PDF_table_value": "10kΩ / 0.1%",
+      "matched": true
+    },
+    {
+      "reference": "C_REF_NEG",
+      "nets": [
+        "VREF_NEG",
+        "GND"
+      ],
+      "model_value": "100n",
+      "PDF_table_value": "100nF",
+      "matched": true
+    },
+    {
+      "reference": "R11",
+      "nets": [
+        "+3V3_A",
+        "VREF_OV"
+      ],
+      "model_value": "23k",
+      "PDF_table_value": "23kΩ",
+      "matched": true
+    },
+    {
+      "reference": "R12",
+      "nets": [
+        "VREF_OV",
+        "GND"
+      ],
+      "model_value": "10k",
+      "PDF_table_value": "10kΩ",
+      "matched": true
+    },
+    {
+      "reference": "C_REF_OV",
+      "nets": [
+        "VREF_OV",
+        "GND"
+      ],
+      "model_value": "100n",
+      "PDF_table_value": "100nF",
+      "matched": true
+    },
+    {
+      "reference": "R13",
+      "nets": [
+        "+3V3",
+        "FAULT_N"
+      ],
+      "model_value": "10k",
+      "PDF_table_value": "10kΩ",
+      "matched": true
+    },
+    {
+      "reference": "R14",
+      "nets": [
+        "+3V3",
+        "POR_RC"
+      ],
+      "model_value": "10k",
+      "PDF_table_value": "10kΩ",
+      "matched": true
+    },
+    {
+      "reference": "C11",
+      "nets": [
+        "POR_RC",
+        "GND"
+      ],
+      "model_value": "100n",
+      "PDF_table_value": "100nF",
+      "matched": true
+    },
+    {
+      "reference": "R_ARM_PD",
+      "nets": [
+        "ARM",
+        "GND"
+      ],
+      "model_value": "10k",
+      "PDF_table_value": "10kΩ",
+      "matched": true
+    },
+    {
+      "reference": "R_EN_PD",
+      "nets": [
+        "MCU_EN",
+        "GND"
+      ],
+      "model_value": "10k",
+      "PDF_table_value": "10kΩ",
+      "matched": true
+    },
+    {
+      "reference": "C_U5",
+      "nets": [
+        "+5V",
+        "GND"
+      ],
+      "model_value": "100n",
+      "PDF_table_value": "100nF",
+      "matched": true
+    },
+    {
+      "reference": "C_U9",
+      "nets": [
+        "+5V",
+        "GND"
+      ],
+      "model_value": "100n",
+      "PDF_table_value": "100nF",
+      "matched": true
+    },
+    {
+      "reference": "C_U6",
+      "nets": [
+        "+3V3",
+        "GND"
+      ],
+      "model_value": "100n",
+      "PDF_table_value": "100nF",
+      "matched": true
+    },
+    {
+      "reference": "C_U7",
+      "nets": [
+        "+3V3",
+        "GND"
+      ],
+      "model_value": "100n",
+      "PDF_table_value": "100nF",
+      "matched": true
+    },
+    {
+      "reference": "C_U8",
+      "nets": [
+        "+3V3",
+        "GND"
+      ],
+      "model_value": "100n",
+      "PDF_table_value": "100nF",
+      "matched": true
+    }
+  ],
+  "physical_passives_matched": 42,
+  "active_used_pin_polarities_matched": 41,
+  "BAT54S_midpoint_orientations_matched": 5,
+  "model_only_RC_elements_not_new_BOM_parts": [
+    "R_M_U2",
+    "C_M_U2",
+    "R_M_U2_OUT",
+    "R_M_U3",
+    "C_M_U3",
+    "R_M_U3_OUT",
+    "R_M_U4",
+    "C_M_U4",
+    "R_M_U4_OUT",
+    "R_M_U5A",
+    "C_M_U5A",
+    "R_M_U9A",
+    "C_M_U9A",
+    "R_M_U5B",
+    "C_M_U5B",
+    "C_M_FAULT",
+    "R_M_SCH1",
+    "C_M_SCH1",
+    "R_M_U8A",
+    "R_M_SCH2",
+    "C_M_SCH2",
+    "R_M_U8B",
+    "R_M_CLK",
+    "C_M_CLK",
+    "C_M_Q",
+    "R_M_Q",
+    "R_M_U6_Q",
+    "C_M_U6_Q",
+    "R_M_U7",
+    "C_M_U7"
+  ],
+  "nominal_at_exact_3p3V_A": {
+    "IL_zero_V": 1.65,
+    "VREF_POS_V": 2.55,
+    "VREF_NEG_V": 0.75,
+    "VREF_OV_V": 1,
+    "IL_trip_A": [
+      -1.8,
+      1.8
+    ],
+    "VOUT_OV_V": 11
+  },
+  "passive_time_constants": {
+    "ADC_VIN_s": 4.742727272727272e-05,
+    "ADC_VOUT_s": 8.972727272727272e-06,
+    "ADC_current_external_RC_s": 4.7e-06,
+    "reference_POS_NEG_s": 0.0007727272727272727,
+    "reference_OV_s": 0.000696969696969697,
+    "POR_R14_C11_s": 0.001
+  },
+  "analytical_tolerance_scenarios": {
+    "assumed_analog_supply_V": [
+      3.135,
+      3.465
+    ],
+    "supply_range_is_study_assumption_not_regulator_spec": true,
+    "current_ref_resistor_tolerance": 0.001,
+    "OV_ref_R11_R12_tolerance": 0.01,
+    "output_divider_tolerance": 0.001,
+    "positive_IL_threshold_range_A": [
+      1.7077965253774787,
+      1.8924327639469376
+    ],
+    "negative_IL_threshold_range_A": [
+      -1.8924327639469376,
+      -1.7077965253774787
+    ],
+    "VOUT_OV_threshold_range_V": [
+      10.286187446721705,
+      11.73295195103835
+    ],
+    "scope": "Resistor/supply corners only, not amplifier/comparator offsets, actual rail consumption or certified worst-case timing"
+  },
+  "F1_review": {
+    "location": "Input VIN_EXT->FUSED beforeD1",
+    "nominal_rating_A": 2,
+    "sense_domain": "Input current, not output current or direct inductor-current clamp",
+    "melting_time_verified": false,
+    "reason": "BOM specifies2A/5x20 but no manufacturer time-current/I2t curve; cross-solver substitutes1mOhm. Native rated-fuse behavior is not a physical fuse qualification."
+  }
+}

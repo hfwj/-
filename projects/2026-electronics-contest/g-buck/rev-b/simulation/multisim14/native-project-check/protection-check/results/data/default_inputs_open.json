@@ -1,0 +1,17 @@
+{
+  "case": "default_inputs_open",
+  "solver": "ngspice44.2/psa",
+  "source_sha256": "a2c460d42cc038f43f52e9a3e321edaa996992be3cb64ed041c7aeccf0d78927",
+  "completed": true,
+  "rows": 50073,
+  "last_scale_value": 0.01,
+  "failure_messages": [],
+  "functional_model_only": true,
+  "native_multisim_execution_performed": false,
+  "checks": {
+    "requested_end_reached": true,
+    "not_enabled_before_ARM": true,
+    "open_MCU_inputs_default_off": true
+  },
+  "passed": true
+}

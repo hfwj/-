@@ -1,0 +1,25 @@
+{
+  "case": "overvoltage_small",
+  "solver": "ngspice44.2/psa",
+  "source_sha256": "19d613044890392e3625b710189ae23f4e6c1f0ed8f1088693deb26fdcab6463",
+  "completed": true,
+  "rows": 50272,
+  "last_scale_value": 0.01,
+  "failure_messages": [],
+  "functional_model_only": true,
+  "native_multisim_execution_performed": false,
+  "model_FAULT_low_time_s": 0.00500948325,
+  "illustrative_delay_after_test_edge_s": 9.483250000000103e-06,
+  "checks": {
+    "requested_end_reached": true,
+    "not_enabled_before_ARM": true,
+    "ARM_rising_edge_enables": true,
+    "fault_detected": true,
+    "async_clear_disables": true,
+    "fault_released": true,
+    "ARM_held_high_does_not_restart": true,
+    "no_new_edge_remains_off": true,
+    "new_ARM_edge_reenables": true
+  },
+  "passed": true
+}

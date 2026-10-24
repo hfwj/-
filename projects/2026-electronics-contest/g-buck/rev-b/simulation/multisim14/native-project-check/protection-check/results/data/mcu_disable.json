@@ -1,0 +1,20 @@
+{
+  "case": "mcu_disable",
+  "solver": "ngspice44.2/psa",
+  "source_sha256": "dc8591f91dfe2a5c3ea39b3f5539d07b380bb96c5147e8b354e7b826dd43a827",
+  "completed": true,
+  "rows": 50278,
+  "last_scale_value": 0.01,
+  "failure_messages": [],
+  "functional_model_only": true,
+  "native_multisim_execution_performed": false,
+  "checks": {
+    "requested_end_reached": true,
+    "not_enabled_before_ARM": true,
+    "ARM_rising_edge_enables": true,
+    "MCU_low_disables": true,
+    "MCU_low_does_not_clear_SAFE": true,
+    "MCU_high_resumes_when_SAFE_was_not_cleared": true
+  },
+  "passed": true
+}
