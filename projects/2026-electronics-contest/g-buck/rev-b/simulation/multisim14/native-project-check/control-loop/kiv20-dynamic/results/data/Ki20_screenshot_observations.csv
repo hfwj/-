@@ -1,0 +1,10 @@
+case,mode,window_start_s,window_end_s,approx_VOUT_V,approx_IOUT_A,approx_startup_VOUT_peak_V,numeric_native_export_received,note
+CV15_OPEN_KIV20_C,CV,0.06,0.1,10,,10.4,False,Screenshot estimates; not measured window statistics. Open-load output current not resolved.
+CV25_20R_KIV20,CV,0.06,0.1,10,0.5,10,False,Screenshot estimates; not measured window statistics. Open-load output current not resolved.
+CC25_8R_KIV20,CC,0.06,0.1,8,1,8,False,Screenshot estimates; not measured window statistics. Open-load output current not resolved.
+CC25_5R_KIV20,CC,0.06,0.1,5,1,5.1,False,Screenshot estimates; not measured window statistics. Open-load output current not resolved.
+CV15_20R_KIV20,CV,0.06,0.1,10,0.5,10,False,Screenshot estimates; not measured window statistics. Open-load output current not resolved.
+CV25_OPEN_KIV20,CV,0.06,0.1,10,,10.5,False,Screenshot estimates; not measured window statistics. Open-load output current not resolved.
+AUTO_KIV20_20R,CV,0.06,0.075,10,0.5,,False,"Screenshot estimates, not numerical mean/range. Transient peaks separate:~1.2-1.3A near80ms,~1.6A near130ms."
+AUTO_KIV20_8R,CC,0.11,0.125,8,1,,False,"Screenshot estimates, not numerical mean/range. Transient peaks separate:~1.2-1.3A near80ms,~1.6A near130ms."
+AUTO_KIV20_5R,CC,0.16,0.175,5,1,,False,"Screenshot estimates, not numerical mean/range. Transient peaks separate:~1.2-1.3A near80ms,~1.6A near130ms."

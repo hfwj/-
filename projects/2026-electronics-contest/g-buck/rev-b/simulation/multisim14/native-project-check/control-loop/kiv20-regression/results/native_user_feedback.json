@@ -191,12 +191,13 @@
   "pending_cases": [],
   "complete_design_validated": false,
   "latest_change_impact": {
-    "baseline": "Existing Ki20 static regression binaries",
-    "schematic_components_BOM_PCB": "Unchanged; native feedback archive only",
-    "simulation_models_settings_and_native_binaries": "Existing static copies unchanged. New separate dynamic copy changes only external load template,100->180ms and label."
+    "baseline": "Delivered Ki20 native files",
+    "schematic_components_BOM_PCB": "Unchanged; feedback/report only",
+    "simulation_models_settings_and_native_binaries": "Unchanged"
   },
   "all_five_regression_screenshots_received": true,
   "baseline_plus_regression_static_screenshot_count": 6,
   "precise_static_acceptance_established": false,
-  "dynamic_Ki20_feedback_pending": true
+  "dynamic_Ki20_feedback_pending": false,
+  "dynamic_Ki20_feedback_reference": "../../kiv20-dynamic/results/data/native_user_feedback.json"
 }

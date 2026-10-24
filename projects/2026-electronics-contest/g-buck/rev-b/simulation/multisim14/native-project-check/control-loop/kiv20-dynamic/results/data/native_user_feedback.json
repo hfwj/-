@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-24",
+  "id": "AUTO_20R_8R_5R_KIV20",
+  "evidence": "User Multisim Grapher screenshot",
+  "visible_analysis_tab": "KIV20_AUTO_20R_8R_5R 180ms",
+  "visible_main_title": "GBUCK_KIV20_CC25_5R_100ms",
+  "identity_note": "Distinctive active dynamic-case tab and transitions near80/130ms identify this Ki20 sequence; main title retains older static name. Saved-project checksum and actual input voltage not independently supplied.",
+  "displayed_time_range_s": [
+    0,
+    0.18
+  ],
+  "traces_visibly_reach_180ms": true,
+  "visible_traces": [
+    "V(vout)",
+    "I(RS_OUT)"
+  ],
+  "model_voltage_Ki": 20,
+  "approximate_observed_stages": [
+    {
+      "load_ohm": 20,
+      "VOUT_V": 10,
+      "IOUT_A": 0.5
+    },
+    {
+      "load_ohm": 8,
+      "VOUT_V": 8,
+      "IOUT_A": 1
+    },
+    {
+      "load_ohm": 5,
+      "VOUT_V": 5,
+      "IOUT_A": 1
+    }
+  ],
+  "approximate_VOUT_end_V": 5,
+  "approximate_IOUT_end_A": 1,
+  "approximate_VOUT_peak_V": 10,
+  "approximate_first_transition_current_peak_range_A": [
+    1.2,
+    1.3
+  ],
+  "approximate_second_transition_current_peak_A": 1.6,
+  "automatic_CV_to_CC_response_visible": true,
+  "instantaneous_output_current_never_above_1A": false,
+  "peak_current_duration_or_precise_value_verified": false,
+  "precise_steady_error_ripple_or_settling_time_verified": false,
+  "numeric_export_received": false,
+  "current_saved_project_received": false,
+  "F1_state_directly_visible": false,
+  "controller_or_physical_design_changed_by_this_feedback": false,
+  "summary_zh": "Ki20的180ms本机动态图显示约10V/0.5A→8V/1A→5V/1A，支持自动CV→CC及恒流负载变化响应。80ms附近峰值约1.2～1.3A，130ms附近约1.6A，未精确测持续时间；不满足全过程瞬时≤1A的表述，稳态与瞬态须分开报告。",
+  "scope": "External native functional screenshot, not exact numerical acceptance, real firmware/sensor/protection/fuse/efficiency or full schematic validation",
+  "change_impact": {
+    "baseline": "Previously delivered Ki20 dynamic180ms native project",
+    "schematic": "No change; feedback/report only",
+    "components_BOM_PCB": "No change",
+    "simulation_models_stimuli_solver_and_native_binary": "No change"
+  }
+}

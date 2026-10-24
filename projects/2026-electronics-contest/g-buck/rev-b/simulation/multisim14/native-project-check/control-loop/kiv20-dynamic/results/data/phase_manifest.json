@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-24",
+  "native_files": [
+    {
+      "file": "downloads/GBUCK_OPEN_DIAG_C_KIV20_100ms.ms14",
+      "sha256": "40dba608acf8447d11a2d37b6a27b6c1083c11a15c4f801584841f6319a17cd6",
+      "matches_prior_build": true
+    },
+    {
+      "file": "downloads/GBUCK_KIV20_CV25_20R_100ms.ms14",
+      "sha256": "f64116970a8d1c98a388d3ae7c15e322d32671e5cd395611a2e003d8da735c8d",
+      "matches_prior_build": true
+    },
+    {
+      "file": "downloads/GBUCK_KIV20_CC25_8R_100ms.ms14",
+      "sha256": "4b799caba9b358fc13e52686cf0bd8e836e3738d9292951d46fe22f2c0704ef7",
+      "matches_prior_build": true
+    },
+    {
+      "file": "downloads/GBUCK_KIV20_CC25_5R_100ms.ms14",
+      "sha256": "73eae30b77659a8cd180f47d39c5729f743ce82bc978682368489db68f55f288",
+      "matches_prior_build": true
+    },
+    {
+      "file": "downloads/GBUCK_KIV20_CV15_20R_100ms.ms14",
+      "sha256": "d68023a8b1594811c17124cb06f11038335cd94ab453b61c37feebf7c2235b30",
+      "matches_prior_build": true
+    },
+    {
+      "file": "downloads/GBUCK_KIV20_CV25_OPEN_100ms.ms14",
+      "sha256": "049acac977ece06165f58add840aa4ff137ce1bfc485609c4f5a396acc7a897c",
+      "matches_prior_build": true
+    },
+    {
+      "file": "downloads/GBUCK_KIV20_AUTO_20R_8R_5R_180ms.ms14",
+      "sha256": "90c182b511c345c45f8c4aa9e39e5ce3524ff2eb8c2ef1c0aab6a1468ff3eb10",
+      "matches_prior_build": true
+    }
+  ],
+  "native_file_count": 7,
+  "native_files_changed_by_summary": false,
+  "six_static_and_one_dynamic_screenshots_received": true,
+  "numeric_native_exports_received": false,
+  "complete_design_validated": false,
+  "full_time_instantaneous_1A_limit_met": false,
+  "cloud_native_execution_performed": false
+}

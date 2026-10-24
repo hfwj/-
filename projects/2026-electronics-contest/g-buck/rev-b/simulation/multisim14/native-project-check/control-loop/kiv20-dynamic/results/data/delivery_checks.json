@@ -1,8 +1,10 @@
 {
   "date": "2026-10-24",
   "package": "downloads/Multisim14_Ki20动态切换工况_2026-10-24.zip",
-  "sha256": "a862cca406a97e586ece30dabb786b0b39f5baab37ce036828469f95b6cc045c",
+  "sha256": "a9922f78817b3f4129709b59dd2ba4dfcc852c2852af519beefb7d4fedf607e3",
   "native_binary_matches_build": true,
   "zip_integrity_verified": true,
-  "native_run_verified": false
+  "cloud_native_execution_performed": false,
+  "user_native_screenshot_received": true,
+  "exact_native_waveform_verified": false
 }

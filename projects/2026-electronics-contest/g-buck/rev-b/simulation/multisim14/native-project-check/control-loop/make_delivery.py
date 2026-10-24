@@ -56,7 +56,7 @@ def main():
             for item in revisions:
                 detail=item.get('summary_zh') or f'Ki={item["model_voltage_Ki"]}，100ms末段约{item["approximate_VOUT_end_V"]:.1f}V，启动峰值约{item["approximate_VOUT_peak_V"]:.1f}V；起伏可见衰减，精确限值与其他同参数工况仍待核查。'
                 lines+=['- '+item['id']+'：'+detail]
-            lines+=['','下一步见[Ki20静态回归](../simulation/multisim14/native-project-check/control-loop/kiv20-regression/README.md)。','']
+            lines+=['','当前六静态及动态截图汇总见[Ki20阶段报告](Ki20_七工况本机功能验证阶段汇总_2026-10-24.md)，精确数据与瞬态限流仍需核查。','']
     lines+=['## 100ms空载后续检查','',
             '早期Ki100的15V空载本机100ms图显示约9.6～10.4V、周期约20ms的持续低频起伏，不能将早期30ms末2ms窗口满足目标解释为充分稳定。精确波形数据与100ms保存工程未回传。原七工程和控制参数均未改动。','']
     long_file=ROOT/'results/data/CV_15V_OPEN_100ms_diagnostic.json'
@@ -71,6 +71,8 @@ def main():
     report=PROJECT/'reports/Multisim14_软启动与CVCC控制仿真_2026-10-24.md';report.write_text('\n'.join(lines))
     package=PROJECT/'downloads/Multisim14_软启动与CVCC控制副本_2026-10-24.zip'
     paths=[SOURCE,report,*[output_path(c) for c in CASES]]
+    phase=PROJECT/'reports/Ki20_七工况本机功能验证阶段汇总_2026-10-24.md'
+    if phase.exists():paths.append(phase)
     conclusion=PROJECT/'reports/Multisim14_本机工况反馈阶段结论_2026-10-24.md'
     if conclusion.exists():paths.append(conclusion)
     returned=PROJECT/'references/user-projects/2026-10-24_15V空载_恢复F1_本机回传.ms14'

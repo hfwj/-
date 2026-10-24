@@ -49,7 +49,7 @@ def package_existing():
             p=HERE/'results/data'/name
             if p.exists():z.write(p,name)
     with zipfile.ZipFile(package) as z:assert z.testzip() is None
-    result={'date':'2026-10-24','package':str(package.relative_to(PROJECT)),'sha256':sha(package),'native_binary_matches_build':True,'zip_integrity_verified':True,'native_run_verified':False}
+    result={'date':'2026-10-24','package':str(package.relative_to(PROJECT)),'sha256':sha(package),'native_binary_matches_build':True,'zip_integrity_verified':True,'cloud_native_execution_performed':False,'user_native_screenshot_received':(HERE/'results/data/native_user_feedback.json').exists(),'exact_native_waveform_verified':False}
     (HERE/'results/data/delivery_checks.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n');print(json.dumps(result,ensure_ascii=False,indent=2))
 if __name__=='__main__':
     if '--package-only' in sys.argv:package_existing()
