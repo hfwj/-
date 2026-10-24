@@ -1,0 +1,133 @@
+{
+  "date": "2026-10-24",
+  "uploaded_archive": "sbombe4.zip",
+  "uploaded_archive_sha256": "9076581fe4e24655997c421fdd4fc691f275a3644a6f0a0043cc18b2796c5586",
+  "archive_contents": [
+    {
+      "name": "INA240A1-PSpiceFiles/",
+      "bytes": 0
+    },
+    {
+      "name": "INA240A1-PSpiceFiles/SCHEMATIC1/",
+      "bytes": 0
+    },
+    {
+      "name": "INA240A1-PSpiceFiles/SCHEMATIC1/TRANSIENT/",
+      "bytes": 0
+    },
+    {
+      "name": "INA240A1-PSpiceFiles/SCHEMATIC1/TRANSIENT/TRANSIENT.1OP",
+      "bytes": 1949
+    },
+    {
+      "name": "INA240A1-PSpiceFiles/SCHEMATIC1/TRANSIENT/TRANSIENT.cir",
+      "bytes": 691
+    },
+    {
+      "name": "INA240A1-PSpiceFiles/SCHEMATIC1/TRANSIENT/TRANSIENT.mif",
+      "bytes": 362
+    },
+    {
+      "name": "INA240A1-PSpiceFiles/SCHEMATIC1/TRANSIENT/TRANSIENT.mrk",
+      "bytes": 923
+    },
+    {
+      "name": "INA240A1-PSpiceFiles/SCHEMATIC1/TRANSIENT/TRANSIENT.prb",
+      "bytes": 1719
+    },
+    {
+      "name": "INA240A1-PSpiceFiles/SCHEMATIC1/transient.sim",
+      "bytes": 1690
+    },
+    {
+      "name": "ina240a1.dsn",
+      "bytes": 50176
+    },
+    {
+      "name": "ina240a1.lib",
+      "bytes": 9197
+    },
+    {
+      "name": "ina240a1.opj",
+      "bytes": 4729
+    },
+    {
+      "name": "library/",
+      "bytes": 0
+    },
+    {
+      "name": "library/ina240a1.olb",
+      "bytes": 20992
+    }
+  ],
+  "original_member": "ina240a1.lib",
+  "original_core_sha256": "aa16f4a9bab8f769dd234e825cda6bb90865b69bd977c94f2560bf1eeaea6c21",
+  "model_header_claim": "TI INA240A1 PSpice16.2, version2.0,03/09/17",
+  "core_subcircuits": 12,
+  "original_port_order": [
+    "OUT",
+    "INP",
+    "INN",
+    "REF1",
+    "REF2",
+    "VCC",
+    "GND"
+  ],
+  "adapter_port_order": [
+    "INM",
+    "GND",
+    "REF2",
+    "NC",
+    "OUT",
+    "VS",
+    "REF1",
+    "INP"
+  ],
+  "original_model_bytes_preserved": true,
+  "adapter_sha256": "9193149244af041e2dc7e6e396a18d6f99ec74ab0b4735fff0ddb4768cc8dd20",
+  "cases": {
+    "dc": {
+      "rows": 61,
+      "max_adapter_discrepancy_V": 0.0,
+      "checks": {
+        "adapter_matches_original_direct_ports": true,
+        "sweep_completed": true,
+        "U2_gain_at_0.01V": true,
+        "U2_gain_at_0.025V": true,
+        "U2_gain_at_0.05V": true,
+        "U4_midpoint_at_-0.025V": true,
+        "U4_midpoint_at_0V": true,
+        "U4_midpoint_at_0.025V": true
+      },
+      "U2_zero_input_output_V": 0.029474412499999922,
+      "U4_zero_input_output_V": 1.649796749999999,
+      "U2_25mV_output_V": 0.49979974450000003,
+      "U4_25mV_output_V": 2.149795355,
+      "four_amplifier_supply_current_A_at_zero": 0.00729899514
+    },
+    "step": {
+      "rows": 2046,
+      "max_adapter_discrepancy_V": 0.0,
+      "checks": {
+        "adapter_matches_original_direct_ports": true,
+        "transient_completed": true,
+        "U2_settles_near_0p5V": true,
+        "U4_settles_near_2p15V": true
+      },
+      "end_s": 0.0001,
+      "end_U2_V": 0.499799745,
+      "end_U4_V": 2.14979536
+    }
+  },
+  "all_checks_passed": true,
+  "native_multisim_import_or_execution_performed": false,
+  "U3_INA181_included": false,
+  "existing_ms14_hardware_BOM_PCB_firmware_changed": false,
+  "limits": [
+    "Independent ngspice PSA-mode checks, not Multisim compatibility certification",
+    "Core explicitly excludes temperature behavior",
+    "Core contains VICMMIN=-40.01; not a replacement for datasheet -4V common-mode rating",
+    "No 25V main power-stage or complete sensing/protection run performed",
+    "Four-amplifier fixture supply current is not board current or efficiency"
+  ]
+}

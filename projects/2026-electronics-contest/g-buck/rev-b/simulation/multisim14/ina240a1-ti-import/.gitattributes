@@ -1,0 +1,2 @@
+# Preserve the original TI suffix byte-for-byte, including CRLF and trailing spaces.
+INA240A1_TI_8PIN.lib -text whitespace=-blank-at-eol

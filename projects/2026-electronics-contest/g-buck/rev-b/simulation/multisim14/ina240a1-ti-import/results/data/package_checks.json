@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-24",
+  "package": "downloads/Multisim14_INA240A1_TI_8PIN_2026-10-24.zip",
+  "sha256": "b545dfd2fb342690f8f00c14bc2c47adbc1e669ea4c0da14641b8da8b0d5d634",
+  "zip_integrity_verified": true,
+  "packaged_model_matches_checked_adapter": true,
+  "original_TI_model_bytes_preserved": true,
+  "native_multisim_import_or_run_performed": false
+}
