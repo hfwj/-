@@ -4,6 +4,7 @@
 
 ## 下载与阅读
 
+- 用户已反馈[CV/CC副本中25V/20Ω恒压工况](simulation/multisim14/native-project-check/control-loop/results/data/native_user_feedback.json)的本机30ms波形：软启动后约10V、峰值约10.4V；恒流等其他本机工况仍待确认。
 - [当前本机工程的软启动与CV/CC控制副本](simulation/multisim14/native-project-check/control-loop/README.md) · [专用ZIP](downloads/Multisim14_软启动与CVCC控制副本_2026-10-24.zip) · [最终测试报告](reports/Multisim14_软启动与CVCC控制仿真_2026-10-24.md)：基于最新上传的可运行工程，六个开关交叉工况完成；采用理想控制和采样，新的原生副本尚待Multisim本机确认，保护与效率未验证。
 - [保险丝对照后本机20ms结果](reports/Multisim14_保险丝对照后20ms结果_2026-10-24.md)：新图末段约9.2V，持续下降不再可见；仍有约16V启动过冲，尚未通过10V恒压/1A恒流要求。
 - [本机20ms输出持续下降排查](reports/Multisim14_本机20ms输出持续下降排查_2026-10-24.md)：用户新图末段约6.7V且仍下降，与交叉结果不同；需核对当前工程、输入母线、自举供电及F1状态，尚未定位。

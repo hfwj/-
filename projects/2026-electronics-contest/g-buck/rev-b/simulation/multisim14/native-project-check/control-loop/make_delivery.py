@@ -31,6 +31,15 @@ def main():
             '本控制假设允许轻载短时负电感电流指令至−0.15A，不是实际电池的充放电策略。原F1仍断开、R1=1mΩ仍接通，故真实保险丝、过流锁存和保护未验证；原方案2A保险丝不能据此取消。采样理想化，实际固件、INA/ADC误差、显示和总效率尚未验证。','',
             '原上传工程保存在[用户工程目录](../references/user-projects/2026-10-24_本机可运行_保险丝对照.ms14)，SHA256：`'+summary['source_working_project_sha256']+'`。','',
             '[最终验证JSON](../simulation/multisim14/native-project-check/control-loop/results/data/verification_summary.json) · [六工况波形](../simulation/multisim14/native-project-check/control-loop/results/figures/closed_loop_overview.png)。','']
+    feedback_file=ROOT/'results/data/native_user_feedback.json'
+    if feedback_file.exists():
+        feedback=json.loads(feedback_file.read_text())
+        lines+=['## 用户本机后续反馈','',
+                '以下按用户截图估读，与上面的自动交叉数据分别记录，未取得精确数值导出。','',
+                '| 工况 | 截图时长/ms | 末段输出约/V | 启动峰值约/V |','|---|---:|---:|---:|']
+        for row in feedback['cases']:
+            lines.append(f'| {row["id"]} | {row["displayed_time_range_s"][1]*1000:.0f} | {row["approximate_VOUT_end_V"]:.1f} | {row["approximate_VOUT_peak_V"]:.1f} |')
+        lines+=['','其余工况的本机反馈仍待确认；不能据此认定真实固件、保护、效率或原图整机通过。见[本机截图观察记录](../simulation/multisim14/native-project-check/control-loop/results/data/native_user_feedback.json)。','']
     report=PROJECT/'reports/Multisim14_软启动与CVCC控制仿真_2026-10-24.md';report.write_text('\n'.join(lines))
     package=PROJECT/'downloads/Multisim14_软启动与CVCC控制副本_2026-10-24.zip'
     paths=[SOURCE,report,*[output_path(c) for c in CASES]]

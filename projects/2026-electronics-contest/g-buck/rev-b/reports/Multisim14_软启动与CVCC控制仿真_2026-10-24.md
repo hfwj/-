@@ -32,3 +32,13 @@
 原上传工程保存在[用户工程目录](../references/user-projects/2026-10-24_本机可运行_保险丝对照.ms14)，SHA256：`5995f248b7683502ee6412937513adcecad85427633854a410c8173c6f2a7050`。
 
 [最终验证JSON](../simulation/multisim14/native-project-check/control-loop/results/data/verification_summary.json) · [六工况波形](../simulation/multisim14/native-project-check/control-loop/results/figures/closed_loop_overview.png)。
+
+## 用户本机后续反馈
+
+以下按用户截图估读，与上面的自动交叉数据分别记录，未取得精确数值导出。
+
+| 工况 | 截图时长/ms | 末段输出约/V | 启动峰值约/V |
+|---|---:|---:|---:|
+| CV_25V_20R | 30 | 10.0 | 10.4 |
+
+其余工况的本机反馈仍待确认；不能据此认定真实固件、保护、效率或原图整机通过。见[本机截图观察记录](../simulation/multisim14/native-project-check/control-loop/results/data/native_user_feedback.json)。
