@@ -4,7 +4,7 @@
 
 ## 下载与阅读
 
-- [本机工况反馈阶段结论与原题覆盖](reports/Multisim14_本机工况反馈阶段结论_2026-10-24.md)：七工况本机截图已收齐；15V空载100ms图显示约9.6～10.4V持续低频起伏，约11.1V启动过冲仍在。原图固件、保护及效率仍未验证。
+- [本机工况反馈阶段结论与原题覆盖](reports/Multisim14_本机工况反馈阶段结论_2026-10-24.md)：七工况本机截图已收齐；15V空载100ms图显示约9.6～10.4V持续低频起伏，新增I(L1)曲线可见反向电流；约11.1V启动过冲仍在。原图固件、保护及效率仍未验证。
 - 七工况本机截图已覆盖静态恒压/恒流、15V空载及自动切换；空载约11V过冲和切换约1.6A峰值仍需评估。见[控制模型本机反馈记录](simulation/multisim14/native-project-check/control-loop/results/data/native_user_feedback.json)。15V空载回传已接回2A保险丝，真实保护/效率未验证。
 - 用户已反馈[CV/CC副本中25V/20Ω恒压工况](simulation/multisim14/native-project-check/control-loop/results/data/native_user_feedback.json)的本机30ms波形：软启动后约10V、峰值约10.4V；其余工况反馈见上方汇总。
 - [当前本机工程的软启动与CV/CC控制副本](simulation/multisim14/native-project-check/control-loop/README.md) · [专用ZIP](downloads/Multisim14_软启动与CVCC控制副本_2026-10-24.zip) · [最终测试报告](reports/Multisim14_软启动与CVCC控制仿真_2026-10-24.md)：七个开关交叉工况完成，七工况均已有本机截图，15V空载100ms持续起伏，尚不能确认充分稳定。采用理想控制和采样，保护与效率未验证。
