@@ -38,6 +38,7 @@ def main():
                 '以下按用户截图估读，与上面的自动交叉数据分别记录，未取得精确数值导出。','',
                 '| 工况 | 截图时长/ms | 末段输出约/V | 末段电流约/A | 启动峰值约/V |','|---|---:|---:|---:|---:|']
         for row in feedback['cases']:
+            row={**row,**(row.get('follow_up_observations') or [{}])[-1]}
             current=f'{row["approximate_IOUT_end_A"]:.1f}' if 'approximate_IOUT_end_A' in row else '未显示'
             lines.append(f'| {row["id"]} | {row["displayed_time_range_s"][1]*1000:.0f} | {row["approximate_VOUT_end_V"]:.1f} | {current} | {row["approximate_VOUT_peak_V"]:.1f} |')
         lines.append('')
@@ -47,6 +48,17 @@ def main():
         lines += [('仍待本机反馈：'+', '.join(pending)+'。') if pending else '已收到列出工况的本机截图；精确测量及未解决的瞬态问题仍需分别核查。','']
         lines+=['不能据此认定真实固件、保护、效率或原图整机通过。见[本机截图观察记录](../simulation/multisim14/native-project-check/control-loop/results/data/native_user_feedback.json)。','',
                 '反馈归档只更新记录、报告与资料包，不改变原理图连线、器件/BOM/PCB或已交付原生工程的模型和参数。','']
+    lines+=['## 100ms空载后续检查','',
+            '15V空载本机100ms图显示约9.6～10.4V、周期约20ms的持续低频起伏，不能将早期30ms末2ms窗口满足目标解释为充分稳定。精确波形数据与100ms保存工程未回传。原七工程和控制参数均未改动。','']
+    long_file=ROOT/'results/data/CV_15V_OPEN_100ms_diagnostic.json'
+    if long_file.exists():
+        diagnostic=json.loads(long_file.read_text())
+        lines+=['另做同参数100ms ngspice诊断，F1仅以固定导通电阻近似，不验证熔断动作。完整到达终点：'+str(diagnostic['full_transient_completed'])+'。','']
+        if not diagnostic['full_transient_completed']:
+            lines+=['本次交叉求解达到300秒执行时限，未导出完整波形；不计为验证通过，也不能据此认定收敛失败。用户本机100ms截图观察独立保留。','']
+        for window in diagnostic.get('late_20ms_windows',[]):
+            lines.append(f'- {window["time_s"][0]*1000:.0f}～{window["time_s"][1]*1000:.0f}ms：完整采样VOUT范围{window["VOUT_range_V"][0]:.4f}～{window["VOUT_range_V"][1]:.4f}V。')
+        lines+=['','交叉诊断尝试与本机截图估读分别记录；原因尚未由此确定。见[100ms诊断记录](../simulation/multisim14/native-project-check/control-loop/results/data/CV_15V_OPEN_100ms_diagnostic.json)。','']
     report=PROJECT/'reports/Multisim14_软启动与CVCC控制仿真_2026-10-24.md';report.write_text('\n'.join(lines))
     package=PROJECT/'downloads/Multisim14_软启动与CVCC控制副本_2026-10-24.zip'
     paths=[SOURCE,report,*[output_path(c) for c in CASES]]

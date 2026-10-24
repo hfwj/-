@@ -1,0 +1,6 @@
+ngspice44.2 / ngbehavior=psa
+Requested transient100ms, maximum step50ns; same control and component models.
+Stopped by subprocess.TimeoutExpired after300s wall time.
+No wrdata trace available before termination. Actual simulated end time unknown.
+Not counted as a completed verification or a demonstrated convergence failure.
+F1 replaced by fixed1mOhm resistance in this cross-solver diagnostic.

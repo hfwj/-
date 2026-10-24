@@ -190,20 +190,48 @@
       "temporary_R1_disconnected_in_returned_project": true,
       "fuse_state_or_protection_verified": false,
       "identity_note": "Title and returned project match 15V/open-load case. Returned project restores 2A F1 and disconnects temporary R1; it is not byte-identical to original delivery. Remaining component settings, models, templates and analysis options match. Saved-project association does not independently prove screenshot provenance.",
-      "observation_note": "15V空载本机图到30ms：启动峰值约11.1V，末端约9.8V且仍缓慢变化，已进入9.5～10.5V但精确稳态未确认。回传工程确认F1(2A)已接回、R1断开；未直接验证F1状态、熔断特性或实际硬件保护。",
-      "scope": "Supports native functional response for the returned 15V/open-load copy with F1 restored; not a complete firmware/protection/efficiency acceptance"
+      "observation_note": "原30ms图末端约9.8V；后续延长到100ms显示约9.6～10.4V持续低频起伏，约0.8V峰峰值、周期约20ms，末端约10.2V。后几次幅度未明显衰减，不能将30ms末段视为已稳定，也不能以单个时间点代替稳态区间验收。启动峰值仍约11.1V。上述均为截图估读；100ms运行未回传新工程/数值数据，其F1状态也未直接显示。",
+      "scope": "Supports native functional response for the returned 15V/open-load copy with F1 restored; not a complete firmware/protection/efficiency acceptance",
+      "follow_up_observations": [
+        {
+          "evidence": "User Multisim Grapher screenshot; no new saved project or numeric trace returned for this 100ms run",
+          "visible_title": "GBUCK_CTRL_EQ_CV_15V_OPEN_native_check",
+          "displayed_time_range_s": [
+            0,
+            0.1
+          ],
+          "traces_visibly_reach_100ms": true,
+          "approximate_VOUT_end_V": 10.2,
+          "approximate_VOUT_peak_V": 11.1,
+          "approximate_late_VOUT_range_V": [
+            9.6,
+            10.4
+          ],
+          "approximate_late_peak_to_peak_V": 0.8,
+          "approximate_low_frequency_period_s": 0.02,
+          "successive_late_oscillations_show_no_clear_decay": true,
+          "flat_steady_state_established": false,
+          "precise_regulation_band_or_ripple_verified": false,
+          "numeric_waveform_export_received": false,
+          "saved_project_for_100ms_run_received": false,
+          "F1_state_visible_in_screenshot": false,
+          "cause_identified": false,
+          "scope": "Longer native observation exposes persistent low-frequency output variation; does not establish exact band, cause, firmware performance or protection acceptance"
+        }
+      ],
+      "flat_steady_state_established": false
     }
   ],
   "other_case_native_feedback_pending": [],
   "firmware_protection_efficiency_or_complete_schematic_validated": false,
   "latest_record_change_impact": {
-    "baseline": "Prior delivered CV_15V_OPEN and previous native feedback records",
-    "schematic": "No agent modification; returned user copy reconnects F1 between V1+ and D1 anode and disconnects temporary R1, restoring original input branch",
-    "components_BOM_PCB": "No new hardware or BOM/PCB change required; original F1=2A retained",
-    "native_projects_or_models": "Original seven delivery binaries preserved; returned source archived separately. Other component parameters, embedded model text, component templates and custom analysis options unchanged."
+    "baseline": "Archived 15V/open returned project and prior30ms feedback",
+    "schematic": "No change by assistant; 100ms screenshot alone does not prove all run settings unchanged",
+    "components_BOM_PCB": "No change required or performed",
+    "native_projects_or_models": "All native binaries and control model preserved; feedback/documentation updated, separate cross-solver100ms diagnostic changes only its analysis duration and treats F1 as fixed1mOhm"
   },
   "unresolved_native_observations": [
-    "CV_25V_OPEN and CV_15V_OPEN startup overshoot about 11.1V; exact settling not established by 30ms screenshots",
+    "CV_15V_OPEN 100ms screenshot shows persistent roughly 9.6-10.4V low-frequency variation, period about20ms, startup about11.1V; precise limits and cause not established. CV_25V_OPEN only30ms evidence.",
     "AUTO transition output current peak about 1.6A; average current control is not instantaneous output limiting",
     "Returned CV_15V_OPEN reconnects F1, but fuse state, trip characteristics, other loads and true power-up inrush remain unverified"
   ]
