@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-25",
+  "source": "User native Multisim screenshot; displayed project GBUCK_STEP01_IL_SENSE_FEEDBACK_FIX, V(vout) selected",
+  "source_kind": "visual screenshot only, not numerical export",
+  "visible_interval_s": [
+    0,
+    0.03
+  ],
+  "observations": {
+    "output_rises_after_about_4ms": true,
+    "output_after_initial_rise_rough_visual_range_V": [
+      9.1,
+      9.8
+    ],
+    "late_output_varies_visibly": true,
+    "some_post_startup_values_below_9p5V": true,
+    "constant_10V_settling_not_established": true
+  },
+  "measurement_precision": "Approximate visual readings; no certified extrema, ripple or mean",
+  "last_uploaded_native_TMAX": "calculate (automatic)",
+  "settings_of_this_screenshot_not_independently_rechecked": true,
+  "conclusion": "Feedback loss fixed; native steady voltage regulation not yet verified",
+  "next_trial": {
+    "baseline": "current repaired native run with last-uploaded automatic TMAX",
+    "change": "enable TMAX=5e-8s only, if not already set",
+    "keep": "0..30ms, topology/parts/IC/tolerances/Ki20 and models",
+    "purpose": "Separate solver-step effects from physical/control variation; no predicted guaranteed fix",
+    "status": "requested, not yet run or verified"
+  },
+  "schematic_parts_BOM_PCB_firmware_changed_by_this_record": false
+}
