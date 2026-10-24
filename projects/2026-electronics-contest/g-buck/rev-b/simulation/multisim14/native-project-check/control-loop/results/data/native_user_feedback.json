@@ -161,21 +161,50 @@
       "observation_note": "自动切换可见约10V/0.5A→8V/1A→5V/1A，8Ω到5Ω切换时电流峰值约1.6A；支持模式切换功能，不证明全过程瞬时电流不超过1A。",
       "identity_note": "Case inferred from visible AUTO analysis tab and prior test instruction; exact saved project not returned",
       "scope": "Native dynamic functional feedback for an ideal-control equivalent, not firmware/fuse/protection/efficiency validation"
+    },
+    {
+      "id": "CV_15V_OPEN",
+      "evidence": "User Multisim Grapher screenshot and saved project returned in conversation",
+      "visible_title": "GBUCK_CTRL_EQ_CV_15V_OPEN_native_check",
+      "visible_analysis_tab": "CV_15V_OPEN CVCC_EQ + SOFT_START",
+      "displayed_time_range_s": [
+        0,
+        0.03
+      ],
+      "traces_visibly_reach_30ms": true,
+      "visible_traces": [
+        "V(vout)"
+      ],
+      "approximate_VOUT_end_V": 9.8,
+      "approximate_VOUT_peak_V": 11.1,
+      "soft_start_rise_visible": true,
+      "late_output_still_changing": true,
+      "full_time_voltage_within_9p5_to_10p5_V": false,
+      "precise_settling_time_verified": false,
+      "numeric_waveform_export_received": false,
+      "current_saved_project_received": true,
+      "returned_project_sha256": "bd3cce52a75b840f7cb5000e76bc504cdae8a8777daa7892d9e02b978e454f07",
+      "returned_project_inspection": "CV_15V_OPEN_returned_project_inspection.json",
+      "exact_voltage_or_ripple_verified": false,
+      "F1_connected_in_returned_project": true,
+      "temporary_R1_disconnected_in_returned_project": true,
+      "fuse_state_or_protection_verified": false,
+      "identity_note": "Title and returned project match 15V/open-load case. Returned project restores 2A F1 and disconnects temporary R1; it is not byte-identical to original delivery. Remaining component settings, models, templates and analysis options match. Saved-project association does not independently prove screenshot provenance.",
+      "observation_note": "15V空载本机图到30ms：启动峰值约11.1V，末端约9.8V且仍缓慢变化，已进入9.5～10.5V但精确稳态未确认。回传工程确认F1(2A)已接回、R1断开；未直接验证F1状态、熔断特性或实际硬件保护。",
+      "scope": "Supports native functional response for the returned 15V/open-load copy with F1 restored; not a complete firmware/protection/efficiency acceptance"
     }
   ],
-  "other_case_native_feedback_pending": [
-    "CV_15V_OPEN"
-  ],
+  "other_case_native_feedback_pending": [],
   "firmware_protection_efficiency_or_complete_schematic_validated": false,
   "latest_record_change_impact": {
-    "baseline": "Existing delivered projects and previous native feedback records",
-    "schematic": "No change; documentation-only feedback update",
-    "components_BOM_PCB": "No change",
-    "native_projects_or_models": "Unchanged"
+    "baseline": "Prior delivered CV_15V_OPEN and previous native feedback records",
+    "schematic": "No agent modification; returned user copy reconnects F1 between V1+ and D1 anode and disconnects temporary R1, restoring original input branch",
+    "components_BOM_PCB": "No new hardware or BOM/PCB change required; original F1=2A retained",
+    "native_projects_or_models": "Original seven delivery binaries preserved; returned source archived separately. Other component parameters, embedded model text, component templates and custom analysis options unchanged."
   },
   "unresolved_native_observations": [
-    "CV_25V_OPEN startup overshoot about 11V and exact settling not established by 30ms screenshot",
+    "CV_25V_OPEN and CV_15V_OPEN startup overshoot about 11.1V; exact settling not established by 30ms screenshots",
     "AUTO transition output current peak about 1.6A; average current control is not instantaneous output limiting",
-    "Original requirement 1 is 15V/open load; additional case being added, not covered by prior 25V/open test"
+    "Returned CV_15V_OPEN reconnects F1, but fuse state, trip characteristics, other loads and true power-up inrush remain unverified"
   ]
 }

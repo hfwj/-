@@ -1,0 +1,119 @@
+{
+  "date": "2026-10-24",
+  "baseline": "downloads/GBUCK_CTRL_EQ_CV_15V_OPEN_native_check.ms14",
+  "baseline_sha256": "5affba179a4602c842d5df8c92681768f6d0eb3a3cb1486bbe5c592ee70d4805",
+  "returned_source": "references/user-projects/2026-10-24_15V空载_恢复F1_本机回传.ms14",
+  "returned_sha256": "bd3cce52a75b840f7cb5000e76bc504cdae8a8777daa7892d9e02b978e454f07",
+  "returned_bytes": 252343,
+  "comparison_ignores_resaved_internal_model_object_ids": true,
+  "component_changes": {
+    "F1": {
+      "delivered": {
+        "internal_ref": "U2",
+        "display_ref": "F1",
+        "ports": {
+          "2": null,
+          "1": null
+        },
+        "parameters": [
+          "0",
+          "5",
+          "0",
+          "2"
+        ]
+      },
+      "returned": {
+        "internal_ref": "U2",
+        "display_ref": "F1",
+        "ports": {
+          "2": "5",
+          "1": "8"
+        },
+        "parameters": [
+          "0",
+          "5",
+          "0",
+          "2"
+        ]
+      }
+    },
+    "R1": {
+      "delivered": {
+        "internal_ref": "R13",
+        "display_ref": "R1",
+        "ports": {
+          "2": "5",
+          "1": "8"
+        },
+        "parameters": [
+          "0",
+          "0.001",
+          "0",
+          "0",
+          "0",
+          "27",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "27"
+        ]
+      },
+      "returned": {
+        "internal_ref": "R13",
+        "display_ref": "R1",
+        "ports": {
+          "2": null,
+          "1": null
+        },
+        "parameters": [
+          "0",
+          "0.001",
+          "0",
+          "0",
+          "0",
+          "27",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "27"
+        ]
+      }
+    }
+  },
+  "all_other_component_parameters_and_ports_unchanged": true,
+  "embedded_model_text_unchanged": true,
+  "component_spice_templates_unchanged": true,
+  "custom_analysis_options_unchanged": true,
+  "transient_settings": {
+    "TSTOP": "0.03",
+    "TSTART": "0",
+    "TMAX": "5e-008",
+    "IC": "dcop"
+  },
+  "connectivity_checks": {
+    "driver_12V_supply": true,
+    "driver_common_ground": true,
+    "driver_enable_not_tied_to_12V": true,
+    "pwm_series_and_pulldown": true,
+    "switch_node": true,
+    "bootstrap_capacitor": true,
+    "bootstrap_diode": true,
+    "high_gate_resistor": true,
+    "low_gate_resistor": true,
+    "high_gate_pulldown_to_source": true,
+    "low_gate_pulldown_to_ground": true
+  },
+  "input_V": 15.0,
+  "external_load_ohm": 1000000000.0,
+  "bleeder_ohm": 2200,
+  "F1_rating_A": 2,
+  "fuse_state_or_time_current_characteristic_verified": false,
+  "source_unchanged_after_archive": true,
+  "cloud_multisim_execution_performed": false,
+  "scope": "Project inspection plus separately reported user native screenshot; no fuse-trip or physical-protection verification",
+  "ngspice_fuse_caveat": "Existing extractor substitutes connected fuse by fixed R_SIM_FUSE=1m and does not reproduce Multisim rated-fuse script. Prior ngspice result therefore is not a validation of the returned connected F1."
+}

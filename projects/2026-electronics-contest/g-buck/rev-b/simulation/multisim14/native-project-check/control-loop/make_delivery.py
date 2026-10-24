@@ -52,11 +52,13 @@ def main():
     paths=[SOURCE,report,*[output_path(c) for c in CASES]]
     conclusion=PROJECT/'reports/Multisim14_本机工况反馈阶段结论_2026-10-24.md'
     if conclusion.exists():paths.append(conclusion)
+    returned=PROJECT/'references/user-projects/2026-10-24_15V空载_恢复F1_本机回传.ms14'
+    if returned.exists():paths.append(returned)
     helper=ROOT.parent
     paths.extend(helper/n for n in ['ms14_project.py','verify_power_stage.py','verify_driver.py','stabilize_transient.py','requirements.txt'])
     paths.extend(p for p in ROOT.rglob('*') if p.is_file() and p.suffix in ['.py','.md','.lib','.json','.csv','.log','.png'] and '__pycache__' not in p.parts and p.name!='delivery_checks.json')
     with zipfile.ZipFile(package,'w',zipfile.ZIP_DEFLATED,compresslevel=7) as archive:
-        archive.writestr('请先阅读.txt','先打开downloads/GBUCK_CTRL_EQ_CV_25V_20R_native_check.ms14，运行30ms瞬态。\n这是软启动和CV/CC功能等效控制模型；自动交叉数据与用户本机截图反馈分别归档。\n新增CV_15V_OPEN对应题目15V空载，需补本机运行。\n其他工况、假设与界限见simulation/multisim14/native-project-check/control-loop/README.md。\n真实固件、传感器、保护及效率尚未验证。\n轻量包不含NPZ完整分辨率窗口，窗口文件保存在GitHub相应results/data/。\n')
+        archive.writestr('请先阅读.txt','先打开downloads/GBUCK_CTRL_EQ_CV_25V_20R_native_check.ms14，运行30ms瞬态。\n这是软启动和CV/CC功能等效控制模型；自动交叉数据与用户本机截图反馈分别归档。\n七工况本机截图已收到；15V空载回传原件已接回F1，单独保存在references/user-projects，原交付副本保持。\n其他工况、假设与界限见simulation/multisim14/native-project-check/control-loop/README.md。\n真实固件、传感器、保护及效率尚未验证。\n轻量包不含NPZ完整分辨率窗口，窗口文件保存在GitHub相应results/data/。\n')
         for p in sorted(set(paths)):archive.write(p,str(p.relative_to(PROJECT)))
     with zipfile.ZipFile(package) as archive:assert archive.testzip() is None
     result={'date':'2026-10-24','all_delivery_files_match_completed_runs':True,'cases':checks,'source_file_unchanged':hashlib.sha256(SOURCE.read_bytes()).hexdigest()==summary['source_working_project_sha256'],

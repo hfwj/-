@@ -4,10 +4,10 @@
 
 ## 下载与阅读
 
-- [本机工况反馈阶段结论与原题覆盖](reports/Multisim14_本机工况反馈阶段结论_2026-10-24.md)：原六工况本机截图已收齐，CV/CC自动切换可见；记录约11V空载过冲和1.6A切换峰值，并补齐原题指定的15V空载工况。原图固件、保护及效率仍未验证。
-- 原六工况本机截图已覆盖静态恒压/恒流及自动切换；空载约11V过冲和切换约1.6A峰值仍需评估。见[控制模型本机反馈记录](simulation/multisim14/native-project-check/control-loop/results/data/native_user_feedback.json)。新增15V空载待本机补测，真实保护/效率未验证。
-- 用户已反馈[CV/CC副本中25V/20Ω恒压工况](simulation/multisim14/native-project-check/control-loop/results/data/native_user_feedback.json)的本机30ms波形：软启动后约10V、峰值约10.4V；恒流等其他本机工况仍待确认。
-- [当前本机工程的软启动与CV/CC控制副本](simulation/multisim14/native-project-check/control-loop/README.md) · [专用ZIP](downloads/Multisim14_软启动与CVCC控制副本_2026-10-24.zip) · [最终测试报告](reports/Multisim14_软启动与CVCC控制仿真_2026-10-24.md)：七个开关交叉工况完成，原六工况已有本机截图，新增15V空载待反馈。采用理想控制和采样，保护与效率未验证。
+- [本机工况反馈阶段结论与原题覆盖](reports/Multisim14_本机工况反馈阶段结论_2026-10-24.md)：七工况本机截图已收齐，含15V空载回传工程（已恢复F1）；记录约11.1V空载过冲和1.6A切换峰值。原图固件、保护及效率仍未验证。
+- 七工况本机截图已覆盖静态恒压/恒流、15V空载及自动切换；空载约11V过冲和切换约1.6A峰值仍需评估。见[控制模型本机反馈记录](simulation/multisim14/native-project-check/control-loop/results/data/native_user_feedback.json)。15V空载回传已接回2A保险丝，真实保护/效率未验证。
+- 用户已反馈[CV/CC副本中25V/20Ω恒压工况](simulation/multisim14/native-project-check/control-loop/results/data/native_user_feedback.json)的本机30ms波形：软启动后约10V、峰值约10.4V；其余工况反馈见上方汇总。
+- [当前本机工程的软启动与CV/CC控制副本](simulation/multisim14/native-project-check/control-loop/README.md) · [专用ZIP](downloads/Multisim14_软启动与CVCC控制副本_2026-10-24.zip) · [最终测试报告](reports/Multisim14_软启动与CVCC控制仿真_2026-10-24.md)：七个开关交叉工况完成，七工况均已有本机截图，15V空载峰值约11.1V仍需评估。采用理想控制和采样，保护与效率未验证。
 - [保险丝对照后本机20ms结果](reports/Multisim14_保险丝对照后20ms结果_2026-10-24.md)：新图末段约9.2V，持续下降不再可见；仍有约16V启动过冲，尚未通过10V恒压/1A恒流要求。
 - [本机20ms输出持续下降排查](reports/Multisim14_本机20ms输出持续下降排查_2026-10-24.md)：用户新图末段约6.7V且仍下降，与交叉结果不同；需核对当前工程、输入母线、自举供电及F1状态，尚未定位。
 - [40%开环测试启动振荡排查](reports/Multisim14_40percent开环启动振荡_2026-10-24.md)：用户新图出现约15V峰值与5V谷值，尚未稳定；核对LC周期并给出20ms观察步骤。
