@@ -1,0 +1,13 @@
+.SUBCKT INA181A1_FUNC OUT GND INP INM REF VS
+* Original FUNCTIONAL equivalent, NOT a TI/manufacturer INA181 model.
+* Port order follows physical SOT-23-6: 1 OUT,2 GND,3 IN+,4 IN-,5 REF,6 VS.
+* Gain20; ideal rail clipping; assumed1us pole and1ohm output resistance.
+* Internal R/C are model assumptions, NOT added physical BOM parts.
+* No common-mode range/CMRR, input loading, offset, noise, supply current,
+* gain error, temperature or power-fail validation.
+E_RAW RAW GND VALUE={LIMIT(20*V(INP,INM)+V(REF,GND),0,MAX(V(VS,GND),0))}
+R_POLE RAW FILTER 1k
+C_POLE FILTER GND 1n
+E_BUFFER BUFFER GND VALUE={V(FILTER,GND)}
+R_OUTPUT BUFFER OUT 1
+.ENDS INA181A1_FUNC

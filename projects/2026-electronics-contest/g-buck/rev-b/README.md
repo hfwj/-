@@ -4,6 +4,7 @@
 
 ## 下载与阅读
 
+- [逐芯片采样功能模型及导入说明](simulation/multisim14/single-chip-sense/README.md) · [模型包](downloads/Multisim14_Sense_Chip_Functional_2026-10-24.zip)：针对本机库无INA240，提供独立8端INA240/6端INA181功能等效；增益、参考、限幅交叉检查通过，非TI模型，本机导入待确认；未编辑现有主图/BOM。
 - [保护重启积分冻结对照](reports/Multisim14_保护重启积分冻结对照_2026-10-24.md) · [20ms原生工程](downloads/GBUCK_REVB_PROT_FREEZE_20ms.ms14)：此20ms功能模型对照通过；保留原失败基线，未改实物原图/BOM或真实固件，本机待验证。
 
 

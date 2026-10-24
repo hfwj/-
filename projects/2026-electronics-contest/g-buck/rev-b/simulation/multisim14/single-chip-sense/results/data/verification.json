@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-24",
+  "model_type": "Self-authored functional equivalent, NOT TI model",
+  "original_pin_networks_matched": 22,
+  "pin_source_sha256": "ea014201245ef950a25065bc93c09b4eb9151ccdc55185d632ed370f97cb800f",
+  "model_sha256": {
+    "INA240A1_FUNC.lib": "4ef038812059f623ebbfca248210408965c7d324b12bb723b4325ec5a17ebc61",
+    "INA181A1_FUNC.lib": "2e446144bb6adac2a6c4d7c36f3aa2a36c2ebf14bfd67e440b8c999c2a36f5ba"
+  },
+  "cases": {
+    "dc": {
+      "rows": 401,
+      "checks": {
+        "sweep_completed": true,
+        "gain_reference_and_rail_clip": true
+      },
+      "max_function_equation_error_V": 3.2995828291859652e-12
+    },
+    "step": {
+      "rows": 2028,
+      "checks": {
+        "transient_completed": true,
+        "initial_references": true,
+        "settled_outputs": true,
+        "assumed_1us_pole": true
+      },
+      "initial_outputs_V": [
+        0.0,
+        0.0,
+        1.64999835
+      ],
+      "settled_outputs_V": [
+        0.499999346,
+        0.499999346,
+        2.1499977
+      ],
+      "one_tau_fraction": 0.6321192463036843
+    }
+  },
+  "all_checks_passed": true,
+  "native_multisim_import_or_run_performed": false,
+  "schematic_or_existing_ms14_changed": false,
+  "physical_BOM_PCB_changed": false,
+  "real_device_precision_CMRR_timing_efficiency_validated": false
+}
