@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-24",
+  "baseline_file": "references/user-projects/2026-10-24_15V空载_恢复F1_本机回传.ms14",
+  "baseline_sha256": "bd3cce52a75b840f7cb5000e76bc504cdae8a8777daa7892d9e02b978e454f07",
+  "baseline_retained": true,
+  "A_to_B_only_change": "Active transient RELTOL0.01->0.003",
+  "purpose": "Numerical sensitivity diagnostic only; neither a stability fix nor a validation of firmware/protection",
+  "schematic_components_BOM_PCB_impact": "None relative to returned source; F1=2A connected, temporaryR1 disconnected in both copies",
+  "cases": [
+    {
+      "id": "A",
+      "file": "downloads/GBUCK_OPEN_DIAG_A_100ms.ms14",
+      "sha256": "8139276ef5b8a0b25ffc7fdff22f2ef9b2c07179c3070f703569804c39527ea0",
+      "native_open_and_run_verified": false,
+      "analysis_options": {
+        "reltol": {
+          "enabled": true,
+          "value": "0.01"
+        },
+        "abstol": {
+          "enabled": true,
+          "value": "1e-008"
+        },
+        "vntol": {
+          "enabled": true,
+          "value": "0.0001"
+        },
+        "chgtol": {
+          "enabled": true,
+          "value": "1e-013"
+        },
+        "method": {
+          "enabled": false,
+          "value": "trapezoidal"
+        },
+        "itl4": {
+          "enabled": true,
+          "value": "100"
+        }
+      },
+      "time_settings": {
+        "TSTOP": "0.1",
+        "TSTART": "0",
+        "TMAX": "5e-008",
+        "IC": "dcop"
+      },
+      "selected_outputs": [
+        "$vout",
+        "ll1#branch"
+      ],
+      "exact_inverse_outside_TRAN_verified": true,
+      "components_and_models_and_control_unchanged": true,
+      "both_container_decoders_verified": true
+    },
+    {
+      "id": "B",
+      "file": "downloads/GBUCK_OPEN_DIAG_B_100ms.ms14",
+      "sha256": "2f6fac349155dbee55093721c19b5cec05c544da6542efdf6c457e70c175034e",
+      "native_open_and_run_verified": false,
+      "analysis_options": {
+        "reltol": {
+          "enabled": true,
+          "value": "0.003"
+        },
+        "abstol": {
+          "enabled": true,
+          "value": "1e-008"
+        },
+        "vntol": {
+          "enabled": true,
+          "value": "0.0001"
+        },
+        "chgtol": {
+          "enabled": true,
+          "value": "1e-013"
+        },
+        "method": {
+          "enabled": false,
+          "value": "trapezoidal"
+        },
+        "itl4": {
+          "enabled": true,
+          "value": "100"
+        }
+      },
+      "time_settings": {
+        "TSTOP": "0.1",
+        "TSTART": "0",
+        "TMAX": "5e-008",
+        "IC": "dcop"
+      },
+      "selected_outputs": [
+        "$vout",
+        "ll1#branch"
+      ],
+      "exact_inverse_outside_TRAN_verified": true,
+      "components_and_models_and_control_unchanged": true,
+      "both_container_decoders_verified": true
+    }
+  ]
+}

@@ -4,6 +4,7 @@
 
 ## 下载与阅读
 
+- [下一步：空载起伏A/B诊断](simulation/multisim14/native-project-check/control-loop/open-load-diagnostic/README.md) · [独立对照ZIP](downloads/Multisim14_空载起伏_AB对照_2026-10-24.zip)：保持原器件和控制不变，比较RELTOL=0.01与0.003的100ms结果；已做文件结构核对，待本机运行，不是已修复版本。
 - [本机工况反馈阶段结论与原题覆盖](reports/Multisim14_本机工况反馈阶段结论_2026-10-24.md)：七工况本机截图已收齐；15V空载100ms图显示约9.6～10.4V持续低频起伏，新增I(L1)曲线可见反向电流；约11.1V启动过冲仍在。原图固件、保护及效率仍未验证。
 - 七工况本机截图已覆盖静态恒压/恒流、15V空载及自动切换；空载约11V过冲和切换约1.6A峰值仍需评估。见[控制模型本机反馈记录](simulation/multisim14/native-project-check/control-loop/results/data/native_user_feedback.json)。15V空载回传已接回2A保险丝，真实保护/效率未验证。
 - 用户已反馈[CV/CC副本中25V/20Ω恒压工况](simulation/multisim14/native-project-check/control-loop/results/data/native_user_feedback.json)的本机30ms波形：软启动后约10V、峰值约10.4V；其余工况反馈见上方汇总。
