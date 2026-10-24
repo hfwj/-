@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-25",
+  "source": "User native Multisim V(vout) screenshot supplied in response to requested TMAX50ns comparison",
+  "project_title": "GBUCK_STEP01_IL_SENSE_FEEDBACK_FIX",
+  "visible_time_interval_s": [
+    0,
+    0.03
+  ],
+  "comparison_setting_requested_TMAX_s": 5e-08,
+  "setting_confirmed_from_new_native_file": false,
+  "observations": {
+    "output_curve_visibly_smoother_than_previous_VOUT_screenshot": true,
+    "previous_large_late_variation_visibly_reduced": true,
+    "end_voltage_rough_visual_V": [
+      9.6,
+      9.7
+    ],
+    "late_output_still_rising_slowly": true
+  },
+  "measurement_precision": "Visual estimate only; no raw export or cursor extrema",
+  "conclusion": "Consistent with significant solver-step influence if TMAX was the only change; steady-state precision not yet certified",
+  "next_action": "Keep50ns; reuse same result to inspect VDDA, IL_BI and I(L1) before adding further sampling/protection",
+  "schematic_parts_BOM_PCB_firmware_change": false
+}
