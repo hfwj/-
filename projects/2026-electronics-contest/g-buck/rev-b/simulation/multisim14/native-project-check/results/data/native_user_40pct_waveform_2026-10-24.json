@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-24",
+  "evidence": "User-supplied Multisim Grapher screenshot after suggested pulse-width adjustment",
+  "scope": "Visual observations only; current native project and numeric trace were not uploaded",
+  "visible_design_title": "设计1_瞬态容差调整_5ms_待本机验证 (1)",
+  "displayed_time_range_s": [
+    0,
+    0.005
+  ],
+  "visible_traces_reach_5ms": true,
+  "approximate_VOUT_estimates_from_image": {
+    "first_peak": {
+      "time_s": 0.003,
+      "V": 15.5
+    },
+    "following_trough": {
+      "time_s": 0.004,
+      "V": 5.3
+    },
+    "near_end_V": 11.2
+  },
+  "PWM_width_4us_period_10us_assumed_from_previous_instruction_not_directly_verified": true,
+  "L_H": 0.00022,
+  "C3_plus_C4_F": 0.00048,
+  "ideal_LC_period_s": 0.0020417935495588542,
+  "interpretation": "Large startup oscillation, consistent with underdamped LC response to open-loop duty step; 5ms screenshot does not establish regulation or steady state",
+  "high_side_measurement_note": "Legend appears to repeat the high-side differential expression; verify V(g_h)-V(sw) when inspecting gate waveforms",
+  "next_native_step": "Preserve current PWM and hardware values; run transient to 0.02s with 50ns maximum step and existing custom tolerances; display V(vout) separately, then inspect final gate cycles",
+  "not_established": [
+    "Steady 10V output",
+    "Exact current native source parameters",
+    "Non-overlap switching",
+    "No model or power-input issue"
+  ]
+}

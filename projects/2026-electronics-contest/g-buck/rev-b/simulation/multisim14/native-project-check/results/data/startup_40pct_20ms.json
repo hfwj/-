@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-24",
+  "case": "startup_40pct_20ms",
+  "solver": "ngspice 44.2 / ngbehavior=psa",
+  "native_multisim_execution_verified": false,
+  "fuse_trip_simulation": false,
+  "source_project_sha256": "c7e697ccd50376ad1417a6a77cbbd6995bdfc936ee404e6e04bffc84fb096010",
+  "solver_source_sha256": "a2767b5935208223cd9e837d4011bbcfe7a269d29df038e1a8ee9289c260ae4c",
+  "source_changes_only_for_cross_solver": [
+    "V3 PW 1us -> 4us",
+    "Transient end time 5ms -> 20ms"
+  ],
+  "native_project_modified": false,
+  "open_loop": true,
+  "duty_ratio": 0.4,
+  "requested_end_time_s": 0.02,
+  "actual_end_time_s": 0.02,
+  "data_rows": 568287,
+  "full_transient_completed": true,
+  "failure_messages": [],
+  "ideal_LC_period_s": 0.0020417935495588542,
+  "limitations": [
+    "Relaxed tolerances for functional troubleshooting",
+    "Modified IR2104 compatibility model",
+    "No closed-loop CV/CC or native 40-percent project verification",
+    "No physical switching-loss or stress validation"
+  ],
+  "retained_full_resolution_windows_s": [
+    [
+      0,
+      0.005
+    ],
+    [
+      0.01995,
+      0.02
+    ]
+  ],
+  "VOUT_max_V": 16.1259812,
+  "IL_max_A": 12.5021417,
+  "first_5ms_VOUT_peak": {
+    "time_s": 0.00301693305,
+    "V": 16.1259812
+  },
+  "VOUT_near_5ms_V": 11.8050971,
+  "last_2ms_time_means": {
+    "VOUT_V": 9.170716580310401,
+    "VIN_at_Q1D_V": 24.634259457957196,
+    "IL_A": 0.47274412477271116
+  },
+  "last_ms_VOUT_time_means_V": [
+    9.142303620076824,
+    9.19912954054398
+  ]
+}
