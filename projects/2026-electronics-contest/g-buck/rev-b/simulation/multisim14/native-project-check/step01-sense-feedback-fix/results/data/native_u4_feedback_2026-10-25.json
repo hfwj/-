@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-25",
+  "source": "User native Multisim screenshot, VDDA / IL_BI / I(L1), 0-30ms, following requested 50ns trial",
+  "new_native_file_or_raw_data_received": false,
+  "observations_visual_only": {
+    "VDDA_V": 3.26,
+    "IL_BI_at_zero_current_V": 1.63,
+    "IL_BI_at_roughly_1A_V": 2.13,
+    "late_IL_rough_A": [
+      0.4,
+      0.6
+    ],
+    "late_IL_BI_rough_V": [
+      1.88,
+      1.9
+    ]
+  },
+  "assessment": "Visual consistency with VDDA/2 + 20*0.025*I(L1); functional polarity/scaling check only, not calibrated error or steady-state certification",
+  "next": "Preserve main; import INA181 U3 into separate test project before integration",
+  "schematic_parts_BOM_PCB_firmware_changed": false
+}

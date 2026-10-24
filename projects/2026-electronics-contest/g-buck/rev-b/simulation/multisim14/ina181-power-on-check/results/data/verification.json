@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-25",
+  "simulator": "ngspice 44.2, PSpice compatibility",
+  "model_sha256": "e07acbec0e7c9e81220323b07dc90cbdd582a52cbbec268cfc54cf2ba871321d",
+  "original_TI_core_bytes_preserved": true,
+  "checks": {
+    "ordered_ramp": {
+      "completed_100us": true,
+      "rows": 10124,
+      "returncode": 0,
+      "errors": [],
+      "last_time_s": 0.0001,
+      "output_before_step_V": 0.019907593199999997,
+      "output_final_V": 0.497244366,
+      "output_change_from_zero_input_V": 0.4773367728,
+      "final_within_10mV_of_nominal": true
+    },
+    "constant_supply_control": {
+      "completed_100us": false,
+      "rows": 37,
+      "returncode": 0,
+      "errors": [
+        "doAnalyses: TRAN:  Timestep too small; time = 2.64393e-10, timestep = 3.31927e-21: trouble with node \"x_u3.x_ti.x_u100.n165882\"",
+        "run simulation(s) aborted"
+      ],
+      "last_time_s": 2.64392813e-10
+    }
+  },
+  "native_Multisim_U3_test_performed": false,
+  "limitations": "Ordered ideal supply/common-mode ramps in a separate fixture; not a Buck integration, arbitrary startup, or hardware qualification. Constant-source failures retained.",
+  "impact": "No main schematic, physical parts/BOM/PCB, firmware or vendor model changes. Separate diagnostic stimuli and solver settings only."
+}

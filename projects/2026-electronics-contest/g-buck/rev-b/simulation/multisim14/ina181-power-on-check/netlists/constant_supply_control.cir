@@ -1,0 +1,17 @@
+* INA181 initialization experiment
+.include "../../ti-sense-wizard-fix/INA181A1_TI_6PIN_WIZARD.lib"
+V_SUP VA 0 3.3
+V_CM CM 0 10
+V_DIFF IP CM PWL(0 0 35u 0 35.01u 0.025 100u 0.025)
+X_U3 OUT 0 IP CM 0 VA INA181A1_TI_6PIN
+R_LOAD OUT 0 100k
+.options method=trap reltol=1e-4 abstol=1e-10 vntol=1e-6 rshunt=1e12
+.tran 10n 100u 0 10n
+.control
+set wr_singlescale
+set wr_vecnames
+run
+wrdata data.txt v(out) v(va) v(cm)
+quit
+.endc
+.end

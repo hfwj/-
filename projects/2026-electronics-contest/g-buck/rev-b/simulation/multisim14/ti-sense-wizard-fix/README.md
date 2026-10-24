@@ -51,3 +51,7 @@ U3的修正候选位于`models/candidate/INA181A1_TI_6PIN_WIZARD.lib`，顶层�
 ## 复现
 
 在仓库本目录运行`python build_and_check.py`，需要numpy、ngspice44.2及现有XSPICE库；再运行`python package.py`。模型及旧基线来自仓库中的原用户ZIP与已归档接口，既有文件不覆盖。
+
+## 2026-10-25后续状态
+
+用户已完成INA240导入，STEP01修正反馈节点后可运行30ms；U4关系得到截图功能核对。U3新增[独立初始化对照](../ina181-power-on-check/README.md)：模型不变，有序上电100us通过，固定电源对照仍失败。U3本机导入/动态尚待测试，不改写上表的历史结果，也不据此宣布Buck接入通过。

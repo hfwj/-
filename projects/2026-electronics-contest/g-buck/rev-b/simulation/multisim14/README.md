@@ -216,3 +216,7 @@ python package_delivery.py
 `verify_equivalents.py`只对临时副本增加ngspice控制命令，使用`ngbehavior=psa`核对PSpice风格表达式、启动、正常工况和指定停机行为，保存原始求解日志、压缩波形和数值汇总。它不会生成`.ms14`，也不会把ngspice结果标为Multisim通过。
 
 `check_wizard_model.py`验证新版向导模型只有一个顶层子电路，全部依赖定义均在其内部，并在原25V/8Ω测试电路中替换成嵌套模型运行0～80ms。完整单工况复核与原9工况证据分别保存，不将原有数据冒充新版全部工况实测。
+
+## 2026-10-25采样接入进展
+
+[STEP01主图反馈修正与本机U4关系核对](native-project-check/step01-sense-feedback-fix/README.md)；[INA181 U3独立初始化对照与导入步骤](ina181-power-on-check/README.md)。U3有序上电100us独立求解完成，固定电源仍失败；本机U3及比较器、锁存保护尚未接入。此轮不改变现有主图、模型、实物BOM/PCB或固件。
