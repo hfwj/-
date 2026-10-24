@@ -1,7 +1,9 @@
 {
   "package": "downloads/Multisim14_Ki20七工况阶段汇总_2026-10-24.zip",
-  "package_sha256": "a54bc1007359684a51e7fc02213d60e6342edf1c73292d74542ad361ba58fe2d",
+  "package_sha256": "603dc4e32ea15978efb2f0e0d1462f83903ffd45abe7ac3a873353c13db13ee5",
   "zip_integrity_verified": true,
   "seven_native_hashes_match_prior_builds": true,
-  "all_numbers_from_screenshots_are_approximate": true
+  "condition_table_values_are_screenshot_estimates": true,
+  "cursor_display_values_received": true,
+  "full_numeric_native_export_received": false
 }

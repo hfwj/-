@@ -60,19 +60,24 @@ Ki20动态80/130ms两次切换均有电流冲高，后一次约1.6A。输出电�
 
 比较基线为已交付Ki20静态/动态工程。本次只新增截图记录、估读表、阶段报告和资料归档；原理图连接/引脚/元件值、板上器件/BOM/PCB、所有原生工程的控制/刺激/求解参数均**不变**。没有新控制或硬件修改。
 
-[静态反馈](../simulation/multisim14/native-project-check/control-loop/kiv20-regression/results/native_user_feedback.json) · [动态反馈](../simulation/multisim14/native-project-check/control-loop/kiv20-dynamic/results/data/native_user_feedback.json) · [估读CSV](../simulation/multisim14/native-project-check/control-loop/kiv20-dynamic/results/data/Ki20_screenshot_observations.csv) · [七工程及报告ZIP](../downloads/Multisim14_Ki20七工况阶段汇总_2026-10-24.zip)。全部数值标为估读，未收到精确原生波形导出。
+[静态反馈](../simulation/multisim14/native-project-check/control-loop/kiv20-regression/results/native_user_feedback.json) · [动态反馈](../simulation/multisim14/native-project-check/control-loop/kiv20-dynamic/results/data/native_user_feedback.json) · [估读CSV](../simulation/multisim14/native-project-check/control-loop/kiv20-dynamic/results/data/Ki20_screenshot_observations.csv) · [七工程及报告ZIP](../downloads/Multisim14_Ki20七工况阶段汇总_2026-10-24.zip)。工况表为截图估读，另附光标显示读数；未收到完整原生数值波形。
 '''
+    cursor_file=HERE/'results/data/cursor_readings_130ms.json'
+    if cursor_file.exists():
+        cursor=json.loads(cursor_file.read_text());p1,p2=cursor['points']
+        text+=f'\n## 新增光标点读数（不同于整段波形统计）\n\n切换前：{p1["time_s"]*1000:.4f}ms、VOUT={p1["VOUT_V"]:.4f}V、I(RS_OUT)={p1["IOUT_A"]:.7f}A；峰顶附近：{p2["time_s"]*1000:.4f}ms、VOUT={p2["VOUT_V"]:.4f}V、I(RS_OUT)={p2["IOUT_A"]:.4f}A，较1A高56.9%。光标显示Δt=892.2347us，是前点到峰顶附近点的间隔，不是过流持续时间；也未搜索全局峰值。\n\n按已交付连接，7.8272/5+7.8272/2200≈1.5690A，与显示电流一致。完整数据仍未导出。下一步测上升越过1A至下降首次回到1A的同一连续区间；如有纹波多次穿越，应由完整波形分别统计。\n\n[光标读数JSON](../simulation/multisim14/native-project-check/control-loop/kiv20-dynamic/results/data/cursor_readings_130ms.json) · [两点CSV](../simulation/multisim14/native-project-check/control-loop/kiv20-dynamic/results/data/cursor_points_130ms.csv)。本次仍仅归档，不修改工程、器件或控制。\n'
     report.write_text(text)
     c_build=json.loads((R/'open-load-diagnostic/results/C_build_checks.json').read_text());s_build=json.loads((R/'kiv20-regression/results/build_checks.json').read_text());d_build=json.loads((HERE/'results/data/build_checks.json').read_text())
     files=[(c_build['output'],c_build['output_sha256']),*[(row['file'],row['sha256']) for row in s_build['cases']],(d_build['output'],d_build['output_sha256'])]
     for path,expected in files:assert sha(PROJECT/path)==expected
-    manifest={'date':'2026-10-24','native_files':[{'file':p,'sha256':h,'matches_prior_build':True} for p,h in files],'native_file_count':7,'native_files_changed_by_summary':False,'six_static_and_one_dynamic_screenshots_received':True,'numeric_native_exports_received':False,'complete_design_validated':False,'full_time_instantaneous_1A_limit_met':False,'cloud_native_execution_performed':False}
+    manifest={'date':'2026-10-24','native_files':[{'file':p,'sha256':h,'matches_prior_build':True} for p,h in files],'native_file_count':7,'native_files_changed_by_summary':False,'six_static_and_one_dynamic_screenshots_received':True,'numeric_native_exports_received':False,'complete_design_validated':False,'full_time_instantaneous_1A_limit_met':False,'cloud_native_execution_performed':False,'cursor_display_values_received':cursor_file.exists(),'global_peak_or_overcurrent_duration_verified':False}
     manifest_path=HERE/'results/data/phase_manifest.json';manifest_path.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
     package=PROJECT/'downloads/Multisim14_Ki20七工况阶段汇总_2026-10-24.zip'
     includes=[PROJECT/p for p,_ in files]+[report,csv_path,manifest_path,source_c,static,dynamic,HERE/'README.md',R/'kiv20-regression/README.md',R/'open-load-diagnostic/C_README.md']
+    if cursor_file.exists():includes.extend([cursor_file,HERE/'results/data/cursor_points_130ms.csv'])
     with zipfile.ZipFile(package,'w',zipfile.ZIP_DEFLATED) as z:
         for p in includes:z.write(p,str(p.relative_to(PROJECT)))
     with zipfile.ZipFile(package) as z:assert z.testzip() is None
-    checks={'package':str(package.relative_to(PROJECT)),'package_sha256':sha(package),'zip_integrity_verified':True,'seven_native_hashes_match_prior_builds':True,'all_numbers_from_screenshots_are_approximate':True}
+    checks={'package':str(package.relative_to(PROJECT)),'package_sha256':sha(package),'zip_integrity_verified':True,'seven_native_hashes_match_prior_builds':True,'condition_table_values_are_screenshot_estimates':True,'cursor_display_values_received':cursor_file.exists(),'full_numeric_native_export_received':False}
     (HERE/'results/data/phase_delivery_checks.json').write_text(json.dumps(checks,ensure_ascii=False,indent=2)+'\n');print(json.dumps(checks,ensure_ascii=False,indent=2))
 if __name__=='__main__':main()

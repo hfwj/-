@@ -285,10 +285,10 @@
   "other_case_native_feedback_pending": [],
   "firmware_protection_efficiency_or_complete_schematic_validated": false,
   "latest_record_change_impact": {
-    "baseline": "Existing Ki20 dynamic and static native files",
-    "schematic": "No change; screenshot archive and phase report only",
+    "baseline": "Existing delivered Ki20 dynamic project and preceding measurements",
+    "schematic": "No change; cursor records and reports only",
     "components_BOM_PCB": "No change",
-    "native_projects_or_models": "Unchanged; all six static and dynamic Ki20 screenshot observations received. Exact numerical and whole-design validation remain incomplete."
+    "native_projects_or_models": "No change; no new controller/stimulus/solver modification"
   },
   "unresolved_native_observations": [
     "CV_15V_OPEN 100ms screenshot shows persistent roughly 9.6-10.4V low-frequency variation, period about20ms, startup about11.1V; precise limits and cause not established. CV_25V_OPEN only30ms evidence.",
@@ -562,13 +562,23 @@
       "current_saved_project_received": false,
       "F1_state_directly_visible": false,
       "controller_or_physical_design_changed_by_this_feedback": false,
-      "summary_zh": "Ki20的180ms本机动态图显示约10V/0.5A→8V/1A→5V/1A，支持自动CV→CC及恒流负载变化响应。80ms附近峰值约1.2～1.3A，130ms附近约1.6A，未精确测持续时间；不满足全过程瞬时≤1A的表述，稳态与瞬态须分开报告。",
+      "summary_zh": "Ki20的180ms本机动态图显示约10V/0.5A→8V/1A→5V/1A，支持自动CV→CC及恒流负载变化响应。80ms附近峰值约1.2～1.3A，130ms附近约1.6A，未精确测持续时间；不满足全过程瞬时≤1A的表述，稳态与瞬态须分开报告。 光标后续点为130.1377ms、1.5690A/7.8272V；Δt892.2347us并非过流持续时间，完整峰值/持续时间待查。",
       "scope": "External native functional screenshot, not exact numerical acceptance, real firmware/sensor/protection/fuse/efficiency or full schematic validation",
       "change_impact": {
         "baseline": "Previously delivered Ki20 dynamic180ms native project",
         "schematic": "No change; feedback/report only",
         "components_BOM_PCB": "No change",
         "simulation_models_stimuli_solver_and_native_binary": "No change"
+      },
+      "cursor_follow_up": {
+        "record": "cursor_readings_130ms.json",
+        "cursor2_time_s": 0.1301377,
+        "cursor2_IOUT_A": 1.569,
+        "cursor2_VOUT_V": 7.8272,
+        "cursor1_IOUT_A": 0.9992767,
+        "displayed_dx_s": 0.0008922347,
+        "dx_is_overcurrent_duration": false,
+        "true_global_peak_or_duration_verified": false
       }
     }
   ]

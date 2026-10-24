@@ -4,7 +4,7 @@
 
 ## 下载与阅读
 
-- [Ki20七工况阶段汇总](reports/Ki20_七工况本机功能验证阶段汇总_2026-10-24.md) · [七工程与报告ZIP](downloads/Multisim14_Ki20七工况阶段汇总_2026-10-24.zip)：六静态与自动CV/CC切换均有本机截图，动态峰值仍约1.6A；下一步固定参数并导出精确数据，不判为原图整机已通过。
+- [Ki20七工况阶段汇总](reports/Ki20_七工况本机功能验证阶段汇总_2026-10-24.md) · [七工程与报告ZIP](downloads/Multisim14_Ki20七工况阶段汇总_2026-10-24.zip)：六静态与自动CV/CC切换均有本机截图，峰顶附近光标已读1.5690A，过流时长未测定；下一步固定参数并量化波形，不判为原图整机已通过。
 - [Ki20动态切换工程](simulation/multisim14/native-project-check/control-loop/kiv20-dynamic/README.md) · [动态ZIP](downloads/Multisim14_Ki20动态切换工况_2026-10-24.zip)：六静态及180ms动态图已收齐：10V/0.5A→8V/1A→5V/1A自动切换可见，仍有约1.6A瞬态；下一步导出精确数据，原图固件/保护/效率未验证。
 - [C版改善后的Ki20静态回归](simulation/multisim14/native-project-check/control-loop/kiv20-regression/README.md) · [工况ZIP](downloads/Multisim14_Ki20静态回归工况_2026-10-24.zip)：C15V空载改善；同参数15V/25V的20Ω均约10V/0.5A，8Ω约8V/1A、5Ω约5V/1A均已收100ms图，六项静态截图已收齐。精确数据与动态仍待验证，不改板上器件。
 - [空载C版单参数控制对照](simulation/multisim14/native-project-check/control-loop/open-load-diagnostic/C_README.md)：B截图与A起伏接近，C仅改电压外环Ki100→20；不改原理图和器件，不预称稳定性修复。

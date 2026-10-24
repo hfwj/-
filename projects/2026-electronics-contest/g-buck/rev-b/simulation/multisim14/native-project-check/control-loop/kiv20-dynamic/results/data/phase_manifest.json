@@ -43,5 +43,7 @@
   "numeric_native_exports_received": false,
   "complete_design_validated": false,
   "full_time_instantaneous_1A_limit_met": false,
-  "cloud_native_execution_performed": false
+  "cloud_native_execution_performed": false,
+  "cursor_display_values_received": true,
+  "global_peak_or_overcurrent_duration_verified": false
 }
