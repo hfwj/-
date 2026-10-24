@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-24",
+  "evidence": "Third user Multisim cursor-table screenshot; displayed values, not raw time series",
+  "case": "AUTO_20R_8R_5R_KIV20",
+  "visible_analysis_tab": "KIV20_AUTO_20R_8R_5R 180ms",
+  "displayed_plot_range_s": [
+    0.11,
+    0.15
+  ],
+  "points": [
+    {
+      "cursor": 1,
+      "displayed_time": "129.9919m",
+      "time_s": 0.1299919,
+      "VOUT_V": 7.9627,
+      "IOUT_A": 0.9989547,
+      "displayed_IOUT": "998.9547m",
+      "load_ohm": 8
+    },
+    {
+      "cursor": 2,
+      "displayed_time": "142.4828m",
+      "time_s": 0.1424828,
+      "VOUT_V": 4.9885,
+      "IOUT_A": 0.9999704,
+      "displayed_IOUT": "999.9704m",
+      "load_ohm": 5
+    }
+  ],
+  "base_time_unit": "s",
+  "base_current_unit": "A",
+  "displayed_delta_time_s": 0.0124909,
+  "displayed_delta_current_A": 0.0010158,
+  "displayed_delta_voltage_V": -2.9742,
+  "known_load_transition_start_s": 0.13,
+  "elapsed_from_load_transition_to_observed_return_ms": 12.4828,
+  "left_point_precedes_transition_us": 8.1,
+  "right_point_at_or_below_1A": true,
+  "right_point_is_first_descending_crossing_verified": false,
+  "displayed_dx_is_exact_continuous_overcurrent_duration": false,
+  "continuous_overcurrent_duration_verified": false,
+  "stays_at_or_below_1A_after_right_cursor_verified": false,
+  "settling_time_verified": false,
+  "interpretation": "At142.4828ms a displayed point at0.9999704A is observed,12.4828ms after the commanded load-step start. Cursor1 is8.1us before the step. Record an approximate observed return point, not first-crossing time, exact excess-current duration or settled all-future compliance.",
+  "previous_near_peak_point_A": 1.569,
+  "numeric_native_export_received": false,
+  "saved_project_for_this_run_received": false,
+  "all_project_model_or_physical_changes_performed": false,
+  "rounding_note": "Point values and deltas are independently rounded by cursor display.",
+  "change_impact": {
+    "baseline": "Delivered Ki20 dynamic180ms project and prior cursor measurements",
+    "schematic_components_BOM_PCB": "No change; records only",
+    "controller_load_solver_native_binary": "No change"
+  }
+}

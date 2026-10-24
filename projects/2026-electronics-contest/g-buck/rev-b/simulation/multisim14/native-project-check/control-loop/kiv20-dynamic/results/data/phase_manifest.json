@@ -45,5 +45,6 @@
   "full_time_instantaneous_1A_limit_met": false,
   "cloud_native_execution_performed": false,
   "cursor_display_values_received": true,
-  "global_peak_or_overcurrent_duration_verified": false
+  "global_peak_or_overcurrent_duration_verified": false,
+  "observed_return_at_or_below_1A_received": true
 }

@@ -70,16 +70,21 @@ Ki20动态80/130ms两次切换均有电流冲高，后一次约1.6A。输出电�
     if recovery_file.exists():
         recovery=json.loads(recovery_file.read_text())
         text+='\n## 第二组回落光标读数\n\n左光标129.9919ms、0.9989547A/7.9627V；右光标137.2823ms、1.0283A/5.1296V。右点在130ms负载变化后7.2823ms，仍高于1A约2.83%，但已在1±0.1A内。显示Δt7.2904ms仍不是确认的连续过流时长，不能由两个点排除中间已发生阈值穿越。\n\n下一步向右移动右光标到该尖峰下降首次≤1.0000A处，记录时间；从130ms到此点仅作为近似恢复时间。精确超限时长需完整波形或真正的上下穿越点。本次仅记录，原理图/器件/模型/求解设置保持。\n\n[第二组光标JSON](../simulation/multisim14/native-project-check/control-loop/kiv20-dynamic/results/data/cursor_recovery_attempt_137ms.json) · [两点CSV](../simulation/multisim14/native-project-check/control-loop/kiv20-dynamic/results/data/cursor_recovery_points_137ms.csv)。\n'
+    returned_file=HERE/'results/data/cursor_observed_return_142ms.json'
+    if returned_file.exists():
+        returned=json.loads(returned_file.read_text())
+        text+='\n## 第三组光标：观测回落点已取得\n\n142.4828ms时读到I(RS_OUT)=0.9999704A、VOUT=4.9885V，已达到≤1A，距130ms负载切换12.4828ms。左光标129.9919ms比切换早8.1us，故软件显示Δt=12.4909ms。可记录约12.48ms后观测到回到1A附近；不能把它当成精确首次穿越、连续超流时长或稳定时间，也不能保证此后始终≤1A。\n\n本阶段的游标操作可结束：已记录峰顶附近1.5690A与一次≤1A回落点。若需精确超限统计，再导出完整波形，避免继续反复手动定位。当前参数和器件全部保留，下一阶段分别量化指标并评估原图真实控制/保护与效率。\n\n[第三组光标JSON](../simulation/multisim14/native-project-check/control-loop/kiv20-dynamic/results/data/cursor_observed_return_142ms.json) · [两点CSV](../simulation/multisim14/native-project-check/control-loop/kiv20-dynamic/results/data/cursor_return_points_142ms.csv)。\n'
     report.write_text(text)
     c_build=json.loads((R/'open-load-diagnostic/results/C_build_checks.json').read_text());s_build=json.loads((R/'kiv20-regression/results/build_checks.json').read_text());d_build=json.loads((HERE/'results/data/build_checks.json').read_text())
     files=[(c_build['output'],c_build['output_sha256']),*[(row['file'],row['sha256']) for row in s_build['cases']],(d_build['output'],d_build['output_sha256'])]
     for path,expected in files:assert sha(PROJECT/path)==expected
-    manifest={'date':'2026-10-24','native_files':[{'file':p,'sha256':h,'matches_prior_build':True} for p,h in files],'native_file_count':7,'native_files_changed_by_summary':False,'six_static_and_one_dynamic_screenshots_received':True,'numeric_native_exports_received':False,'complete_design_validated':False,'full_time_instantaneous_1A_limit_met':False,'cloud_native_execution_performed':False,'cursor_display_values_received':cursor_file.exists(),'global_peak_or_overcurrent_duration_verified':False}
+    manifest={'date':'2026-10-24','native_files':[{'file':p,'sha256':h,'matches_prior_build':True} for p,h in files],'native_file_count':7,'native_files_changed_by_summary':False,'six_static_and_one_dynamic_screenshots_received':True,'numeric_native_exports_received':False,'complete_design_validated':False,'full_time_instantaneous_1A_limit_met':False,'cloud_native_execution_performed':False,'cursor_display_values_received':cursor_file.exists(),'global_peak_or_overcurrent_duration_verified':False,'observed_return_at_or_below_1A_received':returned_file.exists()}
     manifest_path=HERE/'results/data/phase_manifest.json';manifest_path.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
     package=PROJECT/'downloads/Multisim14_Ki20七工况阶段汇总_2026-10-24.zip'
     includes=[PROJECT/p for p,_ in files]+[report,csv_path,manifest_path,source_c,static,dynamic,HERE/'README.md',R/'kiv20-regression/README.md',R/'open-load-diagnostic/C_README.md']
     if cursor_file.exists():includes.extend([cursor_file,HERE/'results/data/cursor_points_130ms.csv'])
     if recovery_file.exists():includes.extend([recovery_file,HERE/'results/data/cursor_recovery_points_137ms.csv'])
+    if returned_file.exists():includes.extend([returned_file,HERE/'results/data/cursor_return_points_142ms.csv'])
     with zipfile.ZipFile(package,'w',zipfile.ZIP_DEFLATED) as z:
         for p in includes:z.write(p,str(p.relative_to(PROJECT)))
     with zipfile.ZipFile(package) as z:assert z.testzip() is None
