@@ -4,7 +4,7 @@
 
 ## 下载与阅读
 
-- 最新本机截图已覆盖25V/20Ω和15V/20Ω约10V、8Ω约8V/1A、5Ω约5V/1A，见[控制模型本机反馈记录](simulation/multisim14/native-project-check/control-loop/results/data/native_user_feedback.json)。本次仅归档反馈，不改原理图或器件；空载、自动切换及真实保护/效率未据此确认。
+- 最新本机截图已覆盖五个静态负载工况：20Ω恒压及8Ω/5Ω恒流符合预期；空载仍见约11V过冲、30ms末端约9.8V，需继续评估。见[控制模型本机反馈记录](simulation/multisim14/native-project-check/control-loop/results/data/native_user_feedback.json)。本次仅归档反馈，不改原理图或器件；自动切换及真实保护/效率未据此确认。
 - 用户已反馈[CV/CC副本中25V/20Ω恒压工况](simulation/multisim14/native-project-check/control-loop/results/data/native_user_feedback.json)的本机30ms波形：软启动后约10V、峰值约10.4V；恒流等其他本机工况仍待确认。
 - [当前本机工程的软启动与CV/CC控制副本](simulation/multisim14/native-project-check/control-loop/README.md) · [专用ZIP](downloads/Multisim14_软启动与CVCC控制副本_2026-10-24.zip) · [最终测试报告](reports/Multisim14_软启动与CVCC控制仿真_2026-10-24.md)：基于最新上传的可运行工程，六个开关交叉工况完成；采用理想控制和采样，新的原生副本尚待Multisim本机确认，保护与效率未验证。
 - [保险丝对照后本机20ms结果](reports/Multisim14_保险丝对照后20ms结果_2026-10-24.md)：新图末段约9.2V，持续下降不再可见；仍有约16V启动过冲，尚未通过10V恒压/1A恒流要求。

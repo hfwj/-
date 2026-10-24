@@ -91,10 +91,35 @@
       "exact_voltage_or_ripple_verified": false,
       "identity_note": "Case identified from visible CV15 analysis tab and prior instruction; the large plot title retains the CV25 parent name",
       "scope": "Supports expected native low-input CV response of the ideal-control case; no firmware, protection, efficiency or entire input-range validation claim"
+    },
+    {
+      "id": "CV_25V_OPEN",
+      "evidence": "User Multisim Grapher screenshot in conversation",
+      "visible_title": "GBUCK_CTRL_EQ_CV_25V_20R_native_check",
+      "visible_analysis_tab": "CV_25V_OPEN CVCC_EQ + SOFT_START",
+      "displayed_time_range_s": [
+        0,
+        0.03
+      ],
+      "traces_visibly_reach_30ms": true,
+      "visible_traces": [
+        "V(vout)"
+      ],
+      "approximate_VOUT_end_V": 9.8,
+      "approximate_VOUT_peak_V": 11.1,
+      "soft_start_rise_visible": true,
+      "late_output_still_recovering": true,
+      "full_time_voltage_within_9p5_to_10p5_V": false,
+      "precise_settling_time_verified": false,
+      "numeric_waveform_export_received": false,
+      "current_saved_project_received": false,
+      "exact_voltage_or_ripple_verified": false,
+      "identity_note": "Case inferred from visible OPEN analysis tab and prior instruction; current source settings not independently measured in screenshot",
+      "observation_note": "空载启动峰值约11V，30ms末端约9.8V且仍在回调；不能认定全过程保持10V±0.5V，精确稳态与过冲仍需评估。",
+      "scope": "Native open-load waveform feedback received; identifies remaining startup overshoot, not a complete regulation/protection/efficiency acceptance"
     }
   ],
   "other_case_native_feedback_pending": [
-    "CV_25V_OPEN",
     "AUTO_20R_8R_5R"
   ],
   "firmware_protection_efficiency_or_complete_schematic_validated": false,
@@ -103,5 +128,8 @@
     "schematic": "No change; documentation-only feedback update",
     "components_BOM_PCB": "No change",
     "native_projects_or_models": "Unchanged"
-  }
+  },
+  "unresolved_native_observations": [
+    "CV_25V_OPEN startup overshoot about 11V and exact settling not established by 30ms screenshot"
+  ]
 }

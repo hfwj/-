@@ -43,7 +43,12 @@
 | CC_25V_8R | 30 | 8.0 | 1.0 | 8.1 |
 | CC_25V_5R | 30 | 5.0 | 1.0 | 5.1 |
 | CV_15V_20R | 30 | 10.0 | 未显示 | 10.4 |
+| CV_25V_OPEN | 30 | 9.8 | 未显示 | 11.1 |
 
-其余工况的本机反馈仍待确认；不能据此认定真实固件、保护、效率或原图整机通过。见[本机截图观察记录](../simulation/multisim14/native-project-check/control-loop/results/data/native_user_feedback.json)。
+CV_25V_OPEN：空载启动峰值约11V，30ms末端约9.8V且仍在回调；不能认定全过程保持10V±0.5V，精确稳态与过冲仍需评估。
+
+仍待本机反馈：AUTO_20R_8R_5R。
+
+不能据此认定真实固件、保护、效率或原图整机通过。见[本机截图观察记录](../simulation/multisim14/native-project-check/control-loop/results/data/native_user_feedback.json)。
 
 反馈归档只更新记录、报告与资料包，不改变原理图连线、器件/BOM/PCB或已交付原生工程的模型和参数。

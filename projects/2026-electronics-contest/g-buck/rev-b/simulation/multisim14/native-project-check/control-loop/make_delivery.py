@@ -40,7 +40,12 @@ def main():
         for row in feedback['cases']:
             current=f'{row["approximate_IOUT_end_A"]:.1f}' if 'approximate_IOUT_end_A' in row else '未显示'
             lines.append(f'| {row["id"]} | {row["displayed_time_range_s"][1]*1000:.0f} | {row["approximate_VOUT_end_V"]:.1f} | {current} | {row["approximate_VOUT_peak_V"]:.1f} |')
-        lines+=['','其余工况的本机反馈仍待确认；不能据此认定真实固件、保护、效率或原图整机通过。见[本机截图观察记录](../simulation/multisim14/native-project-check/control-loop/results/data/native_user_feedback.json)。','',
+        lines.append('')
+        for row in feedback['cases']:
+            if row.get('observation_note'):lines += [row['id']+'：'+row['observation_note'],'']
+        pending=feedback.get('other_case_native_feedback_pending',[])
+        lines += [('仍待本机反馈：'+', '.join(pending)+'。') if pending else '已收到列出工况的本机截图；精确测量及未解决的瞬态问题仍需分别核查。','']
+        lines+=['不能据此认定真实固件、保护、效率或原图整机通过。见[本机截图观察记录](../simulation/multisim14/native-project-check/control-loop/results/data/native_user_feedback.json)。','',
                 '反馈归档只更新记录、报告与资料包，不改变原理图连线、器件/BOM/PCB或已交付原生工程的模型和参数。','']
     report=PROJECT/'reports/Multisim14_软启动与CVCC控制仿真_2026-10-24.md';report.write_text('\n'.join(lines))
     package=PROJECT/'downloads/Multisim14_软启动与CVCC控制副本_2026-10-24.zip'
