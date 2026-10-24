@@ -67,10 +67,33 @@
       "exact_voltage_current_or_ripple_verified": false,
       "identity_note": "Case inferred from visible CC5 analysis tab and voltage/current ratio; large plot title retains the CV parent name",
       "scope": "Supports expected native 5-ohm steady CC response of the ideal-control case only; no firmware, protection, efficiency, or all-transient current-limit claim"
+    },
+    {
+      "id": "CV_15V_20R",
+      "evidence": "User Multisim Grapher screenshot in conversation",
+      "visible_title": "GBUCK_CTRL_EQ_CV_25V_20R_native_check",
+      "visible_analysis_tab": "CV_15V_20R CVCC_EQ + SOFT_START",
+      "displayed_time_range_s": [
+        0,
+        0.03
+      ],
+      "traces_visibly_reach_30ms": true,
+      "visible_traces": [
+        "V(vout)"
+      ],
+      "approximate_VOUT_end_V": 10,
+      "approximate_VOUT_peak_V": 10.4,
+      "soft_start_rise_visible": true,
+      "late_output_visually_near_10V": true,
+      "numeric_waveform_export_received": false,
+      "current_saved_project_received": false,
+      "actual_input_voltage_measured_in_screenshot": false,
+      "exact_voltage_or_ripple_verified": false,
+      "identity_note": "Case identified from visible CV15 analysis tab and prior instruction; the large plot title retains the CV25 parent name",
+      "scope": "Supports expected native low-input CV response of the ideal-control case; no firmware, protection, efficiency or entire input-range validation claim"
     }
   ],
   "other_case_native_feedback_pending": [
-    "CV_15V_20R",
     "CV_25V_OPEN",
     "AUTO_20R_8R_5R"
   ],
