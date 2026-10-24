@@ -28,9 +28,8 @@
     "initial_resistance_ohm": 0.001,
     "overcurrent_rating_A": 2,
     "contains_native_interactive_current_detection_and_resistance_change": true,
-    "current_user_fuse_state": null
+    "current_user_fuse_state": "User reports a blown/open/changed-color symbol"
   },
-  "no_fuse_blown_conclusion": true,
   "required_next_measurements": [
     {
       "name": "Q1 drain-to-ground",
@@ -47,9 +46,14 @@
   ],
   "next_request": "Current saved .ms14 with 20ms analysis and current PWM/custom settings; preserve original",
   "not_authorized_as_engineering_conclusions": [
-    "Do not infer fuse state from VOUT alone",
+    "Do not infer trip timing, fuse I-squared-t, or sole cause from the symbol alone",
     "Do not call low output just a settling transient",
-    "Do not increase duty to hide unexplained droop"
+    "Do not increase duty or the original fuse rating to hide unexplained droop"
   ],
-  "scope": "Native troubleshooting remains incomplete; no new repair declared"
+  "scope": "Native troubleshooting remains incomplete; no new repair declared",
+  "user_confirmed_fuse_visual_state": "Blown, open, or changed color",
+  "fuse_state_evidence": "Explicit user answer in conversation after latest 20ms run",
+  "fuse_operation_reported_by_user": true,
+  "sole_cause_of_droop_confirmed": false,
+  "next_controlled_comparison": "In a separately saved simulation copy only, replace F1 with a 0.001-ohm resistor between the same two nodes; keep current PWM, 20ms duration, load, and custom options unchanged; original design retains its 2A fuse"
 }
