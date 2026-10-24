@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-24",
+  "evidence": "Latest user Multisim 0-20ms V(vout) screenshot; current native project and numeric waveform still not received",
+  "visible_traces_reach_20ms": true,
+  "approximate_VOUT_from_image_V": {
+    "first_peak": 15.5,
+    "first_trough": 5.1,
+    "near_8ms": 8,
+    "near_20ms": 6.7
+  },
+  "late_output_still_falling": true,
+  "steady_10V_not_established": true,
+  "cross_solver_comparison": {
+    "archived_40pct_last_2ms_mean_V": 9.170716580310401,
+    "not_a_native_measurement": true,
+    "discrepancy_unresolved": true
+  },
+  "archived_source_fuse": {
+    "display_ref": "F1",
+    "type": "FUSE_RATED",
+    "parameters": [
+      "0",
+      "5",
+      "0",
+      "2"
+    ],
+    "template_sha256": "d0d65ed02f7367a59b7aaf2157e17bef54529657287d87f6755a888ba17d2b36",
+    "initial_resistance_ohm": 0.001,
+    "overcurrent_rating_A": 2,
+    "contains_native_interactive_current_detection_and_resistance_change": true,
+    "current_user_fuse_state": null
+  },
+  "no_fuse_blown_conclusion": true,
+  "required_next_measurements": [
+    {
+      "name": "Q1 drain-to-ground",
+      "purpose": "Check input bus after F1/D1/RS_IN"
+    },
+    {
+      "name": "U1 VB-VS differential",
+      "purpose": "Check floating bootstrap supply relative to switch node, not ground"
+    },
+    {
+      "name": "Q1 gate-source differential",
+      "purpose": "Check actual high-side gate drive in final switching cycles"
+    }
+  ],
+  "next_request": "Current saved .ms14 with 20ms analysis and current PWM/custom settings; preserve original",
+  "not_authorized_as_engineering_conclusions": [
+    "Do not infer fuse state from VOUT alone",
+    "Do not call low output just a settling transient",
+    "Do not increase duty to hide unexplained droop"
+  ],
+  "scope": "Native troubleshooting remains incomplete; no new repair declared"
+}
