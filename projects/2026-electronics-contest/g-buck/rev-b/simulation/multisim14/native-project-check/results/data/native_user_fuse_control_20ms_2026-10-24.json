@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-24",
+  "evidence": "Latest user Multisim V(vout) screenshot following the requested F1-to-1mOhm simulation comparison",
+  "visible_design_title": "设计1_瞬态容差调整_5ms_待本机验证 (1)",
+  "displayed_time_range_s": [
+    0,
+    0.02
+  ],
+  "visible_traces_reach_20ms": true,
+  "image_estimates_only": true,
+  "approximate_VOUT_estimates_V": {
+    "startup_peak": 16,
+    "late_value": 9.2
+  },
+  "late_persistent_droop_no_longer_visible": true,
+  "controlled_change_assumed_from_prior_instruction": "F1 replaced by a 0.001-ohm resistor in a simulation copy; exact saved project not yet received",
+  "comparison": {
+    "prior_native_late_value_V": 6.7,
+    "archived_cross_solver_last_2ms_mean_V": 9.170716580310401,
+    "interpretation": "If F1 was the only change, supports native fuse action as a contributor to the prior output decline; current late output visually agrees with cross-solver result"
+  },
+  "steady_10V_requirement_met": false,
+  "closed_loop_control_present_verified": false,
+  "current_saved_project_received": false,
+  "numeric_trace_received": false,
+  "retained_original_design_fuse_A": 2,
+  "next_step": "Save and upload the current working .ms14 baseline so its custom-option selection and current wiring are preserved before adding soft start and 10V/1A feedback simulation",
+  "not_established": [
+    "Exact measured steady voltage or ripple",
+    "Real fuse I-squared-t or valid protection operation",
+    "Soft-start or closed-loop CV/CC compliance",
+    "Hardware efficiency or switching stress"
+  ]
+}
