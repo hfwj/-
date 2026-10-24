@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-24",
+  "baseline": "downloads/GBUCK_REVB_PROT_POS_INJECT_12ms.ms14",
+  "baseline_sha256": "a5ce1f41512e52f59fd0ca44391ad5c656bcbd11a2a1b57b2143e2d8fe28a0c4",
+  "output": "downloads/GBUCK_REVB_PROT_FREEZE_20ms.ms14",
+  "output_sha256": "b59746013f88037d1416a239acb07ad3d0a09c8f25a10ab5861c939823f8069b",
+  "baseline_preserved": true,
+  "exact_inverse_XML_verified": true,
+  "components_pins_values_vendor_and_protection_models_preserved": true,
+  "active_control_coefficients_unchanged": true,
+  "changes": [
+    "V3 controller receivesDRV_EN node17",
+    "WhileDRV_EN<1.65V, both integrator drive currents arezero; state held apart from existing1G leakage",
+    "No state reset, no new restart-ramp, no protection-threshold or gate/PWM-logic change",
+    "Transient12->20ms and plot label updated; all other solver settings unchanged"
+  ],
+  "physical_components_BOM_PCB_change": false,
+  "real_firmware_modified": false,
+  "native_multisim_execution_performed": false,
+  "scope": "Simulation control-state-management comparison only, not1A output instantaneous limiting or verified STM32 code"
+}

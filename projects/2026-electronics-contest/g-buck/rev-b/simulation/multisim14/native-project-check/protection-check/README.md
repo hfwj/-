@@ -1,5 +1,15 @@
 # Rev B采样与保护：首轮功能验证
 
+<!-- restart-freeze-comparison -->
+## 后续：独立停机积分冻结对照
+
+**此20ms功能模型对照通过。**见[新报告](../../../../reports/Multisim14_保护重启积分冻结对照_2026-10-24.md)、[20ms工程](../../../../downloads/GBUCK_REVB_PROT_FREEZE_20ms.ms14)和[独立ZIP](../../../../downloads/Multisim14_保护重启积分冻结对照_2026-10-24.zip)。
+
+比较原12ms失败基线：仅V3理想控制器加入DRV_EN反馈、停机时冻结两积分器，时间延长到20ms；原图连接/引脚/器件值及BOM/PCB不改。保护门限、功率/驱动模型和使能期间Ki20方程不改；未修改真实固件，未运行Windows Multisim。
+
+本机先运行新工程，看3ms使能、5ms关断、故障解除后不自动重启及8ms新ARM后的使能保持。下文首轮失败结果仍归属原12ms基线。
+<!-- /restart-freeze-comparison -->
+
 比较资料：用户原理图Rev B第3～6页及网络附录、Rev B BOM。独立模型已完成19项ngspice检查；接入已有Ki20功率/驱动副本的12ms交叉求解发现：保护可撤掉两路栅极驱动，但重新ARM后再次过流关断，稳定重启**未通过**。详细结果见[阶段报告](../../../../reports/Multisim14_RevB采样与保护首轮验证_2026-10-24.md)。
 
 这些是**功能模型与交叉求解**，不是TI/Infineon/逻辑芯片厂商模型认证、真实STM32固件或硬件验收。本环境没有启动Windows Multisim。

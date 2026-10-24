@@ -4,6 +4,9 @@
 
 ## 下载与阅读
 
+- [保护重启积分冻结对照](reports/Multisim14_保护重启积分冻结对照_2026-10-24.md) · [20ms原生工程](downloads/GBUCK_REVB_PROT_FREEZE_20ms.ms14)：此20ms功能模型对照通过；保留原失败基线，未改实物原图/BOM或真实固件，本机待验证。
+
+
 - [采样与保护首轮验证](reports/Multisim14_RevB采样与保护首轮验证_2026-10-24.md) · [12ms原生诊断](downloads/GBUCK_REVB_PROT_POS_INJECT_12ms.ms14)：19项独立功能检查符合设定行为；耦合后两路栅极关断有效，但重新ARM触发约1.838A并再次保护，稳定恢复未通过。功能模型非厂商认证，不改板/BOM。
 - [Ki20七工况阶段汇总](reports/Ki20_七工况本机功能验证阶段汇总_2026-10-24.md) · [七工程与报告ZIP](downloads/Multisim14_Ki20七工况阶段汇总_2026-10-24.zip)：六静态与自动CV/CC切换均有本机截图，峰顶附近光标1.5690A，距切换约12.48ms观测到0.9999704A回落点；精确过流时长仍未测定，不判为原图整机已通过。
 - [Ki20动态切换工程](simulation/multisim14/native-project-check/control-loop/kiv20-dynamic/README.md) · [动态ZIP](downloads/Multisim14_Ki20动态切换工况_2026-10-24.zip)：六静态及180ms动态图已收齐：10V/0.5A→8V/1A→5V/1A自动切换可见，仍有约1.6A瞬态；下一步导出精确数据，原图固件/保护/效率未验证。

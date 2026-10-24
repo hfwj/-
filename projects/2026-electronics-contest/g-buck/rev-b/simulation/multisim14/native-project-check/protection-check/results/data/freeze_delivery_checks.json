@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-24",
+  "native_sha256": "b59746013f88037d1416a239acb07ad3d0a09c8f25a10ab5861c939823f8069b",
+  "baseline_preserved": true,
+  "model_matches_original_19_checks": true,
+  "full_window_checks_passed": true,
+  "sampled_hold_ranges": {
+    "current_integrator": 0.0,
+    "voltage_integrator": 0.0
+  },
+  "sampled_hold_passed": true,
+  "restart_comparison_passed": true,
+  "native_multisim_execution_performed": false
+}
