@@ -19,14 +19,42 @@
       "current_saved_project_received": false,
       "exact_voltage_or_ripple_verified": false,
       "scope": "Supports native operation and expected CV/soft-start response of this ideal-control case only"
+    },
+    {
+      "id": "CC_25V_8R",
+      "evidence": "User Multisim Grapher screenshot in conversation",
+      "visible_title": "GBUCK_CTRL_EQ_CV_25V_20R_native_check",
+      "visible_analysis_tab": "CC_25V_8R CVCC_EQ + SOFT_START",
+      "displayed_time_range_s": [
+        0,
+        0.03
+      ],
+      "traces_visibly_reach_30ms": true,
+      "visible_traces": [
+        "V(vout)",
+        "I(RS_OUT)"
+      ],
+      "approximate_VOUT_end_V": 8,
+      "approximate_VOUT_peak_V": 8.1,
+      "approximate_IOUT_end_A": 1,
+      "late_output_visually_near_1A": true,
+      "numeric_waveform_export_received": false,
+      "current_saved_project_received": false,
+      "exact_voltage_current_or_ripple_verified": false,
+      "identity_note": "Case inferred from visible CC8 analysis tab and voltage/current ratio; large plot title retains the CV parent name",
+      "scope": "Supports expected native 8-ohm steady CC response for this ideal-control case; no firmware/protection/efficiency claim"
     }
   ],
   "other_case_native_feedback_pending": [
-    "CC_25V_8R",
     "CC_25V_5R",
     "CV_15V_20R",
     "CV_25V_OPEN",
     "AUTO_20R_8R_5R"
   ],
-  "firmware_protection_efficiency_or_complete_schematic_validated": false
+  "firmware_protection_efficiency_or_complete_schematic_validated": false,
+  "latest_record_change_impact": {
+    "schematic": "No change; documentation-only feedback update",
+    "components_BOM_PCB": "No change",
+    "native_projects_or_models": "Unchanged"
+  }
 }
