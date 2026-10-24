@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-24",
+  "baseline": "downloads/GBUCK_OPEN_DIAG_B_100ms.ms14",
+  "baseline_sha256": "2f6fac349155dbee55093721c19b5cec05c544da6542efdf6c457e70c175034e",
+  "output": "downloads/GBUCK_OPEN_DIAG_C_KIV20_100ms.ms14",
+  "output_sha256": "40dba608acf8447d11a2d37b6a27b6c1083c11a15c4f801584841f6319a17cd6",
+  "baseline_unchanged": true,
+  "control_change": {
+    "voltage_outer_loop_Ki_A_per_V_s": {
+      "before": 100,
+      "after": 20
+    },
+    "power_and_control_other_parameters": "unchanged",
+    "template_copies_updated": 2
+  },
+  "display_change": "Active transient plot tab identifies OPEN_C_KIV20",
+  "native_multisim_run_verified": false,
+  "schematic_ports_values_components_BOM_PCB_change": false,
+  "F1": "2A connected; temporary R1 disconnected, inherited unchanged",
+  "analysis_settings": {
+    "reltol": {
+      "enabled": true,
+      "value": "0.003"
+    },
+    "abstol": {
+      "enabled": true,
+      "value": "1e-008"
+    },
+    "vntol": {
+      "enabled": true,
+      "value": "0.0001"
+    },
+    "chgtol": {
+      "enabled": true,
+      "value": "1e-013"
+    },
+    "method": {
+      "enabled": false,
+      "value": "trapezoidal"
+    },
+    "itl4": {
+      "enabled": true,
+      "value": "100"
+    }
+  },
+  "analysis_time": {
+    "TSTOP": "0.1",
+    "TSTART": "0",
+    "TMAX": "5e-008",
+    "IC": "dcop"
+  },
+  "exact_inverse_XML_verified": true,
+  "all_components_and_vendor_model_text_unchanged": true,
+  "both_DCL_decoders_verified": true,
+  "scope": "Control-parameter sensitivity test only; no stability, firmware, sensor, fuse, efficiency or physical-design acceptance"
+}

@@ -190,7 +190,7 @@
       "temporary_R1_disconnected_in_returned_project": true,
       "fuse_state_or_protection_verified": false,
       "identity_note": "Title and returned project match 15V/open-load case. Returned project restores 2A F1 and disconnects temporary R1; it is not byte-identical to original delivery. Remaining component settings, models, templates and analysis options match. Saved-project association does not independently prove screenshot provenance.",
-      "observation_note": "原30ms图末端约9.8V；后续延长到100ms显示约9.6～10.4V持续低频起伏，约0.8V峰峰值、周期约20ms，末端约10.2V。后几次幅度未明显衰减，不能将30ms末段视为已稳定，也不能以单个时间点代替稳态区间验收。启动峰值仍约11.1V。上述均为截图估读；100ms运行未回传新工程/数值数据，其F1状态也未直接显示。 新增VOUT与I(L1)同图显示：后段电感电流可见跨越零点，与电压低频变化相伴，支持轻载反复充放电的解释线索，但未确定PI、死区/驱动、轻载策略或数值误差中的具体原因。I(L1)不等于负载电流，也不能从100ms全图精确读取开关周期平均值/峰值。",
+      "observation_note": "原30ms图末端约9.8V；后续延长到100ms显示约9.6～10.4V持续低频起伏，约0.8V峰峰值、周期约20ms，末端约10.2V。后几次幅度未明显衰减，不能将30ms末段视为已稳定，也不能以单个时间点代替稳态区间验收。启动峰值仍约11.1V。上述均为截图估读；100ms运行未回传新工程/数值数据，其F1状态也未直接显示。 新增VOUT与I(L1)同图显示：后段电感电流可见跨越零点，与电压低频变化相伴，支持轻载反复充放电的解释线索，但未确定PI、死区/驱动、轻载策略或数值误差中的具体原因。I(L1)不等于负载电流，也不能从100ms全图精确读取开关周期平均值/峰值。 后续按对话上下文作为B版(RELTOL=0.003)的截图仍见约9.6～10.4V、周期约20ms起伏，与A版定性接近；主图标题沿用基线，未回传B保存工程，不能独立确认实际设置或完全排除数值因素。",
       "scope": "Supports native functional response for the returned 15V/open-load copy with F1 restored; not a complete firmware/protection/efficiency acceptance",
       "follow_up_observations": [
         {
@@ -246,6 +246,37 @@
           "F1_state_visible_in_screenshot": false,
           "root_cause_identified": false,
           "interpretation": "Consistent with alternating net output-capacitor charging/discharging in the forced-continuous light-load control equivalent. Negative IL is allowed by existing model, not itself evidence of a failed part. Trace is inductor current rather than load current; broad time axis cannot resolve individual switching cycles."
+        },
+        {
+          "date": "2026-10-24",
+          "evidence": "User screenshot following request to runB",
+          "case_inferred_from_conversation": "GBUCK_OPEN_DIAG_B_100ms",
+          "identity_independently_verified": false,
+          "visible_main_title": "GBUCK_CTRL_EQ_CV_15V_OPEN_native_check",
+          "note_on_identity": "Plot title and tabs retain baseline names; no current savedB project or numerical export supplied. Treat asB feedback in conversation context, not checksum-confirmed settings.",
+          "displayed_time_range_s": [
+            0,
+            0.1
+          ],
+          "traces_visibly_reach_100ms": true,
+          "visible_traces": [
+            "V(vout)",
+            "I(L1)"
+          ],
+          "approximate_late_VOUT_range_V": [
+            9.6,
+            10.4
+          ],
+          "approximate_VOUT_peak_V": 11.1,
+          "approximate_VOUT_end_V": 10.1,
+          "approximate_low_frequency_period_s": 0.02,
+          "persistent_low_frequency_variation": true,
+          "inductor_current_crosses_zero_visibly": true,
+          "comparison_with_A": "No large qualitative reduction of late oscillation visible",
+          "numeric_export_received": false,
+          "all_numerical_error_excluded": false,
+          "control_root_cause_established": false,
+          "scope": "Qualitative one-factor tolerance comparison, not precise stability or hardware acceptance"
         }
       ],
       "flat_steady_state_established": false
@@ -254,10 +285,10 @@
   "other_case_native_feedback_pending": [],
   "firmware_protection_efficiency_or_complete_schematic_validated": false,
   "latest_record_change_impact": {
-    "baseline": "Prior archived15V/open project and100msVOUT-only observation",
-    "schematic": "No connection, value or pin change",
-    "components_BOM_PCB": "No physical part change or replacement required by this evidence update",
-    "native_projects_or_models": "No change; only screenshot observations and diagnostic explanation updated. No new solver run performed."
+    "baseline": "Previously delivered B100ms diagnostic and prior screenshot record",
+    "schematic": "No connection/value/pin change; separateC preserves all components",
+    "components_BOM_PCB": "No physical part/BOM/PCB change required",
+    "native_projects_or_models": "A/B and original projects retained. SeparateC changes only voltage-loop Ki100->20 plus analysis tab label, inheritingB settings. C not established as stable or native-validated."
   },
   "unresolved_native_observations": [
     "CV_15V_OPEN 100ms screenshot shows persistent roughly 9.6-10.4V low-frequency variation, period about20ms, startup about11.1V; precise limits and cause not established. CV_25V_OPEN only30ms evidence.",

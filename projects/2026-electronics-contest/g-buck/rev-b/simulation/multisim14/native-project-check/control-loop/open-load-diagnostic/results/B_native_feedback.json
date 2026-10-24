@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-24",
+  "evidence": "User screenshot following request to runB",
+  "case_inferred_from_conversation": "GBUCK_OPEN_DIAG_B_100ms",
+  "identity_independently_verified": false,
+  "visible_main_title": "GBUCK_CTRL_EQ_CV_15V_OPEN_native_check",
+  "note_on_identity": "Plot title and tabs retain baseline names; no current savedB project or numerical export supplied. Treat asB feedback in conversation context, not checksum-confirmed settings.",
+  "displayed_time_range_s": [
+    0,
+    0.1
+  ],
+  "traces_visibly_reach_100ms": true,
+  "visible_traces": [
+    "V(vout)",
+    "I(L1)"
+  ],
+  "approximate_late_VOUT_range_V": [
+    9.6,
+    10.4
+  ],
+  "approximate_VOUT_peak_V": 11.1,
+  "approximate_VOUT_end_V": 10.1,
+  "approximate_low_frequency_period_s": 0.02,
+  "persistent_low_frequency_variation": true,
+  "inductor_current_crosses_zero_visibly": true,
+  "comparison_with_A": "No large qualitative reduction of late oscillation visible",
+  "numeric_export_received": false,
+  "all_numerical_error_excluded": false,
+  "control_root_cause_established": false,
+  "scope": "Qualitative one-factor tolerance comparison, not precise stability or hardware acceptance"
+}

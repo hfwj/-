@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-24",
+  "project_sha256": "40dba608acf8447d11a2d37b6a27b6c1083c11a15c4f801584841f6319a17cd6",
+  "extracted_test_source_sha256": "1511a48ac499e9e410cdcfee64b3cccd74a4c239153dfe196e4a32e02e819e2d",
+  "solver": "ngspice44.2/psa",
+  "requested_end_time_s": 0.005,
+  "actual_end_time_s": 0.005,
+  "data_rows": 134841,
+  "smoke_completed": true,
+  "failure_messages": [],
+  "vendor_model_text_preserved": true,
+  "native_execution_verified": false,
+  "native100ms_stability_verified": false,
+  "scope": "Only5ms syntax and startup cross-check. F1 represented by fixed1mOhm; no trip behavior, long-time regulation, real firmware, sensor or efficiency acceptance."
+}

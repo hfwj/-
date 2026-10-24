@@ -32,3 +32,9 @@
 构建采用最小XML修改、精确反向替换检查、两个独立DCL容器解码器和所有元件/控制模型不变检查。记录见[build_checks.json](results/build_checks.json)。本次没有重跑先前超时的100ms交叉求解，亦不声称新的本机对照已通过。
 
 仓库内复现：设置原有`dclimplode`依赖后执行本目录的`build_diagnostic.py`。本目录在仓库中的完整路径是`simulation/multisim14/native-project-check/control-loop/open-load-diagnostic/`；ZIP内说明的相对链接以仓库目录为准。
+
+## B版反馈与C版控制对照
+
+按随后运行B的对话上下文，用户100ms截图仍有约9.6～10.4V、周期约20ms起伏，与A定性接近；没有精确波形或保存工程确认B设置，不能完全排除数值误差。见[反馈记录](results/B_native_feedback.json)。
+
+已另备[C版说明](C_README.md)：以B为基线，仅将电压外环Ki由100改为20，分析标签改为OPEN_C_KIV20以便辨认，其他控制和求解参数保持。模型影响为电压积分作用改变；原理图/器件/BOM/PCB无变化。它是灵敏度对照，不能提前标成修复。A/B原文件不改。
