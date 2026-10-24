@@ -2,9 +2,11 @@
 
 来源：用户再次上传、已在本机运行过的[保险丝对照基线](../../../../references/user-projects/2026-10-24_本机可运行_保险丝对照.ms14)。原文件逐字节保留，SHA256为`5995f248b7683502ee6412937513adcecad85427633854a410c8173c6f2a7050`。
 
-本机截图反馈已覆盖五个30ms工况：`CV_25V_20R`和`CV_15V_20R`末段约10V、峰值约10.4V；`CC_25V_8R`约8V/1A；`CC_25V_5R`约5V/1A。空载`CV_25V_OPEN`峰值约11V、末端约9.8V，仍有回调，不能认定全过程保持10V±0.5V。数值均为按图估读，精确稳态和空载过冲仍需评估。见[截图观察记录](results/data/native_user_feedback.json)。自动负载变化仍待本机反馈；以下自动验证资料继续保留其ngspice来源。
+原六个交付工况均已收到本机截图：`CV_25V_20R`和`CV_15V_20R`末段约10V；`CC_25V_8R`约8V/1A；`CC_25V_5R`约5V/1A；`AUTO_20R_8R_5R`显示CV→CC切换，瞬态电流峰值约1.6A。空载`CV_25V_OPEN`峰值约11V、30ms末端约9.8V仍有回调。数值均为按图估读，精确稳态和瞬态问题仍需评估。见[截图观察记录](results/data/native_user_feedback.json)。
 
-本次只更新反馈记录、报告及资料包，不改变原理图、器件或已交付原生模型。下一步自动负载副本相对当前空载工况，保持25V输入，将外部负载等效模型改为20Ω→8Ω→5Ω，并把仿真时长30ms改45ms；板上器件、连线和控制模型不变。负载变化由理想测试源实现，不是更改原板BOM。
+题目基本要求第（1）项明确指定15V输入空载，原六工况中的空载为25V，因此另补`CV_15V_OPEN`。新增副本以25V空载为比较基线，仅将V1从25V改15V；RL=1GΩ近似外部空载、R_BL=2.2kΩ、连线、板上器件、控制模型及30ms分析设置均不变。原六份工程逐字节保持，不要求更换板上器件或修改BOM/PCB。新增15V空载的本机反馈待确认。
+
+本次对原六工况只归档反馈、更新报告和资料包；新增15V空载只改变仿真输入条件，不作为原硬件设计修改。下一步还需恢复原2A保险丝并核查保护，当前仍是R1=1mΩ的诊断供电状态。
 
 这组副本保留用户功率级和驱动，替换V3的仿真SPICE模板，加入理想软启动、电压外环、电感平均电流内环和PWM。它是控制功能测试模型，不是原图中STM32程序，也没有补齐INA采样芯片、故障锁存和实物保护的验证。
 
@@ -23,6 +25,7 @@
 | [CC_25V_5R](../../../../downloads/GBUCK_CTRL_EQ_CC_25V_5R_native_check.ms14) | 25V、5Ω | 30ms | 约1A恒流 |
 | [CV_15V_20R](../../../../downloads/GBUCK_CTRL_EQ_CV_15V_20R_native_check.ms14) | 15V、20Ω | 30ms | 输入低端恒压 |
 | [CV_25V_OPEN](../../../../downloads/GBUCK_CTRL_EQ_CV_25V_OPEN_native_check.ms14) | 25V、RL=1GΩ，保留2.2kΩ泄放 | 30ms | 外部空载 |
+| [CV_15V_OPEN](../../../../downloads/GBUCK_CTRL_EQ_CV_15V_OPEN_native_check.ms14) | 15V、RL=1GΩ，保留2.2kΩ泄放 | 30ms | 补齐基本要求第（1）项 |
 | [AUTO_20R_8R_5R](../../../../downloads/GBUCK_CTRL_EQ_AUTO_20R_8R_5R_native_check.ms14) | 25V、20Ω→8Ω→5Ω | 45ms | 同一控制器自动转入限流 |
 
 ## 模型及画布上的变化
@@ -68,7 +71,7 @@ flowchart LR
 
 ## 验证资料和复现
 
-[最终开关验证汇总](results/data/verification_summary.json)、[原生副本结构核验](results/data/native_build_checks.json)、[工作基线检查](results/data/working_source_inspection.json)、[六工况波形](results/figures/closed_loop_overview.png)。只有汇总中`full_transient_completed`和`steady_target_passed`均为真的工况才计为通过；交叉验证使用ngspice44.2，不冒充Multisim本机运行。
+[最终开关验证汇总](results/data/verification_summary.json)、[原生副本结构核验](results/data/native_build_checks.json)、[工作基线检查](results/data/working_source_inspection.json)、[工况波形](results/figures/closed_loop_overview.png)。只有汇总中`full_transient_completed`和`steady_target_passed`均为真的工况才计为通过；交叉验证使用ngspice44.2，不冒充Multisim本机运行。
 
 在本目录运行，依赖见上一级`requirements.txt`：
 
@@ -77,6 +80,8 @@ python build_projects.py
 python verify_projects.py
 python make_delivery.py
 ```
+
+仅补新增工况时，可运行`python verify_projects.py --reuse-verified`；只有原生二进制及提取网表哈希均与已完成记录相同的工况才复用，不重新标成新执行。汇总记录本次实际执行与哈希匹配复用的工况列表。
 
 提取出的网表逐项核对实际输入和负载，且检查全部原器件模型正文仍在，防止顶层RL与MOSFET内部同名RL混淆。原生容器已用两种DCL解压实现回读。完整时间范围保留降采样CSV，峰值附近/末段/负载变化附近另存完整分辨率NPZ窗口；NPZ的`columns`字段给出列顺序。ZIP为轻量交付，不含这些NPZ窗口，它们留在GitHub目录。
 

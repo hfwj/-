@@ -4,6 +4,17 @@
   "all_transients_completed": true,
   "all_steady_targets_passed": true,
   "native_multisim_execution_verified": false,
+  "execution_this_invocation": [
+    "CV_15V_OPEN"
+  ],
+  "prior_completed_runs_reused_after_exact_hash_match": [
+    "CV_25V_20R",
+    "CC_25V_8R",
+    "CC_25V_5R",
+    "CV_15V_20R",
+    "CV_25V_OPEN",
+    "AUTO_20R_8R_5R"
+  ],
   "assumptions": [
     "Controller and sensing are ideal equivalents, not STM32 firmware or INA model verification",
     "Light-load correction allows transient negative inductor-current reference down to -0.15A",
@@ -287,6 +298,61 @@
       "last_2ms_full_band_passed": true
     },
     {
+      "id": "CV_15V_OPEN",
+      "vin": 15,
+      "load": "1e9",
+      "stop": "0.03",
+      "solver": "ngspice 44.2 / ngbehavior=psa",
+      "native_multisim_execution_verified": false,
+      "project_sha256": "5affba179a4602c842d5df8c92681768f6d0eb3a3cb1486bbe5c592ee70d4805",
+      "solver_source_sha256": "703e2783a61e7b971dc1714079f4478bc70acac599d9bbca6bb66902e044f4e0",
+      "vendor_model_text_preserved_in_extracted_source": true,
+      "requested_end_time_s": 0.03,
+      "actual_end_time_s": 0.03,
+      "data_rows": 737314,
+      "full_transient_completed": true,
+      "failure_messages": [],
+      "scope": "Ideal control and sensing, modified IR2104 input model, user power-stage models, fuse disconnected as in working source",
+      "VOUT_max_V": 11.0544911,
+      "IL_max_A": 1.04149507,
+      "IL_min_A": -0.279113023,
+      "IOUT_max_A": 0.0050260000000079685,
+      "VIN_max_V": 14.9660071,
+      "peak_VOUT_time_s": 0.0149294049,
+      "peak_IL_time_s": 0.00534229836,
+      "full_resolution_windows_s": [
+        [
+          0.027999999999999997,
+          0.03
+        ],
+        [
+          0.0149044049,
+          0.014954404900000001
+        ],
+        [
+          0.00531729836,
+          0.00536729836
+        ]
+      ],
+      "last_2ms_ranges": {
+        "VOUT_V": [
+          9.83336299,
+          9.95882727
+        ],
+        "IOUT_A": [
+          0.004469599999978868,
+          0.004526800000022035
+        ]
+      },
+      "last_2ms_full_band_passed": true,
+      "last_2ms_time_means": {
+        "VOUT_V": 9.885797206479463,
+        "IOUT_A": 0.004493553889124104,
+        "IL_A": 0.034570557623737265
+      },
+      "steady_target_passed": true
+    },
+    {
       "id": "AUTO_20R_8R_5R",
       "vin": 25,
       "load": "steps",
@@ -384,6 +450,5 @@
       },
       "last_2ms_full_band_passed": true
     }
-  ],
-  "postprocessing_note": "Final 2ms full-band checks added from the stored complete-resolution windows of these same runs; no new solver execution or substituted waveform."
+  ]
 }

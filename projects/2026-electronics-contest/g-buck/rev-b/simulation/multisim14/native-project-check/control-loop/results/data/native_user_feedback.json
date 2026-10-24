@@ -117,10 +117,54 @@
       "identity_note": "Case inferred from visible OPEN analysis tab and prior instruction; current source settings not independently measured in screenshot",
       "observation_note": "空载启动峰值约11V，30ms末端约9.8V且仍在回调；不能认定全过程保持10V±0.5V，精确稳态与过冲仍需评估。",
       "scope": "Native open-load waveform feedback received; identifies remaining startup overshoot, not a complete regulation/protection/efficiency acceptance"
+    },
+    {
+      "id": "AUTO_20R_8R_5R",
+      "evidence": "User Multisim Grapher screenshot in conversation",
+      "visible_title": "GBUCK_CTRL_EQ_CV_25V_20R_native_check",
+      "visible_analysis_tab": "AUTO_20R_8R_5R CVCC_EQ + SOFT_START",
+      "displayed_time_range_s": [
+        0,
+        0.045
+      ],
+      "traces_visibly_reach_45ms": true,
+      "visible_traces": [
+        "V(vout)",
+        "I(RS_OUT)"
+      ],
+      "approximate_VOUT_end_V": 5,
+      "approximate_VOUT_peak_V": 10.4,
+      "approximate_IOUT_end_A": 1,
+      "approximate_IOUT_transition_peak_A": 1.6,
+      "approximate_observed_stages": [
+        {
+          "load_ohm": 20,
+          "VOUT_V": 10,
+          "IOUT_A": 0.5
+        },
+        {
+          "load_ohm": 8,
+          "VOUT_V": 8,
+          "IOUT_A": 1
+        },
+        {
+          "load_ohm": 5,
+          "VOUT_V": 5,
+          "IOUT_A": 1
+        }
+      ],
+      "automatic_CV_to_CC_response_visible": true,
+      "instantaneous_1A_hard_limit_established": false,
+      "numeric_waveform_export_received": false,
+      "current_saved_project_received": false,
+      "exact_voltage_current_or_settling_time_verified": false,
+      "observation_note": "自动切换可见约10V/0.5A→8V/1A→5V/1A，8Ω到5Ω切换时电流峰值约1.6A；支持模式切换功能，不证明全过程瞬时电流不超过1A。",
+      "identity_note": "Case inferred from visible AUTO analysis tab and prior test instruction; exact saved project not returned",
+      "scope": "Native dynamic functional feedback for an ideal-control equivalent, not firmware/fuse/protection/efficiency validation"
     }
   ],
   "other_case_native_feedback_pending": [
-    "AUTO_20R_8R_5R"
+    "CV_15V_OPEN"
   ],
   "firmware_protection_efficiency_or_complete_schematic_validated": false,
   "latest_record_change_impact": {
@@ -130,6 +174,8 @@
     "native_projects_or_models": "Unchanged"
   },
   "unresolved_native_observations": [
-    "CV_25V_OPEN startup overshoot about 11V and exact settling not established by 30ms screenshot"
+    "CV_25V_OPEN startup overshoot about 11V and exact settling not established by 30ms screenshot",
+    "AUTO transition output current peak about 1.6A; average current control is not instantaneous output limiting",
+    "Original requirement 1 is 15V/open load; additional case being added, not covered by prior 25V/open test"
   ]
 }

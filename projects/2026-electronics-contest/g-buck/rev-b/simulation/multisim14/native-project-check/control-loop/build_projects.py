@@ -21,6 +21,7 @@ CASES=[
  {'id':'CC_25V_5R','vin':25,'load':'5','stop':'0.03'},
  {'id':'CV_15V_20R','vin':15,'load':'20','stop':'0.03'},
  {'id':'CV_25V_OPEN','vin':25,'load':'1e9','stop':'0.03'},
+ {'id':'CV_15V_OPEN','vin':15,'load':'1e9','stop':'0.03'},
  {'id':'AUTO_20R_8R_5R','vin':25,'load':'steps','stop':'0.045'},
 ]
 LOAD_TEMPLATE='GLOAD %t1 %t2 VALUE={V(%t1)*V(GLOAD_CTRL)}\nVLOAD_CTRL GLOAD_CTRL %t2 PWL(0 0.05 18m 0.05 18.1m 0.125 28m 0.125 28.1m 0.2 45m 0.2)'

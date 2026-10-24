@@ -70,6 +70,19 @@
       "native_multisim_execution_verified": false
     },
     {
+      "id": "CV_15V_OPEN",
+      "vin": 15,
+      "load": "1e9",
+      "stop": "0.03",
+      "file": "downloads/GBUCK_CTRL_EQ_CV_15V_OPEN_native_check.ms14",
+      "project_sha256": "5affba179a4602c842d5df8c92681768f6d0eb3a3cb1486bbe5c592ee70d4805",
+      "solver_source_sha256": "703e2783a61e7b971dc1714079f4478bc70acac599d9bbca6bb66902e044f4e0",
+      "hardware_connectivity_and_vendor_models_preserved": true,
+      "custom_analysis_selection_preserved": true,
+      "both_DCL_decoders_verified": true,
+      "native_multisim_execution_verified": false
+    },
+    {
       "id": "AUTO_20R_8R_5R",
       "vin": 25,
       "load": "steps",

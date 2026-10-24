@@ -1,7 +1,7 @@
 """Run extracted delivery netlists; never substitute inside vendor subcircuits."""
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
-import sys,hashlib,json,os,subprocess,tempfile
+import sys,hashlib,json,os,subprocess,tempfile,argparse,math
 import numpy as np
 import matplotlib
 matplotlib.use('Agg')
@@ -93,28 +93,44 @@ def run_case(case,init):
 
 
 def main():
+    parser=argparse.ArgumentParser();parser.add_argument('--reuse-verified',action='store_true',help='Reuse only complete prior cases whose exact native binary and extracted source hashes match')
+    args=parser.parse_args()
     for p in [DATA,LOGS,FIG]:p.mkdir(parents=True,exist_ok=True)
+    cached={};todo=[]
+    for case in CASES:
+        saved=DATA/f'{case["id"]}.json';csv=DATA/f'{case["id"]}_sampled.csv'
+        if args.reuse_verified and saved.exists() and csv.exists():
+            row=json.loads(saved.read_text())
+            if row.get('full_transient_completed') and row.get('steady_target_passed') and row.get('last_2ms_full_band_passed') and row['project_sha256']==hashlib.sha256(output_path(case).read_bytes()).hexdigest() and row['solver_source_sha256']==hashlib.sha256(extract_netlist(output_path(case)).encode()).hexdigest():
+                cached[case['id']]=(row,np.loadtxt(csv,delimiter=',',skiprows=1));continue
+        todo.append(case)
     with tempfile.TemporaryDirectory(prefix='gbuck-loop-init-') as td:
         init=Path(td);lib=NG.parent.parent/'lib/x86_64-linux-gnu/ngspice'
         (init/'spinit').write_text('\n'.join('codemodel '+str(lib/n) for n in ['analog.cm','digital.cm','spice2poly.cm','xtradev.cm','xtraevt.cm','table.cm'])+'\n')
-        with ThreadPoolExecutor(max_workers=6) as pool:results=list(pool.map(lambda c:run_case(c,init),CASES))
+        with ThreadPoolExecutor(max_workers=6) as pool:new=list(pool.map(lambda c:run_case(c,init),todo))
+    combined={**cached,**{row['id']:(row,a) for row,a in new}}
+    results=[combined[case['id']] for case in CASES]
     summary={'date':'2026-10-24','source_working_project_sha256':hashlib.sha256(SOURCE.read_bytes()).hexdigest(),
              'all_transients_completed':all(r['full_transient_completed'] for r,_ in results),
              'all_steady_targets_passed':all(r['steady_target_passed'] for r,_ in results),
              'native_multisim_execution_verified':False,
+             'execution_this_invocation':[case['id'] for case in todo],
+             'prior_completed_runs_reused_after_exact_hash_match':list(cached),
              'assumptions':['Controller and sensing are ideal equivalents, not STM32 firmware or INA model verification',
                             'Light-load correction allows transient negative inductor-current reference down to -0.15A',
                             'F1 remains disconnected and R1=1mOhm remains in the working source',
                             'No efficiency, real fuse/protection, or physical switching-stress validation'],
              'cases':[r for r,_ in results]}
     (DATA/'verification_summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n')
-    fig,axes=plt.subplots(3,2,figsize=(12,10))
+    count=math.ceil(len(results)/2)
+    fig,axes=plt.subplots(count,2,figsize=(12,count*3.3))
     for ax,(record,a) in zip(axes.flat,results):
         if len(a):
             ax.plot(a[:,0]*1e3,a[:,1],label='VOUT / V',lw=.8)
             twin=ax.twinx();twin.plot(a[:,0]*1e3,a[:,12],color='tab:orange',label='IOUT / A',lw=.65)
             twin.set_ylabel('IOUT / A',color='tab:orange');ax.set_ylabel('VOUT / V')
         ax.set_title(record['id']);ax.set_xlabel('Time / ms');ax.grid(alpha=.25)
+    for ax in list(axes.flat)[len(results):]:ax.remove()
     fig.suptitle('User power stage + ideal CV/current controller: ngspice only')
     fig.tight_layout();fig.savefig(FIG/'closed_loop_overview.png',dpi=140);plt.close(fig)
     assert summary['all_transients_completed'] and summary['all_steady_targets_passed'],'Incomplete or failed cases are not passing'

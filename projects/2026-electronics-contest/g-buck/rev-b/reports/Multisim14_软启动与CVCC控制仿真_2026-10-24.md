@@ -1,6 +1,6 @@
 # 当前工程：软启动与10V/1A功能控制仿真
 
-日期：2026-10-24。基于用户当前已运行的保险丝对照工程，保留原件并加入理想控制模型；Windows Multisim本机运行仍待用户确认。
+日期：2026-10-24。基于用户当前已运行的保险丝对照工程，保留原件并加入理想控制模型。自动交叉数据来自ngspice，用户本机截图反馈在后文单独记录。
 
 先下载[专用ZIP](../downloads/Multisim14_软启动与CVCC控制副本_2026-10-24.zip)，打开其中的25V/20Ω恒压文件。完整操作、模型绑定与假设见[控制副本说明](../simulation/multisim14/native-project-check/control-loop/README.md)。
 
@@ -11,6 +11,7 @@
 | CC_25V_5R | 30.0 | 4.9886 | 1.0000 | 5.0927 | 通过 |
 | CV_15V_20R | 30.0 | 10.0410 | 0.5066 | 10.4850 | 通过 |
 | CV_25V_OPEN | 30.0 | 10.0177 | 0.0046 | 11.0234 | 通过 |
+| CV_15V_OPEN | 30.0 | 9.8858 | 0.0045 | 11.0545 | 通过 |
 | AUTO_20R_8R_5R | 45.0 | 5.0390 | 1.0101 | 10.4454 | 通过 |
 
 上述均为ngspice开关模型交叉求解，不是本环境运行Multisim。输出电流指RS_OUT之后的总电流；空载工况仍保留2.2kΩ泄放电阻。稳态窗口满足10V±0.5V或1A±0.1A，不代表每个启动/负载变化瞬间满足同一限制。
@@ -31,7 +32,7 @@
 
 原上传工程保存在[用户工程目录](../references/user-projects/2026-10-24_本机可运行_保险丝对照.ms14)，SHA256：`5995f248b7683502ee6412937513adcecad85427633854a410c8173c6f2a7050`。
 
-[最终验证JSON](../simulation/multisim14/native-project-check/control-loop/results/data/verification_summary.json) · [六工况波形](../simulation/multisim14/native-project-check/control-loop/results/figures/closed_loop_overview.png)。
+[最终验证JSON](../simulation/multisim14/native-project-check/control-loop/results/data/verification_summary.json) · [工况波形](../simulation/multisim14/native-project-check/control-loop/results/figures/closed_loop_overview.png)。
 
 ## 用户本机后续反馈
 
@@ -44,10 +45,13 @@
 | CC_25V_5R | 30 | 5.0 | 1.0 | 5.1 |
 | CV_15V_20R | 30 | 10.0 | 未显示 | 10.4 |
 | CV_25V_OPEN | 30 | 9.8 | 未显示 | 11.1 |
+| AUTO_20R_8R_5R | 45 | 5.0 | 1.0 | 10.4 |
 
 CV_25V_OPEN：空载启动峰值约11V，30ms末端约9.8V且仍在回调；不能认定全过程保持10V±0.5V，精确稳态与过冲仍需评估。
 
-仍待本机反馈：AUTO_20R_8R_5R。
+AUTO_20R_8R_5R：自动切换可见约10V/0.5A→8V/1A→5V/1A，8Ω到5Ω切换时电流峰值约1.6A；支持模式切换功能，不证明全过程瞬时电流不超过1A。
+
+仍待本机反馈：CV_15V_OPEN。
 
 不能据此认定真实固件、保护、效率或原图整机通过。见[本机截图观察记录](../simulation/multisim14/native-project-check/control-loop/results/data/native_user_feedback.json)。
 

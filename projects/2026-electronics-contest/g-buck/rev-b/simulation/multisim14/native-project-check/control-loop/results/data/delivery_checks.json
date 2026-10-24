@@ -23,6 +23,10 @@
       "binary_and_extracted_source_match_completed_run": true
     },
     {
+      "id": "CV_15V_OPEN",
+      "binary_and_extracted_source_match_completed_run": true
+    },
+    {
       "id": "AUTO_20R_8R_5R",
       "binary_and_extracted_source_match_completed_run": true
     }
@@ -30,7 +34,7 @@
   "source_file_unchanged": true,
   "native_multisim_execution_verified": false,
   "package_file": "downloads/Multisim14_软启动与CVCC控制副本_2026-10-24.zip",
-  "package_sha256": "8fe7ccbdfba26409e8676ac859d61ccc0ecc839be52ab8b0434637cb946f939e",
-  "package_bytes": 3217717,
+  "package_sha256": "e4e4e679b50352244f5cbe1886cc60872e01e92461e898d3e213b601ceee976c",
+  "package_bytes": 3716608,
   "zip_integrity_verified": true
 }
