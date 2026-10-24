@@ -1,9 +1,9 @@
 {
   "package": "downloads/Multisim14_Ki20静态回归工况_2026-10-24.zip",
-  "package_sha256": "a516a6729d9f1815c6d1d6d5a6ebea1e5f2b9d49ccfda348bd5e39170f4835f0",
+  "package_sha256": "0f79e3ed2fd431c580e31d29ab03595440687492c7151d6b79f62e65971d8469",
   "all_native_files_match_build_hashes": true,
   "zip_integrity_verified": true,
   "native_files_modified_by_packaging": false,
-  "native_screenshot_case_count": 3,
+  "native_screenshot_case_count": 4,
   "scope": "Matching files and screenshot archive only; not exact waveform or whole-design acceptance"
 }
