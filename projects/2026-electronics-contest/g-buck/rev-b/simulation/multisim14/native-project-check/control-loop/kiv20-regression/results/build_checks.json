@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-24",
+  "comparison_baseline": "downloads/GBUCK_OPEN_DIAG_C_KIV20_100ms.ms14",
+  "baseline_sha256": "40dba608acf8447d11a2d37b6a27b6c1083c11a15c4f801584841f6319a17cd6",
+  "source_unchanged": true,
+  "controller_voltage_Ki": 20,
+  "native_feedback_for_baseline": "100ms C15V/open screenshot received; exact values not exported",
+  "new_cases_native_runs_verified": false,
+  "schematic_impact": "V1 stimulus value and external RL test-load value only; selected measurements and plot labels updated. All wires and power/driver parts retained.",
+  "physical_components_BOM_PCB_impact": "No board changes required; RL values are external test conditions. F1 remains connected2A.",
+  "model_impact": "Same C ideal controller and modified driver models, RELTOL0.003,100ms. Earlier Ki100 results do not verify these cases.",
+  "cases": [
+    {
+      "case": "CV25_20R",
+      "input_V": 25,
+      "load_ohm": 20.0,
+      "file": "downloads/GBUCK_KIV20_CV25_20R_100ms.ms14",
+      "sha256": "f64116970a8d1c98a388d3ae7c15e322d32671e5cd395611a2e003d8da735c8d",
+      "power_driver_connectivity_preserved": true,
+      "controller_and_vendor_model_text_preserved": true,
+      "all_other_component_parameters_preserved": true,
+      "analysis_options_and_100ms_duration_preserved": true,
+      "native_run_verified": false,
+      "both_container_decoders_verified": true
+    },
+    {
+      "case": "CC25_8R",
+      "input_V": 25,
+      "load_ohm": 8.0,
+      "file": "downloads/GBUCK_KIV20_CC25_8R_100ms.ms14",
+      "sha256": "4b799caba9b358fc13e52686cf0bd8e836e3738d9292951d46fe22f2c0704ef7",
+      "power_driver_connectivity_preserved": true,
+      "controller_and_vendor_model_text_preserved": true,
+      "all_other_component_parameters_preserved": true,
+      "analysis_options_and_100ms_duration_preserved": true,
+      "native_run_verified": false,
+      "both_container_decoders_verified": true
+    },
+    {
+      "case": "CC25_5R",
+      "input_V": 25,
+      "load_ohm": 5.0,
+      "file": "downloads/GBUCK_KIV20_CC25_5R_100ms.ms14",
+      "sha256": "73eae30b77659a8cd180f47d39c5729f743ce82bc978682368489db68f55f288",
+      "power_driver_connectivity_preserved": true,
+      "controller_and_vendor_model_text_preserved": true,
+      "all_other_component_parameters_preserved": true,
+      "analysis_options_and_100ms_duration_preserved": true,
+      "native_run_verified": false,
+      "both_container_decoders_verified": true
+    },
+    {
+      "case": "CV15_20R",
+      "input_V": 15,
+      "load_ohm": 20.0,
+      "file": "downloads/GBUCK_KIV20_CV15_20R_100ms.ms14",
+      "sha256": "d68023a8b1594811c17124cb06f11038335cd94ab453b61c37feebf7c2235b30",
+      "power_driver_connectivity_preserved": true,
+      "controller_and_vendor_model_text_preserved": true,
+      "all_other_component_parameters_preserved": true,
+      "analysis_options_and_100ms_duration_preserved": true,
+      "native_run_verified": false,
+      "both_container_decoders_verified": true
+    },
+    {
+      "case": "CV25_OPEN",
+      "input_V": 25,
+      "load_ohm": 1000000000.0,
+      "file": "downloads/GBUCK_KIV20_CV25_OPEN_100ms.ms14",
+      "sha256": "049acac977ece06165f58add840aa4ff137ce1bfc485609c4f5a396acc7a897c",
+      "power_driver_connectivity_preserved": true,
+      "controller_and_vendor_model_text_preserved": true,
+      "all_other_component_parameters_preserved": true,
+      "analysis_options_and_100ms_duration_preserved": true,
+      "native_run_verified": false,
+      "both_container_decoders_verified": true
+    }
+  ]
+}

@@ -285,14 +285,49 @@
   "other_case_native_feedback_pending": [],
   "firmware_protection_efficiency_or_complete_schematic_validated": false,
   "latest_record_change_impact": {
-    "baseline": "Previously delivered B100ms diagnostic and prior screenshot record",
-    "schematic": "No connection/value/pin change; separateC preserves all components",
-    "components_BOM_PCB": "No physical part/BOM/PCB change required",
-    "native_projects_or_models": "A/B and original projects retained. SeparateC changes only voltage-loop Ki100->20 plus analysis tab label, inheritingB settings. C not established as stable or native-validated."
+    "baseline": "C_KIV20_100ms project and prior B/A observations",
+    "schematic": "Feedback archive does not change schematic. Five separate regression copies change only V1 input stimulus and external RL values, analysis labels and selected current trace; wires/power/driver parts preserved.",
+    "components_BOM_PCB": "No physical board changes required; external loads are test conditions. F1 retained connected2A.",
+    "native_projects_or_models": "SameC Ki20 model in regression copies, no further controller tuning. Old projects retained. Only15V/open has returned C native screenshot; new cases are pending."
   },
   "unresolved_native_observations": [
     "CV_15V_OPEN 100ms screenshot shows persistent roughly 9.6-10.4V low-frequency variation, period about20ms, startup about11.1V; precise limits and cause not established. CV_25V_OPEN only30ms evidence.",
     "AUTO transition output current peak about 1.6A; average current control is not instantaneous output limiting",
     "Returned CV_15V_OPEN reconnects F1, but fuse state, trip characteristics, other loads and true power-up inrush remain unverified"
+  ],
+  "control_revision_observations": [
+    {
+      "date": "2026-10-24",
+      "id": "CV15_OPEN_KIV20_C",
+      "evidence": "User Multisim Grapher screenshot afterC run request",
+      "visible_analysis_tab": "OPEN_C_KIV20 CVCC_EQ + SOFT_START",
+      "visible_main_title": "GBUCK_CTRL_EQ_CV_15V_OPEN_native_check",
+      "case_identified_from_distinctive_analysis_tab": true,
+      "saved_project_checksum_verified_for_this_run": false,
+      "displayed_time_range_s": [
+        0,
+        0.1
+      ],
+      "traces_visibly_reach_100ms": true,
+      "visible_traces": [
+        "V(vout)",
+        "I(L1)"
+      ],
+      "model_voltage_Ki": 20,
+      "approximate_VOUT_peak_V": 10.4,
+      "approximate_VOUT_end_V": 10,
+      "late_window_s": [
+        0.06,
+        0.1
+      ],
+      "late_output_visually_near_10V": true,
+      "successive_voltage_oscillations_visibly_decay": true,
+      "prior_persistent_low_frequency_variation_visibly_reduced": true,
+      "exact_voltage_band_ripple_or_settling_time_verified": false,
+      "numeric_export_received": false,
+      "current_saved_project_received": false,
+      "cause_note": "One-parameter response supports voltage-loop integral gain contributing to prior dynamics; does not establish sole cause or physical firmware behavior",
+      "scope": "Native screenshot supports improvement of15V/open C case only; other Ki20 conditions and precise limits require regression"
+    }
   ]
 }

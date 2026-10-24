@@ -11,6 +11,7 @@ def main():
     assert smoke['smoke_completed'] and not smoke['native100ms_stability_verified']
     package=PROJECT/'downloads/Multisim14_空载C版_Ki20对照_2026-10-24.zip'
     names=['C_README.md','GBUCK_CTRL_EQ_KIV20.lib','results/C_build_checks.json','results/C_5ms_smoke.json','results/C_5ms_smoke.log']
+    if (HERE/'results/C_native_feedback.json').exists():names.append('results/C_native_feedback.json')
     with zipfile.ZipFile(package,'w',zipfile.ZIP_DEFLATED) as z:
         z.write(native,native.name)
         for name in names:z.write(HERE/name,name)

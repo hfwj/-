@@ -48,8 +48,16 @@ def main():
         lines += [('仍待本机反馈：'+', '.join(pending)+'。') if pending else '已收到列出工况的本机截图；精确测量及未解决的瞬态问题仍需分别核查。','']
         lines+=['不能据此认定真实固件、保护、效率或原图整机通过。见[本机截图观察记录](../simulation/multisim14/native-project-check/control-loop/results/data/native_user_feedback.json)。','',
                 '反馈归档只更新记录、报告与资料包，不改变原理图连线、器件/BOM/PCB或已交付原生工程的模型和参数。','']
+    if feedback_file.exists():
+        revisions=feedback.get('control_revision_observations',[])
+        if revisions:
+            lines+=['## 控制参数修订后的独立本机观察','',
+                    '这些是Ki20修订控制的独立截图，不能与前面的Ki100短窗口结果合并称为同一套回归通过。','']
+            for item in revisions:
+                lines+=[f'- {item["id"]}：Ki={item["model_voltage_Ki"]}，100ms末段约{item["approximate_VOUT_end_V"]:.1f}V，启动峰值约{item["approximate_VOUT_peak_V"]:.1f}V；起伏可见衰减，精确限值与其他同参数工况仍待核查。']
+            lines+=['','下一步见[Ki20静态回归](../simulation/multisim14/native-project-check/control-loop/kiv20-regression/README.md)。','']
     lines+=['## 100ms空载后续检查','',
-            '15V空载本机100ms图显示约9.6～10.4V、周期约20ms的持续低频起伏，不能将早期30ms末2ms窗口满足目标解释为充分稳定。精确波形数据与100ms保存工程未回传。原七工程和控制参数均未改动。','']
+            '早期Ki100的15V空载本机100ms图显示约9.6～10.4V、周期约20ms的持续低频起伏，不能将早期30ms末2ms窗口满足目标解释为充分稳定。精确波形数据与100ms保存工程未回传。原七工程和控制参数均未改动。','']
     long_file=ROOT/'results/data/CV_15V_OPEN_100ms_diagnostic.json'
     if long_file.exists():
         diagnostic=json.loads(long_file.read_text())
