@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-25",
+  "comparison": "50ns incomplete trap vs200ns completed trap, same corrected native project",
+  "interval_s": [
+    0.001,
+    0.020734353734955583
+  ],
+  "interpolated_points": 4000,
+  "max_VOUT_difference_V": 0.07002983080490521,
+  "VOUT_difference_below_50mV": false,
+  "does_not_compare_gate_edges_or_raw_current_peaks": true
+}

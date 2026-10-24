@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-25",
+  "package": "downloads/Multisim14_STEP01_Sense_FeedbackFix_2026-10-25.zip",
+  "package_sha256": "25337a0ba1518c56d0895f3bc71a68c5ba0ed27f451cc80f1c5ad4179bdae7c6",
+  "zip_integrity_verified": true,
+  "native_matches_completed_coupled_check": true,
+  "returned_source_preserved": true,
+  "native_multisim_execution_performed_in_this_environment": false,
+  "user_native_30ms_screenshot_received": true,
+  "user_native_voltage_regulation_verified": false
+}

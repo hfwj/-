@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-24",
+  "case": "fixed_trap_200ns",
+  "project_sha256": "ca8bc20a0ee8041834353e4b7ec91a6abc6ebd30451153d281b23aa82e6ac3b0",
+  "extracted_source_sha256": "451d00c65b5507628d713e3a6d8fbe83fa2912e821d7dcd1618827cf2b18273a",
+  "requested_end_s": 0.03,
+  "full_requested_transient_completed": true,
+  "actual_end_s": 0.03,
+  "points": 886239,
+  "raw_declared_points": 886239,
+  "vectors": [
+    "time",
+    "v(vout)",
+    "v(vdda)",
+    "v(iin_raw)",
+    "v(il_bi)",
+    "i(l1)",
+    "v(6)",
+    "v(7)",
+    "v(l_raw)",
+    "v(v_cap)",
+    "v(xctrl.ilraw)",
+    "v(sw)",
+    "v(17)"
+  ],
+  "failure_messages": [],
+  "elapsed_wall_s": 651.9175489709887,
+  "native_multisim_run_performed": false,
+  "cross_solver_TMAX_s": 2e-07,
+  "cross_solver_method": "trap",
+  "fuse_thermal_trip_simulated": false,
+  "metrics": {
+    "IL_max_A": 1.0492492937432434,
+    "IL_min_A": -0.016237506597110537,
+    "VOUT_end_V": 9.668168397645083,
+    "VDDA_tail_mean_V": 3.2636688698352754,
+    "controller_IL_tail_mean_A": 0.5023146685669302,
+    "physical_IL_tail_mean_A": 0.5023990760595304,
+    "IL_BI_tail_mean_V": 1.8819486054151333,
+    "IIN_RAW_tail_mean_V": 0.23747033371841947
+  },
+  "checks": {
+    "VOUT_recovers_near_10V": true,
+    "controller_sees_actual_inductor_current": true,
+    "inductor_peak_below_2A_in_this_case": true,
+    "IL_BI_average_transfer_error_below_10mV": true,
+    "IIN_average_transfer_error_below_10mV": true
+  },
+  "time_weighted_tail": {
+    "interval_s": [
+      0.025,
+      0.03
+    ],
+    "IL_mean_A": 0.49347034437179677,
+    "IIN_mean_A": 0.23702114873893532,
+    "IL_BI_error_V": -0.0001691661969422246,
+    "VOUT_mean_V": 9.644928582497084
+  },
+  "passed": true
+}
