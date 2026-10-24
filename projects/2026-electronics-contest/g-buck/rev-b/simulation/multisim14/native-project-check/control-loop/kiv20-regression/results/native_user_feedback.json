@@ -73,17 +73,52 @@
       "F1_state_directly_visible": false,
       "summary_zh": "25V/8Ω的Ki20本机100ms图后段约8V/1A，未见明显持续大幅低频起伏；支持该静态恒流功能。精确电流误差、纹波、瞬时峰值及F1状态未从此图验证。",
       "scope": "Native static8ohm CC screenshot observation only; not automatic transition, hard instantaneous current limiting, firmware, fuse or efficiency acceptance"
+    },
+    {
+      "date": "2026-10-24",
+      "id": "CC25_5R_KIV20",
+      "case": "CC25_5R",
+      "evidence": "User Multisim Grapher screenshot",
+      "visible_analysis_tab": "KIV20_CC25_5R 100ms",
+      "visible_main_title": "GBUCK_KIV20_CC25_5R_100ms",
+      "identity_note": "Main title and distinctive analysis tab both identify Ki20 CC25/5R. Saved-project checksum and actual input measurement not supplied.",
+      "displayed_time_range_s": [
+        0,
+        0.1
+      ],
+      "traces_visibly_reach_100ms": true,
+      "visible_traces": [
+        "V(vout)",
+        "I(RS_OUT)"
+      ],
+      "model_voltage_Ki": 20,
+      "approximate_VOUT_end_V": 5,
+      "approximate_IOUT_end_A": 1,
+      "approximate_VOUT_peak_V": 5.1,
+      "late_window_s": [
+        0.06,
+        0.1
+      ],
+      "late_current_visually_near_1A": true,
+      "persistent_large_low_frequency_variation_not_apparent": true,
+      "numeric_export_received": false,
+      "current_saved_project_received": false,
+      "precise_error_ripple_settling_or_full_band_verified": false,
+      "all_instantaneous_output_current_below_1A_verified": false,
+      "F1_state_directly_visible": false,
+      "summary_zh": "25V/5Ω的Ki20本机100ms图后段约5V/1A，电压有小幅起伏；支持静态5Ω恒流功能。精确电流误差、纹波及瞬时限流未核查，不能与8Ω端点图合并当作动态切换已通过。",
+      "scope": "Native static5ohm CC screenshot observation only; not precise load regulation, dynamic switching, instantaneous current limit, firmware, fuse or efficiency acceptance",
+      "small_late_voltage_variation_visible": true
     }
   ],
   "pending_cases": [
-    "CC25_5R",
     "CV15_20R",
     "CV25_OPEN"
   ],
   "complete_design_validated": false,
   "latest_change_impact": {
-    "baseline": "Existing delivered Ki20 regression files",
-    "schematic_components_BOM_PCB": "No change; documentation and feedback only",
+    "baseline": "Existing delivered Ki20 static regression binaries",
+    "schematic_components_BOM_PCB": "No change; feedback/report update only",
     "simulation_models_settings_and_native_binaries": "Unchanged"
   }
 }
