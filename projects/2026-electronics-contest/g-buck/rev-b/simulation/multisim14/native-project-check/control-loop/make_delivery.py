@@ -54,7 +54,8 @@ def main():
             lines+=['## 控制参数修订后的独立本机观察','',
                     '这些是Ki20修订控制的独立截图，不能与前面的Ki100短窗口结果合并称为同一套回归通过。','']
             for item in revisions:
-                lines+=[f'- {item["id"]}：Ki={item["model_voltage_Ki"]}，100ms末段约{item["approximate_VOUT_end_V"]:.1f}V，启动峰值约{item["approximate_VOUT_peak_V"]:.1f}V；起伏可见衰减，精确限值与其他同参数工况仍待核查。']
+                detail=item.get('summary_zh') or f'Ki={item["model_voltage_Ki"]}，100ms末段约{item["approximate_VOUT_end_V"]:.1f}V，启动峰值约{item["approximate_VOUT_peak_V"]:.1f}V；起伏可见衰减，精确限值与其他同参数工况仍待核查。'
+                lines+=['- '+item['id']+'：'+detail]
             lines+=['','下一步见[Ki20静态回归](../simulation/multisim14/native-project-check/control-loop/kiv20-regression/README.md)。','']
     lines+=['## 100ms空载后续检查','',
             '早期Ki100的15V空载本机100ms图显示约9.6～10.4V、周期约20ms的持续低频起伏，不能将早期30ms末2ms窗口满足目标解释为充分稳定。精确波形数据与100ms保存工程未回传。原七工程和控制参数均未改动。','']

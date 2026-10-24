@@ -65,6 +65,7 @@ CV_15V_OPEN：原30ms图末端约9.8V；后续延长到100ms显示约9.6～10.4V
 这些是Ki20修订控制的独立截图，不能与前面的Ki100短窗口结果合并称为同一套回归通过。
 
 - CV15_OPEN_KIV20_C：Ki=20，100ms末段约10.0V，启动峰值约10.4V；起伏可见衰减，精确限值与其他同参数工况仍待核查。
+- CV25_20R_KIV20：25V/20Ω的Ki20本机100ms图后段约10V/0.5A，无明显大幅启动过冲或持续低频起伏；精确误差、纹波和保险丝状态未从此图验证。
 
 下一步见[Ki20静态回归](../simulation/multisim14/native-project-check/control-loop/kiv20-regression/README.md)。
 

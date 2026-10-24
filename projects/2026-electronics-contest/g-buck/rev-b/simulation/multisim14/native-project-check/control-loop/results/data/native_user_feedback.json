@@ -285,10 +285,10 @@
   "other_case_native_feedback_pending": [],
   "firmware_protection_efficiency_or_complete_schematic_validated": false,
   "latest_record_change_impact": {
-    "baseline": "C_KIV20_100ms project and prior B/A observations",
-    "schematic": "Feedback archive does not change schematic. Five separate regression copies change only V1 input stimulus and external RL values, analysis labels and selected current trace; wires/power/driver parts preserved.",
-    "components_BOM_PCB": "No physical board changes required; external loads are test conditions. F1 retained connected2A.",
-    "native_projects_or_models": "SameC Ki20 model in regression copies, no further controller tuning. Old projects retained. Only15V/open has returned C native screenshot; new cases are pending."
+    "baseline": "Existing delivered Ki20 regression files and preceding C15/open feedback",
+    "schematic": "No changes; records only",
+    "components_BOM_PCB": "No changes",
+    "native_projects_or_models": "All existing binaries/control/settings retained. CV25/20R screenshot added; other Ki20 regression conditions remain pending."
   },
   "unresolved_native_observations": [
     "CV_15V_OPEN 100ms screenshot shows persistent roughly 9.6-10.4V low-frequency variation, period about20ms, startup about11.1V; precise limits and cause not established. CV_25V_OPEN only30ms evidence.",
@@ -328,6 +328,41 @@
       "current_saved_project_received": false,
       "cause_note": "One-parameter response supports voltage-loop integral gain contributing to prior dynamics; does not establish sole cause or physical firmware behavior",
       "scope": "Native screenshot supports improvement of15V/open C case only; other Ki20 conditions and precise limits require regression"
+    },
+    {
+      "date": "2026-10-24",
+      "id": "CV25_20R_KIV20",
+      "case": "CV25_20R",
+      "evidence": "User Multisim Grapher screenshot",
+      "visible_analysis_tab": "KIV20_CV25_20R 100ms",
+      "visible_main_title": "GBUCK_CTRL_EQ_CV_15V_OPEN_native_check",
+      "identity_note": "Distinctive active-case tab identifies Ki20 CV25/20R; main title retains source name. No saved-project checksum or actual input measurement received.",
+      "displayed_time_range_s": [
+        0,
+        0.1
+      ],
+      "traces_visibly_reach_100ms": true,
+      "visible_traces": [
+        "V(vout)",
+        "I(RS_OUT)"
+      ],
+      "model_voltage_Ki": 20,
+      "approximate_VOUT_end_V": 10,
+      "approximate_IOUT_end_A": 0.5,
+      "approximate_VOUT_peak_V": 10,
+      "late_window_s": [
+        0.06,
+        0.1
+      ],
+      "late_output_visually_near_10V": true,
+      "prior_persistent_low_frequency_variation_not_apparent": true,
+      "large_startup_overshoot_not_apparent": true,
+      "numeric_export_received": false,
+      "current_saved_project_received": false,
+      "precise_error_ripple_settling_or_full_band_verified": false,
+      "F1_state_directly_visible": false,
+      "summary_zh": "25V/20Ω的Ki20本机100ms图后段约10V/0.5A，无明显大幅启动过冲或持续低频起伏；精确误差、纹波和保险丝状态未从此图验证。",
+      "scope": "Supports expected native CV response for this ideal-control test condition only; no precise acceptance or firmware/protection/efficiency claim"
     }
   ]
 }

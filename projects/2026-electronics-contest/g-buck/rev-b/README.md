@@ -4,7 +4,7 @@
 
 ## 下载与阅读
 
-- [C版改善后的Ki20静态回归](simulation/multisim14/native-project-check/control-loop/kiv20-regression/README.md) · [工况ZIP](downloads/Multisim14_Ki20静态回归工况_2026-10-24.zip)：C15V空载本机图起伏已衰减、后段约10V；准备5个同参数工况，先跑25V/20Ω。新工况待验证，不改板上器件。
+- [C版改善后的Ki20静态回归](simulation/multisim14/native-project-check/control-loop/kiv20-regression/README.md) · [工况ZIP](downloads/Multisim14_Ki20静态回归工况_2026-10-24.zip)：C15V空载改善；同参数25V/20Ω已收100ms本机图约10V/0.5A，下一步8Ω恒流。其余工况待验证，不改板上器件。
 - [空载C版单参数控制对照](simulation/multisim14/native-project-check/control-loop/open-load-diagnostic/C_README.md)：B截图与A起伏接近，C仅改电压外环Ki100→20；不改原理图和器件，不预称稳定性修复。
 - [下一步：空载起伏A/B诊断](simulation/multisim14/native-project-check/control-loop/open-load-diagnostic/README.md) · [独立对照ZIP](downloads/Multisim14_空载起伏_AB对照_2026-10-24.zip)：保持原器件和控制不变，比较RELTOL=0.01与0.003的100ms结果；已做文件结构核对，待本机运行，不是已修复版本。
 - [本机工况反馈阶段结论与原题覆盖](reports/Multisim14_本机工况反馈阶段结论_2026-10-24.md)：七工况本机截图已收齐；15V空载100ms图显示约9.6～10.4V持续低频起伏，新增I(L1)曲线可见反向电流；约11.1V启动过冲仍在。原图固件、保护及效率仍未验证。

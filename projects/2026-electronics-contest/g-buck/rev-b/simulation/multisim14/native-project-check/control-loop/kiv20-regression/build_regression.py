@@ -46,12 +46,23 @@ def main():
         records.append({'case':name,'input_V':vin,'load_ohm':float(load),'file':str(path.relative_to(PROJECT)),'sha256':sha(path),'power_driver_connectivity_preserved':True,'controller_and_vendor_model_text_preserved':True,'all_other_component_parameters_preserved':True,'analysis_options_and_100ms_duration_preserved':True,'native_run_verified':False,'both_container_decoders_verified':True})
     result={'date':'2026-10-24','comparison_baseline':str(SOURCE.relative_to(PROJECT)),'baseline_sha256':sha(SOURCE),'source_unchanged':SOURCE.read_bytes()==data,'controller_voltage_Ki':20,'native_feedback_for_baseline':'100ms C15V/open screenshot received; exact values not exported','new_cases_native_runs_verified':False,'schematic_impact':'V1 stimulus value and external RL test-load value only; selected measurements and plot labels updated. All wires and power/driver parts retained.','physical_components_BOM_PCB_impact':'No board changes required; RL values are external test conditions. F1 remains connected2A.','model_impact':'Same C ideal controller and modified driver models, RELTOL0.003,100ms. Earlier Ki100 results do not verify these cases.','cases':records}
     check=HERE/'results/build_checks.json';check.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
+    package_existing()
+
+def package_existing():
+    check=HERE/'results/build_checks.json';result=json.loads(check.read_text())
+    assert sha(SOURCE)==result['baseline_sha256']
+    for row in result['cases']:assert sha(PROJECT/row['file'])==row['sha256']
     package=PROJECT/'downloads/Multisim14_Ki20静态回归工况_2026-10-24.zip'
+    feedback=HERE/'results/native_user_feedback.json'
     with zipfile.ZipFile(package,'w',zipfile.ZIP_DEFLATED) as z:
         z.write(SOURCE,SOURCE.name)
-        for row in records:
+        for row in result['cases']:
             p=PROJECT/row['file'];z.write(p,p.name)
         z.write(HERE/'README.md','请先阅读.md');z.write(check,'build_checks.json')
+        if feedback.exists():z.write(feedback,'native_user_feedback.json')
     with zipfile.ZipFile(package) as z:assert z.testzip() is None
-    print(json.dumps({'cases_built':len(records),'baseline_unchanged':result['source_unchanged'],'package':str(package.relative_to(PROJECT)),'package_sha256':sha(package)},ensure_ascii=False,indent=2))
-if __name__=='__main__':main()
+    report={'package':str(package.relative_to(PROJECT)),'package_sha256':sha(package),'all_native_files_match_build_hashes':True,'zip_integrity_verified':True,'native_files_modified_by_packaging':False,'native_screenshot_case_count':len(json.loads(feedback.read_text())['cases']) if feedback.exists() else 0,'scope':'Matching files and screenshot archive only; not exact waveform or whole-design acceptance'}
+    (HERE/'results/delivery_checks.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n');print(json.dumps(report,ensure_ascii=False,indent=2))
+if __name__=='__main__':
+    if '--package-only' in sys.argv:package_existing()
+    else:main()

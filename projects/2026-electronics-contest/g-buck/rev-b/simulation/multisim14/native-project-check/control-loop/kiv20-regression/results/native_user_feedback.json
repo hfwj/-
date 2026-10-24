@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-24",
+  "evidence_scope": "User native screenshots, separate from build or cross-solver checks",
+  "controller": "C Ki20, same ideal sensing/driver compatibility models",
+  "baseline_C15V_OPEN_feedback": "../../open-load-diagnostic/results/C_native_feedback.json",
+  "cases": [
+    {
+      "date": "2026-10-24",
+      "id": "CV25_20R_KIV20",
+      "case": "CV25_20R",
+      "evidence": "User Multisim Grapher screenshot",
+      "visible_analysis_tab": "KIV20_CV25_20R 100ms",
+      "visible_main_title": "GBUCK_CTRL_EQ_CV_15V_OPEN_native_check",
+      "identity_note": "Distinctive active-case tab identifies Ki20 CV25/20R; main title retains source name. No saved-project checksum or actual input measurement received.",
+      "displayed_time_range_s": [
+        0,
+        0.1
+      ],
+      "traces_visibly_reach_100ms": true,
+      "visible_traces": [
+        "V(vout)",
+        "I(RS_OUT)"
+      ],
+      "model_voltage_Ki": 20,
+      "approximate_VOUT_end_V": 10,
+      "approximate_IOUT_end_A": 0.5,
+      "approximate_VOUT_peak_V": 10,
+      "late_window_s": [
+        0.06,
+        0.1
+      ],
+      "late_output_visually_near_10V": true,
+      "prior_persistent_low_frequency_variation_not_apparent": true,
+      "large_startup_overshoot_not_apparent": true,
+      "numeric_export_received": false,
+      "current_saved_project_received": false,
+      "precise_error_ripple_settling_or_full_band_verified": false,
+      "F1_state_directly_visible": false,
+      "summary_zh": "25V/20Ω的Ki20本机100ms图后段约10V/0.5A，无明显大幅启动过冲或持续低频起伏；精确误差、纹波和保险丝状态未从此图验证。",
+      "scope": "Supports expected native CV response for this ideal-control test condition only; no precise acceptance or firmware/protection/efficiency claim"
+    }
+  ],
+  "pending_cases": [
+    "CC25_8R",
+    "CC25_5R",
+    "CV15_20R",
+    "CV25_OPEN"
+  ],
+  "complete_design_validated": false,
+  "latest_change_impact": {
+    "baseline": "Delivered Ki20 regression binaries",
+    "schematic_components_BOM_PCB": "No change; feedback-only archive",
+    "simulation_models_settings_and_native_binaries": "Unchanged"
+  }
+}
