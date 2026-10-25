@@ -1,0 +1,51 @@
+{
+  "status": "PASS_STATIC_READBACK",
+  "checks": {
+    "sqlite_integrity": "ok",
+    "schematic_refs": 96,
+    "pcb_refs": 96,
+    "source_networks": 43,
+    "source_connected_pins": 264,
+    "schematic_recovered_connected_pins": 264,
+    "pcb_recovered_connected_pins": 264,
+    "physical_pads": 278,
+    "explicit_unconnected_pins": [
+      "D_POR.2",
+      "U2.4",
+      "U4.4",
+      "U6.6",
+      "U6.8",
+      "U6.9",
+      "U7.11",
+      "U7.6",
+      "U7.8",
+      "U8.10",
+      "U8.12",
+      "U8.6",
+      "U8.8",
+      "U9.7"
+    ],
+    "native_record_ticket": 231111,
+    "reference_design_documents_unchanged": true,
+    "copper_pad_overlap_pairs": [],
+    "component_envelope_overlap_pairs": [],
+    "board_mm": [
+      120,
+      90
+    ],
+    "copper_tracks": 0,
+    "vias": 0,
+    "native_application_open_test": "not_run",
+    "native_ERC": "not_run",
+    "native_DRC": "not_run",
+    "routing": "not_started",
+    "manufacturing_release": false
+  },
+  "errors": [],
+  "limitations": [
+    "Static native-history and geometry checks are not EasyEDA ERC/DRC.",
+    "Native desktop open/import has not been tested.",
+    "Component envelopes and pad rectangles do not include heatsinks, connector mating/retention, tolerance stacks or courtyard clearance.",
+    "Mechanical packages marked TBD need actual part selection before routing."
+  ]
+}
