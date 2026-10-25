@@ -2,6 +2,8 @@
 
 2026-10-25。用户提供RAR压缩的Multisim文本导出。当前仍为未完成的25ms测试，不把收到数值数据或完成缩小夹具写成主图已通过。
 
+后续本机反馈：错误日志5已确认RELTOL=.001生效，但16.4408ms在U4 INA240内部N504417仍因步长过小失败，用户确认F1未熔断，25ms未通过。详见[REL001失败与U4边界观测](Multisim14_STEP02_5R_REL001失败与U4边界观测_2026-10-25.md)。下文保留当时构建候选及独立Q2夹具的依据，不将夹具成功当作主图修复。
+
 ## 原始证据和对齐
 
 RAR原件保存在[references/user-waveforms/2026-10-25_STEP02_5R_native_four_traces.rar](../references/user-waveforms/2026-10-25_STEP02_5R_native_four_traces.rar)，大小21,760,182字节，SHA256 `d6794faaa2a74c23936eaed4210c1e2d52d166512f396abf9c1e1a45c730804f`。解压得到94,668,263字节TXT，SHA256 `3d8137a8b69ad9e5634eae4d98acc74d98b0ec238eee831b379cd84a31a480d6`。原TXT为中间文件，不再以95MB重复入库；RAR保留全部原始字节。

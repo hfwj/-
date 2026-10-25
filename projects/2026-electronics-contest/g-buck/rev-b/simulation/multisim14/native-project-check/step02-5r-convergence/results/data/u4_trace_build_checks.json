@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-25",
+  "baseline": "downloads/GBUCK_STEP02_5R_TRAP_ITL300_REL001_25ms_DIAG.ms14",
+  "baseline_sha256": "6f26946316e13cc53b1ad4abf49ac99041ab8d4ee944665ebdcc60beb19de692",
+  "output": "downloads/GBUCK_STEP02_5R_REL001_U4_TRACE_25ms.ms14",
+  "output_sha256": "9ef162e70dc27a1b83470103f64f882214e532fb59ebed38b32beae89e03f15d",
+  "only_changes": [
+    "three output-selection flags",
+    "diagnostic plot title"
+  ],
+  "output_flag_edits": [
+    {
+      "variable": "$l_raw",
+      "old_group": 0,
+      "new_group": 768
+    },
+    {
+      "variable": "$v_cap",
+      "old_group": 0,
+      "new_group": 768
+    },
+    {
+      "variable": "$il_bi",
+      "old_group": 0,
+      "new_group": 768
+    }
+  ],
+  "outputs": [
+    "$16",
+    "$17",
+    "$7",
+    "$g_h",
+    "$g_l",
+    "$il_bi",
+    "$iout_raw",
+    "$l_raw",
+    "$sw",
+    "$v_cap",
+    "$vdda",
+    "$vout",
+    "@rrs_out[i]",
+    "ll1#branch"
+  ],
+  "settings": {
+    "TSTOP": "0.025",
+    "TSTART": "0",
+    "TMAX": "5e-008",
+    "IC": "auto_ic"
+  },
+  "options": {
+    "reltol": {
+      "enabled": true,
+      "value": "0.001"
+    },
+    "abstol": {
+      "enabled": true,
+      "value": "1e-008"
+    },
+    "vntol": {
+      "enabled": true,
+      "value": "0.0001"
+    },
+    "chgtol": {
+      "enabled": true,
+      "value": "1e-013"
+    },
+    "method": {
+      "enabled": true,
+      "value": "trapezoidal"
+    },
+    "itl4": {
+      "enabled": true,
+      "value": "300"
+    }
+  },
+  "U4_display_ref": "U4",
+  "U4_database_internal_ref": "U5",
+  "U4_native_instance": "xu4",
+  "U4_model_sha256": "56c9e7fb9f112314820dd7c959a412ceebb95fa62112bf4164efa7e13a59d253",
+  "U2_and_U4_share_original_model": true,
+  "all_parts_values_ports_models_controller_and_numeric_solver_options_preserved": true,
+  "exact_inverse_XML_verified": true,
+  "two_DCL_decoders_verified": true,
+  "native_run_performed": false,
+  "convergence_fix": false,
+  "purpose": "Observe IN+ L_RAW, IN- V_CAP, OUT IL_BI and existing supply VDDA; calculate actual common-mode and differential input before changing the model."
+}

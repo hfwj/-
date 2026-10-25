@@ -1,0 +1,154 @@
+{
+  "date": "2026-10-25",
+  "original_upload": "错误日志5.log",
+  "original_log_sha256": "cbf726fe3fb003cd689ce3b268bed4b93b59e5dd9f595971d464a0ae7d62472f",
+  "history_events": [
+    {
+      "header": "操作已执行   (2026年10月25日, 19:33:15)",
+      "solver_options": {
+        "reltol": "0.003",
+        "abstol": "1e-008",
+        "vntol": "0.0001",
+        "chgtol": "1e-013",
+        "itl4": "300"
+      },
+      "requested_end_s": 0.025,
+      "maxstep_s": 5e-08,
+      "actual_end_s": 0.0227726,
+      "failed_step_s": 6.25e-18,
+      "reported_location": "(md:xq2) d1:xq2",
+      "saved_variables": [
+        "$iout_raw",
+        "$vdda",
+        "$vout",
+        "@rrs_out[i]"
+      ],
+      "simulation_canceled": true
+    },
+    {
+      "header": "操作已执行   (2026年10月25日, 19:53:54)",
+      "solver_options": {
+        "reltol": "0.003",
+        "abstol": "1e-008",
+        "vntol": "0.0001",
+        "chgtol": "1e-013",
+        "itl4": "300",
+        "method": "gear"
+      },
+      "requested_end_s": 0.025,
+      "maxstep_s": 5e-08,
+      "actual_end_s": 0.0178381,
+      "failed_step_s": 6.25e-18,
+      "reported_location": "vfi1:xq2#branch",
+      "saved_variables": [
+        "$iout_raw",
+        "$vdda",
+        "$vout",
+        "@rrs_out[i]"
+      ],
+      "simulation_canceled": true
+    },
+    {
+      "header": "操作已执行   (2026年10月25日, 20:15:13)",
+      "solver_options": {
+        "reltol": "0.003",
+        "abstol": "1e-008",
+        "vntol": "0.0001",
+        "chgtol": "1e-013",
+        "itl4": "300",
+        "method": "trapezoidal"
+      },
+      "requested_end_s": 0.025,
+      "maxstep_s": 5e-08,
+      "actual_end_s": 0.0227726,
+      "failed_step_s": 6.25e-18,
+      "reported_location": "(md:xq2) d1:xq2",
+      "saved_variables": [
+        "$16",
+        "$17",
+        "$7",
+        "$g_h",
+        "$g_l",
+        "$iout_raw",
+        "$sw",
+        "$vdda",
+        "$vout",
+        "@rrs_out[i]",
+        "ll1#branch"
+      ],
+      "simulation_canceled": true
+    },
+    {
+      "header": "操作已执行   (2026年10月25日, 20:28:53)",
+      "solver_options": {
+        "reltol": "0.003",
+        "abstol": "1e-008",
+        "vntol": "0.0001",
+        "chgtol": "1e-013",
+        "itl4": "300",
+        "method": "trapezoidal"
+      },
+      "requested_end_s": 0.025,
+      "maxstep_s": 5e-08,
+      "actual_end_s": 0.0227726,
+      "failed_step_s": 6.25e-18,
+      "reported_location": "(md:xq2) d1:xq2",
+      "saved_variables": [
+        "$16",
+        "$17",
+        "$7",
+        "$g_h",
+        "$g_l",
+        "$iout_raw",
+        "$sw",
+        "$vdda",
+        "$vout",
+        "@rrs_out[i]",
+        "ll1#branch"
+      ],
+      "simulation_canceled": true
+    },
+    {
+      "header": "操作已执行   (2026年10月25日, 21:29:56)",
+      "solver_options": {
+        "reltol": "0.001",
+        "abstol": "1e-008",
+        "vntol": "0.0001",
+        "chgtol": "1e-013",
+        "itl4": "300",
+        "method": "trapezoidal"
+      },
+      "requested_end_s": 0.025,
+      "maxstep_s": 5e-08,
+      "actual_end_s": 0.0164408,
+      "failed_step_s": 6.25e-18,
+      "reported_location": "$n504417:x_ti:xu4",
+      "saved_variables": [
+        "$16",
+        "$17",
+        "$7",
+        "$g_h",
+        "$g_l",
+        "$iout_raw",
+        "$sw",
+        "$vdda",
+        "$vout",
+        "@rrs_out[i]",
+        "ll1#branch"
+      ],
+      "simulation_canceled": true
+    }
+  ],
+  "latest_native_25ms_completed": false,
+  "latest_F1_status": "user explicitly confirmed not blown",
+  "RELTOL_001_was_effective": true,
+  "reduced_Q2_fixture_success_did_not_transfer_to_native_full_circuit": true,
+  "model_mapping": {
+    "native_xu4": "displayed inductor-current amplifier U4 INA240A1",
+    "database_internal_ref": "U5",
+    "reported_node": "N504417",
+    "role": "common-mode-controlled current source into internal 400uH/1ohm response branch; sensed by ideal voltage source E_E16",
+    "not_a_proven_unique_root_cause": true
+  },
+  "next_diagnostic": "Preserve REL001 settings/models, record actual U4 IN+/IN-/OUT/supply before modifying any device model."
+}
