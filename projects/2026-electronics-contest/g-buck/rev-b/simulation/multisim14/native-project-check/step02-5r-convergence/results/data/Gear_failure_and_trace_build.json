@@ -1,0 +1,106 @@
+{
+  "date": "2026-10-25",
+  "latest_native_log_sha256": "09c73b0a92f8925f90c4dcde6a4840066cc1b00f9032f90f45cbd9c7f74d8767",
+  "Gear_was_enabled_in_native_log": true,
+  "Gear_run_requested_s": 0.025,
+  "Gear_run_actual_end_s": 0.0178381,
+  "Gear_native_completed": false,
+  "Gear_error_branch": "vfi1:xq2#branch",
+  "branch_role": "zero-volt current probe within Q2 model capacitance-feedback network; not an external supply",
+  "Gear_run_F1": "user explicitly confirmed not blown",
+  "chosen_trace_baseline": "downloads/GBUCK_STEP02_5R_ITL300_25ms_DIAG.ms14",
+  "baseline_reason": "ITL300 trapezoidal reached 22.7726ms, longer than Gear 17.8381ms",
+  "source_sha256": "4521617971018318d8aafa30d27d0c451594f21bdc7ca24f7c81474fc6d12570",
+  "output": "downloads/GBUCK_STEP02_5R_TRAP_ITL300_25ms_TRACE.ms14",
+  "output_sha256": "d05bfdb844bb53643df087a5d18cfbbdb3d1646617cddc4db35aa2ab83d9f589",
+  "observation_flag_edits": [
+    {
+      "variable": "$g_l",
+      "old_group": 0,
+      "new_group": 768
+    },
+    {
+      "variable": "$g_h",
+      "old_group": 0,
+      "new_group": 768
+    },
+    {
+      "variable": "$sw",
+      "old_group": 0,
+      "new_group": 768
+    },
+    {
+      "variable": "ll1#branch",
+      "old_group": 0,
+      "new_group": 768
+    },
+    {
+      "variable": "$16",
+      "old_group": 0,
+      "new_group": 768
+    },
+    {
+      "variable": "$7",
+      "old_group": 0,
+      "new_group": 768
+    },
+    {
+      "variable": "$17",
+      "old_group": 0,
+      "new_group": 768
+    }
+  ],
+  "selected_outputs": [
+    "$16",
+    "$17",
+    "$7",
+    "$g_h",
+    "$g_l",
+    "$iout_raw",
+    "$sw",
+    "$vdda",
+    "$vout",
+    "@rrs_out[i]",
+    "ll1#branch"
+  ],
+  "settings": {
+    "TSTOP": "0.025",
+    "TSTART": "0",
+    "TMAX": "5e-008",
+    "IC": "auto_ic"
+  },
+  "options": {
+    "reltol": {
+      "enabled": true,
+      "value": "0.003"
+    },
+    "abstol": {
+      "enabled": true,
+      "value": "1e-008"
+    },
+    "vntol": {
+      "enabled": true,
+      "value": "0.0001"
+    },
+    "chgtol": {
+      "enabled": true,
+      "value": "1e-013"
+    },
+    "method": {
+      "enabled": true,
+      "value": "trapezoidal"
+    },
+    "itl4": {
+      "enabled": true,
+      "value": "300"
+    }
+  },
+  "only_observation_flags_and_original_method_enable_changed": true,
+  "original_trapezoidal_method_explicitly_enabled_to_avoid_inherited_setting": true,
+  "exact_inverse_XML_verified": true,
+  "two_DCL_decoders_verified": true,
+  "all_connections_parts_values_models_controller_and_numeric_solver_values_preserved": true,
+  "native_trace_run_performed": false,
+  "native_trace_convergence_verified": false,
+  "root_cause": "unresolved; neither ITL4 increase nor Gear completed 25ms; switching waveforms required"
+}
