@@ -4,7 +4,7 @@
 
 ## 下载与阅读
 
-- [STEP02 5Ω：Gear失败与开关过程观测](reports/Multisim14_STEP02_5R_Gear失败与开关波形观测_2026-10-25.md) · [25ms观测工程](downloads/GBUCK_STEP02_5R_TRAP_ITL300_25ms_TRACE.ms14)：日志确认Gear生效，但17.8381ms报Q2内部VFI1支路步长过小，F1未熔断；未完成25ms。返回覆盖更长的梯形ITL300基线，新增栅极/SW/电感电流/PWM/母线/使能观察并显式固定原梯形法，不改器件/模型/控制或其余求解数值；观测版日志已确认11通道生效，仍在22.7726ms报Q2体二极管；下一步只放大已有末尾波形，不重跑或改参数。
+- [STEP02 5Ω：Gear失败与开关过程观测](reports/Multisim14_STEP02_5R_Gear失败与开关波形观测_2026-10-25.md) · [25ms观测工程](downloads/GBUCK_STEP02_5R_TRAP_ITL300_25ms_TRACE.ms14)：日志确认Gear生效，但17.8381ms报Q2内部VFI1支路步长过小，F1未熔断；未完成25ms。返回覆盖更长的梯形ITL300基线，新增栅极/SW/电感电流/PWM/母线/使能观察并显式固定原梯形法，不改器件/模型/控制或其余求解数值；观测版日志已确认11通道生效，仍在22.7726ms报Q2体二极管；末尾局部图已收到：电感约0.90～1.09A、SW约10us周期，暂未见明显失控；需导出已有波形计算高侧VGS并检查边沿，根因未定，不改器件/模型或求解参数。
 
 - [STEP02 5Ω：ITL300失败与Gear积分对照](reports/Multisim14_STEP02_5R_ITL300失败与Gear诊断_2026-10-25.md) · [Gear/25ms候选](downloads/GBUCK_STEP02_5R_GEAR_ITL300_25ms_DIAG.ms14) · [候选ZIP](downloads/Multisim14_STEP02_5R_Gear_Diagnostic_2026-10-25.zip)：本机ITL300在22.7726ms仍报步长过小，定位低侧Q2内部体二极管D1，F1未熔断，未完成25ms。下一候选相对该短时版仅启用Gear，其他参数/模型/器件均保持；结构校验完成；后续Gear于17.8381ms失败，详见上方观测记录。
 
