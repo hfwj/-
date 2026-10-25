@@ -1,5 +1,7 @@
 # STEP02 5Ω收敛诊断
 
+[最新：平滑模型25ms截图与100ms对照](../../../../reports/Multisim14_STEP02_IIB平滑25ms截图与100ms对照_2026-10-25.md) · [同模型100ms工程](../../../../downloads/GBUCK_STEP02_5R_IIB_SMOOTH01mV_100ms_DIAG.ms14)。用户截图曲线延续至25ms，并明确确认该轮F1未熔断、未变色；无错误结束的日志及精确读数尚未收到。build_iib_100ms.py仅改TSTOP 25→100ms与图表标题，全部元件/引脚/模型/控制/其余求解设置/14路输出保持；相对25ms诊断版无新模型、原图、BOM或PCB变化。仍为修改过的共享U2/U4模型，100ms效果待本机反馈。
+
 [最新：U4的5V分界重放与IIB平滑诊断](../../../../reports/Multisim14_STEP02_U4_5V分界重放与IIB平滑诊断_2026-10-25.md) · [25ms模型诊断候选](../../../../downloads/GBUCK_STEP02_5R_IIB_SMOOTH01mV_25ms_DIAG.ms14)。四卷原GRA已读取，14路519429点，末点共模恰为5V。输入阻抗夹具原模型失败、平滑两条偏置分界后完成；理想电压钳位原模型也通过，不能忽略偏置反馈。候选仅改共享INA240 IIBP/IIBN为TANH、尺度0.1mV；U2/U4均受影响，其他器件/模型、原理图/BOM/PCB、控制、求解参数不改。原生25ms效果待反馈，原工程保留。解压原四卷获得GRA后，依次运行decode_gra.py、analyze_u4.py、replay_u4.py、build_iib_smooth.py；中间XML/NPZ留在工作目录，不入库。
 
 [前次本机反馈：U4观察复现与波形传输](../../../../reports/Multisim14_STEP02_5R_U4观测复现与波形传输状态_2026-10-25.md)：日志6确认新增三路生效，共14路，仍16.4408ms在同一U4内部节点失败。当时新RAR超过文件工具32 MiB上限；后续四卷现已读取，不再等待重传。该轮仅归档/解析/文档，无原图、器件/BOM/PCB变化。audit_log6.py核对该事件；audit_log5.py保留更早检查。

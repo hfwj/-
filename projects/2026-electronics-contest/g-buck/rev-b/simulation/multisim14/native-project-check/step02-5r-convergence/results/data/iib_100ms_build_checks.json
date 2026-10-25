@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-25",
+  "baseline": "downloads/GBUCK_STEP02_5R_IIB_SMOOTH01mV_25ms_DIAG.ms14",
+  "baseline_sha256": "b5f9a1702dc0ee71b957f9c4da890836d57f92f02e6175f89d61ed50395806d2",
+  "output": "downloads/GBUCK_STEP02_5R_IIB_SMOOTH01mV_100ms_DIAG.ms14",
+  "output_sha256": "172f48ee2b398206004834a2b1b5a380aa9f2d8ac55c9398e16f4f68d1a6a99c",
+  "only_changes": [
+    "TSTOP 0.025 -> 0.1 s",
+    "plot title 25ms -> 100ms"
+  ],
+  "all_parts_values_ports_models_controller_outputs_other_solver_options_preserved": true,
+  "modified_INA240_IIB_model_retained_for_U2_and_U4": true,
+  "unchanged_vendor_model": false,
+  "exact_inverse_XML_verified": true,
+  "two_DCL_decoders_verified": true,
+  "settings": {
+    "TSTOP": "0.1",
+    "TSTART": "0",
+    "TMAX": "5e-008",
+    "IC": "auto_ic"
+  },
+  "native_100ms_run_performed": false,
+  "native_100ms_convergence_verified": false,
+  "hardware_BOM_PCB_change": false
+}

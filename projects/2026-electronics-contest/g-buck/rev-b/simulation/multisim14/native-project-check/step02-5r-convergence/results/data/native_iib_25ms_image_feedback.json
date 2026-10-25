@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-25",
+  "evidence": "user-provided chat screenshot; no new raw native data or log received",
+  "visible_diagnostic_tab": "5R IIB SMOOTH 0.1mV MODEL DIAGNOSTIC 25ms",
+  "plotted_curves_visually_extend_to_ms": 25,
+  "earlier_native_failure_time_ms": 16.4408,
+  "visual_estimates_only": {
+    "U4_input_L_RAW_V_CAP_V": "about 5",
+    "IL_BI_V": "about 2.1",
+    "VDDA_V": "about 3.26"
+  },
+  "VOUT_precise_value": null,
+  "F1_status": "user explicitly confirmed not blown and no discoloration for this 25ms modified-model run",
+  "native_error_free_completion_verified_from_log": false,
+  "native_25ms_waveform_coverage_image_received": true,
+  "model_scope": "modified INA240 bias breakpoint regularization shared by U2/U4; not unchanged TI model or hardware validation",
+  "next_step": "preserve 25ms log; run same-model 100ms diagnostic, then provide log, F1 status and same-time ~95ms VOUT/I(RS_OUT)/IOUT_RAW cursor readings",
+  "changes_this_turn": "only diagnostic TSTOP 25 ->100ms and title; no further schematic/BOM/PCB/model/control changes"
+}
