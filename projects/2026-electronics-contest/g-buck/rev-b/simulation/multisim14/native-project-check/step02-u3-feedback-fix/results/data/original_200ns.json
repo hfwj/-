@@ -1,0 +1,21 @@
+{
+  "case": "original_200ns",
+  "project_sha256": "d758a3aa77fd027f8d74c8a5336e1b4fb0e1a01b7eaeae27d3bec1959c540ab3",
+  "extracted_source_sha256": "59f000403097ea2bfa627d1ff95e7e417deb33a4c80f5383f506eb3f1476a7cd",
+  "requested_end_s": 0.007,
+  "actual_end_s": 0.007,
+  "maxstep_s": 2e-07,
+  "completed": true,
+  "errors": [],
+  "rows": 126971,
+  "elapsed_s": 219.22940616300002,
+  "native_Multisim_run": false,
+  "fuse_thermal_trip_simulated": false,
+  "metrics": {
+    "VOUT_end_V": 17.874413808138193,
+    "VOUT_max_V": 17.874413808138193,
+    "IL_max_A": 4.801613297116478,
+    "controller_IL_max_A": 0.0,
+    "IOUT_RAW_end_V": 0.8971568874032112
+  }
+}

@@ -24,3 +24,7 @@
 - 与已交付15V空载比较：F1(2A)接回V1正端至D1阳极，临时R1两端断开；其他元件参数、模型正文、控制模板及自定义分析设置相同。
 - 30ms输出截图已收到：峰值约11.1V、末端约9.8V仍缓慢变化。未收到精确数值导出，未确认熔断特性或真实上电浪涌。
 - 本次仅原样归档，不更改原工程、原理图、实物器件或BOM/PCB；[结构比较记录](../../simulation/multisim14/native-project-check/control-loop/results/data/CV_15V_OPEN_returned_project_inspection.json)。
+
+## 2026-10-25：U3接入后的F1熔断回传
+
+`2026-10-25_STEP02_U3_F1熔断_原回传.ms14` 为用户此次上传的 `GBUCK_STEP01_IL_SENSE.ms14.ms14` 原始字节副本，SHA256为 `d758a3aa77fd027f8d74c8a5336e1b4fb0e1a01b7eaeae27d3bec1959c540ab3`。U3接线/去耦正确，V3仍用旧数字反馈节点；用户明确报告F1熔断。修正副本与独立诊断见[报告](../../reports/Multisim14_U3接入_F1熔断_反馈节点修正_2026-10-25.md)。原件不修改。此次索引编辑不改变原理图或实物器件。

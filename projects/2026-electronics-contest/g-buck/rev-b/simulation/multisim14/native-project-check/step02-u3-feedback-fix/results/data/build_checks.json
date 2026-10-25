@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-25",
+  "source_sha256": "d758a3aa77fd027f8d74c8a5336e1b4fb0e1a01b7eaeae27d3bec1959c540ab3",
+  "output_sha256": "fb926c636a25dec11e5ec6f227ef763d078643823cb393efc1a586b895a7b927",
+  "baseline": "references/user-projects/2026-10-25_STEP02_U3_F1熔断_原回传.ms14",
+  "output": "downloads/GBUCK_STEP02_U3_FEEDBACK_FIX.ms14",
+  "before": "XCTRL %t1 %t2 VOUT 3 7 2 GBUCK_CTRL_EQ",
+  "after": "XCTRL %t1 %t2 VOUT V_CAP 7 L_RAW GBUCK_CTRL_EQ",
+  "changed_call_copies": 2,
+  "exact_inverse_xml_verified": true,
+  "two_DCL_decoders_verified": true,
+  "all_schematic_connections_parts_values_positions_models_preserved": true,
+  "U3_and_100nF_decoupling_connectivity_verified": true,
+  "analysis_settings_and_selected_outputs_preserved": true,
+  "settings": {
+    "TSTOP": "0.03",
+    "TSTART": "0",
+    "TMAX": "5e-008",
+    "IC": "auto_ic"
+  },
+  "options": {
+    "reltol": {
+      "enabled": true,
+      "value": "0.003"
+    },
+    "abstol": {
+      "enabled": true,
+      "value": "1e-008"
+    },
+    "vntol": {
+      "enabled": true,
+      "value": "0.0001"
+    },
+    "chgtol": {
+      "enabled": true,
+      "value": "1e-013"
+    },
+    "method": {
+      "enabled": false,
+      "value": "trapezoidal"
+    },
+    "itl4": {
+      "enabled": true,
+      "value": "100"
+    }
+  },
+  "selected_outputs": [
+    "$iout_raw",
+    "$vdda",
+    "$vout",
+    "@rrs_out[i]"
+  ],
+  "fuse_preserved_2A_no_bypass": true,
+  "native_Multisim_run_performed": false,
+  "user_reported_fuse_blown": true,
+  "impact": "Only V3 simulation-template node bindings change; no schematic/BOM/PCB/firmware, PI coefficient, vendor-model or solver-setting change."
+}

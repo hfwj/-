@@ -1,0 +1,23 @@
+{
+  "case": "fixed_200ns",
+  "project_sha256": "fb926c636a25dec11e5ec6f227ef763d078643823cb393efc1a586b895a7b927",
+  "extracted_source_sha256": "0d73a81797594d75b62bd689f1b6fd0bffcce784ac94ff86ea42e9df8de5c291",
+  "requested_end_s": 0.03,
+  "actual_end_s": 0.007602539377862699,
+  "maxstep_s": 2e-07,
+  "completed": false,
+  "errors": [
+    "ERROR: wall time limit; not a demonstrated convergence failure"
+  ],
+  "rows": 147558,
+  "elapsed_s": 240.03651896600059,
+  "native_Multisim_run": false,
+  "fuse_thermal_trip_simulated": false,
+  "metrics": {
+    "VOUT_end_V": 4.134373090775903,
+    "VOUT_max_V": 4.134373090775903,
+    "IL_max_A": 1.066956038304049,
+    "controller_IL_max_A": 1.0669530148717996,
+    "IOUT_RAW_end_V": 0.20796323840560668
+  }
+}

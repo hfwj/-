@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-25",
+  "evidence": "User chat screenshot and explicit F1 blown report; no numeric waveform export received",
+  "screenshot_coverage_s": [
+    0,
+    0.03
+  ],
+  "VOUT_peak_V_approx": 19,
+  "VOUT_end_V_approx": 6,
+  "VDDA_V_approx": 3.2,
+  "IOUT_RAW_and_RS_OUT_current_curves": "Visually nearly overlap on shared numeric axis; not a precision transfer measurement",
+  "F1_blown": true,
+  "source_sha256": "d758a3aa77fd027f8d74c8a5336e1b4fb0e1a01b7eaeae27d3bec1959c540ab3",
+  "native_fixed_project_results_received": false
+}

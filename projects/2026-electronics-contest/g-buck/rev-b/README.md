@@ -4,6 +4,8 @@
 
 ## 下载与阅读
 
+- [U3接入后F1熔断：V3反馈引用修正](reports/Multisim14_U3接入_F1熔断_反馈节点修正_2026-10-25.md) · [STEP02原生修正版](downloads/GBUCK_STEP02_U3_FEEDBACK_FIX.ms14) · [工程与记录ZIP](downloads/Multisim14_STEP02_U3_FeedbackFix_2026-10-25.zip)：本次回传U3接线正确，V3仍用旧数字节点3/2；仅修正为V_CAP/L_RAW，保留全部接线、模型、F1=2A及30ms/50ns设置。原故障F1已熔断；修正版本机运行待反馈，独立诊断不模拟F1熔断。
+
 - [U3 INA181本机独立有序上电测试](simulation/multisim14/ina181-power-on-check/README.md)：用户Multisim截图覆盖100us，89.9806us处输出497.2455mV，符合25mV差分输入时约0.5V的预期；仅本工况独立功能验证，未接入主Buck。保留固定电源初始化失败记录，不改原主图/器件/BOM/TI模型。下方较早导入条目的“待测试”是历史状态，以本条及详细记录为准。
 
 - [STEP01采样接入反馈别名修正](reports/Multisim14_STEP01采样接入_反馈别名修正_2026-10-25.md) · [原生修正版](downloads/GBUCK_STEP01_IL_SENSE_FEEDBACK_FIX.ms14)：仅修正V3反馈节点别名，原接线/器件/Ki20保持；独立30ms完成，用户本机30ms图约6A异常消失。采样关系符合预期，本机按50ns对照指引补图后，VOUT明显平滑，30ms末约9.6～9.7V（目测）且仍缓慢上升；保留50ns，下一步复用结果核对U4采样关系，稳态精度未验收。
