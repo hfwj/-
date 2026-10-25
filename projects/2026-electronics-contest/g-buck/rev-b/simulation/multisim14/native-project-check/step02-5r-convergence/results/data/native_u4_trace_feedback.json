@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-25",
+  "original_upload": "报错日志6.log",
+  "original_log_sha256": "176feb3e3d035f45c06d754bccecef9fcebfdfa7a503ffd558cd03f3f4b8ccbb",
+  "history_event_count": 6,
+  "latest_event": {
+    "header": "操作已执行   (2026年10月25日, 21:53:04)",
+    "solver_options": {
+      "reltol": "0.001",
+      "abstol": "1e-008",
+      "vntol": "0.0001",
+      "chgtol": "1e-013",
+      "itl4": "300",
+      "method": "trapezoidal"
+    },
+    "requested_end_s": 0.025,
+    "maxstep_s": 5e-08,
+    "actual_end_s": 0.0164408,
+    "failed_step_s": 6.25e-18,
+    "reported_location": "$n504417:x_ti:xu4",
+    "saved_variables": [
+      "$16",
+      "$17",
+      "$7",
+      "$g_h",
+      "$g_l",
+      "$il_bi",
+      "$iout_raw",
+      "$l_raw",
+      "$sw",
+      "$v_cap",
+      "$vdda",
+      "$vout",
+      "@rrs_out[i]",
+      "ll1#branch"
+    ],
+    "simulation_canceled": true
+  },
+  "new_U4_observation_channels_effective": true,
+  "failure_time_and_node_match_prior_REL001_run_at_log_precision": true,
+  "latest_native_25ms_completed": false,
+  "latest_F1_status": "not separately confirmed for this run; earlier run was explicitly not blown",
+  "uploaded_archive_name": "GBUCK_STEP02_5R_ITL300_25ms_DIAG.rar",
+  "waveform_transfer_status": "download_file rejected: exceeds 32 MiB transfer limit",
+  "waveforms_read": false,
+  "archive_sha256": null,
+  "U4_boundary_metrics": null,
+  "next_step": "Split the existing RAR as a WinRAR multivolume archive with each volume <=25 MB and send all volumes; no simulation rerun is required.",
+  "scope": "Evidence and documentation only. No schematic, component, BOM, PCB, model, control, stimulus or solver setting changes."
+}

@@ -5,9 +5,7 @@ import re
 from build_diagnostics import ROOT
 
 
-def main():
-    path = ROOT / 'results/logs/native_REL001_25ms_failure_history.log'
-    text = path.read_text(encoding='utf-8-sig')
+def parse_events(text):
     sections = [s for s in re.split(r'(?=操作已执行)', text) if '操作已执行' in s]
     events = []
     for s in sections:
@@ -22,6 +20,12 @@ def main():
             'reported_location': failure[3].strip(),
             'saved_variables': re.search(r'\bsave ([^\r\n]+)', s)[1].split(),
             'simulation_canceled': 'tran simulation(s) canceled' in s})
+    return events
+
+
+def main():
+    path = ROOT / 'results/logs/native_REL001_25ms_failure_history.log'
+    events = parse_events(path.read_text(encoding='utf-8-sig'))
     assert len(events) == 5
     latest = events[-1]
     assert latest['solver_options'] == {'reltol': '0.001', 'abstol': '1e-008',
