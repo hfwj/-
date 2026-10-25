@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-25",
+  "source": "downloads/GBUCK_STEP02_5R_TRAP_ITL300_25ms_TRACE.ms14",
+  "source_sha256": "d05bfdb844bb53643df087a5d18cfbbdb3d1646617cddc4db35aa2ab83d9f589",
+  "output": "downloads/GBUCK_STEP02_5R_TRAP_ITL300_REL001_25ms_DIAG.ms14",
+  "output_sha256": "6f26946316e13cc53b1ad4abf49ac99041ab8d4ee944665ebdcc60beb19de692",
+  "only_change": "active transient RELTOL 0.003 -> 0.001; tighter, not relaxed",
+  "settings_preserved": {
+    "TSTOP": "0.025",
+    "TSTART": "0",
+    "TMAX": "5e-008",
+    "IC": "auto_ic"
+  },
+  "all_parts_connections_values_layout_models_controller_outputs_preserved": true,
+  "other_solver_options_preserved": true,
+  "exact_inverse_XML_verified": true,
+  "two_independent_DCL_decoders_verified": true,
+  "native_25ms_run_performed": false,
+  "full_buck_convergence_verified": false,
+  "justification": "unchanged Q2 imposed-pin replay completes at RELTOL=.001 and .0001, but not .003; this does not establish native full-circuit success"
+}

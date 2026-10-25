@@ -1,0 +1,162 @@
+{
+  "date": "2026-10-25",
+  "archive_sha256": "d6794faaa2a74c23936eaed4210c1e2d52d166512f396abf9c1e1a45c730804f",
+  "text_sha256": "3d8137a8b69ad9e5634eae4d98acc74d98b0ec238eee831b379cd84a31a480d6",
+  "rows_per_trace": 571734,
+  "traces": [
+    "V(g_h)",
+    "V(g_l)",
+    "V(sw)",
+    "I(L1)"
+  ],
+  "time_axes_exactly_equal": true,
+  "duplicate_formatted_times": 1,
+  "start_s": 0.0,
+  "actual_end_s": 0.02277258999391,
+  "requested_25ms_completed": false,
+  "full_ranges": {
+    "VGS_H_V": {
+      "min": -0.19164451283999995,
+      "max": 11.460687314149997,
+      "last": 7.625081104930004
+    },
+    "VGS_L_V": {
+      "min": -1.971753485838,
+      "max": 11.93384109017,
+      "last": 6.020276303139e-05
+    },
+    "SW_V": {
+      "min": -0.7220057385998,
+      "max": 25.30803890226,
+      "last": 24.59585969453
+    },
+    "IL_A": {
+      "min": -0.01354533630703,
+      "max": 1.131654102018,
+      "last": 1.056787178996
+    }
+  },
+  "window_start_s": 0.02274,
+  "window_rows": 880,
+  "last_cycles": {
+    "VGS_H_V": {
+      "min": -0.03491387648819999,
+      "max": 11.455725950380003,
+      "last": 7.625081104930004
+    },
+    "VGS_L_V": {
+      "min": -1.895719429454,
+      "max": 11.93383967455,
+      "last": 6.020276303139e-05
+    },
+    "SW_V": {
+      "min": -0.7076227775398,
+      "max": 24.59812012815,
+      "last": 24.59585969453
+    },
+    "IL_A": {
+      "min": 0.8998218349632,
+      "max": 1.084842589727,
+      "last": 1.056787178996
+    }
+  },
+  "representative_simultaneous_external_VGS_sample": {
+    "time_s": 0.02276081777157,
+    "VGS_H_V": 5.07446515114,
+    "VGS_L_V": 4.073982013719,
+    "SW_V": 15.47408524851,
+    "IL_A": 0.9005470565404
+  },
+  "external_VGS_threshold_comparisons": {
+    "2.0": {
+      "native_points_both_above": 33,
+      "linear_interpolated_intervals_s": [
+        [
+          0.02274077882739975,
+          0.022740865024882095
+        ],
+        [
+          0.022750784753092015,
+          0.0227508710373784
+        ],
+        [
+          0.02276077877328668,
+          0.02276086497433322
+        ],
+        [
+          0.022770778844410797,
+          0.022770865039887195
+        ]
+      ],
+      "linear_interpolated_total_ns": 344.8782916713744
+    },
+    "3.0": {
+      "native_points_both_above": 12,
+      "linear_interpolated_intervals_s": [
+        [
+          0.022740788712568953,
+          0.022740843159006943
+        ],
+        [
+          0.02275079501095368,
+          0.022750848301064726
+        ],
+        [
+          0.022760788655690943,
+          0.022760843108157448
+        ],
+        [
+          0.02277078872858292,
+          0.022770843173646162
+        ]
+      ],
+      "linear_interpolated_total_ns": 216.6340787833343
+    },
+    "3.5613": {
+      "native_points_both_above": 5,
+      "linear_interpolated_intervals_s": [
+        [
+          0.02274080065238609,
+          0.02274083019313642
+        ],
+        [
+          0.02275080076869143,
+          0.022750835839627795
+        ],
+        [
+          0.022760800589558015,
+          0.022760830140035774
+        ],
+        [
+          0.022770800671336692,
+          0.022770830204963358
+        ]
+      ],
+      "linear_interpolated_total_ns": 123.69579111687345
+    },
+    "4.0": {
+      "native_points_both_above": 3,
+      "linear_interpolated_intervals_s": [
+        [
+          0.022740815362027,
+          0.022740819615474136
+        ],
+        [
+          0.02276081529213867,
+          0.02276081955638784
+        ],
+        [
+          0.022770815371459138,
+          0.022770819622391993
+        ]
+      ],
+      "linear_interpolated_total_ns": 12.768629160941902
+    },
+    "5.0": {
+      "native_points_both_above": 0,
+      "linear_interpolated_intervals_s": [],
+      "linear_interpolated_total_ns": 0.0
+    }
+  },
+  "caveat": "VTO=3.5613 is the embedded intrinsic model parameter; external pin threshold comparisons and interpolated ns intervals are not proof of actual channel current, driver deadtime, or hardware shoot-through. Exported timestamps merge the final two times. Failed transient remains incomplete."
+}
