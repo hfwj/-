@@ -1,0 +1,120 @@
+{
+  "date": "2026-10-25",
+  "baseline": "downloads/GBUCK_STEP02_5R_IIB_SMOOTH01mV_100ms_DIAG.ms14",
+  "baseline_sha256": "172f48ee2b398206004834a2b1b5a380aa9f2d8ac55c9398e16f4f68d1a6a99c",
+  "output": "downloads/GBUCK_STEP02_5R_IIB_SMOOTH01mV_100ms_LOWMEM.ms14",
+  "output_sha256": "b0bc50d8f6ec767fc6a43916b274fab7246d8b0c52231f7f3dcafbdf334496fc",
+  "only_changes": [
+    "reporting TSTART 0 -> 90ms",
+    "remove 10 saved/plotted output selections",
+    "diagnostic plot title"
+  ],
+  "outputs": [
+    "$iout_raw",
+    "$vdda",
+    "$vout",
+    "@rrs_out[i]"
+  ],
+  "removed_output_flags": [
+    {
+      "variable": "$16",
+      "before_group": 768,
+      "after_group": 0
+    },
+    {
+      "variable": "$17",
+      "before_group": 768,
+      "after_group": 0
+    },
+    {
+      "variable": "$7",
+      "before_group": 768,
+      "after_group": 0
+    },
+    {
+      "variable": "$g_h",
+      "before_group": 768,
+      "after_group": 0
+    },
+    {
+      "variable": "$g_l",
+      "before_group": 768,
+      "after_group": 0
+    },
+    {
+      "variable": "$il_bi",
+      "before_group": 768,
+      "after_group": 0
+    },
+    {
+      "variable": "$l_raw",
+      "before_group": 768,
+      "after_group": 0
+    },
+    {
+      "variable": "$sw",
+      "before_group": 768,
+      "after_group": 0
+    },
+    {
+      "variable": "$v_cap",
+      "before_group": 768,
+      "after_group": 0
+    },
+    {
+      "variable": "ll1#branch",
+      "before_group": 768,
+      "after_group": 0
+    }
+  ],
+  "settings": {
+    "TSTOP": "0.1",
+    "TSTART": "0.09",
+    "TMAX": "5e-008",
+    "IC": "auto_ic"
+  },
+  "options": {
+    "reltol": {
+      "enabled": true,
+      "value": "0.001"
+    },
+    "abstol": {
+      "enabled": true,
+      "value": "1e-008"
+    },
+    "vntol": {
+      "enabled": true,
+      "value": "0.0001"
+    },
+    "chgtol": {
+      "enabled": true,
+      "value": "1e-013"
+    },
+    "method": {
+      "enabled": true,
+      "value": "trapezoidal"
+    },
+    "itl4": {
+      "enabled": true,
+      "value": "300"
+    }
+  },
+  "models_controller_components_connections_values_layout_preserved": true,
+  "integration_maxstep_and_tolerances_preserved": true,
+  "modified_INA240_model_for_U2_U4_retained": true,
+  "unchanged_vendor_model": false,
+  "expected_reporting_window_s": [
+    0.09,
+    0.1
+  ],
+  "analysis_stop_s": 0.1,
+  "reporting_is_not_restart_or_shortened_integration": true,
+  "output_channel_times_duration_fraction_if_point_density_equal": 0.02857142857142857,
+  "memory_fraction_is_not_a_measured_or_guaranteed_process_memory_reduction": true,
+  "exact_inverse_XML_verified": true,
+  "two_DCL_decoders_verified": true,
+  "native_run_performed": false,
+  "native_100ms_completed": false,
+  "memory_error_resolved": false,
+  "hardware_BOM_PCB_change": false
+}

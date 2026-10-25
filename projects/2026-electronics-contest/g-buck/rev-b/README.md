@@ -6,7 +6,9 @@
 
 - [嘉立创 EDA Rev B：120×90 mm 首轮布局](pcb/github-rework-120x90/README.md) · [原生工程](pcb/github-rework-120x90/native/G题同步Buck_RevB_120x90_布局草稿.eprj2) · [整包下载](downloads/嘉立创EDA_G题RevB_120x90_首轮布局_2026-10-25.zip)：从 GitHub 同步 Buck 工程新增独立 Rev B 板页；7 页原理图，96 器件/43 网络/264 连接端点与用户 PDF 一致。板框 120×90 mm、双层，器件布局草稿，未布线；客户端打开及原生 ERC/DRC 未执行。相对 GitHub 有电路/器件/PCB 改动，相对 PDF 未主动改拓扑与数值；机械封装待确认，原仿真/固件未改。
 
-- [STEP02 IIB平滑：25ms截图与100ms对照](reports/Multisim14_STEP02_IIB平滑25ms截图与100ms对照_2026-10-25.md) · [同模型100ms工程](downloads/GBUCK_STEP02_5R_IIB_SMOOTH01mV_100ms_DIAG.ms14)：已收曲线覆盖25ms的本机截图，用户明确确认该轮F1未熔断、未变色；日志与精确读数仍待核对。仅将平滑诊断工程TSTOP从25ms延至100ms并改标题，不再改U2/U4模型或其他模型/控制/求解参数，无原图、器件/BOM/PCB变化；100ms本机待运行，不将截图或修改模型称为原始模型/硬件验收通过。
+- [STEP02 100ms：内存不足与精简记录](reports/Multisim14_STEP02_100ms内存不足与精简记录_2026-10-25.md) · [100ms低内存工程](downloads/GBUCK_STEP02_5R_IIB_SMOOTH01mV_100ms_LOWMEM.ms14)：本机明确报内存不足，未完成100ms；不能仅据弹窗推断重现旧收敛故障。先保存需要的结果并重启Multisim；新副本仅保存90–100ms的VOUT/I(RS_OUT)/IOUT_RAW/VDDA四路，仍从t=0积分至100ms，保留50ns、.001、ITL300及现有U2/U4平滑模型，无原图、器件/BOM/PCB或新模型变化。结构校验完成，实际内存效果和100ms运行待反馈。
+
+- [STEP02 IIB平滑：25ms截图与100ms对照](reports/Multisim14_STEP02_IIB平滑25ms截图与100ms对照_2026-10-25.md) · [历史14路100ms工程](downloads/GBUCK_STEP02_5R_IIB_SMOOTH01mV_100ms_DIAG.ms14)：已收曲线覆盖25ms的本机截图，用户明确确认该轮F1未熔断、未变色；日志与精确读数仍待核对。仅将平滑诊断工程TSTOP从25ms延至100ms并改标题，不再改U2/U4模型或其他模型/控制/求解参数，无原图、器件/BOM/PCB变化；后续100ms本机报内存不足，详见上方精简方案，不将截图或修改模型称为原始模型/硬件验收通过。
 
 - [STEP02 U4：5V分界重放与IIB平滑诊断](reports/Multisim14_STEP02_U4_5V分界重放与IIB平滑诊断_2026-10-25.md) · [25ms模型诊断工程](downloads/GBUCK_STEP02_5R_IIB_SMOOTH01mV_25ms_DIAG.ms14)：四卷已解压，原生GRA14路各519429点，末点16.440824408ms，U4共模恰好5V。保留25mΩ输入阻抗的局部原模型重放在偏置SGN分界失败，1mV/0.1mV平滑均完成；理想电压钳位原模型也通过，说明需保留输入阻抗反馈。原生副本仅把共享INA240的两条IIB分界改为0.1mV尺度连续函数，**影响U2和U4模型**；硬件/BOM/PCB、U3/MOS/驱动/控制、求解参数不改。后续截图已覆盖25ms且该轮F1未熔断，无错误日志仍待核对，不能称完整修复。
 

@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-25",
+  "evidence": "user chat screenshot, no native error log or numeric data in this message",
+  "visible_tab": "5R IIB SMOOTH 0.1mV MODEL DIAGNOSTIC 100ms",
+  "dialog_error": "There is insufficient memory to complete the simulation",
+  "native_100ms_completed": false,
+  "exact_failure_time_s": null,
+  "plotted_end_approx_ms": 16,
+  "multiple_old_grapher_tabs_visible": true,
+  "process_memory_measured": false,
+  "latest_F1_status": "not separately confirmed for this 100ms memory-error run; prior 25ms run explicitly unblown",
+  "cannot_infer_time_step_too_small_from_this_dialog": true,
+  "cannot_exclude_other_convergence_or_design_issues": true,
+  "next_step": "save needed project/results, restart Multisim, open only same-model 100ms low-memory copy with 4 outputs and reporting start 90ms",
+  "model_and_hardware_changes_this_turn": false,
+  "sources": [
+    "https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z000000kGf2SAE&l=en-US",
+    "https://knowledge.ni.com/KnowledgeArticleDetails?id=kA03q000000YH7lCAG&l=en-US"
+  ]
+}
