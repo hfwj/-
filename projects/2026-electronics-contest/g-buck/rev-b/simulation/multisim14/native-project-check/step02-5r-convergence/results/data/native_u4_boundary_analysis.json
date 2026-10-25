@@ -1,0 +1,124 @@
+{
+  "date": "2026-10-25",
+  "source": "native GRA from all four original RAR volumes",
+  "samples_per_trace": 519429,
+  "end_s": 0.01644082440845538,
+  "tail_start_s": 0.01634082859305854,
+  "tail_points": 3514,
+  "tail_100us": {
+    "L_RAW_V": {
+      "min": 5.0111788502088155,
+      "max": 5.016280555145812,
+      "last": 5.011229637074999
+    },
+    "V_CAP_V": {
+      "min": 4.988734051312013,
+      "max": 4.989630386461339,
+      "last": 4.988770362925001
+    },
+    "common_mode_V": {
+      "min": 4.999979429339795,
+      "max": 5.002774180975411,
+      "last": 5.0
+    },
+    "differential_V": {
+      "min": 0.022397502392943025,
+      "max": 0.027013287119529217,
+      "last": 0.022459274149998265
+    },
+    "IL_BI_V": {
+      "min": 2.082101879340247,
+      "max": 2.163478840698311,
+      "last": 2.082397687242167
+    },
+    "VDDA_V": {
+      "min": 3.2605313634891346,
+      "max": 3.2605314099451577,
+      "last": 3.2605314062101267
+    },
+    "IL_A": {
+      "min": 0.8959101180822647,
+      "max": 1.0806065173456734,
+      "last": 0.8983809884642275
+    },
+    "IOUT_A": {
+      "min": 0.9900983431762178,
+      "max": 0.9902762366363937,
+      "last": 0.9901055498538547
+    },
+    "VOUT_V": {
+      "min": 4.939229134153202,
+      "max": 4.94011657462952,
+      "last": 4.939265085432308
+    },
+    "IOUT_RAW_V": {
+      "min": 0.9891588912384167,
+      "max": 0.9893328947575415,
+      "last": 0.9891801329784127
+    },
+    "high_VGS_V": {
+      "min": -0.03628832661723688,
+      "max": 11.441854066489611,
+      "last": 4.390785717748955
+    },
+    "low_VGS_V": {
+      "min": -1.9823530360984074,
+      "max": 11.933826354005387,
+      "last": 2.9136214620170366
+    },
+    "SW_V": {
+      "min": -0.7068184074907015,
+      "max": 24.596641666977156,
+      "last": 21.115216947042917
+    }
+  },
+  "terminal_common_mode_minus_5V_V": 0.0,
+  "strict_sign_crossing_brackets": 38,
+  "last_10_crossing_brackets_s": [
+    [
+      0.016181323252913448,
+      0.01618136543346127
+    ],
+    [
+      0.016189676738692545,
+      0.016189726738692546
+    ],
+    [
+      0.016191244387576298,
+      0.016191279946674582
+    ],
+    [
+      0.016200047588174435,
+      0.016200070616544684
+    ],
+    [
+      0.016201101272808792,
+      0.016201135426502755
+    ],
+    [
+      0.016210355912780604,
+      0.016210398352281552
+    ],
+    [
+      0.016210984312439045,
+      0.016211008539646216
+    ],
+    [
+      0.016220611942376485,
+      0.016220652711567595
+    ],
+    [
+      0.016220860294747185,
+      0.016220902456946483
+    ],
+    [
+      0.01644071219679251,
+      0.016440726887771893
+    ]
+  ],
+  "near_terminal_equal_5V_points": 1,
+  "min_recorded_time_increment_s": 2.671474153004283e-16,
+  "VDDA_tail_peak_to_peak_V": 4.645602302844054e-08,
+  "observation": "terminal U4 common mode exactly matches embedded IIBP/IIBN 5V breakpoint in decoded binary64; power-stage current and supply do not show a gross runaway/collapse in this recorded window",
+  "limitation": "Correlation is not sole-cause proof. Last accepted points omit failed Newton trials; no F1 status, actual hardware shoot-through or full 25ms success is inferred."
+}

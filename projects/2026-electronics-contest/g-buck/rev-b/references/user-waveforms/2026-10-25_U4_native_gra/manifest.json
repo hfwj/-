@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-25",
+  "volumes": [
+    {
+      "name": "GBUCK_STEP02_5R_ITL300_25ms.part1.rar",
+      "bytes": 26214400,
+      "sha256": "061cf1c8a9fc7ccb6283198afac3d3399e9572526c6984aa15fb104fc35667c7"
+    },
+    {
+      "name": "GBUCK_STEP02_5R_ITL300_25ms.part2.rar",
+      "bytes": 26214400,
+      "sha256": "b6ada841d74c4b12f6e451276d5f6398d0bbeda503022acf90fd9b4a265b45d8"
+    },
+    {
+      "name": "GBUCK_STEP02_5R_ITL300_25ms.part3.rar",
+      "bytes": 26214400,
+      "sha256": "8cad2580e6ceb0fb8c0e190286a17cfc2f9487934f87d0be21ec95c6f072e86d"
+    },
+    {
+      "name": "GBUCK_STEP02_5R_ITL300_25ms.part4.rar",
+      "bytes": 8961747,
+      "sha256": "73aaff1d9fc02a9de5d9ea96b775794e7afbf137b8111476659ff8ce9d60ec8c"
+    }
+  ],
+  "total_volume_bytes": 87604947,
+  "extracted_file": {
+    "name": "GBUCK_STEP02_5R_ITL300_25ms.gra",
+    "bytes": 109341593,
+    "sha256": "17c786993ea20496ce30202946718fe0181a02579cb25d9cf414b0c72af1f537"
+  },
+  "extraction": "libarchive.so.13 archive_read_open_filenames, ordered volumes 1..4; finished without reported error",
+  "repository_storage": "original four RAR volumes retained; large intermediate GRA/XML/NPZ not duplicated in Git"
+}

@@ -1,0 +1,154 @@
+{
+  "date": "2026-10-25",
+  "source_project_sha256": "9ef162e70dc27a1b83470103f64f882214e532fb59ebed38b32beae89e03f15d",
+  "native_window_start_s": 0.0161,
+  "boundary_points": 11989,
+  "duration_s": 0.0003408244084553806,
+  "maxstep_s": 5e-08,
+  "cases": [
+    {
+      "case": "voltage_clamped_original",
+      "width_V": null,
+      "returncode": 0,
+      "completed": true,
+      "rows": 54214,
+      "elapsed_s": 2.6218029390001902,
+      "requested_duration_s": 0.0003408244084553806,
+      "actual_end_s": 0.00034082440845538056,
+      "errors": [],
+      "model_sha256": "56c9e7fb9f112314820dd7c959a412ceebb95fa62112bf4164efa7e13a59d253",
+      "temporary_netlist_sha256": "a6d1f4cff0fb17ed1fb4be318f3a74bbfb49dcaf1eaa310265cdb9f9c81dc98d",
+      "last_values": {
+        "time": 0.00034082440845538056,
+        "v(inp)": 5.011229637074999,
+        "v(inm)": 4.988770362925002,
+        "v(vs)": 3.260531406210127,
+        "v(out)": 2.082397600547336,
+        "i(vinm)": -9.977550703398352e-06,
+        "v(xu4.x_ti.n504417)": 1.6302666182305807,
+        "v(xu4.x_ti.vicm)": 5.0
+      }
+    },
+    {
+      "case": "voltage_clamped_smooth_1mV",
+      "width_V": 0.001,
+      "returncode": 0,
+      "completed": true,
+      "rows": 54214,
+      "elapsed_s": 2.5234111359968665,
+      "requested_duration_s": 0.0003408244084553806,
+      "actual_end_s": 0.00034082440845538056,
+      "errors": [],
+      "model_sha256": "01c37fd6251dc1d900f30af15a890c9dafd99507ac92f1a2fd8b8661b8854a88",
+      "temporary_netlist_sha256": "a6d1f4cff0fb17ed1fb4be318f3a74bbfb49dcaf1eaa310265cdb9f9c81dc98d",
+      "last_values": {
+        "time": 0.00034082440845538056,
+        "v(inp)": 5.011229637074999,
+        "v(inm)": 4.988770362925002,
+        "v(vs)": 3.260531406210127,
+        "v(out)": 2.082397600547336,
+        "i(vinm)": -4.247755070339835e-05,
+        "v(xu4.x_ti.n504417)": 1.6302666182305807,
+        "v(xu4.x_ti.vicm)": 5.0
+      }
+    },
+    {
+      "case": "voltage_clamped_smooth_01mV",
+      "width_V": 0.0001,
+      "returncode": 0,
+      "completed": true,
+      "rows": 54214,
+      "elapsed_s": 2.929523391001567,
+      "requested_duration_s": 0.0003408244084553806,
+      "actual_end_s": 0.00034082440845538056,
+      "errors": [],
+      "model_sha256": "6785cfe9b919ae55c5713e17e398ee419d721691508e2a877c683c76fee8e073",
+      "temporary_netlist_sha256": "a6d1f4cff0fb17ed1fb4be318f3a74bbfb49dcaf1eaa310265cdb9f9c81dc98d",
+      "last_values": {
+        "time": 0.00034082440845538056,
+        "v(inp)": 5.011229637074999,
+        "v(inm)": 4.988770362925002,
+        "v(vs)": 3.260531406210127,
+        "v(out)": 2.082397600547336,
+        "i(vinm)": -4.247755070339835e-05,
+        "v(xu4.x_ti.n504417)": 1.6302666182305807,
+        "v(xu4.x_ti.vicm)": 5.0
+      }
+    },
+    {
+      "case": "current_into_RS_L_original",
+      "width_V": null,
+      "returncode": 1,
+      "completed": false,
+      "rows": 9453,
+      "elapsed_s": 0.6184330850010156,
+      "requested_duration_s": 0.0003408244084553806,
+      "actual_end_s": 5.9431878936341366e-05,
+      "errors": [
+        "doAnalyses: TRAN:  Timestep too small; time = 5.94319e-05, timestep = 6.25e-20: trouble with node \"xu4.x_ti.x_u18.n1sgn\"",
+        "run simulation(s) aborted"
+      ],
+      "model_sha256": "56c9e7fb9f112314820dd7c959a412ceebb95fa62112bf4164efa7e13a59d253",
+      "temporary_netlist_sha256": "8e568b5e4886785c27867280d13f72582d6f261170d6b0917388c3e8c51d1eca",
+      "last_values": {
+        "time": 5.9431878936341366e-05,
+        "v(inp)": 5.011672236857884,
+        "v(inm)": 4.9883277631421175,
+        "v(vs)": 3.2605313229553503,
+        "v(out)": 2.1017238380897925,
+        "i(vinm)": 0.9337039719651159,
+        "v(xu4.x_ti.n504417)": 1.630266463437538,
+        "v(xu4.x_ti.vicm)": 5.000000000000001
+      }
+    },
+    {
+      "case": "current_into_RS_L_smooth_1mV",
+      "width_V": 0.001,
+      "returncode": 0,
+      "completed": true,
+      "rows": 54202,
+      "elapsed_s": 3.5810207819959032,
+      "requested_duration_s": 0.0003408244084553806,
+      "actual_end_s": 0.00034082440845538056,
+      "errors": [],
+      "model_sha256": "01c37fd6251dc1d900f30af15a890c9dafd99507ac92f1a2fd8b8661b8854a88",
+      "temporary_netlist_sha256": "8e568b5e4886785c27867280d13f72582d6f261170d6b0917388c3e8c51d1eca",
+      "last_values": {
+        "time": 0.00034082440845538056,
+        "v(inp)": 5.011228824904985,
+        "v(inm)": 4.988770362925002,
+        "v(vs)": 3.260531406210127,
+        "v(out)": 2.082405005638224,
+        "i(vinm)": 0.8982960148463803,
+        "v(xu4.x_ti.n504417)": 1.630266617697286,
+        "v(xu4.x_ti.vicm)": 4.999999593914993
+      }
+    },
+    {
+      "case": "current_into_RS_L_smooth_01mV",
+      "width_V": 0.0001,
+      "returncode": 0,
+      "completed": true,
+      "rows": 54202,
+      "elapsed_s": 3.78426578300423,
+      "requested_duration_s": 0.0003408244084553806,
+      "actual_end_s": 0.00034082440845538056,
+      "errors": [],
+      "model_sha256": "6785cfe9b919ae55c5713e17e398ee419d721691508e2a877c683c76fee8e073",
+      "temporary_netlist_sha256": "8e568b5e4886785c27867280d13f72582d6f261170d6b0917388c3e8c51d1eca",
+      "last_values": {
+        "time": 0.00034082440845538056,
+        "v(inp)": 5.011228827862449,
+        "v(inm)": 4.988770362925002,
+        "v(vs)": 3.260531406210127,
+        "v(out)": 2.082398111309553,
+        "i(vinm)": 0.8982962514434973,
+        "v(xu4.x_ti.n504417)": 1.6302666180528158,
+        "v(xu4.x_ti.vicm)": 4.999999595393724
+      }
+    }
+  ],
+  "native_Multisim_performed": false,
+  "full_Buck_performed": false,
+  "limitations": "Different engine, DC-initialized internal state; voltage clamp removes input bias feedback, finite fixture restores only RS_L input impedance. V_CAP and VDDA are ideal recorded boundaries. Failure mechanism is localized, but native failure time/branch and whole-circuit success are not exactly reproduced."
+}

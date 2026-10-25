@@ -1,0 +1,172 @@
+{
+  "date": "2026-10-25",
+  "GRA_bytes": 109341593,
+  "GRA_sha256": "17c786993ea20496ce30202946718fe0181a02579cb25d9cf414b0c72af1f537",
+  "expanded_XML_bytes": 232724629,
+  "DCL_chunks": 259,
+  "page_title": "5R REL001 U4 boundary observation 25ms",
+  "traces": [
+    {
+      "name": "V(iout_raw)",
+      "points": 519429,
+      "bounds": {
+        "XMin": 0.0,
+        "XMax": 0.01644082440845538,
+        "YMin": 0.0199976226121316,
+        "YMax": 0.989366363979208
+      },
+      "last": 0.9891801329784127
+    },
+    {
+      "name": "V(vdda)",
+      "points": 519429,
+      "bounds": {
+        "XMin": 0.0,
+        "XMax": 0.01644082440845538,
+        "YMin": 3.259968451732342,
+        "YMax": 3.260532231446592
+      },
+      "last": 3.2605314062101267
+    },
+    {
+      "name": "V(vout)",
+      "points": 519429,
+      "bounds": {
+        "XMin": 0.0,
+        "XMax": 0.01644082440845538,
+        "YMin": -0.01988523183167638,
+        "YMax": 4.940283785975242
+      },
+      "last": 4.939265085432308
+    },
+    {
+      "name": "I(RS_OUT)",
+      "points": 519429,
+      "bounds": {
+        "XMin": 0.0,
+        "XMax": 0.01644082440845538,
+        "YMin": -0.00398975336238068,
+        "YMax": 0.9903097552843043
+      },
+      "last": 0.9901055498538547
+    },
+    {
+      "name": "V(16)",
+      "points": 519429,
+      "bounds": {
+        "XMin": 0.0,
+        "XMax": 0.01644082440845538,
+        "YMin": -4.868093718389253e-07,
+        "YMax": 3.267146619940123
+      },
+      "last": 3.267146619940123
+    },
+    {
+      "name": "V(17)",
+      "points": 519429,
+      "bounds": {
+        "XMin": 0.0,
+        "XMax": 0.01644082440845538,
+        "YMin": 3.3,
+        "YMax": 3.3
+      },
+      "last": 3.3
+    },
+    {
+      "name": "V(7)",
+      "points": 519429,
+      "bounds": {
+        "XMin": 0.0,
+        "XMax": 0.01644082440845538,
+        "YMin": 24.62455228467894,
+        "YMax": 24.88407874487471
+      },
+      "last": 24.628518450486354
+    },
+    {
+      "name": "V(g_h)",
+      "points": 519429,
+      "bounds": {
+        "XMin": 0.0,
+        "XMax": 0.01644082440845538,
+        "YMin": -0.7088513886340373,
+        "YMax": 36.03455972484458
+      },
+      "last": 25.506002664791872
+    },
+    {
+      "name": "V(g_l)",
+      "points": 519429,
+      "bounds": {
+        "XMin": 0.0,
+        "XMax": 0.01644082440845538,
+        "YMin": -1.993764541931721,
+        "YMax": 11.93382709088801
+      },
+      "last": 2.9136214620170366
+    },
+    {
+      "name": "V(sw)",
+      "points": 519429,
+      "bounds": {
+        "XMin": 0.0,
+        "XMax": 0.01644082440845538,
+        "YMin": -0.7101966229247795,
+        "YMax": 25.08535956309152
+      },
+      "last": 21.115216947042917
+    },
+    {
+      "name": "I(L1)",
+      "points": 519429,
+      "bounds": {
+        "XMin": 0.0,
+        "XMax": 0.01644082440845538,
+        "YMin": -0.01383997194570878,
+        "YMax": 1.112242895710324
+      },
+      "last": 0.8983809884642275
+    },
+    {
+      "name": "V(il_bi)",
+      "points": 519429,
+      "bounds": {
+        "XMin": 0.0,
+        "XMax": 0.01644082440845538,
+        "YMin": 1.62323046428075,
+        "YMax": 2.179424748595052
+      },
+      "last": 2.082397687242167
+    },
+    {
+      "name": "V(l_raw)",
+      "points": 519429,
+      "bounds": {
+        "XMin": 0.0,
+        "XMax": 0.01644082440845538,
+        "YMin": -0.02022003369007516,
+        "YMax": 5.016471198645108
+      },
+      "last": 5.011229637074999
+    },
+    {
+      "name": "V(v_cap)",
+      "points": 519429,
+      "bounds": {
+        "XMin": 0.0,
+        "XMax": 0.01644082440845538,
+        "YMin": -0.02008471949979542,
+        "YMax": 4.989799273739457
+      },
+      "last": 4.988770362925001
+    }
+  ],
+  "encoding": "little-endian binary64 hex attributes, verified against all 14 stored X/Y extrema",
+  "common_time_axis_exactly_equal": true,
+  "time_strictly_increasing": true,
+  "all_values_finite": true,
+  "all_offsets_zero_scales_one": true,
+  "last_time_s": 0.01644082440845538,
+  "matches_native_log_16_4408ms": true,
+  "native_25ms_completed": false
+}

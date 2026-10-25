@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-25",
+  "baseline": "downloads/GBUCK_STEP02_5R_REL001_U4_TRACE_25ms.ms14",
+  "baseline_sha256": "9ef162e70dc27a1b83470103f64f882214e532fb59ebed38b32beae89e03f15d",
+  "output": "downloads/GBUCK_STEP02_5R_IIB_SMOOTH01mV_25ms_DIAG.ms14",
+  "output_sha256": "b5f9a1702dc0ee71b957f9c4da890836d57f92f02e6175f89d61ed50395806d2",
+  "active_model": "INA240A1_TI_8PIN__TI_CURRENT_SENSE__1",
+  "affected_display_instances": [
+    "U2",
+    "U4"
+  ],
+  "smoothing_scale_V": 0.0001,
+  "only_behavioral_changes": "E1ACT common-mode 5V breakpoint in IIBP and IIBN: discontinuous SGN expression -> TANH(delta/0.0001); 65uA limiting value unchanged",
+  "metadata_edits": [
+    {
+      "scope": "component saved model metadata",
+      "display_ref": "U2",
+      "internal_ref": "U4"
+    },
+    {
+      "scope": "component saved model metadata",
+      "display_ref": "U4",
+      "internal_ref": "U5"
+    }
+  ],
+  "saved_model_copies_changed": 3,
+  "label_changes": "model header marks modified diagnostic, ChangedByUser=1 and plot title identifies diagnostic",
+  "U3_and_MOS_driver_controller_models_preserved": true,
+  "all_connections_parts_values_layout_solver_options_outputs_preserved": true,
+  "exact_inverse_XML_verified": true,
+  "two_DCL_decoders_verified": true,
+  "source_preserved": true,
+  "native_run_performed": false,
+  "native_25ms_convergence_verified": false,
+  "hardware_BOM_PCB_change": false,
+  "unchanged_vendor_model": false,
+  "limitation": "Simulation regularization hypothesis, not TI-qualified device behavior, firmware or hardware validation. Full native Buck and original Q2 switching issue remain to verify."
+}
