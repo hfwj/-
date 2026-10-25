@@ -1,0 +1,107 @@
+{
+  "date": "2026-10-25",
+  "source_sha256": "dba0c726f4cb5987a435c70498f6a4c77018a61f178fe01e0e988b338bbb0fe5",
+  "original_log_sha256": "4b1b35345c76e89722d99e356bb5aa7d2a71313fc92ae5433bb8a36a133ae176",
+  "actual_settings": {
+    "TSTOP": "0.1",
+    "TSTART": "0",
+    "TMAX": "5e-008",
+    "IC": "auto_ic"
+  },
+  "actual_options": {
+    "reltol": {
+      "enabled": true,
+      "value": "0.003"
+    },
+    "abstol": {
+      "enabled": true,
+      "value": "1e-008"
+    },
+    "vntol": {
+      "enabled": true,
+      "value": "0.0001"
+    },
+    "chgtol": {
+      "enabled": true,
+      "value": "1e-013"
+    },
+    "method": {
+      "enabled": false,
+      "value": "trapezoidal"
+    },
+    "itl4": {
+      "enabled": true,
+      "value": "100"
+    }
+  },
+  "actual_load_ohm": "5",
+  "controller_call": "XCTRL %t1 %t2 VOUT V_CAP 7 L_RAW GBUCK_CTRL_EQ",
+  "parts_changed_from_initial_STEP02_20ohm": [
+    "RL"
+  ],
+  "all_embedded_models_match_initial_STEP02": true,
+  "U2_model": "INA240A1_TI_8PIN__TI_CURRENT_SENSE__1",
+  "U2_display_ref": "U2",
+  "U2_internal_database_ref": "U4",
+  "branch_mapping": "native xu2 is displayed input-current INA240 U2; database internal_ref U4 is not the displayed U4",
+  "reported_branch_function": "INA240 input-side ideal DC offset source, -7.625uV; location is not a proven unique root cause",
+  "native_history": [
+    {
+      "header": "操作已执行   (2026年10月25日, 16:00:03)   ",
+      "TSTOP": [
+        "0.03"
+      ],
+      "failures": []
+    },
+    {
+      "header": "操作已执行   (2026年10月25日, 16:13:19)   ",
+      "TSTOP": [
+        "0.1   "
+      ],
+      "failures": []
+    },
+    {
+      "header": "操作已执行   (2026年10月25日, 16:54:34)   ",
+      "TSTOP": [
+        "0.1   "
+      ],
+      "failures": []
+    },
+    {
+      "header": "操作已执行   (2026年10月25日, 18:12:49)   ",
+      "TSTOP": [
+        "0.1   "
+      ],
+      "failures": [
+        {
+          "time_s": 0.0214605,
+          "attempted_step_s": 6.25e-18,
+          "branch": "v_v8:x_ti:xu2#branch"
+        }
+      ]
+    },
+    {
+      "header": "操作已执行   (2026年10月25日, 18:59:33)   ",
+      "TSTOP": [
+        "0.1   "
+      ],
+      "failures": [
+        {
+          "time_s": 0.0214605,
+          "attempted_step_s": 6.25e-18,
+          "branch": "v_v8:x_ti:xu2#branch"
+        }
+      ]
+    },
+    {
+      "header": "操作已执行   (2026年10月25日, 19:11:34)   ",
+      "TSTOP": [
+        "0.1   "
+      ],
+      "failures": []
+    }
+  ],
+  "last_history_entry_is_incomplete": true,
+  "F1_current_5ohm_status": "user explicitly confirmed not blown after this failure",
+  "native_5ohm_100ms_pass": false
+}

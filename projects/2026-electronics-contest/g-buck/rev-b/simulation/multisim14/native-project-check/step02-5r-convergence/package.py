@@ -1,0 +1,100 @@
+"""Package auditable candidates; do not label them as a verified solver fix."""
+from pathlib import Path
+import hashlib
+import json
+import zipfile
+
+ROOT = Path(__file__).resolve().parent
+PROJECT = ROOT.parents[3]
+
+
+def main():
+    audit = json.loads((ROOT / 'results/data/source_audit.json').read_text())
+    checks = json.loads((ROOT / 'results/data/build_checks.json').read_text())
+    report = f'''# STEP02 5Ω收敛排查：U2定位与ITL4诊断副本
+
+日期：2026-10-25。基线为本次上传的GBUCK_STEP02_U3_FEEDBACK_FIX.ms14及1.log。上传文件均按原字节归档；比较目标是当前5Ω故障工程，不覆盖此前20Ω/8Ω已运行基线。
+
+## 已查明的事实
+
+1. 当前保存工程为RL=5Ω、输入25V，TSTART=0、TSTOP=100ms、TMAX=50ns、自动初始条件；RELTOL=0.003、ABSTOL=1e-8、VNTOL=1e-4、CHGTOL=1e-13、ITL4=100。积分法仍为未启用自定义覆盖的trapezoidal，保持原设置。
+2. V3活动模板与元数据均已使用V_CAP/L_RAW反馈引用，没有再次退回数字3/2。
+3. 与最初STEP02交付版按显示位号比较元件、端口及参数，只有RL从20Ω变为5Ω；重新保存导致模型对象ID变化，但按模型名称比较的全部嵌入模型文本逐字相同。U2/U3/U4及去耦网络核对无新差异。
+4. 完整日志中18:12:49和18:59:33两次分析均在21.4605ms报同一错误，失败步长6.25e-18s。19:11:34最后一段只记录到启动/Gmin信息，没有完成或失败结尾，不能标为第三次已定位失败或成功。
+5. 用户本轮明确确认F1未熔断；当前终止有数值错误证据，不能继续沿用此前F1熔断作为本次中止结论。
+
+```text
+TRAN: Timestep too small; time = 0.0214605, timestep = 6.25e-018:
+trouble with node v_v8:x_ti:xu2#branch
+```
+
+完整日志中的xu2/xu3/xu4层级分别对应画布U2/U3/U4。U2调用INA240A1；其内部V_V8为INN到N409527的−7.625uV理想输入偏置电压源。注意原生数据库内部LocalName U4对应画布U2，不能把数据库ID/内部位号与画布U4混淆。该层级定位证实报错落在输入电流采样U2内部，不是U3的INA181；**报错支路仍只是收敛线索，不证明该源本身、该芯片型号或其输入接线是唯一根因**。
+
+V_SAW/V_SS的“no DC value, transient time 0 value used”是已有控制源初始化提示；Dynamic Gmin stepping completed说明该初始化步骤完成，不能仅由此推出后续瞬态不会失败。6.25e-18是求解器失败前尝试步长，不是应输入TMAX的数值。
+
+## 本轮交付：先验证迭代预算这一项假设
+
+现有日志不提供故障时每个Newton迭代的详细残差，因此尚未证明“ITL4不足”就是原因。先做可逆的迭代预算敏感性试验：保持精度门限和模型不变，将瞬态每点迭代上限ITL4从100提高到300。这增加求解迭代机会，不改变电流指令、保护门限，也不等同于提高精度或已修复。
+
+| 文件 | TSTOP | ITL4 | 用途 |
+|---|---:|---:|---|
+| GBUCK_STEP02_5R_ITL300_25ms_DIAG.ms14 | 25ms | 300 | 首先运行，检查能否跨过21.4605ms |
+| GBUCK_STEP02_5R_ITL300_100ms_DIAG.ms14 | 100ms | 300 | 仅在短时版完成后做长时对照 |
+
+25ms只是缩短诊断窗口，减少等待；短时版通过不等于100ms通过。100ms版与原回传相比只改变活动瞬态分析的ITL4，短时版另外仅改变该分析的TSTOP。其他分析的默认选项不变。旧分析标签/图示仪标题可能仍有100ms或20R文字，必须看实际分析参数及数据末时间，不根据旧标题判断完成。
+
+### 本机操作
+
+1. 下载25ms诊断版，在Multisim另开此文件，保留原故障工程。
+2. 核对分析参数TSTOP=0.025s、TMAX=5e-8s，分析选项ITL4=300。其他选项保持文件内数值。
+3. 完全停止旧仿真，再运行新文件。保留原四条曲线，不在运行时重接线路或修改元件。
+4. 若无错且数据达到25ms，回传完整波形与F1状态；之后用100ms同选项版做长时验证。
+5. 若仍失败，提供本次完整日志及实际末时间/分支名；尤其记录是否仍在21.4605ms同一支路。先不叠加更多参数变化，以便判别此项假设。
+
+是否越过故障点尚待本机验证；本环境没有Windows Multisim，也未以不同引擎的短启动结果替代这个故障点验证。本轮未重跑此前已知不能在执行预算内覆盖故障点的完整ngspice启动试验。
+
+## 已完成的文件验证
+
+- 原上传工程SHA256：`{audit['source_sha256']}`。
+- 原上传日志SHA256：`{audit['original_log_sha256']}`。
+- 对每个诊断版执行精确逆变换，恢复ITL4/TSTOP后整个解压XML与原件逐字节一致。
+- 两套独立DCL解码器验证重打包文件；所有元件、端口、数值和位置、模型文本、初始条件、容差、TMAX及所选输出保持。此为结构/保留范围验证，不是Windows打开/求解通过。
+- 25ms版SHA256：`{checks[0]['sha256']}`。
+- 100ms版SHA256：`{checks[1]['sha256']}`。
+
+详细校验见本目录results/data/source_audit.json及build_checks.json；原始完整日志位于results/logs/2026-10-25_native_history_original.log，原工程位于references/user-projects/2026-10-25_STEP02_5R_21ms失败_原回传.ms14。原件不修改。
+
+## 修改影响
+
+比较基线：本次5Ω/100ms原回传文件。
+
+- 原理图：连接/拓扑、引脚、全部元件值及布局均无修改，RL保持5Ω，F1保持2A，U2/U3/U4不重接。
+- 实物器件/BOM/PCB：无需新增、替换或改板，不修改额定值/封装。
+- 模型与控制：TI、MOS、驱动及V3控制文本完全保持；不改PI、采样比例、参考值、保护门限或实际固件。新比较器/锁存仍处于独立搭建阶段，未混入本次主图。
+- 求解：活动瞬态ITL4 100→300；短时版另将TSTOP 100→25ms。TMAX=50ns及其他精度/方法设置保持。这是诊断候选，不是已确认的修复，也不承诺F1或100ms后段结果。
+- 文档：仅更新状态/索引；旧20Ω/8Ω成功反馈与原5Ω失败记录保留。
+
+## 复现
+
+使用dclimplode、lxml及既有脚本依赖，运行build_diagnostics.py生成两个原生副本及校验JSON，再运行package.py生成报告/ZIP。无需Windows运行即可复现文件变更验证；求解效果必须由本机测试单独记录。
+'''
+    report_path = PROJECT / 'reports/Multisim14_STEP02_5R_U2定位与迭代上限诊断_2026-10-25.md'
+    report_path.write_text(report)
+    (ROOT / 'README.md').write_text('# STEP02 5Ω收敛诊断\n\n[完整报告](../../../../reports/' + report_path.name + ')\n\nU2内部支路在21.4605ms重复报错，F1本轮未熔断。先测试ITL4 100→300，短时25ms版用于检查越过故障点；尚未本机验证，不标已修复。原理图/器件/BOM/模型均保持。\n')
+    archive = PROJECT / 'downloads/Multisim14_STEP02_5R_ITL300_Diagnostics_2026-10-25.zip'
+    with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED) as z:
+        z.write(report_path, report_path.name)
+        for c in checks:
+            path = PROJECT / c['file']
+            assert hashlib.sha256(path.read_bytes()).hexdigest() == c['sha256']
+            z.write(path, path.name)
+        for path in (ROOT / 'results').rglob('*'):
+            if path.is_file():
+                z.write(path, str(path.relative_to(ROOT)))
+    with zipfile.ZipFile(archive) as z:
+        assert z.testzip() is None
+    print(archive)
+
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,32 @@
+[
+  {
+    "file": "downloads/GBUCK_STEP02_5R_ITL300_25ms_DIAG.ms14",
+    "sha256": "4521617971018318d8aafa30d27d0c451594f21bdc7ca24f7c81474fc6d12570",
+    "ITL4_before": 100,
+    "ITL4_after": 300,
+    "TSTOP_before_s": 0.1,
+    "TSTOP_after_s": 0.025,
+    "exact_inverse_XML_verified": true,
+    "both_DCL_decoders_verified": true,
+    "all_parts_connections_values_and_models_unchanged": true,
+    "TMAX_tolerances_method_initial_conditions_outputs_preserved": true,
+    "native_open_and_run_performed": false,
+    "cross_solver_run_performed": false,
+    "crossed_native_failure_time_verified": false
+  },
+  {
+    "file": "downloads/GBUCK_STEP02_5R_ITL300_100ms_DIAG.ms14",
+    "sha256": "25e2a6b53ff7010a00f61a7cf7ae7e1f1568c6d1fbf61ee1fa13667bb04def5a",
+    "ITL4_before": 100,
+    "ITL4_after": 300,
+    "TSTOP_before_s": 0.1,
+    "TSTOP_after_s": 0.1,
+    "exact_inverse_XML_verified": true,
+    "both_DCL_decoders_verified": true,
+    "all_parts_connections_values_and_models_unchanged": true,
+    "TMAX_tolerances_method_initial_conditions_outputs_preserved": true,
+    "native_open_and_run_performed": false,
+    "cross_solver_run_performed": false,
+    "crossed_native_failure_time_verified": false
+  }
+]

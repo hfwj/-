@@ -4,7 +4,9 @@
 
 ## 下载与阅读
 
-- [STEP02 25V/5Ω本机提前终止记录](reports/Multisim14_STEP02_U3_25V5Ω_21ms步长过小_2026-10-25.md)：用户确认已结束，日志在21.4605ms报Timestep too small，内部支路v_v8:x_ti:xu2#branch，失败步长6.25e-18s；未完成100ms，不标记通过。当前原生5Ω工程/完整日志及本轮F1状态待核对；仅归档失败，无原图/器件/模型修改。
+- [STEP02 5Ω：U2定位与迭代上限诊断](reports/Multisim14_STEP02_5R_U2定位与迭代上限诊断_2026-10-25.md) · [先运行25ms诊断版](downloads/GBUCK_STEP02_5R_ITL300_25ms_DIAG.ms14) · [诊断ZIP](downloads/Multisim14_STEP02_5R_ITL300_Diagnostics_2026-10-25.zip)：已读取当前工程与完整历史日志，反馈/接线/模型正确，U2输入采样INA240内部支路在21.4605ms重复报错，用户确认F1未熔断。仅ITL4 100→300；短时版另改为25ms，保留容差/模型/全部器件。结构校验完成，本机求解效果待验证，不称已修复。
+
+- [STEP02 25V/5Ω本机提前终止记录](reports/Multisim14_STEP02_U3_25V5Ω_21ms步长过小_2026-10-25.md)：用户确认已结束，日志在21.4605ms报Timestep too small，内部支路v_v8:x_ti:xu2#branch，失败步长6.25e-18s；未完成100ms，不标记通过。后续已取得工程与完整日志、确认本轮F1未熔断，详见上方U2定位诊断；原失败保留，无原图/器件/模型修改。
 
 - [STEP03逐芯片保护独立测试指引](simulation/multisim14/protection-discrete-test/README.md)：已核对本次上传PDF第5/6页，与仓库原文件逐字节相同；明确LM393开集输出汇合、74HC74锁存、74HC08使能及74HC14/BAT54上电复位。先核对本机LM393型号/模型，独立测试尚未执行，未接入当前主图；本次仅新增说明，无器件/BOM/模型或原生工程修改。
 
