@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-25",
+  "evidence": "uploaded log4 plus chat image, not raw numeric waveforms",
+  "native_method": "trapezoidal",
+  "ITL4": 300,
+  "TMAX_s": 5e-08,
+  "requested_end_s": 0.025,
+  "actual_end_s": 0.0227726,
+  "completed": false,
+  "reported_branch": "(md:xq2) d1:xq2",
+  "recording_channels_confirmed": [
+    "$16",
+    "$17",
+    "$7",
+    "$g_h",
+    "$g_l",
+    "$iout_raw",
+    "$sw",
+    "$vdda",
+    "$vout",
+    "@rrs_out[i]",
+    "ll1#branch"
+  ],
+  "failure_matches_prior_trapezoidal_ITL300": true,
+  "log_sha256": "6a9f31aed195dcc22f58013254666bc22f129b03a14e262061bb607fb5cb6566",
+  "image_x_range_ms_approx": [
+    17,
+    26
+  ],
+  "image_y_range_approx": [
+    4,
+    13
+  ],
+  "new_F1_status": "not separately confirmed this turn",
+  "next_action": "read existing saved data with X=22.74 to22.78ms and proper Y scales; no rerun needed for zoom",
+  "schematic_BOM_model_solver_change": "none"
+}

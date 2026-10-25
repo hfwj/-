@@ -1,0 +1,212 @@
+操作已执行   (2026年10月25日, 19:33:15)   
+|   分析：瞬态分析   
+|   |   图表标题：KIV20_CV25_20R 100ms 
+|   |   分析设置
+|   |   |   初始条件：自动生成初始条件 
+|   |   |   起始时间（TSTART）：0  
+|   |   |   停止时间（TSTOP）：0.025 
+|   |   |   正在绘制增量（TSTEP）：5e-008
+|   |   |   最大时间步长5e-008
+|   |   执行一致性检查   
+|   |   分析得出的变量   
+|   |   |   仿真结束时显示器件值  
+|   |   |   以增量方式绘制经保存的变量 
+|   |   |   |   $iout_raw 
+|   |   |   |   $vdda 
+|   |   |   |   $vout 
+|   |   |   |   @rrs_out[i]   
+|   |   表示为 SPICE 命令
+|   |   |   begin-scope page KIV20_CV25_20R 100ms 
+|   |   |   checknodes 3
+|   |   |   save $iout_raw $vdda $vout @rrs_out[i]  
+|   |   |   iplot $iout_raw $vdda $vout @rrs_out[i]   
+|   |   |   iplotExt $iout_raw[3 0] $vdda[3 0] $vout[3 0] @rrs_out[i][0 0]  
+|   |   |   DigitalThreshold 2.500000 2.500000  
+|   |   |   set reltol = 0.003  
+|   |   |   set abstol = 1e-008   
+|   |   |   set vntol = 0.0001  
+|   |   |   set trtol = 7 
+|   |   |   set chgtol = 1e-013   
+|   |   |   set itl4 = 300  
+|   |   |   set convlimit 
+|   |   |   set rshunt = 1e+012   
+|   |   |   set dynamicdc 
+|   |   |   set inertialdelay 
+|   |   |   set suposc  
+|   |   |   set rawfileformat = "Binary"
+|   |   |   -param hrange 0 0.025 
+|   |   |   tran  -env-options 5e-008 0.025000000000000001 0 5e-008 auto_ic   
+|   |   |   if-error end-scope audit-log-show 
+|   |   |   show all
+|   |   |   showmod all   
+|   |   |   write-and-destroy-iplot "C:\Users\admin\AppData\Local\Temp\NiCds\raw1085.tmp" 
+|   |   |   end-scope 
+|   |   结果已保存至文件：C:\Users\admin\AppData\Local\Temp\NiCds\raw1085.tmp
+|   |   自定义分析选项   
+|   |   |   相对错误容限: 0.003 
+|   |   |   绝对错误容限: 1e-008  
+|   |   |   电压错误容限: 0.0001  
+|   |   |   截断误差高估因数: 7   
+|   |   |   充电错误容限: 1e-013  
+|   |   |   瞬态迭代上限: 300   
+|   |   |   为码型启用收敛支持 
+|   |   |   模拟节点到地线的分流电阻: 1e+012
+|   |   |   动态直流步进  
+|   |   |   数字器件显示惯性延迟  
+|   |   |   Suppress numerical oscillations   
+|   |   |   Raw data file format: Binary
+|   来自分析的输出   
+|   |   v_saw:xctrl: no DC value, transient time 0 value used 
+|   |   v_ss:xctrl: no DC value, transient time 0 value used
+|   |   Starting dynamic Gmin stepping  
+|   |   Dynamic Gmin stepping completed   
+|   |   TRAN:  Timestep too small; time = 0.0227726, timestep = 6.25e-018:trouble with (md:xq2) d1:xq2  
+|   |   Error: doAnalyses: Timestep too small (Transient time point calculation did not converge) 
+|   |   
+|   |   
+|   |   tran simulation(s) canceled (Simulation canceled) 
+操作已执行   (2026年10月25日, 19:53:54)   
+|   分析：瞬态分析   
+|   |   图表标题：KIV20_CV25_20R 100ms 
+|   |   分析设置
+|   |   |   初始条件：自动生成初始条件 
+|   |   |   起始时间（TSTART）：0  
+|   |   |   停止时间（TSTOP）：0.025 
+|   |   |   正在绘制增量（TSTEP）：5e-008
+|   |   |   最大时间步长5e-008
+|   |   执行一致性检查   
+|   |   分析得出的变量   
+|   |   |   仿真结束时显示器件值  
+|   |   |   以增量方式绘制经保存的变量 
+|   |   |   |   $iout_raw 
+|   |   |   |   $vdda 
+|   |   |   |   $vout 
+|   |   |   |   @rrs_out[i]   
+|   |   表示为 SPICE 命令
+|   |   |   begin-scope page KIV20_CV25_20R 100ms 
+|   |   |   checknodes 3
+|   |   |   save $iout_raw $vdda $vout @rrs_out[i]  
+|   |   |   iplot $iout_raw $vdda $vout @rrs_out[i]   
+|   |   |   iplotExt $iout_raw[3 0] $vdda[3 0] $vout[3 0] @rrs_out[i][0 0]  
+|   |   |   DigitalThreshold 2.500000 2.500000  
+|   |   |   set reltol = 0.003  
+|   |   |   set abstol = 1e-008   
+|   |   |   set vntol = 0.0001  
+|   |   |   set trtol = 7 
+|   |   |   set chgtol = 1e-013   
+|   |   |   set itl4 = 300  
+|   |   |   set method = "gear"   
+|   |   |   set convlimit 
+|   |   |   set rshunt = 1e+012   
+|   |   |   set dynamicdc 
+|   |   |   set inertialdelay 
+|   |   |   set suposc  
+|   |   |   set rawfileformat = "Binary"
+|   |   |   -param hrange 0 0.025 
+|   |   |   tran  -env-options 5e-008 0.025000000000000001 0 5e-008 auto_ic   
+|   |   |   if-error end-scope audit-log-show 
+|   |   |   show all
+|   |   |   showmod all   
+|   |   |   write-and-destroy-iplot "C:\Users\admin\AppData\Local\Temp\NiCds\rawFDEE.tmp" 
+|   |   |   end-scope 
+|   |   结果已保存至文件：C:\Users\admin\AppData\Local\Temp\NiCds\rawFDEE.tmp
+|   |   自定义分析选项   
+|   |   |   相对错误容限: 0.003 
+|   |   |   绝对错误容限: 1e-008  
+|   |   |   电压错误容限: 0.0001  
+|   |   |   截断误差高估因数: 7   
+|   |   |   充电错误容限: 1e-013  
+|   |   |   瞬态迭代上限: 300   
+|   |   |   积分法: gear 
+|   |   |   为码型启用收敛支持 
+|   |   |   模拟节点到地线的分流电阻: 1e+012
+|   |   |   动态直流步进  
+|   |   |   数字器件显示惯性延迟  
+|   |   |   Suppress numerical oscillations   
+|   |   |   Raw data file format: Binary
+|   来自分析的输出   
+|   |   v_saw:xctrl: no DC value, transient time 0 value used 
+|   |   v_ss:xctrl: no DC value, transient time 0 value used
+|   |   Starting dynamic Gmin stepping  
+|   |   Dynamic Gmin stepping completed   
+|   |   TRAN:  Timestep too small; time = 0.0178381, timestep = 6.25e-018:trouble with node vfi1:xq2#branch   
+|   |   Error: doAnalyses: Timestep too small (Transient time point calculation did not converge) 
+|   |   
+|   |   
+|   |   tran simulation(s) canceled (Simulation canceled) 
+操作已执行   (2026年10月25日, 20:15:13)   
+|   分析：瞬态分析   
+|   |   图表标题：KIV20_CV25_20R 100ms 
+|   |   分析设置
+|   |   |   初始条件：自动生成初始条件 
+|   |   |   起始时间（TSTART）：0  
+|   |   |   停止时间（TSTOP）：0.025 
+|   |   |   正在绘制增量（TSTEP）：5e-008
+|   |   |   最大时间步长5e-008
+|   |   执行一致性检查   
+|   |   分析得出的变量   
+|   |   |   仿真结束时显示器件值  
+|   |   |   以增量方式绘制经保存的变量 
+|   |   |   |   $16   
+|   |   |   |   $17   
+|   |   |   |   $7  
+|   |   |   |   $g_h
+|   |   |   |   $g_l
+|   |   |   |   $iout_raw 
+|   |   |   |   $sw   
+|   |   |   |   $vdda 
+|   |   |   |   $vout 
+|   |   |   |   @rrs_out[i]   
+|   |   |   |   ll1#branch  
+|   |   表示为 SPICE 命令
+|   |   |   begin-scope page KIV20_CV25_20R 100ms 
+|   |   |   checknodes 3
+|   |   |   save $16 $17 $7 $g_h $g_l $iout_raw $sw $vdda $vout @rrs_out[i] ll1#branch  
+|   |   |   iplot $16 $17 $7 $g_h $g_l $iout_raw $sw $vdda $vout @rrs_out[i] ll1#branch   
+|   |   |   iplotExt $16[3 0] $17[3 0] $7[3 0] $g_h[3 0] $g_l[3 0] $iout_raw[3 0] $sw[3 0] $vdda[3 0] $vout[3 0] @rrs_out[i][0 0] ll1#branch[4 0] 
+|   |   |   DigitalThreshold 2.500000 2.500000  
+|   |   |   set reltol = 0.003  
+|   |   |   set abstol = 1e-008   
+|   |   |   set vntol = 0.0001  
+|   |   |   set trtol = 7 
+|   |   |   set chgtol = 1e-013   
+|   |   |   set itl4 = 300  
+|   |   |   set method = "trapezoidal"  
+|   |   |   set convlimit 
+|   |   |   set rshunt = 1e+012   
+|   |   |   set dynamicdc 
+|   |   |   set inertialdelay 
+|   |   |   set suposc  
+|   |   |   set rawfileformat = "Binary"
+|   |   |   -param hrange 0 0.025 
+|   |   |   tran  -env-options 5e-008 0.025000000000000001 0 5e-008 auto_ic   
+|   |   |   if-error end-scope audit-log-show 
+|   |   |   show all
+|   |   |   showmod all   
+|   |   |   write-and-destroy-iplot "C:\Users\admin\AppData\Local\Temp\NiCds\raw154A.tmp" 
+|   |   |   end-scope 
+|   |   结果已保存至文件：C:\Users\admin\AppData\Local\Temp\NiCds\raw154A.tmp
+|   |   自定义分析选项   
+|   |   |   相对错误容限: 0.003 
+|   |   |   绝对错误容限: 1e-008  
+|   |   |   电压错误容限: 0.0001  
+|   |   |   截断误差高估因数: 7   
+|   |   |   充电错误容限: 1e-013  
+|   |   |   瞬态迭代上限: 300   
+|   |   |   积分法: trapezoidal
+|   |   |   为码型启用收敛支持 
+|   |   |   模拟节点到地线的分流电阻: 1e+012
+|   |   |   动态直流步进  
+|   |   |   数字器件显示惯性延迟  
+|   |   |   Suppress numerical oscillations   
+|   |   |   Raw data file format: Binary
+|   来自分析的输出   
+|   |   v_saw:xctrl: no DC value, transient time 0 value used 
+|   |   v_ss:xctrl: no DC value, transient time 0 value used
+|   |   Starting dynamic Gmin stepping  
+|   |   Dynamic Gmin stepping completed   
+|   |   TRAN:  Timestep too small; time = 0.0227726, timestep = 6.25e-018:trouble with (md:xq2) d1:xq2  
+|   |   Error: doAnalyses: Timestep too small (Transient time point calculation did not converge) 
+|   |   
+|   |   
+|   |   tran simulation(s) canceled (Simulation canceled) 
