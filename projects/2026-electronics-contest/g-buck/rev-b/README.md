@@ -4,7 +4,9 @@
 
 ## 下载与阅读
 
-- [STEP02 5Ω：U2定位与迭代上限诊断](reports/Multisim14_STEP02_5R_U2定位与迭代上限诊断_2026-10-25.md) · [先运行25ms诊断版](downloads/GBUCK_STEP02_5R_ITL300_25ms_DIAG.ms14) · [诊断ZIP](downloads/Multisim14_STEP02_5R_ITL300_Diagnostics_2026-10-25.zip)：已读取当前工程与完整历史日志，反馈/接线/模型正确，U2输入采样INA240内部支路在21.4605ms重复报错，用户确认F1未熔断。仅ITL4 100→300；短时版另改为25ms，保留容差/模型/全部器件。结构校验完成，本机求解效果待验证，不称已修复。
+- [STEP02 5Ω：ITL300失败与Gear积分对照](reports/Multisim14_STEP02_5R_ITL300失败与Gear诊断_2026-10-25.md) · [Gear/25ms候选](downloads/GBUCK_STEP02_5R_GEAR_ITL300_25ms_DIAG.ms14) · [候选ZIP](downloads/Multisim14_STEP02_5R_Gear_Diagnostic_2026-10-25.zip)：本机ITL300在22.7726ms仍报步长过小，定位低侧Q2内部体二极管D1，F1未熔断，未完成25ms。下一候选相对该短时版仅启用Gear，其他参数/模型/器件均保持；结构校验完成，求解效果待本机验证。
+
+- [STEP02 5Ω：U2定位与迭代上限诊断](reports/Multisim14_STEP02_5R_U2定位与迭代上限诊断_2026-10-25.md) · [先运行25ms诊断版](downloads/GBUCK_STEP02_5R_ITL300_25ms_DIAG.ms14) · [诊断ZIP](downloads/Multisim14_STEP02_5R_ITL300_Diagnostics_2026-10-25.zip)：已读取当前工程与完整历史日志，反馈/接线/模型正确，U2输入采样INA240内部支路在21.4605ms重复报错，用户确认F1未熔断。仅ITL4 100→300；短时版另改为25ms，保留容差/模型/全部器件。结构校验完成；后续本机在22.7726ms仍失败，详见上方Gear对照记录，不称已修复。
 
 - [STEP02 25V/5Ω本机提前终止记录](reports/Multisim14_STEP02_U3_25V5Ω_21ms步长过小_2026-10-25.md)：用户确认已结束，日志在21.4605ms报Timestep too small，内部支路v_v8:x_ti:xu2#branch，失败步长6.25e-18s；未完成100ms，不标记通过。后续已取得工程与完整日志、确认本轮F1未熔断，详见上方U2定位诊断；原失败保留，无原图/器件/模型修改。
 

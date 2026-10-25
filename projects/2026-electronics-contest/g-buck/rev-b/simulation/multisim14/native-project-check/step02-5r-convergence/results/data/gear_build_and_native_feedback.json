@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-25",
+  "source_project": "downloads/GBUCK_STEP02_5R_ITL300_25ms_DIAG.ms14",
+  "source_sha256": "4521617971018318d8aafa30d27d0c451594f21bdc7ca24f7c81474fc6d12570",
+  "latest_native_log_sha256": "9d5e9d53568f9f58ee1061da829bc573abcd491b230099d748b9650702c75758",
+  "ITL300_native_completed_25ms": false,
+  "ITL300_native_end_s": 0.0227726,
+  "native_reported_branch": "(md:xq2) d1:xq2",
+  "branch_mapping": "D1 internal to low-side Q2 model; source-to-drain body diode, A=GND, K=SW",
+  "F1_in_ITL300_native_run": "user explicitly confirmed not blown",
+  "output": "downloads/GBUCK_STEP02_5R_GEAR_ITL300_25ms_DIAG.ms14",
+  "output_sha256": "85b4aca6e997253b5334a49b0161501faf2bd993f30134c903aa52beda535b43",
+  "only_active_analysis_method_changed": true,
+  "method_before": {
+    "enabled": false,
+    "value": "trapezoidal"
+  },
+  "method_after": {
+    "enabled": true,
+    "value": "gear"
+  },
+  "unchanged_options": {
+    "reltol": {
+      "enabled": true,
+      "value": "0.003"
+    },
+    "abstol": {
+      "enabled": true,
+      "value": "1e-008"
+    },
+    "vntol": {
+      "enabled": true,
+      "value": "0.0001"
+    },
+    "chgtol": {
+      "enabled": true,
+      "value": "1e-013"
+    },
+    "itl4": {
+      "enabled": true,
+      "value": "300"
+    }
+  },
+  "settings": {
+    "TSTOP": "0.025",
+    "TSTART": "0",
+    "TMAX": "5e-008",
+    "IC": "auto_ic"
+  },
+  "all_parts_models_controller_and_connections_preserved": true,
+  "exact_inverse_XML_verified": true,
+  "two_independent_DCL_decoders_verified": true,
+  "gear_native_open_or_run_performed": false,
+  "gear_convergence_verified": false,
+  "cross_solver_run_performed": false,
+  "root_cause": "unresolved; increasing iteration budget alone did not complete the requested run"
+}
