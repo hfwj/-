@@ -1,6 +1,8 @@
 # STEP02 5Ω收敛诊断
 
-[最新：U3补查与偏置平滑](../../../../reports/Multisim14_STEP02_U3共模补查与IIB平滑诊断_2026-10-26.md) · [30ms/8路U3新副本](../../../../downloads/GBUCK_STEP02_5R_U3_IIB_SMOOTH_30ms_8CH_DIAG.ms14)。100nA原生候选在20.1209ms报U3 INP_PSRR_OUT，F1未熔断，恢复10nA。旧24.9514ms GRA的U3共模此前漏列，补算约5V；原记录重放四项均完成，另行人工受控跨分界才复现同节点失败，两种ABSTOL均失败，平滑后完成。有序上电原/平滑响应相同。replay_u3_event.py保留全部九项及刺激区别；audit_abs100na_failure.py核对新日志；build_u3_iib_smooth.py同步U3两份模型并恢复10nA，原图/BOM/PCB、MOS/驱动/控制、既有U2/U4平滑保持。analyze_q2_20261026.py已补U3共模，原始六卷不变、不重传。原生30ms/100ms待验证。
+[最新：U3平滑30ms用户报告通过与100ms准备](../../../../reports/Multisim14_STEP02_U3平滑30ms通过与100ms验证准备_2026-10-26.md) · [100ms末10ms四路副本](../../../../downloads/GBUCK_STEP02_5R_U3_IIB_SMOOTH_100ms_4CH_LOWMEM.ms14)。用户明确回复“通过 F1未熔断”，关联刚交付的U3平滑30ms/8路文件；未附新结束日志/读数，不扩大为独立日志核验或100ms通过。build_u3_100ms_lowmem.py仅改TSTOP、报告起点、输出选择和标题，保留全部模型/求解/控制与元件；TSTART=.09是报告起点，前90ms仍积分。原图/器件值/BOM/PCB不改；全部三个采样实例仍是明确修改过的偏置模型。
+
+[此前：U3补查与偏置平滑](../../../../reports/Multisim14_STEP02_U3共模补查与IIB平滑诊断_2026-10-26.md) · [30ms/8路U3新副本](../../../../downloads/GBUCK_STEP02_5R_U3_IIB_SMOOTH_30ms_8CH_DIAG.ms14)。100nA原生候选在20.1209ms报U3 INP_PSRR_OUT，F1未熔断，恢复10nA。旧24.9514ms GRA的U3共模此前漏列，补算约5V；原记录重放四项均完成，另行人工受控跨分界才复现同节点失败，两种ABSTOL均失败，平滑后完成。有序上电原/平滑响应相同。replay_u3_event.py保留全部九项及刺激区别；audit_abs100na_failure.py核对新日志；build_u3_iib_smooth.py同步U3两份模型并恢复10nA，原图/BOM/PCB、MOS/驱动/控制、既有U2/U4平滑保持。analyze_q2_20261026.py已补U3共模，原始六卷不变、不重传。该轮生成时原生30ms/100ms待验证；后续30ms用户报告通过，见上方最新记录。
 
 [此前：六卷原GRA与ABSTOL对照](../../../../reports/Multisim14_STEP02_Q2原始波形重放与ABSTOL对照_2026-10-26.md) · [失败100nA历史副本](../../../../downloads/GBUCK_STEP02_5R_ABSTOL100nA_30ms_8CH_DIAG.ms14)。末点24.9514416ms，原生边沿有4.333V低栅压抬升。19项探索未精确复现本机；100nA原生试验后续失败且不保留，见最新U3补查。原数据、所有探索失败/超时与构建记录保留；原图、器件/BOM/PCB未改。
 
