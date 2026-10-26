@@ -1,6 +1,8 @@
 # STEP02 5Ω收敛诊断
 
-[最新：六卷原GRA与ABSTOL单项对照](../../../../reports/Multisim14_STEP02_Q2原始波形重放与ABSTOL对照_2026-10-26.md) · [30ms/8路副本](../../../../downloads/GBUCK_STEP02_5R_ABSTOL100nA_30ms_8CH_DIAG.ms14)。14路各815260点，末点24.9514416ms，末点低栅压近0、IL约.954A，边沿低栅压另有4.333V抬升。单管原模型也能完成，驱动压力夹具在更紧RELTOL或Gear下失败；ABSTOL10nA→100nA后该夹具完成，仍非本机精确复现或完整跨引擎通过。保留所有19项探索、失败/超时及再复核两项记录。新副本仅放宽ABSTOL，另用30ms/8路控制记录规模，其余模型/控制/求解参数及硬件保持；原生越过24.9514ms待验证。decode_gra.py增加--dataset q2-20261026；analyze_q2_20261026.py、replay_q2_event.py及build_abs100na_30ms.py分别用于分析、复现和构建。原六卷已归档，无需重发。
+[最新：U3补查与偏置平滑](../../../../reports/Multisim14_STEP02_U3共模补查与IIB平滑诊断_2026-10-26.md) · [30ms/8路U3新副本](../../../../downloads/GBUCK_STEP02_5R_U3_IIB_SMOOTH_30ms_8CH_DIAG.ms14)。100nA原生候选在20.1209ms报U3 INP_PSRR_OUT，F1未熔断，恢复10nA。旧24.9514ms GRA的U3共模此前漏列，补算约5V；原记录重放四项均完成，另行人工受控跨分界才复现同节点失败，两种ABSTOL均失败，平滑后完成。有序上电原/平滑响应相同。replay_u3_event.py保留全部九项及刺激区别；audit_abs100na_failure.py核对新日志；build_u3_iib_smooth.py同步U3两份模型并恢复10nA，原图/BOM/PCB、MOS/驱动/控制、既有U2/U4平滑保持。analyze_q2_20261026.py已补U3共模，原始六卷不变、不重传。原生30ms/100ms待验证。
+
+[此前：六卷原GRA与ABSTOL对照](../../../../reports/Multisim14_STEP02_Q2原始波形重放与ABSTOL对照_2026-10-26.md) · [失败100nA历史副本](../../../../downloads/GBUCK_STEP02_5R_ABSTOL100nA_30ms_8CH_DIAG.ms14)。末点24.9514416ms，原生边沿有4.333V低栅压抬升。19项探索未精确复现本机；100nA原生试验后续失败且不保留，见最新U3补查。原数据、所有探索失败/超时与构建记录保留；原图、器件/BOM/PCB未改。
 
 [此前：10月26日14路日志与Q2 VFI2](../../../../reports/Multisim14_STEP02_100ms日志核对与Q2_VFI2定位_2026-10-26.md)：本次实际TSTART=0、save14路，24.9514ms在Q2内部VFI2报步长过小，用户确认该轮F1未熔断。与LOWMEM四路/.09s配置不同，不将本次判为精简方案已运行失败。后续六卷原GRA已收到并分析，不再等待重传。audit_20261026.py复核日志与节点映射；该轮仅记录/文档，无原图/BOM/PCB、模型、控制、求解设置变化。
 

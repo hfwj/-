@@ -62,6 +62,11 @@
       "min": 0.022284686972458445,
       "max": 0.026987375756992726,
       "last": 0.023841437128341525
+    },
+    "U3_common_mode_V": {
+      "min": 5.000000000001753,
+      "max": 5.002790204636211,
+      "last": 5.000000000001753
     }
   },
   "last_four_SW_rise_low_gate_peaks": [
@@ -96,6 +101,6 @@
   ],
   "min_recorded_time_increment_s": 1.1921019726912618e-14,
   "F1_status": "user explicitly confirmed not blown with corresponding log",
-  "observation": "Final accepted point has Q2 external VGS near zero, high-side VGS about 10.2V, stable VDDA and IL about .954A. U4 common mode is above 5V, not at its old breakpoint.",
+  "observation": "Final accepted point has Q2 external VGS near zero, high-side VGS about 10.2V, stable VDDA and IL about .954A. U4 common mode is above 5V. Corrected analysis adds previously omitted U3 common mode, which is about 5V at this same native stop point.",
   "limitations": "No failed Newton iterations or native Q2 drain current. IL and F1 alone cannot exclude brief bridge cross-conduction. Last gate peaks are model/native numeric data, not hardware measurements."
 }

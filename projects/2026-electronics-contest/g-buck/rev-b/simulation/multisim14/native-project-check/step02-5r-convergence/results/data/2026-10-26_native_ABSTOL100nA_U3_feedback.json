@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-26",
+  "original_upload": "\u62a5\u95192.log",
+  "original_log_sha256": "51cd9530e1121f973060fc98c157f93ae0174b792a49aff809ceb2fa42fd0b10",
+  "events": [
+    {
+      "header": "\u64cd\u4f5c\u5df2\u6267\u884c   (2026\u5e7410\u670826\u65e5, 10:07:16)",
+      "solver_options": {
+        "reltol": "0.001",
+        "abstol": "1e-008",
+        "vntol": "0.0001",
+        "chgtol": "1e-013",
+        "itl4": "300",
+        "method": "trapezoidal"
+      },
+      "requested_end_s": 0.1,
+      "maxstep_s": 5e-08,
+      "actual_end_s": 0.0249514,
+      "failed_step_s": 6.25e-18,
+      "reported_location": "vfi2:xq2#branch",
+      "saved_variables": [
+        "$16",
+        "$17",
+        "$7",
+        "$g_h",
+        "$g_l",
+        "$il_bi",
+        "$iout_raw",
+        "$l_raw",
+        "$sw",
+        "$v_cap",
+        "$vdda",
+        "$vout",
+        "@rrs_out[i]",
+        "ll1#branch"
+      ],
+      "simulation_canceled": true
+    },
+    {
+      "header": "\u64cd\u4f5c\u5df2\u6267\u884c   (2026\u5e7410\u670826\u65e5, 13:06:44)",
+      "solver_options": {
+        "reltol": "0.001",
+        "abstol": "1e-007",
+        "vntol": "0.0001",
+        "chgtol": "1e-013",
+        "itl4": "300",
+        "method": "trapezoidal"
+      },
+      "requested_end_s": 0.03,
+      "maxstep_s": 5e-08,
+      "actual_end_s": 0.0201209,
+      "failed_step_s": 6.25e-18,
+      "reported_location": "$inp_psrr_out:x_ti:xu3",
+      "saved_variables": [
+        "$g_h",
+        "$g_l",
+        "$iout_raw",
+        "$sw",
+        "$vdda",
+        "$vout",
+        "@rrs_out[i]",
+        "ll1#branch"
+      ],
+      "simulation_canceled": true
+    }
+  ],
+  "latest_ABSTOL100nA_and_8_outputs_effective": true,
+  "native_30ms_completed": false,
+  "latest_F1_status": "user explicitly confirmed not blown",
+  "latest_node_mapping": "displayed U3 INA181, positive-input PSRR output feeding 25k input resistor; not U4 INA240 or Q2",
+  "tolerance_trial_disposition": "failed; restore original ABSTOL 10nA in next candidate",
+  "new_20_1209ms_waveforms_received": false,
+  "old_24_9514ms_native_data_reanalysis": "U3 common mode (V_CAP+VOUT)/2 is about 5V; prior analysis omitted this quantity while listing U4 common mode",
+  "old_data_do_not_prove_new_run_common_mode_or_native_absolute_failure_history": true,
+  "next_step": "test narrowly scoped U3 IIB smoothing supported by controlled same-node reproduction; retain existing U2/U4 smoothing and undo tolerance relaxation"
+}

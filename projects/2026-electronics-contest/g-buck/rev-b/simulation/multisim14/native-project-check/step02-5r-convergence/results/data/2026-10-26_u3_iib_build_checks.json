@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-26",
+  "baseline": "downloads/GBUCK_STEP02_5R_ABSTOL100nA_30ms_8CH_DIAG.ms14",
+  "baseline_sha256": "5343621f0425f998cedcc884bedfa1b7ca612f348f9facea936d3449f41d56a4",
+  "nominal_10nA_reference": "downloads/GBUCK_STEP02_5R_IIB_SMOOTH01mV_100ms_DIAG.ms14",
+  "output": "downloads/GBUCK_STEP02_5R_U3_IIB_SMOOTH_30ms_8CH_DIAG.ms14",
+  "output_sha256": "b559650ead189f4579c1f4fb468fc4451546fd86465192ff93706b909f49a71e",
+  "new_behavior_change": "U3 INA181 IIBP/IIBN E1ACT 5V SGN -> TANH(delta/0.0001), two saved model copies",
+  "rollback": "ABSTOL 100nA -> original 10nA; failed tolerance experiment is not retained",
+  "U3_IIB_60uA_limit_and_linear_450k_and_530k_terms_preserved": true,
+  "U3_other_core_equations_including_PSRR_preserved": true,
+  "existing_U2_U4_modified_IIB_models_preserved": true,
+  "MOS_driver_controller_and_other_active_models_preserved": true,
+  "all_components_ports_values_layout_outputs_times_preserved": true,
+  "settings": {
+    "TSTOP": "0.03",
+    "TSTART": "0",
+    "TMAX": "5e-008",
+    "IC": "auto_ic"
+  },
+  "outputs": [
+    "$g_h",
+    "$g_l",
+    "$iout_raw",
+    "$sw",
+    "$vdda",
+    "$vout",
+    "@rrs_out[i]",
+    "ll1#branch"
+  ],
+  "all_options_match_nominal_10nA_reference": true,
+  "exact_inverse_XML_verified": true,
+  "two_DCL_decoders_verified": true,
+  "hardware_BOM_PCB_change": false,
+  "unchanged_vendor_model": false,
+  "native_30ms_run_performed": false,
+  "native_100ms_verified": false,
+  "limitation": "Controlled model fixture reproduces the same U3 node failure class, not native 20.1209ms absolute history. 0.1mV smoothing is a diagnostic assumption; all three sense-chip instances now have explicitly modified bias models."
+}
