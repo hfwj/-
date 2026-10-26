@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-26",
+  "baseline": "downloads/GBUCK_STEP02_5R_U3_IIB_SMOOTH_100ms_4CH_LOWMEM.ms14",
+  "baseline_sha256": "cac9980ff779de62587da60faa3630f5cea8755100bcb3a6d51d12a9723ea58f",
+  "other_baselines_sha256": {
+    "GBUCK_STEP02_5R_U3_IIB_SMOOTH_100ms_4CH_LOWMEM.ms14": "cac9980ff779de62587da60faa3630f5cea8755100bcb3a6d51d12a9723ea58f",
+    "GBUCK_STEP02_5R_U3_IIB_SMOOTH_100ms_4CH_FINALPLOT.ms14": "bb5e5a09aa25b448573ae665544edaeed4dc9c56ceef1f22e0d85819b4256a6f",
+    "GBUCK_STEP02_5R_U3_IIB_SMOOTH_30ms_8CH_DIAG.ms14": "b559650ead189f4579c1f4fb468fc4451546fd86465192ff93706b909f49a71e"
+  },
+  "output": "downloads/GBUCK_STEP02_5R_U3_IIB_SMOOTH_100ms_4CH_FROM0.ms14",
+  "output_sha256": "d010499af7183f1ea7402896e862120afbf315e60671cdab9165eead1fbe25fa",
+  "changes_from_LOWMEM": [
+    "reporting TSTART .09 -> 0s",
+    "title"
+  ],
+  "changes_from_FINALPLOT": [
+    "reporting TSTART .09 -> 0s",
+    "IncrPlot 0 -> 1",
+    "title"
+  ],
+  "capture_mode_matches_user_reported_passing_30ms": "TSTART=0 and IncrPlot=1; 100ms/4ch remains new and unverified.",
+  "same_four_outputs": [
+    "$iout_raw",
+    "$vdda",
+    "$vout",
+    "@rrs_out[i]"
+  ],
+  "settings": {
+    "TSTOP": "0.1",
+    "TSTART": "0",
+    "TMAX": "5e-008",
+    "IC": "auto_ic"
+  },
+  "all_components_ports_values_layout_models_controller_preserved": true,
+  "all_solver_options_maxstep_tolerances_preserved": true,
+  "existing_modified_U2_U4_INA240_and_U3_INA181_bias_models_retained": true,
+  "all_three_original_unmodified_vendor_models": false,
+  "exact_inverse_XML_verified": true,
+  "two_DCL_decoders_verified": true,
+  "native_run_performed": false,
+  "native_100ms_pass_confirmed": false,
+  "previous_missing_results_or_unknown_name_fixed_confirmed": false,
+  "hardware_BOM_PCB_change": false,
+  "limitation": "The screenshot proves only that Postprocessor has no available result in that UI snapshot. Cause and elapsed integration remain unknown. This restores full-window capture; no memory or convergence success is guaranteed."
+}

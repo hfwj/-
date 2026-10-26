@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-26",
+  "timezone": "Asia/Shanghai",
+  "source": "User supplied inline Postprocessor screenshot in chat; no local image file provided.",
+  "observed_window": "后处理器",
+  "selected_tab": "表达式",
+  "result_tree_text": "无仿真结果",
+  "variable_list_empty": true,
+  "calculate_button_disabled": true,
+  "refresh_button_available": true,
+  "what_is_confirmed": "No available dataset in the visible Postprocessor snapshot.",
+  "what_is_not_confirmed": [
+    "whether Refresh has been clicked",
+    "whether the native transient run finished",
+    "actual last integration time",
+    "whether raw temporary files exist",
+    "new-run F1 state",
+    "100ms pass"
+  ],
+  "fresh_F1_status": null,
+  "next_steps": [
+    "Click Refresh once; if still empty, do not enter expressions against an empty list.",
+    "Use FROM0 live-plot copy to restore passing-30ms capture mode while keeping models and solver."
+  ],
+  "schematic_BOM_PCB_change": false,
+  "image_file_or_hash_invented": false
+}

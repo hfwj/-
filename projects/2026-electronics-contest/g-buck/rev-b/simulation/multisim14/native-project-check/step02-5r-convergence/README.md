@@ -1,6 +1,8 @@
 # STEP02 5Ω收敛诊断
 
-[最新：FINALPLOT日志状态核对](../../../../reports/Multisim14_STEP02_FINALPLOT日志状态核对_2026-10-26.md)。新日志确认不再生成iplot/iplotExt命令，并明确保存供以后处理；write-and-destroy-iplot写出命令名称不等于仍增量绘图。用户回复没图像生成，结束状态/F1尚未新确认，当前快照止于Gmin completed，无实际末时间轴，100ms不判通过。audit_u3_finalplot_status.py核对日志/选项/状态边界；仅归档及说明，无新工程、模型、控制、求解、原图或器件/BOM/PCB修改。
+[最新：后处理器无结果与从零记录对照](../../../../reports/Multisim14_STEP02_后处理器无结果与从零记录对照_2026-10-26.md) · [FROM0四路副本](../../../../downloads/GBUCK_STEP02_5R_U3_IIB_SMOOTH_100ms_4CH_FROM0.ms14)。截图当前无仿真结果/变量，不能照旧从空列表绘图；先刷新，仍为空则回到TSTART=0、IncrPlot=1，保留100ms四路及全部模型/控制/求解/电路。build_u3_100ms_from0.py与LOWMEM、FINALPLOT及30ms基线交叉比对；无原图/器件/BOM/PCB修改，原生100ms和数据问题效果待验证。
+
+[此前：FINALPLOT日志状态核对](../../../../reports/Multisim14_STEP02_FINALPLOT日志状态核对_2026-10-26.md)。新日志确认不再生成iplot/iplotExt命令，并明确保存供以后处理；write-and-destroy-iplot写出命令名称不等于仍增量绘图。用户回复没图像生成，结束状态/F1尚未新确认，当前快照止于Gmin completed，无实际末时间轴，100ms不判通过。audit_u3_finalplot_status.py核对日志/选项/状态边界；仅归档及说明，无新工程、模型、控制、求解、原图或器件/BOM/PCB修改。
 
 [此前：100ms变量名错误与非增量绘图对照](../../../../reports/Multisim14_STEP02_100ms输出变量名错误与非增量绘图对照_2026-10-26.md) · [FINALPLOT副本](../../../../downloads/GBUCK_STEP02_5R_U3_IIB_SMOOTH_100ms_4CH_FINALPLOT.ms14)。报错4.rar内两次16:10:31/16:21:58日志均采用新LOWMEM设置，末尾Unknown name: V(iout_raw)，无步长或内存错误记录，用户F1未熔断且两次无曲线。audit_u3_100ms_unknown_name.py保留分类界限；build_u3_100ms_finalplot.py仅改IncrPlot=0与标题，全部电路/模型/控制/求解/时间窗/四路保持。100ms及本对照效果未验证，不重传旧GRA。
 
