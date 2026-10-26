@@ -6,6 +6,8 @@
 
 - [嘉立创 EDA Rev B：120×90 mm 首轮布局](pcb/github-rework-120x90/README.md) · [原生工程](pcb/github-rework-120x90/native/G题同步Buck_RevB_120x90_布局草稿.eprj2) · [整包下载](downloads/嘉立创EDA_G题RevB_120x90_首轮布局_2026-10-25.zip)：从 GitHub 同步 Buck 工程新增独立 Rev B 板页；7 页原理图，96 器件/43 网络/264 连接端点与用户 PDF 一致。板框 120×90 mm、双层，器件布局草稿，未布线；客户端打开及原生 ERC/DRC 未执行。相对 GitHub 有电路/器件/PCB 改动，相对 PDF 未主动改拓扑与数值；机械封装待确认，原仿真/固件未改。
 
+- [STEP02 FINALPLOT：日志状态核对与保存结果查看](reports/Multisim14_STEP02_FINALPLOT日志状态核对_2026-10-26.md)：报错5.log确认非增量模式已生效，四路/90–100ms/10nA保持；当前快照无错误，末行仅Gmin completed，不能据此判100ms通过。用户确认“没图像生成”，尚未明确结束状态及本次F1。先在后处理器检查本次保存的数据集/实际时间轴，不继续叠加模型或求解改值；本轮仅归档说明，原图/器件/BOM/PCB/仿真工程均不改。
+
 - [STEP02 100ms：变量名错误与非增量绘图对照](reports/Multisim14_STEP02_100ms输出变量名错误与非增量绘图对照_2026-10-26.md) · [FINALPLOT四路工程](downloads/GBUCK_STEP02_5R_U3_IIB_SMOOTH_100ms_4CH_FINALPLOT.ms14)：新RAR两次日志均确认100ms/.09s/四路/10nA设置，末尾报Unknown name: V(iout_raw)，未记录步长/内存错误；用户确认F1未熔断、两次均无曲线，100ms不判通过。新副本只关闭增量绘图并改标题，保留全部模型、控制、求解和原图/器件/BOM/PCB；输出路径假设待本机确认，不称已修复。
 
 - [STEP02 U3平滑：30ms通过与100ms验证准备](reports/Multisim14_STEP02_U3平滑30ms通过与100ms验证准备_2026-10-26.md) · [100ms末10ms四路工程](downloads/GBUCK_STEP02_5R_U3_IIB_SMOOTH_100ms_4CH_LOWMEM.ms14)：用户明确反馈新U3平滑30ms副本通过、F1未熔断；本条反馈未附新日志/读数，100ms仍待验证。新副本保留三个采样实例的既有平滑模型、控制与全部求解选项，仅延长30→100ms、报告90–100ms、8→4路；原理图/器件值/BOM/PCB不改。离散保护继续独立夹具测试，尚未接入主图。

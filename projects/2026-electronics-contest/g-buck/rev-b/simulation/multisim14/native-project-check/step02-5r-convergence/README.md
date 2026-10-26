@@ -1,6 +1,8 @@
 # STEP02 5Ω收敛诊断
 
-[最新：100ms变量名错误与非增量绘图对照](../../../../reports/Multisim14_STEP02_100ms输出变量名错误与非增量绘图对照_2026-10-26.md) · [FINALPLOT副本](../../../../downloads/GBUCK_STEP02_5R_U3_IIB_SMOOTH_100ms_4CH_FINALPLOT.ms14)。报错4.rar内两次16:10:31/16:21:58日志均采用新LOWMEM设置，末尾Unknown name: V(iout_raw)，无步长或内存错误记录，用户F1未熔断且两次无曲线。audit_u3_100ms_unknown_name.py保留分类界限；build_u3_100ms_finalplot.py仅改IncrPlot=0与标题，全部电路/模型/控制/求解/时间窗/四路保持。100ms及本对照效果未验证，不重传旧GRA。
+[最新：FINALPLOT日志状态核对](../../../../reports/Multisim14_STEP02_FINALPLOT日志状态核对_2026-10-26.md)。新日志确认不再生成iplot/iplotExt命令，并明确保存供以后处理；write-and-destroy-iplot写出命令名称不等于仍增量绘图。用户回复没图像生成，结束状态/F1尚未新确认，当前快照止于Gmin completed，无实际末时间轴，100ms不判通过。audit_u3_finalplot_status.py核对日志/选项/状态边界；仅归档及说明，无新工程、模型、控制、求解、原图或器件/BOM/PCB修改。
+
+[此前：100ms变量名错误与非增量绘图对照](../../../../reports/Multisim14_STEP02_100ms输出变量名错误与非增量绘图对照_2026-10-26.md) · [FINALPLOT副本](../../../../downloads/GBUCK_STEP02_5R_U3_IIB_SMOOTH_100ms_4CH_FINALPLOT.ms14)。报错4.rar内两次16:10:31/16:21:58日志均采用新LOWMEM设置，末尾Unknown name: V(iout_raw)，无步长或内存错误记录，用户F1未熔断且两次无曲线。audit_u3_100ms_unknown_name.py保留分类界限；build_u3_100ms_finalplot.py仅改IncrPlot=0与标题，全部电路/模型/控制/求解/时间窗/四路保持。100ms及本对照效果未验证，不重传旧GRA。
 
 [此前：U3平滑30ms用户报告通过与100ms准备](../../../../reports/Multisim14_STEP02_U3平滑30ms通过与100ms验证准备_2026-10-26.md) · [100ms末10ms四路副本](../../../../downloads/GBUCK_STEP02_5R_U3_IIB_SMOOTH_100ms_4CH_LOWMEM.ms14)。用户明确回复“通过 F1未熔断”，关联刚交付的U3平滑30ms/8路文件；未附新结束日志/读数，不扩大为独立日志核验或100ms通过。build_u3_100ms_lowmem.py仅改TSTOP、报告起点、输出选择和标题，保留全部模型/求解/控制与元件；TSTART=.09是报告起点，前90ms仍积分。原图/器件值/BOM/PCB不改；全部三个采样实例仍是明确修改过的偏置模型。
 
