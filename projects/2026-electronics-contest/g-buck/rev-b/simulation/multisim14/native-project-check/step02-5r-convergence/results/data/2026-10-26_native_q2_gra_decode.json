@@ -1,0 +1,173 @@
+{
+  "date": "2026-10-26",
+  "GRA_bytes": 172278164,
+  "GRA_sha256": "0fe32054e971ead3daf71927c97674adc35a5e8321cdf009b1e702398e6fe980",
+  "expanded_XML_bytes": 365256265,
+  "DCL_chunks": 406,
+  "page_title": "5R IIB SMOOTH 0.1mV MODEL DIAGNOSTIC 100ms",
+  "traces": [
+    {
+      "name": "V(16)",
+      "points": 815260,
+      "bounds": {
+        "XMin": 0.0,
+        "XMax": 0.0249514416006794,
+        "YMin": -4.868093718389253e-07,
+        "YMax": 3.267146619940123
+      },
+      "last": 3.267146619940123
+    },
+    {
+      "name": "V(17)",
+      "points": 815260,
+      "bounds": {
+        "XMin": 0.0,
+        "XMax": 0.0249514416006794,
+        "YMin": 3.3,
+        "YMax": 3.3
+      },
+      "last": 3.3
+    },
+    {
+      "name": "V(7)",
+      "points": 815260,
+      "bounds": {
+        "XMin": 0.0,
+        "XMax": 0.0249514416006794,
+        "YMin": 24.62213191514602,
+        "YMax": 24.88407874487471
+      },
+      "last": 24.627263822077783
+    },
+    {
+      "name": "V(g_h)",
+      "points": 815260,
+      "bounds": {
+        "XMin": 0.0,
+        "XMax": 0.0249514416006794,
+        "YMin": -0.7088513886340373,
+        "YMax": 36.03695157122986
+      },
+      "last": 34.794604702167035
+    },
+    {
+      "name": "V(g_l)",
+      "points": 815260,
+      "bounds": {
+        "XMin": 0.0,
+        "XMax": 0.0249514416006794,
+        "YMin": -1.993764541931721,
+        "YMax": 11.93382948300753
+      },
+      "last": 3.299923294447407e-05
+    },
+    {
+      "name": "V(il_bi)",
+      "points": 815260,
+      "bounds": {
+        "XMin": 0.0,
+        "XMax": 0.0249514416006794,
+        "YMin": 1.62323046428075,
+        "YMax": 2.185003238527713
+      },
+      "last": 2.093303470021365
+    },
+    {
+      "name": "V(iout_raw)",
+      "points": 815260,
+      "bounds": {
+        "XMin": 0.0,
+        "XMax": 0.0249514416006794,
+        "YMin": 0.0199976226121316,
+        "YMax": 1.001815548929153
+      },
+      "last": 0.9964030010817663
+    },
+    {
+      "name": "V(l_raw)",
+      "points": 815260,
+      "bounds": {
+        "XMin": 0.0,
+        "XMax": 0.0249514416006794,
+        "YMin": -0.02022003369007516,
+        "YMax": 5.079334055972899
+      },
+      "last": 5.048774991510891
+    },
+    {
+      "name": "V(sw)",
+      "points": 815260,
+      "bounds": {
+        "XMin": 0.0,
+        "XMax": 0.0249514416006794,
+        "YMin": -0.7101966229247795,
+        "YMax": 25.08535956309152
+      },
+      "last": 24.591514444560865
+    },
+    {
+      "name": "V(v_cap)",
+      "points": 815260,
+      "bounds": {
+        "XMin": 0.0,
+        "XMax": 0.0249514416006794,
+        "YMin": -0.02008471949979542,
+        "YMax": 5.05232275210071
+      },
+      "last": 5.0249335543825495
+    },
+    {
+      "name": "V(vdda)",
+      "points": 815260,
+      "bounds": {
+        "XMin": 0.0,
+        "XMax": 0.0249514416006794,
+        "YMin": 3.259968451732342,
+        "YMax": 3.260532231446592
+      },
+      "last": 3.260531433713495
+    },
+    {
+      "name": "V(vout)",
+      "points": 815260,
+      "bounds": {
+        "XMin": 0.0,
+        "XMax": 0.0249514416006794,
+        "YMin": -0.01988523183167638,
+        "YMax": 5.002183849961537
+      },
+      "last": 4.975066445620957
+    },
+    {
+      "name": "I(RS_OUT)",
+      "points": 815260,
+      "bounds": {
+        "XMin": 0.0,
+        "XMax": 0.0249514416006794,
+        "YMin": -0.00398975336238068,
+        "YMax": 1.002778042783454
+      },
+      "last": 0.9973421752318501
+    },
+    {
+      "name": "I(L1)",
+      "points": 815260,
+      "bounds": {
+        "XMin": 0.0,
+        "XMax": 0.0249514416006794,
+        "YMin": -0.01383997194570878,
+        "YMax": 1.123666138401184
+      },
+      "last": 0.9537325826886957
+    }
+  ],
+  "encoding": "little-endian binary64 hex attributes, verified against all 14 stored X/Y extrema",
+  "common_time_axis_exactly_equal": true,
+  "time_strictly_increasing": true,
+  "all_values_finite": true,
+  "all_offsets_zero_scales_one": true,
+  "last_time_s": 0.024951441600679403,
+  "matches_native_log_end_time": true,
+  "requested_end_s": 0.1,
+  "native_requested_duration_completed": false
+}

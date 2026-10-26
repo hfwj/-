@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-26",
+  "baseline": "downloads/GBUCK_STEP02_5R_IIB_SMOOTH01mV_100ms_DIAG.ms14",
+  "baseline_sha256": "172f48ee2b398206004834a2b1b5a380aa9f2d8ac55c9398e16f4f68d1a6a99c",
+  "output": "downloads/GBUCK_STEP02_5R_ABSTOL100nA_30ms_8CH_DIAG.ms14",
+  "output_sha256": "5343621f0425f998cedcc884bedfa1b7ca612f348f9facea936d3449f41d56a4",
+  "only_solver_tolerance_change": "ABSTOL relaxed from 1e-8 A (10nA) to 1e-7 A (100nA)",
+  "other_changes": [
+    "TSTOP 100 ->30ms to test crossing 24.9514ms first",
+    "14 ->8 output selections",
+    "diagnostic title"
+  ],
+  "settings": {
+    "TSTOP": "0.03",
+    "TSTART": "0",
+    "TMAX": "5e-008",
+    "IC": "auto_ic"
+  },
+  "outputs": [
+    "$g_h",
+    "$g_l",
+    "$iout_raw",
+    "$sw",
+    "$vdda",
+    "$vout",
+    "@rrs_out[i]",
+    "ll1#branch"
+  ],
+  "removed_output_flags": [
+    {
+      "variable": "$16",
+      "before": 768,
+      "after": 0
+    },
+    {
+      "variable": "$17",
+      "before": 768,
+      "after": 0
+    },
+    {
+      "variable": "$7",
+      "before": 768,
+      "after": 0
+    },
+    {
+      "variable": "$il_bi",
+      "before": 768,
+      "after": 0
+    },
+    {
+      "variable": "$l_raw",
+      "before": 768,
+      "after": 0
+    },
+    {
+      "variable": "$v_cap",
+      "before": 768,
+      "after": 0
+    }
+  ],
+  "all_models_control_templates_components_ports_values_layout_preserved": true,
+  "RELTOL_method_ITL4_TMAX_other_options_preserved": true,
+  "existing_modified_INA240_IIB_model_for_U2_U4_retained": true,
+  "unchanged_vendor_models_for_all_devices": false,
+  "exact_inverse_XML_verified": true,
+  "two_DCL_decoders_verified": true,
+  "native_30ms_run_performed": false,
+  "native_crossed_24_9514ms_verified": false,
+  "native_100ms_completed": false,
+  "hardware_BOM_PCB_change": false,
+  "limitation": "A tolerance sensitivity test, not a verified fix or proof of full-circuit accuracy. Global convergence-current criterion changes, not just Q2. Original files remain."
+}

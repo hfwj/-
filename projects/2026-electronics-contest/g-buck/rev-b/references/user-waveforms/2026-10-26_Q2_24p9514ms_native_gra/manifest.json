@@ -1,0 +1,45 @@
+{
+  "volumes": [
+    {
+      "name": "GBUCK_STEP02_5R_IIB_SMOOTH01mV_100ms_DIAG.part1.rar",
+      "bytes": 26214400,
+      "sha256": "33120bb0b537e9769a4e6f5d1afb2ffefcc03cddc675b070a3edfa0b03eeda94"
+    },
+    {
+      "name": "GBUCK_STEP02_5R_IIB_SMOOTH01mV_100ms_DIAG.part2.rar",
+      "bytes": 26214400,
+      "sha256": "c916fd6cb6545590317da556526de0df5eaac4e382bcc765ba248d13022e0e0d"
+    },
+    {
+      "name": "GBUCK_STEP02_5R_IIB_SMOOTH01mV_100ms_DIAG.part3.rar",
+      "bytes": 26214400,
+      "sha256": "284744f10119080c00ca5531d2c776015b6aa509c5228a551ff37c25aad2090d"
+    },
+    {
+      "name": "GBUCK_STEP02_5R_IIB_SMOOTH01mV_100ms_DIAG.part4.rar",
+      "bytes": 26214400,
+      "sha256": "b00531412c3e0751d03f3189daf4341aabf891c93c5d2d44c576ded377a606fe"
+    },
+    {
+      "name": "GBUCK_STEP02_5R_IIB_SMOOTH01mV_100ms_DIAG.part5.rar",
+      "bytes": 26214400,
+      "sha256": "ac032057e2aaa864ad36532bd092151d313e4190ee6d0a6ee0fc5d2e29e68d87"
+    },
+    {
+      "name": "GBUCK_STEP02_5R_IIB_SMOOTH01mV_100ms_DIAG.part6.rar",
+      "bytes": 17676538,
+      "sha256": "82575ca94808652d8c8760a5884b7b1d2ee82124816def66624e45d8a9659437"
+    }
+  ],
+  "extracted_files": [
+    {
+      "original_name": "GBUCK_STEP02_5R_IIB_SMOOTH01mV_100ms_DIAG.gra",
+      "bytes": 172278164,
+      "sha256": "0fe32054e971ead3daf71927c97674adc35a5e8321cdf009b1e702398e6fe980"
+    }
+  ],
+  "total_volume_bytes": 148748538,
+  "date": "2026-10-26",
+  "extraction": "libarchive.so.13, ordered volumes 1..6, no reported errors",
+  "repository_storage": "original six volumes retained; expanded GRA/XML and complete NPZ stay in work area"
+}

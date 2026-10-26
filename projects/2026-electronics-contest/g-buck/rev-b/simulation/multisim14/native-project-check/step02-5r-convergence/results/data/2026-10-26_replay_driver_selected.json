@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-26",
+  "suite": "driver",
+  "source_project_sha256": "172f48ee2b398206004834a2b1b5a380aa9f2d8ac55c9398e16f4f68d1a6a99c",
+  "native_window_start_s": 0.024700000000000003,
+  "boundary_points": 8754,
+  "cases": [
+    {
+      "case": "driver_original_rel0001",
+      "suite": "driver",
+      "method": "trap",
+      "reltol": ".0001",
+      "abstol_A": "1e-8",
+      "maxstep_s": 5e-08,
+      "returncode": 1,
+      "rows": 52298,
+      "actual_end_s": 0.00013999933040259168,
+      "requested_duration_s": 0.00025144160067940013,
+      "completed": false,
+      "errors": [
+        "doAnalyses: TRAN:  Timestep too small; time = 0.000139999, timestep = 6.25e-20: trouble with node \"v.xq2.vfi1#branch\"",
+        "run simulation(s) aborted"
+      ],
+      "elapsed_s": 8.324185086999933,
+      "Q2_model_sha256": "54d5c51c55396e13f743a3c953bfe8239707a1467221ffb0694105010b7748b8",
+      "fixture_model_change": null,
+      "temporary_netlist_sha256": "368432fdf8f05454b4eb4535a1f4ea53f7b0a89ee35c125fafb20ef5cdbc97b6",
+      "native_Multisim_run": false,
+      "hardware_measurement": false,
+      "last_values": {
+        "time": 0.00013999933040259168,
+        "v(g)": 11.933827182303965,
+        "v(lo)": 11.945727581928086,
+        "v(sw)": -0.03250080925053629,
+        "i(vsw)": 0.9137828469119222,
+        "i(@m.xq2.m1[id])": -0.9137882758112711
+      }
+    },
+    {
+      "case": "driver_abs1e7_rel0001",
+      "suite": "driver",
+      "method": "trap",
+      "reltol": ".0001",
+      "abstol_A": "1e-7",
+      "maxstep_s": 5e-08,
+      "returncode": 0,
+      "rows": 94100,
+      "actual_end_s": 0.0002514416006794001,
+      "requested_duration_s": 0.00025144160067940013,
+      "completed": true,
+      "errors": [],
+      "elapsed_s": 13.702638955999646,
+      "Q2_model_sha256": "54d5c51c55396e13f743a3c953bfe8239707a1467221ffb0694105010b7748b8",
+      "fixture_model_change": null,
+      "temporary_netlist_sha256": "84e463569e59bca83440046a4c02d6893b6682b54c769a088b194eea8ea8ad01",
+      "native_Multisim_run": false,
+      "hardware_measurement": false,
+      "last_values": {
+        "time": 0.0002514416006794001,
+        "v(g)": 4.1908211620078156e-05,
+        "v(lo)": 2.9998124954077284e-05,
+        "v(sw)": 24.591514444560865,
+        "i(vsw)": -2.530354095142684e-05,
+        "i(@m.xq2.m1[id])": 2.459151446562187e-11
+      }
+    }
+  ],
+  "limitations": "Different engine and DC-initialized hidden state. Pin fixture clamps drain/gate; driver fixture uses actual low gate path but imposed SW and ideal 11.5V bootstrap, unloaded HO. Coupled export replaces F1 thermal model with 1mOhm and has initialization/compatibility differences. No fixture result establishes native 100ms success."
+}

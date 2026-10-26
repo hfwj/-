@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-26",
+  "source": "native GRA from six original RAR volumes",
+  "points_per_trace": 815260,
+  "last_time_s": 0.024951441600679403,
+  "requested_end_s": 0.1,
+  "native_100ms_completed": false,
+  "tail_start_s": 0.024851449281070172,
+  "tail_points": 3473,
+  "tail_100us": {
+    "high_VGS_V": {
+      "min": -0.03481956227202583,
+      "max": 11.44866148349659,
+      "last": 10.20309025760617
+    },
+    "low_VGS_V": {
+      "min": -1.982779012713968,
+      "max": 11.933827673574525,
+      "last": 3.299923294447407e-05
+    },
+    "SW_V": {
+      "min": -0.7067210263948014,
+      "max": 24.596415642517783,
+      "last": 24.591514444560865
+    },
+    "IL_A": {
+      "min": 0.8914625779331287,
+      "max": 1.079570134640209,
+      "last": 0.9537325826886957
+    },
+    "VDDA_V": {
+      "min": 3.2605313973683425,
+      "max": 3.2605314361950635,
+      "last": 3.260531433713495
+    },
+    "VOUT_V": {
+      "min": 4.975066445620957,
+      "max": 4.9778427370942,
+      "last": 4.975066445620957
+    },
+    "IOUT_A": {
+      "min": 0.9973421752318501,
+      "max": 0.9978987016804375,
+      "last": 0.9973421752318501
+    },
+    "IOUT_RAW_V": {
+      "min": 0.9964030010817663,
+      "max": 0.9969436693875909,
+      "last": 0.9964030010817663
+    },
+    "IL_BI_V": {
+      "min": 2.079727314364725,
+      "max": 2.162951122539512,
+      "last": 2.093303470021365
+    },
+    "U4_common_mode_V": {
+      "min": 5.036247083391143,
+      "max": 5.040914969005609,
+      "last": 5.03685427294672
+    },
+    "U4_differential_V": {
+      "min": 0.022284686972458445,
+      "max": 0.026987375756992726,
+      "last": 0.023841437128341525
+    }
+  },
+  "last_four_SW_rise_low_gate_peaks": [
+    {
+      "SW_12V_crossing_left_bracket_s": 0.024920776267132343,
+      "low_gate_peak_time_s": 0.024920780645954897,
+      "low_VGS_peak_V": 4.182717485020391,
+      "high_VGS_same_row_V": 5.257570227436167,
+      "IL_same_row_A": 0.8949177132446539
+    },
+    {
+      "SW_12V_crossing_left_bracket_s": 0.024930776313429857,
+      "low_gate_peak_time_s": 0.024930780692178623,
+      "low_VGS_peak_V": 4.182465130420528,
+      "high_VGS_same_row_V": 5.257218554849086,
+      "IL_same_row_A": 0.8933307037914495
+    },
+    {
+      "SW_12V_crossing_left_bracket_s": 0.024940798056978547,
+      "low_gate_peak_time_s": 0.024940803145675598,
+      "low_VGS_peak_V": 4.146189631808175,
+      "high_VGS_same_row_V": 5.223568907069263,
+      "IL_same_row_A": 0.8967855676791538
+    },
+    {
+      "SW_12V_crossing_left_bracket_s": 0.024950781258625352,
+      "low_gate_peak_time_s": 0.024950781258625352,
+      "low_VGS_peak_V": 4.333181251065364,
+      "high_VGS_same_row_V": 5.4099144884386625,
+      "IL_same_row_A": 0.8971629106061764
+    }
+  ],
+  "min_recorded_time_increment_s": 1.1921019726912618e-14,
+  "F1_status": "user explicitly confirmed not blown with corresponding log",
+  "observation": "Final accepted point has Q2 external VGS near zero, high-side VGS about 10.2V, stable VDDA and IL about .954A. U4 common mode is above 5V, not at its old breakpoint.",
+  "limitations": "No failed Newton iterations or native Q2 drain current. IL and F1 alone cannot exclude brief bridge cross-conduction. Last gate peaks are model/native numeric data, not hardware measurements."
+}

@@ -1,0 +1,250 @@
+
+Note: Compatibility modes selected: ps a
+
+
+Circuit: * finite ir2104 and low mos, ideal imposed sw boundary
+
+binary raw file "out.raw"
+Reducing trtol to 1 for xspice 'A' devices
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+No. of Data Columns : 6  
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+sw                                  -0.0328305
+inp                                    3.26715
+en                                         3.3
+vcc                                         12
+vb                                     11.4672
+xu1.md4_inv_1                          4.99998
+xu1.md5_inv_1                         1.25e-06
+xu1.md3_dly1_6                               5
+xu1.md3_dly1_10                              5
+xu1.md3_dly1_12                            2.5
+xu1.md3_dly1_8                        1.25e-06
+xu1.md3_dly1_3                        0.846647
+xu1.e_md3_dly1_turn_on_vth_int1        0.846647
+xu1.md3_dly1_5                         4.05188
+xu1.e_md3_dly1_turn_off_vth_int1         4.05188
+xu1.md2_inv5_3                               5
+xu1.md3_dly1_14                              5
+xu1.md3_dly1_4                     4.99995e-05
+xu1.md3_dly1_11                              5
+xu1.md3_dly1_13                        4.99999
+xu1.md3_dly1_7                               0
+xu1.x_md3_dly1_comp2.5                       0
+xu1.x_md3_dly1_comp2.e1_int1                 0
+xu1.x_md3_dly1_comp1.5                       5
+xu1.x_md3_dly1_comp1.e1_int1                 5
+xu1.md3_dly2_6                               0
+xu1.md3_dly2_10                              5
+xu1.md3_dly2_12                        4.99999
+xu1.md3_dly2_8                         4.99998
+xu1.md3_dly2_3                        0.846647
+xu1.e_md3_dly2_turn_on_vth_int1        0.846647
+xu1.md3_dly2_5                         4.05188
+xu1.e_md3_dly2_turn_off_vth_int1         4.05188
+xu1.md2_inv6_3                         1.5e-05
+xu1.md3_dly2_14                              5
+xu1.md3_dly2_4                         4.99995
+xu1.md3_dly2_11                              5
+xu1.md3_dly2_13                            2.5
+xu1.md3_dly2_7                               5
+xu1.x_md3_dly2_comp2.5                       5
+xu1.x_md3_dly2_comp2.e1_int1                 5
+xu1.x_md3_dly2_comp1.5                       0
+xu1.x_md3_dly2_comp1.e1_int1                 0
+ho                                     11.4619
+xu1.md4_ohs_4                          11.4672
+xu1.md4_ohs_5                          11.4619
+xu1.md4_inv_3                          1.5e-05
+xu1.md4_inv_2                                5
+lo                                 2.73017e-06
+xu1.md5_ols_4                      8.20217e-06
+xu1.md5_ols_5                      1.19739e-10
+xu1.md5_inv_3                                5
+xu1.md5_inv_2                                5
+xu1.md2_nand1_2                              5
+xu1.md2_inv5_1                     5.99993e-05
+xu1.md2_nand2_2                        1.5e-05
+xu1.md2_nand2_3                              5
+xu1.md1_inv2_3                               5
+xu1.md2_inv1_2                               5
+xu1.md2_nor1_1                         1.5e-05
+xu1.md1_inv3_3                         1.5e-05
+xu1.md2_inv2_2                               5
+xu1.md2_nor2_2                               5
+xu1.md2_rise2_6                              5
+xu1.md2_inv4_2                               5
+xu1.md2_nor1_3                               5
+xu1.md2_nor1_4                         4.99999
+xu1.md2_rise1_1                        4.99998
+xu1.md2_nor2_3                               5
+xu1.md2_nor2_4                             2.5
+xu1.md2_rise2_1                       1.25e-06
+xu1.md2_rise1_5                       0.319639
+xu1.e_md2_rise1_abm12_int1            0.319639
+xu1.md2_rise1_3                              5
+xu1.md2_inv3_1                               0
+xu1.md2_rise1_4                     9.9998e-05
+xu1.x_md2_rise1_comp.5                       0
+xu1.x_md2_rise1_comp.e1_int1                 0
+xu1.md2_rise2_5                       0.319639
+xu1.e_md2_rise2_abm12_int1            0.319639
+xu1.md2_rise2_3                              5
+xu1.md2_rise2_4                              5
+xu1.x_md2_rise2_comp.5                       5
+xu1.x_md2_rise2_comp.e1_int1                 5
+xu1.md2_inv3_2                               5
+xu1.md2_uvcc_4                         8.19309
+xu1.e_md2_uvcc_abm3_int1               8.19309
+xu1.md2_uvcc_3                         8.85152
+xu1.e_md2_uvcc_abm2_int1               8.85152
+xu1.md2_uvcc_2                         8.19309
+xu1.md2_nand2_1                              5
+xu1.e_md2_uvcc_opam_int1                     5
+xu1.md2_nand1_5                              5
+xu1.md2_nand1_4                    2.99996e-05
+xu1.md2_inv5_2                               5
+xu1.md2_inv6_2                               5
+xu1.md2_nand2_5                              5
+xu1.md2_nand2_4                              5
+xu1.md1_4                             -1.26715
+xu1.e_md1_abm21_int1                  -1.26715
+xu1.md1_5                            -0.827991
+xu1.e_md1_abm22_int1                 -0.827991
+xu1.md1_inv3_2                               5
+xu1.md1_nand2_3                              5
+xu1.md1_trigsd_6                             5
+xu1.md1_nand1_5                              5
+xu1.md1_inv2_1                     5.99993e-05
+xu1.md1_trigin_6                             5
+xu1.md1_nand1_4                    2.99996e-05
+xu1.md1_nand2_5                              5
+xu1.md1_inv1_3                         1.5e-05
+xu1.md1_nand2_4                        1.5e-07
+xu1.md1_inv1_2                               5
+xu1.x_md1_trigin_u14.5                       5
+xu1.x_md1_trigin_u14.e1_int1                 5
+xu1.md1_trigin_3                       0.79814
+xu1.md1_trigin_4                   1.42018e-07
+xu1.md1_trigin_7                            15
+xu1.e_md1_trigin_abm18_int1                 15
+xu1.md1_inv2_2                               5
+xu1.x_md1_trigsd_u14.5                       5
+xu1.x_md1_trigsd_u14.e1_int1                 5
+xu1.md1_trigsd_3                       0.79814
+xu1.md1_trigsd_4                   1.42018e-07
+xu1.md1_trigsd_7                            15
+xu1.e_md1_trigsd_abm18_int1                 15
+g                                  2.72745e-06
+xq2.9                               -0.0328305
+xq2.7                              2.72745e-06
+xq2.8                              -8.2624e-16
+xq2.4                                        0
+xq2.5                               -0.0328333
+xq2.10                              -0.0328333
+xq2.11                              -0.0328333
+xq2.6                               -0.0328333
+b.xu1.be_md1_trigsd_abm18#branch        -1.5e-11
+b.xu1.b.x_md1_trigsd_u14.be1#branch          -5e-12
+b.xu1.be_md1_trigin_abm18#branch        -1.5e-11
+b.xu1.b.x_md1_trigin_u14.be1#branch          -5e-12
+b.xu1.be_md1_abm22#branch          8.27991e-13
+b.xu1.be_md1_abm21#branch          1.26715e-12
+b.xu1.be_md2_uvcc_opam#branch           -5e-12
+b.xu1.be_md2_uvcc_abm2#branch     -8.85152e-12
+b.xu1.be_md2_uvcc_abm3#branch     -8.19309e-12
+b.xu1.b.x_md2_rise2_comp.be1#branch          -5e-12
+b.xu1.be_md2_rise2_abm12#branch    -3.19639e-13
+b.xu1.b.x_md2_rise1_comp.be1#branch               0
+b.xu1.be_md2_rise1_abm12#branch    -3.19639e-13
+b.xu1.b.x_md3_dly2_comp1.be1#branch               0
+b.xu1.b.x_md3_dly2_comp2.be1#branch          -5e-12
+b.xu1.be_md3_dly2_turn_off_vth#branch    -4.05188e-12
+b.xu1.be_md3_dly2_turn_on_vth#branch    -8.46647e-13
+b.xu1.b.x_md3_dly1_comp1.be1#branch          -5e-12
+b.xu1.b.x_md3_dly1_comp2.be1#branch               0
+b.xu1.be_md3_dly1_turn_off_vth#branch    -4.05188e-12
+b.xu1.be_md3_dly1_turn_on_vth#branch    -8.46647e-13
+v.xq2.vfi1#branch                  3.28333e-14
+v.xq2.vfi2#branch                 -3.28333e-14
+e.xq2.ev16#branch                  4.57858e-09
+e.xu1.e_md1_trigsd_abm18#branch    -1.42034e-07
+e.xu1.e.x_md1_trigsd_u14.e1#branch     -2.5035e-08
+e.xu1.e_md1_trigin_abm18#branch    -1.42034e-07
+e.xu1.e.x_md1_trigin_u14.e1#branch     -2.5035e-08
+e.xu1.e_md1_abm22#branch           8.27991e-13
+e.xu1.e_md1_abm21#branch           1.26715e-12
+e.xu1.e_md2_uvcc_opam#branch       -3.0035e-08
+e.xu1.e_md2_uvcc_abm2#branch      -6.58432e-07
+e.xu1.e_md2_uvcc_abm3#branch       6.58407e-07
+e.xu1.e.x_md2_rise2_comp.e1#branch      -1.002e-08
+e.xu1.e_md2_rise2_abm12#branch    -3.19639e-13
+e.xu1.e.x_md2_rise1_comp.e1#branch               0
+e.xu1.e_md2_rise1_abm12#branch    -3.19639e-13
+e.xu1.e.x_md3_dly2_comp1.e1#branch               0
+e.xu1.e.x_md3_dly2_comp2.e1#branch      -1.002e-08
+e.xu1.e_md3_dly2_turn_off_vth#branch    -4.05188e-12
+e.xu1.e_md3_dly2_turn_on_vth#branch    -8.46647e-13
+e.xu1.e.x_md3_dly1_comp1.e1#branch      -1.002e-08
+e.xu1.e.x_md3_dly1_comp2.e1#branch               0
+e.xu1.e_md3_dly1_turn_off_vth#branch    -4.05188e-12
+e.xu1.e_md3_dly1_turn_on_vth#branch    -8.46647e-13
+v.xu1.v_md1_inv2_v#branch           -7.003e-08
+v.xu1.v_md1_inv1_v#branch         -4.99999e-06
+v.xu1.v_md1_nand2_v#branch          -6.002e-08
+v.xu1.v_md1_nand1_v#branch        -9.99989e-06
+v.xu1.v_md1_inv3_v#branch         -4.99999e-06
+v.xu1.v_md2_nand2_v#branch         -6.0025e-08
+v.xu1.v_md2_inv6_v#branch         -4.99999e-06
+v.xu1.v_md2_inv5_v#branch           -6.002e-08
+v.xu1.v_md2_nand1_v#branch        -9.99989e-06
+v.xu1.v_md2_inv3_v#branch           -6.002e-08
+v.xu1.v_md2_rise2_v#branch        -5.00001e-06
+v.xu1.v_md2_rise1_v#branch        -4.99991e-06
+v.xu1.v_md2_nor2_v#branch         -2.50001e-06
+v.xu1.v_md2_nor1_v#branch           -1.001e-05
+v.xu1.v_md2_inv4_v#branch         -4.99999e-06
+v.xu1.v_md2_inv2_v#branch           -6.002e-08
+v.xu1.v_md2_inv1_v#branch         -4.99999e-06
+v.xu1.v_md5_inv_v#branch            -6.002e-08
+v.xu1.v_md4_inv_v#branch          -4.99999e-06
+v.xu1.v_md3_dly2_v2#branch        -2.50001e-06
+v.xu1.v_md3_dly2_v1#branch          -1.001e-05
+v.xu1.v_md3_dly2_v0#branch        -4.99996e-06
+v.xu1.v_md3_dly1_v2#branch          -1.002e-05
+v.xu1.v_md3_dly1_v1#branch        -2.50001e-06
+v.xu1.v_md3_dly1_v0#branch        -4.99996e-06
+vboot#branch                      -0.000138063
+vcc#branch                         -0.00012186
+ven#branch                            1.74e-06
+vin#branch                        -1.81914e-06
+vsw#branch                         3.72652e-08
+
+ Reference value :  2.50409e-06 Reference value :  9.99929e-06 Reference value :  1.07271e-05 Reference value :  1.26860e-05 Reference value :  1.99993e-05 Reference value :  2.07270e-05 Reference value :  2.25158e-05 Reference value :  2.99993e-05 Reference value :  3.07421e-05 Reference value :  3.28941e-05 Reference value :  3.99994e-05 Reference value :  4.12999e-05 Reference value :  4.29405e-05 Reference value :  4.99993e-05 Reference value :  5.08386e-05 Reference value :  5.25096e-05 Reference value :  5.88733e-05 Reference value :  6.07261e-05 Reference value :  6.23613e-05 Reference value :  6.39037e-05 Reference value :  7.05493e-05 Reference value :  7.23431e-05 Reference value :  7.30275e-05 Reference value :  7.99996e-05 Reference value :  8.11876e-05 Reference value :  8.29231e-05 Reference value :  8.99994e-05 Reference value :  9.07553e-05 Reference value :  9.30209e-05 Reference value :  9.99996e-05 Reference value :  1.01019e-04 Reference value :  1.02909e-04 Reference value :  1.09999e-04 Reference value :  1.10727e-04 Reference value :  1.12514e-04 Reference value :  1.16745e-04 Reference value :  1.20398e-04 Reference value :  1.22354e-04 Reference value :  1.23108e-04 Reference value :  1.30571e-04 Reference value :  1.32893e-04 Reference value :  1.39999e-04doAnalyses: TRAN:  Timestep too small; time = 0.000139999, timestep = 6.25e-20: trouble with node "v.xq2.vfi1#branch"
+
+
+run simulation(s) aborted
+
+No. of Data Rows : 52298
+
+Total analysis time (seconds) = 16.0169
+
+Total elapsed time (seconds) = 16.075 
+
+Total DRAM available = 9968.254 MB.
+DRAM currently available = 8311.523 MB.
+Maximum ngspice program size =   28.637 MB.
+Current ngspice program size =   13.176 MB.
+
+Shared ngspice pages =    4.812 MB.
+Text (code) pages =    6.543 MB.
+Stack = 0 bytes.
+Library pages =    8.949 MB.
+

@@ -2,6 +2,8 @@
 
 2026-10-26。用户上传“报错.log”，并明确确认本次F1未熔断。原日志已逐字节保存在[results/logs原件](../simulation/multisim14/native-project-check/step02-5r-convergence/results/logs/2026-10-26_native_14ch_Q2_VFI2_failure.log)。本次100ms未完成。
 
+后续数据已取得：六卷成功解压原生GRA，14路815260点，末点24.9514416ms与本日志一致；原生边界及19项局部/跨引擎探索已归档。新容差诊断只将ABSTOL放宽至100nA并缩短至30ms/8路，模型/控制/硬件不改，详见[新波形重放与ABSTOL对照](Multisim14_STEP02_Q2原始波形重放与ABSTOL对照_2026-10-26.md)。下文保留收到原GRA之前的定位依据，不再要求重发这批数据。
+
 ## 日志对应的设置与错误
 
 日志仅有一次运行，时间10:07:16，图表标题为`5R IIB SMOOTH 0.1mV MODEL DIAGNOSTIC 100ms`。

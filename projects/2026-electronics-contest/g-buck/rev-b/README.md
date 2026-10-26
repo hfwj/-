@@ -6,7 +6,9 @@
 
 - [嘉立创 EDA Rev B：120×90 mm 首轮布局](pcb/github-rework-120x90/README.md) · [原生工程](pcb/github-rework-120x90/native/G题同步Buck_RevB_120x90_布局草稿.eprj2) · [整包下载](downloads/嘉立创EDA_G题RevB_120x90_首轮布局_2026-10-25.zip)：从 GitHub 同步 Buck 工程新增独立 Rev B 板页；7 页原理图，96 器件/43 网络/264 连接端点与用户 PDF 一致。板框 120×90 mm、双层，器件布局草稿，未布线；客户端打开及原生 ERC/DRC 未执行。相对 GitHub 有电路/器件/PCB 改动，相对 PDF 未主动改拓扑与数值；机械封装待确认，原仿真/固件未改。
 
-- [STEP02 100ms日志核对与Q2 VFI2定位](reports/Multisim14_STEP02_100ms日志核对与Q2_VFI2定位_2026-10-26.md)：10月26日新日志实际为14路、TSTART=0，在24.9514ms报Q2内部VFI2支路步长过小，用户明确确认F1未熔断，100ms未完成。与此前LOWMEM的四路/.09s设置不同，不判为低内存方案已失败；本轮是收敛错误而非日志报告内存不足。先保留这次已记录的GRA，分析最新开关边界，不重跑或再改参数；无原图、器件/BOM/PCB、模型/控制/求解设置修改。
+- [STEP02 Q2：新原始波形与ABSTOL对照](reports/Multisim14_STEP02_Q2原始波形重放与ABSTOL对照_2026-10-26.md) · [30ms/8路容差诊断工程](downloads/GBUCK_STEP02_5R_ABSTOL100nA_30ms_8CH_DIAG.ms14)：六卷已解压，14路各815260点，末点24.9514416ms；IL约.954A、低VGS近0、U4共模5.0369V，边沿另有4.333V低栅压抬升。单管原参数也完成，未精确重现本机；驱动压力夹具收紧RELTOL/Gear失败，放宽ABSTOL至100nA后完成，完整跨引擎试验未完成。下一副本只将全局绝对电流容差10nA→100nA，另改30ms/8路以先检验越过24.9514ms；保留50ns/.001/梯形、所有现有模型/控制和硬件，无原图/BOM/PCB改动。原生效果待验证，不称已修复或100ms通过。
+
+- [STEP02 100ms日志核对与Q2 VFI2定位](reports/Multisim14_STEP02_100ms日志核对与Q2_VFI2定位_2026-10-26.md)：10月26日新日志实际为14路、TSTART=0，在24.9514ms报Q2内部VFI2支路步长过小，用户明确确认F1未熔断，100ms未完成。与此前LOWMEM的四路/.09s设置不同，不判为低内存方案已失败；本轮是收敛错误而非日志报告内存不足。后续六卷原GRA已取得并分析，详见上方新报告；该轮只记录/定位，无原图、器件/BOM/PCB、模型/控制/求解设置修改。
 
 - [STEP02 100ms：内存不足与精简记录](reports/Multisim14_STEP02_100ms内存不足与精简记录_2026-10-25.md) · [100ms低内存工程](downloads/GBUCK_STEP02_5R_IIB_SMOOTH01mV_100ms_LOWMEM.ms14)：本机明确报内存不足，未完成100ms；不能仅据弹窗推断重现旧收敛故障。新副本仅保存90–100ms的VOUT/I(RS_OUT)/IOUT_RAW/VDDA四路，仍从t=0积分至100ms，保留50ns、.001、ITL300及现有U2/U4平滑模型，无原图、器件/BOM/PCB或新模型变化。10月26日收到日志对应14路/TSTART=0并在24.9514ms失败，优先保留其GRA，不在本次开关诊断前重跑此末段方案；LOWMEM实际效果仍未验证。
 
