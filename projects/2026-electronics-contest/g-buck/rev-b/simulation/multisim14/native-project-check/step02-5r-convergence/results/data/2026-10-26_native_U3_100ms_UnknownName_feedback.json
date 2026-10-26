@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-26",
+  "timezone": "Asia/Shanghai",
+  "source": "simulation/multisim14/native-project-check/step02-5r-convergence/results/logs/2026-10-26_native_U3_100ms_UnknownName_history.log",
+  "source_bytes": 189848,
+  "source_sha256": "5b7f2ca6ef2344aff4dfb90e4f1d80388d75012d893c5fe3c0b6fa874404aca2",
+  "runs": [
+    {
+      "header": "操作已执行   (2026年10月26日, 16:10:31)",
+      "title": "5R U3 IIB SMOOTH 0.1mV ABSTOL10nA 100ms LOWMEM record90-100ms 4ch",
+      "save_variables": [
+        "$iout_raw",
+        "$vdda",
+        "$vout",
+        "@rrs_out[i]"
+      ],
+      "tran_arguments": [
+        "5e-008",
+        "0.10000000000000001",
+        "0.09",
+        "5e-008",
+        "auto_ic"
+      ],
+      "options": {
+        "reltol": "0.001",
+        "abstol": "1e-008",
+        "vntol": "0.0001",
+        "chgtol": "1e-013",
+        "itl4": "300",
+        "method": "trapezoidal"
+      },
+      "errors": [
+        "Unknown name: V(iout_raw)"
+      ],
+      "incremental_plot_enabled_in_log": true,
+      "result_file_reported_saved": true,
+      "show_all_device_and_model_tables_present": true,
+      "no_logged_timestep_cancellation_or_memory_error": true,
+      "exact_last_time_s": null,
+      "native_100ms_pass_confirmed": false
+    },
+    {
+      "header": "操作已执行   (2026年10月26日, 16:21:58)",
+      "title": "5R U3 IIB SMOOTH 0.1mV ABSTOL10nA 100ms LOWMEM record90-100ms 4ch",
+      "save_variables": [
+        "$iout_raw",
+        "$vdda",
+        "$vout",
+        "@rrs_out[i]"
+      ],
+      "tran_arguments": [
+        "5e-008",
+        "0.10000000000000001",
+        "0.09",
+        "5e-008",
+        "auto_ic"
+      ],
+      "options": {
+        "reltol": "0.001",
+        "abstol": "1e-008",
+        "vntol": "0.0001",
+        "chgtol": "1e-013",
+        "itl4": "300",
+        "method": "trapezoidal"
+      },
+      "errors": [
+        "Unknown name: V(iout_raw)"
+      ],
+      "incremental_plot_enabled_in_log": true,
+      "result_file_reported_saved": true,
+      "show_all_device_and_model_tables_present": true,
+      "no_logged_timestep_cancellation_or_memory_error": true,
+      "exact_last_time_s": null,
+      "native_100ms_pass_confirmed": false
+    }
+  ],
+  "F1_latest_user_report": "未熔断",
+  "fresh_numeric_waveform_received": false,
+  "user_followup_verbatim": "没有曲线",
+  "user_confirmed_no_90_to_100ms_curve_after_both_runs": true,
+  "classification": "Output name/result-processing error; no numerical convergence failure recorded in these runs.",
+  "causality_not_proven": "Log does not establish whether delayed reporting plus incremental plotting, alias mapping, or missing result data causes the unresolved name.",
+  "next_isolation": "Keep models, solver, names, time window and four outputs; disable incremental plotting only, plus diagnostic title.",
+  "native_100ms_pass_confirmed": false,
+  "hardware_BOM_PCB_change": false
+}

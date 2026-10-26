@@ -1,0 +1,13 @@
+{
+  "source": "报错4.rar",
+  "source_bytes": 15574,
+  "source_sha256": "e3e9df9bd9982daf4c8a05fa871b8de012ffed1524273986384f89bf9c5247d2",
+  "entries": [
+    {
+      "name": "报错4.log",
+      "bytes": 189848,
+      "sha256": "5b7f2ca6ef2344aff4dfb90e4f1d80388d75012d893c5fe3c0b6fa874404aca2"
+    }
+  ],
+  "extraction_method": "libarchive read API, regular-file and size checks, decoded log archived byte-for-byte"
+}

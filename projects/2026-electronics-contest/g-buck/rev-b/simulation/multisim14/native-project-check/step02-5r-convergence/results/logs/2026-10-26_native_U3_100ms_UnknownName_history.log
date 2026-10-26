@@ -1,0 +1,2678 @@
+操作已执行   (2026年10月26日, 16:10:31)   
+|   分析：瞬态分析   
+|   |   图表标题：5R U3 IIB SMOOTH 0.1mV ABSTOL10nA 100ms LOWMEM record90-100ms 4ch  
+|   |   分析设置
+|   |   |   初始条件：自动生成初始条件 
+|   |   |   起始时间（TSTART）：0.09 
+|   |   |   停止时间（TSTOP）：0.1   
+|   |   |   正在绘制增量（TSTEP）：5e-008
+|   |   |   最大时间步长5e-008
+|   |   执行一致性检查   
+|   |   分析得出的变量   
+|   |   |   仿真结束时显示器件值  
+|   |   |   以增量方式绘制经保存的变量 
+|   |   |   |   $iout_raw 
+|   |   |   |   $vdda 
+|   |   |   |   $vout 
+|   |   |   |   @rrs_out[i]   
+|   |   表示为 SPICE 命令
+|   |   |   begin-scope page 5R U3 IIB SMOOTH 0.1mV ABSTOL10nA 100ms LOWMEM record90-100ms 4ch  
+|   |   |   checknodes 3
+|   |   |   save $iout_raw $vdda $vout @rrs_out[i]  
+|   |   |   iplot $iout_raw $vdda $vout @rrs_out[i]   
+|   |   |   iplotExt $iout_raw[3 0] $vdda[3 0] $vout[3 0] @rrs_out[i][0 0]  
+|   |   |   DigitalThreshold 2.500000 2.500000  
+|   |   |   set reltol = 0.001  
+|   |   |   set abstol = 1e-008   
+|   |   |   set vntol = 0.0001  
+|   |   |   set trtol = 7 
+|   |   |   set chgtol = 1e-013   
+|   |   |   set itl4 = 300  
+|   |   |   set method = "trapezoidal"  
+|   |   |   set convlimit 
+|   |   |   set rshunt = 1e+012   
+|   |   |   set dynamicdc 
+|   |   |   set inertialdelay 
+|   |   |   set suposc  
+|   |   |   set rawfileformat = "Binary"
+|   |   |   -param hrange 0.09 0.1  
+|   |   |   tran  -env-options 5e-008 0.10000000000000001 0.09 5e-008 auto_ic 
+|   |   |   if-error end-scope audit-log-show 
+|   |   |   show all
+|   |   |   showmod all   
+|   |   |   write-and-destroy-iplot "C:\Users\admin\AppData\Local\Temp\NiCds\raw2E6F.tmp" 
+|   |   |   end-scope 
+|   |   结果已保存至文件：C:\Users\admin\AppData\Local\Temp\NiCds\raw2E6F.tmp
+|   |   自定义分析选项   
+|   |   |   相对错误容限: 0.001 
+|   |   |   绝对错误容限: 1e-008  
+|   |   |   电压错误容限: 0.0001  
+|   |   |   截断误差高估因数: 7   
+|   |   |   充电错误容限: 1e-013  
+|   |   |   瞬态迭代上限: 300   
+|   |   |   积分法: trapezoidal
+|   |   |   为码型启用收敛支持 
+|   |   |   模拟节点到地线的分流电阻: 1e+012
+|   |   |   动态直流步进  
+|   |   |   数字器件显示惯性延迟  
+|   |   |   Suppress numerical oscillations   
+|   |   |   Raw data file format: Binary
+|   来自分析的输出   
+|   |   v_saw:xctrl: no DC value, transient time 0 value used 
+|   |   v_ss:xctrl: no DC value, transient time 0 value used
+|   |   Starting dynamic Gmin stepping  
+|   |   Dynamic Gmin stepping completed   
+|   |    ASRC: Arbitrary Source 
+|   |    device      e1:x_md1_trigsd_u14:xu1 e1:x_md1_trigin_u14:xu1 e1:x_md2_rise2_comp:xu1 e1:x_md2_rise1_comp:xu1 e1:x_md3_dly2_comp1:xu1 e1:x_md3_dly2_comp2:xu1
+|   |              i   -2.5e-008  -2.41e-008  -9.12e-009     -1e-008   1.91e-005  -1.11e-034
+|   |              v           5           5           5           5           0           0
+|   |       pos_node       362       361       360       359       358       357
+|   |       neg_node         0         0         0         0         0         0
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      e1:x_md3_dly1_comp1:xu1 e1:x_md3_dly1_comp2:xu1 e_md1_trigsd_abm18:xu1 e_md1_trigin_abm18:xu1 e_md1_abm22:xu1 e_md1_abm21:xu1  
+|   |              i   1.66e-064     -1e-008  -1.42e-007  -1.42e-007   8.28e-013   1.27e-012
+|   |              v           0           5          15          15      -0.828       -1.27
+|   |       pos_node       356       355       354       350       336       335
+|   |       neg_node         0         0         0         0         0         0
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      e_md2_uvcc_opam:xu1 e_md2_uvcc_abm2:xu1 e_md2_uvcc_abm3:xu1 e_md2_rise2_abm12:xu1 e_md2_rise1_abm12:xu1 e_md3_dly2_turn_off_vth:xu1
+|   |              i     -3e-008  -6.58e-007   6.58e-007   -3.2e-013   -3.2e-013  -4.05e-012
+|   |              v           5        8.85        8.19        0.32        0.32        4.05
+|   |       pos_node       328       326       325       321       317       284
+|   |       neg_node         0         0         0         0         0         0
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      e_md3_dly2_turn_on_vth:xu1 e_md3_dly1_turn_off_vth:xu1 e_md3_dly1_turn_on_vth:xu1 e_pwm:xctrl g_ii:xctrl e_d:xctrl   
+|   |              i  -8.47e-013  -4.05e-012  -8.47e-013   -0.000329       -1.43  -2.33e-013
+|   |              v       0.847        4.05       0.847         3.3     -0.0318       0.233
+|   |       pos_node       283       272       271         5         6       262
+|   |       neg_node         0         0         0         6       263         6
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      e_ipi:xctrl g_iv:xctrl e_iref:xctrl e_vpi:xctrl e_il:xctrl eclamp:x_u34:x_ti:xu2 
+|   |              i  -2.33e-013        9.83     -1e-012  -1.09e-012   6.94e-005   2.61e-006
+|   |              v       0.233       0.912           1        1.09       0.959       -1.37
+|   |       pos_node       261         6       259       258       256       195
+|   |       neg_node         6       260         6         6         6       199
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      ehrneg:x_u34:x_ti:xu2 ehrpos:x_u34:x_ti:xu2 evout2neg:x_u34:x_ti:xu2 evout2pos:x_u34:x_ti:xu2 ev2:x_u34:x_ti:xu2 ev1:x_u34:x_ti:xu2
+|   |              i  -1.23e-015  -3.21e-012   5.13e-012  -8.79e-012   5.14e-012  -8.78e-012
+|   |              v       -1.63        1.58       -6.76        7.16       -6.77        7.15
+|   |       pos_node       247       246       245       244       243       242
+|   |       neg_node       199       199       199       199       199       199
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      e2:x_u34:x_ti:xu2 e1:x_u34:x_ti:xu2 evmid:x_u34:x_ti:xu2 em2:x_u34:x_ti:xu2 em1:x_u34:x_ti:xu2 evout1neg:x_u34:x_ti:xu2
+|   |              i     -4e-013  -3.06e-012  -1.63e-012    2.1e-009   3.83e-009  -1.23e-015
+|   |              v       -1.23        1.43           0   -2.1e+003  -3.83e+003       -1.63
+|   |       pos_node       241       240       239       238       237       236
+|   |       neg_node       199       199       199       199       199       199
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      evout1pos:x_u34:x_ti:xu2 er2:x_u34:x_ti:xu2 er1:x_u34:x_ti:xu2 gout:x_u17:x_ti:xu2 e1act:x_u17:x_ti:xu2 evcctest:x_u17:x_ti:xu2
+|   |              i  -3.21e-012    8.7e-011   6.09e-011    6.5e-005     -1e-012     -1e-012
+|   |              v        1.58       -88.7       -62.5          23           1           1
+|   |       pos_node       235       234       233        14       232       231
+|   |       neg_node       199       199       199       199         0         0
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      goutn:x_u20:x_ti:xu2 goutp:x_u20:x_ti:xu2 giq:x_u20:x_ti:xu2 e2:x_u13:x_ti:xu2 e1:x_u13:x_ti:xu2 g1:x_u13:x_ti:xu2   
+|   |              i  -2.61e-006           0      0.0018   1.56e-010  -2.91e-009  -8.08e-007
+|   |              v        1.63        1.63        3.26         0.1        3.16        1.37
+|   |       pos_node       199         1         1       228       227       199
+|   |       neg_node         0       199         0         0         0       226
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      eout:x_u5:x_ti:xu2 gout:x_u18:x_ti:xu2 e1act:x_u18:x_ti:xu2 evcctest:x_u18:x_ti:xu2 eout:x_u35:x_ti:xu2 evicmmin:x_u35:x_ti:xu2
+|   |              i  -2.46e-011    6.5e-005     -1e-012     -1e-012  -2.63e-012     -1e-012
+|   |              v          23          23           1           1           1           1
+|   |       pos_node       198        15       225       224       223       222
+|   |       neg_node       199       199         0         0       199         0
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      evicmmax:x_u35:x_ti:xu2 en4:x_u35:x_ti:xu2 en3:x_u35:x_ti:xu2 evccmin:x_u35:x_ti:xu2 evccmax:x_u35:x_ti:xu2 en2:x_u35:x_ti:xu2   
+|   |              i     -1e-012     -1e-012     -1e-012     -1e-012     -1e-012     -1e-012
+|   |              v           1           1           1           1           1           1
+|   |       pos_node       221       220       219       218       217       216
+|   |       neg_node         0         0         0         0         0         0
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      en1:x_u35:x_ti:xu2 emeter:x_u31:x_ti:xu2 eclamp:x_u34:x_ti:xu4 ehrneg:x_u34:x_ti:xu4 ehrpos:x_u34:x_ti:xu4 evout2neg:x_u34:x_ti:xu4
+|   |              i     -1e-012  -1.63e-012  -9.45e-007  -9.16e-016  -3.21e-012   5.14e-012
+|   |              v           1  -2.61e-006       0.484       -1.63        1.58       -6.77
+|   |       pos_node       215       214       129       181       180       179
+|   |       neg_node         0       199       133       133       133       133
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      evout2pos:x_u34:x_ti:xu4 ev2:x_u34:x_ti:xu4 ev1:x_u34:x_ti:xu4 e2:x_u34:x_ti:xu4 e1:x_u34:x_ti:xu4 evmid:x_u34:x_ti:xu4
+|   |              i  -8.78e-012   5.14e-012  -8.78e-012     -4e-013  -3.06e-012  -1.63e-012
+|   |              v        7.15       -6.77        7.15       -1.23        1.43           0
+|   |       pos_node       178       177       176       175       174       173
+|   |       neg_node       133       133       133       133       133       133
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      em2:x_u34:x_ti:xu4 em1:x_u34:x_ti:xu4 evout1neg:x_u34:x_ti:xu4 evout1pos:x_u34:x_ti:xu4 er2:x_u34:x_ti:xu4 er1:x_u34:x_ti:xu4  
+|   |              i    2.1e-009   3.83e-009  -9.16e-016  -3.21e-012    8.7e-011   6.09e-011
+|   |              v   -2.1e+003  -3.83e+003       -1.63        1.58       -88.7       -62.5
+|   |       pos_node       172       171       170       169       168       167
+|   |       neg_node       133       133       133       133       133       133
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      gout:x_u17:x_ti:xu4 e1act:x_u17:x_ti:xu4 evcctest:x_u17:x_ti:xu4 goutn:x_u20:x_ti:xu4 goutp:x_u20:x_ti:xu4 giq:x_u20:x_ti:xu4  
+|   |              i    6.5e-005     -1e-012     -1e-012           0   9.45e-007      0.0018
+|   |              v        3.41           1           1        1.63        1.63        3.26
+|   |       pos_node        18       166       165       133         1         1
+|   |       neg_node       133         0         0         0       133         0
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      e2:x_u13:x_ti:xu4 e1:x_u13:x_ti:xu4 g1:x_u13:x_ti:xu4 eout:x_u5:x_ti:xu4 gout:x_u18:x_ti:xu4 e1act:x_u18:x_ti:xu4  
+|   |              i   2.01e-009  -1.05e-009  -3.87e-006  -5.06e-012    6.5e-005     -1e-012
+|   |              v         0.1        3.16      -0.484        3.43        3.44           1
+|   |       pos_node       162       161       133       132        19       159
+|   |       neg_node         0         0       160       133       133         0
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      evcctest:x_u18:x_ti:xu4 eout:x_u35:x_ti:xu4 evicmmin:x_u35:x_ti:xu4 evicmmax:x_u35:x_ti:xu4 en4:x_u35:x_ti:xu4 en3:x_u35:x_ti:xu4  
+|   |              i     -1e-012  -2.63e-012     -1e-012     -1e-012     -1e-012     -1e-012
+|   |              v           1           1           1           1           1           1
+|   |       pos_node       158       157       156       155       154       153
+|   |       neg_node         0       133         0         0         0         0
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      evccmin:x_u35:x_ti:xu4 evccmax:x_u35:x_ti:xu4 en2:x_u35:x_ti:xu4 en1:x_u35:x_ti:xu4 emeter:x_u31:x_ti:xu4 e4:x_u41:x_ti:xu3
+|   |              i     -1e-012     -1e-012     -1e-012     -1e-012  -1.63e-012   1.84e-009
+|   |              v           1           1           1           1   9.45e-007         0.1
+|   |       pos_node       152       151       150       149       148       122
+|   |       neg_node         0         0         0         0       133         0
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      e3:x_u41:x_ti:xu3 e2:x_u41:x_ti:xu3 e1:x_u41:x_ti:xu3 e1out:x_u41:x_ti:xu3 g1n:x_u41:x_ti:xu3 g1p:x_u41:x_ti:xu3 
+|   |              i  -1.22e-009   1.22e-009  -1.85e-009     -1e-012  -5.97e-009  -5.97e-009
+|   |              v        3.16         0.1        3.16       -0.63       0.315       0.315
+|   |       pos_node       121       120       119        51       118        22
+|   |       neg_node         0         0         0        22        22       117
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      eout:x_u42:x_ti:xu3 goutn:x_u43:x_ti:xu3 goutp:x_u43:x_ti:xu3 esgniout:x_u43:x_ti:xu3 giq:x_u43:x_ti:xu3 eiq3_act:x_u43:x_ti:xu3 
+|   |              i      -0.001           0      1e-012     -1e-012    0.000313           0
+|   |              v           1        1.63        1.63           1        3.26           0
+|   |       pos_node        39        22         1       116         1       115
+|   |       neg_node        22         0        22         0         0         0
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      eiq2_act:x_u43:x_ti:xu3 eiq1_act:x_u43:x_ti:xu3 eiq3:x_u43:x_ti:xu3 eiq2:x_u43:x_ti:xu3 eiq1:x_u43:x_ti:xu3 ez3:x_u43:x_ti:xu3   
+|   |              i  -3.13e-016           0  -2.04e-016  -3.13e-016   -2.3e-016      1e-012
+|   |              v    0.000313           0    0.000204    0.000313     0.00023          -1
+|   |       pos_node       114       113       112       111       110       109
+|   |       neg_node         0         0         0         0         0         0
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      ez2:x_u43:x_ti:xu3 ez1:x_u43:x_ti:xu3 gout1:x_u17:x_ti:xu3 gout2:x_u17:x_ti:xu3 e1act:x_u17:x_ti:xu3 evcctest:x_u17:x_ti:xu3 
+|   |              i     -1e-012     -1e-012      6e-005   7.53e-006     -1e-012     -1e-012
+|   |              v           1           1        3.36        3.36           1           1
+|   |       pos_node       108       107        17        17       104       103
+|   |       neg_node         0         0        22        22         0         0
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      eout:x_u5:x_ti:xu3 gout1:x_u18:x_ti:xu3 gout2:x_u18:x_ti:xu3 e1act:x_u18:x_ti:xu3 evcctest:x_u18:x_ti:xu3 g1:xzo_src:x_u101:x_ti:xu3 
+|   |              i  -5.02e-012      6e-005   7.53e-006     -1e-012     -1e-012          11
+|   |              v        3.39        3.41        3.41           1           1         -11
+|   |       pos_node        31        18        18        81        80         0
+|   |       neg_node        22        22        22         0         0        69
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      emeter:x_u31:x_ti:xu3 eout:x_u39:x_ti:xu3 evicmmin:x_u39:x_ti:xu3 evicmmax:x_u39:x_ti:xu3 en4:x_u39:x_ti:xu3 en3:x_u39:x_ti:xu3
+|   |              i  -1.63e-012  -7.92e-012     -1e-012     -1e-012     -1e-012     -1e-012
+|   |              v      1e-012           1           1           1           1           1
+|   |       pos_node        68        26        62        61        60        59
+|   |       neg_node        22        22         0         0         0         0
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      evccmin:x_u39:x_ti:xu3 evccmax:x_u39:x_ti:xu3 en2:x_u39:x_ti:xu3 en1:x_u39:x_ti:xu3 eclamp:x_u40:x_ti:xu3 ehrneg:x_u40:x_ti:xu3
+|   |              i     -1e-012     -1e-012     -1e-012     -1e-012     -1e-012     -2e-014
+|   |              v           1           1           1           1       -0.63       -1.61
+|   |       pos_node        58        57        56        55        49        48
+|   |       neg_node         0         0         0         0        22        22
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      ehrpos:x_u40:x_ti:xu3 evout2neg:x_u40:x_ti:xu3 evout2pos:x_u40:x_ti:xu3 er2:x_u40:x_ti:xu3 ev2:x_u40:x_ti:xu3 evout1neg:x_u40:x_ti:xu3   
+|   |              i  -3.24e-012   5.23e-013  -3.78e-012  -1.09e-010  -3.78e-012     -2e-014
+|   |              v        1.61       -2.15        2.15         108        2.15       -1.61
+|   |       pos_node        47        46        45        44        43        42
+|   |       neg_node        22        22        22        22        22        22
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      evout1pos:x_u40:x_ti:xu3 er1:x_u40:x_ti:xu3
+|   |              i  -3.24e-012  -7.54e-011
+|   |              v        1.61        73.8
+|   |       pos_node        41        40
+|   |       neg_node        22        22
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      cap:xq1 cap:xq2 c1:x_md1_trigsd_u14:xu1 c1:x_md1_trigin_u14:xu1 c1:x_md2_rise2_comp:xu1 c1:x_md2_rise1_comp:xu1
+|   |    model                c           c           c           c           c           c   
+|   |              C   3.87e-009   3.87e-009      1e-011      1e-011      1e-011      1e-011
+|   |              i  -6.18e-026  -2.63e-006   1.07e-017  -4.43e-010  -4.43e-010  -1.23e-017
+|   |              p   1.08e-035  -3.08e-005   5.33e-017  -2.21e-009  -2.21e-009  -6.16e-017
+|   |         charge  -6.74e-019   4.53e-008      5e-011      5e-011      5e-011      5e-011
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      c1:x_md3_dly2_comp1:xu1 c1:x_md3_dly2_comp2:xu1 c1:x_md3_dly1_comp1:xu1 c1:x_md3_dly1_comp2:xu1 c_md1_trigsd_c:xu1 c_md1_inv2_c:xu1
+|   |    model                c           c           c           c           c           c   
+|   |              C      1e-011      1e-011      1e-011      1e-011      1e-011      1e-012
+|   |              i  -9.55e-006   5.55e-035  -8.28e-065  -1.23e-017  -1.07e-017  -1.07e-014
+|   |              p  -1.82e-010  -6.15e-069  -1.37e-128  -6.16e-017   5.33e-017   5.37e-014
+|   |         charge   1.91e-016  -1.11e-045   1.66e-075      5e-011     -5e-011     -5e-012
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      c_md1_trigin_c:xu1 c_md1_inv1_c:xu1 c_md1_inv3_c:xu1 c_md2_inv6_c:xu1 c_md2_inv5_c:xu1 c_md2_uvcc_c3:xu1 
+|   |    model                c           c           c           c           c           c   
+|   |              C      1e-011      1e-012      1e-012      1e-012      1e-012      1e-011
+|   |              i   4.43e-010   3.76e-013   3.75e-013   3.96e-013  -7.37e-024   -8.8e-018
+|   |              p  -2.21e-009  -5.64e-018  -5.63e-018  -5.94e-018   1.11e-028    4.4e-017
+|   |         charge     -5e-011   -1.5e-017   -1.5e-017   -1.5e-017   -1.5e-017     -5e-011
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      c_md2_uvcc_c2:xu1 c_md2_uvcc_c1:xu1 c_md2_inv3_c:xu1 c_md2_rise2_c0:xu1 c_md2_rise2_c1:xu1 c_md2_rise1_c0:xu1  
+|   |    model                c           c           c           c           c           c   
+|   |              C      1e-008      1e-008      1e-012      1e-008      1e-011      1e-008
+|   |              i     -3e-015   1.71e-015   7.45e-024   5.84e-008   4.43e-010       0.217
+|   |              p   1.98e-021  -1.13e-015  -1.12e-028  -2.92e-007  -2.21e-009      -0.942
+|   |         charge  -6.58e-015  -6.58e-009   -1.5e-017     -5e-008     -5e-011  -4.34e-008
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      c_md2_rise1_c1:xu1 c_md2_inv4_c:xu1 c_md2_inv2_c:xu1 c_md2_inv1_c:xu1 c_md2_c3:xu1 c_md2_c2:xu1
+|   |    model                c           c           c           c           c           c   
+|   |              C      1e-011      1e-012      1e-012      1e-012      1e-011      1e-011
+|   |              i   1.23e-017  -2.51e-011  -1.08e-014   3.75e-013    1.7e-014  -2.51e-010
+|   |              p  -6.16e-017   3.76e-016   5.38e-014  -5.63e-018  -8.52e-014   3.76e-015
+|   |         charge     -5e-011   -1.5e-017     -5e-012   -1.5e-017     -5e-011   -1.5e-016
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      c_md2_c4:xu1 c_md2_c1:xu1 c_md5_inv_c:xu1 c_md5_c1:xu1 c_md4_inv_c:xu1 c_md4_c1:xu1
+|   |    model                c           c           c           c           c           c   
+|   |              C      1e-011      1e-011      1e-012      1e-011      1e-012      1e-011
+|   |              i   -3.3e-017   8.81e-024  -1.29e-024   3.74e-013  -1.29e-018   1.77e-013
+|   |              p   1.65e-016  -1.32e-028   1.94e-029  -4.47e-012   6.43e-018  -2.84e-019
+|   |         charge     -5e-011   -1.5e-016   -1.5e-017  -1.19e-010     -5e-012  -1.61e-017
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      c_md3_dly2_c2:xu1 c_md3_dly2_c4:xu1 c_md3_dly2_c3:xu1 c_md3_dly2_c1:xu1 c_md3_dly2_c0:xu1 c_md3_dly1_c2:xu1
+|   |    model                c           c           c           c           c           c   
+|   |              C      1e-011      1e-011      1e-011      1e-011      1e-008      1e-011
+|   |              i  -5.55e-035  -2.28e-017  -4.84e-012   9.55e-006      -0.377   1.23e-017
+|   |              p  -6.15e-069   1.14e-016   2.42e-017  -1.82e-010       0.464  -6.16e-017
+|   |         charge   1.11e-045     -5e-011     -5e-017  -1.91e-016  -1.23e-008     -5e-011
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      c_md3_dly1_c4:xu1 c_md3_dly1_c3:xu1 c_md3_dly1_c1:xu1 c_md3_dly1_c0:xu1 c_md3_c2:xu1 c_md3_c1:xu1  
+|   |    model                c           c           c           c           c           c   
+|   |              C      1e-011      1e-011      1e-011      1e-008      1e-011      1e-011
+|   |              i  -7.44e-024  -1.44e-017   8.28e-065  -1.51e-014  -2.28e-017  -7.44e-024
+|   |              p    9.3e-030   7.22e-017  -1.37e-128   7.54e-014   1.14e-016    9.3e-030
+|   |         charge  -1.25e-017     -5e-011  -1.66e-075     -5e-008     -5e-011  -1.25e-017
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      c_ii:xctrl c_iv:xctrl c_il:xctrl c3:x_u32:x_ti:xu2 c2:x_u32:x_ti:xu2 c1:x_u32:x_ti:xu2   
+|   |    model                c           c           c           c           c           c   
+|   |              C           1           1      1e-008      1e-015      1e-015      1e-015
+|   |              i       -1.43        9.83  -6.94e-005           0  -5.72e-014  -5.72e-014
+|   |              p     -0.0454       -8.96  -7.14e-005           0  -8.91e-014  -8.91e-014
+|   |         charge      0.0318      -0.912   1.03e-008           0   1.56e-015   1.56e-015
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      c2:x_u33:x_ti:xu2 cg1d:x_u13:x_ti:xu2 cp4:x_u12:x_ti:xu2 cp3:x_u12:x_ti:xu2 cp2:x_u12:x_ti:xu2 cp1:x_u12:x_ti:xu2  
+|   |    model                c           c           c           c           c           c   
+|   |              C      1e-011   3.33e-010   1.59e-014   1.59e-014   1.59e-014   1.59e-011
+|   |              i   5.23e-014  -8.05e-007  -3.84e-011  -3.84e-011  -3.84e-011  -3.84e-008
+|   |              p    1.7e-013   1.11e-006   5.28e-011   5.28e-011   5.28e-011   5.28e-008
+|   |         charge   3.26e-011  -4.58e-010  -2.19e-014  -2.19e-014  -2.19e-014  -2.19e-011
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      c3:x_u32:x_ti:xu4 c2:x_u32:x_ti:xu4 c1:x_u32:x_ti:xu4 c2:x_u33:x_ti:xu4 cg1d:x_u13:x_ti:xu4 cp4:x_u12:x_ti:xu4   
+|   |    model                c           c           c           c           c           c   
+|   |              C      1e-015      1e-015      1e-015      1e-011   3.33e-010   1.59e-014
+|   |              i           0  -2.76e-013  -2.76e-013   5.23e-014  -3.87e-006  -1.85e-010
+|   |              p           0  -4.53e-013  -4.53e-013    1.7e-013  -1.87e-006  -8.94e-011
+|   |         charge           0   1.64e-015   1.64e-015   3.26e-011   1.61e-010   7.71e-015
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      cp3:x_u12:x_ti:xu4 cp2:x_u12:x_ti:xu4 cp1:x_u12:x_ti:xu4 cg1dn:x_u41:x_ti:xu3 cg1dp:x_u41:x_ti:xu3 c3:x_u37:x_ti:xu3 
+|   |    model                c           c           c           c           c           c   
+|   |              C   1.59e-014   1.59e-014   1.59e-011      8e-010      8e-010      1e-015
+|   |              i  -1.85e-010  -1.85e-010  -1.85e-007   5.22e-009  -5.22e-009           0
+|   |              p  -8.94e-011  -8.94e-011  -8.94e-008   1.64e-009   1.64e-009           0
+|   |         charge   7.71e-015   7.71e-015   7.71e-012   2.52e-010  -2.52e-010           0
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      c2:x_u37:x_ti:xu3 c1:x_u37:x_ti:xu3 c_c7:x_u100:x_ti:xu3 c_c4:x_u100:x_ti:xu3 c_c5:x_u100:x_ti:xu3 c_c6:x_u100:x_ti:xu3
+|   |    model                c           c           c           c           c           c   
+|   |              C      1e-015      1e-015      4e-008      2e-006      1e-007         796
+|   |              i  -8.39e-014  -8.39e-014  -1.43e-007    0.000211   3.24e-006   -0.000249
+|   |              p  -4.03e-013  -4.03e-013   3.44e-008    0.000484  -7.77e-007   5.92e-006
+|   |         charge    4.8e-015    4.8e-015  -9.59e-009   4.58e-006   -2.4e-008       -18.9
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      c1:x_u101:x_ti:xu3 c2:x_u101:x_ti:xu3 c1b:x_u101:x_ti:xu3 c1a:x_u101:x_ti:xu3 cp4:x_u12:x_ti:xu3 cp3:x_u12:x_ti:xu3
+|   |    model                c           c           c           c           c           c   
+|   |              C   5.31e-011   1.59e-013   5.31e-011   1.59e-008   1.59e-014   1.59e-014
+|   |              i   4.54e-009   2.25e-011   1.43e-007    3.2e-006  -2.05e-013  -2.05e-013
+|   |              p     -5e-008  -2.47e-010  -1.57e-006  -2.11e-005   1.29e-013   1.29e-013
+|   |         charge  -5.84e-010  -1.75e-012  -5.84e-010  -1.05e-007     -1e-014     -1e-014
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      cp2:x_u12:x_ti:xu3 cp1:x_u12:x_ti:xu3 c_c4:x_ti:xu3 c_c1:x_ti:xu3 c_c2:x_ti:xu3 c_c3:x_ti:xu3  
+|   |    model                c           c           c           c           c           c   
+|   |              C   1.59e-014   1.59e-011      3e-009           1           1           1
+|   |              i  -2.05e-013  -2.05e-010   1.39e-015   -0.000184    0.000363    0.000179
+|   |              p   1.29e-013   1.29e-010  -1.39e-015    0.000599     0.00118   7.56e-010
+|   |         charge     -1e-014     -1e-011     -3e-009       -3.26        3.26   4.22e-006
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      cc4 cc3 cc1 cc2 cc_boot cc5
+|   |    model                c           c           c           c           c           c   
+|   |              C      1e-005     0.00047     0.00047      1e-006      1e-006      1e-007
+|   |              i   -0.000881     -0.0414       0.254    0.000541    -0.00024    3.4e-013
+|   |              p    -0.00444      -0.209        6.26      0.0133     0.00278   4.08e-012
+|   |         charge   5.04e-005     0.00237      0.0116   2.46e-005  -1.16e-005    1.2e-006
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      cc6 cc_a1 cc_a2 cc_a3 cc_u2 cc_u4  
+|   |    model                c           c           c           c           c           c   
+|   |              C      1e-005      1e-006      1e-007      1e-005      1e-007      1e-007
+|   |              i   2.69e-011   5.23e-009   5.23e-010   5.23e-008   5.23e-010   5.23e-010
+|   |              p   3.23e-010    1.7e-008    1.7e-009    1.7e-007    1.7e-009    1.7e-009
+|   |         charge     0.00012   3.26e-006   3.26e-007   3.26e-005   3.26e-007   3.26e-007
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      cc_u3  
+|   |    model                c   
+|   |              C      1e-007
+|   |              i   5.23e-010
+|   |              p    1.7e-009
+|   |         charge   3.26e-007
+|   |   
+|   |    CCCS: Current controlled current source
+|   |    device      fi1:xq1 fi2:xq1 fi1:xq2 fi2:xq2
+|   |              i   2.47e-011   4.48e-008  -2.63e-006  -1.37e-009
+|   |              v       -24.7       -24.7          12          12
+|   |              p  -6.08e-010   -1.1e-006  -3.15e-005  -1.64e-008
+|   |   
+|   |    Diode: Junction Diode model
+|   |    device      d4:xq1 d3:xq1 d2:xq1 d1:xq1 d4:xq2 d3:xq2  
+|   |    model          md3:xq1     md2:xq1     md1:xq1      md:xq1     md3:xq2     md2:xq2   
+|   |             vd       -24.7       -24.7       -24.7       -24.7       0.264       0.264
+|   |             id  -1.25e-010  -1.25e-010   4.48e-008   4.89e-008        11.7        11.7
+|   |             gd      1e-012      1e-012       0.328        0.38   1.13e+003   1.13e+003
+|   |             cd           0           0   1.58e-010   1.83e-010           0           0
+|   |   
+|   |    Diode: Junction Diode model
+|   |    device      d2:xq2 d1:xq2 dgr:xd1 ddio:xd1 d_md4_d5:xu1 d_md4_d4:xu1 
+|   |    model          md1:xq2      md:xq2     grd:xd1    legd:xd1 diode625:xu diode625:xu   
+|   |             vd       0.264      0.0341        0.36        0.35       -11.5      0.0341
+|   |             id  -1.37e-009  -6.69e-007   5.95e-009       0.255  -1.16e-011   6.15e-014
+|   |             gd        4.72        1.69   2.58e-007        9.05      1e-012   2.45e-012
+|   |             cd   2.28e-009   8.17e-010           0   7.47e-010           0           0
+|   |   
+|   |    Diode: Junction Diode model
+|   |    device      d_md1_d3:xu1 d_md1_d1:xu1 d_md1_d2:xu1 d_md1_d4:xu1 d_md1_d5:xu1 d_md5_d1:xu1  
+|   |    model      diode25:xu1 diode25:xu1 diode25:xu1 diode25:xu1 diode25:xu1 diode25:xu1   
+|   |             vd         -12       -8.73       -3.27        -3.3        -8.7         -12
+|   |             id   -1.2e-011  -8.74e-012  -3.28e-012  -3.31e-012  -8.71e-012   -1.2e-011
+|   |             gd      1e-012      1e-012      1e-012      1e-012      1e-012      1e-012
+|   |             cd           0           0           0           0           0           0
+|   |   
+|   |    Diode: Junction Diode model
+|   |    device      d_md5_d2:xu1 d_md5_d3:xu1 d_md4_d2:xu1 d_md4_d1:xu1 d_md4_d3:xu1 d2:x_u32:x_ti:xu2   
+|   |    model      diode25:xu1 diode25:xu1 diode25:xu1 diode25:xu1 diode25:xu1 dvn:x_u32:x   
+|   |             vd       -11.9     -0.0543  -1.61e-006       -11.6       -11.6       0.834
+|   |             id   -1.2e-011   -6.3e-014  -2.23e-018  -1.16e-011  -1.16e-011        0.01
+|   |             gd      1e-012   1.05e-012   1.39e-012      1e-012      1e-012       0.387
+|   |             cd           0           0           0           0           0           0
+|   |   
+|   |    Diode: Junction Diode model
+|   |    device      d1:x_u32:x_ti:xu2 d2:x_u32:x_ti:xu4 d1:x_u32:x_ti:xu4 d2:x_u37:x_ti:xu3 d1:x_u37:x_ti:xu3 d_d1:x_ti:xu3
+|   |    model      dvn:x_u32:x dvn:x_u32:x dvn:x_u32:x dvn:x_u37:x dvn:x_u37:x dideal:x_ti   
+|   |             vd       0.834       0.834       0.834       0.834       0.834  -2.63e-009
+|   |             id        0.01        0.01        0.01        0.01        0.01  -3.65e-021
+|   |             gd       0.387       0.387       0.387       0.387       0.387   1.39e-012
+|   |             cd           0           0           0           0           0           0
+|   |   
+|   |    Diode: Junction Diode model
+|   |    device      dd_boot
+|   |    model      uf4007/vsh_   
+|   |             vd       0.452
+|   |             id    0.000263
+|   |             gd        1.08
+|   |             cd   5.18e-010
+|   |   
+|   |    Inductor: Inductors
+|   |    device      l1:x_u33:x_ti:xu2 l_l1:x_ti:xu2 l1:x_u33:x_ti:xu4 l_l1:x_ti:xu4 l1:x_u36:x_ti:xu3 l1:x_u38:x_ti:xu3
+|   |    model                l           l           l           l           l           l   
+|   |              L    0.000531      0.0004    0.000531      0.0004   4.74e-006    0.000122
+|   |           flux   1.73e-009    2.3e-009   1.73e-009   3.43e-010   2.27e-010   2.24e-009
+|   |              v   2.77e-012   4.81e-008   2.77e-012  -3.78e-008  -5.86e-009    3.6e-012
+|   |              i   3.26e-006   5.75e-006   3.26e-006   8.57e-007   4.79e-005   1.83e-005
+|   |              p   9.04e-018   2.77e-013   9.04e-018  -3.24e-014  -2.81e-013    6.6e-017
+|   |   
+|   |    Inductor: Inductors
+|   |    device      ll1
+|   |    model                l   
+|   |              L     0.00022
+|   |           flux    0.000211
+|   |              v        -5.1
+|   |              i       0.959
+|   |              p       -4.89
+|   |   
+|   |    Isource: Independent current source
+|   |    device      i2:x_u32:x_ti:xu2 i1:x_u32:x_ti:xu2 i2:x_u32:x_ti:xu4 i1:x_u32:x_ti:xu4 i2:x_u37:x_ti:xu3 i1:x_u37:x_ti:xu3
+|   |             dc        0.01        0.01        0.01        0.01        0.01        0.01
+|   |          acmag           0           0           0           0           0           0
+|   |              v      -0.834      -0.834      -0.834      -0.834      -0.834      -0.834
+|   |              p    -0.00834    -0.00834    -0.00834    -0.00834    -0.00834    -0.00834
+|   |              i        0.01        0.01        0.01        0.01        0.01        0.01
+|   |   
+|   |    Mos1: Level 1 MOSfet model with Meyer capacitance model
+|   |    device      m1:xq1 m1:xq2  
+|   |    model           mm:xq1      mm:xq2   
+|   |              l      0.0001      0.0001
+|   |              w      0.0001      0.0001
+|   |             id  -4.78e-010      -0.959
+|   |             is   3.54e-011       0.959
+|   |             ig   4.67e-010  -7.22e-007
+|   |             ib  -2.47e-011      4e-015
+|   |            vgs   9.66e-007          12
+|   |            vds        24.7      -0.004
+|   |            vbs           0   1.01e-015
+|   |            von        3.56        3.56
+|   |          vdsat           0         8.4
+|   |             rs           0           0
+|   |             rd           0           0
+|   |             rg           0           0
+|   |             rb           0           0
+|   |            rds           0        1.#J
+|   |             gm           0       0.114
+|   |            gds           0         240
+|   |            gmb           0           0
+|   |            cbd           0           0
+|   |            cbs           0           0
+|   |            cgs           0           0
+|   |            cgd           0           0
+|   |            cgb           0           0
+|   |           cbd0           0           0
+|   |         cbdsw0           0           0
+|   |           cbs0           0           0
+|   |         cbssw0           0           0
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rcap:xq1 rl:xq1 rg:xq1 rd:xq1 rds:xq1 rs:xq1 
+|   |    model                r           r           r           r           r           r   
+|   |              R           1           1         4.1     0.00623      1e+006      0.0252
+|   |              i  -1.74e-010   4.46e-008   4.53e-008   4.53e-008  -2.47e-005  -1.07e-011
+|   |              p   3.03e-020   1.99e-015   8.41e-015   1.28e-017    0.000608   2.88e-024
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rcap:xq2 rl:xq2 rg:xq2 rd:xq2 rds:xq2 rs:xq2 
+|   |    model                r           r           r           r           r           r   
+|   |              R           1           1         4.1     0.00623      1e+006      0.0252
+|   |              i        11.7        11.7  -3.36e-006       0.959   3.41e-008      -0.959
+|   |              p         137         137   4.62e-011     0.00573   1.16e-009      0.0231
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r1:xf1 r1:x_md1_trigsd_u14:xu1 r1:x_md1_trigin_u14:xu1 r1:x_md2_rise2_comp:xu1 r1:x_md2_rise1_comp:xu1 r1:x_md3_dly2_comp1:xu1   
+|   |    model                r           r           r           r           r           r   
+|   |              R       0.001           1           1           1           1           1
+|   |              i       0.255    2.5e-008   2.41e-008   9.12e-009      1e-008  -1.91e-005
+|   |              p   6.51e-005   6.25e-016   5.82e-016   8.32e-017      1e-016   3.65e-010
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r1:x_md3_dly2_comp2:xu1 r1:x_md3_dly1_comp1:xu1 r1:x_md3_dly1_comp2:xu1 r_md1_trigsd_r1:xu1 r_md1_trigsd_r3:xu1 r_md1_trigsd_r2:xu1
+|   |    model                r           r           r           r           r           r   
+|   |              R           1           1           1      1e+008   1.83e+007   5.62e+006
+|   |              i   1.11e-034  -1.66e-064      1e-008  -1.42e-007  -7.76e-015  -1.42e-007
+|   |              p   1.23e-068   2.74e-128      1e-016   2.02e-006    1.1e-021   1.13e-007
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rs_md1_trigsd_p:xu1 rs_md1_inv2_n:xu1 rs_md1_inv2_p:xu1 r_md1_trigin_r1:xu1 r_md1_trigin_r3:xu1 r_md1_trigin_r2:xu1
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+009      1e+009      1e+009      1e+008   1.83e+007   5.62e+006
+|   |              i      5e-009      6e-014      6e-014  -1.42e-007  -7.76e-015  -1.42e-007
+|   |              p    2.5e-008    3.6e-018    3.6e-018   2.02e-006    1.1e-021   1.13e-007
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rs_md1_trigin_p:xu1 rs_md1_inv1_n:xu1 rs_md1_inv1_p:xu1 rs_md1_nand2_n2:xu1 rs_md1_nand2_p2:xu1 rs_md1_nand2_n1:xu1
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+009      1e+009      1e+009      1e+009      1e+009      1e+009
+|   |              i      5e-009      5e-009      5e-009      5e-009    1.5e-014    1.5e-014
+|   |              p    2.5e-008    2.5e-008    2.5e-008    2.5e-008   2.25e-019   2.25e-019
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rs_md1_nand2_p1:xu1 rs_md1_nand1_n2:xu1 rs_md1_nand1_p2:xu1 rs_md1_nand1_n1:xu1 rs_md1_nand1_p1:xu1 rs_md1_inv3_n:xu1  
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+009      1e+009      1e+009      1e+009      1e+009      1e+009
+|   |              i      5e-009      5e-009      5e-009      5e-009      5e-009      5e-009
+|   |              p    2.5e-008    2.5e-008    2.5e-008    2.5e-008    2.5e-008    2.5e-008
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rs_md1_inv3_p:xu1 r_md1_r2:xu1 r_md1_r1:xu1 r_md1_r3:xu1 rs_md2_nand2_n2:xu1 rs_md2_nand2_n1:xu1 
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+009   1.67e+006      1e+005      5e+006      1e+009      1e+009
+|   |              i      5e-009  -1.96e-006    -0.00012  -1.74e-006    1.5e-014      5e-009
+|   |              p    2.5e-008    6.4e-006     0.00144   1.51e-005   2.25e-019    2.5e-008
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rs_md2_nand2_p2:xu1 rs_md2_nand2_p1:xu1 rs_md2_inv6_n:xu1 rs_md2_inv6_p:xu1 rs_md2_inv5_n:xu1 rs_md2_inv5_p:xu1
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+009      1e+009      1e+009      1e+009      1e+009      1e+009
+|   |              i      5e-009    1.5e-014      5e-009      5e-009      5e-009      5e-009
+|   |              p    2.5e-008   2.25e-019    2.5e-008    2.5e-008    2.5e-008    2.5e-008
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rs_md2_nand1_n2:xu1 rs_md2_nand1_n1:xu1 rs_md2_nand1_p2:xu1 rs_md2_nand1_p1:xu1 rs_md2_uvcc_n:xu1 rs_md2_uvcc_p:xu1
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+009      1e+009      1e+009      1e+009      1e+009      1e+009
+|   |              i    1.5e-014      5e-009      5e-009    1.5e-014      5e-009      5e-009
+|   |              p   2.25e-019    2.5e-008    2.5e-008   2.25e-019    2.5e-008    2.5e-008
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rs_md2_inv3_n:xu1 rs_md2_inv3_p:xu1 rs_md2_rise2_n:xu1 rs_md2_rise2_p:xu1 rs_md2_rise1_n:xu1 rs_md2_rise1_p:xu1
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+009      1e+009      1e+009      1e+009      1e+009      1e+009
+|   |              i      5e-009      5e-009   1.25e-015   1.25e-015      5e-009      5e-009
+|   |              p    2.5e-008    2.5e-008   1.56e-021   1.56e-021    2.5e-008    2.5e-008
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rs_md2_nor2_n2:xu1 rs_md2_nor2_n1:xu1 rs_md2_nor2_p2:xu1 rs_md2_nor2_p1:xu1 rs_md2_nor1_n2:xu1 rs_md2_nor1_n1:xu1  
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+009      1e+009      1e+009      1e+009      1e+009      1e+009
+|   |              i      5e-009      5e-009      5e-009      5e-009    1.5e-014    1.5e-014
+|   |              p    2.5e-008    2.5e-008    2.5e-008    2.5e-008   2.25e-019   2.25e-019
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rs_md2_nor1_p2:xu1 rs_md2_nor1_p1:xu1 rs_md2_inv4_n:xu1 rs_md2_inv4_p:xu1 rs_md2_inv2_n:xu1 rs_md2_inv2_p:xu1  
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+009      1e+009      1e+009      1e+009      1e+009      1e+009
+|   |              i    1.5e-014    1.5e-014      5e-009      5e-009    1.5e-014    1.5e-014
+|   |              p   2.25e-019   2.25e-019    2.5e-008    2.5e-008   2.25e-019   2.25e-019
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rs_md2_inv1_n:xu1 rs_md2_inv1_p:xu1 rs_md5_inv_n:xu1 rs_md5_inv_p:xu1 rs_md5_ols_n:xu1 rs_md5_ols_p:xu1
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+009      1e+009      1e+009      1e+009      1e+009      1e+009
+|   |              i      5e-009      5e-009      5e-009      5e-009    1.5e-014    1.5e-014
+|   |              p    2.5e-008    2.5e-008    2.5e-008    2.5e-008   2.25e-019   2.25e-019
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r_md5_ols_r2:xu1 r_md5_ols_r1:xu1 rs_md4_inv_n:xu1 rs_md4_inv_p:xu1 rs_md4_ohs_n:xu1 rs_md4_ohs_p:xu1  
+|   |    model                r           r           r           r           r           r   
+|   |              R        22.8        45.6      1e+009      1e+009      1e+009      1e+009
+|   |              i  -1.19e-007    -0.00119   1.25e-015   1.25e-015      5e-009      5e-009
+|   |              p   3.25e-013   6.46e-005   1.56e-021   1.56e-021    2.5e-008    2.5e-008
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r_md4_ohs_r2:xu1 r_md4_ohs_r1:xu1 r_md4_r1:xu1 rs_md3_dly2_n4:xu1 rs_md3_dly2_n2:xu1 rs_md3_dly2_n3:xu1
+|   |    model                r           r           r           r           r           r   
+|   |              R        22.8        45.6      5e+005      1e+009      1e+009      1e+009
+|   |              i  -7.04e-008  -1.16e-007  -2.32e-005      5e-015   1.91e-014  -1.11e-043
+|   |              p   1.13e-013   6.12e-013    0.000268    2.5e-020   3.65e-019   1.23e-077
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rs_md3_dly2_p4:xu1 rs_md3_dly2_p3:xu1 rs_md3_dly2_n0:xu1 rs_md3_dly2_p0:xu1 rs_md3_dly2_n1:xu1 rs_md3_dly2_p2:xu1  
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+009      1e+009      1e+009      1e+009      1e+009      1e+009
+|   |              i  -1.11e-043      5e-015    1.5e-014    1.5e-014      5e-009      5e-009
+|   |              p   1.23e-077    2.5e-020   2.25e-019   2.25e-019    2.5e-008    2.5e-008
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rs_md3_dly2_p1:xu1 rs_md3_dly1_n4:xu1 rs_md3_dly1_n2:xu1 rs_md3_dly1_n3:xu1 rs_md3_dly1_p4:xu1 rs_md3_dly1_p3:xu1  
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+009      1e+009      1e+009      1e+009      1e+009      1e+009
+|   |              i   1.91e-014      5e-009   1.66e-073      5e-009      5e-009      5e-009
+|   |              p   3.65e-019    2.5e-008   2.74e-137    2.5e-008    2.5e-008    2.5e-008
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rs_md3_dly1_n0:xu1 rs_md3_dly1_p0:xu1 rs_md3_dly1_n1:xu1 rs_md3_dly1_p2:xu1 rs_md3_dly1_p1:xu1 r_ii:xctrl  
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+009      1e+009      1e+009      1e+009      1e+009      1e+009
+|   |              i    1.5e-014    1.5e-014   1.25e-015   1.25e-015   1.66e-073   3.18e-011
+|   |              p   2.25e-019   2.25e-019   1.56e-021   1.56e-021   2.74e-137   1.01e-012
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r_iv:xctrl r_il:xctrl r7:x_u32:x_ti:xu2 r6:x_u32:x_ti:xu2 r5:x_u32:x_ti:xu2 r4:x_u32:x_ti:xu2  
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+009      1e+003      1e+009      1e+009         800         800
+|   |              i  -9.12e-010  -6.94e-005  -2.88e-031   4.32e-031           0           0
+|   |              p   8.31e-010   4.82e-006   8.28e-053   1.86e-052           0           0
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r3:x_u32:x_ti:xu2 r2:x_u32:x_ti:xu2 r1:x_u32:x_ti:xu2 r1:x_u33:x_ti:xu2 rg1:x_u13:x_ti:xu2 rp4:x_u12:x_ti:xu2  
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+009      1e+009      1e+009           1   5.82e+009      1e+003
+|   |              i   4.32e-031   1.44e-031   1.44e-031   3.26e-006  -2.36e-010    -0.00137
+|   |              p   1.86e-052   2.08e-053   2.08e-053   1.06e-011   3.24e-010     0.00189
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rp3:x_u12:x_ti:xu2 rp2:x_u12:x_ti:xu2 rp1:x_u12:x_ti:xu2 r_r17:x_ti:xu2 r_r20:x_ti:xu2 r_r3:x_ti:xu2 
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+003      1e+003      1e+003      5e+005           1    2.5e+004
+|   |              i    -0.00137    -0.00137    -0.00137   4.93e-005   5.75e-006   3.12e-006
+|   |              p     0.00189     0.00189     0.00189     0.00121   3.31e-011   2.43e-007
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r_r8:x_ti:xu2 r_r12:x_ti:xu2 r_r18:x_ti:xu2 r_r4:x_ti:xu2 r_r16:x_ti:xu2 r_r11:x_ti:xu2
+|   |    model                r           r           r           r           r           r   
+|   |              R      5e+004      5e+004      5e+005    2.5e+004      5e+005          10
+|   |              i  -1.56e-006  -1.56e-006  -2.61e-006   2.61e-006  -4.93e-005  -2.61e-006
+|   |              p   1.21e-007   1.21e-007    3.4e-006    1.7e-007     0.00121   6.79e-011
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r_r19:x_ti:xu2 r7:x_u32:x_ti:xu4 r6:x_u32:x_ti:xu4 r5:x_u32:x_ti:xu4 r4:x_u32:x_ti:xu4 r3:x_u32:x_ti:xu4 
+|   |    model                r           r           r           r           r           r   
+|   |              R   4.75e+005      1e+009      1e+009         800         800      1e+009
+|   |              i   3.12e-006  -2.88e-031   4.32e-031           0           0   4.32e-031
+|   |              p   4.62e-006   8.28e-053   1.86e-052           0           0   1.86e-052
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r2:x_u32:x_ti:xu4 r1:x_u32:x_ti:xu4 r1:x_u33:x_ti:xu4 rg1:x_u13:x_ti:xu4 rp4:x_u12:x_ti:xu4 rp3:x_u12:x_ti:xu4   
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+009      1e+009           1   5.82e+009      1e+003      1e+003
+|   |              i   1.44e-031   1.44e-031   3.26e-006   8.31e-011    0.000484    0.000484
+|   |              p   2.08e-053   2.08e-053   1.06e-011   4.02e-011    0.000234    0.000234
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rp2:x_u12:x_ti:xu4 rp1:x_u12:x_ti:xu4 r_r17:x_ti:xu4 r_r20:x_ti:xu4 r_r3:x_ti:xu4 r_r8:x_ti:xu4
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+003      1e+003      5e+005           1    2.5e+004      5e+004
+|   |              i    0.000484    0.000484   1.01e-005   8.57e-007   2.28e-008   3.26e-005
+|   |              p    0.000234    0.000234   5.09e-005   7.34e-013    1.3e-011   5.31e-005
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r_r12:x_ti:xu4 r_r18:x_ti:xu4 r_r4:x_ti:xu4 r_r16:x_ti:xu4 r_r11:x_ti:xu4 r_r19:x_ti:xu4 
+|   |    model                r           r           r           r           r           r   
+|   |              R      5e+004      5e+005    2.5e+004      5e+005          10   4.75e+005
+|   |              i  -3.26e-005   9.45e-007  -9.45e-007  -1.01e-005   9.45e-007   2.28e-008
+|   |              p   5.32e-005   4.47e-007   2.23e-008   5.14e-005   8.93e-012   2.48e-010
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rg1n:x_u41:x_ti:xu3 rg1p:x_u41:x_ti:xu3 r1:x_u36:x_ti:xu3 r7:x_u37:x_ti:xu3 r6:x_u37:x_ti:xu3 r5:x_u37:x_ti:xu3
+|   |    model                r           r           r           r           r           r   
+|   |              R   2.76e+009   2.76e+009           1      1e+009      1e+009         800
+|   |              i   1.14e-010  -1.14e-010   4.79e-005   2.92e-029  -4.39e-029           0
+|   |              p   3.59e-011   3.59e-011   2.29e-009   8.55e-049   1.93e-048           0
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r4:x_u37:x_ti:xu3 r3:x_u37:x_ti:xu3 r2:x_u37:x_ti:xu3 r1:x_u37:x_ti:xu3 r_r5:x_u100:x_ti:xu3 r_r12:x_u100:x_ti:xu3   
+|   |    model                r           r           r           r           r           r   
+|   |              R         800      1e+009      1e+009      1e+009           1      1e+003
+|   |              i           0  -4.39e-029  -1.46e-029  -1.46e-029      -0.237  -1.43e-007
+|   |              p           0   1.93e-048   2.14e-049   2.14e-049      0.0559   2.05e-011
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r_r9:x_u100:x_ti:xu3 r_r10:x_u100:x_ti:xu3 r_r7:x_u100:x_ti:xu3 r_r8:x_u100:x_ti:xu3 r_r11:x_u100:x_ti:xu3 r_r6:x_u100:x_ti:xu3
+|   |    model                r           r           r           r           r           r   
+|   |              R          26          26      1e+003      1e+003      1e+004      1e+005
+|   |              i  -3.24e-006   1.43e-007   -0.000211   3.24e-006   -0.000248  -7.61e-006
+|   |              p   2.73e-010   5.34e-013   4.46e-005   1.05e-008    0.000614   5.79e-006
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r1:x_u38:x_ti:xu3 rp4:x_u12:x_ti:xu3 rp3:x_u12:x_ti:xu3 rp2:x_u12:x_ti:xu3 rp1:x_u12:x_ti:xu3 r_r24:x_ti:xu3 
+|   |    model                r           r           r           r           r           r   
+|   |              R           1      1e+003      1e+003      1e+003      1e+003      1e+003
+|   |              i   1.83e-005    -0.00063    -0.00063    -0.00063    -0.00063      -0.001
+|   |              p   3.36e-010    0.000396    0.000396    0.000396    0.000396       0.001
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r_r20:x_ti:xu3 r_r17:x_ti:xu3 r_r3:x_ti:xu3 r_r21:x_ti:xu3 r_r18:x_ti:xu3 r_r4:x_ti:xu3
+|   |    model                r           r           r           r           r           r   
+|   |              R           1      1e+009    2.5e+004           1      5e+005    2.5e+004
+|   |              i    0.000549   3.36e-009   9.61e-006  -4.22e-006  -7.61e-006   7.61e-006
+|   |              p   3.01e-007   1.13e-008   2.31e-006   1.78e-011   2.89e-005   1.45e-006
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r_r16:x_ti:xu3 r_r22:x_ti:xu3 r_r19:x_ti:xu3 r_r23:x_ti:xu3 r6:x_u101:x_ti:xu3 r5:x_u101:x_ti:xu3  
+|   |    model                r           r           r           r r_noiseless r_noiseless   
+|   |              R      1e+009      1e+003      5e+005       0.001           1      1e+004
+|   |              i  -3.41e-009   2.63e-012   9.61e-006   2.66e-012          11  -4.53e-009
+|   |              p   1.17e-008   6.92e-021   4.62e-005    7.1e-027         121   2.05e-013
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r3:x_u101:x_ti:xu3 r2:x_u101:x_ti:xu3 r8:x_u101:x_ti:xu3 r7:x_u101:x_ti:xu3 r1:x_u101:x_ti:xu3 r1b:x_u101:x_ti:xu3   
+|   |    model      r_noiseless r_noiseless r_noiseless r_noiseless r_noiseless r_noiseless   
+|   |              R   4.66e+005           1          10      1e+004           1      1e+004
+|   |              i  -4.52e-009          11      0.0011      0.0011          11  -1.43e-007
+|   |              p   9.51e-012         121   1.21e-005      0.0121         121   2.04e-010
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r2b:x_u101:x_ti:xu3 r4:x_u101:x_ti:xu3 r2a:x_u101:x_ti:xu3 r1a:x_u101:x_ti:xu3 rdc:x_u101:x_ti:xu3 rdummy:x_u101:x_ti:xu3  
+|   |    model      r_noiseless r_noiseless r_noiseless r_noiseless r_noiseless r_noiseless   
+|   |              R   4.66e+005           1   6.67e+003      1e+004           1      3e+003
+|   |              i  -1.43e-007        10.9    0.000656    0.000659          11    0.000333
+|   |              p   9.51e-009         120     0.00287     0.00435         120    0.000334
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rx:x_u101:x_ti:xu3 rrs_l rrs_out rr_bl rrl rrs_in  
+|   |    model      r_noiseless    vresrs_l  vresrs_out    vresr_bl      vresrl   vresrs_in   
+|   |              R      3e+004       0.025        0.05    2.2e+003           5        0.05
+|   |              i   -0.000333       0.959           1     0.00227       0.999       0.255
+|   |              p     0.00334       0.023      0.0501      0.0113        4.99     0.00325
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rrg_h rrg_l rr_gsh rr_gsl rr_pwm rr_in_pd  
+|   |    model         vresrg_h    vresrg_l   vresr_gsh   vresr_gsl   vresr_pwm vresr_in_pd   
+|   |              R          10          10      1e+004      1e+004         100      1e+004
+|   |              i   4.54e-008     0.00119   1.15e-010     0.00119    0.000329    0.000327
+|   |              p   2.06e-014   1.42e-005   1.33e-016      0.0142   1.08e-005     0.00107
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rr_sd_pd rr_vdda 
+|   |    model      vresr_sd_pd  vresr_vdda   
+|   |              R      1e+005          10
+|   |              i    3.3e-005     0.00395
+|   |              p    0.000109    0.000156
+|   |   
+|   |    VCCS: Voltage controlled current source
+|   |    device      g_md1_g1:xu1 g1:x_u33:x_ti:xu2 gp4:x_u12:x_ti:xu2 gp3:x_u12:x_ti:xu2 gp2:x_u12:x_ti:xu2 gp1:x_u12:x_ti:xu2   
+|   |              i  -1.41e-007   3.26e-006    -0.00137    -0.00137    -0.00137    -0.00137
+|   |              v        3.27  -3.26e-006        1.37        1.37        1.37        1.37
+|   |              p   -4.6e-007  -1.06e-011    -0.00189    -0.00189    -0.00189    -0.00189
+|   |   
+|   |    VCCS: Voltage controlled current source
+|   |    device      g_g1:x_ti:xu2 g1:x_u33:x_ti:xu4 gp4:x_u12:x_ti:xu4 gp3:x_u12:x_ti:xu4 gp2:x_u12:x_ti:xu4 gp1:x_u12:x_ti:xu4
+|   |              i   5.75e-006   3.26e-006    0.000484    0.000484    0.000484    0.000484
+|   |              v   -5.8e-006  -3.26e-006      -0.484      -0.484      -0.484      -0.484
+|   |              p  -3.33e-011  -1.06e-011   -0.000234   -0.000234   -0.000234   -0.000234
+|   |   
+|   |    VCCS: Voltage controlled current source
+|   |    device      g_g1:x_ti:xu4 g1:x_u36:x_ti:xu3 g_g5:x_u100:x_ti:xu3 g_g4:x_u100:x_ti:xu3 g_g3:x_u100:x_ti:xu3 gb1:x_u101:x_ti:xu3   
+|   |              i   8.57e-007   4.79e-005     -0.0238    -0.00156      -0.211          11
+|   |              v  -8.19e-007  -4.79e-005       0.237       0.237       0.237         -11
+|   |              p  -7.01e-013  -2.29e-009    -0.00563    -0.00037       -0.05        -121
+|   |   
+|   |    VCCS: Voltage controlled current source
+|   |    device      gb:x_u101:x_ti:xu3 g2:x_u101:x_ti:xu3 g1:x_u101:x_ti:xu3 g1:x_u38:x_ti:xu3 gp4:x_u12:x_ti:xu3 gp3:x_u12:x_ti:xu3 
+|   |              i          11        10.9          11   1.83e-005    -0.00063    -0.00063
+|   |              v         -11       -10.9         -11  -1.83e-005        0.63        0.63
+|   |              p        -121        -120        -120  -3.36e-010   -0.000396   -0.000396
+|   |   
+|   |    VCCS: Voltage controlled current source
+|   |    device      gp2:x_u12:x_ti:xu3 gp1:x_u12:x_ti:xu3  
+|   |              i    -0.00063    -0.00063
+|   |              v        0.63        0.63
+|   |              p   -0.000396   -0.000396
+|   |   
+|   |    VCVS: Voltage controlled voltage source
+|   |    device      ev16:xq1 ev16:xq2 e3:x_u32:x_ti:xu2 e2:x_u32:x_ti:xu2 e1:x_u32:x_ti:xu2 e1:x_u33:x_ti:xu2  
+|   |              i   4.44e-008        23.4    1.5e-012   -7.2e-031  -1.15e-030  -3.12e-006
+|   |              v        24.7         -12           0           0   4.32e-022   3.26e-006
+|   |              p    1.1e-006        -280           0          -0  -4.97e-052  -1.02e-011
+|   |   
+|   |    VCVS: Voltage controlled voltage source
+|   |    device      eout:x_u13:x_ti:xu2 e_e1:x_ti:xu2 e_e3:x_ti:xu2 e_e16:x_ti:xu2 e_e14:x_ti:xu2 e_e13:x_ti:xu2 
+|   |              i  -2.56e-013  -3.26e-012    0.000135   3.12e-006   2.61e-006   3.12e-006
+|   |              v       -1.37        3.26        1.63    5.8e-006          23          23
+|   |              p   3.51e-013  -1.06e-011     0.00022   1.81e-011   5.99e-005   7.17e-005
+|   |   
+|   |    VCVS: Voltage controlled voltage source
+|   |    device      e_e12:x_ti:xu2 e_e11:x_ti:xu2 e_e2:x_ti:xu2 e3:x_u32:x_ti:xu4 e2:x_u32:x_ti:xu4 e1:x_u32:x_ti:xu4  
+|   |              i  -2.61e-006  -3.12e-006           0   1.37e-012   -7.2e-031  -1.15e-030
+|   |              v        24.6        24.6           0           0           0   4.32e-022
+|   |              p  -6.42e-005  -7.68e-005           0           0          -0  -4.97e-052
+|   |   
+|   |    VCVS: Voltage controlled voltage source
+|   |    device      e1:x_u33:x_ti:xu4 eout:x_u13:x_ti:xu4 e_e1:x_ti:xu4 e_e3:x_ti:xu4 e_e16:x_ti:xu4 e_e14:x_ti:xu4
+|   |              i  -2.28e-008  -2.11e-012  -3.26e-012     0.00013   2.28e-008  -9.45e-007
+|   |              v   3.26e-006       0.484        3.26        1.63   8.19e-007        3.43
+|   |              p  -7.45e-014  -1.02e-012  -1.06e-011    0.000212   1.87e-014  -3.24e-006
+|   |   
+|   |    VCVS: Voltage controlled voltage source
+|   |    device      e_e13:x_ti:xu4 e_e12:x_ti:xu4 e_e11:x_ti:xu4 e_e2:x_ti:xu4 e1:x_u36:x_ti:xu3 e3:x_u37:x_ti:xu3   
+|   |              i   2.28e-008   9.45e-007  -2.29e-008           0   9.61e-006  -4.72e-012
+|   |              v        3.43        5.04        5.07           0   4.79e-005           0
+|   |              p   7.83e-008   4.77e-006  -1.16e-007           0    4.6e-010          -0
+|   |   
+|   |    VCVS: Voltage controlled voltage source
+|   |    device      e2:x_u37:x_ti:xu3 e1:x_u37:x_ti:xu3 e_e8:x_u100:x_ti:xu3 e_e6:x_u100:x_ti:xu3 e_e9:x_u100:x_ti:xu3 e_e5:x_u100:x_ti:xu3
+|   |              i   7.32e-029   1.17e-028   -0.000248   -0.000211  -1.43e-007  -1.56e-015
+|   |              v           0  -4.39e-020         2.5         2.5        0.24     0.00156
+|   |              p           0  -5.14e-048    -0.00062   -0.000528  -3.44e-008  -2.44e-018
+|   |   
+|   |    VCVS: Voltage controlled voltage source
+|   |    device      e_e4:x_u100:x_ti:xu3 e_e3:x_u100:x_ti:xu3 e_e7:x_u100:x_ti:xu3 e1:x_u38:x_ti:xu3 e_e1:x_ti:xu3 e_e3:x_ti:xu3 
+|   |              i   7.61e-006  -3.13e-018   3.24e-006  -9.61e-006   -0.000549    0.000118
+|   |              v        0.24   3.13e-006       0.237   1.83e-005        3.26        1.63
+|   |              p   1.82e-006  -9.78e-024   7.66e-007  -1.76e-010    -0.00179    0.000192
+|   |   
+|   |    VCVS: Voltage controlled voltage source
+|   |    device      e_e14:x_ti:xu3 e_e13:x_ti:xu3 e_e12:x_ti:xu3 e_e11:x_ti:xu3 e_e2:x_ti:xu3  
+|   |              i   7.61e-006   9.61e-006  -7.61e-006  -9.61e-006   4.22e-006
+|   |              v           0           0        3.36        3.41           0
+|   |              p           0           0  -2.56e-005  -3.28e-005           0
+|   |   
+|   |    Vsource: Independent voltage source
+|   |    device      vfi1:xq1 vfi2:xq1 vfi1:xq2 vfi2:xq2 v_md1_inv2_v:xu1 v_md1_inv1_v:xu1  
+|   |             dc           0           0           0           0           5           5
+|   |          acmag           0           0           0           0           0           0
+|   |              i  -2.47e-011  -4.48e-008   2.63e-006   1.37e-009     -7e-008     -5e-006
+|   |              p          -0          -0           0           0   -3.5e-007   -2.5e-005
+|   |   
+|   |    Vsource: Independent voltage source
+|   |    device      v_md1_nand2_v:xu1 v_md1_nand1_v:xu1 v_md1_inv3_v:xu1 v_md2_nand2_v:xu1 v_md2_inv6_v:xu1 v_md2_inv5_v:xu1 
+|   |             dc           5           5           5           5           5           5
+|   |          acmag           0           0           0           0           0           0
+|   |              i     -6e-008     -1e-005     -5e-006     -6e-008     -5e-006     -5e-006
+|   |              p     -3e-007     -5e-005   -2.5e-005     -3e-007   -2.5e-005   -2.5e-005
+|   |   
+|   |    Vsource: Independent voltage source
+|   |    device      v_md2_nand1_v:xu1 v_md2_inv3_v:xu1 v_md2_rise2_v:xu1 v_md2_rise1_v:xu1 v_md2_nor2_v:xu1 v_md2_nor1_v:xu1 
+|   |             dc           5           5           5           5           5           5
+|   |          acmag           0           0           0           0           0           0
+|   |              i     -6e-008     -5e-006  -4.94e-006  -6.59e-007   -2.5e-006     -1e-005
+|   |              p     -3e-007   -2.5e-005  -2.47e-005  -3.29e-006  -1.25e-005     -5e-005
+|   |   
+|   |    Vsource: Independent voltage source
+|   |    device      v_md2_inv4_v:xu1 v_md2_inv2_v:xu1 v_md2_inv1_v:xu1 v_md5_inv_v:xu1 v_md4_inv_v:xu1 v_md3_dly2_v2:xu1 
+|   |             dc           5           5           5           5           5           5
+|   |          acmag           0           0           0           0           0           0
+|   |              i     -5e-006     -6e-008     -5e-006     -5e-006     -6e-008     -1e-005
+|   |              p   -2.5e-005     -3e-007   -2.5e-005   -2.5e-005     -3e-007  -5.01e-005
+|   |   
+|   |    Vsource: Independent voltage source
+|   |    device      v_md3_dly2_v1:xu1 v_md3_dly2_v0:xu1 v_md3_dly1_v2:xu1 v_md3_dly1_v1:xu1 v_md3_dly1_v0:xu1 v_saw:xctrl  
+|   |             dc           5           5           5           5           5           0
+|   |          acmag           0           0           0           0           0           0
+|   |              i     -5e-006      -0.377   -2.5e-006     -1e-005     -5e-006  -2.53e-015
+|   |              p   -2.5e-005       -1.88  -1.25e-005     -5e-005   -2.5e-005  -6.42e-018
+|   |   
+|   |    Vsource: Independent voltage source
+|   |    device      v_ss:xctrl vsense:x_u31:x_ti:xu2 vdummy:x_ti:xu2 v_v8:x_ti:xu2 vsense:x_u31:x_ti:xu4 vdummy:x_ti:xu4 
+|   |             dc           0           0           1  -7.62e-006           0           1
+|   |          acmag           0           0           0           0           0           0
+|   |              i     -1e-011  -2.61e-006  -2.63e-012   7.65e-009   9.45e-007  -2.63e-012
+|   |              p     -1e-010          -0  -2.63e-012  -5.83e-014           0  -2.63e-012
+|   |   
+|   |    Vsource: Independent voltage source
+|   |    device      v_v8:x_ti:xu4 vsense:x_u31:x_ti:xu3 v_v8:x_ti:xu3 v_v9:x_ti:xu3 vv1 vv2
+|   |             dc  -7.62e-006           0  -1.25e-005         0.7          25          12
+|   |          acmag           0           0           0           0           0           0
+|   |              i  -5.02e-010      1e-012   4.98e-012  -2.33e-012      -0.255    -0.00158
+|   |              p   3.83e-015           0  -6.22e-017  -1.63e-012       -6.38     -0.0189
+|   |   
+|   |    Vsource: Independent voltage source
+|   |    device      vv3.pinvoltage2--0 vv_en vsim_3v3  
+|   |             dc           0         3.3         3.3
+|   |          acmag           0           0           0
+|   |              i    0.000328  -3.13e-005    -0.00395
+|   |              p           0   -0.000103      -0.013
+|   |   
+|   |    v_switch: analog switch
+|   |    device      s_md1_trigsd_p:xu1 s_md1_inv2_n:xu1 s_md1_inv2_p:xu1 s_md1_trigin_p:xu1 s_md1_inv1_n:xu1 s_md1_inv1_p:xu1  
+|   |    model      _md1_trigsd _md1_inv2_n _md1_inv2_p _md1_trigin _md1_inv1_n _md1_inv1_p   
+|   |              i   1.42e-007      5e-008      7e-008   1.42e-007      5e-006      5e-006
+|   |   
+|   |    v_switch: analog switch
+|   |    device      s_md1_nand2_n2:xu1 s_md1_nand2_p2:xu1 s_md1_nand2_n1:xu1 s_md1_nand2_p1:xu1 s_md1_nand1_n2:xu1 s_md1_nand1_p2:xu1  
+|   |    model      _md1_nand2_ _md1_nand2_ _md1_nand2_ _md1_nand2_ _md1_nand1_ _md1_nand1_   
+|   |              i      5e-008      6e-008      5e-008      6e-013      1e-005      5e-006
+|   |   
+|   |    v_switch: analog switch
+|   |    device      s_md1_nand1_n1:xu1 s_md1_nand1_p1:xu1 s_md1_inv3_n:xu1 s_md1_inv3_p:xu1 s_md2_nand2_n2:xu1 s_md2_nand2_n1:xu1  
+|   |    model      _md1_nand1_ _md1_nand1_ _md1_inv3_n _md1_inv3_p _md2_nand2_ _md2_nand2_   
+|   |              i      1e-005      5e-006      5e-006      5e-006      5e-008      5e-008
+|   |   
+|   |    v_switch: analog switch
+|   |    device      s_md2_nand2_p2:xu1 s_md2_nand2_p1:xu1 s_md2_inv6_n:xu1 s_md2_inv6_p:xu1 s_md2_inv5_n:xu1 s_md2_inv5_p:xu1  
+|   |    model      _md2_nand2_ _md2_nand2_ _md2_inv6_n _md2_inv6_p _md2_inv5_n _md2_inv5_p   
+|   |              i      6e-013      6e-008      5e-006      5e-006      5e-006      5e-006
+|   |   
+|   |    v_switch: analog switch
+|   |    device      s_md2_nand1_n2:xu1 s_md2_nand1_n1:xu1 s_md2_nand1_p2:xu1 s_md2_nand1_p1:xu1 s_md2_uvcc_n:xu1 s_md2_uvcc_p:xu1  
+|   |    model      _md2_nand1_ _md2_nand1_ _md2_nand1_ _md2_nand1_ _md2_uvcc_n _md2_uvcc_p   
+|   |              i      5e-008      5e-008      6e-013      6e-008   6.58e-007   6.58e-007
+|   |   
+|   |    v_switch: analog switch
+|   |    device      s_md2_inv3_n:xu1 s_md2_inv3_p:xu1 s_md2_rise2_n:xu1 s_md2_rise2_p:xu1 s_md2_rise1_n:xu1 s_md2_rise1_p:xu1  
+|   |    model      _md2_inv3_n _md2_inv3_p _md2_rise2_ _md2_rise2_ _md2_rise1_ _md2_rise1_   
+|   |              i      5e-006      5e-006      5e-006   4.94e-006       0.217   6.59e-007
+|   |   
+|   |    v_switch: analog switch
+|   |    device      s_md2_nor2_n2:xu1 s_md2_nor2_n1:xu1 s_md2_nor2_p2:xu1 s_md2_nor2_p1:xu1 s_md2_nor1_n2:xu1 s_md2_nor1_n1:xu1
+|   |    model      _md2_nor2_n _md2_nor2_n _md2_nor2_p _md2_nor2_p _md2_nor1_n _md2_nor1_n   
+|   |              i   1.25e-006   1.25e-006    2.5e-006    2.5e-006      5e-006      5e-006
+|   |   
+|   |    v_switch: analog switch
+|   |    device      s_md2_nor1_p2:xu1 s_md2_nor1_p1:xu1 s_md2_inv4_n:xu1 s_md2_inv4_p:xu1 s_md2_inv2_n:xu1 s_md2_inv2_p:xu1
+|   |    model      _md2_nor1_p _md2_nor1_p _md2_inv4_n _md2_inv4_p _md2_inv2_n _md2_inv2_p   
+|   |              i      1e-005      1e-005      5e-006      5e-006      5e-008      6e-008
+|   |   
+|   |    v_switch: analog switch
+|   |    device      s_md2_inv1_n:xu1 s_md2_inv1_p:xu1 s_md5_inv_n:xu1 s_md5_inv_p:xu1 s_md5_ols_n:xu1 s_md5_ols_p:xu1  
+|   |    model      _md2_inv1_n _md2_inv1_p _md5_inv_n: _md5_inv_p: _md5_ols_n: _md5_ols_p:   
+|   |              i      5e-006      5e-006      5e-006      5e-006   1.19e-007     0.00119
+|   |   
+|   |    v_switch: analog switch
+|   |    device      s_md4_inv_n:xu1 s_md4_inv_p:xu1 s_md4_ohs_n:xu1 s_md4_ohs_p:xu1 s_md3_dly2_n4:xu1 s_md3_dly2_n2:xu1
+|   |    model      _md4_inv_n: _md4_inv_p: _md4_ohs_n: _md4_ohs_p: _md3_dly2_n _md3_dly2_n   
+|   |              i      5e-008      6e-008   7.04e-008   1.16e-007      5e-006      5e-012
+|   |   
+|   |    v_switch: analog switch
+|   |    device      s_md3_dly2_n3:xu1 s_md3_dly2_p4:xu1 s_md3_dly2_p3:xu1 s_md3_dly2_n0:xu1 s_md3_dly2_p0:xu1 s_md3_dly2_n1:xu1
+|   |    model      _md3_dly2_n _md3_dly2_p _md3_dly2_p _md3_dly2_n _md3_dly2_p _md3_dly2_n   
+|   |              i      5e-006      1e-005      1e-005   1.23e-006       0.377      5e-006
+|   |   
+|   |    v_switch: analog switch
+|   |    device      s_md3_dly2_p2:xu1 s_md3_dly2_p1:xu1 s_md3_dly1_n4:xu1 s_md3_dly1_n2:xu1 s_md3_dly1_n3:xu1 s_md3_dly1_p4:xu1
+|   |    model      _md3_dly2_p _md3_dly2_p _md3_dly1_n _md3_dly1_n _md3_dly1_n _md3_dly1_p   
+|   |              i      5e-006      5e-006   1.25e-006      5e-006   1.25e-006    2.5e-006
+|   |   
+|   |    v_switch: analog switch
+|   |    device      s_md3_dly1_p3:xu1 s_md3_dly1_n0:xu1 s_md3_dly1_p0:xu1 s_md3_dly1_n1:xu1 s_md3_dly1_p2:xu1 s_md3_dly1_p1:xu1
+|   |    model      _md3_dly1_p _md3_dly1_n _md3_dly1_p _md3_dly1_n _md3_dly1_p _md3_dly1_p   
+|   |              i    2.5e-006      5e-006      5e-006      5e-006      1e-005      1e-005
+|   |   
+|   |    v_switch: analog switch
+|   |    device      s2:x_u13:x_ti:xu2 s1:x_u13:x_ti:xu2 s2:x_u13:x_ti:xu4 s1:x_u13:x_ti:xu4 s4:x_u41:x_ti:xu3 s2:x_u41:x_ti:xu3
+|   |    model      sw2:x_u13:x sw1:x_u13:x sw2:x_u13:x sw1:x_u13:x sw2:x_u41:x sw2:x_u41:x   
+|   |              i   1.56e-010   -2.9e-009   2.01e-009  -1.05e-009   1.84e-009   1.22e-009
+|   |   
+|   |    v_switch: analog switch
+|   |    device      s3:x_u41:x_ti:xu3 s1:x_u41:x_ti:xu3
+|   |    model      sw1:x_u41:x sw1:x_u41:x   
+|   |              i  -1.22e-009  -1.85e-009
+|   |   
+|   |    Capacitor models (Fixed capacitor)   
+|   |    model                 c
+|   |   
+|   |          cmult           1
+|   |             cj           0
+|   |           cjsw           0
+|   |           defw      1e-005
+|   |         narrow           0
+|   |            tc1           0
+|   |            tc2           0
+|   |            vc1           0
+|   |            vc2           0
+|   |           tnom          27
+|   |     t_measured          27
+|   |          t_abs          27
+|   |   t_rel_global           0
+|   |    t_rel_local           0
+|   |   
+|   |    Diode models (Junction Diode model)
+|   |    model           md3:xq1     md2:xq1     md1:xq1      md:xq1     md3:xq2     md2:xq2
+|   |   
+|   |             is      1e-010      1e-010      1e-032   2.99e-009      1e-010      1e-010
+|   |             rs           0      3e-006           0     0.00784           0      3e-006
+|   |              n         0.4         0.4          50        1.38         0.4         0.4
+|   |             tt           0           0           0           0           0           0
+|   |            cjo           0           0   1.73e-009   7.95e-010           0           0
+|   |             vj           1           1       0.513         0.5           1           1
+|   |              m         0.5         0.5       0.615       0.375         0.5         0.5
+|   |             eg        1.11        1.11        1.11        1.16        1.11        1.11
+|   |            xti           3           3           3           3           3           3
+|   |             kf           0           0           0           0           0           0
+|   |             af           1           1           1           1           1           1
+|   |             fc         0.5         0.5      1e-008         0.5         0.5         0.5
+|   |             bv      1e+030      1e+030      1e+030         100      1e+030      1e+030
+|   |            ibv      1e-010      1e-010      1e-010          10      1e-010      1e-010
+|   |           ibvl           0           0           0           0           0           0
+|   |            ikf      1e+030      1e+030      1e+030      1e+030      1e+030      1e+030
+|   |            isr           0           0           0           0           0           0
+|   |            nbv           1           1           1           1           1           1
+|   |           nbvl           1           1           1           1           1           1
+|   |             nr           2           2           2           2           2           2
+|   |           tbv1           0           0           0           0           0           0
+|   |           tbv2           0           0           0           0           0           0
+|   |           tikf           0           0           0           0           0           0
+|   |           trs1           0           0           0           0           0           0
+|   |           trs2           0           0           0           0           0           0
+|   |     t_measured          27          27          27          27          27          27
+|   |          t_abs          27          27          27          27          27          27
+|   |   t_rel_global           0           0           0           0           0           0
+|   |    t_rel_local           0           0           0           0           0           0
+|   |   
+|   |    Diode models (Junction Diode model)
+|   |    model           md1:xq2      md:xq2     grd:xd1    legd:xd1 diode625:xu diode25:xu1
+|   |   
+|   |             is      1e-032   2.99e-009      1e-015   8.72e-006      1e-014      1e-014
+|   |             rs           0     0.00784      0.0165       0.041        0.01        0.01
+|   |              n          50        1.38       0.893        1.32           1           1
+|   |             tt           0           0           0   2.47e-014           0           0
+|   |            cjo   1.73e-009   7.95e-010           0   5.21e-010           0           0
+|   |             vj       0.513         0.5           1         0.7        0.75        0.75
+|   |              m       0.615       0.375         0.5        0.52       0.333       0.333
+|   |             eg        1.11        1.16         1.4       0.594        1.11        1.11
+|   |            xti           3           3         0.9           4           3           3
+|   |             kf           0           0           0           0           0           0
+|   |             af           1           1           1           1           1           1
+|   |             fc      1e-008         0.5         0.5         0.5         0.5         0.5
+|   |             bv      1e+030         100      1e+030          66         625          25
+|   |            ibv      1e-010          10      1e-010          10      0.0001      0.0001
+|   |           ibvl           0           0           0           0           0           0
+|   |            ikf      1e+030      1e+030      1e+030      1e+030      1e+030      1e+030
+|   |            isr           0           0           0           0           0           0
+|   |            nbv           1           1           1           1           1           1
+|   |           nbvl           1           1           1           1           1           1
+|   |             nr           2           2           2           2           2           2
+|   |           tbv1           0           0           0           0           0           0
+|   |           tbv2           0           0           0           0           0           0
+|   |           tikf           0           0           0           0           0           0
+|   |           trs1           0           0           0           0           0           0
+|   |           trs2           0           0           0           0           0           0
+|   |     t_measured          27          27          27          27          27          27
+|   |          t_abs          27          27          27          27          27          27
+|   |   t_rel_global           0           0           0           0           0           0
+|   |    t_rel_local           0           0           0           0           0           0
+|   |   
+|   |    Diode models (Junction Diode model)
+|   |    model       dvn:x_u32:x dvn:x_u32:x dvn:x_u37:x dideal:x_ti uf4007/vsh_
+|   |   
+|   |             is      1e-016      1e-016      1e-016      1e-014   3.29e-006
+|   |             rs           0           0           0           0        0.15
+|   |              n           1           1           1           1        3.98
+|   |             tt           0           0           0           0   1.85e-007
+|   |            cjo           0           0           0           0   2.93e-011
+|   |             vj           1           1           1           1       0.852
+|   |              m         0.5         0.5         0.5         0.5       0.335
+|   |             eg        1.11        1.11        1.11        1.11        1.11
+|   |            xti           3           3           3           3           3
+|   |             kf      1e-017      1e-017      1e-014           0           0
+|   |             af           1           1           1           1           1
+|   |             fc         0.5         0.5         0.5         0.5         0.5
+|   |             bv      1e+030      1e+030      1e+030      1e+030      1e+003
+|   |            ibv      1e-010      1e-010      1e-010      1e-010         0.2
+|   |           ibvl           0           0           0           0           0
+|   |            ikf      1e+030      1e+030      1e+030      1e+030      1e+030
+|   |            isr           0           0           0           0           0
+|   |            nbv           1           1           1           1           1
+|   |           nbvl           1           1           1           1           1
+|   |             nr           2           2           2           2           2
+|   |           tbv1           0           0           0           0           0
+|   |           tbv2           0           0           0           0           0
+|   |           tikf           0           0           0           0           0
+|   |           trs1           0           0           0           0           0
+|   |           trs2           0           0           0           0           0
+|   |     t_measured          27          27          27          27          27
+|   |          t_abs          27          27          27          27          27
+|   |   t_rel_global           0           0           0           0           0
+|   |    t_rel_local           0           0           0           0           0
+|   |   
+|   |    Inductor models (Inductors)
+|   |    model                 l
+|   |   
+|   |          lmult           1
+|   |            tc1           0
+|   |            tc2           0
+|   |            il1           0
+|   |            il2           0
+|   |           tnom          27
+|   |     t_measured          27
+|   |          t_abs          27
+|   |   t_rel_global           0
+|   |    t_rel_local           0
+|   |   
+|   |    Mos1 models (Level 1 MOSfet model with Meyer capacitance model)
+|   |    model            mm:xq1      mm:xq2
+|   |   
+|   |           type        nmos        nmos
+|   |            vto        3.56        3.56
+|   |             kp        28.5        28.5
+|   |          gamma           0           0
+|   |            phi         0.6         0.6
+|   |         lambda    0.000893    0.000893
+|   |             rd           0           0
+|   |             rs           0           0
+|   |             rg           0           0
+|   |             rb           0           0
+|   |            rds           0           0
+|   |            cbd           0           0
+|   |            cbs           0           0
+|   |             is      1e-032      1e-032
+|   |             pb         0.8         0.8
+|   |           cgso   1.23e-005   1.23e-005
+|   |           cgdo   1.77e-008   1.77e-008
+|   |           cgbo           0           0
+|   |            rsh           0           0
+|   |             cj           0           0
+|   |             mj         0.5         0.5
+|   |           cjsw           0           0
+|   |           mjsw        0.33        0.33
+|   |             js           0           0
+|   |            tox           0           0
+|   |             ld           0           0
+|   |             u0         600         600
+|   |             fc         0.5         0.5
+|   |           nsub           0           0
+|   |            tpg         1         1
+|   |            nss           0           0
+|   |           tnom          27          27
+|   |             kf           0           0
+|   |             af           1           1
+|   |             wd           0           0
+|   |              n           1           1
+|   |           jssw           0           0
+|   |           pbsw         0.8         0.8
+|   |             tt           0           0
+|   |           nlev           2           2
+|   |         gdsnoi           1           1
+|   |     t_measured          27          27
+|   |          t_abs          27          27
+|   |   t_rel_global           0           0
+|   |    t_rel_local           0           0
+|   |   
+|   |    Resistor models (Simple linear resistor) 
+|   |    model                 r r_noiseless    vresrs_l  vresrs_out    vresr_bl      vresrl
+|   |   
+|   |          rmult           1           1           1           1           1           1
+|   |            rsh           0           0           0           0           0           0
+|   |         narrow           0           0           0           0           0           0
+|   |            tc1           0           0           0           0           0           0
+|   |            tc2           0           0           0           0           0           0
+|   |           defw      1e-005      1e-005      1e-005      1e-005      1e-005      1e-005
+|   |           tnom          27          27          27          27          27          27
+|   |            tce           0           0           0           0           0           0
+|   |     t_measured          27          27          27          27          27          27
+|   |          t_abs          27        -273          27          27          27          27
+|   |   t_rel_global           0           0           0           0           0           0
+|   |    t_rel_local           0           0           0           0           0           0
+|   |   
+|   |    Resistor models (Simple linear resistor) 
+|   |    model         vresrs_in    vresrg_h    vresrg_l   vresr_gsh   vresr_gsl   vresr_pwm
+|   |   
+|   |          rmult           1           1           1           1           1           1
+|   |            rsh           0           0           0           0           0           0
+|   |         narrow           0           0           0           0           0           0
+|   |            tc1           0           0           0           0           0           0
+|   |            tc2           0           0           0           0           0           0
+|   |           defw      1e-005      1e-005      1e-005      1e-005      1e-005      1e-005
+|   |           tnom          27          27          27          27          27          27
+|   |            tce           0           0           0           0           0           0
+|   |     t_measured          27          27          27          27          27          27
+|   |          t_abs          27          27          27          27          27          27
+|   |   t_rel_global           0           0           0           0           0           0
+|   |    t_rel_local           0           0           0           0           0           0
+|   |   
+|   |    Resistor models (Simple linear resistor) 
+|   |    model       vresr_in_pd vresr_sd_pd  vresr_vdda
+|   |   
+|   |          rmult           1           1           1
+|   |            rsh           0           0           0
+|   |         narrow           0           0           0
+|   |            tc1           0           0           0
+|   |            tc2           0           0           0
+|   |           defw      1e-005      1e-005      1e-005
+|   |           tnom          27          27          27
+|   |            tce           0           0           0
+|   |     t_measured          27          27          27
+|   |          t_abs          27          27          27
+|   |   t_rel_global           0           0           0
+|   |    t_rel_local           0           0           0
+|   |   
+|   |    v_switch models (analog switch)
+|   |    model       _md1_trigsd _md1_inv2_n _md1_inv2_p _md1_trigin _md1_inv1_n _md1_inv1_p
+|   |   
+|   |           voff           0           0           5           0           0           5
+|   |            von           5           5           0           5           5           0
+|   |            log         1         1         1         1         1         1
+|   |           roff      1e+010      1e+008      1e+006      1e+010      1e+008      1e+006
+|   |            ron           1           3           1           1           3           1
+|   |   
+|   |    v_switch models (analog switch)
+|   |    model       _md1_nand2_ _md1_nand2_ _md1_nand2_ _md1_nand2_ _md1_nand1_ _md1_nand1_
+|   |   
+|   |           voff           0           5           0           5           0           5
+|   |            von           5           0           5           0           5           0
+|   |            log         1         1         1         1         1         1
+|   |           roff      1e+008      1e+006      1e+008      1e+006      1e+008      1e+006
+|   |            ron           3          10           3          10           3          10
+|   |   
+|   |    v_switch models (analog switch)
+|   |    model       _md1_nand1_ _md1_nand1_ _md1_inv3_n _md1_inv3_p _md2_nand2_ _md2_nand2_
+|   |   
+|   |           voff           0           5           0           5           0           0
+|   |            von           5           0           5           0           5           5
+|   |            log         1         1         1         1         1         1
+|   |           roff      1e+008      1e+006      1e+008      1e+006      1e+008      1e+008
+|   |            ron           3          10           3           1           3           3
+|   |   
+|   |    v_switch models (analog switch)
+|   |    model       _md2_nand2_ _md2_nand2_ _md2_inv6_n _md2_inv6_p _md2_inv5_n _md2_inv5_p
+|   |   
+|   |           voff           5           5           0           5           0           5
+|   |            von           0           0           5           0           5           0
+|   |            log         1         1         1         1         1         1
+|   |           roff      1e+006      1e+006      1e+008      1e+006      1e+008      1e+006
+|   |            ron          10          10           3           1           3           1
+|   |   
+|   |    v_switch models (analog switch)
+|   |    model       _md2_nand1_ _md2_nand1_ _md2_nand1_ _md2_nand1_ _md2_uvcc_n _md2_uvcc_p
+|   |   
+|   |           voff           0           0           5           5           0           5
+|   |            von           5           5           0           0           5           0
+|   |            log         1         1         1         1         1         1
+|   |           roff      1e+008      1e+008      1e+006      1e+006      1e+006      1e+006
+|   |            ron           3           3          10          10           1           1
+|   |   
+|   |    v_switch models (analog switch)
+|   |    model       _md2_inv3_n _md2_inv3_p _md2_rise2_ _md2_rise2_ _md2_rise1_ _md2_rise1_
+|   |   
+|   |           voff           0           5           0           5           0           5
+|   |            von           5           0           5           0           5           0
+|   |            log         1         1         1         1         1         1
+|   |           roff      1e+008      1e+006      1e+006      1e+006      1e+006      1e+006
+|   |            ron           3           1          20       0.001          20       0.001
+|   |   
+|   |    v_switch models (analog switch)
+|   |    model       _md2_nor2_n _md2_nor2_n _md2_nor2_p _md2_nor2_p _md2_nor1_n _md2_nor1_n
+|   |   
+|   |           voff           0           0           5           5           0           0
+|   |            von           5           5           0           0           5           5
+|   |            log         1         1         1         1         1         1
+|   |           roff      1e+006      1e+006      1e+006      1e+006      1e+006      1e+006
+|   |            ron           1           1           1           1           1           1
+|   |   
+|   |    v_switch models (analog switch)
+|   |    model       _md2_nor1_p _md2_nor1_p _md2_inv4_n _md2_inv4_p _md2_inv2_n _md2_inv2_p
+|   |   
+|   |           voff           5           5           0           5           0           5
+|   |            von           0           0           5           0           5           0
+|   |            log         1         1         1         1         1         1
+|   |           roff      1e+006      1e+006      1e+008      1e+006      1e+008      1e+006
+|   |            ron           1           1           3           1           3           1
+|   |   
+|   |    v_switch models (analog switch)
+|   |    model       _md2_inv1_n _md2_inv1_p _md5_inv_n: _md5_inv_p: _md5_ols_n: _md5_ols_p:
+|   |   
+|   |           voff           0           5           0           5           0           5
+|   |            von           5           0           5           0           5           0
+|   |            log         1         1         1         1         1         1
+|   |           roff      1e+008      1e+006      1e+008      1e+006      1e+008      1e+008
+|   |            ron           3           1           3           1       0.001       0.001
+|   |   
+|   |    v_switch models (analog switch)
+|   |    model       _md4_inv_n: _md4_inv_p: _md4_ohs_n: _md4_ohs_p: _md3_dly2_n _md3_dly2_n
+|   |   
+|   |           voff           0           5           0           5           0           0
+|   |            von           5           0           5           0           5           5
+|   |            log         1         1         1         1         1         1
+|   |           roff      1e+008      1e+006      1e+008      1e+008      1e+006      1e+006
+|   |            ron           3           1       0.001       0.001           1           1
+|   |   
+|   |    v_switch models (analog switch)
+|   |    model       _md3_dly2_n _md3_dly2_p _md3_dly2_p _md3_dly2_n _md3_dly2_p _md3_dly2_n
+|   |   
+|   |           voff           0           5           5           0           5           0
+|   |            von           5           0           0           5           0           5
+|   |            log         1         1         1         1         1         1
+|   |           roff      1e+006      1e+006      1e+006      1e+006      1e+006      1e+006
+|   |            ron           1           1           1          10          10           1
+|   |   
+|   |    v_switch models (analog switch)
+|   |    model       _md3_dly2_p _md3_dly2_p _md3_dly1_n _md3_dly1_n _md3_dly1_n _md3_dly1_p
+|   |   
+|   |           voff           5           5           0           0           0           5
+|   |            von           0           0           5           5           5           0
+|   |            log         1         1         1         1         1         1
+|   |           roff      1e+006      1e+006      1e+006      1e+006      1e+006      1e+006
+|   |            ron           1           1           1           1           1           1
+|   |   
+|   |    v_switch models (analog switch)
+|   |    model       _md3_dly1_p _md3_dly1_n _md3_dly1_p _md3_dly1_n _md3_dly1_p _md3_dly1_p
+|   |   
+|   |           voff           5           0           5           0           5           5
+|   |            von           0           5           0           5           0           0
+|   |            log         1         1         1         1         1         1
+|   |           roff      1e+006      1e+006      1e+006      1e+006      1e+006      1e+006
+|   |            ron           1          10          10           1           1           1
+|   |   
+|   |    v_switch models (analog switch)
+|   |    model       sw2:x_u13:x sw1:x_u13:x sw2:x_u13:x sw1:x_u13:x sw2:x_u41:x sw1:x_u41:x
+|   |   
+|   |           voff           0           0           0           0           0           0
+|   |            von        -0.1         0.1        -0.1         0.1        -0.1         0.1
+|   |            log         1         1         1         1         1         1
+|   |           roff      1e+009      1e+009      1e+009      1e+009      1e+009      1e+009
+|   |            ron         100         100         100         100         0.1         0.1
+|   |   
+|   |   Error: Unknown name: V(iout_raw)
+操作已执行   (2026年10月26日, 16:21:58)   
+|   分析：瞬态分析   
+|   |   图表标题：5R U3 IIB SMOOTH 0.1mV ABSTOL10nA 100ms LOWMEM record90-100ms 4ch  
+|   |   分析设置
+|   |   |   初始条件：自动生成初始条件 
+|   |   |   起始时间（TSTART）：0.09 
+|   |   |   停止时间（TSTOP）：0.1   
+|   |   |   正在绘制增量（TSTEP）：5e-008
+|   |   |   最大时间步长5e-008
+|   |   执行一致性检查   
+|   |   分析得出的变量   
+|   |   |   仿真结束时显示器件值  
+|   |   |   以增量方式绘制经保存的变量 
+|   |   |   |   $iout_raw 
+|   |   |   |   $vdda 
+|   |   |   |   $vout 
+|   |   |   |   @rrs_out[i]   
+|   |   表示为 SPICE 命令
+|   |   |   begin-scope page 5R U3 IIB SMOOTH 0.1mV ABSTOL10nA 100ms LOWMEM record90-100ms 4ch  
+|   |   |   checknodes 3
+|   |   |   save $iout_raw $vdda $vout @rrs_out[i]  
+|   |   |   iplot $iout_raw $vdda $vout @rrs_out[i]   
+|   |   |   iplotExt $iout_raw[3 0] $vdda[3 0] $vout[3 0] @rrs_out[i][0 0]  
+|   |   |   DigitalThreshold 2.500000 2.500000  
+|   |   |   set reltol = 0.001  
+|   |   |   set abstol = 1e-008   
+|   |   |   set vntol = 0.0001  
+|   |   |   set trtol = 7 
+|   |   |   set chgtol = 1e-013   
+|   |   |   set itl4 = 300  
+|   |   |   set method = "trapezoidal"  
+|   |   |   set convlimit 
+|   |   |   set rshunt = 1e+012   
+|   |   |   set dynamicdc 
+|   |   |   set inertialdelay 
+|   |   |   set suposc  
+|   |   |   set rawfileformat = "Binary"
+|   |   |   -param hrange 0.09 0.1  
+|   |   |   tran  -env-options 5e-008 0.10000000000000001 0.09 5e-008 auto_ic 
+|   |   |   if-error end-scope audit-log-show 
+|   |   |   show all
+|   |   |   showmod all   
+|   |   |   write-and-destroy-iplot "C:\Users\admin\AppData\Local\Temp\NiCds\rawAE9D.tmp" 
+|   |   |   end-scope 
+|   |   结果已保存至文件：C:\Users\admin\AppData\Local\Temp\NiCds\rawAE9D.tmp
+|   |   自定义分析选项   
+|   |   |   相对错误容限: 0.001 
+|   |   |   绝对错误容限: 1e-008  
+|   |   |   电压错误容限: 0.0001  
+|   |   |   截断误差高估因数: 7   
+|   |   |   充电错误容限: 1e-013  
+|   |   |   瞬态迭代上限: 300   
+|   |   |   积分法: trapezoidal
+|   |   |   为码型启用收敛支持 
+|   |   |   模拟节点到地线的分流电阻: 1e+012
+|   |   |   动态直流步进  
+|   |   |   数字器件显示惯性延迟  
+|   |   |   Suppress numerical oscillations   
+|   |   |   Raw data file format: Binary
+|   来自分析的输出   
+|   |   v_saw:xctrl: no DC value, transient time 0 value used 
+|   |   v_ss:xctrl: no DC value, transient time 0 value used
+|   |   Starting dynamic Gmin stepping  
+|   |   Dynamic Gmin stepping completed   
+|   |    ASRC: Arbitrary Source 
+|   |    device      e1:x_md1_trigsd_u14:xu1 e1:x_md1_trigin_u14:xu1 e1:x_md2_rise2_comp:xu1 e1:x_md2_rise1_comp:xu1 e1:x_md3_dly2_comp1:xu1 e1:x_md3_dly2_comp2:xu1
+|   |              i   -2.5e-008  -1.44e-034   7.17e-018     -1e-008   5.59e-006   7.07e-014
+|   |              v           5           0           0           5           5           0
+|   |       pos_node       362       361       360       359       358       357
+|   |       neg_node         0         0         0         0         0         0
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      e1:x_md3_dly1_comp1:xu1 e1:x_md3_dly1_comp2:xu1 e_md1_trigsd_abm18:xu1 e_md1_trigin_abm18:xu1 e_md1_abm22:xu1 e_md1_abm21:xu1  
+|   |              i  -1.44e-034     -1e-008  -1.42e-007  -1.21e-007  -4.76e-022     -2e-012
+|   |              v           0           5          15          15   4.76e-010           2
+|   |       pos_node       356       355       354       350       336       335
+|   |       neg_node         0         0         0         0         0         0
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      e_md2_uvcc_opam:xu1 e_md2_uvcc_abm2:xu1 e_md2_uvcc_abm3:xu1 e_md2_rise2_abm12:xu1 e_md2_rise1_abm12:xu1 e_md3_dly2_turn_off_vth:xu1
+|   |              i     -3e-008  -6.58e-007   6.58e-007   -3.2e-013   -3.2e-013  -4.05e-012
+|   |              v           5        8.85        8.19        0.32        0.32        4.05
+|   |       pos_node       328       326       325       321       317       284
+|   |       neg_node         0         0         0         0         0         0
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      e_md3_dly2_turn_on_vth:xu1 e_md3_dly1_turn_off_vth:xu1 e_md3_dly1_turn_on_vth:xu1 e_pwm:xctrl g_ii:xctrl e_d:xctrl   
+|   |              i  -8.47e-013  -4.05e-012  -8.47e-013   1.19e-011       0.623  -2.35e-013
+|   |              v       0.847        4.05       0.847           0      -0.032       0.235
+|   |       pos_node       283       272       271         5         6       262
+|   |       neg_node         0         0         0         6       263         6
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      e_ipi:xctrl g_iv:xctrl e_iref:xctrl e_vpi:xctrl e_il:xctrl eclamp:x_u34:x_ti:xu2 
+|   |              i  -2.35e-013       0.425     -1e-012   -1.1e-012  -9.22e-005   2.59e-006
+|   |              v       0.235       0.905           1         1.1        1.08       -1.37
+|   |       pos_node       261         6       259       258       256       195
+|   |       neg_node         6       260         6         6         6       199
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      ehrneg:x_u34:x_ti:xu2 ehrpos:x_u34:x_ti:xu2 evout2neg:x_u34:x_ti:xu2 evout2pos:x_u34:x_ti:xu2 ev2:x_u34:x_ti:xu2 ev1:x_u34:x_ti:xu2
+|   |              i  -1.23e-015  -3.21e-012   5.13e-012  -8.79e-012   5.14e-012  -8.78e-012
+|   |              v       -1.63        1.58       -6.76        7.16       -6.77        7.15
+|   |       pos_node       247       246       245       244       243       242
+|   |       neg_node       199       199       199       199       199       199
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      e2:x_u34:x_ti:xu2 e1:x_u34:x_ti:xu2 evmid:x_u34:x_ti:xu2 em2:x_u34:x_ti:xu2 em1:x_u34:x_ti:xu2 evout1neg:x_u34:x_ti:xu2
+|   |              i     -4e-013  -3.06e-012  -1.63e-012    2.1e-009   3.83e-009  -1.23e-015
+|   |              v       -1.23        1.43           0   -2.1e+003  -3.83e+003       -1.63
+|   |       pos_node       241       240       239       238       237       236
+|   |       neg_node       199       199       199       199       199       199
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      evout1pos:x_u34:x_ti:xu2 er2:x_u34:x_ti:xu2 er1:x_u34:x_ti:xu2 gout:x_u17:x_ti:xu2 e1act:x_u17:x_ti:xu2 evcctest:x_u17:x_ti:xu2
+|   |              i  -3.21e-012    8.7e-011   6.09e-011    6.5e-005     -1e-012     -1e-012
+|   |              v        1.58       -88.7       -62.5          23           1           1
+|   |       pos_node       235       234       233        14       232       231
+|   |       neg_node       199       199       199       199         0         0
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      goutn:x_u20:x_ti:xu2 goutp:x_u20:x_ti:xu2 giq:x_u20:x_ti:xu2 e2:x_u13:x_ti:xu2 e1:x_u13:x_ti:xu2 g1:x_u13:x_ti:xu2   
+|   |              i  -2.59e-006           0      0.0018   1.64e-010   -2.9e-009   1.21e-006
+|   |              v        1.63        1.63        3.26         0.1        3.16        1.37
+|   |       pos_node       199         1         1       228       227       199
+|   |       neg_node         0       199         0         0         0       226
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      eout:x_u5:x_ti:xu2 gout:x_u18:x_ti:xu2 e1act:x_u18:x_ti:xu2 evcctest:x_u18:x_ti:xu2 eout:x_u35:x_ti:xu2 evicmmin:x_u35:x_ti:xu2
+|   |              i  -2.46e-011    6.5e-005     -1e-012     -1e-012  -2.63e-012     -1e-012
+|   |              v          23          23           1           1           1           1
+|   |       pos_node       198        15       225       224       223       222
+|   |       neg_node       199       199         0         0       199         0
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      evicmmax:x_u35:x_ti:xu2 en4:x_u35:x_ti:xu2 en3:x_u35:x_ti:xu2 evccmin:x_u35:x_ti:xu2 evccmax:x_u35:x_ti:xu2 en2:x_u35:x_ti:xu2   
+|   |              i     -1e-012     -1e-012     -1e-012     -1e-012     -1e-012     -1e-012
+|   |              v           1           1           1           1           1           1
+|   |       pos_node       221       220       219       218       217       216
+|   |       neg_node         0         0         0         0         0         0
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      en1:x_u35:x_ti:xu2 emeter:x_u31:x_ti:xu2 eclamp:x_u34:x_ti:xu4 ehrneg:x_u34:x_ti:xu4 ehrpos:x_u34:x_ti:xu4 evout2neg:x_u34:x_ti:xu4
+|   |              i     -1e-012  -1.63e-012  -1.04e-006  -9.08e-016  -3.21e-012   5.14e-012
+|   |              v           1  -2.59e-006       0.532       -1.63        1.58       -6.77
+|   |       pos_node       215       214       129       181       180       179
+|   |       neg_node         0       199       133       133       133       133
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      evout2pos:x_u34:x_ti:xu4 ev2:x_u34:x_ti:xu4 ev1:x_u34:x_ti:xu4 e2:x_u34:x_ti:xu4 e1:x_u34:x_ti:xu4 evmid:x_u34:x_ti:xu4
+|   |              i  -8.78e-012   5.14e-012  -8.78e-012     -4e-013  -3.06e-012  -1.63e-012
+|   |              v        7.15       -6.77        7.15       -1.23        1.43           0
+|   |       pos_node       178       177       176       175       174       173
+|   |       neg_node       133       133       133       133       133       133
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      em2:x_u34:x_ti:xu4 em1:x_u34:x_ti:xu4 evout1neg:x_u34:x_ti:xu4 evout1pos:x_u34:x_ti:xu4 er2:x_u34:x_ti:xu4 er1:x_u34:x_ti:xu4  
+|   |              i    2.1e-009   3.83e-009  -9.08e-016  -3.21e-012    8.7e-011   6.09e-011
+|   |              v   -2.1e+003  -3.83e+003       -1.63        1.58       -88.7       -62.5
+|   |       pos_node       172       171       170       169       168       167
+|   |       neg_node       133       133       133       133       133       133
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      gout:x_u17:x_ti:xu4 e1act:x_u17:x_ti:xu4 evcctest:x_u17:x_ti:xu4 goutn:x_u20:x_ti:xu4 goutp:x_u20:x_ti:xu4 giq:x_u20:x_ti:xu4  
+|   |              i    6.5e-005     -1e-012     -1e-012           0   1.04e-006      0.0018
+|   |              v        3.41           1           1        1.63        1.63        3.26
+|   |       pos_node        18       166       165       133         1         1
+|   |       neg_node       133         0         0         0       133         0
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      e2:x_u13:x_ti:xu4 e1:x_u13:x_ti:xu4 g1:x_u13:x_ti:xu4 eout:x_u5:x_ti:xu4 gout:x_u18:x_ti:xu4 e1act:x_u18:x_ti:xu4  
+|   |              i   2.06e-009     -1e-009   6.43e-006  -5.05e-012    6.5e-005     -1e-012
+|   |              v         0.1        3.16      -0.532        3.42        3.43           1
+|   |       pos_node       162       161       133       132        19       159
+|   |       neg_node         0         0       160       133       133         0
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      evcctest:x_u18:x_ti:xu4 eout:x_u35:x_ti:xu4 evicmmin:x_u35:x_ti:xu4 evicmmax:x_u35:x_ti:xu4 en4:x_u35:x_ti:xu4 en3:x_u35:x_ti:xu4  
+|   |              i     -1e-012  -2.63e-012     -1e-012     -1e-012     -1e-012     -1e-012
+|   |              v           1           1           1           1           1           1
+|   |       pos_node       158       157       156       155       154       153
+|   |       neg_node         0       133         0         0         0         0
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      evccmin:x_u35:x_ti:xu4 evccmax:x_u35:x_ti:xu4 en2:x_u35:x_ti:xu4 en1:x_u35:x_ti:xu4 emeter:x_u31:x_ti:xu4 e4:x_u41:x_ti:xu3
+|   |              i     -1e-012     -1e-012     -1e-012     -1e-012  -1.63e-012   1.85e-009
+|   |              v           1           1           1           1   1.04e-006         0.1
+|   |       pos_node       152       151       150       149       148       122
+|   |       neg_node         0         0         0         0       133         0
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      e3:x_u41:x_ti:xu3 e2:x_u41:x_ti:xu3 e1:x_u41:x_ti:xu3 e1out:x_u41:x_ti:xu3 g1n:x_u41:x_ti:xu3 g1p:x_u41:x_ti:xu3 
+|   |              i  -1.22e-009   1.21e-009  -1.85e-009  -9.99e-013   9.17e-009   9.17e-009
+|   |              v        3.16         0.1        3.16      -0.631       0.315       0.316
+|   |       pos_node       121       120       119        51       118        22
+|   |       neg_node         0         0         0        22        22       117
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      eout:x_u42:x_ti:xu3 goutn:x_u43:x_ti:xu3 goutp:x_u43:x_ti:xu3 esgniout:x_u43:x_ti:xu3 giq:x_u43:x_ti:xu3 eiq3_act:x_u43:x_ti:xu3 
+|   |              i      -0.001           0   9.99e-013     -1e-012    0.000313           0
+|   |              v           1        1.63        1.63           1        3.26           0
+|   |       pos_node        39        22         1       116         1       115
+|   |       neg_node        22         0        22         0         0         0
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      eiq2_act:x_u43:x_ti:xu3 eiq1_act:x_u43:x_ti:xu3 eiq3:x_u43:x_ti:xu3 eiq2:x_u43:x_ti:xu3 eiq1:x_u43:x_ti:xu3 ez3:x_u43:x_ti:xu3   
+|   |              i  -3.13e-016           0  -2.04e-016  -3.13e-016   -2.3e-016      1e-012
+|   |              v    0.000313           0    0.000204    0.000313     0.00023          -1
+|   |       pos_node       114       113       112       111       110       109
+|   |       neg_node         0         0         0         0         0         0
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      ez2:x_u43:x_ti:xu3 ez1:x_u43:x_ti:xu3 gout1:x_u17:x_ti:xu3 gout2:x_u17:x_ti:xu3 e1act:x_u17:x_ti:xu3 evcctest:x_u17:x_ti:xu3 
+|   |              i     -1e-012     -1e-012      6e-005   7.52e-006     -1e-012     -1e-012
+|   |              v           1           1        3.36        3.36           1           1
+|   |       pos_node       108       107        17        17       104       103
+|   |       neg_node         0         0        22        22         0         0
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      eout:x_u5:x_ti:xu3 gout1:x_u18:x_ti:xu3 gout2:x_u18:x_ti:xu3 e1act:x_u18:x_ti:xu3 evcctest:x_u18:x_ti:xu3 g1:xzo_src:x_u101:x_ti:xu3 
+|   |              i  -5.01e-012      6e-005   7.52e-006     -1e-012     -1e-012          11
+|   |              v        3.38        3.41        3.41           1           1         -11
+|   |       pos_node        31        18        18        81        80         0
+|   |       neg_node        22        22        22         0         0        69
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      emeter:x_u31:x_ti:xu3 eout:x_u39:x_ti:xu3 evicmmin:x_u39:x_ti:xu3 evicmmax:x_u39:x_ti:xu3 en4:x_u39:x_ti:xu3 en3:x_u39:x_ti:xu3
+|   |              i  -1.63e-012  -7.92e-012     -1e-012     -1e-012     -1e-012     -1e-012
+|   |              v   9.99e-013           1           1           1           1           1
+|   |       pos_node        68        26        62        61        60        59
+|   |       neg_node        22        22         0         0         0         0
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      evccmin:x_u39:x_ti:xu3 evccmax:x_u39:x_ti:xu3 en2:x_u39:x_ti:xu3 en1:x_u39:x_ti:xu3 eclamp:x_u40:x_ti:xu3 ehrneg:x_u40:x_ti:xu3
+|   |              i     -1e-012     -1e-012     -1e-012     -1e-012  -9.99e-013     -2e-014
+|   |              v           1           1           1           1      -0.631       -1.61
+|   |       pos_node        58        57        56        55        49        48
+|   |       neg_node         0         0         0         0        22        22
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      ehrpos:x_u40:x_ti:xu3 evout2neg:x_u40:x_ti:xu3 evout2pos:x_u40:x_ti:xu3 er2:x_u40:x_ti:xu3 ev2:x_u40:x_ti:xu3 evout1neg:x_u40:x_ti:xu3   
+|   |              i  -3.24e-012   5.23e-013  -3.78e-012  -1.09e-010  -3.78e-012     -2e-014
+|   |              v        1.61       -2.15        2.15         108        2.15       -1.61
+|   |       pos_node        47        46        45        44        43        42
+|   |       neg_node        22        22        22        22        22        22
+|   |   
+|   |    ASRC: Arbitrary Source 
+|   |    device      evout1pos:x_u40:x_ti:xu3 er1:x_u40:x_ti:xu3
+|   |              i  -3.24e-012  -7.54e-011
+|   |              v        1.61        73.8
+|   |       pos_node        41        40
+|   |       neg_node        22        22
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      cap:xq1 cap:xq2 c1:x_md1_trigsd_u14:xu1 c1:x_md1_trigin_u14:xu1 c1:x_md2_rise2_comp:xu1 c1:x_md2_rise1_comp:xu1
+|   |    model                c           c           c           c           c           c   
+|   |              C   3.87e-009   3.87e-009      1e-011      1e-011      1e-011      1e-011
+|   |              i  -2.49e-014       0.147   1.97e-018    7.2e-035  -3.59e-018   2.49e-018
+|   |              p   4.38e-024       0.113   9.84e-018  -1.04e-068  -2.57e-035   1.25e-017
+|   |         charge  -6.81e-019   2.98e-009      5e-011  -1.44e-045   7.17e-029      5e-011
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      c1:x_md3_dly2_comp1:xu1 c1:x_md3_dly2_comp2:xu1 c1:x_md3_dly1_comp1:xu1 c1:x_md3_dly1_comp2:xu1 c_md1_trigsd_c:xu1 c_md1_inv2_c:xu1
+|   |    model                c           c           c           c           c           c   
+|   |              C      1e-011      1e-011      1e-011      1e-011      1e-011      1e-012
+|   |              i   -2.8e-006  -3.53e-014    7.2e-035   2.49e-018  -1.97e-018   3.18e-024
+|   |              p   -1.4e-005   -2.5e-027  -1.04e-068   1.25e-017   9.84e-018  -4.78e-029
+|   |         charge      5e-011   7.07e-025  -1.44e-045      5e-011     -5e-011   -1.5e-017
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      c_md1_trigin_c:xu1 c_md1_inv1_c:xu1 c_md1_inv3_c:xu1 c_md2_inv6_c:xu1 c_md2_inv5_c:xu1 c_md2_uvcc_c3:xu1 
+|   |    model                c           c           c           c           c           c   
+|   |              C      1e-011      1e-012      1e-012      1e-012      1e-012      1e-011
+|   |              i   -7.2e-035   5.42e-020  -7.38e-019   3.54e-019   1.06e-024  -1.33e-018
+|   |              p  -1.04e-068  -2.71e-019   3.69e-018  -1.77e-018  -1.59e-029   6.66e-018
+|   |         charge   1.44e-045     -5e-012     -5e-012     -5e-012   -1.5e-017     -5e-011
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      c_md2_uvcc_c2:xu1 c_md2_uvcc_c1:xu1 c_md2_inv3_c:xu1 c_md2_rise2_c0:xu1 c_md2_rise2_c1:xu1 c_md2_rise1_c0:xu1  
+|   |    model                c           c           c           c           c           c   
+|   |              C      1e-008      1e-008      1e-012      1e-008      1e-011      1e-008
+|   |              i  -8.06e-015   7.93e-015  -1.35e-025     0.00566   3.59e-018   2.36e-015
+|   |              p   5.31e-021  -5.22e-015   2.03e-030   -0.000641  -2.57e-035  -1.18e-014
+|   |         charge  -6.58e-015  -6.58e-009   -1.5e-017  -1.13e-009  -7.17e-029     -5e-008
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      c_md2_rise1_c1:xu1 c_md2_inv4_c:xu1 c_md2_inv2_c:xu1 c_md2_inv1_c:xu1 c_md2_c3:xu1 c_md2_c2:xu1
+|   |    model                c           c           c           c           c           c   
+|   |              C      1e-011      1e-012      1e-012      1e-012      1e-011      1e-011
+|   |              i  -2.49e-018   5.42e-020  -5.49e-026   5.42e-020  -4.31e-017   1.14e-018
+|   |              p   1.25e-017  -2.71e-019   8.24e-031  -2.71e-019   2.58e-021  -5.71e-018
+|   |         charge     -5e-011     -5e-012   -1.5e-017     -5e-012     -6e-016     -5e-011
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      c_md2_c4:xu1 c_md2_c1:xu1 c_md5_inv_c:xu1 c_md5_c1:xu1 c_md4_inv_c:xu1 c_md4_c1:xu1
+|   |    model                c           c           c           c           c           c   
+|   |              C      1e-011      1e-011      1e-012      1e-011      1e-012      1e-011
+|   |              i   3.02e-018   6.92e-024  -5.01e-008    -0.00029  -3.79e-019   1.26e-005
+|   |              p  -1.51e-017  -1.04e-028   7.44e-013     0.00089    1.9e-018  -8.19e-007
+|   |         charge     -5e-011   -1.5e-016  -1.48e-017  -3.06e-011     -5e-012  -6.49e-013
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      c_md3_dly2_c2:xu1 c_md3_dly2_c4:xu1 c_md3_dly2_c3:xu1 c_md3_dly2_c1:xu1 c_md3_dly2_c0:xu1 c_md3_dly1_c2:xu1
+|   |    model                c           c           c           c           c           c   
+|   |              C      1e-011      1e-011      1e-011      1e-011      1e-008      1e-011
+|   |              i   3.53e-014   4.49e-006  -8.19e-007    2.8e-006      0.0657  -2.49e-018
+|   |              p   -2.5e-027  -2.24e-005   6.88e-013   -1.4e-005     -0.0432   1.25e-017
+|   |         charge  -7.07e-025     -5e-011  -8.41e-018     -5e-011  -6.57e-009     -5e-011
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      c_md3_dly1_c4:xu1 c_md3_dly1_c3:xu1 c_md3_dly1_c1:xu1 c_md3_dly1_c0:xu1 c_md3_c2:xu1 c_md3_c1:xu1  
+|   |    model                c           c           c           c           c           c   
+|   |              C      1e-011      1e-011      1e-011      1e-008      1e-011      1e-011
+|   |              i   3.72e-025  -2.07e-018   -7.2e-035   -0.000243   4.49e-006   3.72e-025
+|   |              p  -4.64e-031   1.03e-017  -1.04e-068     0.00121  -2.24e-005  -4.64e-031
+|   |         charge  -1.25e-017     -5e-011   1.44e-045     -5e-008     -5e-011  -1.25e-017
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      c_ii:xctrl c_iv:xctrl c_il:xctrl c3:x_u32:x_ti:xu2 c2:x_u32:x_ti:xu2 c1:x_u32:x_ti:xu2   
+|   |    model                c           c           c           c           c           c   
+|   |              C           1           1      1e-008      1e-015      1e-015      1e-015
+|   |              i       0.623       0.425   9.22e-005           0  -6.08e-014  -6.08e-014
+|   |              p        0.02      -0.385   9.11e-005           0  -9.48e-014  -9.48e-014
+|   |         charge       0.032      -0.905   9.88e-009           0   1.56e-015   1.56e-015
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      c2:x_u33:x_ti:xu2 cg1d:x_u13:x_ti:xu2 cp4:x_u12:x_ti:xu2 cp3:x_u12:x_ti:xu2 cp2:x_u12:x_ti:xu2 cp1:x_u12:x_ti:xu2  
+|   |    model                c           c           c           c           c           c   
+|   |              C      1e-011   3.33e-010   1.59e-014   1.59e-014   1.59e-014   1.59e-011
+|   |              i  -5.71e-014   1.22e-006   6.23e-011   6.23e-011   6.23e-011   6.23e-008
+|   |              p  -1.86e-013  -1.66e-006  -8.51e-011  -8.51e-011  -8.51e-011  -8.51e-008
+|   |         charge   3.26e-011  -4.56e-010  -2.17e-014  -2.17e-014  -2.17e-014  -2.17e-011
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      c3:x_u32:x_ti:xu4 c2:x_u32:x_ti:xu4 c1:x_u32:x_ti:xu4 c2:x_u33:x_ti:xu4 cg1d:x_u13:x_ti:xu4 cp4:x_u12:x_ti:xu4   
+|   |    model                c           c           c           c           c           c   
+|   |              C      1e-015      1e-015      1e-015      1e-011   3.33e-010   1.59e-014
+|   |              i           0  -3.12e-013  -3.12e-013  -5.71e-014   6.43e-006   3.29e-010
+|   |              p           0  -5.13e-013  -5.13e-013  -1.86e-013   3.42e-006   1.75e-010
+|   |         charge           0   1.64e-015   1.64e-015   3.26e-011   1.77e-010   8.47e-015
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      cp3:x_u12:x_ti:xu4 cp2:x_u12:x_ti:xu4 cp1:x_u12:x_ti:xu4 cg1dn:x_u41:x_ti:xu3 cg1dp:x_u41:x_ti:xu3 c3:x_u37:x_ti:xu3 
+|   |    model                c           c           c           c           c           c   
+|   |              C   1.59e-014   1.59e-014   1.59e-011      8e-010      8e-010      1e-015
+|   |              i   3.29e-010   3.29e-010   3.29e-007  -9.92e-009   9.92e-009           0
+|   |              p   1.75e-010   1.75e-010   1.75e-007  -3.13e-009  -3.13e-009           0
+|   |         charge   8.47e-015   8.47e-015   8.47e-012   2.52e-010  -2.52e-010           0
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      c2:x_u37:x_ti:xu3 c1:x_u37:x_ti:xu3 c_c7:x_u100:x_ti:xu3 c_c4:x_u100:x_ti:xu3 c_c5:x_u100:x_ti:xu3 c_c6:x_u100:x_ti:xu3
+|   |    model                c           c           c           c           c           c   
+|   |              C      1e-015      1e-015      4e-008      2e-006      1e-007         796
+|   |              i   1.58e-013   1.58e-013   4.97e-007    0.000202   1.06e-005   -0.000409
+|   |              p   7.59e-013   7.59e-013  -1.19e-007    0.000787  -2.54e-006   9.73e-006
+|   |         charge    4.8e-015    4.8e-015  -9.57e-009    7.8e-006  -2.39e-008       -18.9
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      c1:x_u101:x_ti:xu3 c2:x_u101:x_ti:xu3 c1b:x_u101:x_ti:xu3 c1a:x_u101:x_ti:xu3 cp4:x_u12:x_ti:xu3 cp3:x_u12:x_ti:xu3
+|   |    model                c           c           c           c           c           c   
+|   |              C   5.31e-011   1.59e-013   5.31e-011   1.59e-008   1.59e-014   1.59e-014
+|   |              i  -4.33e-009  -4.23e-011  -4.15e-007  -1.17e-005    3.9e-013    3.9e-013
+|   |              p   4.76e-008   4.64e-010   4.56e-006   7.71e-005  -2.46e-013  -2.46e-013
+|   |         charge  -5.83e-010  -1.75e-012  -5.83e-010  -1.05e-007     -1e-014     -1e-014
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      cp2:x_u12:x_ti:xu3 cp1:x_u12:x_ti:xu3 c_c4:x_ti:xu3 c_c1:x_ti:xu3 c_c2:x_ti:xu3 c_c3:x_ti:xu3  
+|   |    model                c           c           c           c           c           c   
+|   |              C   1.59e-014   1.59e-011      3e-009           1           1           1
+|   |              i    3.9e-013    3.9e-010   3.25e-016   -0.000184     0.00036    0.000177
+|   |              p  -2.46e-013  -2.46e-010  -3.25e-016    0.000598     0.00117   1.22e-009
+|   |         charge     -1e-014     -1e-011     -3e-009       -3.26        3.26   6.91e-006
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      cc4 cc3 cc1 cc2 cc_boot cc5
+|   |    model                c           c           c           c           c           c   
+|   |              C      1e-005     0.00047     0.00047      1e-006      1e-006      1e-007
+|   |              i     0.00166      0.0781       0.264    0.000562     -0.0957   1.54e-014
+|   |              p     0.00837       0.393        6.51      0.0139        1.11   1.85e-013
+|   |         charge   5.04e-005     0.00237      0.0116   2.46e-005  -1.16e-005    1.2e-006
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      cc6 cc_a1 cc_a2 cc_a3 cc_u2 cc_u4  
+|   |    model                c           c           c           c           c           c   
+|   |              C      1e-005      1e-006      1e-007      1e-005      1e-007      1e-007
+|   |              i  -1.64e-012  -5.71e-009  -5.71e-010  -5.71e-008  -5.71e-010  -5.71e-010
+|   |              p  -1.97e-011  -1.86e-008  -1.86e-009  -1.86e-007  -1.86e-009  -1.86e-009
+|   |         charge     0.00012   3.26e-006   3.26e-007   3.26e-005   3.26e-007   3.26e-007
+|   |   
+|   |    Capacitor: Fixed capacitor   
+|   |    device      cc_u3  
+|   |    model                c   
+|   |              C      1e-007
+|   |              i  -5.71e-010
+|   |              p  -1.86e-009
+|   |         charge   3.26e-007
+|   |   
+|   |    CCCS: Current controlled current source
+|   |    device      fi1:xq1 fi2:xq1 fi1:xq2 fi2:xq2
+|   |              i   2.52e-011   -0.000319       0.147      0.0011
+|   |              v       -25.2       -25.2        1.01        1.01
+|   |              p  -6.35e-010     0.00805       0.148     0.00111
+|   |   
+|   |    Diode: Junction Diode model
+|   |    device      d4:xq1 d3:xq1 d2:xq1 d1:xq1 d4:xq2 d3:xq2  
+|   |    model          md3:xq1     md2:xq1     md1:xq1      md:xq1     md3:xq2     md2:xq2   
+|   |             vd       -25.2       -25.2       -25.2       -25.3       0.237       0.235
+|   |             id  -1.25e-010  -1.25e-010   -0.000319  -1.91e-007       0.915       0.769
+|   |             gd      1e-012      1e-012      0.0708      0.0823        88.5        74.3
+|   |             cd           0           0   1.56e-010   1.81e-010           0           0
+|   |   
+|   |    Diode: Junction Diode model
+|   |    device      d2:xq2 d1:xq2 dgr:xd1 ddio:xd1 d_md4_d5:xu1 d_md4_d4:xu1 
+|   |    model          md1:xq2      md:xq2     grd:xd1    legd:xd1 diode625:xu diode625:xu   
+|   |             vd       0.236       0.695       0.362       0.351       -10.9       0.702
+|   |             id      0.0011        0.83   6.43e-009       0.266  -1.09e-011     0.00605
+|   |             gd        1.01          24   2.78e-007        8.14      1e-012       0.234
+|   |             cd   2.22e-009   1.72e-009           0   7.49e-010           0           0
+|   |   
+|   |    Diode: Junction Diode model
+|   |    device      d_md1_d3:xu1 d_md1_d1:xu1 d_md1_d2:xu1 d_md1_d4:xu1 d_md1_d5:xu1 d_md5_d1:xu1  
+|   |    model      diode25:xu1 diode25:xu1 diode25:xu1 diode25:xu1 diode25:xu1 diode25:xu1   
+|   |             vd         -12         -12  -1.19e-009        -3.3        -8.7         -12
+|   |             id   -1.2e-011   -1.2e-011  -1.65e-021  -3.31e-012  -8.71e-012   -1.2e-011
+|   |             gd      1e-012      1e-012   1.39e-012      1e-012      1e-012      1e-012
+|   |             cd           0           0           0           0           0           0
+|   |   
+|   |    Diode: Junction Diode model
+|   |    device      d_md5_d2:xu1 d_md5_d3:xu1 d_md4_d2:xu1 d_md4_d1:xu1 d_md4_d3:xu1 d2:x_u32:x_ti:xu2   
+|   |    model      diode25:xu1 diode25:xu1 diode25:xu1 diode25:xu1 diode25:xu1 dvn:x_u32:x   
+|   |             vd       -3.06       -8.94     -0.0649       -11.6       -11.5       0.834
+|   |             id  -3.07e-012  -8.95e-012  -7.41e-014  -1.16e-011  -1.15e-011        0.01
+|   |             gd      1e-012      1e-012   1.03e-012      1e-012      1e-012       0.387
+|   |             cd           0           0           0           0           0           0
+|   |   
+|   |    Diode: Junction Diode model
+|   |    device      d1:x_u32:x_ti:xu2 d2:x_u32:x_ti:xu4 d1:x_u32:x_ti:xu4 d2:x_u37:x_ti:xu3 d1:x_u37:x_ti:xu3 d_d1:x_ti:xu3
+|   |    model      dvn:x_u32:x dvn:x_u32:x dvn:x_u32:x dvn:x_u37:x dvn:x_u37:x dideal:x_ti   
+|   |             vd       0.834       0.834       0.834       0.834       0.834  -2.63e-009
+|   |             id        0.01        0.01        0.01        0.01        0.01  -3.65e-021
+|   |             gd       0.387       0.387       0.387       0.387       0.387   1.39e-012
+|   |             cd           0           0           0           0           0           0
+|   |   
+|   |    Diode: Junction Diode model
+|   |    device      dd_boot
+|   |    model      uf4007/vsh_   
+|   |             vd        1.09
+|   |             id      0.0957
+|   |             gd         112
+|   |             cd   2.44e-007
+|   |   
+|   |    Inductor: Inductors
+|   |    device      l1:x_u33:x_ti:xu2 l_l1:x_ti:xu2 l1:x_u33:x_ti:xu4 l_l1:x_ti:xu4 l1:x_u36:x_ti:xu3 l1:x_u38:x_ti:xu3
+|   |    model                l           l           l           l           l           l   
+|   |              L    0.000531      0.0004    0.000531      0.0004   4.74e-006    0.000122
+|   |           flux   1.73e-009    2.3e-009   1.73e-009   3.42e-010   2.26e-010   2.24e-009
+|   |              v  -3.03e-012   4.99e-008  -3.03e-012  -1.61e-008   1.11e-008  -3.93e-012
+|   |              i   3.26e-006   5.75e-006   3.26e-006   8.55e-007   4.78e-005   1.83e-005
+|   |              p  -9.89e-018   2.87e-013  -9.89e-018  -1.38e-014   5.29e-013  -7.21e-017
+|   |   
+|   |    Inductor: Inductors
+|   |    device      ll1
+|   |    model                l   
+|   |              L     0.00022
+|   |           flux    0.000238
+|   |              v       -5.77
+|   |              i        1.08
+|   |              p       -6.23
+|   |   
+|   |    Isource: Independent current source
+|   |    device      i2:x_u32:x_ti:xu2 i1:x_u32:x_ti:xu2 i2:x_u32:x_ti:xu4 i1:x_u32:x_ti:xu4 i2:x_u37:x_ti:xu3 i1:x_u37:x_ti:xu3
+|   |             dc        0.01        0.01        0.01        0.01        0.01        0.01
+|   |          acmag           0           0           0           0           0           0
+|   |              v      -0.834      -0.834      -0.834      -0.834      -0.834      -0.834
+|   |              p    -0.00834    -0.00834    -0.00834    -0.00834    -0.00834    -0.00834
+|   |              i        0.01        0.01        0.01        0.01        0.01        0.01
+|   |   
+|   |    Mos1: Level 1 MOSfet model with Meyer capacitance model
+|   |    device      m1:xq1 m1:xq2  
+|   |    model           mm:xq1      mm:xq2   
+|   |              l      0.0001      0.0001
+|   |              w      0.0001      0.0001
+|   |             id   3.62e-006   -6.8e-005
+|   |             is     0.00252     -0.0474
+|   |             ig    -0.00252      0.0474
+|   |             ib  -2.53e-011   7.02e-013
+|   |            vgs       0.105       0.304
+|   |            vds        25.3      -0.702
+|   |            vbs           0           0
+|   |            von        3.56        3.56
+|   |          vdsat           0           0
+|   |             rs           0           0
+|   |             rd           0           0
+|   |             rg           0           0
+|   |             rb           0           0
+|   |            rds           0        1.#J
+|   |             gm           0           0
+|   |            gds           0           0
+|   |            gmb           0           0
+|   |            cbd           0           0
+|   |            cbs           0           0
+|   |            cgs           0           0
+|   |            cgd           0           0
+|   |            cgb           0           0
+|   |           cbd0           0           0
+|   |         cbdsw0           0           0
+|   |           cbs0           0           0
+|   |         cbssw0           0           0
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rcap:xq1 rl:xq1 rg:xq1 rd:xq1 rds:xq1 rs:xq1 
+|   |    model                r           r           r           r           r           r   
+|   |              R           1           1         4.1     0.00623      1e+006      0.0252
+|   |              i  -1.76e-010   -0.000319    -0.00284   -0.000323  -2.53e-005    -0.00252
+|   |              p   3.09e-020   1.02e-007   3.31e-005   6.48e-010    0.000641    1.6e-007
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rcap:xq2 rl:xq2 rg:xq2 rd:xq2 rds:xq2 rs:xq2 
+|   |    model                r           r           r           r           r           r   
+|   |              R           1           1         4.1     0.00623      1e+006      0.0252
+|   |              i       0.768        0.77       0.196       0.148   7.02e-007      0.0474
+|   |              p        0.59       0.593       0.157    0.000137   4.92e-007   5.65e-005
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r1:xf1 r1:x_md1_trigsd_u14:xu1 r1:x_md1_trigin_u14:xu1 r1:x_md2_rise2_comp:xu1 r1:x_md2_rise1_comp:xu1 r1:x_md3_dly2_comp1:xu1   
+|   |    model                r           r           r           r           r           r   
+|   |              R       0.001           1           1           1           1           1
+|   |              i       0.266    2.5e-008   1.44e-034  -7.17e-018      1e-008  -5.59e-006
+|   |              p   7.05e-005   6.25e-016   2.08e-068   5.15e-035      1e-016   3.13e-011
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r1:x_md3_dly2_comp2:xu1 r1:x_md3_dly1_comp1:xu1 r1:x_md3_dly1_comp2:xu1 r_md1_trigsd_r1:xu1 r_md1_trigsd_r3:xu1 r_md1_trigsd_r2:xu1
+|   |    model                r           r           r           r           r           r   
+|   |              R           1           1           1      1e+008   1.83e+007   5.62e+006
+|   |              i  -7.07e-014   1.44e-034      1e-008  -1.42e-007  -7.76e-015  -1.42e-007
+|   |              p   4.99e-027   2.08e-068      1e-016   2.02e-006    1.1e-021   1.13e-007
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rs_md1_trigsd_p:xu1 rs_md1_inv2_n:xu1 rs_md1_inv2_p:xu1 r_md1_trigin_r1:xu1 r_md1_trigin_r3:xu1 r_md1_trigin_r2:xu1
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+009      1e+009      1e+009      1e+008   1.83e+007   5.62e+006
+|   |              i      5e-009      5e-009      5e-009  -1.21e-007  -1.21e-007  -1.21e-007
+|   |              p    2.5e-008    2.5e-008    2.5e-008   1.47e-006   2.67e-007   8.24e-008
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rs_md1_trigin_p:xu1 rs_md1_inv1_n:xu1 rs_md1_inv1_p:xu1 rs_md1_nand2_n2:xu1 rs_md1_nand2_p2:xu1 rs_md1_nand2_n1:xu1
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+009      1e+009      1e+009      1e+009      1e+009      1e+009
+|   |              i  -1.44e-043  -1.44e-043  -1.44e-043      5e-009      5e-009      5e-009
+|   |              p   2.08e-077   2.08e-077   2.08e-077    2.5e-008    2.5e-008    2.5e-008
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rs_md1_nand2_p1:xu1 rs_md1_nand1_n2:xu1 rs_md1_nand1_p2:xu1 rs_md1_nand1_n1:xu1 rs_md1_nand1_p1:xu1 rs_md1_inv3_n:xu1  
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+009      1e+009      1e+009      1e+009      1e+009      1e+009
+|   |              i      5e-009      5e-009  -1.44e-043  -1.44e-043      5e-009      6e-014
+|   |              p    2.5e-008    2.5e-008   2.08e-077   2.08e-077    2.5e-008    3.6e-018
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rs_md1_inv3_p:xu1 r_md1_r2:xu1 r_md1_r1:xu1 r_md1_r3:xu1 rs_md2_nand2_n2:xu1 rs_md2_nand2_n1:xu1 
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+009   1.67e+006      1e+005      5e+006      1e+009      1e+009
+|   |              i      6e-014  -7.13e-016    -0.00012  -1.74e-006      5e-009      5e-009
+|   |              p    3.6e-018   8.48e-025     0.00144   1.51e-005    2.5e-008    2.5e-008
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rs_md2_nand2_p2:xu1 rs_md2_nand2_p1:xu1 rs_md2_inv6_n:xu1 rs_md2_inv6_p:xu1 rs_md2_inv5_n:xu1 rs_md2_inv5_p:xu1
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+009      1e+009      1e+009      1e+009      1e+009      1e+009
+|   |              i      5e-009      5e-009      6e-014      6e-014      5e-009      5e-009
+|   |              p    2.5e-008    2.5e-008    3.6e-018    3.6e-018    2.5e-008    2.5e-008
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rs_md2_nand1_n2:xu1 rs_md2_nand1_n1:xu1 rs_md2_nand1_p2:xu1 rs_md2_nand1_p1:xu1 rs_md2_uvcc_n:xu1 rs_md2_uvcc_p:xu1
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+009      1e+009      1e+009      1e+009      1e+009      1e+009
+|   |              i    1.5e-014      5e-009      5e-009    1.5e-014      5e-009      5e-009
+|   |              p   2.25e-019    2.5e-008    2.5e-008   2.25e-019    2.5e-008    2.5e-008
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rs_md2_inv3_n:xu1 rs_md2_inv3_p:xu1 rs_md2_rise2_n:xu1 rs_md2_rise2_p:xu1 rs_md2_rise1_n:xu1 rs_md2_rise1_p:xu1
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+009      1e+009      1e+009      1e+009      1e+009      1e+009
+|   |              i      5e-009      5e-009      5e-009      5e-009   1.25e-015   1.25e-015
+|   |              p    2.5e-008    2.5e-008    2.5e-008    2.5e-008   1.56e-021   1.56e-021
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rs_md2_nor2_n2:xu1 rs_md2_nor2_n1:xu1 rs_md2_nor2_p2:xu1 rs_md2_nor2_p1:xu1 rs_md2_nor1_n2:xu1 rs_md2_nor1_n1:xu1  
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+009      1e+009      1e+009      1e+009      1e+009      1e+009
+|   |              i    1.5e-014    1.5e-014    1.5e-014    1.5e-014      5e-009      5e-009
+|   |              p   2.25e-019   2.25e-019   2.25e-019   2.25e-019    2.5e-008    2.5e-008
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rs_md2_nor1_p2:xu1 rs_md2_nor1_p1:xu1 rs_md2_inv4_n:xu1 rs_md2_inv4_p:xu1 rs_md2_inv2_n:xu1 rs_md2_inv2_p:xu1  
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+009      1e+009      1e+009      1e+009      1e+009      1e+009
+|   |              i      5e-009      5e-009   7.17e-027   7.17e-027      5e-009      5e-009
+|   |              p    2.5e-008    2.5e-008   5.15e-044   5.15e-044    2.5e-008    2.5e-008
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rs_md2_inv1_n:xu1 rs_md2_inv1_p:xu1 rs_md5_inv_n:xu1 rs_md5_inv_p:xu1 rs_md5_ols_n:xu1 rs_md5_ols_p:xu1
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+009      1e+009      1e+009      1e+009      1e+009      1e+009
+|   |              i    1.5e-014    1.5e-014      5e-009      5e-009   1.48e-014   1.48e-014
+|   |              p   2.25e-019   2.25e-019    2.5e-008    2.5e-008   2.21e-019   2.21e-019
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r_md5_ols_r2:xu1 r_md5_ols_r1:xu1 rs_md4_inv_n:xu1 rs_md4_inv_p:xu1 rs_md4_ohs_n:xu1 rs_md4_ohs_p:xu1  
+|   |    model                r           r           r           r           r           r   
+|   |              R        22.8        45.6      1e+009      1e+009      1e+009      1e+009
+|   |              i  -3.06e-008      -0.196   1.25e-015   1.25e-015      5e-009      5e-009
+|   |              p   2.14e-014        1.75   1.56e-021   1.56e-021    2.5e-008    2.5e-008
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r_md4_ohs_r2:xu1 r_md4_ohs_r1:xu1 r_md4_r1:xu1 rs_md3_dly2_n4:xu1 rs_md3_dly2_n2:xu1 rs_md3_dly2_n3:xu1
+|   |    model                r           r           r           r           r           r   
+|   |              R        22.8        45.6      5e+005      1e+009      1e+009      1e+009
+|   |              i    -0.00285  -1.15e-007  -2.32e-005   8.41e-016      5e-009   7.07e-023
+|   |              p    0.000185   6.06e-013    0.000269   7.07e-022    2.5e-008   4.99e-036
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rs_md3_dly2_p4:xu1 rs_md3_dly2_p3:xu1 rs_md3_dly2_n0:xu1 rs_md3_dly2_p0:xu1 rs_md3_dly2_n1:xu1 rs_md3_dly2_p2:xu1  
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+009      1e+009      1e+009      1e+009      1e+009      1e+009
+|   |              i   7.07e-023   8.41e-016      5e-009      5e-009      5e-009      5e-009
+|   |              p   4.99e-036   7.07e-022    2.5e-008    2.5e-008    2.5e-008    2.5e-008
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rs_md3_dly2_p1:xu1 rs_md3_dly1_n4:xu1 rs_md3_dly1_n2:xu1 rs_md3_dly1_n3:xu1 rs_md3_dly1_p4:xu1 rs_md3_dly1_p3:xu1  
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+009      1e+009      1e+009      1e+009      1e+009      1e+009
+|   |              i      5e-009      5e-009  -1.44e-043      5e-009      5e-009      5e-009
+|   |              p    2.5e-008    2.5e-008   2.08e-077    2.5e-008    2.5e-008    2.5e-008
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rs_md3_dly1_n0:xu1 rs_md3_dly1_p0:xu1 rs_md3_dly1_n1:xu1 rs_md3_dly1_p2:xu1 rs_md3_dly1_p1:xu1 r_ii:xctrl  
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+009      1e+009      1e+009      1e+009      1e+009      1e+009
+|   |              i    1.5e-014    1.5e-014   1.25e-015   1.25e-015  -1.44e-043    3.2e-011
+|   |              p   2.25e-019   2.25e-019   1.56e-021   1.56e-021   2.08e-077   1.03e-012
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r_iv:xctrl r_il:xctrl r7:x_u32:x_ti:xu2 r6:x_u32:x_ti:xu2 r5:x_u32:x_ti:xu2 r4:x_u32:x_ti:xu2  
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+009      1e+003      1e+009      1e+009         800         800
+|   |              i  -9.05e-010   9.22e-005  -2.88e-031   4.32e-031           0           0
+|   |              p   8.19e-010    8.5e-006   8.28e-053   1.86e-052           0           0
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r3:x_u32:x_ti:xu2 r2:x_u32:x_ti:xu2 r1:x_u32:x_ti:xu2 r1:x_u33:x_ti:xu2 rg1:x_u13:x_ti:xu2 rp4:x_u12:x_ti:xu2  
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+009      1e+009      1e+009           1   5.82e+009      1e+003
+|   |              i   4.32e-031   1.44e-031   1.44e-031   3.26e-006  -2.35e-010    -0.00137
+|   |              p   1.86e-052   2.08e-053   2.08e-053   1.06e-011   3.21e-010     0.00187
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rp3:x_u12:x_ti:xu2 rp2:x_u12:x_ti:xu2 rp1:x_u12:x_ti:xu2 r_r17:x_ti:xu2 r_r20:x_ti:xu2 r_r3:x_ti:xu2 
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+003      1e+003      1e+003      5e+005           1    2.5e+004
+|   |              i    -0.00137    -0.00137    -0.00137   4.92e-005   5.75e-006   3.12e-006
+|   |              p     0.00187     0.00187     0.00187     0.00121   3.31e-011   2.43e-007
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r_r8:x_ti:xu2 r_r12:x_ti:xu2 r_r18:x_ti:xu2 r_r4:x_ti:xu2 r_r16:x_ti:xu2 r_r11:x_ti:xu2
+|   |    model                r           r           r           r           r           r   
+|   |              R      5e+004      5e+004      5e+005    2.5e+004      5e+005          10
+|   |              i  -1.56e-006  -1.56e-006  -2.59e-006   2.59e-006  -4.93e-005  -2.59e-006
+|   |              p   1.22e-007   1.22e-007   3.35e-006   1.68e-007     0.00121   6.71e-011
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r_r19:x_ti:xu2 r7:x_u32:x_ti:xu4 r6:x_u32:x_ti:xu4 r5:x_u32:x_ti:xu4 r4:x_u32:x_ti:xu4 r3:x_u32:x_ti:xu4 
+|   |    model                r           r           r           r           r           r   
+|   |              R   4.75e+005      1e+009      1e+009         800         800      1e+009
+|   |              i   3.12e-006  -2.88e-031   4.32e-031           0           0   4.32e-031
+|   |              p   4.62e-006   8.28e-053   1.86e-052           0           0   1.86e-052
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r2:x_u32:x_ti:xu4 r1:x_u32:x_ti:xu4 r1:x_u33:x_ti:xu4 rg1:x_u13:x_ti:xu4 rp4:x_u12:x_ti:xu4 rp3:x_u12:x_ti:xu4   
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+009      1e+009           1   5.82e+009      1e+003      1e+003
+|   |              i   1.44e-031   1.44e-031   3.26e-006   9.14e-011    0.000532    0.000532
+|   |              p   2.08e-053   2.08e-053   1.06e-011   4.87e-011    0.000283    0.000283
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rp2:x_u12:x_ti:xu4 rp1:x_u12:x_ti:xu4 r_r17:x_ti:xu4 r_r20:x_ti:xu4 r_r3:x_ti:xu4 r_r8:x_ti:xu4
+|   |    model                r           r           r           r           r           r   
+|   |              R      1e+003      1e+003      5e+005           1    2.5e+004      5e+004
+|   |              i    0.000532    0.000532   1.01e-005   8.55e-007   2.57e-008   3.26e-005
+|   |              p    0.000283    0.000283   5.08e-005   7.31e-013   1.65e-011   5.31e-005
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r_r12:x_ti:xu4 r_r18:x_ti:xu4 r_r4:x_ti:xu4 r_r16:x_ti:xu4 r_r11:x_ti:xu4 r_r19:x_ti:xu4 
+|   |    model                r           r           r           r           r           r   
+|   |              R      5e+004      5e+005    2.5e+004      5e+005          10   4.75e+005
+|   |              i  -3.26e-005   1.04e-006  -1.04e-006  -1.01e-005   1.04e-006   2.57e-008
+|   |              p   5.32e-005    5.4e-007    2.7e-008   5.13e-005   1.08e-011   3.14e-010
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rg1n:x_u41:x_ti:xu3 rg1p:x_u41:x_ti:xu3 r1:x_u36:x_ti:xu3 r7:x_u37:x_ti:xu3 r6:x_u37:x_ti:xu3 r5:x_u37:x_ti:xu3
+|   |    model                r           r           r           r           r           r   
+|   |              R   2.76e+009   2.76e+009           1      1e+009      1e+009         800
+|   |              i   1.14e-010  -1.14e-010   4.78e-005   2.92e-029  -4.39e-029           0
+|   |              p    3.6e-011    3.6e-011   2.28e-009   8.55e-049   1.93e-048           0
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r4:x_u37:x_ti:xu3 r3:x_u37:x_ti:xu3 r2:x_u37:x_ti:xu3 r1:x_u37:x_ti:xu3 r_r5:x_u100:x_ti:xu3 r_r12:x_u100:x_ti:xu3   
+|   |    model                r           r           r           r           r           r   
+|   |              R         800      1e+009      1e+009      1e+009           1      1e+003
+|   |              i           0  -4.39e-029  -1.46e-029  -1.46e-029      -0.228   4.97e-007
+|   |              p           0   1.93e-048   2.14e-049   2.14e-049       0.052   2.47e-010
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r_r9:x_u100:x_ti:xu3 r_r10:x_u100:x_ti:xu3 r_r7:x_u100:x_ti:xu3 r_r8:x_u100:x_ti:xu3 r_r11:x_u100:x_ti:xu3 r_r6:x_u100:x_ti:xu3
+|   |    model                r           r           r           r           r           r   
+|   |              R          26          26      1e+003      1e+003      1e+004      1e+005
+|   |              i  -1.06e-005  -4.97e-007   -0.000202   1.06e-005   -0.000408   -7.6e-006
+|   |              p   2.95e-009   6.41e-012   4.07e-005   1.13e-007     0.00166   5.77e-006
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r1:x_u38:x_ti:xu3 rp4:x_u12:x_ti:xu3 rp3:x_u12:x_ti:xu3 rp2:x_u12:x_ti:xu3 rp1:x_u12:x_ti:xu3 r_r24:x_ti:xu3 
+|   |    model                r           r           r           r           r           r   
+|   |              R           1      1e+003      1e+003      1e+003      1e+003      1e+003
+|   |              i   1.83e-005   -0.000631   -0.000631   -0.000631   -0.000631      -0.001
+|   |              p   3.36e-010    0.000398    0.000398    0.000398    0.000398       0.001
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r_r20:x_ti:xu3 r_r17:x_ti:xu3 r_r3:x_ti:xu3 r_r21:x_ti:xu3 r_r18:x_ti:xu3 r_r4:x_ti:xu3
+|   |    model                r           r           r           r           r           r   
+|   |              R           1      1e+009    2.5e+004           1      5e+005    2.5e+004
+|   |              i    0.000543   3.36e-009    9.6e-006  -6.91e-006   -7.6e-006    7.6e-006
+|   |              p   2.95e-007   1.13e-008    2.3e-006   4.77e-011   2.89e-005   1.44e-006
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r_r16:x_ti:xu3 r_r22:x_ti:xu3 r_r19:x_ti:xu3 r_r23:x_ti:xu3 r6:x_u101:x_ti:xu3 r5:x_u101:x_ti:xu3  
+|   |    model                r           r           r           r r_noiseless r_noiseless   
+|   |              R      1e+009      1e+003      5e+005       0.001           1      1e+004
+|   |              i  -3.41e-009   2.63e-012    9.6e-006   2.66e-012          11   4.34e-009
+|   |              p   1.16e-008   6.92e-021    4.6e-005    7.1e-027         121   1.89e-013
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r3:x_u101:x_ti:xu3 r2:x_u101:x_ti:xu3 r8:x_u101:x_ti:xu3 r7:x_u101:x_ti:xu3 r1:x_u101:x_ti:xu3 r1b:x_u101:x_ti:xu3   
+|   |    model      r_noiseless r_noiseless r_noiseless r_noiseless r_noiseless r_noiseless   
+|   |              R   4.66e+005           1          10      1e+004           1      1e+004
+|   |              i   4.35e-009          11      0.0011      0.0011          11   4.15e-007
+|   |              p   8.83e-012         121   1.21e-005       0.012         121   1.73e-009
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      r2b:x_u101:x_ti:xu3 r4:x_u101:x_ti:xu3 r2a:x_u101:x_ti:xu3 r1a:x_u101:x_ti:xu3 rdc:x_u101:x_ti:xu3 rdummy:x_u101:x_ti:xu3  
+|   |    model      r_noiseless r_noiseless r_noiseless r_noiseless r_noiseless r_noiseless   
+|   |              R   4.66e+005           1   6.67e+003      1e+004           1      3e+003
+|   |              i   4.15e-007        11.2    0.000671    0.000659        11.1    0.000333
+|   |              p   8.04e-008         125       0.003     0.00435         122    0.000333
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rx:x_u101:x_ti:xu3 rrs_l rrs_out rr_bl rrl rrs_in  
+|   |    model      r_noiseless    vresrs_l  vresrs_out    vresr_bl      vresrl   vresrs_in   
+|   |              R      3e+004       0.025        0.05    2.2e+003           5        0.05
+|   |              i   -0.000333        1.08           1     0.00227       0.998       0.265
+|   |              p     0.00333      0.0291        0.05      0.0113        4.98     0.00352
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rrg_h rrg_l rr_gsh rr_gsl rr_pwm rr_in_pd  
+|   |    model         vresrg_h    vresrg_l   vresr_gsh   vresr_gsl   vresr_pwm vresr_in_pd   
+|   |              R          10          10      1e+004      1e+004         100      1e+004
+|   |              i    -0.00283       0.196   9.32e-006    0.000111  -1.19e-011   1.19e-013
+|   |              p   8.03e-005       0.383   8.69e-007    0.000123   1.41e-020   1.41e-022
+|   |   
+|   |    Resistor: Simple linear resistor 
+|   |    device      rr_sd_pd rr_vdda 
+|   |    model      vresr_sd_pd  vresr_vdda   
+|   |              R      1e+005          10
+|   |              i    3.3e-005     0.00395
+|   |              p    0.000109    0.000156
+|   |   
+|   |    VCCS: Voltage controlled current source
+|   |    device      g_md1_g1:xu1 g1:x_u33:x_ti:xu2 gp4:x_u12:x_ti:xu2 gp3:x_u12:x_ti:xu2 gp2:x_u12:x_ti:xu2 gp1:x_u12:x_ti:xu2   
+|   |              i   8.09e-017   3.26e-006    -0.00137    -0.00137    -0.00137    -0.00137
+|   |              v   1.19e-009  -3.26e-006        1.37        1.37        1.37        1.37
+|   |              p   9.61e-026  -1.06e-011    -0.00187    -0.00187    -0.00187    -0.00187
+|   |   
+|   |    VCCS: Voltage controlled current source
+|   |    device      g_g1:x_ti:xu2 g1:x_u33:x_ti:xu4 gp4:x_u12:x_ti:xu4 gp3:x_u12:x_ti:xu4 gp2:x_u12:x_ti:xu4 gp1:x_u12:x_ti:xu4
+|   |              i   5.75e-006   3.26e-006    0.000532    0.000532    0.000532    0.000532
+|   |              v   -5.8e-006  -3.26e-006      -0.532      -0.532      -0.532      -0.532
+|   |              p  -3.34e-011  -1.06e-011   -0.000283   -0.000283   -0.000283   -0.000283
+|   |   
+|   |    VCCS: Voltage controlled current source
+|   |    device      g_g1:x_ti:xu4 g1:x_u36:x_ti:xu3 g_g5:x_u100:x_ti:xu3 g_g4:x_u100:x_ti:xu3 g_g3:x_u100:x_ti:xu3 gb1:x_u101:x_ti:xu3   
+|   |              i   8.55e-007   4.78e-005     -0.0238    -0.00256      -0.202          11
+|   |              v  -8.39e-007  -4.78e-005       0.228       0.228       0.228         -11
+|   |              p  -7.18e-013  -2.28e-009    -0.00543   -0.000585      -0.046        -121
+|   |   
+|   |    VCCS: Voltage controlled current source
+|   |    device      gb:x_u101:x_ti:xu3 g2:x_u101:x_ti:xu3 g1:x_u101:x_ti:xu3 g1:x_u38:x_ti:xu3 gp4:x_u12:x_ti:xu3 gp3:x_u12:x_ti:xu3 
+|   |              i          11        11.2        11.1   1.83e-005   -0.000631   -0.000631
+|   |              v         -11       -11.2       -11.1  -1.83e-005       0.631       0.631
+|   |              p        -121        -125        -123  -3.36e-010   -0.000398   -0.000398
+|   |   
+|   |    VCCS: Voltage controlled current source
+|   |    device      gp2:x_u12:x_ti:xu3 gp1:x_u12:x_ti:xu3  
+|   |              i   -0.000631   -0.000631
+|   |              v       0.631       0.631
+|   |              p   -0.000398   -0.000398
+|   |   
+|   |    VCVS: Voltage controlled voltage source
+|   |    device      ev16:xq1 ev16:xq2 e3:x_u32:x_ti:xu2 e2:x_u32:x_ti:xu2 e1:x_u32:x_ti:xu2 e1:x_u33:x_ti:xu2  
+|   |              i   -0.000319        1.69    1.5e-012   -7.2e-031  -1.15e-030  -3.12e-006
+|   |              v        25.2       -1.01           0           0   4.32e-022   3.26e-006
+|   |              p    -0.00805       -1.69           0          -0  -4.97e-052  -1.02e-011
+|   |   
+|   |    VCVS: Voltage controlled voltage source
+|   |    device      eout:x_u13:x_ti:xu2 e_e1:x_ti:xu2 e_e3:x_ti:xu2 e_e16:x_ti:xu2 e_e14:x_ti:xu2 e_e13:x_ti:xu2 
+|   |              i  -2.64e-013  -3.26e-012    0.000135   3.12e-006   2.59e-006   3.12e-006
+|   |              v       -1.37        3.26        1.63    5.8e-006          23          23
+|   |              p    3.6e-013  -1.06e-011     0.00022   1.81e-011   5.96e-005   7.17e-005
+|   |   
+|   |    VCVS: Voltage controlled voltage source
+|   |    device      e_e12:x_ti:xu2 e_e11:x_ti:xu2 e_e2:x_ti:xu2 e3:x_u32:x_ti:xu4 e2:x_u32:x_ti:xu4 e1:x_u32:x_ti:xu4  
+|   |              i  -2.59e-006  -3.12e-006           0   1.33e-012   -7.2e-031  -1.15e-030
+|   |              v        24.6        24.6           0           0           0   4.32e-022
+|   |              p  -6.38e-005  -7.68e-005           0           0          -0  -4.97e-052
+|   |   
+|   |    VCVS: Voltage controlled voltage source
+|   |    device      e1:x_u33:x_ti:xu4 eout:x_u13:x_ti:xu4 e_e1:x_ti:xu4 e_e3:x_ti:xu4 e_e16:x_ti:xu4 e_e14:x_ti:xu4
+|   |              i  -2.57e-008  -2.16e-012  -3.26e-012     0.00013   2.57e-008  -1.04e-006
+|   |              v   3.26e-006       0.532        3.26        1.63   8.39e-007        3.42
+|   |              p  -8.39e-014  -1.15e-012  -1.06e-011    0.000212   2.16e-014  -3.55e-006
+|   |   
+|   |    VCVS: Voltage controlled voltage source
+|   |    device      e_e13:x_ti:xu4 e_e12:x_ti:xu4 e_e11:x_ti:xu4 e_e2:x_ti:xu4 e1:x_u36:x_ti:xu3 e3:x_u37:x_ti:xu3   
+|   |              i   2.57e-008   1.04e-006  -2.57e-008           0    9.6e-006  -4.96e-012
+|   |              v        3.42        5.04        5.06           0   4.78e-005           0
+|   |              p    8.8e-008   5.23e-006   -1.3e-007           0   4.59e-010          -0
+|   |   
+|   |    VCVS: Voltage controlled voltage source
+|   |    device      e2:x_u37:x_ti:xu3 e1:x_u37:x_ti:xu3 e_e8:x_u100:x_ti:xu3 e_e6:x_u100:x_ti:xu3 e_e9:x_u100:x_ti:xu3 e_e5:x_u100:x_ti:xu3
+|   |              i   7.32e-029   1.17e-028   -0.000408   -0.000202   4.97e-007  -2.56e-015
+|   |              v           0  -4.39e-020         4.1         4.1       0.239     0.00256
+|   |              p           0  -5.14e-048    -0.00167   -0.000827   1.19e-007  -6.57e-018
+|   |   
+|   |    VCVS: Voltage controlled voltage source
+|   |    device      e_e4:x_u100:x_ti:xu3 e_e3:x_u100:x_ti:xu3 e_e7:x_u100:x_ti:xu3 e1:x_u38:x_ti:xu3 e_e1:x_ti:xu3 e_e3:x_ti:xu3 
+|   |              i    7.6e-006  -5.13e-018   1.06e-005   -9.6e-006   -0.000543    0.000118
+|   |              v       0.239   5.13e-006       0.228   1.83e-005        3.26        1.63
+|   |              p   1.82e-006  -2.63e-023   2.43e-006  -1.76e-010    -0.00177    0.000192
+|   |   
+|   |    VCVS: Voltage controlled voltage source
+|   |    device      e_e14:x_ti:xu3 e_e13:x_ti:xu3 e_e12:x_ti:xu3 e_e11:x_ti:xu3 e_e2:x_ti:xu3  
+|   |              i    7.6e-006    9.6e-006   -7.6e-006   -9.6e-006   6.91e-006
+|   |              v           0           0        3.36        3.41           0
+|   |              p           0           0  -2.55e-005  -3.27e-005           0
+|   |   
+|   |    Vsource: Independent voltage source
+|   |    device      vfi1:xq1 vfi2:xq1 vfi1:xq2 vfi2:xq2 v_md1_inv2_v:xu1 v_md1_inv1_v:xu1  
+|   |             dc           0           0           0           0           5           5
+|   |          acmag           0           0           0           0           0           0
+|   |              i  -2.52e-011    0.000319      -0.147     -0.0011     -5e-006     -6e-008
+|   |              p          -0           0          -0          -0   -2.5e-005     -3e-007
+|   |   
+|   |    Vsource: Independent voltage source
+|   |    device      v_md1_nand2_v:xu1 v_md1_nand1_v:xu1 v_md1_inv3_v:xu1 v_md2_nand2_v:xu1 v_md2_inv6_v:xu1 v_md2_inv5_v:xu1 
+|   |             dc           5           5           5           5           5           5
+|   |          acmag           0           0           0           0           0           0
+|   |              i     -1e-005     -6e-008     -7e-008     -1e-005     -6e-008     -5e-006
+|   |              p     -5e-005     -3e-007   -3.5e-007     -5e-005     -3e-007   -2.5e-005
+|   |   
+|   |    Vsource: Independent voltage source
+|   |    device      v_md2_nand1_v:xu1 v_md2_inv3_v:xu1 v_md2_rise2_v:xu1 v_md2_rise1_v:xu1 v_md2_nor2_v:xu1 v_md2_nor1_v:xu1 
+|   |             dc           5           5           5           5           5           5
+|   |          acmag           0           0           0           0           0           0
+|   |              i     -6e-008     -5e-006  -4.89e-006     -5e-006     -1e-005   -2.5e-006
+|   |              p     -3e-007   -2.5e-005  -2.44e-005   -2.5e-005     -5e-005  -1.25e-005
+|   |   
+|   |    Vsource: Independent voltage source
+|   |    device      v_md2_inv4_v:xu1 v_md2_inv2_v:xu1 v_md2_inv1_v:xu1 v_md5_inv_v:xu1 v_md4_inv_v:xu1 v_md3_dly2_v2:xu1 
+|   |             dc           5           5           5           5           5           5
+|   |          acmag           0           0           0           0           0           0
+|   |              i     -6e-008     -5e-006     -6e-008     -5e-006     -6e-008  -1.04e-006
+|   |              p     -3e-007   -2.5e-005     -3e-007   -2.5e-005     -3e-007  -5.21e-006
+|   |   
+|   |    Vsource: Independent voltage source
+|   |    device      v_md3_dly2_v1:xu1 v_md3_dly2_v0:xu1 v_md3_dly1_v2:xu1 v_md3_dly1_v1:xu1 v_md3_dly1_v0:xu1 v_saw:xctrl  
+|   |             dc           5           5           5           5           5           0
+|   |          acmag           0           0           0           0           0           0
+|   |              i   -2.5e-006  -4.34e-006   -2.5e-006     -1e-005   -0.000248  -3.12e-013
+|   |              p  -1.25e-005  -2.17e-005  -1.25e-005     -5e-005    -0.00124  -9.72e-014
+|   |   
+|   |    Vsource: Independent voltage source
+|   |    device      v_ss:xctrl vsense:x_u31:x_ti:xu2 vdummy:x_ti:xu2 v_v8:x_ti:xu2 vsense:x_u31:x_ti:xu4 vdummy:x_ti:xu4 
+|   |             dc           0           0           1  -7.62e-006           0           1
+|   |          acmag           0           0           0           0           0           0
+|   |              i     -1e-011  -2.59e-006  -2.63e-012  -4.07e-010   1.04e-006  -2.63e-012
+|   |              p     -1e-010          -0  -2.63e-012    3.1e-015           0  -2.63e-012
+|   |   
+|   |    Vsource: Independent voltage source
+|   |    device      v_v8:x_ti:xu4 vsense:x_u31:x_ti:xu3 v_v8:x_ti:xu3 v_v9:x_ti:xu3 vv1 vv2
+|   |             dc  -7.62e-006           0  -1.25e-005         0.7          25          12
+|   |          acmag           0           0           0           0           0           0
+|   |              i   3.89e-011   9.99e-013   4.97e-012  -2.33e-012      -0.266      -0.292
+|   |              p  -2.96e-016           0  -6.21e-017  -1.63e-012       -6.64        -3.5
+|   |   
+|   |    Vsource: Independent voltage source
+|   |    device      vv3.pinvoltage2--0 vv_en vsim_3v3  
+|   |             dc           0         3.3         3.3
+|   |          acmag           0           0           0
+|   |              i   3.49e-008  -3.13e-005    -0.00395
+|   |              p           0   -0.000103      -0.013
+|   |   
+|   |    v_switch: analog switch
+|   |    device      s_md1_trigsd_p:xu1 s_md1_inv2_n:xu1 s_md1_inv2_p:xu1 s_md1_trigin_p:xu1 s_md1_inv1_n:xu1 s_md1_inv1_p:xu1  
+|   |    model      _md1_trigsd _md1_inv2_n _md1_inv2_p _md1_trigin _md1_inv1_n _md1_inv1_p   
+|   |              i   1.42e-007      5e-006      5e-006   2.21e-010      5e-008      6e-008
+|   |   
+|   |    v_switch: analog switch
+|   |    device      s_md1_nand2_n2:xu1 s_md1_nand2_p2:xu1 s_md1_nand2_n1:xu1 s_md1_nand2_p1:xu1 s_md1_nand1_n2:xu1 s_md1_nand1_p2:xu1  
+|   |    model      _md1_nand2_ _md1_nand2_ _md1_nand2_ _md1_nand2_ _md1_nand1_ _md1_nand1_   
+|   |              i      1e-005      5e-006      1e-005      5e-006      5e-008      6e-008
+|   |   
+|   |    v_switch: analog switch
+|   |    device      s_md1_nand1_n1:xu1 s_md1_nand1_p1:xu1 s_md1_inv3_n:xu1 s_md1_inv3_p:xu1 s_md2_nand2_n2:xu1 s_md2_nand2_n1:xu1  
+|   |    model      _md1_nand1_ _md1_nand1_ _md1_inv3_n _md1_inv3_p _md2_nand2_ _md2_nand2_   
+|   |              i      5e-008      6e-013      5e-008      7e-008      1e-005      1e-005
+|   |   
+|   |    v_switch: analog switch
+|   |    device      s_md2_nand2_p2:xu1 s_md2_nand2_p1:xu1 s_md2_inv6_n:xu1 s_md2_inv6_p:xu1 s_md2_inv5_n:xu1 s_md2_inv5_p:xu1  
+|   |    model      _md2_nand2_ _md2_nand2_ _md2_inv6_n _md2_inv6_p _md2_inv5_n _md2_inv5_p   
+|   |              i      5e-006      5e-006      5e-008      6e-008      5e-006      5e-006
+|   |   
+|   |    v_switch: analog switch
+|   |    device      s_md2_nand1_n2:xu1 s_md2_nand1_n1:xu1 s_md2_nand1_p2:xu1 s_md2_nand1_p1:xu1 s_md2_uvcc_n:xu1 s_md2_uvcc_p:xu1  
+|   |    model      _md2_nand1_ _md2_nand1_ _md2_nand1_ _md2_nand1_ _md2_uvcc_n _md2_uvcc_p   
+|   |              i      5e-008      5e-008      6e-013      6e-008   6.58e-007   6.58e-007
+|   |   
+|   |    v_switch: analog switch
+|   |    device      s_md2_inv3_n:xu1 s_md2_inv3_p:xu1 s_md2_rise2_n:xu1 s_md2_rise2_p:xu1 s_md2_rise1_n:xu1 s_md2_rise1_p:xu1  
+|   |    model      _md2_inv3_n _md2_inv3_p _md2_rise2_ _md2_rise2_ _md2_rise1_ _md2_rise1_   
+|   |              i      5e-006      5e-006     0.00566   4.89e-006      5e-006      5e-006
+|   |   
+|   |    v_switch: analog switch
+|   |    device      s_md2_nor2_n2:xu1 s_md2_nor2_n1:xu1 s_md2_nor2_p2:xu1 s_md2_nor2_p1:xu1 s_md2_nor1_n2:xu1 s_md2_nor1_n1:xu1
+|   |    model      _md2_nor2_n _md2_nor2_n _md2_nor2_p _md2_nor2_p _md2_nor1_n _md2_nor1_n   
+|   |              i      5e-006      5e-006      1e-005      1e-005   1.25e-006   1.25e-006
+|   |   
+|   |    v_switch: analog switch
+|   |    device      s_md2_nor1_p2:xu1 s_md2_nor1_p1:xu1 s_md2_inv4_n:xu1 s_md2_inv4_p:xu1 s_md2_inv2_n:xu1 s_md2_inv2_p:xu1
+|   |    model      _md2_nor1_p _md2_nor1_p _md2_inv4_n _md2_inv4_p _md2_inv2_n _md2_inv2_p   
+|   |              i    2.5e-006    2.5e-006      5e-008      6e-008      5e-006      5e-006
+|   |   
+|   |    v_switch: analog switch
+|   |    device      s_md2_inv1_n:xu1 s_md2_inv1_p:xu1 s_md5_inv_n:xu1 s_md5_inv_p:xu1 s_md5_ols_n:xu1 s_md5_ols_p:xu1  
+|   |    model      _md2_inv1_n _md2_inv1_p _md5_inv_n: _md5_inv_p: _md5_ols_n: _md5_ols_p:   
+|   |              i      5e-008      6e-008   4.95e-006      5e-006   3.06e-008       0.196
+|   |   
+|   |    v_switch: analog switch
+|   |    device      s_md4_inv_n:xu1 s_md4_inv_p:xu1 s_md4_ohs_n:xu1 s_md4_ohs_p:xu1 s_md3_dly2_n4:xu1 s_md3_dly2_n2:xu1
+|   |    model      _md4_inv_n: _md4_inv_p: _md4_ohs_n: _md4_ohs_p: _md3_dly2_n _md3_dly2_n   
+|   |              i      5e-008      6e-008     0.00285   1.15e-007      5e-006   8.41e-007
+|   |   
+|   |    v_switch: analog switch
+|   |    device      s_md3_dly2_n3:xu1 s_md3_dly2_p4:xu1 s_md3_dly2_p3:xu1 s_md3_dly2_n0:xu1 s_md3_dly2_p0:xu1 s_md3_dly2_n1:xu1
+|   |    model      _md3_dly2_n _md3_dly2_p _md3_dly2_p _md3_dly2_n _md3_dly2_p _md3_dly2_n   
+|   |              i      5e-006   1.04e-006   1.04e-006      0.0657   4.34e-006   8.41e-007
+|   |   
+|   |    v_switch: analog switch
+|   |    device      s_md3_dly2_p2:xu1 s_md3_dly2_p1:xu1 s_md3_dly1_n4:xu1 s_md3_dly1_n2:xu1 s_md3_dly1_n3:xu1 s_md3_dly1_p4:xu1
+|   |    model      _md3_dly2_p _md3_dly2_p _md3_dly1_n _md3_dly1_n _md3_dly1_n _md3_dly1_p   
+|   |              i    2.5e-006    2.5e-006   1.25e-006      5e-006   1.25e-006    2.5e-006
+|   |   
+|   |    v_switch: analog switch
+|   |    device      s_md3_dly1_p3:xu1 s_md3_dly1_n0:xu1 s_md3_dly1_p0:xu1 s_md3_dly1_n1:xu1 s_md3_dly1_p2:xu1 s_md3_dly1_p1:xu1
+|   |    model      _md3_dly1_p _md3_dly1_n _md3_dly1_p _md3_dly1_n _md3_dly1_p _md3_dly1_p   
+|   |              i    2.5e-006      5e-006    0.000248      5e-006      1e-005      1e-005
+|   |   
+|   |    v_switch: analog switch
+|   |    device      s2:x_u13:x_ti:xu2 s1:x_u13:x_ti:xu2 s2:x_u13:x_ti:xu4 s1:x_u13:x_ti:xu4 s4:x_u41:x_ti:xu3 s2:x_u41:x_ti:xu3
+|   |    model      sw2:x_u13:x sw1:x_u13:x sw2:x_u13:x sw1:x_u13:x sw2:x_u41:x sw2:x_u41:x   
+|   |              i   1.64e-010   -2.9e-009   2.06e-009  -9.98e-010   1.85e-009   1.21e-009
+|   |   
+|   |    v_switch: analog switch
+|   |    device      s3:x_u41:x_ti:xu3 s1:x_u41:x_ti:xu3
+|   |    model      sw1:x_u41:x sw1:x_u41:x   
+|   |              i  -1.22e-009  -1.85e-009
+|   |   
+|   |    Capacitor models (Fixed capacitor)   
+|   |    model                 c
+|   |   
+|   |          cmult           1
+|   |             cj           0
+|   |           cjsw           0
+|   |           defw      1e-005
+|   |         narrow           0
+|   |            tc1           0
+|   |            tc2           0
+|   |            vc1           0
+|   |            vc2           0
+|   |           tnom          27
+|   |     t_measured          27
+|   |          t_abs          27
+|   |   t_rel_global           0
+|   |    t_rel_local           0
+|   |   
+|   |    Diode models (Junction Diode model)
+|   |    model           md3:xq1     md2:xq1     md1:xq1      md:xq1     md3:xq2     md2:xq2
+|   |   
+|   |             is      1e-010      1e-010      1e-032   2.99e-009      1e-010      1e-010
+|   |             rs           0      3e-006           0     0.00784           0      3e-006
+|   |              n         0.4         0.4          50        1.38         0.4         0.4
+|   |             tt           0           0           0           0           0           0
+|   |            cjo           0           0   1.73e-009   7.95e-010           0           0
+|   |             vj           1           1       0.513         0.5           1           1
+|   |              m         0.5         0.5       0.615       0.375         0.5         0.5
+|   |             eg        1.11        1.11        1.11        1.16        1.11        1.11
+|   |            xti           3           3           3           3           3           3
+|   |             kf           0           0           0           0           0           0
+|   |             af           1           1           1           1           1           1
+|   |             fc         0.5         0.5      1e-008         0.5         0.5         0.5
+|   |             bv      1e+030      1e+030      1e+030         100      1e+030      1e+030
+|   |            ibv      1e-010      1e-010      1e-010          10      1e-010      1e-010
+|   |           ibvl           0           0           0           0           0           0
+|   |            ikf      1e+030      1e+030      1e+030      1e+030      1e+030      1e+030
+|   |            isr           0           0           0           0           0           0
+|   |            nbv           1           1           1           1           1           1
+|   |           nbvl           1           1           1           1           1           1
+|   |             nr           2           2           2           2           2           2
+|   |           tbv1           0           0           0           0           0           0
+|   |           tbv2           0           0           0           0           0           0
+|   |           tikf           0           0           0           0           0           0
+|   |           trs1           0           0           0           0           0           0
+|   |           trs2           0           0           0           0           0           0
+|   |     t_measured          27          27          27          27          27          27
+|   |          t_abs          27          27          27          27          27          27
+|   |   t_rel_global           0           0           0           0           0           0
+|   |    t_rel_local           0           0           0           0           0           0
+|   |   
+|   |    Diode models (Junction Diode model)
+|   |    model           md1:xq2      md:xq2     grd:xd1    legd:xd1 diode625:xu diode25:xu1
+|   |   
+|   |             is      1e-032   2.99e-009      1e-015   8.72e-006      1e-014      1e-014
+|   |             rs           0     0.00784      0.0165       0.041        0.01        0.01
+|   |              n          50        1.38       0.893        1.32           1           1
+|   |             tt           0           0           0   2.47e-014           0           0
+|   |            cjo   1.73e-009   7.95e-010           0   5.21e-010           0           0
+|   |             vj       0.513         0.5           1         0.7        0.75        0.75
+|   |              m       0.615       0.375         0.5        0.52       0.333       0.333
+|   |             eg        1.11        1.16         1.4       0.594        1.11        1.11
+|   |            xti           3           3         0.9           4           3           3
+|   |             kf           0           0           0           0           0           0
+|   |             af           1           1           1           1           1           1
+|   |             fc      1e-008         0.5         0.5         0.5         0.5         0.5
+|   |             bv      1e+030         100      1e+030          66         625          25
+|   |            ibv      1e-010          10      1e-010          10      0.0001      0.0001
+|   |           ibvl           0           0           0           0           0           0
+|   |            ikf      1e+030      1e+030      1e+030      1e+030      1e+030      1e+030
+|   |            isr           0           0           0           0           0           0
+|   |            nbv           1           1           1           1           1           1
+|   |           nbvl           1           1           1           1           1           1
+|   |             nr           2           2           2           2           2           2
+|   |           tbv1           0           0           0           0           0           0
+|   |           tbv2           0           0           0           0           0           0
+|   |           tikf           0           0           0           0           0           0
+|   |           trs1           0           0           0           0           0           0
+|   |           trs2           0           0           0           0           0           0
+|   |     t_measured          27          27          27          27          27          27
+|   |          t_abs          27          27          27          27          27          27
+|   |   t_rel_global           0           0           0           0           0           0
+|   |    t_rel_local           0           0           0           0           0           0
+|   |   
+|   |    Diode models (Junction Diode model)
+|   |    model       dvn:x_u32:x dvn:x_u32:x dvn:x_u37:x dideal:x_ti uf4007/vsh_
+|   |   
+|   |             is      1e-016      1e-016      1e-016      1e-014   3.29e-006
+|   |             rs           0           0           0           0        0.15
+|   |              n           1           1           1           1        3.98
+|   |             tt           0           0           0           0   1.85e-007
+|   |            cjo           0           0           0           0   2.93e-011
+|   |             vj           1           1           1           1       0.852
+|   |              m         0.5         0.5         0.5         0.5       0.335
+|   |             eg        1.11        1.11        1.11        1.11        1.11
+|   |            xti           3           3           3           3           3
+|   |             kf      1e-017      1e-017      1e-014           0           0
+|   |             af           1           1           1           1           1
+|   |             fc         0.5         0.5         0.5         0.5         0.5
+|   |             bv      1e+030      1e+030      1e+030      1e+030      1e+003
+|   |            ibv      1e-010      1e-010      1e-010      1e-010         0.2
+|   |           ibvl           0           0           0           0           0
+|   |            ikf      1e+030      1e+030      1e+030      1e+030      1e+030
+|   |            isr           0           0           0           0           0
+|   |            nbv           1           1           1           1           1
+|   |           nbvl           1           1           1           1           1
+|   |             nr           2           2           2           2           2
+|   |           tbv1           0           0           0           0           0
+|   |           tbv2           0           0           0           0           0
+|   |           tikf           0           0           0           0           0
+|   |           trs1           0           0           0           0           0
+|   |           trs2           0           0           0           0           0
+|   |     t_measured          27          27          27          27          27
+|   |          t_abs          27          27          27          27          27
+|   |   t_rel_global           0           0           0           0           0
+|   |    t_rel_local           0           0           0           0           0
+|   |   
+|   |    Inductor models (Inductors)
+|   |    model                 l
+|   |   
+|   |          lmult           1
+|   |            tc1           0
+|   |            tc2           0
+|   |            il1           0
+|   |            il2           0
+|   |           tnom          27
+|   |     t_measured          27
+|   |          t_abs          27
+|   |   t_rel_global           0
+|   |    t_rel_local           0
+|   |   
+|   |    Mos1 models (Level 1 MOSfet model with Meyer capacitance model)
+|   |    model            mm:xq1      mm:xq2
+|   |   
+|   |           type        nmos        nmos
+|   |            vto        3.56        3.56
+|   |             kp        28.5        28.5
+|   |          gamma           0           0
+|   |            phi         0.6         0.6
+|   |         lambda    0.000893    0.000893
+|   |             rd           0           0
+|   |             rs           0           0
+|   |             rg           0           0
+|   |             rb           0           0
+|   |            rds           0           0
+|   |            cbd           0           0
+|   |            cbs           0           0
+|   |             is      1e-032      1e-032
+|   |             pb         0.8         0.8
+|   |           cgso   1.23e-005   1.23e-005
+|   |           cgdo   1.77e-008   1.77e-008
+|   |           cgbo           0           0
+|   |            rsh           0           0
+|   |             cj           0           0
+|   |             mj         0.5         0.5
+|   |           cjsw           0           0
+|   |           mjsw        0.33        0.33
+|   |             js           0           0
+|   |            tox           0           0
+|   |             ld           0           0
+|   |             u0         600         600
+|   |             fc         0.5         0.5
+|   |           nsub           0           0
+|   |            tpg         1         1
+|   |            nss           0           0
+|   |           tnom          27          27
+|   |             kf           0           0
+|   |             af           1           1
+|   |             wd           0           0
+|   |              n           1           1
+|   |           jssw           0           0
+|   |           pbsw         0.8         0.8
+|   |             tt           0           0
+|   |           nlev           2           2
+|   |         gdsnoi           1           1
+|   |     t_measured          27          27
+|   |          t_abs          27          27
+|   |   t_rel_global           0           0
+|   |    t_rel_local           0           0
+|   |   
+|   |    Resistor models (Simple linear resistor) 
+|   |    model                 r r_noiseless    vresrs_l  vresrs_out    vresr_bl      vresrl
+|   |   
+|   |          rmult           1           1           1           1           1           1
+|   |            rsh           0           0           0           0           0           0
+|   |         narrow           0           0           0           0           0           0
+|   |            tc1           0           0           0           0           0           0
+|   |            tc2           0           0           0           0           0           0
+|   |           defw      1e-005      1e-005      1e-005      1e-005      1e-005      1e-005
+|   |           tnom          27          27          27          27          27          27
+|   |            tce           0           0           0           0           0           0
+|   |     t_measured          27          27          27          27          27          27
+|   |          t_abs          27        -273          27          27          27          27
+|   |   t_rel_global           0           0           0           0           0           0
+|   |    t_rel_local           0           0           0           0           0           0
+|   |   
+|   |    Resistor models (Simple linear resistor) 
+|   |    model         vresrs_in    vresrg_h    vresrg_l   vresr_gsh   vresr_gsl   vresr_pwm
+|   |   
+|   |          rmult           1           1           1           1           1           1
+|   |            rsh           0           0           0           0           0           0
+|   |         narrow           0           0           0           0           0           0
+|   |            tc1           0           0           0           0           0           0
+|   |            tc2           0           0           0           0           0           0
+|   |           defw      1e-005      1e-005      1e-005      1e-005      1e-005      1e-005
+|   |           tnom          27          27          27          27          27          27
+|   |            tce           0           0           0           0           0           0
+|   |     t_measured          27          27          27          27          27          27
+|   |          t_abs          27          27          27          27          27          27
+|   |   t_rel_global           0           0           0           0           0           0
+|   |    t_rel_local           0           0           0           0           0           0
+|   |   
+|   |    Resistor models (Simple linear resistor) 
+|   |    model       vresr_in_pd vresr_sd_pd  vresr_vdda
+|   |   
+|   |          rmult           1           1           1
+|   |            rsh           0           0           0
+|   |         narrow           0           0           0
+|   |            tc1           0           0           0
+|   |            tc2           0           0           0
+|   |           defw      1e-005      1e-005      1e-005
+|   |           tnom          27          27          27
+|   |            tce           0           0           0
+|   |     t_measured          27          27          27
+|   |          t_abs          27          27          27
+|   |   t_rel_global           0           0           0
+|   |    t_rel_local           0           0           0
+|   |   
+|   |    v_switch models (analog switch)
+|   |    model       _md1_trigsd _md1_inv2_n _md1_inv2_p _md1_trigin _md1_inv1_n _md1_inv1_p
+|   |   
+|   |           voff           0           0           5           0           0           5
+|   |            von           5           5           0           5           5           0
+|   |            log         1         1         1         1         1         1
+|   |           roff      1e+010      1e+008      1e+006      1e+010      1e+008      1e+006
+|   |            ron           1           3           1           1           3           1
+|   |   
+|   |    v_switch models (analog switch)
+|   |    model       _md1_nand2_ _md1_nand2_ _md1_nand2_ _md1_nand2_ _md1_nand1_ _md1_nand1_
+|   |   
+|   |           voff           0           5           0           5           0           5
+|   |            von           5           0           5           0           5           0
+|   |            log         1         1         1         1         1         1
+|   |           roff      1e+008      1e+006      1e+008      1e+006      1e+008      1e+006
+|   |            ron           3          10           3          10           3          10
+|   |   
+|   |    v_switch models (analog switch)
+|   |    model       _md1_nand1_ _md1_nand1_ _md1_inv3_n _md1_inv3_p _md2_nand2_ _md2_nand2_
+|   |   
+|   |           voff           0           5           0           5           0           0
+|   |            von           5           0           5           0           5           5
+|   |            log         1         1         1         1         1         1
+|   |           roff      1e+008      1e+006      1e+008      1e+006      1e+008      1e+008
+|   |            ron           3          10           3           1           3           3
+|   |   
+|   |    v_switch models (analog switch)
+|   |    model       _md2_nand2_ _md2_nand2_ _md2_inv6_n _md2_inv6_p _md2_inv5_n _md2_inv5_p
+|   |   
+|   |           voff           5           5           0           5           0           5
+|   |            von           0           0           5           0           5           0
+|   |            log         1         1         1         1         1         1
+|   |           roff      1e+006      1e+006      1e+008      1e+006      1e+008      1e+006
+|   |            ron          10          10           3           1           3           1
+|   |   
+|   |    v_switch models (analog switch)
+|   |    model       _md2_nand1_ _md2_nand1_ _md2_nand1_ _md2_nand1_ _md2_uvcc_n _md2_uvcc_p
+|   |   
+|   |           voff           0           0           5           5           0           5
+|   |            von           5           5           0           0           5           0
+|   |            log         1         1         1         1         1         1
+|   |           roff      1e+008      1e+008      1e+006      1e+006      1e+006      1e+006
+|   |            ron           3           3          10          10           1           1
+|   |   
+|   |    v_switch models (analog switch)
+|   |    model       _md2_inv3_n _md2_inv3_p _md2_rise2_ _md2_rise2_ _md2_rise1_ _md2_rise1_
+|   |   
+|   |           voff           0           5           0           5           0           5
+|   |            von           5           0           5           0           5           0
+|   |            log         1         1         1         1         1         1
+|   |           roff      1e+008      1e+006      1e+006      1e+006      1e+006      1e+006
+|   |            ron           3           1          20       0.001          20       0.001
+|   |   
+|   |    v_switch models (analog switch)
+|   |    model       _md2_nor2_n _md2_nor2_n _md2_nor2_p _md2_nor2_p _md2_nor1_n _md2_nor1_n
+|   |   
+|   |           voff           0           0           5           5           0           0
+|   |            von           5           5           0           0           5           5
+|   |            log         1         1         1         1         1         1
+|   |           roff      1e+006      1e+006      1e+006      1e+006      1e+006      1e+006
+|   |            ron           1           1           1           1           1           1
+|   |   
+|   |    v_switch models (analog switch)
+|   |    model       _md2_nor1_p _md2_nor1_p _md2_inv4_n _md2_inv4_p _md2_inv2_n _md2_inv2_p
+|   |   
+|   |           voff           5           5           0           5           0           5
+|   |            von           0           0           5           0           5           0
+|   |            log         1         1         1         1         1         1
+|   |           roff      1e+006      1e+006      1e+008      1e+006      1e+008      1e+006
+|   |            ron           1           1           3           1           3           1
+|   |   
+|   |    v_switch models (analog switch)
+|   |    model       _md2_inv1_n _md2_inv1_p _md5_inv_n: _md5_inv_p: _md5_ols_n: _md5_ols_p:
+|   |   
+|   |           voff           0           5           0           5           0           5
+|   |            von           5           0           5           0           5           0
+|   |            log         1         1         1         1         1         1
+|   |           roff      1e+008      1e+006      1e+008      1e+006      1e+008      1e+008
+|   |            ron           3           1           3           1       0.001       0.001
+|   |   
+|   |    v_switch models (analog switch)
+|   |    model       _md4_inv_n: _md4_inv_p: _md4_ohs_n: _md4_ohs_p: _md3_dly2_n _md3_dly2_n
+|   |   
+|   |           voff           0           5           0           5           0           0
+|   |            von           5           0           5           0           5           5
+|   |            log         1         1         1         1         1         1
+|   |           roff      1e+008      1e+006      1e+008      1e+008      1e+006      1e+006
+|   |            ron           3           1       0.001       0.001           1           1
+|   |   
+|   |    v_switch models (analog switch)
+|   |    model       _md3_dly2_n _md3_dly2_p _md3_dly2_p _md3_dly2_n _md3_dly2_p _md3_dly2_n
+|   |   
+|   |           voff           0           5           5           0           5           0
+|   |            von           5           0           0           5           0           5
+|   |            log         1         1         1         1         1         1
+|   |           roff      1e+006      1e+006      1e+006      1e+006      1e+006      1e+006
+|   |            ron           1           1           1          10          10           1
+|   |   
+|   |    v_switch models (analog switch)
+|   |    model       _md3_dly2_p _md3_dly2_p _md3_dly1_n _md3_dly1_n _md3_dly1_n _md3_dly1_p
+|   |   
+|   |           voff           5           5           0           0           0           5
+|   |            von           0           0           5           5           5           0
+|   |            log         1         1         1         1         1         1
+|   |           roff      1e+006      1e+006      1e+006      1e+006      1e+006      1e+006
+|   |            ron           1           1           1           1           1           1
+|   |   
+|   |    v_switch models (analog switch)
+|   |    model       _md3_dly1_p _md3_dly1_n _md3_dly1_p _md3_dly1_n _md3_dly1_p _md3_dly1_p
+|   |   
+|   |           voff           5           0           5           0           5           5
+|   |            von           0           5           0           5           0           0
+|   |            log         1         1         1         1         1         1
+|   |           roff      1e+006      1e+006      1e+006      1e+006      1e+006      1e+006
+|   |            ron           1          10          10           1           1           1
+|   |   
+|   |    v_switch models (analog switch)
+|   |    model       sw2:x_u13:x sw1:x_u13:x sw2:x_u13:x sw1:x_u13:x sw2:x_u41:x sw1:x_u41:x
+|   |   
+|   |           voff           0           0           0           0           0           0
+|   |            von        -0.1         0.1        -0.1         0.1        -0.1         0.1
+|   |            log         1         1         1         1         1         1
+|   |           roff      1e+009      1e+009      1e+009      1e+009      1e+009      1e+009
+|   |            ron         100         100         100         100         0.1         0.1
+|   |   
+|   |   Error: Unknown name: V(iout_raw)

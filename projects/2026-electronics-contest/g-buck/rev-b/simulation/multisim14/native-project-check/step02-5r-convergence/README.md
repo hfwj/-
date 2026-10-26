@@ -1,6 +1,8 @@
 # STEP02 5Ω收敛诊断
 
-[最新：U3平滑30ms用户报告通过与100ms准备](../../../../reports/Multisim14_STEP02_U3平滑30ms通过与100ms验证准备_2026-10-26.md) · [100ms末10ms四路副本](../../../../downloads/GBUCK_STEP02_5R_U3_IIB_SMOOTH_100ms_4CH_LOWMEM.ms14)。用户明确回复“通过 F1未熔断”，关联刚交付的U3平滑30ms/8路文件；未附新结束日志/读数，不扩大为独立日志核验或100ms通过。build_u3_100ms_lowmem.py仅改TSTOP、报告起点、输出选择和标题，保留全部模型/求解/控制与元件；TSTART=.09是报告起点，前90ms仍积分。原图/器件值/BOM/PCB不改；全部三个采样实例仍是明确修改过的偏置模型。
+[最新：100ms变量名错误与非增量绘图对照](../../../../reports/Multisim14_STEP02_100ms输出变量名错误与非增量绘图对照_2026-10-26.md) · [FINALPLOT副本](../../../../downloads/GBUCK_STEP02_5R_U3_IIB_SMOOTH_100ms_4CH_FINALPLOT.ms14)。报错4.rar内两次16:10:31/16:21:58日志均采用新LOWMEM设置，末尾Unknown name: V(iout_raw)，无步长或内存错误记录，用户F1未熔断且两次无曲线。audit_u3_100ms_unknown_name.py保留分类界限；build_u3_100ms_finalplot.py仅改IncrPlot=0与标题，全部电路/模型/控制/求解/时间窗/四路保持。100ms及本对照效果未验证，不重传旧GRA。
+
+[此前：U3平滑30ms用户报告通过与100ms准备](../../../../reports/Multisim14_STEP02_U3平滑30ms通过与100ms验证准备_2026-10-26.md) · [100ms末10ms四路副本](../../../../downloads/GBUCK_STEP02_5R_U3_IIB_SMOOTH_100ms_4CH_LOWMEM.ms14)。用户明确回复“通过 F1未熔断”，关联刚交付的U3平滑30ms/8路文件；未附新结束日志/读数，不扩大为独立日志核验或100ms通过。build_u3_100ms_lowmem.py仅改TSTOP、报告起点、输出选择和标题，保留全部模型/求解/控制与元件；TSTART=.09是报告起点，前90ms仍积分。原图/器件值/BOM/PCB不改；全部三个采样实例仍是明确修改过的偏置模型。
 
 [此前：U3补查与偏置平滑](../../../../reports/Multisim14_STEP02_U3共模补查与IIB平滑诊断_2026-10-26.md) · [30ms/8路U3新副本](../../../../downloads/GBUCK_STEP02_5R_U3_IIB_SMOOTH_30ms_8CH_DIAG.ms14)。100nA原生候选在20.1209ms报U3 INP_PSRR_OUT，F1未熔断，恢复10nA。旧24.9514ms GRA的U3共模此前漏列，补算约5V；原记录重放四项均完成，另行人工受控跨分界才复现同节点失败，两种ABSTOL均失败，平滑后完成。有序上电原/平滑响应相同。replay_u3_event.py保留全部九项及刺激区别；audit_abs100na_failure.py核对新日志；build_u3_iib_smooth.py同步U3两份模型并恢复10nA，原图/BOM/PCB、MOS/驱动/控制、既有U2/U4平滑保持。analyze_q2_20261026.py已补U3共模，原始六卷不变、不重传。该轮生成时原生30ms/100ms待验证；后续30ms用户报告通过，见上方最新记录。
 

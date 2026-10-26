@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-26",
+  "baseline": "downloads/GBUCK_STEP02_5R_U3_IIB_SMOOTH_100ms_4CH_LOWMEM.ms14",
+  "baseline_sha256": "cac9980ff779de62587da60faa3630f5cea8755100bcb3a6d51d12a9723ea58f",
+  "output": "downloads/GBUCK_STEP02_5R_U3_IIB_SMOOTH_100ms_4CH_FINALPLOT.ms14",
+  "output_sha256": "bb5e5a09aa25b448573ae665544edaeed4dc9c56ceef1f22e0d85819b4256a6f",
+  "only_changes": [
+    "TRAN IncrPlot 1 -> 0",
+    "plot title LOWMEM -> FINALPLOT"
+  ],
+  "same_names_and_selected_outputs": [
+    "$iout_raw",
+    "$vdda",
+    "$vout",
+    "@rrs_out[i]"
+  ],
+  "same_settings": {
+    "TSTOP": "0.1",
+    "TSTART": "0.09",
+    "TMAX": "5e-008",
+    "IC": "auto_ic"
+  },
+  "all_components_ports_values_layout_models_and_controller_preserved": true,
+  "all_solver_options_and_maxstep_tolerances_preserved": true,
+  "existing_U2_U4_INA240_and_U3_INA181_modified_bias_models_retained": true,
+  "exact_inverse_XML_verified": true,
+  "two_DCL_decoders_verified": true,
+  "native_run_performed": false,
+  "unknown_name_error_fixed_verified": false,
+  "native_100ms_pass_confirmed": false,
+  "hardware_BOM_PCB_change": false,
+  "limitation": "A one-setting output-path isolation, not a proven fix. Reporting remains 90-100ms; integration must still run from zero."
+}
