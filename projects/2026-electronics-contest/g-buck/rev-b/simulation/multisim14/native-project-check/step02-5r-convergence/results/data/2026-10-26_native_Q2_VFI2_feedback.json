@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-26",
+  "original_upload": "\u62a5\u9519.log",
+  "original_log_sha256": "9e0d09b613d70ace0446b31e525d11bd1b62b019ed3f9b56510e98ad4f56c22e",
+  "latest_event": {
+    "header": "\u64cd\u4f5c\u5df2\u6267\u884c   (2026\u5e7410\u670826\u65e5, 10:07:16)",
+    "solver_options": {
+      "reltol": "0.001",
+      "abstol": "1e-008",
+      "vntol": "0.0001",
+      "chgtol": "1e-013",
+      "itl4": "300",
+      "method": "trapezoidal"
+    },
+    "requested_end_s": 0.1,
+    "maxstep_s": 5e-08,
+    "actual_end_s": 0.0249514,
+    "failed_step_s": 6.25e-18,
+    "reported_location": "vfi2:xq2#branch",
+    "saved_variables": [
+      "$16",
+      "$17",
+      "$7",
+      "$g_h",
+      "$g_l",
+      "$il_bi",
+      "$iout_raw",
+      "$l_raw",
+      "$sw",
+      "$v_cap",
+      "$vdda",
+      "$vout",
+      "@rrs_out[i]",
+      "ll1#branch"
+    ],
+    "simulation_canceled": true
+  },
+  "TSTART_s": 0.0,
+  "F1_status": "user explicitly confirmed not blown for this run",
+  "does_not_match_delivered_LOWMEM_90ms_4ch_settings": true,
+  "LOWMEM_native_effect_still_unverified": true,
+  "error_type_this_log": "transient nonconvergence / timestep too small",
+  "memory_error_reported_in_this_log": false,
+  "native_100ms_completed": false,
+  "model_mapping_baseline": "downloads/GBUCK_STEP02_5R_IIB_SMOOTH01mV_100ms_DIAG.ms14",
+  "baseline_model_file_bytes_verified_against_current_user_project": false,
+  "Q2_model_sha256": "54d5c51c55396e13f743a3c953bfe8239707a1467221ffb0694105010b7748b8",
+  "VFI2_role": "zero-volt current sensor paired with FI2 in Q2 macro capacitance feedback network; not external power supply or physical failure indication",
+  "new_numeric_waveforms_received": false,
+  "older_GRA_and_TXT_are_not_boundaries_for_this_new_24_9514ms_event": true,
+  "next_action": "Preserve existing latest 100ms Grapher page as GRA, compress in <=25MB volumes and send all; no new simulation is needed to capture already saved GH/GL/SW/IL.",
+  "changes_this_turn": "log preservation, model-node mapping and documentation only; no schematic/BOM/PCB/model/control/stimulus/solver changes"
+}
