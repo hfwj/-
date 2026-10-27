@@ -1,0 +1,23 @@
+{
+  "baseline": "1dac34a",
+  "preceding_question": "你是否另有这款0805、C0G的1nF电容？（建议规格1nF/50V/C0G/0805）",
+  "user_confirmation": "买了",
+  "separate_purchase_confirmed": true,
+  "capacitance_nF": 1,
+  "rated_voltage_V": 50,
+  "package": "0805",
+  "dielectric": "C0G/NP0",
+  "refs": [
+    "C_IL_ADC",
+    "C_IL_PROT"
+  ],
+  "per_board_quantity": 2,
+  "stock_quantity": null,
+  "full_part_number": null,
+  "tolerance": null,
+  "previous_1206_X7R_batch_kept_separate": true,
+  "not_applied_to_C_SN_100V_DNP": true,
+  "native_sha256": "5cd3ffac1f58806eaba3c73288fe8d8296ab5ae2155a8a43c9e851efdc8477d4",
+  "schematic_PCB_simulation_changed": false,
+  "manufacturing_release": false
+}
