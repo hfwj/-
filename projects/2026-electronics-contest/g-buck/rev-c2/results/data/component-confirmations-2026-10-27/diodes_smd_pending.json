@@ -1,0 +1,34 @@
+{
+  "comparison_baseline_commit": "6f9da6a",
+  "date_client_timezone": "2026-10-27 Asia/Shanghai",
+  "user_confirmations": {
+    "L1_mounting": "vertical",
+    "D1_and_D_FREE_exact_user_text": "两个都是SR560贴片"
+  },
+  "selection_intent": {
+    "refs": [
+      "D1",
+      "D_FREE"
+    ],
+    "reported_model": "SR560",
+    "physical_form": "SMD",
+    "count": 2
+  },
+  "selected_SMD_manufacturer_package_dimensions_confirmed": false,
+  "catalog_conflict": "Supplied SR560 series table is axial DO-201AD; other pages show different diode families and do not identify the actual selected SMD part.",
+  "pending": [
+    "actual manufacturer/full ordering code",
+    "SMA/SMB/SMC or other actual package",
+    "body/terminal dimensions",
+    "cathode marking",
+    "electrical ratings and operating conditions"
+  ],
+  "uncommitted_axial_draft_withdrawn": true,
+  "effective_PCB_equals_baseline_byte_for_byte": true,
+  "effective_native_sha256": "97dc439fc294c2ed2d724955b9cde683cfc97b35cd4a10225413ab9e1f57bc91",
+  "current_CAD_placeholder": "SS56/SMB for D1 and D_FREE, compatibility not confirmed",
+  "schematic_changed": false,
+  "PCB_changed": false,
+  "simulation_or_firmware_changed": false,
+  "manufacturing_release": false
+}
