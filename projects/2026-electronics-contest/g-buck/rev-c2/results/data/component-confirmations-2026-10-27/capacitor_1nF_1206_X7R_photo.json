@@ -1,0 +1,24 @@
+{
+  "baseline": "8d57b27",
+  "source": "user inline image, selected SKU text",
+  "selected_text": "1206 1NF 10% 50V X7R (50个)",
+  "purchased_specification": {
+    "package": "1206",
+    "capacitance_nF": 1,
+    "tolerance_percent": 10,
+    "voltage_V": 50,
+    "dielectric": "X7R",
+    "quantity": 50
+  },
+  "manufacturer_full_part_number": null,
+  "target_refs": [
+    "C_IL_ADC",
+    "C_IL_PROT"
+  ],
+  "target_package": "0805",
+  "C_IL_PROT_requires_C0G": true,
+  "direct_fit": false,
+  "compatible_stock_not_autofilled": true,
+  "schematic_PCB_simulation_changed": false,
+  "manufacturing_release": false
+}
