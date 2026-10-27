@@ -59,10 +59,16 @@
       "per_board": 4,
       "purchase_needed_one_board": 0,
       "remaining_after_one_board": 46
+    },
+    "1nF_50V_0805_C0G": {
+      "available": 4,
+      "per_board": 2,
+      "purchase_needed_one_board": 0,
+      "remaining_after_one_board": 2
     }
   },
   "source_graph_connected_pins": 310,
   "manufacturing_release": false,
-  "xlsx_sha256": "213193658c0f51e5144754a199313f8fd7df77ae9637f8e30c74f8a3e0e9739a",
-  "pdf_sha256": "3406f8fda9b7075a0f622ffd675584d4d1f68e1372b6c00f141ef2e28b57f0dd"
+  "xlsx_sha256": "3ce5b94b1aec2567995b5eab3e56e796bfdd52b8562cf1438614bef3ee4f6ecf",
+  "pdf_sha256": "977f3c8a0d01e6720185e3db8a2a8a305ae58a132702eff823440305f0ef53f7"
 }

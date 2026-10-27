@@ -42,7 +42,7 @@ GROUPS=[
 ('贴片电容','100nF/50V，X7R','0805','C5 C_U2 C_U3 C_U4 C_A2 C_REF_POS C_REF_NEG C_REF_OV C_U5 C_U9 C11 C_U6 C_U7 C_U8 C_REF_IOUT C_IOUT_PROT','100nF/50V/0805/X7R，已购50只','用户对数量回复50；按单板用16只，补购0只，装一板后余34只。完整料号/容差未提供；472批次独立记4.7nF，不混计库存'),
 ('贴片电容','CL21B472JBANNNC；4.7nF/50V，±5%，X7R','0805','C7 C8 C9 C10','CL21B472JBANNNC，已购50只','用户对这批X7R数量回复50；0805/4.7nF/50V/±5%/X7R，单板4只，补购0只，装一板后余46只。不得用于C_VINP_ADC；与另购C0G库存2只分开'),
 ('贴片电容','4.7nF/50V，C0G/NP0','0805','C_VINP_ADC','4.7nF/50V/C0G/0805，已购2只','用户对C0G批次数量回复2；单板1只，补购0只，装配一板后余1只。与C7～C10的CL21B472JBANNNC/X7R库存分开；完整料号/容差未提供'),
-('贴片电容','1nF/50V，C0G/NP0','0805','C_IL_ADC C_IL_PROT','用户确认另购0805/C0G款；数量待核','用户对是否另有1nF/50V/C0G/0805回复买了；正常装配共2只，与图片1206/X7R/50只分开。实际数量/完整料号/容差未提供，库存和补购栏留空，不自动填2只；不覆盖C_SN的100V/DNP项'),
+('贴片电容','1nF/50V，C0G/NP0','0805','C_IL_ADC C_IL_PROT','1nF/50V/C0G/0805，已购4只','用户对这批0805/C0G的数量回复4；正常装配共2只，单板补购0只，装一板后余2只。与图片1206/X7R/50只分开；完整料号/容差未提供，不覆盖C_SN的100V/DNP项'),
 ('贴片电容','1nF/100V，C0G/NP0，DNP','0805','C_SN','DNP，默认不装','吸收电路预留，实测振铃后决定是否装配及调值'),
 ('普通电阻','4.7Ω，建议1%、≥0.125W','0805','RG_H RG_L','核对已购物料','不要沿用Rev B中的旧栅极电阻值'),
 ('普通电阻','1Ω，建议1%、≥0.125W','0805','R_VDDA','核对已购物料','模拟电源串联电阻，不能错装成0Ω'),
@@ -85,15 +85,16 @@ EXTERNAL=[
 ]
 
 # User-confirmed quantity; other groups remain unknown, not zero.
-CONFIRMED_STOCK = {'100nF/50V，X7R': 50, '4.7nF/50V，C0G/NP0': 2, 'CL21B472JBANNNC；4.7nF/50V，±5%，X7R': 50}
+CONFIRMED_STOCK = {'100nF/50V，X7R': 50, '4.7nF/50V，C0G/NP0': 2, 'CL21B472JBANNNC；4.7nF/50V，±5%，X7R': 50, '1nF/50V，C0G/NP0': 4}
 
 NOTES=[
- ['最新1nF另购确认', '比较1dac34a：用户对是否另有1nF/50V/C0G（NP0）/0805回复“买了”，确认正常装配C_IL_ADC、C_IL_PROT所需C0G款已另购，每板共2只。实际数量、完整料号和容差未提供，库存/补购栏留空，不把设计需求2只当成库存。此前图片1206/1nF/±10%/50V/X7R/50只仍单独登记，不抵扣0805/C0G需求；本轮50V规格确认不用于C_SN的1nF/100V/C0G/DNP预留。原理图和PCB原生文件、网络、脚号、设计值/封装及用量均未改；仅更新BOM已购状态，不需要本轮改板或新增逻辑器件。46采购行、120逻辑位号、104默认有料及先前三类已确认库存保持；仿真/固件未修改或运行。'],
+ ['最新1nF数量确认', '比较6f26307：用户对另购1nF/50V/C0G（NP0）/0805数量回复“4”，登记库存4只。C_IL_ADC、C_IL_PROT单板各1只，共2只；需补购0只，预计装一板后余2只，尚未实际扣减库存。Excel库存填4、补购保留动态公式，CSV写当前4/0。图片中的1206/X7R/50只另记，不混入本项；本次50V备料不覆盖C_SN的100V/C0G/DNP预留。完整料号/容差待归档；采购46行、120逻辑位号/104默认有料及先前三类库存保持。原理图/PCB原生文件、网络、脚号、设计值/封装及单板用量未改，仅更新库存和补购记录，无新增器件或改板要求；仿真/固件未修改或运行。'],
+ ['历史1nF另购确认（数量已后补）', '比较1dac34a：用户对是否另有1nF/50V/C0G（NP0）/0805回复“买了”，确认正常装配C_IL_ADC、C_IL_PROT所需C0G款已另购，每板共2只。实际数量、完整料号和容差未提供，库存/补购栏留空，不把设计需求2只当成库存。此前图片1206/1nF/±10%/50V/X7R/50只仍单独登记，不抵扣0805/C0G需求；本轮50V规格确认不用于C_SN的1nF/100V/C0G/DNP预留。原理图和PCB原生文件、网络、脚号、设计值/封装及用量均未改；仅更新BOM已购状态，不需要本轮改板或新增逻辑器件。46采购行、120逻辑位号、104默认有料及先前三类已确认库存保持；仿真/固件未修改或运行。'],
  ['历史1nF图片核对（后续另购见最新项）', '比较8d57b27：用户新图已选规格为1206、1nF、±10%、50V、X7R，50只；无完整厂家型号。原理图C_IL_ADC/C_IL_PROT正常装配共2只，PCB均C0805，且C_IL_PROT明确C0G。这批1206/X7R不能视作0805/C0G可直接装配库存，50只不填入目标行库存。建议另备1nF/50V/C0G/0805共2只以统一备料；是否已有该款待核，不自动认定缺货2只。C_SN另为1nF/100V/C0G、DNP，本图也不能用于确认该项。原理图/PCB原生文件、网络、设计值和封装均未改；没有放大焊盘或放宽介质要求。仅更新实购物料记录及BOM待核状态，仿真/固件未修改或运行。'],
- ['版本基准', '本次比较1dac34a；1nF/50V/C0G/0805另购已确认，数量待核。设计及既有库存保持。'],
+ ['版本基准', '本次比较6f26307；1nF/50V/C0G/0805已购4只，单板用2只/补购0只/装一板余2只；仅更新库存，设计保持。'],
  ['计数口径','120个逻辑位号含14个裸测试点、2个DNP预留和1个外置R_PRE。120不等于需购买120个独立实体。'],
  ['默认装配','120−14裸测试点−2个DNP=104个有料逻辑位号；含R_PRE外置电阻。管夹、模块、开关和线束另表计数。'],
- ['库存填写','采购汇总G列填写现有可用数量，H列自动计算需补购数量；100nF/X7R已填50只、4.7nF/X7R已填50只、4.7nF/C0G已填2只，三项单板补购均0只。其他空白表示库存未核，不代表未购买。'],
+ ['库存填写', 'G列已填用户确认库存：100nF/X7R 50只、4.7nF/X7R 50只、4.7nF/C0G 2只、1nF/C0G 4只，四项单板补购均0。其他空白表示未知，不代表未购。'],
  ['DNP','R_SN/C_SN各设计1个，默认装配0个；实测振铃后决定是否装配和调值。'],
  ['采购规格','标“建议/统一采购”的额定、精度或介质是采购建议，区别于源图原始标注；实际原始值在逐位号页保留。'],
  ['普通/精密电阻功率','除源图另有功率要求的R_BL/R_SN/R_PRE和分流器外，0805电阻统一≥0.125W是本表采购建议，不冒充源图已规定的功率。'],
@@ -106,8 +107,8 @@ NOTES=[
  ['未确认封装','C_A3的0805类别已确认；F1组合试装、分流器完整包络及外壳固定仍待核。C_A3完整料号/介质/偏压有效容量、二极管厂家数据待最终复核。'],
  ['电感','65125图示6A Max不是饱和电流保证；源设计仍要求Isat≥3A、Irms≥1.5A、DCR≤0.15Ω。'],
  ['当前制造状态','PCB仍有未布连接，客户端打开、原生ERC/DRC未完成；清单提供采购核对依据，不是制板放行。'],
- ['本次原理图影响', '相对1dac34a，原理图和PCB原生文件未改，网络/脚号/设计值/封装和单板用量保持。'],
- ['本次器件/PCB影响', '1nF/50V/C0G/0805已另购，每板2只，数量/完整料号/容差待核；1206/X7R款分开，不自动填可装库存。46采购行/120位号/104默认有料及已确认三类库存保持，无本轮改板要求。'],
+ ['本次原理图影响', '相对6f26307，原理图和PCB原生文件未改，网络/脚号/设计值/封装与单板用量保持。'],
+ ['本次器件/PCB影响', '1nF/50V/C0G/0805登记库存4只，单板用2只/补购0只，预计装一板余2只；1206/X7R款分开。完整料号/容差待归档，46采购行/120位号/104默认有料及既有三类库存保持，无新增或改板要求。'],
  ['本次仿真/固件影响','未修改或运行Multisim/ngspice/STM32固件，旧器件/功能等效模型未同步为SR560厂家模型，不证明新选型压降、温升、效率或保护实测通过。'],
 ]
 
@@ -271,7 +272,7 @@ def main():
       'cap_counts':{'100nF_default':16,'4.7nF_default':5,'1nF_default':2,'1nF_DNP':1},
       'external_accessory_lines':len(EXTERNAL),'source_files_modified':False,
       '4p7nF_selection':{'CL21B472JBANNNC_X7R':{'refs':['C7','C8','C9','C10'],'quantity':4,'stock':50},'C0G_separate_requirement':{'refs':['C_VINP_ADC'],'quantity':1,'stock':2,'full_part_number':None,'separate_purchase_confirmed':True}},
-      'confirmed_inventory':{'100nF_50V_0805_X7R':{'available':50,'per_board':16,'purchase_needed_one_board':0,'remaining_after_one_board':34},'4p7nF_50V_0805_C0G':{'available':2,'per_board':1,'purchase_needed_one_board':0,'remaining_after_one_board':1},'4p7nF_50V_0805_X7R_CL21B472JBANNNC':{'available':50,'per_board':4,'purchase_needed_one_board':0,'remaining_after_one_board':46}},
+      'confirmed_inventory':{'100nF_50V_0805_X7R':{'available':50,'per_board':16,'purchase_needed_one_board':0,'remaining_after_one_board':34},'4p7nF_50V_0805_C0G':{'available':2,'per_board':1,'purchase_needed_one_board':0,'remaining_after_one_board':1},'4p7nF_50V_0805_X7R_CL21B472JBANNNC':{'available':50,'per_board':4,'purchase_needed_one_board':0,'remaining_after_one_board':46},'1nF_50V_0805_C0G':{'available':4,'per_board':2,'purchase_needed_one_board':0,'remaining_after_one_board':2}},
       'source_graph_connected_pins':sum(bool(p['net']) for p in pins),
       'manufacturing_release':False,'xlsx_sha256':sha(DEST),'pdf_sha256':sha(pdf)}
     # Read the saved workbook back: formulas, reference coverage and quantities.
@@ -290,7 +291,9 @@ def main():
     assert (cog['默认装配数量'],cog['现有可用数量_填写'],cog['需补购数量_自动'])==('1','2','0')
     x7r=next(r for r in saved if r['采购规格/型号']=='CL21B472JBANNNC；4.7nF/50V，±5%，X7R')
     assert (x7r['默认装配数量'],x7r['现有可用数量_填写'],x7r['需补购数量_自动'])==('4','50','0')
-    assert all(r['现有可用数量_填写']=='' and r['需补购数量_自动']=='' for r in saved if r is not cap and r is not cog and r is not x7r)
+    one=next(r for r in saved if r['采购规格/型号']=='1nF/50V，C0G/NP0')
+    assert (one['默认装配数量'],one['现有可用数量_填写'],one['需补购数量_自动'])==('2','4','0')
+    assert all(r['现有可用数量_填写']=='' and r['需补购数量_自动']=='' for r in saved if r is not cap and r is not cog and r is not x7r and r is not one)
     assert sha(SOURCE)==evidence['source_csv_sha256'] and sha(native)==evidence['source_native_sha256']
     (DATA/'verification.json').write_text(json.dumps(evidence,ensure_ascii=False,indent=2))
     print(json.dumps(evidence,ensure_ascii=False,indent=2))
