@@ -1,0 +1,15 @@
+
+Note: Compatibility modes selected: ps a
+
+
+Circuit: * rev c.2 isolated timing/rc reference; no whole-converter validation
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+
+No. of Data Rows : 40116
+ngspice-44.2 done
+Warning: can't find the initialization file spinit.

@@ -1,0 +1,16 @@
+* Rev C.2 isolated timing/RC reference; no whole-converter validation
+V_IN vin 0 PWL(0 0 1m 0 1.001m 25)
+R_TOP vin div 100k
+R_BOT div 0 10k
+R_ADC div adc 1k
+C_ADC adc 0 4.7n
+
+.options method=gear reltol=1e-5 abstol=1e-10
+.tran 2u 0.003 0 2u uic
+.control
+set wr_singlescale
+run
+wrdata /workspace/-/projects/2026-electronics-contest/g-buck/rev-c2/results/data/protection/VIN_monitor_RC.txt v(vin) v(adc)
+quit
+.endc
+.end

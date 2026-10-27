@@ -1,0 +1,7 @@
+核对日期：2026-10-27（北京时间）
+来源：rev-b/references/G题同步Buck完整原理图_RevB.pdf
+SHA256：03536f0852546ccd283a0566188b67243d070d2b2b5555b43cf3a8f24355b5aa
+位置：第7页，控制接口下方外部器件/LCD行。
+原文：LCD：3.3V供电/通信的ST7735类模块；SCK→PA5；MOSI→PA7；CS→PB12；DC→PB13；RST→PB14；VCC→+3V3；GND→GND。实际模块供电须核对。
+器件通道资料：https://www.st.com.cn/resource/en/datasheet/stm32f103c8.pdf
+PA5=SPI1_SCK/ADC12_IN5；PA6=SPI1_MISO/ADC12_IN6。

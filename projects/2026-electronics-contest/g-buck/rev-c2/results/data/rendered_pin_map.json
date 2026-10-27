@@ -1,0 +1,1940 @@
+[
+  {
+    "ref": "J1",
+    "pin": "1",
+    "net": "VIN_EXT",
+    "name": "1"
+  },
+  {
+    "ref": "J1",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "J2",
+    "pin": "1",
+    "net": "VOUT",
+    "name": "1"
+  },
+  {
+    "ref": "J2",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "F1",
+    "pin": "1",
+    "net": "VIN_EXT",
+    "name": "1"
+  },
+  {
+    "ref": "F1",
+    "pin": "2",
+    "net": "FUSED",
+    "name": "2"
+  },
+  {
+    "ref": "D1",
+    "pin": "2",
+    "net": "IN_PRE",
+    "name": "A"
+  },
+  {
+    "ref": "D1",
+    "pin": "1",
+    "net": "V_SHUNT_IN",
+    "name": "K"
+  },
+  {
+    "ref": "RS_IN",
+    "pin": "2",
+    "net": "VIN",
+    "name": "2"
+  },
+  {
+    "ref": "RS_IN",
+    "pin": "1",
+    "net": "V_SHUNT_IN",
+    "name": "1"
+  },
+  {
+    "ref": "RS_OUT",
+    "pin": "2",
+    "net": "VOUT",
+    "name": "2"
+  },
+  {
+    "ref": "RS_OUT",
+    "pin": "1",
+    "net": "V_CAP",
+    "name": "1"
+  },
+  {
+    "ref": "RS_L",
+    "pin": "2",
+    "net": "V_CAP",
+    "name": "2"
+  },
+  {
+    "ref": "RS_L",
+    "pin": "1",
+    "net": "L_RAW",
+    "name": "1"
+  },
+  {
+    "ref": "C1",
+    "pin": "1",
+    "net": "VIN",
+    "name": "1"
+  },
+  {
+    "ref": "C1",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "C2",
+    "pin": "1",
+    "net": "VIN",
+    "name": "1"
+  },
+  {
+    "ref": "C2",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "QH",
+    "pin": "2",
+    "net": "VIN",
+    "name": "D"
+  },
+  {
+    "ref": "QH",
+    "pin": "1",
+    "net": "G_H",
+    "name": "G"
+  },
+  {
+    "ref": "QH",
+    "pin": "3",
+    "net": "SW",
+    "name": "S"
+  },
+  {
+    "ref": "QL",
+    "pin": "2",
+    "net": "SW",
+    "name": "D"
+  },
+  {
+    "ref": "QL",
+    "pin": "1",
+    "net": "G_L",
+    "name": "G"
+  },
+  {
+    "ref": "QL",
+    "pin": "3",
+    "net": "GND",
+    "name": "S"
+  },
+  {
+    "ref": "L1",
+    "pin": "2",
+    "net": "L_RAW",
+    "name": "2"
+  },
+  {
+    "ref": "L1",
+    "pin": "1",
+    "net": "SW",
+    "name": "1"
+  },
+  {
+    "ref": "C3",
+    "pin": "1",
+    "net": "V_CAP",
+    "name": "1"
+  },
+  {
+    "ref": "C3",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "C4",
+    "pin": "1",
+    "net": "V_CAP",
+    "name": "1"
+  },
+  {
+    "ref": "C4",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "R_BL",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "R_BL",
+    "pin": "1",
+    "net": "VOUT",
+    "name": "1"
+  },
+  {
+    "ref": "U1",
+    "pin": "5",
+    "net": "+12V_DRV",
+    "name": "VCC"
+  },
+  {
+    "ref": "U1",
+    "pin": "1",
+    "net": "PWM_IN",
+    "name": "IN"
+  },
+  {
+    "ref": "U1",
+    "pin": "2",
+    "net": "DRV_EN",
+    "name": "SD#"
+  },
+  {
+    "ref": "U1",
+    "pin": "3",
+    "net": "GND",
+    "name": "COM"
+  },
+  {
+    "ref": "U1",
+    "pin": "4",
+    "net": "LO",
+    "name": "LO"
+  },
+  {
+    "ref": "U1",
+    "pin": "6",
+    "net": "SW",
+    "name": "VS"
+  },
+  {
+    "ref": "U1",
+    "pin": "7",
+    "net": "HO",
+    "name": "HO"
+  },
+  {
+    "ref": "U1",
+    "pin": "8",
+    "net": "VB",
+    "name": "VB"
+  },
+  {
+    "ref": "D_BOOT",
+    "pin": "2",
+    "net": "VB",
+    "name": "K"
+  },
+  {
+    "ref": "D_BOOT",
+    "pin": "1",
+    "net": "+12V_DRV",
+    "name": "A"
+  },
+  {
+    "ref": "RG_H",
+    "pin": "2",
+    "net": "G_H",
+    "name": "2"
+  },
+  {
+    "ref": "RG_H",
+    "pin": "1",
+    "net": "HO",
+    "name": "1"
+  },
+  {
+    "ref": "RG_L",
+    "pin": "2",
+    "net": "G_L",
+    "name": "2"
+  },
+  {
+    "ref": "RG_L",
+    "pin": "1",
+    "net": "LO",
+    "name": "1"
+  },
+  {
+    "ref": "R_GSH",
+    "pin": "2",
+    "net": "SW",
+    "name": "2"
+  },
+  {
+    "ref": "R_GSH",
+    "pin": "1",
+    "net": "G_H",
+    "name": "1"
+  },
+  {
+    "ref": "R_GSL",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "R_GSL",
+    "pin": "1",
+    "net": "G_L",
+    "name": "1"
+  },
+  {
+    "ref": "R_IN_PD",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "R_IN_PD",
+    "pin": "1",
+    "net": "PWM_IN",
+    "name": "1"
+  },
+  {
+    "ref": "R_SD_PD",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "R_SD_PD",
+    "pin": "1",
+    "net": "DRV_EN",
+    "name": "1"
+  },
+  {
+    "ref": "R_PWM",
+    "pin": "2",
+    "net": "PWM_IN",
+    "name": "2"
+  },
+  {
+    "ref": "R_PWM",
+    "pin": "1",
+    "net": "PWM_CTL",
+    "name": "1"
+  },
+  {
+    "ref": "C_BOOT",
+    "pin": "1",
+    "net": "VB",
+    "name": "1"
+  },
+  {
+    "ref": "C_BOOT",
+    "pin": "2",
+    "net": "SW",
+    "name": "2"
+  },
+  {
+    "ref": "C5",
+    "pin": "1",
+    "net": "+12V_DRV",
+    "name": "1"
+  },
+  {
+    "ref": "C5",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "C6",
+    "pin": "1",
+    "net": "+12V_DRV",
+    "name": "1"
+  },
+  {
+    "ref": "C6",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "J_AUX12",
+    "pin": "1",
+    "net": "VIN",
+    "name": "VIN"
+  },
+  {
+    "ref": "J_AUX12",
+    "pin": "2",
+    "net": "GND",
+    "name": "GND"
+  },
+  {
+    "ref": "J_AUX12",
+    "pin": "3",
+    "net": "+12V_DRV",
+    "name": "OUT"
+  },
+  {
+    "ref": "J_AUX12",
+    "pin": "4",
+    "net": "GND",
+    "name": "GND"
+  },
+  {
+    "ref": "J_AUX5",
+    "pin": "1",
+    "net": "VIN",
+    "name": "VIN"
+  },
+  {
+    "ref": "J_AUX5",
+    "pin": "2",
+    "net": "GND",
+    "name": "GND"
+  },
+  {
+    "ref": "J_AUX5",
+    "pin": "3",
+    "net": "+5V",
+    "name": "OUT"
+  },
+  {
+    "ref": "J_AUX5",
+    "pin": "4",
+    "net": "GND",
+    "name": "GND"
+  },
+  {
+    "ref": "U2",
+    "pin": "1",
+    "net": "VIN",
+    "name": "IN-"
+  },
+  {
+    "ref": "U2",
+    "pin": "2",
+    "net": "GND",
+    "name": "GND"
+  },
+  {
+    "ref": "U2",
+    "pin": "3",
+    "net": "GND",
+    "name": "REF2"
+  },
+  {
+    "ref": "U2",
+    "pin": "4",
+    "net": "",
+    "name": "NC"
+  },
+  {
+    "ref": "U2",
+    "pin": "5",
+    "net": "IIN_RAW",
+    "name": "OUT"
+  },
+  {
+    "ref": "U2",
+    "pin": "6",
+    "net": "+3V3_A",
+    "name": "VS"
+  },
+  {
+    "ref": "U2",
+    "pin": "7",
+    "net": "GND",
+    "name": "REF1"
+  },
+  {
+    "ref": "U2",
+    "pin": "8",
+    "net": "V_SHUNT_IN",
+    "name": "IN+"
+  },
+  {
+    "ref": "U4",
+    "pin": "1",
+    "net": "V_CAP",
+    "name": "IN-"
+  },
+  {
+    "ref": "U4",
+    "pin": "2",
+    "net": "GND",
+    "name": "GND"
+  },
+  {
+    "ref": "U4",
+    "pin": "3",
+    "net": "GND",
+    "name": "REF2"
+  },
+  {
+    "ref": "U4",
+    "pin": "4",
+    "net": "",
+    "name": "NC"
+  },
+  {
+    "ref": "U4",
+    "pin": "5",
+    "net": "IL_BI",
+    "name": "OUT"
+  },
+  {
+    "ref": "U4",
+    "pin": "6",
+    "net": "+3V3_A",
+    "name": "VS"
+  },
+  {
+    "ref": "U4",
+    "pin": "7",
+    "net": "+3V3_A",
+    "name": "REF1"
+  },
+  {
+    "ref": "U4",
+    "pin": "8",
+    "net": "L_RAW",
+    "name": "IN+"
+  },
+  {
+    "ref": "U3",
+    "pin": "1",
+    "net": "IOUT_RAW",
+    "name": "OUT"
+  },
+  {
+    "ref": "U3",
+    "pin": "2",
+    "net": "GND",
+    "name": "GND"
+  },
+  {
+    "ref": "U3",
+    "pin": "3",
+    "net": "V_CAP",
+    "name": "IN+"
+  },
+  {
+    "ref": "U3",
+    "pin": "4",
+    "net": "VOUT",
+    "name": "IN-"
+  },
+  {
+    "ref": "U3",
+    "pin": "5",
+    "net": "GND",
+    "name": "REF"
+  },
+  {
+    "ref": "U3",
+    "pin": "6",
+    "net": "+3V3_A",
+    "name": "VS"
+  },
+  {
+    "ref": "C_U2",
+    "pin": "1",
+    "net": "+3V3_A",
+    "name": "1"
+  },
+  {
+    "ref": "C_U2",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "C_U3",
+    "pin": "1",
+    "net": "+3V3_A",
+    "name": "1"
+  },
+  {
+    "ref": "C_U3",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "C_U4",
+    "pin": "1",
+    "net": "+3V3_A",
+    "name": "1"
+  },
+  {
+    "ref": "C_U4",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "C_A2",
+    "pin": "1",
+    "net": "+3V3_A",
+    "name": "1"
+  },
+  {
+    "ref": "C_A2",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "R_VDDA",
+    "pin": "2",
+    "net": "+3V3_A",
+    "name": "2"
+  },
+  {
+    "ref": "R_VDDA",
+    "pin": "1",
+    "net": "+3V3",
+    "name": "1"
+  },
+  {
+    "ref": "C_A1",
+    "pin": "1",
+    "net": "+3V3_A",
+    "name": "1"
+  },
+  {
+    "ref": "C_A1",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "C_A3",
+    "pin": "1",
+    "net": "+3V3_A",
+    "name": "1"
+  },
+  {
+    "ref": "C_A3",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "R1",
+    "pin": "2",
+    "net": "VIN_DIV",
+    "name": "2"
+  },
+  {
+    "ref": "R1",
+    "pin": "1",
+    "net": "VIN_EXT",
+    "name": "1"
+  },
+  {
+    "ref": "R2",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "R2",
+    "pin": "1",
+    "net": "VIN_DIV",
+    "name": "1"
+  },
+  {
+    "ref": "R4",
+    "pin": "2",
+    "net": "VOUT_DIV",
+    "name": "2"
+  },
+  {
+    "ref": "R4",
+    "pin": "1",
+    "net": "VOUT",
+    "name": "1"
+  },
+  {
+    "ref": "R5",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "R5",
+    "pin": "1",
+    "net": "VOUT_DIV",
+    "name": "1"
+  },
+  {
+    "ref": "R3",
+    "pin": "2",
+    "net": "ADC_VIN",
+    "name": "2"
+  },
+  {
+    "ref": "R3",
+    "pin": "1",
+    "net": "VIN_DIV",
+    "name": "1"
+  },
+  {
+    "ref": "R7",
+    "pin": "2",
+    "net": "ADC_IIN",
+    "name": "2"
+  },
+  {
+    "ref": "R7",
+    "pin": "1",
+    "net": "IIN_RAW",
+    "name": "1"
+  },
+  {
+    "ref": "R6",
+    "pin": "2",
+    "net": "ADC_VOUT",
+    "name": "2"
+  },
+  {
+    "ref": "R6",
+    "pin": "1",
+    "net": "VOUT_DIV",
+    "name": "1"
+  },
+  {
+    "ref": "R8",
+    "pin": "2",
+    "net": "ADC_IOUT",
+    "name": "2"
+  },
+  {
+    "ref": "R8",
+    "pin": "1",
+    "net": "IOUT_RAW",
+    "name": "1"
+  },
+  {
+    "ref": "R_IL_ADC",
+    "pin": "2",
+    "net": "ADC_IL",
+    "name": "2"
+  },
+  {
+    "ref": "R_IL_ADC",
+    "pin": "1",
+    "net": "IL_BI",
+    "name": "1"
+  },
+  {
+    "ref": "C7",
+    "pin": "1",
+    "net": "ADC_VIN",
+    "name": "1"
+  },
+  {
+    "ref": "C7",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "C9",
+    "pin": "1",
+    "net": "ADC_IIN",
+    "name": "1"
+  },
+  {
+    "ref": "C9",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "C8",
+    "pin": "1",
+    "net": "ADC_VOUT",
+    "name": "1"
+  },
+  {
+    "ref": "C8",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "C10",
+    "pin": "1",
+    "net": "ADC_IOUT",
+    "name": "1"
+  },
+  {
+    "ref": "C10",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "C_IL_ADC",
+    "pin": "1",
+    "net": "ADC_IL",
+    "name": "1"
+  },
+  {
+    "ref": "C_IL_ADC",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "D_ADC1",
+    "pin": "1",
+    "net": "GND",
+    "name": "A1"
+  },
+  {
+    "ref": "D_ADC1",
+    "pin": "2",
+    "net": "+3V3",
+    "name": "K2"
+  },
+  {
+    "ref": "D_ADC1",
+    "pin": "3",
+    "net": "ADC_VIN",
+    "name": "K1_A2"
+  },
+  {
+    "ref": "D_ADC2",
+    "pin": "1",
+    "net": "GND",
+    "name": "A1"
+  },
+  {
+    "ref": "D_ADC2",
+    "pin": "2",
+    "net": "+3V3",
+    "name": "K2"
+  },
+  {
+    "ref": "D_ADC2",
+    "pin": "3",
+    "net": "ADC_IIN",
+    "name": "K1_A2"
+  },
+  {
+    "ref": "D_ADC3",
+    "pin": "1",
+    "net": "GND",
+    "name": "A1"
+  },
+  {
+    "ref": "D_ADC3",
+    "pin": "2",
+    "net": "+3V3",
+    "name": "K2"
+  },
+  {
+    "ref": "D_ADC3",
+    "pin": "3",
+    "net": "ADC_VOUT",
+    "name": "K1_A2"
+  },
+  {
+    "ref": "D_ADC4",
+    "pin": "1",
+    "net": "GND",
+    "name": "A1"
+  },
+  {
+    "ref": "D_ADC4",
+    "pin": "2",
+    "net": "+3V3",
+    "name": "K2"
+  },
+  {
+    "ref": "D_ADC4",
+    "pin": "3",
+    "net": "ADC_IOUT",
+    "name": "K1_A2"
+  },
+  {
+    "ref": "D_ADC5",
+    "pin": "1",
+    "net": "GND",
+    "name": "A1"
+  },
+  {
+    "ref": "D_ADC5",
+    "pin": "2",
+    "net": "+3V3",
+    "name": "K2"
+  },
+  {
+    "ref": "D_ADC5",
+    "pin": "3",
+    "net": "ADC_IL",
+    "name": "K1_A2"
+  },
+  {
+    "ref": "U5",
+    "pin": "1",
+    "net": "FAULT_N",
+    "name": "OUT_A"
+  },
+  {
+    "ref": "U5",
+    "pin": "2",
+    "net": "IL_PROT",
+    "name": "IN_A-"
+  },
+  {
+    "ref": "U5",
+    "pin": "3",
+    "net": "VREF_POS",
+    "name": "IN_A+"
+  },
+  {
+    "ref": "U5",
+    "pin": "4",
+    "net": "GND",
+    "name": "GND"
+  },
+  {
+    "ref": "U5",
+    "pin": "5",
+    "net": "VREF_OV",
+    "name": "IN_B+"
+  },
+  {
+    "ref": "U5",
+    "pin": "6",
+    "net": "VOUT_DIV",
+    "name": "IN_B-"
+  },
+  {
+    "ref": "U5",
+    "pin": "7",
+    "net": "FAULT_N",
+    "name": "OUT_B"
+  },
+  {
+    "ref": "U5",
+    "pin": "8",
+    "net": "+5V",
+    "name": "VCC"
+  },
+  {
+    "ref": "U9",
+    "pin": "1",
+    "net": "FAULT_N",
+    "name": "OUT_A"
+  },
+  {
+    "ref": "U9",
+    "pin": "2",
+    "net": "VREF_NEG",
+    "name": "IN_A-"
+  },
+  {
+    "ref": "U9",
+    "pin": "3",
+    "net": "IL_PROT",
+    "name": "IN_A+"
+  },
+  {
+    "ref": "U9",
+    "pin": "4",
+    "net": "GND",
+    "name": "GND"
+  },
+  {
+    "ref": "U9",
+    "pin": "5",
+    "net": "VREF_IOUT",
+    "name": "IN_B+"
+  },
+  {
+    "ref": "U9",
+    "pin": "6",
+    "net": "IOUT_PROT",
+    "name": "IN_B-"
+  },
+  {
+    "ref": "U9",
+    "pin": "7",
+    "net": "IOUT_OC_N",
+    "name": "OUT_B"
+  },
+  {
+    "ref": "U9",
+    "pin": "8",
+    "net": "+5V",
+    "name": "VCC"
+  },
+  {
+    "ref": "R9",
+    "pin": "2",
+    "net": "VREF_POS",
+    "name": "2"
+  },
+  {
+    "ref": "R9",
+    "pin": "1",
+    "net": "+3V3_A",
+    "name": "1"
+  },
+  {
+    "ref": "R16",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "R16",
+    "pin": "1",
+    "net": "VREF_NEG",
+    "name": "1"
+  },
+  {
+    "ref": "R10A",
+    "pin": "2",
+    "net": "POS_MID",
+    "name": "2"
+  },
+  {
+    "ref": "R10A",
+    "pin": "1",
+    "net": "VREF_POS",
+    "name": "1"
+  },
+  {
+    "ref": "R15A",
+    "pin": "2",
+    "net": "NEG_MID",
+    "name": "2"
+  },
+  {
+    "ref": "R15A",
+    "pin": "1",
+    "net": "+3V3_A",
+    "name": "1"
+  },
+  {
+    "ref": "R10B",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "R10B",
+    "pin": "1",
+    "net": "POS_MID",
+    "name": "1"
+  },
+  {
+    "ref": "R15B",
+    "pin": "2",
+    "net": "VREF_NEG",
+    "name": "2"
+  },
+  {
+    "ref": "R15B",
+    "pin": "1",
+    "net": "NEG_MID",
+    "name": "1"
+  },
+  {
+    "ref": "R11",
+    "pin": "2",
+    "net": "VREF_OV",
+    "name": "2"
+  },
+  {
+    "ref": "R11",
+    "pin": "1",
+    "net": "+3V3_A",
+    "name": "1"
+  },
+  {
+    "ref": "R12",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "R12",
+    "pin": "1",
+    "net": "VREF_OV",
+    "name": "1"
+  },
+  {
+    "ref": "R13",
+    "pin": "2",
+    "net": "FAULT_N",
+    "name": "2"
+  },
+  {
+    "ref": "R13",
+    "pin": "1",
+    "net": "+3V3",
+    "name": "1"
+  },
+  {
+    "ref": "C_REF_POS",
+    "pin": "1",
+    "net": "VREF_POS",
+    "name": "1"
+  },
+  {
+    "ref": "C_REF_POS",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "C_REF_NEG",
+    "pin": "1",
+    "net": "VREF_NEG",
+    "name": "1"
+  },
+  {
+    "ref": "C_REF_NEG",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "C_REF_OV",
+    "pin": "1",
+    "net": "VREF_OV",
+    "name": "1"
+  },
+  {
+    "ref": "C_REF_OV",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "C_U5",
+    "pin": "1",
+    "net": "+5V",
+    "name": "1"
+  },
+  {
+    "ref": "C_U5",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "C_U9",
+    "pin": "1",
+    "net": "+5V",
+    "name": "1"
+  },
+  {
+    "ref": "C_U9",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "U6",
+    "pin": "1",
+    "net": "FAULT_N",
+    "name": "CLR1#"
+  },
+  {
+    "ref": "U6",
+    "pin": "2",
+    "net": "+3V3",
+    "name": "D1"
+  },
+  {
+    "ref": "U6",
+    "pin": "3",
+    "net": "ARM",
+    "name": "CLK1"
+  },
+  {
+    "ref": "U6",
+    "pin": "4",
+    "net": "+3V3",
+    "name": "PRE1#"
+  },
+  {
+    "ref": "U6",
+    "pin": "5",
+    "net": "SAFE_OK",
+    "name": "Q1"
+  },
+  {
+    "ref": "U6",
+    "pin": "6",
+    "net": "",
+    "name": "Q1#"
+  },
+  {
+    "ref": "U6",
+    "pin": "7",
+    "net": "GND",
+    "name": "GND"
+  },
+  {
+    "ref": "U6",
+    "pin": "8",
+    "net": "",
+    "name": "Q2#"
+  },
+  {
+    "ref": "U6",
+    "pin": "9",
+    "net": "",
+    "name": "Q2"
+  },
+  {
+    "ref": "U6",
+    "pin": "10",
+    "net": "+3V3",
+    "name": "PRE2#"
+  },
+  {
+    "ref": "U6",
+    "pin": "11",
+    "net": "GND",
+    "name": "CLK2"
+  },
+  {
+    "ref": "U6",
+    "pin": "12",
+    "net": "GND",
+    "name": "D2"
+  },
+  {
+    "ref": "U6",
+    "pin": "13",
+    "net": "+3V3",
+    "name": "CLR2#"
+  },
+  {
+    "ref": "U6",
+    "pin": "14",
+    "net": "+3V3",
+    "name": "VCC"
+  },
+  {
+    "ref": "U7",
+    "pin": "1",
+    "net": "SAFE_OK",
+    "name": "1A"
+  },
+  {
+    "ref": "U7",
+    "pin": "2",
+    "net": "MCU_EN",
+    "name": "1B"
+  },
+  {
+    "ref": "U7",
+    "pin": "3",
+    "net": "DRV_EN",
+    "name": "1Y"
+  },
+  {
+    "ref": "U7",
+    "pin": "4",
+    "net": "GND",
+    "name": "2A"
+  },
+  {
+    "ref": "U7",
+    "pin": "5",
+    "net": "GND",
+    "name": "2B"
+  },
+  {
+    "ref": "U7",
+    "pin": "6",
+    "net": "",
+    "name": "2Y"
+  },
+  {
+    "ref": "U7",
+    "pin": "7",
+    "net": "GND",
+    "name": "GND"
+  },
+  {
+    "ref": "U7",
+    "pin": "8",
+    "net": "",
+    "name": "3Y"
+  },
+  {
+    "ref": "U7",
+    "pin": "9",
+    "net": "GND",
+    "name": "3A"
+  },
+  {
+    "ref": "U7",
+    "pin": "10",
+    "net": "GND",
+    "name": "3B"
+  },
+  {
+    "ref": "U7",
+    "pin": "11",
+    "net": "",
+    "name": "4Y"
+  },
+  {
+    "ref": "U7",
+    "pin": "12",
+    "net": "GND",
+    "name": "4A"
+  },
+  {
+    "ref": "U7",
+    "pin": "13",
+    "net": "GND",
+    "name": "4B"
+  },
+  {
+    "ref": "U7",
+    "pin": "14",
+    "net": "+3V3",
+    "name": "VCC"
+  },
+  {
+    "ref": "U8",
+    "pin": "1",
+    "net": "POR_RC",
+    "name": "1A"
+  },
+  {
+    "ref": "U8",
+    "pin": "2",
+    "net": "POR_INV",
+    "name": "1Y"
+  },
+  {
+    "ref": "U8",
+    "pin": "3",
+    "net": "POR_INV",
+    "name": "2A"
+  },
+  {
+    "ref": "U8",
+    "pin": "4",
+    "net": "POR_OK",
+    "name": "2Y"
+  },
+  {
+    "ref": "U8",
+    "pin": "5",
+    "net": "GND",
+    "name": "3A"
+  },
+  {
+    "ref": "U8",
+    "pin": "6",
+    "net": "",
+    "name": "3Y"
+  },
+  {
+    "ref": "U8",
+    "pin": "7",
+    "net": "GND",
+    "name": "GND"
+  },
+  {
+    "ref": "U8",
+    "pin": "8",
+    "net": "",
+    "name": "4Y"
+  },
+  {
+    "ref": "U8",
+    "pin": "9",
+    "net": "GND",
+    "name": "4A"
+  },
+  {
+    "ref": "U8",
+    "pin": "10",
+    "net": "",
+    "name": "5Y"
+  },
+  {
+    "ref": "U8",
+    "pin": "11",
+    "net": "GND",
+    "name": "5A"
+  },
+  {
+    "ref": "U8",
+    "pin": "12",
+    "net": "",
+    "name": "6Y"
+  },
+  {
+    "ref": "U8",
+    "pin": "13",
+    "net": "GND",
+    "name": "6A"
+  },
+  {
+    "ref": "U8",
+    "pin": "14",
+    "net": "+3V3",
+    "name": "VCC"
+  },
+  {
+    "ref": "R14",
+    "pin": "2",
+    "net": "POR_RC",
+    "name": "2"
+  },
+  {
+    "ref": "R14",
+    "pin": "1",
+    "net": "+3V3",
+    "name": "1"
+  },
+  {
+    "ref": "R_EN_PD",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "R_EN_PD",
+    "pin": "1",
+    "net": "MCU_EN",
+    "name": "1"
+  },
+  {
+    "ref": "R_ARM_PD",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "R_ARM_PD",
+    "pin": "1",
+    "net": "ARM",
+    "name": "1"
+  },
+  {
+    "ref": "C11",
+    "pin": "1",
+    "net": "POR_RC",
+    "name": "1"
+  },
+  {
+    "ref": "C11",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "C_U6",
+    "pin": "1",
+    "net": "+3V3",
+    "name": "1"
+  },
+  {
+    "ref": "C_U6",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "C_U7",
+    "pin": "1",
+    "net": "+3V3",
+    "name": "1"
+  },
+  {
+    "ref": "C_U7",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "C_U8",
+    "pin": "1",
+    "net": "+3V3",
+    "name": "1"
+  },
+  {
+    "ref": "C_U8",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "D_POR",
+    "pin": "1",
+    "net": "FAULT_N",
+    "name": "A"
+  },
+  {
+    "ref": "D_POR",
+    "pin": "2",
+    "net": "",
+    "name": "NC"
+  },
+  {
+    "ref": "D_POR",
+    "pin": "3",
+    "net": "POR_OK",
+    "name": "K"
+  },
+  {
+    "ref": "J_CTL",
+    "pin": "1",
+    "net": "GND",
+    "name": "GND"
+  },
+  {
+    "ref": "J_CTL",
+    "pin": "2",
+    "net": "+5V",
+    "name": "+5V"
+  },
+  {
+    "ref": "J_CTL",
+    "pin": "3",
+    "net": "GND",
+    "name": "GND"
+  },
+  {
+    "ref": "J_CTL",
+    "pin": "4",
+    "net": "+3V3",
+    "name": "+3V3"
+  },
+  {
+    "ref": "J_CTL",
+    "pin": "5",
+    "net": "PWM_CTL",
+    "name": "PA8_PWM"
+  },
+  {
+    "ref": "J_CTL",
+    "pin": "6",
+    "net": "IOUT_OC_N",
+    "name": "PB11/OC#"
+  },
+  {
+    "ref": "J_CTL",
+    "pin": "7",
+    "net": "MCU_EN",
+    "name": "PB0_EN"
+  },
+  {
+    "ref": "J_CTL",
+    "pin": "8",
+    "net": "ARM",
+    "name": "PB1_ARM"
+  },
+  {
+    "ref": "J_CTL",
+    "pin": "9",
+    "net": "FAULT_N",
+    "name": "PB10_FAULT#"
+  },
+  {
+    "ref": "J_CTL",
+    "pin": "10",
+    "net": "GND",
+    "name": "GND"
+  },
+  {
+    "ref": "J_CTL",
+    "pin": "11",
+    "net": "ADC_VIN",
+    "name": "PA0_VIN"
+  },
+  {
+    "ref": "J_CTL",
+    "pin": "12",
+    "net": "ADC_IIN",
+    "name": "PA1_IIN"
+  },
+  {
+    "ref": "J_CTL",
+    "pin": "13",
+    "net": "ADC_VOUT",
+    "name": "PA2_VOUT"
+  },
+  {
+    "ref": "J_CTL",
+    "pin": "14",
+    "net": "ADC_IOUT",
+    "name": "PA3_IOUT"
+  },
+  {
+    "ref": "J_CTL",
+    "pin": "15",
+    "net": "ADC_IL",
+    "name": "PA4_IL"
+  },
+  {
+    "ref": "J_CTL",
+    "pin": "16",
+    "net": "GND",
+    "name": "GND"
+  },
+  {
+    "ref": "TP1",
+    "pin": "1",
+    "net": "VIN_EXT",
+    "name": "TP"
+  },
+  {
+    "ref": "TP2",
+    "pin": "1",
+    "net": "VIN",
+    "name": "TP"
+  },
+  {
+    "ref": "TP3",
+    "pin": "1",
+    "net": "SW",
+    "name": "TP"
+  },
+  {
+    "ref": "TP4",
+    "pin": "1",
+    "net": "VOUT",
+    "name": "TP"
+  },
+  {
+    "ref": "TP5",
+    "pin": "1",
+    "net": "GND",
+    "name": "TP"
+  },
+  {
+    "ref": "TP6",
+    "pin": "1",
+    "net": "G_H",
+    "name": "TP"
+  },
+  {
+    "ref": "TP7",
+    "pin": "1",
+    "net": "G_L",
+    "name": "TP"
+  },
+  {
+    "ref": "TP8",
+    "pin": "1",
+    "net": "IL_BI",
+    "name": "TP"
+  },
+  {
+    "ref": "TP9",
+    "pin": "1",
+    "net": "FAULT_N",
+    "name": "TP"
+  },
+  {
+    "ref": "TP10",
+    "pin": "1",
+    "net": "+3V3_A",
+    "name": "TP"
+  },
+  {
+    "ref": "R_PRE",
+    "pin": "2",
+    "net": "IN_PRE",
+    "name": "2"
+  },
+  {
+    "ref": "R_PRE",
+    "pin": "1",
+    "net": "FUSED",
+    "name": "1"
+  },
+  {
+    "ref": "J_BYP",
+    "pin": "1",
+    "net": "FUSED",
+    "name": "1"
+  },
+  {
+    "ref": "J_BYP",
+    "pin": "2",
+    "net": "IN_PRE",
+    "name": "2"
+  },
+  {
+    "ref": "D_FREE",
+    "pin": "2",
+    "net": "GND",
+    "name": "A"
+  },
+  {
+    "ref": "D_FREE",
+    "pin": "1",
+    "net": "SW",
+    "name": "K"
+  },
+  {
+    "ref": "R_SN",
+    "pin": "2",
+    "net": "SN_MID",
+    "name": "2"
+  },
+  {
+    "ref": "R_SN",
+    "pin": "1",
+    "net": "SW",
+    "name": "1"
+  },
+  {
+    "ref": "C_SN",
+    "pin": "1",
+    "net": "SN_MID",
+    "name": "1"
+  },
+  {
+    "ref": "C_SN",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "R_IL_PROT",
+    "pin": "2",
+    "net": "IL_PROT",
+    "name": "2"
+  },
+  {
+    "ref": "R_IL_PROT",
+    "pin": "1",
+    "net": "IL_BI",
+    "name": "1"
+  },
+  {
+    "ref": "C_IL_PROT",
+    "pin": "1",
+    "net": "IL_PROT",
+    "name": "1"
+  },
+  {
+    "ref": "C_IL_PROT",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "R_IOUT_PROT",
+    "pin": "2",
+    "net": "IOUT_PROT",
+    "name": "2"
+  },
+  {
+    "ref": "R_IOUT_PROT",
+    "pin": "1",
+    "net": "IOUT_RAW",
+    "name": "1"
+  },
+  {
+    "ref": "C_IOUT_PROT",
+    "pin": "1",
+    "net": "IOUT_PROT",
+    "name": "1"
+  },
+  {
+    "ref": "C_IOUT_PROT",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "R_IOUT_TOP",
+    "pin": "2",
+    "net": "VREF_IOUT",
+    "name": "2"
+  },
+  {
+    "ref": "R_IOUT_TOP",
+    "pin": "1",
+    "net": "+3V3_A",
+    "name": "1"
+  },
+  {
+    "ref": "R_IOUT_BOT",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "R_IOUT_BOT",
+    "pin": "1",
+    "net": "VREF_IOUT",
+    "name": "1"
+  },
+  {
+    "ref": "C_REF_IOUT",
+    "pin": "1",
+    "net": "VREF_IOUT",
+    "name": "1"
+  },
+  {
+    "ref": "C_REF_IOUT",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "R_IOUT_PU",
+    "pin": "2",
+    "net": "IOUT_OC_N",
+    "name": "2"
+  },
+  {
+    "ref": "R_IOUT_PU",
+    "pin": "1",
+    "net": "+3V3",
+    "name": "1"
+  },
+  {
+    "ref": "C_DRV",
+    "pin": "1",
+    "net": "+12V_DRV",
+    "name": "1"
+  },
+  {
+    "ref": "C_DRV",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "TP11",
+    "pin": "1",
+    "net": "IOUT_RAW",
+    "name": "TP"
+  },
+  {
+    "ref": "TP12",
+    "pin": "1",
+    "net": "IL_PROT",
+    "name": "TP"
+  },
+  {
+    "ref": "TP13",
+    "pin": "1",
+    "net": "VREF_IOUT",
+    "name": "TP"
+  },
+  {
+    "ref": "R_VINP_TOP",
+    "pin": "2",
+    "net": "VIN_POST_DIV",
+    "name": "2"
+  },
+  {
+    "ref": "R_VINP_TOP",
+    "pin": "1",
+    "net": "VIN",
+    "name": "1"
+  },
+  {
+    "ref": "R_VINP_BOT",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "R_VINP_BOT",
+    "pin": "1",
+    "net": "VIN_POST_DIV",
+    "name": "1"
+  },
+  {
+    "ref": "R_VINP_ADC",
+    "pin": "2",
+    "net": "ADC_VIN_POST",
+    "name": "2"
+  },
+  {
+    "ref": "R_VINP_ADC",
+    "pin": "1",
+    "net": "VIN_POST_DIV",
+    "name": "1"
+  },
+  {
+    "ref": "C_VINP_ADC",
+    "pin": "1",
+    "net": "ADC_VIN_POST",
+    "name": "1"
+  },
+  {
+    "ref": "C_VINP_ADC",
+    "pin": "2",
+    "net": "GND",
+    "name": "2"
+  },
+  {
+    "ref": "D_ADC6",
+    "pin": "1",
+    "net": "GND",
+    "name": "A1"
+  },
+  {
+    "ref": "D_ADC6",
+    "pin": "2",
+    "net": "+3V3_A",
+    "name": "K2"
+  },
+  {
+    "ref": "D_ADC6",
+    "pin": "3",
+    "net": "ADC_VIN_POST",
+    "name": "K1_A2"
+  },
+  {
+    "ref": "J_MON",
+    "pin": "1",
+    "net": "ADC_VIN_POST",
+    "name": "PA6/ADC"
+  },
+  {
+    "ref": "J_MON",
+    "pin": "2",
+    "net": "GND",
+    "name": "GND"
+  },
+  {
+    "ref": "TP14",
+    "pin": "1",
+    "net": "ADC_VIN_POST",
+    "name": "TP"
+  }
+]

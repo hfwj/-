@@ -1,0 +1,80 @@
+{
+  "status": "PASS_ISOLATED_FUNCTIONAL_BENCHES",
+  "solver": "ngspice 44.2",
+  "tests": [
+    {
+      "case": "brief_OC_pulses_4p4ms_3p08ms",
+      "completed": true,
+      "first_disable_s": null,
+      "final_enable_V": 3.3,
+      "final_time_s": 0.08
+    },
+    {
+      "case": "oc_sustained",
+      "completed": true,
+      "first_disable_s": 0.0300006212,
+      "final_enable_V": 0.0,
+      "final_time_s": 0.08
+    },
+    {
+      "case": "imposed_0p1V_OC_healthy",
+      "completed": true,
+      "first_disable_s": 0.0300009927,
+      "final_enable_V": 0.0,
+      "final_time_s": 0.08
+    },
+    {
+      "case": "imposed_0p01V_OC_healthy",
+      "completed": true,
+      "first_disable_s": 0.0300009795,
+      "final_enable_V": 0.0,
+      "final_time_s": 0.08
+    },
+    {
+      "case": "startup_low_voltage_masked",
+      "completed": true,
+      "first_disable_s": null,
+      "final_enable_V": 3.3,
+      "final_time_s": 0.08
+    },
+    {
+      "case": "low_target_voltage_exempt",
+      "completed": true,
+      "first_disable_s": null,
+      "final_enable_V": 3.3,
+      "final_time_s": 0.08
+    },
+    {
+      "case": "fault_release_requires_ARM",
+      "completed": true,
+      "first_disable_s": 0.0300009927,
+      "final_enable_V": 0.0,
+      "final_time_s": 0.08
+    },
+    {
+      "case": "manual_ARM_after_release",
+      "completed": true,
+      "first_disable_s": 0.0300009927,
+      "final_enable_V": 3.3,
+      "final_time_s": 0.08
+    },
+    {
+      "case": "hardware_fault_1ms_latches",
+      "completed": true,
+      "first_disable_s": 0.0100006225,
+      "final_enable_V": 0.0,
+      "final_time_s": 0.08
+    }
+  ],
+  "monitor_DC_V_at_25V": 2.27272727,
+  "monitor_63percent_delay_s": 4.82285099999999e-05,
+  "embedded_library_used": true,
+  "actual_load_steps_simulated": false,
+  "embedded_project_sha256": "3e0909bbfe38324423617a22f661c4a335bb32a88ead7877a5729ec1ec2919bc",
+  "embedded_library_sha256": "7d459ea421ac2d74244a1fb7eba23dcca51d73fe824b428ee3010cd62bc268d4",
+  "whole_Buck_transient_run": false,
+  "native_Multisim_run": false,
+  "STM32_firmware_test": false,
+  "efficiency_verified": false,
+  "scope": "Imposed OC/voltage/ARM signals; not reproduction of attachment peaks or durations"
+}

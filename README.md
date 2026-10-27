@@ -6,6 +6,7 @@
 
 | 项目 | 资料入口 | 当前结论 |
 |---|---|---|
+| 2026 电子电赛 G题：Rev C.2 评审核对与配套修订 | [项目/下载入口](projects/2026-electronics-contest/g-buck/rev-c2/README.md) · [核对报告](projects/2026-electronics-contest/g-buck/rev-c2/reports/RevC1评审核对与RevC2修订说明.md) | 确认LCD占用PA5，监测接口改PA6；已同步Multisim电容/7项监测器件及独立保护计时模型；静态与独立逻辑检查通过，整机动态/固件/效率未验收 |
 | 2026 电子电赛 G题：Rev C.1 新原理图 | [项目/整包入口](projects/2026-electronics-contest/g-buck/rev-c1/README.md) · [PDF](projects/2026-electronics-contest/g-buck/rev-c1/schematic/previews/G题同步Buck完整原理图_RevC1.pdf) · [可编辑工程](projects/2026-electronics-contest/g-buck/rev-c1/schematic/native/G题同步Buck_RevC1_原理图修订.eprj2) | 修正脚名/显示，告警电容100nF，新增下游VIN监测；新增7器件并需同步PCB/控制板接线；静态核查通过，ERC/DRC、固件与实测未验收 |
 | 2026 电子电赛 G题：Rev C 附件复核 | [项目入口](projects/2026-electronics-contest/g-buck/rev-c/README.md) · [复核报告](projects/2026-electronics-contest/g-buck/rev-c/reports/RevC_按附件复核_2026-10-27.md) | 原生 QH/QL 接线正确；J_CTL.6 旧 GND 名称待修正；固件、效率、ERC/DRC 待验证。本次仅新增审查资料，未改原理图、器件或模型 |
 | 2026 电子电赛 G题：Rev C Multisim完整搭建 | [100ms主工程](projects/2026-electronics-contest/g-buck/rev-c/downloads/GBUCK_REVC_FULL_25V_5R_100ms.ms14) · [10ms短检查](projects/2026-electronics-contest/g-buck/rev-c/downloads/GBUCK_REVC_FULL_SMOKE_10ms.ms14) · [110ms预充](projects/2026-electronics-contest/g-buck/rev-c/downloads/GBUCK_REVC_PRECHARGE_ONLY_110ms.ms14) · [搭建图纸与说明PDF](projects/2026-electronics-contest/g-buck/rev-c/simulation/multisim14/diagrams/Multisim14_RevC完整搭建与使用说明.pdf) | 113项主板器件逐引脚核对；有电路/器件配套变动；跨引擎100ms检查完成，Multisim本机打开/运行待确认 |

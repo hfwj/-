@@ -1,5 +1,7 @@
 # G 题同步 Buck Rev C.1
 
+**后续修订：[Rev C.2](../rev-c2/README.md)** 已根据原图确认 LCD SCK 占用 PA5，将监测接口改到 PA6，并同步 Multisim。本目录保留 C.1 历史交付，采用新图时请使用 C.2。
+
 基于 Rev C 复核结果，修正 J_CTL.6 与 MOS 脚号显示，C_IOUT_PROT 改为 100 nF/25 V X7R，并新增预充后 VIN 采样支路及 PA5 接口。
 
 | 交付 | 文件 |

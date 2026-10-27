@@ -1,0 +1,40 @@
+{
+  "status": "PASS_STATIC_NATIVE_READBACK",
+  "date_beijing": "2026-10-27",
+  "source_sha256": "33d7db27746fce82061b2fcf738c5469512ad8e43f723a8538ef6aaaf2394156",
+  "native_sha256": "6a1ed47fc5ad60f26e2b3efa9301078c0e1f658fd5d7c378f988992510ee30d6",
+  "pages": 9,
+  "parts": 120,
+  "nets": 51,
+  "connected_pins": 310,
+  "all_RevC1_pin_nets_unchanged": true,
+  "all_legacy_documents_unchanged": true,
+  "display_value_changes": {
+    "J_MON": [
+      "2P VIN_POST ADC / PA5",
+      "2P VIN_POST ADC / PA6"
+    ]
+  },
+  "component_values_changed": false,
+  "parts_added": false,
+  "physical_control_connection": "J_MON.1: PA5 -> PA6/ADC12_IN6; J_MON.2=GND",
+  "lcd_mapping_source": "RevB original PDF page 7: SCK=PA5, MOSI=PA7, CS=PB12, DC=PB13, RST=PB14",
+  "native_client_open_test": false,
+  "ERC_DRC_run": false,
+  "hardware_tested": false,
+  "changed_document_ids": [
+    "0efbdad332f15843",
+    "3e6ec376e5634383",
+    "630502d11e8f4bf4",
+    "8a3a2ed3e5c84a2b",
+    "99c29beebf8d4e80",
+    "b280f0276da04e75",
+    "c27abd24d4c85ca0",
+    "c5ad6535607d489f",
+    "cd6703576f6152f4",
+    "db66fd70791645b2",
+    "e52adb19e8774890",
+    "f9201e2d6e8b4514",
+    "fe11a74f33b846e4"
+  ]
+}

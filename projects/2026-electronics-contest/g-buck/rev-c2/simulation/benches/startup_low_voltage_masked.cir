@@ -1,0 +1,42 @@
+* Rev C.2 isolated timing/RC reference; no whole-converter validation
+V_oc oc 0 3.3
+V_vo vo 0 PWL(0 0 40m 0 40.001m 5)
+V_target target 0 10
+V_ready ready 0 PWL(0 0 50m 0 50.001m 3.3)
+V_fault fault 0 3.3
+V_arm arm 0 0
+X_PROTECT oc vo target ready fault arm en 0 REVC2_PROTECT
+.SUBCKT REVC2_PROTECT OC VO TARGET READY HWFAULT ARM EN COM
+V_ONE ONE COM 1
+E_OCREQ OCREQ COM VALUE={IF(V(READY,COM)>2,IF(V(ARM,COM)<1.5,IF(V(OC,COM)<1.5,1,0),0),0)}
+E_SCREQ SCREQ COM VALUE={IF(V(READY,COM)>2,IF(V(ARM,COM)<1.5,IF(V(TARGET,COM)>1,IF(V(VO,COM)<0.5,1,0),0),0),0)}
+G_OC COM TOC VALUE={V(OCREQ,COM)}
+C_OC TOC COM 1 IC=0
+R_OC TOC COM 1T
+E_OCRESET OCR COM VALUE={1-V(OCREQ,COM)}
+S_OCRESET TOC COM OCR COM REVC2_RESET
+G_SC COM TSC VALUE={V(SCREQ,COM)}
+C_SC TSC COM 1 IC=0
+R_SC TSC COM 1T
+E_SCRESET SCR COM VALUE={1-V(SCREQ,COM)}
+S_SCRESET TSC COM SCR COM REVC2_RESET
+E_SET SET COM VALUE={IF(V(ARM,COM)>1.5,0,IF(V(TOC,COM)>0.02,1,IF(V(TSC,COM)>0.02,1,IF(V(READY,COM)>2,IF(V(HWFAULT,COM)<1.5,1,0),0))))}
+E_RESET RESET COM VALUE={IF(V(ARM,COM)>1.5,IF(V(HWFAULT,COM)>2,IF(V(OC,COM)>2,1,0),0),0)}
+S_SET ONE MEM SET COM REVC2_MEMORY
+S_RESET MEM COM RESET COM REVC2_MEMORY
+C_MEM MEM COM 1n IC=0
+R_MEM MEM COM 1T
+E_EN EN COM VALUE={IF(V(MEM,COM)>0.5,0,3.3)}
+.MODEL REVC2_RESET SW(Ron=10u Roff=1e12 Vt=0.5 Vh=0)
+.MODEL REVC2_MEMORY SW(Ron=100 Roff=1e12 Vt=0.5 Vh=0)
+.ENDS REVC2_PROTECT
+
+.options method=gear reltol=1e-5 abstol=1e-10
+.tran 2u 0.08 0 2u uic
+.control
+set wr_singlescale
+run
+wrdata /workspace/-/projects/2026-electronics-contest/g-buck/rev-c2/results/data/protection/startup_low_voltage_masked.txt v(en) v(oc) v(vo) v(x_protect.toc) v(x_protect.tsc)
+quit
+.endc
+.end
