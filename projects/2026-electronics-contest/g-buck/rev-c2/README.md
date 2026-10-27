@@ -10,6 +10,7 @@
 | 核对结论与修订影响 | [完整报告](reports/RevC1评审核对与RevC2修订说明.md) · [原附件](references/RevC1_review.md) |
 | Multisim 配套 | [使用入口](simulation/multisim14/README.md) · [100 ms 主工程](downloads/GBUCK_REVC2_FULL_25V_5R_100ms.ms14) · [10 ms 短检查](downloads/GBUCK_REVC2_FULL_SMOKE_10ms.ms14) · [110 ms 预充](downloads/GBUCK_REVC2_PRECHARGE_ONLY_110ms.ms14) |
 | 全部资料 | [Rev C.2 下载包](downloads/GBUCK_RevC2_核对修订与Multisim_2026-10-27.zip) |
+| 按实购物料修订的120×90 PCB | [可编辑工程与说明](pcb/hardware-fit-120x90/README.md) · [PCB预览](pcb/hardware-fit-120x90/previews/PCB_RevC2_120x90.png) · [PCB资料包](downloads/GBUCK_RevC2_PCB_review_2026-10-27.zip)；120器件/310逻辑引脚一致，局部布线，完整布线与原生DRC未完成 |
 
 **相对 Rev C.1 的硬件影响：**不新增器件、不改阻容值或主板网络；J_MON.1 在控制板上的目标由 PA5 改接 PA6，GPIO/ADC 通道配置及控制板排线/PCB需同步。主功率级和保护门限保持。无生产用 PCB。
 

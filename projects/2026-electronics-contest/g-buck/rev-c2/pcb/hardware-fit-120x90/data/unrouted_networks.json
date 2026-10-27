@@ -1,0 +1,1177 @@
+[
+  {
+    "net": "+12V_DRV",
+    "copper_islands": 3,
+    "minimum_links_remaining": 2,
+    "endpoints": [
+      [
+        "U1.5",
+        "C5.1",
+        "C6.1",
+        "C_DRV.1"
+      ],
+      [
+        "D_BOOT.1"
+      ],
+      [
+        "J_AUX12.3"
+      ]
+    ]
+  },
+  {
+    "net": "+3V3",
+    "copper_islands": 17,
+    "minimum_links_remaining": 16,
+    "endpoints": [
+      [
+        "R_VDDA.1"
+      ],
+      [
+        "D_ADC1.2"
+      ],
+      [
+        "D_ADC2.2"
+      ],
+      [
+        "D_ADC3.2"
+      ],
+      [
+        "D_ADC4.2"
+      ],
+      [
+        "D_ADC5.2"
+      ],
+      [
+        "R13.1"
+      ],
+      [
+        "U6.2"
+      ],
+      [
+        "U6.4"
+      ],
+      [
+        "U6.14",
+        "C_U6.1"
+      ],
+      [
+        "U6.13"
+      ],
+      [
+        "U6.10"
+      ],
+      [
+        "U7.14",
+        "C_U7.1"
+      ],
+      [
+        "U8.14",
+        "C_U8.1"
+      ],
+      [
+        "R14.1"
+      ],
+      [
+        "J_CTL.4"
+      ],
+      [
+        "R_IOUT_PU.1"
+      ]
+    ]
+  },
+  {
+    "net": "+3V3_A",
+    "copper_islands": 14,
+    "minimum_links_remaining": 13,
+    "endpoints": [
+      [
+        "U2.6",
+        "C_U2.1"
+      ],
+      [
+        "U4.7"
+      ],
+      [
+        "U4.6",
+        "C_U4.1"
+      ],
+      [
+        "U3.6",
+        "C_U3.1"
+      ],
+      [
+        "C_A2.1"
+      ],
+      [
+        "R_VDDA.2"
+      ],
+      [
+        "C_A1.1"
+      ],
+      [
+        "C_A3.1"
+      ],
+      [
+        "R9.1"
+      ],
+      [
+        "R15A.1"
+      ],
+      [
+        "R11.1"
+      ],
+      [
+        "TP10.1"
+      ],
+      [
+        "R_IOUT_TOP.1"
+      ],
+      [
+        "D_ADC6.2"
+      ]
+    ]
+  },
+  {
+    "net": "+5V",
+    "copper_islands": 4,
+    "minimum_links_remaining": 3,
+    "endpoints": [
+      [
+        "J_AUX5.3"
+      ],
+      [
+        "U5.8",
+        "C_U5.1"
+      ],
+      [
+        "U9.8",
+        "C_U9.1"
+      ],
+      [
+        "J_CTL.2"
+      ]
+    ]
+  },
+  {
+    "net": "ADC_IIN",
+    "copper_islands": 2,
+    "minimum_links_remaining": 1,
+    "endpoints": [
+      [
+        "R7.2",
+        "C9.1",
+        "D_ADC2.3"
+      ],
+      [
+        "J_CTL.12"
+      ]
+    ]
+  },
+  {
+    "net": "ADC_IL",
+    "copper_islands": 2,
+    "minimum_links_remaining": 1,
+    "endpoints": [
+      [
+        "R_IL_ADC.2",
+        "C_IL_ADC.1",
+        "D_ADC5.3"
+      ],
+      [
+        "J_CTL.15"
+      ]
+    ]
+  },
+  {
+    "net": "ADC_IOUT",
+    "copper_islands": 2,
+    "minimum_links_remaining": 1,
+    "endpoints": [
+      [
+        "R8.2",
+        "C10.1",
+        "D_ADC4.3"
+      ],
+      [
+        "J_CTL.14"
+      ]
+    ]
+  },
+  {
+    "net": "ADC_VIN",
+    "copper_islands": 2,
+    "minimum_links_remaining": 1,
+    "endpoints": [
+      [
+        "R3.2",
+        "C7.1",
+        "D_ADC1.3"
+      ],
+      [
+        "J_CTL.11"
+      ]
+    ]
+  },
+  {
+    "net": "ADC_VIN_POST",
+    "copper_islands": 2,
+    "minimum_links_remaining": 1,
+    "endpoints": [
+      [
+        "R_VINP_ADC.2",
+        "C_VINP_ADC.1",
+        "D_ADC6.3",
+        "J_MON.1"
+      ],
+      [
+        "TP14.1"
+      ]
+    ]
+  },
+  {
+    "net": "ADC_VOUT",
+    "copper_islands": 2,
+    "minimum_links_remaining": 1,
+    "endpoints": [
+      [
+        "R6.2",
+        "C8.1",
+        "D_ADC3.3"
+      ],
+      [
+        "J_CTL.13"
+      ]
+    ]
+  },
+  {
+    "net": "ARM",
+    "copper_islands": 3,
+    "minimum_links_remaining": 2,
+    "endpoints": [
+      [
+        "U6.3"
+      ],
+      [
+        "R_ARM_PD.1"
+      ],
+      [
+        "J_CTL.8"
+      ]
+    ]
+  },
+  {
+    "net": "DRV_EN",
+    "copper_islands": 3,
+    "minimum_links_remaining": 2,
+    "endpoints": [
+      [
+        "U1.2"
+      ],
+      [
+        "R_SD_PD.1"
+      ],
+      [
+        "U7.3"
+      ]
+    ]
+  },
+  {
+    "net": "FAULT_N",
+    "copper_islands": 8,
+    "minimum_links_remaining": 7,
+    "endpoints": [
+      [
+        "U5.1"
+      ],
+      [
+        "U5.7"
+      ],
+      [
+        "U9.1"
+      ],
+      [
+        "R13.2"
+      ],
+      [
+        "U6.1"
+      ],
+      [
+        "D_POR.1"
+      ],
+      [
+        "J_CTL.9"
+      ],
+      [
+        "TP9.1"
+      ]
+    ]
+  },
+  {
+    "net": "FUSED",
+    "copper_islands": 4,
+    "minimum_links_remaining": 3,
+    "endpoints": [
+      [
+        "F1.2"
+      ],
+      [
+        "F1.2"
+      ],
+      [
+        "R_PRE.1"
+      ],
+      [
+        "J_BYP.1"
+      ]
+    ]
+  },
+  {
+    "net": "GND",
+    "copper_islands": 86,
+    "minimum_links_remaining": 85,
+    "endpoints": [
+      [
+        "J1.2"
+      ],
+      [
+        "J2.2"
+      ],
+      [
+        "C1.2"
+      ],
+      [
+        "C2.2"
+      ],
+      [
+        "QL.3"
+      ],
+      [
+        "C3.2"
+      ],
+      [
+        "C4.2"
+      ],
+      [
+        "R_BL.2"
+      ],
+      [
+        "U1.3"
+      ],
+      [
+        "R_GSL.2"
+      ],
+      [
+        "R_IN_PD.2"
+      ],
+      [
+        "R_SD_PD.2"
+      ],
+      [
+        "C5.2"
+      ],
+      [
+        "C6.2"
+      ],
+      [
+        "J_AUX12.2"
+      ],
+      [
+        "J_AUX12.4"
+      ],
+      [
+        "J_AUX5.2"
+      ],
+      [
+        "J_AUX5.4"
+      ],
+      [
+        "U2.2",
+        "U2.7",
+        "C_U2.2"
+      ],
+      [
+        "U2.3"
+      ],
+      [
+        "U4.2"
+      ],
+      [
+        "U4.3"
+      ],
+      [
+        "U3.2",
+        "U3.5",
+        "C_U3.2"
+      ],
+      [
+        "C_U4.2"
+      ],
+      [
+        "C_A2.2"
+      ],
+      [
+        "C_A1.2"
+      ],
+      [
+        "C_A3.2"
+      ],
+      [
+        "R2.2"
+      ],
+      [
+        "R5.2"
+      ],
+      [
+        "C7.2"
+      ],
+      [
+        "C9.2"
+      ],
+      [
+        "C8.2"
+      ],
+      [
+        "C10.2"
+      ],
+      [
+        "C_IL_ADC.2"
+      ],
+      [
+        "D_ADC1.1"
+      ],
+      [
+        "D_ADC2.1"
+      ],
+      [
+        "D_ADC3.1"
+      ],
+      [
+        "D_ADC4.1"
+      ],
+      [
+        "D_ADC5.1"
+      ],
+      [
+        "U5.4"
+      ],
+      [
+        "U9.4"
+      ],
+      [
+        "R16.2"
+      ],
+      [
+        "R10B.2"
+      ],
+      [
+        "R12.2"
+      ],
+      [
+        "C_REF_POS.2"
+      ],
+      [
+        "C_REF_NEG.2"
+      ],
+      [
+        "C_REF_OV.2"
+      ],
+      [
+        "C_U5.2"
+      ],
+      [
+        "C_U9.2"
+      ],
+      [
+        "U6.7"
+      ],
+      [
+        "U6.12"
+      ],
+      [
+        "U6.11"
+      ],
+      [
+        "U7.4"
+      ],
+      [
+        "U7.5"
+      ],
+      [
+        "U7.7"
+      ],
+      [
+        "U7.13"
+      ],
+      [
+        "U7.12"
+      ],
+      [
+        "U7.10"
+      ],
+      [
+        "U7.9"
+      ],
+      [
+        "U8.5"
+      ],
+      [
+        "U8.7"
+      ],
+      [
+        "U8.13"
+      ],
+      [
+        "U8.11"
+      ],
+      [
+        "U8.9"
+      ],
+      [
+        "R_EN_PD.2"
+      ],
+      [
+        "R_ARM_PD.2"
+      ],
+      [
+        "C11.2"
+      ],
+      [
+        "C_U6.2"
+      ],
+      [
+        "C_U7.2"
+      ],
+      [
+        "C_U8.2"
+      ],
+      [
+        "J_CTL.1"
+      ],
+      [
+        "J_CTL.3"
+      ],
+      [
+        "J_CTL.10"
+      ],
+      [
+        "J_CTL.16"
+      ],
+      [
+        "TP5.1"
+      ],
+      [
+        "D_FREE.2"
+      ],
+      [
+        "C_SN.2"
+      ],
+      [
+        "C_IL_PROT.2"
+      ],
+      [
+        "C_IOUT_PROT.2"
+      ],
+      [
+        "R_IOUT_BOT.2"
+      ],
+      [
+        "C_REF_IOUT.2"
+      ],
+      [
+        "C_DRV.2"
+      ],
+      [
+        "R_VINP_BOT.2"
+      ],
+      [
+        "C_VINP_ADC.2"
+      ],
+      [
+        "D_ADC6.1"
+      ],
+      [
+        "J_MON.2"
+      ]
+    ]
+  },
+  {
+    "net": "G_H",
+    "copper_islands": 2,
+    "minimum_links_remaining": 1,
+    "endpoints": [
+      [
+        "QH.1",
+        "RG_H.2",
+        "R_GSH.1"
+      ],
+      [
+        "TP6.1"
+      ]
+    ]
+  },
+  {
+    "net": "G_L",
+    "copper_islands": 3,
+    "minimum_links_remaining": 2,
+    "endpoints": [
+      [
+        "QL.1",
+        "RG_L.2"
+      ],
+      [
+        "R_GSL.1"
+      ],
+      [
+        "TP7.1"
+      ]
+    ]
+  },
+  {
+    "net": "IIN_RAW",
+    "copper_islands": 2,
+    "minimum_links_remaining": 1,
+    "endpoints": [
+      [
+        "U2.5"
+      ],
+      [
+        "R7.1"
+      ]
+    ]
+  },
+  {
+    "net": "IL_BI",
+    "copper_islands": 4,
+    "minimum_links_remaining": 3,
+    "endpoints": [
+      [
+        "U4.5"
+      ],
+      [
+        "R_IL_ADC.1"
+      ],
+      [
+        "TP8.1"
+      ],
+      [
+        "R_IL_PROT.1"
+      ]
+    ]
+  },
+  {
+    "net": "IL_PROT",
+    "copper_islands": 4,
+    "minimum_links_remaining": 3,
+    "endpoints": [
+      [
+        "U5.2"
+      ],
+      [
+        "U9.3"
+      ],
+      [
+        "R_IL_PROT.2",
+        "C_IL_PROT.1"
+      ],
+      [
+        "TP12.1"
+      ]
+    ]
+  },
+  {
+    "net": "IN_PRE",
+    "copper_islands": 3,
+    "minimum_links_remaining": 2,
+    "endpoints": [
+      [
+        "D1.2"
+      ],
+      [
+        "R_PRE.2"
+      ],
+      [
+        "J_BYP.2"
+      ]
+    ]
+  },
+  {
+    "net": "IOUT_OC_N",
+    "copper_islands": 3,
+    "minimum_links_remaining": 2,
+    "endpoints": [
+      [
+        "U9.7"
+      ],
+      [
+        "J_CTL.6"
+      ],
+      [
+        "R_IOUT_PU.2"
+      ]
+    ]
+  },
+  {
+    "net": "IOUT_PROT",
+    "copper_islands": 2,
+    "minimum_links_remaining": 1,
+    "endpoints": [
+      [
+        "U9.6"
+      ],
+      [
+        "R_IOUT_PROT.2",
+        "C_IOUT_PROT.1"
+      ]
+    ]
+  },
+  {
+    "net": "IOUT_RAW",
+    "copper_islands": 4,
+    "minimum_links_remaining": 3,
+    "endpoints": [
+      [
+        "U3.1"
+      ],
+      [
+        "R8.1"
+      ],
+      [
+        "R_IOUT_PROT.1"
+      ],
+      [
+        "TP11.1"
+      ]
+    ]
+  },
+  {
+    "net": "LO",
+    "copper_islands": 2,
+    "minimum_links_remaining": 1,
+    "endpoints": [
+      [
+        "U1.4"
+      ],
+      [
+        "RG_L.1"
+      ]
+    ]
+  },
+  {
+    "net": "L_RAW",
+    "copper_islands": 3,
+    "minimum_links_remaining": 2,
+    "endpoints": [
+      [
+        "RS_L.1"
+      ],
+      [
+        "L1.2"
+      ],
+      [
+        "U4.8"
+      ]
+    ]
+  },
+  {
+    "net": "MCU_EN",
+    "copper_islands": 3,
+    "minimum_links_remaining": 2,
+    "endpoints": [
+      [
+        "U7.2"
+      ],
+      [
+        "R_EN_PD.1"
+      ],
+      [
+        "J_CTL.7"
+      ]
+    ]
+  },
+  {
+    "net": "NEG_MID",
+    "copper_islands": 2,
+    "minimum_links_remaining": 1,
+    "endpoints": [
+      [
+        "R15A.2"
+      ],
+      [
+        "R15B.1"
+      ]
+    ]
+  },
+  {
+    "net": "POR_INV",
+    "copper_islands": 2,
+    "minimum_links_remaining": 1,
+    "endpoints": [
+      [
+        "U8.2"
+      ],
+      [
+        "U8.3"
+      ]
+    ]
+  },
+  {
+    "net": "POR_OK",
+    "copper_islands": 2,
+    "minimum_links_remaining": 1,
+    "endpoints": [
+      [
+        "U8.4"
+      ],
+      [
+        "D_POR.3"
+      ]
+    ]
+  },
+  {
+    "net": "POR_RC",
+    "copper_islands": 3,
+    "minimum_links_remaining": 2,
+    "endpoints": [
+      [
+        "U8.1"
+      ],
+      [
+        "R14.2"
+      ],
+      [
+        "C11.1"
+      ]
+    ]
+  },
+  {
+    "net": "POS_MID",
+    "copper_islands": 2,
+    "minimum_links_remaining": 1,
+    "endpoints": [
+      [
+        "R10A.2"
+      ],
+      [
+        "R10B.1"
+      ]
+    ]
+  },
+  {
+    "net": "PWM_CTL",
+    "copper_islands": 2,
+    "minimum_links_remaining": 1,
+    "endpoints": [
+      [
+        "R_PWM.1"
+      ],
+      [
+        "J_CTL.5"
+      ]
+    ]
+  },
+  {
+    "net": "PWM_IN",
+    "copper_islands": 2,
+    "minimum_links_remaining": 1,
+    "endpoints": [
+      [
+        "U1.1",
+        "R_IN_PD.1"
+      ],
+      [
+        "R_PWM.2"
+      ]
+    ]
+  },
+  {
+    "net": "SAFE_OK",
+    "copper_islands": 2,
+    "minimum_links_remaining": 1,
+    "endpoints": [
+      [
+        "U6.5"
+      ],
+      [
+        "U7.1"
+      ]
+    ]
+  },
+  {
+    "net": "SW",
+    "copper_islands": 8,
+    "minimum_links_remaining": 7,
+    "endpoints": [
+      [
+        "QH.3"
+      ],
+      [
+        "QL.2"
+      ],
+      [
+        "L1.1"
+      ],
+      [
+        "U1.6",
+        "C_BOOT.2"
+      ],
+      [
+        "R_GSH.2"
+      ],
+      [
+        "TP3.1"
+      ],
+      [
+        "D_FREE.1"
+      ],
+      [
+        "R_SN.1"
+      ]
+    ]
+  },
+  {
+    "net": "VB",
+    "copper_islands": 2,
+    "minimum_links_remaining": 1,
+    "endpoints": [
+      [
+        "U1.8",
+        "D_BOOT.2"
+      ],
+      [
+        "C_BOOT.1"
+      ]
+    ]
+  },
+  {
+    "net": "VIN",
+    "copper_islands": 9,
+    "minimum_links_remaining": 8,
+    "endpoints": [
+      [
+        "RS_IN.2"
+      ],
+      [
+        "C1.1"
+      ],
+      [
+        "C2.1"
+      ],
+      [
+        "QH.2"
+      ],
+      [
+        "J_AUX12.1"
+      ],
+      [
+        "J_AUX5.1"
+      ],
+      [
+        "U2.1"
+      ],
+      [
+        "TP2.1"
+      ],
+      [
+        "R_VINP_TOP.1"
+      ]
+    ]
+  },
+  {
+    "net": "VIN_DIV",
+    "copper_islands": 3,
+    "minimum_links_remaining": 2,
+    "endpoints": [
+      [
+        "R1.2"
+      ],
+      [
+        "R2.1"
+      ],
+      [
+        "R3.1"
+      ]
+    ]
+  },
+  {
+    "net": "VIN_EXT",
+    "copper_islands": 5,
+    "minimum_links_remaining": 4,
+    "endpoints": [
+      [
+        "J1.1"
+      ],
+      [
+        "F1.1"
+      ],
+      [
+        "F1.1"
+      ],
+      [
+        "R1.1"
+      ],
+      [
+        "TP1.1"
+      ]
+    ]
+  },
+  {
+    "net": "VOUT",
+    "copper_islands": 6,
+    "minimum_links_remaining": 5,
+    "endpoints": [
+      [
+        "J2.1"
+      ],
+      [
+        "RS_OUT.2"
+      ],
+      [
+        "R_BL.1"
+      ],
+      [
+        "U3.4"
+      ],
+      [
+        "R4.1"
+      ],
+      [
+        "TP4.1"
+      ]
+    ]
+  },
+  {
+    "net": "VOUT_DIV",
+    "copper_islands": 4,
+    "minimum_links_remaining": 3,
+    "endpoints": [
+      [
+        "R4.2"
+      ],
+      [
+        "R5.1"
+      ],
+      [
+        "R6.1"
+      ],
+      [
+        "U5.6"
+      ]
+    ]
+  },
+  {
+    "net": "VREF_IOUT",
+    "copper_islands": 3,
+    "minimum_links_remaining": 2,
+    "endpoints": [
+      [
+        "U9.5"
+      ],
+      [
+        "R_IOUT_TOP.2",
+        "R_IOUT_BOT.1",
+        "C_REF_IOUT.1"
+      ],
+      [
+        "TP13.1"
+      ]
+    ]
+  },
+  {
+    "net": "VREF_NEG",
+    "copper_islands": 4,
+    "minimum_links_remaining": 3,
+    "endpoints": [
+      [
+        "U9.2"
+      ],
+      [
+        "R16.1"
+      ],
+      [
+        "R15B.2"
+      ],
+      [
+        "C_REF_NEG.1"
+      ]
+    ]
+  },
+  {
+    "net": "VREF_OV",
+    "copper_islands": 4,
+    "minimum_links_remaining": 3,
+    "endpoints": [
+      [
+        "U5.5"
+      ],
+      [
+        "R11.2"
+      ],
+      [
+        "R12.1"
+      ],
+      [
+        "C_REF_OV.1"
+      ]
+    ]
+  },
+  {
+    "net": "VREF_POS",
+    "copper_islands": 4,
+    "minimum_links_remaining": 3,
+    "endpoints": [
+      [
+        "U5.3"
+      ],
+      [
+        "R9.2"
+      ],
+      [
+        "R10A.1"
+      ],
+      [
+        "C_REF_POS.1"
+      ]
+    ]
+  },
+  {
+    "net": "V_CAP",
+    "copper_islands": 6,
+    "minimum_links_remaining": 5,
+    "endpoints": [
+      [
+        "RS_OUT.1"
+      ],
+      [
+        "RS_L.2"
+      ],
+      [
+        "C3.1"
+      ],
+      [
+        "C4.1"
+      ],
+      [
+        "U4.1"
+      ],
+      [
+        "U3.3"
+      ]
+    ]
+  },
+  {
+    "net": "V_SHUNT_IN",
+    "copper_islands": 3,
+    "minimum_links_remaining": 2,
+    "endpoints": [
+      [
+        "D1.1"
+      ],
+      [
+        "RS_IN.1"
+      ],
+      [
+        "U2.8"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,48 @@
+{
+  "status": "PASS_STATIC_REVIEW_ONLY",
+  "errors": [],
+  "checks": {
+    "source_sha256": "6a1ed47fc5ad60f26e2b3efa9301078c0e1f658fd5d7c378f988992510ee30d6",
+    "delivered_sha256": "77b0790f721ed4e9482a3c6a5a171422ef86678d93d012df581b1c61da51bc57",
+    "source_schematic_components": 120,
+    "delivered_schematic_components": 120,
+    "pcb_components": 120,
+    "source_networks": 51,
+    "source_connected_logical_pins": 310,
+    "explicit_NC_logical_pins": 13,
+    "physical_component_pads": 325,
+    "duplicate_fuse_terminal_pads": 2,
+    "source_schematic_pin_graph_preserved": true,
+    "pcb_pad_graph_matches_source": true,
+    "value_changes": {
+      "F1": {
+        "before": "2A / 5x20",
+        "after": "2A / 6x30"
+      },
+      "C4": {
+        "before": "10uF / 35V",
+        "after": "10uF / 50V X7R"
+      }
+    },
+    "preserved_source_PCB_library_documents": 526,
+    "geometric_errors": [],
+    "clearance_errors": [],
+    "mounting_holes": 4,
+    "copper_track_segments": 71,
+    "vias": 0,
+    "unfinished_networks": 48,
+    "minimum_copper_links_remaining": 219,
+    "routing_complete": false,
+    "native_desktop_open": "not_run",
+    "native_ERC": "not_run",
+    "native_DRC": "not_run",
+    "manufacturing_release": false,
+    "sqlite_integrity": "ok"
+  },
+  "limitations": [
+    "Rectangular pad copper conservatively encloses round/oval pads; checks are not native ERC/DRC.",
+    "F1 clip assembly spacing, shunt pitch, several actual part identities and thermal design remain unconfirmed.",
+    "No complete power routing, Kelvin routing or ground plane. No Gerber manufacturing output.",
+    "Mounting pattern is proposed, not confirmed to an enclosure. Silk/courtyard/mask/paste/3D checks remain open."
+  ]
+}

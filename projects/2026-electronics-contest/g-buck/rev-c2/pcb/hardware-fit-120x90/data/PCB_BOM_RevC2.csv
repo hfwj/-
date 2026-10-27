@@ -1,0 +1,121 @@
+﻿位号,数值/型号,PCB封装,X_mm,Y_mm,旋转_deg,机械待确认,装配与核查说明
+J1,2P POWER,TERM_2.54_2P,5,66,90,False,2.54mm 2P；5.48×6.3×8.8mm；孔径1.3mm来自图；供应商标称6A/150V
+J2,2P POWER,TERM_2.54_2P,115.8,51,90,False,2.54mm 2P；进线朝板外；1=VOUT，2=GND
+F1,2A / 6x30,FUSE_6X30_4SLOT_TBD,29,80,0,True,改用6×30mm管夹；仍需2A保险管；双夹中心距与7.7mm脚距轴向待量；当前4槽为占位，禁止制板
+D1,SS56,SMB_DO214AA,40,63,180,False,
+RS_IN,50mΩ / 1% / >=1W,SHUNT_TH_P10_TBD,47.5,70,0,True,已购类型改直插占位；P10仅假设，图片尚未确认本件脚距；高度12、线径0.8来自参数表；功率≥1W；Kelvin取样；RS_L25mΩ尚未购齐
+RS_OUT,50mΩ / 1% / >=1W,SHUNT_TH_P10_TBD,108,52,270,True,已购类型改直插占位；P10仅假设，图片尚未确认本件脚距；高度12、线径0.8来自参数表；功率≥1W；Kelvin取样；RS_L25mΩ尚未购齐
+RS_L,25mΩ / 1% / >=1W,SHUNT_TH_P10_TBD,108,77,270,True,已购类型改直插占位；P10仅假设，图片尚未确认本件脚距；高度12、线径0.8来自参数表；功率≥1W；Kelvin取样；RS_L25mΩ尚未购齐
+C1,470uF / 50V,CP_D10_P5,60,76,0,False,470μF/50V；实物D10×H18、P5、脚径0.6；按Dmax10.5留空间；ESR/纹波及完整型号待核
+C2,1uF / 50V,C0805,66,69,0,False,1μF/50V X7R，0805；有效容量按实际料号的直流偏压曲线核对
+QH,IRF540N,TO220_3,73,73,0,False,直立TO220，1G2D3S；金属背板=D；按无散热片实购，热设计待验证
+QL,IRF540N,TO220_3,73,64,0,False,直立TO220，1G2D3S；金属背板=D；按无散热片实购，热设计待验证
+L1,220uH / Isat>=3A,L65125_VERTICAL_P10,90,77,0,False,65125 220μH±10%；DCR≤55mΩ；卖家6A Max≠Isat；立式20×10投影、P10、线径0.75；孔1.1为设计值
+C3,470uF / 35V,CP_D10_P5,108,64.7,0,False,470μF/35V；实物D10×H13、P5、脚径0.6；按Dmax10.5留空间；耐压及完整型号待核
+C4,10uF / 50V X7R,C0805,100,63,0,False,10μF/50V X7R，0805；由35V提高至实购50V；直流偏压后有效容量待核
+R_BL,2.2kΩ / 0.25W,R1206,112,43,90,False,
+U1,IR2184PbF,DIP8_300,61,62,0,False,Rev C.2指定IR2184PbF/DIP8；已购表IR2104不可直接代装；1IN 2SD# 3COM 4LO 5VCC 6VS 7HO 8VB
+D_BOOT,UF4007,DO41_P10.16,61.0,50.0,0,True,自定义符号/封装：1=A，2=K
+RG_H,4.7Ω,R0805,70.0,69.0,0,False,
+RG_L,4.7Ω,R0805,71.0,59.5,90,False,
+R_GSH,10kΩ,R0805,73.0,68.5,90,False,
+R_GSL,10kΩ,R0805,73.5,59.5,90,False,
+R_IN_PD,10kΩ,R0805,53.5,61.5,0,False,
+R_SD_PD,10kΩ,R0805,50.5,60.0,90,False,
+R_PWM,100Ω,R0805,54.0,59.0,0,False,
+C_BOOT,1uF / 25V,C0805,68.0,60.0,0,False,X7R；确认有效容量
+C5,100nF,C0805,65.0,55.5,0,False,
+C6,10uF / 25V,C0805,69.0,54.0,0,False,10μF/25V，按实购2×1.25贴片改0805；完整料号/偏压待核
+J_AUX12,VIN→12V >=0.2A,HDR_1X4_2.54,7,43,90,True,M1必须为低静态功耗开关降压模块；输入15–25V、输出12V；计入整机输入功率
+J_AUX5,VIN→5V >=0.5A,HDR_1X4_2.54,7,28,90,True,M2必须为开关降压模块，禁止7805等线性替代；输入15–25V，输出5V；计入整机输入功率
+U2,INA240A1D,SOIC8_150,47.5,64.8,0,False,SOIC-8脚序；4=NC；不得套用TSSOP脚序
+U4,INA240A1D,SOIC8_150,103,86.5,0,False,SOIC-8脚序；4=NC；不得套用TSSOP脚序
+U3,INA181A1DBV,SOT23_6,102,54,0,False,
+C_U2,100nF,C0805,52.5,64.8,90,False,
+C_U3,100nF,C0805,102.0,57.0,0,False,
+C_U4,100nF,C0805,109.0,86.5,0,False,
+C_A2,100nF,C0805,95.0,25.0,90,False,
+R_VDDA,1Ω,R0805,102.0,26.0,0,False,
+C_A1,1uF,C0805,98.0,25.0,0,False,
+C_A3,10uF / 25V,C1206,92.0,25.0,90,False,资料未填写，暂保留C1206；不能从C6推定本件也为0805
+R1,100kΩ / 0.1%,R0805,87.0,29.0,0,False,
+R2,10kΩ / 0.1%,R0805,91.0,29.0,0,False,
+R4,10kΩ / 0.1%,R0805,87.0,23.0,0,False,
+R5,1kΩ / 0.1%,R0805,91.0,21.0,0,False,
+R3,1kΩ,R0805,94.5,29.0,90,False,
+R7,1kΩ,R0805,94.0,34.0,90,False,
+R6,1kΩ,R0805,94.5,21.0,90,False,
+R8,1kΩ,R0805,94.0,39.0,0,False,
+R_IL_ADC,1kΩ,R0805,88.0,32.0,90,False,
+C7,4.7nF,C0805,98.0,28.0,0,False,
+C9,4.7nF,C0805,98.0,34.0,0,False,
+C8,4.7nF,C0805,98.0,22.0,0,False,
+C10,4.7nF,C0805,98.0,39.0,0,False,
+C_IL_ADC,1nF,C0805,91.0,32.0,0,False,
+D_ADC1,BAT54S,SOT23_3,103.0,29.0,0,False,1=A1，2=K2，3=K1/A2；必须用BAT54S串联双二极管
+D_ADC2,BAT54S,SOT23_3,103.0,35.0,0,False,1=A1，2=K2，3=K1/A2；必须用BAT54S串联双二极管
+D_ADC3,BAT54S,SOT23_3,103.0,23.0,0,False,1=A1，2=K2，3=K1/A2；必须用BAT54S串联双二极管
+D_ADC4,BAT54S,SOT23_3,103.0,40.0,0,False,1=A1，2=K2，3=K1/A2；必须用BAT54S串联双二极管
+D_ADC5,BAT54S,SOT23_3,91.0,35.0,0,False,1=A1，2=K2，3=K1/A2；必须用BAT54S串联双二极管
+U5,LM393,SOIC8_150,53,35,0,False,具体订货后缀待确认；输出开集电极并联，上拉至3.3V
+U9,LM393,SOIC8_150,72,35,0,False,具体订货后缀待确认；输出开集电极并联，上拉至3.3V
+R9,10kΩ / 0.1%,R0805,46.0,41.0,90,False,
+R16,10kΩ / 0.1%,R0805,57.0,42.0,90,False,
+R10A,49.9kΩ / 0.1%,R0805,49.0,42.0,0,False,
+R15A,49.9kΩ / 0.1%,R0805,60.0,42.0,0,False,
+R10B,100Ω / 0.1%,R0805,52.0,42.0,90,False,
+R15B,100Ω / 0.1%,R0805,63.0,42.0,90,False,
+R11,23kΩ,R0805,67.0,41.0,0,False,
+R12,10kΩ,R0805,70.0,41.0,90,False,
+R13,10kΩ,R0805,34.0,32.0,0,False,
+C_REF_POS,100nF,C0805,50.0,39.0,0,False,
+C_REF_NEG,100nF,C0805,60.0,39.0,0,False,
+C_REF_OV,100nF,C0805,67.0,38.0,90,False,
+C_U5,100nF,C0805,58.0,35.0,90,False,
+C_U9,100nF,C0805,77.0,35.0,90,False,
+U6,SN74HC74DR,SOIC14_150,30,20,0,False,
+U7,SN74HC08DR,SOIC14_150,45,20,0,False,
+U8,SN74HC14DR,SOIC14_150,60,20,0,False,
+R14,10kΩ,R0805,61.0,29.0,90,False,
+R_EN_PD,10kΩ,R0805,41.0,29.0,0,False,
+R_ARM_PD,10kΩ,R0805,27.0,28.0,0,False,
+C11,100nF,C0805,65.0,27.0,0,False,
+C_U6,100nF,C0805,35.0,23.0,90,False,
+C_U7,100nF,C0805,50.0,23.0,90,False,
+C_U8,100nF,C0805,65.0,23.0,90,False,
+D_POR,BAT54,SOT23_3,58.0,28.0,0,False,1=A，3=K，2=NC；与BAT54S不混用
+J_CTL,STM32 CONTROL 2x8,HDR_2X8_2.54,113,21,0,True,pin6由GND改IOUT_OC_N，外接STM32 PB11/EXTI11；旧排线/控制板必须同步改线
+TP1,VIN_EXT,TP_D1.5,10.0,68.0,0,False,SMD测试点；探针和夹具兼容性待确认
+TP2,VIN,TP_D1.5,57.0,83.0,0,False,SMD测试点；探针和夹具兼容性待确认
+TP3,SW,TP_D1.5,83.0,70.5,0,False,SMD测试点；探针和夹具兼容性待确认
+TP4,VOUT,TP_D1.5,115.0,42.0,0,False,SMD测试点；探针和夹具兼容性待确认
+TP5,GND,TP_D1.5,109.0,36.5,0,False,SMD测试点；探针和夹具兼容性待确认
+TP6,G_H,TP_D1.5,77.0,69.0,0,False,SMD测试点；探针和夹具兼容性待确认
+TP7,G_L,TP_D1.5,79.5,70.5,0,False,SMD测试点；探针和夹具兼容性待确认
+TP8,IL_BI,TP_D1.5,88.0,49.0,0,False,SMD测试点；探针和夹具兼容性待确认
+TP9,FAULT_N,TP_D1.5,36.0,28.0,0,False,SMD测试点；探针和夹具兼容性待确认
+TP10,+3V3_A,TP_D1.5,103.0,19.0,0,False,SMD测试点；探针和夹具兼容性待确认
+R_PRE,22Ω / 5W / pulse≥0.3J,RPRE_EXTERNAL_P5.08_TBD,19,58,0,True,外置22Ω/5W脉冲≥0.3J电阻，板上仅两引出焊盘；不得将电阻实体塞进引出焊盘投影
+J_BYP,SPST旁路接口 ≥30VDC/3A,TERM_2.54_2P,7,56,90,False,2.54mm 2P；外接常开旁路开关；开关额定≥30VDC/3A另核
+D_FREE,SS56 / 60V / 5A,SMB_DO214AA,81,60,90,False,阴极1接SW，阳极2接GND；紧贴QL；不可承诺消除全部Qrr
+R_SN,10Ω / 0.25W / DNP,R1206,81.0,66.5,90,False,DNP；10Ω≥0.25W，改1206以匹配功率要求；实购功率仍需核对
+C_SN,1nF / 100V C0G / DNP,C0805,84.5,64.0,90,False,默认不装，配合R_SN
+R_IL_PROT,1kΩ / 1%,R0805,92.0,46.0,0,False,
+C_IL_PROT,1nF / C0G,C0805,88.0,44.0,0,False,RC时间常数1us，不是固定1us blanking或总响应时间
+R_IOUT_PROT,1kΩ / 1%,R0805,91.0,39.0,90,False,
+C_IOUT_PROT,100nF / 25V X7R,C0805,87.0,37.0,0,False,告警RC时间常数100us；不替代固件持续判据或输出硬限流
+R_IOUT_TOP,20kΩ / 0.1%,R0805,77.0,41.0,90,False,
+R_IOUT_BOT,10kΩ / 0.1%,R0805,80.0,39.0,0,False,
+C_REF_IOUT,100nF,C0805,80.0,35.0,0,False,
+R_IOUT_PU,10kΩ,R0805,79.0,32.0,0,False,U9B独立开集电极告警上拉，接PB11，禁止直接并入FAULT_N造成正常负载切换误锁存
+C_DRV,1uF / 25V X7R,C0805,64.0,53.0,0,False,新增贴近U1.VCC/COM的低ESR陶瓷
+TP11,IOUT_RAW,TP_D1.5,109.0,39.0,0,False,
+TP12,IL_PROT,TP_D1.5,84.5,43.0,0,False,
+TP13,VREF_IOUT,TP_D1.5,80.0,29.5,0,False,
+R_VINP_TOP,100kΩ / 0.1%,R0805,87.0,18.0,0,False,预充后VIN分压上臂
+R_VINP_BOT,10kΩ / 0.1%,R0805,91.0,18.0,0,False,预充后VIN分压下臂
+R_VINP_ADC,1kΩ,R0805,94.0,14.0,90,False,ADC串联滤波/限流
+C_VINP_ADC,4.7nF / C0G,C0805,96.5,11.0,90,False,含分压源阻抗的标称τ约47.4us
+D_ADC6,BAT54S,SOT23_3,95.0,7.0,0,False,1=A1，2=K2，3=K1/A2；串联双二极管钳位
+J_MON,2P VIN_POST ADC / PA6,TERM_2.54_2P,101,9,0,False,2.54mm 2P；1=ADC_VIN_POST→PA6，2=GND；PA5保留LCD SCK
+TP14,ADC_VIN_POST,TP_D1.5,101.0,14.0,0,False,新增ADC节点测试点
