@@ -3,7 +3,7 @@
   "errors": [],
   "checks": {
     "source_sha256": "6a1ed47fc5ad60f26e2b3efa9301078c0e1f658fd5d7c378f988992510ee30d6",
-    "delivered_sha256": "c143028a9a6c72957ea7ac5133fd1bf2cd2e49857f303de10c5850d879d6f1e9",
+    "delivered_sha256": "11eb01dff4d75c6cefc4bd73fc7ebc9d63a3c574870e98f81ce9b80e1574b761",
     "source_schematic_components": 120,
     "delivered_schematic_components": 120,
     "pcb_components": 120,
@@ -41,7 +41,7 @@
   },
   "limitations": [
     "Rectangular pad copper conservatively encloses round/oval pads; checks are not native ERC/DRC.",
-    "RS_IN/OUT P10 and D0.8 are supported by seller drawing; their envelope depth/tolerance/power, RS_L pitch, F1 assembly spacing and thermal design remain unconfirmed.",
+    "Seller drawings support RS_IN/OUT P10 D0.8 and RS_L P5 D0.7. Actual mounting-lead diameters/envelope depth/tolerance/power, F1 assembly spacing and thermal design remain unconfirmed.",
     "No complete power routing, Kelvin routing or ground plane. No Gerber manufacturing output.",
     "Mounting pattern is proposed, not confirmed to an enclosure. Silk/courtyard/mask/paste/3D checks remain open."
   ]

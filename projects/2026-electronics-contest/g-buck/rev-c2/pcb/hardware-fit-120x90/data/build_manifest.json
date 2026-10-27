@@ -77,9 +77,9 @@
       "x": 108,
       "y": 77,
       "angle": 270,
-      "package": "SHUNT_TH_P10_TBD",
+      "package": "SHUNT_U_25m_P5_D0p7",
       "value": "25mΩ / 1% / >=1W",
-      "notes": "25mΩ已列B3补料清单；旧参数表记未购，现库存待核；本图仅50mΩ，不能套用到本件；P10仍占位；实际封装、1%与≥1W待核",
+      "notes": "用户DILIN迪林图确认25mΩ、U型、P5、图示线径0.7、体高7；从P10占位改P5；孔1.1/焊盘2.6及12×4包络为保守设计预留；实际焊脚径、深度、1%精度与连续≥1W待核；库存未知",
       "mechanical_TBD": true
     },
     "C1": {
@@ -2262,11 +2262,11 @@
       ],
       "tbd": false
     },
-    "SHUNT_TH_P10_TBD": {
+    "SHUNT_U_25m_P5_D0p7": {
       "pads": [
         {
           "num": "1",
-          "x": -5.0,
+          "x": -2.5,
           "y": 0,
           "w": 2.6,
           "h": 2.6,
@@ -2274,7 +2274,7 @@
         },
         {
           "num": "2",
-          "x": 5.0,
+          "x": 2.5,
           "y": 0,
           "w": 2.6,
           "h": 2.6,
@@ -2285,7 +2285,20 @@
         12,
         4
       ],
-      "tbd": true
+      "tbd": true,
+      "confirmed_from_seller": {
+        "pin_pitch_mm": 5,
+        "wire_diameter_mm": 0.7,
+        "illustrated_body_height_mm": 7,
+        "nominal_resistance_ohm": 0.025
+      },
+      "still_unconfirmed": [
+        "resistance tolerance 1%",
+        "continuous rated power >=1W and its conditions",
+        "actual mounting-lead diameter and welded terminal boss dimensions",
+        "planar depth/envelope",
+        "actual board standoff height"
+      ]
     },
     "SHUNT_M_50m_P10_D0p8": {
       "pads": [
@@ -2479,6 +2492,7 @@
     "66a05248ac9c56f8",
     "6704ca5c99bb531d",
     "67b3ac9820405d09",
+    "67ca6cd9125d5f8c",
     "68150db7f3cc58b1",
     "699d3f0af4575519",
     "6c20905c540f5341",
@@ -2540,7 +2554,6 @@
     "dc7a93d3173f5bb0",
     "ddf1274989b95153",
     "de410badf36a5a44",
-    "df764b15e9e55c52",
     "e63da0ffb3a85557",
     "e7d7836b0f085a9d",
     "ecb5734ae96d5a2d",

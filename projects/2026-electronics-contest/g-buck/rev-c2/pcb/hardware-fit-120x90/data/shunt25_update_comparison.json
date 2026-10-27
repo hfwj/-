@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "comparison_baseline_commit": "9de6ebe",
+  "before_native_sha256": "c143028a9a6c72957ea7ac5133fd1bf2cd2e49857f303de10c5850d879d6f1e9",
+  "after_native_sha256": "11eb01dff4d75c6cefc4bd73fc7ebc9d63a3c574870e98f81ce9b80e1574b761",
+  "same_120_logical_references": true,
+  "same_all_component_values": true,
+  "same_all_pin_nets": true,
+  "same_all_component_centers": true,
+  "changed_pad_centers": [
+    {
+      "ref": "RS_L",
+      "pin": "1",
+      "before_xy_mm": [
+        107.99999989999999,
+        81.99999983
+      ],
+      "after_xy_mm": [
+        107.99999989999999,
+        79.500000004
+      ]
+    },
+    {
+      "ref": "RS_L",
+      "pin": "2",
+      "before_xy_mm": [
+        107.99999989999999,
+        72.000000018
+      ],
+      "after_xy_mm": [
+        107.99999989999999,
+        74.49999984399999
+      ]
+    }
+  ],
+  "new_RS_L_pitch_mm": 5,
+  "only_RS_L_pad_positions_changed": true,
+  "same_all_hole_and_pad_sizes": true,
+  "same_body_envelopes": true,
+  "same_all_copper_track_records": true,
+  "physical_pads": 325,
+  "copper_track_segments": 71,
+  "manufacturing_release": false,
+  "simulation_or_firmware_changes": false
+}

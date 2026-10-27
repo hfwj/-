@@ -1,0 +1,35 @@
+{
+  "source": "User inline DILIN 25mOhm seller image, 2026-10-27",
+  "image_local_file_available": false,
+  "brand_shown": "DILIN / 迪林",
+  "applies_to": [
+    "RS_L"
+  ],
+  "marked_values": {
+    "resistance_ohm": 0.025,
+    "shape": "U",
+    "pin_pitch_mm": 5,
+    "resistor_wire_diameter_mm": 0.7,
+    "illustrated_body_height_mm": 7
+  },
+  "not_provided": [
+    "resistance tolerance",
+    "continuous power rating and conditions",
+    "rated current",
+    "actual mounting lead/boss dimensions",
+    "planar depth",
+    "inventory/receipt"
+  ],
+  "design_choices": {
+    "hole_diameter_mm": 1.1,
+    "pad_mm": [
+      2.6,
+      2.6
+    ],
+    "conservative_body_envelope_mm": [
+      12,
+      4
+    ]
+  },
+  "footprint_change": "SHUNT_TH_P10_TBD -> SHUNT_U_25m_P5_D0p7; each pad/hole moves inward 2.5mm"
+}

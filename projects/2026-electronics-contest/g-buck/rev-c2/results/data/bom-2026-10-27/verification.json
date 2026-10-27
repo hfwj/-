@@ -1,7 +1,7 @@
 {
   "status": "PASS_BOM_COVERAGE_AND_NATIVE_READBACK",
-  "source_csv_sha256": "b5159b8863da7c7237953966eccad93fc0791f5da507f833d25d78577e8e585d",
-  "source_native_sha256": "c143028a9a6c72957ea7ac5133fd1bf2cd2e49857f303de10c5850d879d6f1e9",
+  "source_csv_sha256": "2558f27cdd142c0fac7e13d59c9d8bb758d7264679e60841bef0cdb535561d7e",
+  "source_native_sha256": "11eb01dff4d75c6cefc4bd73fc7ebc9d63a3c574870e98f81ce9b80e1574b761",
   "unique_logical_references": 120,
   "grouped_lines": 46,
   "design_quantity": 120,
@@ -22,6 +22,6 @@
   "source_files_modified": false,
   "source_graph_connected_pins": 310,
   "manufacturing_release": false,
-  "xlsx_sha256": "a9fa3fbe337f76812da8d78cc9d4091b60cafde801e3b3f2956f235941c5795c",
-  "pdf_sha256": "3abf5e1746662d655dacb22eda1986c58f1e0434e38247b50427b3748309a421"
+  "xlsx_sha256": "e8a259639e7ddc21f344e64dcb65f07af9ef7fb5517474e945069fb914f23073",
+  "pdf_sha256": "59edc6fce8a69c9180b1f23a249fd00bde8bbea4954224a555d30e49ee78adfa"
 }

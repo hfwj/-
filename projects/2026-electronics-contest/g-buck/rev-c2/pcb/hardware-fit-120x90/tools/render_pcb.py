@@ -55,7 +55,7 @@ def main():
         ax.plot([15,65],[261,261],color='black',linewidth=.6)
         for x in [15,25,35,45,55,65]:ax.plot([x,x],[259,263],color='black',linewidth=.6)
         ax.text(15,254,'50 mm',fontsize=8)
-        items=[('F1',55,222),('L1',133,222),('C1',45,170),('J1',100,170),('RS_IN',150,170),('U1',45,115)]
+        items=[('F1',55,222),('L1',133,222),('C1',45,170),('J1',100,170),('RS_IN',150,170),('U1',45,115),('RS_L',150,115)]
         for ref,x,y in items:
             spec=manifest['specs'][manifest['parts'][ref]['package']];w,h=spec['body_mm']
             ax.add_patch(plt.Rectangle((x-w/2,y-h/2),w,h,fill=False,color='black',linewidth=.5))
@@ -67,9 +67,9 @@ def main():
                     else:ax.add_patch(Circle((x+p['x'],y+p['y']),p['hole']/2,fill=False,color='black',linewidth=.4))
                 ax.text(x+p['x'],y+p['y']+p['h']/2+1,p['num'],ha='center',fontsize=6)
             ax.text(x,y-h/2-5,ref+' '+manifest['parts'][ref]['package'],ha='center',fontsize=7)
-            if spec['tbd']:ax.text(x,y-h/2-10,'P10 FROM SELLER; ENVELOPE STILL TBD' if ref=='RS_IN' else 'PROVISIONAL - MEASURE ACTUAL PART',ha='center',fontsize=6,color='#aa2222')
+            if spec['tbd']:ax.text(x,y-h/2-10,('P10 FROM SELLER; ENVELOPE STILL TBD' if ref=='RS_IN' else 'P5 FROM SELLER; ENVELOPE STILL TBD' if ref=='RS_L' else 'PROVISIONAL - MEASURE ACTUAL PART'),ha='center',fontsize=6,color='#aa2222')
         ax.text(15,76,'F1: 7.7 mm single-clip pitch; 30 mm clip-center spacing and slot axis are ASSUMPTIONS.',fontsize=7)
-        ax.text(15,68,'RS_IN/OUT: seller confirms P10 and wire D0.8; RS_L 25mOhm pitch remains unconfirmed.',fontsize=7)
+        ax.text(15,68,'Seller pitch: RS_IN/OUT 50mOhm P10, wire D0.8; RS_L 25mOhm P5, wire D0.7.',fontsize=7)
         ax.text(15,60,'L1: vertical mounting; footprint 20 x 10 mm. Horizontal mounting needs a 20 x 20 mm area.',fontsize=7)
         ax.text(15,52,'C1/C3: P5, D10 body; drawing reserves D10.5 maximum. J1/J2: P2.54, hole 1.3.',fontsize=7)
         ax.text(15,37,'NOT FOR FABRICATION - native ERC / DRC and real part fit checks remain open.',fontsize=9,weight='bold')
