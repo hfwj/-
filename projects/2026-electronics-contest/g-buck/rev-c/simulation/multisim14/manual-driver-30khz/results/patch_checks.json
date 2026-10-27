@@ -1,0 +1,126 @@
+{
+  "baseline": "2026-10-27_GBUCK_REVC_DRIVER_手工搭建基准.ms14",
+  "baseline_sha256": "339b1ea2de7ea85e2750f04616bc68141cf59eb80ce5935b1e384975b3c28b2e",
+  "output": "GBUCK_REVC_DRIVER_30k.ms14",
+  "output_sha256": "723ee74fbcddbc2cb6899d81cec9d9f5aed0ad9cea5ee440ff16f02081924005",
+  "baseline_xml_sha256": "c3c4c548fa94bbf4e24f4ddda559c0d5a2c5749229b15901b5f7f6a0f1bedaec",
+  "output_xml_sha256": "c4740f0b6f566beb85512c4f2d622981cdf0f33dbd2b9a701b770c1bf01f66b6",
+  "xml_changes": [
+    {
+      "before": "V_SAW SAW COM PULSE(0 1 0 9.98u 20n 0 10u)",
+      "after": "V_SAW SAW COM PULSE(0 1 0 33.313333u 20n 0 33.333333u)",
+      "copies": 2
+    },
+    {
+      "before": "XCTRL %t1 %t2 VOUT V_CAP 7 L_RAW GBUCK_CTRL_EQ",
+      "after": "XCTRL %t1 %t2 VOUT V_CAP VIN L_RAW GBUCK_CTRL_EQ",
+      "copies": 2
+    }
+  ],
+  "changed_attributes": [
+    {
+      "element_index": 33667,
+      "tag": "CiaSpiceTmpltExprt",
+      "attribute": "String"
+    },
+    {
+      "element_index": 33820,
+      "tag": "Item",
+      "attribute": "Value"
+    }
+  ],
+  "exact_inverse_xml_verified": true,
+  "two_independent_decoders_verified": true,
+  "unchanged_fingerprints": {
+    "CIITLinkComp": {
+      "count": 317,
+      "sha256": "9e85fb6c4be5df849a9b9ace6a729c34e4a13dc847632d5fe3127b979a42e0df",
+      "scope": "complete elements"
+    },
+    "CIITSymbolComp": {
+      "count": 163,
+      "sha256": "b9489a82107bd2b3a5e617b2ed884e20858a47dd9b4ff3b6478395f784c1655d",
+      "scope": "complete elements"
+    },
+    "CIITConComp": {
+      "count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scope": "complete elements"
+    },
+    "CSchDesignNetLabel": {
+      "count": 395,
+      "sha256": "124b7a44ee6bdae7401c58f4f9a74ed6df9603f480d6a65d15e6199c2e7adf28",
+      "scope": "complete elements"
+    },
+    "CiPort": {
+      "count": 353,
+      "sha256": "754725a855427a6ef6d694258cb2c958091182cf968fd389e31ac25375f27b1a",
+      "scope": "complete elements"
+    },
+    "CiNode": {
+      "count": 139,
+      "sha256": "a12e58baab99e1af9b7fb53f3ad7c63a8fd617e36ba504918e009a3fae451b44",
+      "scope": "complete elements"
+    },
+    "CiaParamList": {
+      "count": 268,
+      "sha256": "5667e5641cf1d87f276a6deb1733ed9f3e96af9eba3969f0d9cfdd7a171f3a19",
+      "scope": "complete elements"
+    },
+    "CiModel": {
+      "count": 18,
+      "sha256": "6ead2f2b5d17ef46f61297ccdc402101ddabcdbb3ef3f348634bb679774e7e58",
+      "scope": "complete elements"
+    },
+    "CIITDiagram": {
+      "count": 1,
+      "sha256": "0787ac1ddc9e13e415845b9006f268d8ff5bf011c6d48f9403661db04305a4b3",
+      "scope": "attributes only"
+    }
+  },
+  "vin_reference_evidence": {
+    "schematic_named_nodes": {
+      "VIN": "146325984",
+      "L_RAW": "146327504",
+      "V_CAP": "146326224",
+      "VOUT": "146326304"
+    },
+    "q1_drain_node": "146325984",
+    "cached_vin_numeric_name": "7",
+    "reason": "Use the existing explicit schematic name VIN rather than a numeric cached name."
+  },
+  "source_bytes_preserved": true,
+  "physical_BOM_changed": false,
+  "schematic_wires_layout_values_changed": false,
+  "model_scope": "V3 equivalent controller carrier and VIN reference only",
+  "windows_multisim_open_verified": false,
+  "windows_multisim_run_verified": false,
+  "power_stage_or_efficiency_validated": false,
+  "pwm_stage_check": {
+    "scope": "Isolated saved PWM equations, not full Multisim/client/closed-loop validation",
+    "engine": "ngspice 44.2, PSpice compatibility",
+    "cases": [
+      {
+        "fixed_duty": 0.2,
+        "period_s": 3.3335e-05,
+        "frequency_Hz": 29998.500074996253,
+        "pulse_width_s": 6.662646e-06,
+        "measured_duty": 0.1998693865306735
+      },
+      {
+        "fixed_duty": 0.5,
+        "period_s": 3.3335e-05,
+        "frequency_Hz": 29998.500074996253,
+        "pulse_width_s": 1.665665e-05,
+        "measured_duty": 0.4996745162741863
+      },
+      {
+        "fixed_duty": 0.8,
+        "period_s": 3.3335e-05,
+        "frequency_Hz": 29998.500074996253,
+        "pulse_width_s": 2.665065e-05,
+        "measured_duty": 0.7994795260236988
+      }
+    ]
+  }
+}

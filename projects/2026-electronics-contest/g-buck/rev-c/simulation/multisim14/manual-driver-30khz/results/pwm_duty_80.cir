@@ -1,0 +1,10 @@
+Saved V3 PWM stage; fixed-duty test 0.8
+VCOM COM 0 0
+VDUTY DUTY COM 0.8
+V_SAW SAW COM PULSE(0 1 0 33.313333u 20n 0 33.333333u)
+E_PWM PWM COM VALUE={IF(TIME<2m,0,LIMIT(1650*(V(DUTY,COM)-V(SAW,COM))+1.65,0,3.3))}
+RLOAD PWM COM 100k
+.tran 5n 2.3m 0 5n
+.measure tran period TRIG v(PWM) VAL=1.65 RISE=1 TD=2.1m TARG v(PWM) VAL=1.65 RISE=2 TD=2.1m
+.measure tran width TRIG v(PWM) VAL=1.65 RISE=1 TD=2.1m TARG v(PWM) VAL=1.65 FALL=2 TD=2.1m
+.end
