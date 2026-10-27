@@ -36,7 +36,7 @@
         "C_VINP_ADC"
       ],
       "quantity": 1,
-      "stock": null,
+      "stock": 2,
       "full_part_number": null,
       "separate_purchase_confirmed": true
     }
@@ -47,10 +47,16 @@
       "per_board": 16,
       "purchase_needed_one_board": 0,
       "remaining_after_one_board": 34
+    },
+    "4p7nF_50V_0805_C0G": {
+      "available": 2,
+      "per_board": 1,
+      "purchase_needed_one_board": 0,
+      "remaining_after_one_board": 1
     }
   },
   "source_graph_connected_pins": 310,
   "manufacturing_release": false,
-  "xlsx_sha256": "68060413a1253f86f6ded16df4641fd1abd3533a0cd9d03c8d2b6b00b809952e",
-  "pdf_sha256": "01a44eb91114d4bdad5baa15c8ad89721f54ad3a15666edbee247cc15981abe3"
+  "xlsx_sha256": "49fafe5cf7659dabb87d55f49b50a291cd8d717404d8a28a48c6784963d88394",
+  "pdf_sha256": "e1cfb78caa9ffa06869e9b9f049080e12127b79bbf428334d7f55d448f9642b4"
 }

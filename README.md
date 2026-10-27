@@ -6,7 +6,7 @@
 
 | 项目 | 资料入口 | 当前结论 |
 |---|---|---|
-| 2026 电子电赛 G题：器件逐项确认 | [记录](projects/2026-electronics-contest/g-buck/rev-c2/reports/component-confirmations-2026-10-27/README.md) | 4.7nF另购C0G款已确认，C_VINP_ADC单板1只、数量待核；C7～C10仍列X7R 4只；采购行46及100nF库存50只保持；原理图/PCB与仿真未改 |
+| 2026 电子电赛 G题：器件逐项确认 | [记录](projects/2026-electronics-contest/g-buck/rev-c2/reports/component-confirmations-2026-10-27/README.md) | 4.7nF/C0G已购2只，单板用1只/补购0只/装一板余1只；C7～C10的X7R库存另核；采购行46及100nF库存50只保持；原理图/PCB与仿真未改 |
 | 2026 电子电赛 G题：Rev C.2 更新采购清单 | [Excel](projects/2026-electronics-contest/g-buck/rev-c2/downloads/GBUCK_RevC2_updated_BOM.xlsx) · [PDF](projects/2026-electronics-contest/g-buck/rev-c2/downloads/GBUCK_RevC2_updated_BOM.pdf) · [说明](projects/2026-electronics-contest/g-buck/rev-c2/reports/updated-bom-2026-10-27/README.md) | 120位号合并46项采购记录；商品图分别支持50mΩ P10/线径0.8、25mΩ P5/线径0.7，RS_L已从P10改P5；F1按5×20/P5.66更新，双夹15mm待试装；电气网络/2A额定保持，仿真未改 |
 | 2026 电子电赛 G题：Rev C.2 PCB实物适配 | [工程/说明](projects/2026-electronics-contest/g-buck/rev-c2/pcb/hardware-fit-120x90/README.md) · [PCB预览](projects/2026-electronics-contest/g-buck/rev-c2/pcb/hardware-fit-120x90/previews/PCB_RevC2_120x90.png) | 120×90 mm、120器件，修订P2.54端子/D10电容/65125电感/5×20管夹；同步310逻辑引脚并补局部布线；有封装、F1规格及C4耐压变化；完整布线、实物封装与原生DRC待完成，不能制板 |
 | 2026 电子电赛 G题：Rev C.2 评审核对与配套修订 | [项目/下载入口](projects/2026-electronics-contest/g-buck/rev-c2/README.md) · [核对报告](projects/2026-electronics-contest/g-buck/rev-c2/reports/RevC1评审核对与RevC2修订说明.md) | 确认LCD占用PA5，监测接口改PA6；已同步Multisim电容/7项监测器件及独立保护计时模型；静态与独立逻辑检查通过，整机动态/固件/效率未验收 |

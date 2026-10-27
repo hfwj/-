@@ -91,3 +91,9 @@ PCB仍未完整布线，原生ERC/DRC及厂家焊盘最终复核未完成，不�
 **最新C0G另购确认（比较0473d32）：**用户对“是否另外购买4.7nF/50V/C0G（NP0）/0805电容”回复“是的”，登记C_VINP_ADC所需C0G款已另外购买，单板1只；与C7～C10的CL21B472JBANNNC/X7R款分开。实际数量、完整料号和容差未提供，库存/补购栏仍留空，不将单板需求1只当成已购数量，也不记库存0。用户按规格确认另购，不视为完整料号或实测结果已归档。4.7nF单板仍4只X7R加1只C0G，采购行46、120逻辑位号/104默认有料位号及100nF库存50只保持。原理图/PCB原生文件、网络、脚号、设计参数/用量和仿真/固件均未改，仅更新BOM已购状态，无新增器件或改板要求。
 
 证据：[capacitor_4p7nF_C0G_separate_purchase.json](../../results/data/component-confirmations-2026-10-27/capacitor_4p7nF_C0G_separate_purchase.json)。
+
+## 最新状态：4.7nF/C0G库存2只
+
+**最新C0G数量确认（比较afd277e）：**用户对另购4.7nF/50V/C0G（NP0）/0805批次数量回复“2”，登记库存2只。C_VINP_ADC单板用1只，需补购0只，预计装配一板后余1只；尚未实际扣减库存。Excel库存G列填2、H列保留动态补购公式，CSV写当前2/0。与C7～C10的CL21B472JBANNNC/X7R款分开，X7R批次数量仍未知，不将C0G的2只套用到X7R。C0G完整料号/容差待归档；采购行46、120逻辑位号/104默认有料位号、100nF库存50只保持。原理图/PCB原生文件、网络、脚号、设计参数/单板用量及仿真/固件均未改，本轮仅更新库存及补购记录，无新增器件或改板要求。
+
+证据：[capacitor_4p7nF_C0G_stock2_confirmed.json](../../results/data/component-confirmations-2026-10-27/capacitor_4p7nF_C0G_stock2_confirmed.json)。
