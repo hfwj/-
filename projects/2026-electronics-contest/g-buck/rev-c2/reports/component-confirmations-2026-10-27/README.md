@@ -33,3 +33,11 @@ PCB仍未完整布线，原生ERC/DRC及厂家焊盘最终复核未完成，不�
 仿真/固件影响：未修改或运行，本次确认不构成驱动时序、温升或整机测试。
 
 回读及原生文件未变的证据：[U1_IR2184_DIP8_confirmed.json](../../results/data/component-confirmations-2026-10-27/U1_IR2184_DIP8_confirmed.json)。PCB原有未布网络和原生ERC/DRC待完成状态保持。
+
+## 最新4.7nF批次确认
+
+**最新电容实物确认（比较a50761f）：**用户回复“4.7nF”，确认上一轮100nF询问所对应的已购批次实际为4.7nF。该批按4.7nF登记，不能装在100nF位置，也不抵扣100nF库存。设计仍需100nF/0805共16只、4.7nF/0805共5只，原理图、PCB、器件参数/数量与仿真/固件均未改。是否另有100nF及两类可用库存数量未确认，不默认缺16只。4.7nF实际耐压/介质另核，特别是C_VINP_ADC要求C0G；仅容量相同不足以确认这批适用于全部5个位置。
+
+物料/BOM影响仅为已购批次分类与状态纠正，45项采购行/120逻辑位号保持。参数表原件保留，CL21B472JBANNNC记录为该参数表提供的料号，不视为包装完整料号已独立验证。
+
+证据见[capacitor_472_confirmed.json](../../results/data/component-confirmations-2026-10-27/capacitor_472_confirmed.json)。
