@@ -17,6 +17,20 @@ def copper_vias(docs, pcb):
              'layers':{1,2},'body':v}
             for (k,i),v in docs[pcb].items() if k=='VIA']
 
+def copper_fills(docs, pcb):
+    fills=[]
+    for (k,i),f in docs[pcb].items():
+        if k!='FILL' or f['layerId'] not in (1,2):continue
+        assert f['fillStyle']=='SOLID' and f['width']==0,('Unsupported copper fill',i)
+        rings=[]
+        for path in f['path']:
+            assert path[2]=='L' and all(isinstance(v,(float,int)) for v in path[:2]+path[3:])
+            values=path[:2]+path[3:]
+            rings.append([(values[n]*.0254,values[n+1]*.0254) for n in range(0,len(values),2)])
+        g=Polygon(rings[0],rings[1:]);assert g.is_valid and not g.is_empty
+        fills.append({'id':i,'net':f['netName'],'layer':f['layerId'],'geometry':g,'body':f})
+    return fills
+
 def copper_geometry(meta,docs,pcb):
     o=docs[pcb];a=attrs(o);pads=[];bodies=[];parts={}
     for (k,cid),c in o.items():
@@ -48,7 +62,7 @@ def copper_geometry(meta,docs,pcb):
             for (k,i),b in o.items() if k=='LINE']
     return parts,pads,bodies,tracks
 
-def append_history(path,meta,docs,changed,label):
+def append_history(path,meta,docs,changed,label,removed=None):
     from cryptography.hazmat.primitives.ciphers.aead import AESGCM
     _,_,ticket=read_project(path)
     con=sqlite3.connect(path)
@@ -58,6 +72,8 @@ def append_history(path,meta,docs,changed,label):
     chunks=[]
     for u in sorted(changed):
         ticket+=1;chunks.append(json.dumps({'type':'DOCHEAD','ticket':ticket})+'||'+json.dumps(meta[u],ensure_ascii=False)+'|')
+        for k,i in (removed or {}).get(u,[]):
+            ticket+=1;chunks.append(json.dumps({'type':k,'id':i,'ticket':ticket})+'|||')
         for (k,i),b in docs[u].items():
             ticket+=1;chunks.append(json.dumps({'type':k,'id':i,'ticket':ticket})+'||'+json.dumps(b,ensure_ascii=False)+'|')
     key=hashlib.sha256(label.encode()).digest()[:16]

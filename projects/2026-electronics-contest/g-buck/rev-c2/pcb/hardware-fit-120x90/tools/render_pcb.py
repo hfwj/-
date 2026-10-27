@@ -13,9 +13,20 @@ def main():
     meta,docs,_=read_project(PATH)
     parts,pads,bodies,tracks=copper_geometry(meta,docs,manifest['pcb'])
     vias=copper_vias(docs,manifest['pcb'])
+    fills=copper_fills(docs,manifest['pcb'])
     def draw(ax,limits=(0,120,0,90),dark=True):
         bg='#092f2b' if dark else 'white';ax.set_facecolor(bg)
         ax.add_patch(plt.Rectangle((0,0),120,90,fill=False,edgecolor='#90dbbb' if dark else '#144d39',linewidth=1.5))
+        from matplotlib.path import Path as PlotPath
+        from matplotlib.patches import PathPatch
+        for f in sorted(fills,key=lambda f:-f['layer']):
+            rings=[f['geometry'].exterior]+list(f['geometry'].interiors)
+            paths=[]
+            for ring in rings:
+                vertices=list(ring.coords)
+                paths.append(PlotPath(vertices,[PlotPath.MOVETO]+[PlotPath.LINETO]*(len(vertices)-2)+[PlotPath.CLOSEPOLY]))
+            path=PlotPath.make_compound_path(*paths)
+            ax.add_patch(PathPatch(path,facecolor='#19534a' if f['layer']==1 else '#16423f',edgecolor='none',alpha=.65))
         for b in bodies:
             col='#ffb457' if manifest['parts'][b['ref']]['mechanical_TBD'] else '#71bba6'
             ax.add_patch(PatchPolygon(list(b['geometry'].exterior.coords),fill=False,edgecolor=col,linewidth=.6))
@@ -39,8 +50,8 @@ def main():
         ax.grid(alpha=.15,linewidth=.3)
     fig,ax=plt.subplots(figsize=(13,10));draw(ax)
     fig.suptitle('G BUCK Rev C.2 | 120 x 90 mm | PCB review',fontsize=17)
-    ax.set_title('Native-record render | 120 components | partial local routes | NOT FOR FAB',fontsize=10)
-    fig.text(.09,.035,'Orange: mechanical TBD. Red: top copper. Blue: bottom copper / vias. Power / Kelvin / ground fill incomplete.',fontsize=9)
+    ax.set_title('Native-record render | 120 components | '+str(len(tracks))+' tracks / '+str(len(vias))+' vias | NOT FOR FAB',fontsize=10)
+    fig.text(.09,.035,'Orange: mechanical TBD. Red: top. Blue: bottom / vias. '+('Green: static GND copper.' if fills else 'GND copper not generated.')+' Native ERC/DRC not run.',fontsize=9)
     fig.tight_layout(rect=(0,.06,1,.94))
     fig.savefig(ROOT/'previews/PCB_RevC2_120x90.png',dpi=190)
     with PdfPages(ROOT/'previews/PCB_RevC2_review.pdf') as pdf:

@@ -20,6 +20,7 @@ def main():
     require(recovered==expected,'Schematic connectivity differs from Rev C.2')
     pp,pads,bodies,tracks=copper_geometry(meta,docs,manifest['pcb'])
     vias=copper_vias(docs,manifest['pcb'])
+    fills=copper_fills(docs,manifest['pcb'])
     actual={}
     for p in pads:
         key=(p['ref'],p['pin'])
@@ -97,6 +98,22 @@ def main():
         if drill_gap<.2-1e-5:geometry_errors.append('via drill web <0.20mm '+a['id']+'/'+b['id'])
         if a['net']!=b['net'] and a['geometry'].distance(b['geometry'])<.2-1e-5:
             clearance_errors.append('via/via <0.20mm '+a['id']+'/'+b['id'])
+    for f in fills:
+        if not box(.5,.5,119.5,89.5).covers(f['geometry']):geometry_errors.append('fill beyond copper margin '+f['id'])
+        for p in pads:
+            if f['layer'] in p['layers'] and f['net']!=p['net'] and f['geometry'].distance(p['geometry'])<.2-1e-5:
+                clearance_errors.append('fill/pad <0.20mm '+f['id']+'/'+p['ref']+'.'+p['pin'])
+        for t in tracks:
+            if f['layer']==t['layer'] and f['net']!=t['net'] and f['geometry'].distance(t['geometry'])<.2-1e-5:
+                clearance_errors.append('fill/track <0.20mm '+f['id']+'/'+t['id'])
+        for v in vias:
+            if f['net']!=v['net'] and f['geometry'].distance(v['geometry'])<.2-1e-5:
+                clearance_errors.append('fill/via <0.20mm '+f['id']+'/'+v['id'])
+        for n,h in enumerate(holes):
+            if f['geometry'].distance(h)<.2-1e-5:clearance_errors.append('mount hole/fill '+str(n)+'/'+f['id'])
+    for a,b in itertools.combinations(fills,2):
+        if a['layer']==b['layer'] and a['net']!=b['net'] and a['geometry'].distance(b['geometry'])<.2-1e-5:
+            clearance_errors.append('fill/fill <0.20mm '+a['id']+'/'+b['id'])
     require(not geometry_errors,'Physical geometry violations')
     require(not clearance_errors,'Conservative copper clearance violations')
     # Physical same-layer copper connected components. A net assignment alone is
@@ -106,6 +123,7 @@ def main():
         if p['net']:pernet[p['net']].append((p['geometry'],set(p['layers']),p['ref']+'.'+p['pin']))
     for t in tracks:pernet[t['net']].append((t['geometry'],{t['layer']},'trace:'+t['id']))
     for v in vias:pernet[v['net']].append((v['geometry'],{1,2},'via:'+v['id']))
+    for f in fills:pernet[f['net']].append((f['geometry'],{f['layer']},'fill:'+f['id']))
     unresolved=[]
     for net,nodes in sorted(pernet.items()):
         parent=list(range(len(nodes)))
@@ -117,7 +135,7 @@ def main():
                 parent[find(j)]=find(i)
         groups=collections.defaultdict(list)
         for i,(_,_,name) in enumerate(nodes):
-            if not name.startswith(('trace:','via:')):groups[find(i)].append(name)
+            if not name.startswith(('trace:','via:','fill:')):groups[find(i)].append(name)
         if len(groups)>1:unresolved.append({'net':net,'copper_islands':len(groups),'minimum_links_remaining':len(groups)-1,'endpoints':list(groups.values())})
     status='PASS_STATIC_REVIEW_ONLY' if not errors else 'FAIL'
     report={'status':status,'errors':errors,'checks':{
@@ -131,12 +149,13 @@ def main():
         'value_changes':value_changes,'preserved_source_PCB_library_documents':len(reference_unchanged),
         'geometric_errors':geometry_errors,'clearance_errors':clearance_errors,
         'mounting_holes':len(holes),'copper_track_segments':len(tracks),'vias':len(vias),
+        'static_copper_regions':len(fills),
         'unfinished_networks':len(unresolved),'minimum_copper_links_remaining':sum(x['minimum_links_remaining'] for x in unresolved),
         'routing_complete':not unresolved,'native_desktop_open':'not_run','native_ERC':'not_run','native_DRC':'not_run',
         'manufacturing_release':False,'sqlite_integrity':sqlite3.connect('file:'+str(PATH)+'?mode=ro',uri=True).execute('pragma integrity_check').fetchone()[0]},
         'limitations':['Rectangular pad copper conservatively encloses round/oval pads; checks are not native ERC/DRC.',
         'Seller drawings support RS_IN/OUT P10 D0.8 and RS_L P5 D0.7. User confirms single 5x20 fuse-clip pitch 5.66; assembly spacing 15 is trial-fit only. Shunt ratings and fuse fit/DC breaking capacity/thermal design remain unconfirmed.',
-        'No complete power routing, Kelvin routing or ground plane. No Gerber manufacturing output.',
+        'Power, Kelvin branches and static ground copper are layout drafts, not transient/thermal/EMI acceptance. No Gerber manufacturing output.',
         'Mounting pattern is proposed, not confirmed to an enclosure. Silk/courtyard/mask/paste/3D checks remain open.']}
     (ROOT/'data/verification.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
     (ROOT/'data/unrouted_networks.json').write_text(json.dumps(unresolved,ensure_ascii=False,indent=2))

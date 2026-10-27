@@ -1,0 +1,57 @@
+{
+  "baseline_sha256": "f857ba149ae212b4e0cdec0200371c51a92392f37b03c262cd53fb8e77ab943e",
+  "delivered_sha256": "8d2aaf2db5622e079fe1bbea40aec64ea5d12cd5436676d4ff2f037728ef95f6",
+  "component_changes": [
+    {
+      "ref": "D_FREE",
+      "before_mm_deg": [
+        81.000000052,
+        59.999999888000005,
+        90
+      ],
+      "after_mm_deg": [
+        80.7,
+        65.9,
+        270
+      ]
+    },
+    {
+      "ref": "R_SN",
+      "before_mm_deg": [
+        81.000000052,
+        66.500000096,
+        90
+      ],
+      "after_mm_deg": [
+        88.0,
+        68.5,
+        90
+      ]
+    },
+    {
+      "ref": "C_SN",
+      "before_mm_deg": [
+        84.49999991,
+        64.00000001599999,
+        90
+      ],
+      "after_mm_deg": [
+        91.0,
+        68.5,
+        90
+      ]
+    }
+  ],
+  "removed_snubber_lines": 3,
+  "replacement_snubber_points_mm": [
+    [
+      88.0,
+      70.000000048
+    ],
+    [
+      91.0,
+      67.499999968
+    ]
+  ],
+  "schematic_or_BOM_change": false
+}

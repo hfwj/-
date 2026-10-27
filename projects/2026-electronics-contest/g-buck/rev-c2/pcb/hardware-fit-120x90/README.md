@@ -1,5 +1,8 @@
 # Rev C.2 PCB：按实购物料修订封装与布局
 
+**当前保存检查点（2026-10-28，比较e6e0b37）：583段铜线、101个过孔；非地网络全部连通，剩余GND至少79条连接，地铜尚未保存，不能制板。** [保存记录与下次续接入口](reports/进度保存_2026-10-28.md) · [检查点审计](data/progress_checkpoint_2026-10-28.json)。本轮仅改PCB铜线/过孔及4项器件位置；原理图、器件规格/BOM和仿真/固件保持。下文此前136段等数字为历史阶段。
+
+
 **最新布线进度（比较453610e）：**原局部队列15组全部布通；现136段铜线、4过孔。全板仍45个未完成网络、至少204条待连接，尚不能制板。[本轮报告与修改影响](reports/局部布线续接与验证.md)。原理图、器件/BOM、坐标与封装保持；仿真/固件未改。旧说明PDF/Word为历史封装阶段资料，最新布线以本轮报告和验证JSON为准。
 
 以用户最新上传的《G题同步Buck完整原理图_RevC2.pdf》及仓库同版原生工程为电气基准，建立 **120×90 mm 双层 PCB 复核副本**。原 Rev C.2 原理图文件、Rev B PCB 和 GitHub 参考板保留。
@@ -8,7 +11,7 @@
 
 | 内容 | 入口 |
 |---|---|
-| 整包下载 | [PCB复核资料包](../../downloads/GBUCK_RevC2_PCB_review_2026-10-27.zip) |
+| 整包下载 | [PCB复核资料包](../../downloads/GBUCK_RevC2_PCB_progress_2026-10-28.zip) |
 | 嘉立创 EDA 专业版可编辑工程 | [GBUCK_RevC2_120x90_PCB_review.eprj2](native/GBUCK_RevC2_120x90_PCB_review.eprj2) |
 | 实际工程记录绘制的 PCB 总览 | [PNG](previews/PCB_RevC2_120x90.png) · [总览与局部 PDF](previews/PCB_RevC2_review.pdf) |
 | 封装核对打印页，必须按 100% 打印 | [1:1 核对 PDF](previews/Footprint_1to1_CHECK_ONLY.pdf) |

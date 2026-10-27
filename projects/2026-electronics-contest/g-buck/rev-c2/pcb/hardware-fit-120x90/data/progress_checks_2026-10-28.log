@@ -1,0 +1,15 @@
+Saved native SHA-256: c838ae50ffa001b1e1bd7bf08ea63e3069613d0163a3ebc35d761ff76bc0a43c
+Static validation: PASS_STATIC_REVIEW_ONLY
+All non-ground networks connected; GND needs 79 links.
+Ground generation interrupted before native write; no ground FILL records saved.
+test_crossing_layers_are_not_connected (test_connectivity.ConnectivityTests.test_crossing_layers_are_not_connected) ... ok
+test_identical_labels_without_copper_are_open (test_connectivity.ConnectivityTests.test_identical_labels_without_copper_are_open) ... ok
+test_native_solid_fill_preserves_clearance_holes (test_connectivity.ConnectivityTests.test_native_solid_fill_preserves_clearance_holes) ... ok
+test_plane_does_not_connect_an_smd_on_the_other_layer (test_connectivity.ConnectivityTests.test_plane_does_not_connect_an_smd_on_the_other_layer) ... ok
+test_via_bridges_layers_but_smd_endpoint_does_not (test_connectivity.ConnectivityTests.test_via_bridges_layers_but_smd_endpoint_does_not) ... ok
+test_wrong_net_via_cannot_bridge (test_connectivity.ConnectivityTests.test_wrong_net_via_cannot_bridge) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.003s
+
+OK

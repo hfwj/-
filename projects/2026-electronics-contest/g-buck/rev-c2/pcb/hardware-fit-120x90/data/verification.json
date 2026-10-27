@@ -3,7 +3,7 @@
   "errors": [],
   "checks": {
     "source_sha256": "6a1ed47fc5ad60f26e2b3efa9301078c0e1f658fd5d7c378f988992510ee30d6",
-    "delivered_sha256": "f857ba149ae212b4e0cdec0200371c51a92392f37b03c262cd53fb8e77ab943e",
+    "delivered_sha256": "c838ae50ffa001b1e1bd7bf08ea63e3069613d0163a3ebc35d761ff76bc0a43c",
     "source_schematic_components": 120,
     "delivered_schematic_components": 120,
     "pcb_components": 120,
@@ -36,10 +36,11 @@
     "geometric_errors": [],
     "clearance_errors": [],
     "mounting_holes": 4,
-    "copper_track_segments": 136,
-    "vias": 4,
-    "unfinished_networks": 45,
-    "minimum_copper_links_remaining": 204,
+    "copper_track_segments": 583,
+    "vias": 101,
+    "static_copper_regions": 0,
+    "unfinished_networks": 1,
+    "minimum_copper_links_remaining": 79,
     "routing_complete": false,
     "native_desktop_open": "not_run",
     "native_ERC": "not_run",
@@ -50,7 +51,7 @@
   "limitations": [
     "Rectangular pad copper conservatively encloses round/oval pads; checks are not native ERC/DRC.",
     "Seller drawings support RS_IN/OUT P10 D0.8 and RS_L P5 D0.7. User confirms single 5x20 fuse-clip pitch 5.66; assembly spacing 15 is trial-fit only. Shunt ratings and fuse fit/DC breaking capacity/thermal design remain unconfirmed.",
-    "No complete power routing, Kelvin routing or ground plane. No Gerber manufacturing output.",
+    "Power, Kelvin branches and static ground copper are layout drafts, not transient/thermal/EMI acceptance. No Gerber manufacturing output.",
     "Mounting pattern is proposed, not confirmed to an enclosure. Silk/courtyard/mask/paste/3D checks remain open."
   ]
 }

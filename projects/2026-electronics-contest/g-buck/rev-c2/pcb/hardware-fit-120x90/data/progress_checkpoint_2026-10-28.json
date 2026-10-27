@@ -1,0 +1,92 @@
+{
+  "date_beijing": "2026-10-28",
+  "baseline_commit": "e6e0b3715e1269e221888537b5055f0fc2b34e5a",
+  "baseline_sha256": "f857ba149ae212b4e0cdec0200371c51a92392f37b03c262cd53fb8e77ab943e",
+  "delivered_sha256": "c838ae50ffa001b1e1bd7bf08ea63e3069613d0163a3ebc35d761ff76bc0a43c",
+  "saved_on_user_request": true,
+  "status": "PAUSED_BEFORE_GROUND_COPPER",
+  "native_sqlite_integrity": "ok",
+  "schematic_and_library_documents_unchanged": true,
+  "moved_components": [
+    {
+      "ref": "D_FREE",
+      "before_mm_deg": [
+        81.000000052,
+        59.999999888000005,
+        90
+      ],
+      "after_mm_deg": [
+        80.7,
+        65.9,
+        270
+      ]
+    },
+    {
+      "ref": "R_SN",
+      "before_mm_deg": [
+        81.000000052,
+        66.500000096,
+        90
+      ],
+      "after_mm_deg": [
+        88.0,
+        68.5,
+        90
+      ]
+    },
+    {
+      "ref": "C_SN",
+      "before_mm_deg": [
+        84.49999991,
+        64.00000001599999,
+        90
+      ],
+      "after_mm_deg": [
+        91.0,
+        68.5,
+        90
+      ]
+    },
+    {
+      "ref": "R_IOUT_PU",
+      "before_mm_deg": [
+        78.99999998799998,
+        32.000000007999994,
+        0
+      ],
+      "after_mm_deg": [
+        82.5,
+        23.0,
+        0
+      ]
+    }
+  ],
+  "removed_native_records_by_type": {
+    "LINE": 42
+  },
+  "changed_native_records_by_type": {
+    "COMPONENT": 4,
+    "ATTR": 4
+  },
+  "added_native_records_by_type": {
+    "LINE": 489,
+    "VIA": 97
+  },
+  "static_validation": "PASS_STATIC_REVIEW_ONLY",
+  "copper_track_segments": 583,
+  "vias": 101,
+  "non_ground_networks_complete": true,
+  "unfinished_networks": 1,
+  "minimum_ground_links_remaining": 79,
+  "ground_copper_saved": false,
+  "native_desktop_open": "not_run",
+  "native_ERC": "not_run",
+  "native_DRC": "not_run",
+  "manufacturing_release": false,
+  "resume": [
+    "Verify native SHA matches this checkpoint",
+    "Run tools/add_ground_copper.py; it was interrupted before writing history and no partial copper fill is saved",
+    "Run tools/verify_pcb.py and address remaining ground islands",
+    "Inspect in native EDA; run ERC/DRC and assembly/thermal checks before fabrication"
+  ]
+}

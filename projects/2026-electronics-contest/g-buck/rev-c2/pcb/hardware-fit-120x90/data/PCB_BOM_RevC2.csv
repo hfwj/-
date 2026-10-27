@@ -97,9 +97,9 @@ TP9,FAULT_N,TP_D1.5,36.0,28.0,0,False,SMD测试点；探针和夹具兼容性待
 TP10,+3V3_A,TP_D1.5,103.0,19.0,0,False,SMD测试点；探针和夹具兼容性待确认
 R_PRE,22Ω / 5W / pulse≥0.3J,RPRE_EXTERNAL_P5.08_TBD,19,58,0,True,外置22Ω/5W脉冲≥0.3J电阻，板上仅两引出焊盘；不得将电阻实体塞进引出焊盘投影
 J_BYP,SPST旁路接口 ≥30VDC/3A,TERM_2.54_2P,7,56,90,False,2.54mm 2P；外接常开旁路开关；开关额定≥30VDC/3A另核
-D_FREE,SR560 / 60V / 5A,SMB_DO214AA,81,60,90,False,用户明确与D1均SR560贴片、SMB（DO-214AA）；沿用现有SMB焊盘和位置；1=K色条端接SW、2=A接GND；厂家电气/热条件及推荐焊盘最终复核待归档
-R_SN,10Ω / 0.25W / DNP,R1206,81.0,66.5,90,False,DNP；10Ω≥0.25W，改1206以匹配功率要求；实购功率仍需核对
-C_SN,1nF / 100V C0G / DNP,C0805,84.5,64.0,90,False,默认不装，配合R_SN
+D_FREE,SR560 / 60V / 5A,SMB_DO214AA,80.7,65.9,270,False,用户明确与D1均SR560贴片、SMB（DO-214AA）；沿用现有SMB焊盘和位置；1=K色条端接SW、2=A接GND；厂家电气/热条件及推荐焊盘最终复核待归档
+R_SN,10Ω / 0.25W / DNP,R1206,88.0,68.5,90,False,DNP；10Ω≥0.25W，改1206以匹配功率要求；实购功率仍需核对
+C_SN,1nF / 100V C0G / DNP,C0805,91.0,68.5,90,False,默认不装，配合R_SN
 R_IL_PROT,1kΩ / 1%,R0805,92.0,46.0,0,False,
 C_IL_PROT,1nF / C0G,C0805,88.0,44.0,0,False,RC时间常数1us，不是固定1us blanking或总响应时间
 R_IOUT_PROT,1kΩ / 1%,R0805,91.0,39.0,90,False,
@@ -107,7 +107,7 @@ C_IOUT_PROT,100nF / 25V X7R,C0805,87.0,37.0,0,False,告警RC时间常数100us；
 R_IOUT_TOP,20kΩ / 0.1%,R0805,77.0,41.0,90,False,
 R_IOUT_BOT,10kΩ / 0.1%,R0805,80.0,39.0,0,False,
 C_REF_IOUT,100nF,C0805,80.0,35.0,0,False,
-R_IOUT_PU,10kΩ,R0805,79.0,32.0,0,False,U9B独立开集电极告警上拉，接PB11，禁止直接并入FAULT_N造成正常负载切换误锁存
+R_IOUT_PU,10kΩ,R0805,82.5,23.0,0,False,U9B独立开集电极告警上拉，接PB11，禁止直接并入FAULT_N造成正常负载切换误锁存
 C_DRV,1uF / 25V X7R,C0805,64.0,53.0,0,False,新增贴近U1.VCC/COM的低ESR陶瓷
 TP11,IOUT_RAW,TP_D1.5,109.0,39.0,0,False,
 TP12,IL_PROT,TP_D1.5,84.5,43.0,0,False,

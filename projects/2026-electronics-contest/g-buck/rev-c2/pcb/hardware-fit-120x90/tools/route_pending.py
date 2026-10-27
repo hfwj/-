@@ -7,7 +7,7 @@ when every queued pair already has physical same-layer continuity.
 import heapq
 import itertools
 import numpy as np
-from shapely import intersects_xy, union_all
+from shapely import intersects_xy, union_all, prepare
 from pcb_common import *
 
 WIDTH = .25
@@ -15,11 +15,12 @@ CLEARANCE = .20
 STEP = .25
 
 
-def connected(a, b, pads, tracks, vias=()):
+def connected(a, b, pads, tracks, vias=(), fills=()):
     """Follow physical copper across layers only at PTH pads or real vias."""
     nodes = [(p['geometry'], set(p['layers'])) for p in pads if p['net'] == a['net']]
     nodes += [(t['geometry'], {t['layer']}) for t in tracks if t['net'] == a['net']]
     nodes += [(v['geometry'], {1,2}) for v in vias if v['net'] == a['net']]
+    nodes += [(f['geometry'], {f['layer']}) for f in fills if f['net'] == a['net']]
     visited = set()
     queue = [(a['geometry'], set(a['layers']))]
     while queue:
@@ -33,16 +34,21 @@ def connected(a, b, pads, tracks, vias=()):
     return False
 
 
-def find_path(a, b, obstacles, width=WIDTH):
+def find_path(a, b, obstacles, width=WIDTH, max_expansions=5000):
     """A* on a 0.25mm local grid, checking the full width of every edge."""
     start, end = (a['x'], a['y']), (b['x'], b['y'])
-    forbidden = union_all(obstacles).buffer(width / 2 + CLEARANCE + 1e-6)
+    forbidden = union_all(obstacles).buffer(width / 2 + CLEARANCE + .005)
     board = box(.5 + width / 2, .5 + width / 2,
                 119.5 - width / 2, 89.5 - width / 2)
+    prepare(forbidden)
+    prepare(board)
 
     def clear(p, q):
         line = LineString([p, q])
         return board.covers(line) and not forbidden.intersects(line)
+
+    if clear(start,end):
+        return [start,end]
 
     for margin in (3., 6.):
         xs = np.arange(max(1., math.floor((min(start[0], end[0]) - margin) / STEP) * STEP),
@@ -72,10 +78,13 @@ def find_path(a, b, obstacles, width=WIDTH):
             prev[node] = None
             heapq.heappush(queue, (g + math.dist(point(node), end), next(serial), g, node))
         found = None
+        expansions=0
         while queue:
             _, _, g, node = heapq.heappop(queue)
             if g != cost[node]:
                 continue
+            expansions+=1
+            if expansions>max_expansions:break
             if node in targets:
                 found = node
                 break

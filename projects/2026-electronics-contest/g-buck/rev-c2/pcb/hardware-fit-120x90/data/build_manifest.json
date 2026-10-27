@@ -1086,9 +1086,9 @@
     "D_FREE": {
       "id": "561cc246cd4159cf",
       "schematic_id": "20bc2d6bb0b940fc",
-      "x": 81,
-      "y": 60,
-      "angle": 90,
+      "x": 80.7,
+      "y": 65.9,
+      "angle": 270,
       "package": "SMB_DO214AA",
       "value": "SR560 / 60V / 5A",
       "notes": "用户明确与D1均SR560贴片、SMB（DO-214AA）；沿用现有SMB焊盘和位置；1=K色条端接SW、2=A接GND；厂家电气/热条件及推荐焊盘最终复核待归档",
@@ -1097,8 +1097,8 @@
     "R_SN": {
       "id": "4d21e7f027ea573b",
       "schematic_id": "56f95c1fac574705",
-      "x": 81.0,
-      "y": 66.5,
+      "x": 88.0,
+      "y": 68.5,
       "angle": 90,
       "package": "R1206",
       "value": "10Ω / 0.25W / DNP",
@@ -1108,8 +1108,8 @@
     "C_SN": {
       "id": "dfa73836d8155579",
       "schematic_id": "e042079294d74b4f",
-      "x": 84.5,
-      "y": 64.0,
+      "x": 91.0,
+      "y": 68.5,
       "angle": 90,
       "package": "C0805",
       "value": "1nF / 100V C0G / DNP",
@@ -1196,8 +1196,8 @@
     "R_IOUT_PU": {
       "id": "65f145dda7d450ca",
       "schematic_id": "909777c96af94552",
-      "x": 79.0,
-      "y": 32.0,
+      "x": 82.5,
+      "y": 23.0,
       "angle": 0,
       "package": "R0805",
       "value": "10kΩ",
@@ -2622,10 +2622,13 @@
   ],
   "native_path": "GBUCK_RevC2_120x90_PCB_review.eprj2",
   "manufacturing_release": false,
-  "routing": "partial_local_continued",
+  "routing": "paused_before_ground_copper",
   "routed_local_pairs": 40,
   "pending_local_pairs": 15,
   "continued_local_pairs": 11,
   "remaining_pending_local_pairs": 0,
-  "driver_bottom_pairs": 4
+  "driver_bottom_pairs": 4,
+  "saved_non_ground_networks_complete": true,
+  "remaining_unfinished_networks": 1,
+  "minimum_ground_links_remaining": 79
 }
