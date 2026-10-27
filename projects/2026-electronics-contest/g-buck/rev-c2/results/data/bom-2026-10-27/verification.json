@@ -29,7 +29,7 @@
         "C10"
       ],
       "quantity": 4,
-      "stock": null
+      "stock": 50
     },
     "C0G_separate_requirement": {
       "refs": [
@@ -53,10 +53,16 @@
       "per_board": 1,
       "purchase_needed_one_board": 0,
       "remaining_after_one_board": 1
+    },
+    "4p7nF_50V_0805_X7R_CL21B472JBANNNC": {
+      "available": 50,
+      "per_board": 4,
+      "purchase_needed_one_board": 0,
+      "remaining_after_one_board": 46
     }
   },
   "source_graph_connected_pins": 310,
   "manufacturing_release": false,
-  "xlsx_sha256": "49fafe5cf7659dabb87d55f49b50a291cd8d717404d8a28a48c6784963d88394",
-  "pdf_sha256": "e1cfb78caa9ffa06869e9b9f049080e12127b79bbf428334d7f55d448f9642b4"
+  "xlsx_sha256": "9ac07632fa829b18c4c0acd5a25032ef7011fc46120c248d5f7d0c021bc334b6",
+  "pdf_sha256": "20641efd3b69deda8858177e340263dc975e972f3681f840ccb46f7f02086ebe"
 }
