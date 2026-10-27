@@ -1,0 +1,57 @@
+{
+  "comparison_baseline_commit": "8e2722cca2abe98528b62f57cb43ea8268c63217",
+  "new_evidence": "three inline user images: general MLCC part-number coding, dielectric tables, dimensions",
+  "image_files_or_hashes_available": false,
+  "selected_SKU_or_actual_label_shown": false,
+  "visual_transcription": {
+    "dielectric_position3": {
+      "C": "C0G",
+      "B": "X7R"
+    },
+    "voltage_position6": {
+      "B": "50V"
+    },
+    "size_position2": {
+      "21": "0805"
+    },
+    "capacitance": "472 = 4700 pF = 4.7nF",
+    "tolerance": "J = +/-5%"
+  },
+  "old_parameter_table_part_number": "CL21B472JBANNNC",
+  "segments": [
+    "CL",
+    "21",
+    "B",
+    "472",
+    "J",
+    "B",
+    "A",
+    "N",
+    "N",
+    "N",
+    "C"
+  ],
+  "conditional_decoding_of_old_part": {
+    "package": "0805",
+    "capacitance_nF": 4.7,
+    "dielectric": "X7R",
+    "voltage_V": 50,
+    "tolerance_percent": 5
+  },
+  "conditional_decode_is_not_actual_purchased_part_confirmation": true,
+  "prior_user_report": "有cog",
+  "current_dielectric_status": "pending actual part number; reported C0G differs from old-table X7R code",
+  "actual_rated_voltage_V": null,
+  "actual_full_part_number_confirmed": false,
+  "stock_quantity": null,
+  "C_VINP_ADC_C0G_requirement_preserved": true,
+  "C_VINP_ADC_actual_part_compliance": "unresolved",
+  "design_4p7nF_quantity": 5,
+  "100nF_stock50_unchanged": true,
+  "schematic_or_PCB_changes": false,
+  "native_identical_to_baseline": true,
+  "native_sha256": "5cd3ffac1f58806eaba3c73288fe8d8296ab5ae2155a8a43c9e851efdc8477d4",
+  "simulation_or_firmware_changes": false,
+  "grouped_purchase_rows": 45,
+  "manufacturing_release": false
+}
