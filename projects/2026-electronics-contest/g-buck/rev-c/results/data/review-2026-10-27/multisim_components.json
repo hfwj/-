@@ -1,0 +1,2369 @@
+[
+  {
+    "internal_ref": "J1",
+    "display_ref": "J1",
+    "ports": {
+      "1": "41",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "0.025",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "J2",
+    "display_ref": "J2",
+    "ports": {
+      "1": "42",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "0.025",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "F1",
+    "display_ref": "F1",
+    "ports": {
+      "1": "41",
+      "2": "14"
+    },
+    "parameters": [
+      "0",
+      "5",
+      "0",
+      "2"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "D1",
+    "display_ref": "D1",
+    "ports": {
+      "1": "49",
+      "2": "21"
+    },
+    "parameters": [],
+    "model_id": "141725104"
+  },
+  {
+    "internal_ref": "RS_IN",
+    "display_ref": "RS_IN",
+    "ports": {
+      "1": "49",
+      "2": "39"
+    },
+    "parameters": [
+      "0",
+      "50m",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "RS_OUT",
+    "display_ref": "RS_OUT",
+    "ports": {
+      "1": "48",
+      "2": "42"
+    },
+    "parameters": [
+      "0",
+      "50m",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "RS_L",
+    "display_ref": "RS_L",
+    "ports": {
+      "1": "26",
+      "2": "48"
+    },
+    "parameters": [
+      "0",
+      "25m",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "C1",
+    "display_ref": "C1",
+    "ports": {
+      "1": "39",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "470u",
+      "0",
+      "0",
+      "0",
+      "0.0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "C2",
+    "display_ref": "C2",
+    "ports": {
+      "1": "39",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "1u",
+      "0",
+      "0",
+      "0",
+      "0.0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "QH",
+    "display_ref": "QH",
+    "ports": {
+      "1": "15",
+      "2": "39",
+      "3": "37"
+    },
+    "parameters": [],
+    "model_id": "141724976"
+  },
+  {
+    "internal_ref": "QL",
+    "display_ref": "QL",
+    "ports": {
+      "1": "16",
+      "2": "37",
+      "3": "0"
+    },
+    "parameters": [],
+    "model_id": "141724976"
+  },
+  {
+    "internal_ref": "L1",
+    "display_ref": "L1",
+    "ports": {
+      "1": "37",
+      "2": "26"
+    },
+    "parameters": [
+      "0",
+      "220u",
+      "0",
+      "0",
+      "0",
+      "0.0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "C3",
+    "display_ref": "C3",
+    "ports": {
+      "1": "48",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "470u",
+      "0",
+      "0",
+      "0",
+      "0.0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "C4",
+    "display_ref": "C4",
+    "ports": {
+      "1": "48",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "10u",
+      "0",
+      "0",
+      "0",
+      "0.0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "R_BL",
+    "display_ref": "R_BL",
+    "ports": {
+      "1": "42",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "2.2k",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "U1",
+    "display_ref": "U1",
+    "ports": {
+      "1": "34",
+      "2": "12",
+      "3": "0",
+      "4": "25",
+      "5": "2",
+      "6": "37",
+      "7": "17",
+      "8": "38"
+    },
+    "parameters": [],
+    "model_id": "147275728"
+  },
+  {
+    "internal_ref": "D_BOOT",
+    "display_ref": "D_BOOT",
+    "ports": {
+      "1": "2",
+      "2": "38"
+    },
+    "parameters": [],
+    "model_id": "141725680"
+  },
+  {
+    "internal_ref": "RG_H",
+    "display_ref": "RG_H",
+    "ports": {
+      "1": "17",
+      "2": "15"
+    },
+    "parameters": [
+      "0",
+      "4.7",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "RG_L",
+    "display_ref": "RG_L",
+    "ports": {
+      "1": "25",
+      "2": "16"
+    },
+    "parameters": [
+      "0",
+      "4.7",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "R_GSH",
+    "display_ref": "R_GSH",
+    "ports": {
+      "1": "15",
+      "2": "37"
+    },
+    "parameters": [
+      "0",
+      "10k",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "R_GSL",
+    "display_ref": "R_GSL",
+    "ports": {
+      "1": "16",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "10k",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "R_IN_PD",
+    "display_ref": "R_IN_PD",
+    "ports": {
+      "1": "34",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "10k",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "R_SD_PD",
+    "display_ref": "R_SD_PD",
+    "ports": {
+      "1": "12",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "10k",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "R_PWM",
+    "display_ref": "R_PWM",
+    "ports": {
+      "1": "33",
+      "2": "34"
+    },
+    "parameters": [
+      "0",
+      "100",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "C_BOOT",
+    "display_ref": "C_BOOT",
+    "ports": {
+      "1": "38",
+      "2": "37"
+    },
+    "parameters": [
+      "0",
+      "1u",
+      "0",
+      "0",
+      "0",
+      "0.0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "C5",
+    "display_ref": "C5",
+    "ports": {
+      "1": "2",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "100n",
+      "0",
+      "0",
+      "0",
+      "0.0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "C6",
+    "display_ref": "C6",
+    "ports": {
+      "1": "2",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "10u",
+      "0",
+      "0",
+      "0",
+      "0.0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "J_AUX12",
+    "display_ref": "J_AUX12",
+    "ports": {
+      "1": "39",
+      "2": "0",
+      "3": "2",
+      "4": "0"
+    },
+    "parameters": [
+      "0",
+      "0.025",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "J_AUX5",
+    "display_ref": "J_AUX5",
+    "ports": {
+      "1": "39",
+      "2": "0",
+      "3": "5",
+      "4": "0"
+    },
+    "parameters": [
+      "0",
+      "0.025",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "U2",
+    "display_ref": "U2",
+    "ports": {
+      "1": "39",
+      "2": "0",
+      "3": "0",
+      "4": null,
+      "5": "18",
+      "6": "4",
+      "7": "0",
+      "8": "49"
+    },
+    "parameters": [],
+    "model_id": "141725168"
+  },
+  {
+    "internal_ref": "U4",
+    "display_ref": "U4",
+    "ports": {
+      "1": "48",
+      "2": "0",
+      "3": "0",
+      "4": null,
+      "5": "19",
+      "6": "4",
+      "7": "4",
+      "8": "26"
+    },
+    "parameters": [],
+    "model_id": "141725168"
+  },
+  {
+    "internal_ref": "U3",
+    "display_ref": "U3",
+    "ports": {
+      "1": "24",
+      "2": "0",
+      "3": "48",
+      "4": "42",
+      "5": "0",
+      "6": "4"
+    },
+    "parameters": [],
+    "model_id": "141725232"
+  },
+  {
+    "internal_ref": "C_U2",
+    "display_ref": "C_U2",
+    "ports": {
+      "1": "4",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "100n",
+      "0",
+      "0",
+      "0",
+      "0.0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "C_U3",
+    "display_ref": "C_U3",
+    "ports": {
+      "1": "4",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "100n",
+      "0",
+      "0",
+      "0",
+      "0.0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "C_U4",
+    "display_ref": "C_U4",
+    "ports": {
+      "1": "4",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "100n",
+      "0",
+      "0",
+      "0",
+      "0.0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "C_A2",
+    "display_ref": "C_A2",
+    "ports": {
+      "1": "4",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "100n",
+      "0",
+      "0",
+      "0",
+      "0.0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "R_VDDA",
+    "display_ref": "R_VDDA",
+    "ports": {
+      "1": "3",
+      "2": "4"
+    },
+    "parameters": [
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "C_A1",
+    "display_ref": "C_A1",
+    "ports": {
+      "1": "4",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "1u",
+      "0",
+      "0",
+      "0",
+      "0.0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "C_A3",
+    "display_ref": "C_A3",
+    "ports": {
+      "1": "4",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "10u",
+      "0",
+      "0",
+      "0",
+      "0.0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "R1",
+    "display_ref": "R1",
+    "ports": {
+      "1": "41",
+      "2": "40"
+    },
+    "parameters": [
+      "0",
+      "100k",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "R2",
+    "display_ref": "R2",
+    "ports": {
+      "1": "40",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "10k",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "R4",
+    "display_ref": "R4",
+    "ports": {
+      "1": "42",
+      "2": "43"
+    },
+    "parameters": [
+      "0",
+      "10k",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "R5",
+    "display_ref": "R5",
+    "ports": {
+      "1": "43",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "1k",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "R3",
+    "display_ref": "R3",
+    "ports": {
+      "1": "40",
+      "2": "9"
+    },
+    "parameters": [
+      "0",
+      "1k",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "R7",
+    "display_ref": "R7",
+    "ports": {
+      "1": "18",
+      "2": "6"
+    },
+    "parameters": [
+      "0",
+      "1k",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "R6",
+    "display_ref": "R6",
+    "ports": {
+      "1": "43",
+      "2": "10"
+    },
+    "parameters": [
+      "0",
+      "1k",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "R8",
+    "display_ref": "R8",
+    "ports": {
+      "1": "24",
+      "2": "8"
+    },
+    "parameters": [
+      "0",
+      "1k",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "R_IL_ADC",
+    "display_ref": "R_IL_ADC",
+    "ports": {
+      "1": "19",
+      "2": "7"
+    },
+    "parameters": [
+      "0",
+      "1k",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "C7",
+    "display_ref": "C7",
+    "ports": {
+      "1": "9",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "4.7n",
+      "0",
+      "0",
+      "0",
+      "0.0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "C9",
+    "display_ref": "C9",
+    "ports": {
+      "1": "6",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "4.7n",
+      "0",
+      "0",
+      "0",
+      "0.0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "C8",
+    "display_ref": "C8",
+    "ports": {
+      "1": "10",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "4.7n",
+      "0",
+      "0",
+      "0",
+      "0.0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "C10",
+    "display_ref": "C10",
+    "ports": {
+      "1": "8",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "4.7n",
+      "0",
+      "0",
+      "0",
+      "0.0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "C_IL_ADC",
+    "display_ref": "C_IL_ADC",
+    "ports": {
+      "1": "7",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "1n",
+      "0",
+      "0",
+      "0",
+      "0.0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "D_ADC1",
+    "display_ref": "D_ADC1",
+    "ports": {
+      "1": "0",
+      "2": "3",
+      "3": "9"
+    },
+    "parameters": [],
+    "model_id": "147275768"
+  },
+  {
+    "internal_ref": "D_ADC2",
+    "display_ref": "D_ADC2",
+    "ports": {
+      "1": "0",
+      "2": "3",
+      "3": "6"
+    },
+    "parameters": [],
+    "model_id": "147275768"
+  },
+  {
+    "internal_ref": "D_ADC3",
+    "display_ref": "D_ADC3",
+    "ports": {
+      "1": "0",
+      "2": "3",
+      "3": "10"
+    },
+    "parameters": [],
+    "model_id": "147275768"
+  },
+  {
+    "internal_ref": "D_ADC4",
+    "display_ref": "D_ADC4",
+    "ports": {
+      "1": "0",
+      "2": "3",
+      "3": "8"
+    },
+    "parameters": [],
+    "model_id": "147275768"
+  },
+  {
+    "internal_ref": "D_ADC5",
+    "display_ref": "D_ADC5",
+    "ports": {
+      "1": "0",
+      "2": "3",
+      "3": "7"
+    },
+    "parameters": [],
+    "model_id": "147275768"
+  },
+  {
+    "internal_ref": "U5",
+    "display_ref": "U5",
+    "ports": {
+      "1": "13",
+      "2": "20",
+      "3": "47",
+      "4": "0",
+      "5": "46",
+      "6": "43",
+      "7": "13",
+      "8": "5"
+    },
+    "parameters": [],
+    "model_id": "147275736"
+  },
+  {
+    "internal_ref": "U9",
+    "display_ref": "U9",
+    "ports": {
+      "1": "13",
+      "2": "45",
+      "3": "20",
+      "4": "0",
+      "5": "44",
+      "6": "23",
+      "7": "22",
+      "8": "5"
+    },
+    "parameters": [],
+    "model_id": "147275736"
+  },
+  {
+    "internal_ref": "R9",
+    "display_ref": "R9",
+    "ports": {
+      "1": "4",
+      "2": "47"
+    },
+    "parameters": [
+      "0",
+      "10k",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "R16",
+    "display_ref": "R16",
+    "ports": {
+      "1": "45",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "10k",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "R10A",
+    "display_ref": "R10A",
+    "ports": {
+      "1": "47",
+      "2": "32"
+    },
+    "parameters": [
+      "0",
+      "49.9k",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "R15A",
+    "display_ref": "R15A",
+    "ports": {
+      "1": "4",
+      "2": "28"
+    },
+    "parameters": [
+      "0",
+      "49.9k",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "R10B",
+    "display_ref": "R10B",
+    "ports": {
+      "1": "32",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "100",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "R15B",
+    "display_ref": "R15B",
+    "ports": {
+      "1": "28",
+      "2": "45"
+    },
+    "parameters": [
+      "0",
+      "100",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "R11",
+    "display_ref": "R11",
+    "ports": {
+      "1": "4",
+      "2": "46"
+    },
+    "parameters": [
+      "0",
+      "23k",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "R12",
+    "display_ref": "R12",
+    "ports": {
+      "1": "46",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "10k",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "R13",
+    "display_ref": "R13",
+    "ports": {
+      "1": "3",
+      "2": "13"
+    },
+    "parameters": [
+      "0",
+      "10k",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "C_REF_POS",
+    "display_ref": "C_REF_POS",
+    "ports": {
+      "1": "47",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "100n",
+      "0",
+      "0",
+      "0",
+      "0.0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "C_REF_NEG",
+    "display_ref": "C_REF_NEG",
+    "ports": {
+      "1": "45",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "100n",
+      "0",
+      "0",
+      "0",
+      "0.0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "C_REF_OV",
+    "display_ref": "C_REF_OV",
+    "ports": {
+      "1": "46",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "100n",
+      "0",
+      "0",
+      "0",
+      "0.0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "C_U5",
+    "display_ref": "C_U5",
+    "ports": {
+      "1": "5",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "100n",
+      "0",
+      "0",
+      "0",
+      "0.0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "C_U9",
+    "display_ref": "C_U9",
+    "ports": {
+      "1": "5",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "100n",
+      "0",
+      "0",
+      "0",
+      "0.0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "U6",
+    "display_ref": "U6",
+    "ports": {
+      "1": "13",
+      "2": "3",
+      "3": "11",
+      "4": "3",
+      "5": "35",
+      "6": null,
+      "7": "0",
+      "8": null,
+      "9": null,
+      "10": "3",
+      "11": "0",
+      "12": "0",
+      "13": "3",
+      "14": "3"
+    },
+    "parameters": [],
+    "model_id": "147275760"
+  },
+  {
+    "internal_ref": "U7",
+    "display_ref": "U7",
+    "ports": {
+      "1": "35",
+      "2": "27",
+      "3": "12",
+      "4": "0",
+      "5": "0",
+      "6": null,
+      "7": "0",
+      "8": null,
+      "9": "0",
+      "10": "0",
+      "11": null,
+      "12": "0",
+      "13": "0",
+      "14": "3"
+    },
+    "parameters": [],
+    "model_id": "147275744"
+  },
+  {
+    "internal_ref": "U8",
+    "display_ref": "U8",
+    "ports": {
+      "1": "31",
+      "2": "29",
+      "3": "29",
+      "4": "30",
+      "5": "0",
+      "6": null,
+      "7": "0",
+      "8": null,
+      "9": "0",
+      "10": null,
+      "11": "0",
+      "12": null,
+      "13": "0",
+      "14": "3"
+    },
+    "parameters": [],
+    "model_id": "147275752"
+  },
+  {
+    "internal_ref": "R14",
+    "display_ref": "R14",
+    "ports": {
+      "1": "3",
+      "2": "31"
+    },
+    "parameters": [
+      "0",
+      "10k",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "R_EN_PD",
+    "display_ref": "R_EN_PD",
+    "ports": {
+      "1": "27",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "10k",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "R_ARM_PD",
+    "display_ref": "R_ARM_PD",
+    "ports": {
+      "1": "11",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "10k",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "C11",
+    "display_ref": "C11",
+    "ports": {
+      "1": "31",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "100n",
+      "0",
+      "0",
+      "0",
+      "0.0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "C_U6",
+    "display_ref": "C_U6",
+    "ports": {
+      "1": "3",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "100n",
+      "0",
+      "0",
+      "0",
+      "0.0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "C_U7",
+    "display_ref": "C_U7",
+    "ports": {
+      "1": "3",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "100n",
+      "0",
+      "0",
+      "0",
+      "0.0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "C_U8",
+    "display_ref": "C_U8",
+    "ports": {
+      "1": "3",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "100n",
+      "0",
+      "0",
+      "0",
+      "0.0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "D_POR",
+    "display_ref": "D_POR",
+    "ports": {
+      "1": "13",
+      "2": null,
+      "3": "30"
+    },
+    "parameters": [],
+    "model_id": "147275776"
+  },
+  {
+    "internal_ref": "J_CTL",
+    "display_ref": "J_CTL",
+    "ports": {
+      "1": "0",
+      "2": "5",
+      "3": "0",
+      "4": "3",
+      "5": "33",
+      "6": "22",
+      "7": "27",
+      "8": "11",
+      "9": "13",
+      "10": "0",
+      "11": "9",
+      "12": "6",
+      "13": "10",
+      "14": "8",
+      "15": "7",
+      "16": "0"
+    },
+    "parameters": [
+      "0",
+      "0.025",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "TP1",
+    "display_ref": "TP1",
+    "ports": {
+      "1": "41"
+    },
+    "parameters": [
+      "0",
+      "0.025",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "TP2",
+    "display_ref": "TP2",
+    "ports": {
+      "1": "39"
+    },
+    "parameters": [
+      "0",
+      "0.025",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "TP3",
+    "display_ref": "TP3",
+    "ports": {
+      "1": "37"
+    },
+    "parameters": [
+      "0",
+      "0.025",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "TP4",
+    "display_ref": "TP4",
+    "ports": {
+      "1": "42"
+    },
+    "parameters": [
+      "0",
+      "0.025",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "TP5",
+    "display_ref": "TP5",
+    "ports": {
+      "1": "0"
+    },
+    "parameters": [
+      "0",
+      "0.025",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "TP6",
+    "display_ref": "TP6",
+    "ports": {
+      "1": "15"
+    },
+    "parameters": [
+      "0",
+      "0.025",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "TP7",
+    "display_ref": "TP7",
+    "ports": {
+      "1": "16"
+    },
+    "parameters": [
+      "0",
+      "0.025",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "TP8",
+    "display_ref": "TP8",
+    "ports": {
+      "1": "19"
+    },
+    "parameters": [
+      "0",
+      "0.025",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "TP9",
+    "display_ref": "TP9",
+    "ports": {
+      "1": "13"
+    },
+    "parameters": [
+      "0",
+      "0.025",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "TP10",
+    "display_ref": "TP10",
+    "ports": {
+      "1": "4"
+    },
+    "parameters": [
+      "0",
+      "0.025",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "R_PRE",
+    "display_ref": "R_PRE",
+    "ports": {
+      "1": "14",
+      "2": "21"
+    },
+    "parameters": [
+      "0",
+      "22",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "J_BYP",
+    "display_ref": "J_BYP",
+    "ports": {
+      "1": "14",
+      "2": "21"
+    },
+    "parameters": [
+      "0",
+      "0.025",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "D_FREE",
+    "display_ref": "D_FREE",
+    "ports": {
+      "1": "37",
+      "2": "0"
+    },
+    "parameters": [],
+    "model_id": "147275784"
+  },
+  {
+    "internal_ref": "R_SN",
+    "display_ref": "R_SN",
+    "ports": {
+      "1": "37",
+      "2": "36"
+    },
+    "parameters": [
+      "0",
+      "10",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "C_SN",
+    "display_ref": "C_SN",
+    "ports": {
+      "1": "36",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "1n",
+      "0",
+      "0",
+      "0",
+      "0.0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "R_IL_PROT",
+    "display_ref": "R_IL_PROT",
+    "ports": {
+      "1": "19",
+      "2": "20"
+    },
+    "parameters": [
+      "0",
+      "1k",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "C_IL_PROT",
+    "display_ref": "C_IL_PROT",
+    "ports": {
+      "1": "20",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "1n",
+      "0",
+      "0",
+      "0",
+      "0.0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "R_IOUT_PROT",
+    "display_ref": "R_IOUT_PROT",
+    "ports": {
+      "1": "24",
+      "2": "23"
+    },
+    "parameters": [
+      "0",
+      "1k",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "C_IOUT_PROT",
+    "display_ref": "C_IOUT_PROT",
+    "ports": {
+      "1": "23",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "1n",
+      "0",
+      "0",
+      "0",
+      "0.0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "R_IOUT_TOP",
+    "display_ref": "R_IOUT_TOP",
+    "ports": {
+      "1": "4",
+      "2": "44"
+    },
+    "parameters": [
+      "0",
+      "20k",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "R_IOUT_BOT",
+    "display_ref": "R_IOUT_BOT",
+    "ports": {
+      "1": "44",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "10k",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "C_REF_IOUT",
+    "display_ref": "C_REF_IOUT",
+    "ports": {
+      "1": "44",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "100n",
+      "0",
+      "0",
+      "0",
+      "0.0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "R_IOUT_PU",
+    "display_ref": "R_IOUT_PU",
+    "ports": {
+      "1": "3",
+      "2": "22"
+    },
+    "parameters": [
+      "0",
+      "10k",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "C_DRV",
+    "display_ref": "C_DRV",
+    "ports": {
+      "1": "2",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "1u",
+      "0",
+      "0",
+      "0",
+      "0.0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "TP11",
+    "display_ref": "TP11",
+    "ports": {
+      "1": "24"
+    },
+    "parameters": [
+      "0",
+      "0.025",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "TP12",
+    "display_ref": "TP12",
+    "ports": {
+      "1": "20"
+    },
+    "parameters": [
+      "0",
+      "0.025",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "TP13",
+    "display_ref": "TP13",
+    "ports": {
+      "1": "44"
+    },
+    "parameters": [
+      "0",
+      "0.025",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "V_IN",
+    "display_ref": "V_IN",
+    "ports": {
+      "1": "41",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "25",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "V_AUX12",
+    "display_ref": "V_AUX12",
+    "ports": {
+      "1": "2",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "12",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "V_AUX5",
+    "display_ref": "V_AUX5",
+    "ports": {
+      "1": "5",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "5",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "V_CORE3V3",
+    "display_ref": "V_CORE3V3",
+    "ports": {
+      "1": "3",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "3.3",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "RL",
+    "display_ref": "RL",
+    "ports": {
+      "1": "42",
+      "2": "0"
+    },
+    "parameters": [
+      "0",
+      "5",
+      "0",
+      "0",
+      "0",
+      "27",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "27"
+    ],
+    "model_id": null
+  },
+  {
+    "internal_ref": "SIM_MCU",
+    "display_ref": "SIM_MCU",
+    "ports": {
+      "1": "33",
+      "2": "0",
+      "3": "9",
+      "4": "10",
+      "5": "7",
+      "6": "8",
+      "7": "22",
+      "8": "12",
+      "9": "27",
+      "10": "11",
+      "11": "13",
+      "12": "4"
+    },
+    "parameters": [],
+    "model_id": "147275792"
+  }
+]

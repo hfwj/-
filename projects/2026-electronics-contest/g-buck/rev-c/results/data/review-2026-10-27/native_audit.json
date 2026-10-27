@@ -1,0 +1,1465 @@
+{
+  "date_beijing": "2026-10-27",
+  "status": "PASS_SCOPED_STATIC_CHECKS_WITH_OPEN_REVIEW_ITEMS",
+  "source_native": "schematic/native/G题同步Buck_RevC_原理图修订.eprj2",
+  "source_sha256": "86e746b2c4576c6b7cd7b5fb4afde7cffae11af4668fc1a828ea7fdb5a7070e0",
+  "bom_sha256": "48cd4dc688033c4d8812d9829c863afa931ef3d2e7deecfb691c10085fb1dd37",
+  "sqlite_integrity": "ok",
+  "replayed_native_ticket": 233928,
+  "pages": 8,
+  "parts": 113,
+  "connected_pins": 296,
+  "net_count": 49,
+  "unwired_pins": [
+    "U2.4",
+    "U4.4",
+    "U6.6",
+    "U6.8",
+    "U6.9",
+    "U7.6",
+    "U7.8",
+    "U7.11",
+    "U8.6",
+    "U8.8",
+    "U8.10",
+    "U8.12",
+    "D_POR.2"
+  ],
+  "critical_pin_checks": {
+    "QH.1": {
+      "expected": "G_H",
+      "actual": "G_H",
+      "pass": true
+    },
+    "QH.2": {
+      "expected": "VIN",
+      "actual": "VIN",
+      "pass": true
+    },
+    "QH.3": {
+      "expected": "SW",
+      "actual": "SW",
+      "pass": true
+    },
+    "QL.1": {
+      "expected": "G_L",
+      "actual": "G_L",
+      "pass": true
+    },
+    "QL.2": {
+      "expected": "SW",
+      "actual": "SW",
+      "pass": true
+    },
+    "QL.3": {
+      "expected": "GND",
+      "actual": "GND",
+      "pass": true
+    },
+    "U1.1": {
+      "expected": "PWM_IN",
+      "actual": "PWM_IN",
+      "pass": true
+    },
+    "U1.2": {
+      "expected": "DRV_EN",
+      "actual": "DRV_EN",
+      "pass": true
+    },
+    "U1.3": {
+      "expected": "GND",
+      "actual": "GND",
+      "pass": true
+    },
+    "U1.4": {
+      "expected": "LO",
+      "actual": "LO",
+      "pass": true
+    },
+    "U1.5": {
+      "expected": "+12V_DRV",
+      "actual": "+12V_DRV",
+      "pass": true
+    },
+    "U1.6": {
+      "expected": "SW",
+      "actual": "SW",
+      "pass": true
+    },
+    "U1.7": {
+      "expected": "HO",
+      "actual": "HO",
+      "pass": true
+    },
+    "U1.8": {
+      "expected": "VB",
+      "actual": "VB",
+      "pass": true
+    },
+    "D1.1": {
+      "expected": "V_SHUNT_IN",
+      "actual": "V_SHUNT_IN",
+      "pass": true
+    },
+    "D1.2": {
+      "expected": "IN_PRE",
+      "actual": "IN_PRE",
+      "pass": true
+    },
+    "D_FREE.1": {
+      "expected": "SW",
+      "actual": "SW",
+      "pass": true
+    },
+    "D_FREE.2": {
+      "expected": "GND",
+      "actual": "GND",
+      "pass": true
+    },
+    "U9.1": {
+      "expected": "FAULT_N",
+      "actual": "FAULT_N",
+      "pass": true
+    },
+    "U9.2": {
+      "expected": "VREF_NEG",
+      "actual": "VREF_NEG",
+      "pass": true
+    },
+    "U9.3": {
+      "expected": "IL_PROT",
+      "actual": "IL_PROT",
+      "pass": true
+    },
+    "U9.4": {
+      "expected": "GND",
+      "actual": "GND",
+      "pass": true
+    },
+    "U9.5": {
+      "expected": "VREF_IOUT",
+      "actual": "VREF_IOUT",
+      "pass": true
+    },
+    "U9.6": {
+      "expected": "IOUT_PROT",
+      "actual": "IOUT_PROT",
+      "pass": true
+    },
+    "U9.7": {
+      "expected": "IOUT_OC_N",
+      "actual": "IOUT_OC_N",
+      "pass": true
+    },
+    "U9.8": {
+      "expected": "+5V",
+      "actual": "+5V",
+      "pass": true
+    },
+    "U5.2": {
+      "expected": "IL_PROT",
+      "actual": "IL_PROT",
+      "pass": true
+    },
+    "J_CTL.6": {
+      "expected": "IOUT_OC_N",
+      "actual": "IOUT_OC_N",
+      "pass": true
+    },
+    "J_CTL.11": {
+      "expected": "ADC_VIN",
+      "actual": "ADC_VIN",
+      "pass": true
+    },
+    "R1.1": {
+      "expected": "VIN_EXT",
+      "actual": "VIN_EXT",
+      "pass": true
+    },
+    "R1.2": {
+      "expected": "VIN_DIV",
+      "actual": "VIN_DIV",
+      "pass": true
+    },
+    "R2.1": {
+      "expected": "VIN_DIV",
+      "actual": "VIN_DIV",
+      "pass": true
+    },
+    "R2.2": {
+      "expected": "GND",
+      "actual": "GND",
+      "pass": true
+    },
+    "F1.1": {
+      "expected": "VIN_EXT",
+      "actual": "VIN_EXT",
+      "pass": true
+    },
+    "F1.2": {
+      "expected": "FUSED",
+      "actual": "FUSED",
+      "pass": true
+    },
+    "R_PRE.1": {
+      "expected": "FUSED",
+      "actual": "FUSED",
+      "pass": true
+    },
+    "R_PRE.2": {
+      "expected": "IN_PRE",
+      "actual": "IN_PRE",
+      "pass": true
+    },
+    "J_BYP.1": {
+      "expected": "FUSED",
+      "actual": "FUSED",
+      "pass": true
+    },
+    "J_BYP.2": {
+      "expected": "IN_PRE",
+      "actual": "IN_PRE",
+      "pass": true
+    },
+    "D_BOOT.1": {
+      "expected": "+12V_DRV",
+      "actual": "+12V_DRV",
+      "pass": true
+    },
+    "D_BOOT.2": {
+      "expected": "VB",
+      "actual": "VB",
+      "pass": true
+    },
+    "C_BOOT.1": {
+      "expected": "VB",
+      "actual": "VB",
+      "pass": true
+    },
+    "C_BOOT.2": {
+      "expected": "SW",
+      "actual": "SW",
+      "pass": true
+    },
+    "R_SD_PD.1": {
+      "expected": "DRV_EN",
+      "actual": "DRV_EN",
+      "pass": true
+    },
+    "R_SD_PD.2": {
+      "expected": "GND",
+      "actual": "GND",
+      "pass": true
+    },
+    "R_IL_PROT.1": {
+      "expected": "IL_BI",
+      "actual": "IL_BI",
+      "pass": true
+    },
+    "R_IL_PROT.2": {
+      "expected": "IL_PROT",
+      "actual": "IL_PROT",
+      "pass": true
+    },
+    "C_IL_PROT.1": {
+      "expected": "IL_PROT",
+      "actual": "IL_PROT",
+      "pass": true
+    },
+    "C_IL_PROT.2": {
+      "expected": "GND",
+      "actual": "GND",
+      "pass": true
+    },
+    "R_IOUT_PROT.1": {
+      "expected": "IOUT_RAW",
+      "actual": "IOUT_RAW",
+      "pass": true
+    },
+    "R_IOUT_PROT.2": {
+      "expected": "IOUT_PROT",
+      "actual": "IOUT_PROT",
+      "pass": true
+    },
+    "C_IOUT_PROT.1": {
+      "expected": "IOUT_PROT",
+      "actual": "IOUT_PROT",
+      "pass": true
+    },
+    "C_IOUT_PROT.2": {
+      "expected": "GND",
+      "actual": "GND",
+      "pass": true
+    },
+    "R_IOUT_TOP.1": {
+      "expected": "+3V3_A",
+      "actual": "+3V3_A",
+      "pass": true
+    },
+    "R_IOUT_TOP.2": {
+      "expected": "VREF_IOUT",
+      "actual": "VREF_IOUT",
+      "pass": true
+    },
+    "R_IOUT_BOT.1": {
+      "expected": "VREF_IOUT",
+      "actual": "VREF_IOUT",
+      "pass": true
+    },
+    "R_IOUT_BOT.2": {
+      "expected": "GND",
+      "actual": "GND",
+      "pass": true
+    },
+    "R_IOUT_PU.1": {
+      "expected": "+3V3",
+      "actual": "+3V3",
+      "pass": true
+    },
+    "R_IOUT_PU.2": {
+      "expected": "IOUT_OC_N",
+      "actual": "IOUT_OC_N",
+      "pass": true
+    },
+    "R9.1": {
+      "expected": "+3V3_A",
+      "actual": "+3V3_A",
+      "pass": true
+    },
+    "R9.2": {
+      "expected": "VREF_POS",
+      "actual": "VREF_POS",
+      "pass": true
+    },
+    "R10A.1": {
+      "expected": "VREF_POS",
+      "actual": "VREF_POS",
+      "pass": true
+    },
+    "R10A.2": {
+      "expected": "POS_MID",
+      "actual": "POS_MID",
+      "pass": true
+    },
+    "R10B.1": {
+      "expected": "POS_MID",
+      "actual": "POS_MID",
+      "pass": true
+    },
+    "R10B.2": {
+      "expected": "GND",
+      "actual": "GND",
+      "pass": true
+    },
+    "R15A.1": {
+      "expected": "+3V3_A",
+      "actual": "+3V3_A",
+      "pass": true
+    },
+    "R15A.2": {
+      "expected": "NEG_MID",
+      "actual": "NEG_MID",
+      "pass": true
+    },
+    "R15B.1": {
+      "expected": "NEG_MID",
+      "actual": "NEG_MID",
+      "pass": true
+    },
+    "R15B.2": {
+      "expected": "VREF_NEG",
+      "actual": "VREF_NEG",
+      "pass": true
+    },
+    "R16.1": {
+      "expected": "VREF_NEG",
+      "actual": "VREF_NEG",
+      "pass": true
+    },
+    "R16.2": {
+      "expected": "GND",
+      "actual": "GND",
+      "pass": true
+    },
+    "U4.1": {
+      "expected": "V_CAP",
+      "actual": "V_CAP",
+      "pass": true
+    },
+    "U4.3": {
+      "expected": "GND",
+      "actual": "GND",
+      "pass": true
+    },
+    "U4.5": {
+      "expected": "IL_BI",
+      "actual": "IL_BI",
+      "pass": true
+    },
+    "U4.6": {
+      "expected": "+3V3_A",
+      "actual": "+3V3_A",
+      "pass": true
+    },
+    "U4.7": {
+      "expected": "+3V3_A",
+      "actual": "+3V3_A",
+      "pass": true
+    },
+    "U4.8": {
+      "expected": "L_RAW",
+      "actual": "L_RAW",
+      "pass": true
+    },
+    "U3.1": {
+      "expected": "IOUT_RAW",
+      "actual": "IOUT_RAW",
+      "pass": true
+    },
+    "U3.3": {
+      "expected": "V_CAP",
+      "actual": "V_CAP",
+      "pass": true
+    },
+    "U3.4": {
+      "expected": "VOUT",
+      "actual": "VOUT",
+      "pass": true
+    },
+    "U3.5": {
+      "expected": "GND",
+      "actual": "GND",
+      "pass": true
+    },
+    "U3.6": {
+      "expected": "+3V3_A",
+      "actual": "+3V3_A",
+      "pass": true
+    },
+    "R_IL_ADC.1": {
+      "expected": "IL_BI",
+      "actual": "IL_BI",
+      "pass": true
+    },
+    "R_IL_ADC.2": {
+      "expected": "ADC_IL",
+      "actual": "ADC_IL",
+      "pass": true
+    },
+    "C_IL_ADC.1": {
+      "expected": "ADC_IL",
+      "actual": "ADC_IL",
+      "pass": true
+    },
+    "C_IL_ADC.2": {
+      "expected": "GND",
+      "actual": "GND",
+      "pass": true
+    },
+    "R_VDDA.1": {
+      "expected": "+3V3",
+      "actual": "+3V3",
+      "pass": true
+    },
+    "R_VDDA.2": {
+      "expected": "+3V3_A",
+      "actual": "+3V3_A",
+      "pass": true
+    },
+    "R_SN.1": {
+      "expected": "SW",
+      "actual": "SW",
+      "pass": true
+    },
+    "R_SN.2": {
+      "expected": "SN_MID",
+      "actual": "SN_MID",
+      "pass": true
+    },
+    "C_SN.1": {
+      "expected": "SN_MID",
+      "actual": "SN_MID",
+      "pass": true
+    },
+    "C_SN.2": {
+      "expected": "GND",
+      "actual": "GND",
+      "pass": true
+    },
+    "TP11.1": {
+      "expected": "IOUT_RAW",
+      "actual": "IOUT_RAW",
+      "pass": true
+    },
+    "TP12.1": {
+      "expected": "IL_PROT",
+      "actual": "IL_PROT",
+      "pass": true
+    },
+    "TP13.1": {
+      "expected": "VREF_IOUT",
+      "actual": "VREF_IOUT",
+      "pass": true
+    }
+  },
+  "bom_mismatches": {},
+  "mos_library": {
+    "QH": {
+      "pad_numbers": [
+        "1",
+        "2",
+        "3"
+      ],
+      "device_symbol_matches": true,
+      "device_footprint_matches": true
+    },
+    "QL": {
+      "pad_numbers": [
+        "1",
+        "2",
+        "3"
+      ],
+      "device_symbol_matches": true,
+      "device_footprint_matches": true
+    }
+  },
+  "parts_inventory": {
+    "J1": {
+      "value": "2P POWER",
+      "symbol": "37c94643e5153790",
+      "device": "43dc5bdf69544200",
+      "footprint": "2707b944d7a5ef59",
+      "page_uuid": "f9201e2d6e8b4514",
+      "component_id": "4187235ac2f944c9"
+    },
+    "J2": {
+      "value": "2P POWER",
+      "symbol": "37c94643e5153790",
+      "device": "e66110fa706b4eac",
+      "footprint": "2707b944d7a5ef59",
+      "page_uuid": "f9201e2d6e8b4514",
+      "component_id": "c444938c712c4392"
+    },
+    "F1": {
+      "value": "2A / 5x20",
+      "symbol": "117b1fc664903a3a",
+      "device": "e4ab7851f07b4a4f",
+      "footprint": "2246b7fa9b75ad44",
+      "page_uuid": "f9201e2d6e8b4514",
+      "component_id": "20049ddff7d0470b"
+    },
+    "D1": {
+      "value": "SS56",
+      "symbol": "71a61facf90193b3",
+      "device": "1c096a03e3ca42e9",
+      "footprint": "e8b11adad9c797c6",
+      "page_uuid": "f9201e2d6e8b4514",
+      "component_id": "db9bb847d1fc458e"
+    },
+    "RS_IN": {
+      "value": "50mΩ / 1% / >=1W",
+      "symbol": "ce393d26e394ef96",
+      "device": "88d59d566a034045",
+      "footprint": "0420b12090133ef7",
+      "page_uuid": "f9201e2d6e8b4514",
+      "component_id": "30d6b3ec36684742"
+    },
+    "RS_OUT": {
+      "value": "50mΩ / 1% / >=1W",
+      "symbol": "ce393d26e394ef96",
+      "device": "09eb3902c87f481a",
+      "footprint": "0420b12090133ef7",
+      "page_uuid": "f9201e2d6e8b4514",
+      "component_id": "a628f44be7c847df"
+    },
+    "RS_L": {
+      "value": "25mΩ / 1% / >=1W",
+      "symbol": "ce393d26e394ef96",
+      "device": "8f149fb610fa4538",
+      "footprint": "0420b12090133ef7",
+      "page_uuid": "f9201e2d6e8b4514",
+      "component_id": "c6af1606a7ac473c"
+    },
+    "C1": {
+      "value": "470uF / 50V",
+      "symbol": "1a64c78e4d1e6db5",
+      "device": "f53e1bda0b45401e",
+      "footprint": "1c1a8099b0c9653c",
+      "page_uuid": "f9201e2d6e8b4514",
+      "component_id": "cc124e744ffd4456"
+    },
+    "C2": {
+      "value": "1uF / 50V",
+      "symbol": "f53db33b2e4bffdd",
+      "device": "ca3f9bdfad2f4255",
+      "footprint": "7a326d70c735e6b8",
+      "page_uuid": "f9201e2d6e8b4514",
+      "component_id": "1d5e1b5eef8b426f"
+    },
+    "QH": {
+      "value": "IRF540N",
+      "symbol": "ed18f60f5f0fef2f",
+      "device": "7dbe01b6152f487a",
+      "footprint": "6494653797ae61c7",
+      "page_uuid": "f9201e2d6e8b4514",
+      "component_id": "c4b6c0df7ade4062"
+    },
+    "QL": {
+      "value": "IRF540N",
+      "symbol": "ed18f60f5f0fef2f",
+      "device": "f1e8e980b46f45e1",
+      "footprint": "6494653797ae61c7",
+      "page_uuid": "f9201e2d6e8b4514",
+      "component_id": "0f0289ebfdc24a0f"
+    },
+    "L1": {
+      "value": "220uH / Isat>=3A",
+      "symbol": "45b67e8b217bd2ac",
+      "device": "733de713555a4f3f",
+      "footprint": "f505f9d2a3007850",
+      "page_uuid": "f9201e2d6e8b4514",
+      "component_id": "3b371163aeb24ee0"
+    },
+    "C3": {
+      "value": "470uF / 35V",
+      "symbol": "1a64c78e4d1e6db5",
+      "device": "0f6e19aa32d349c2",
+      "footprint": "1c1a8099b0c9653c",
+      "page_uuid": "f9201e2d6e8b4514",
+      "component_id": "452d2fda69a9466c"
+    },
+    "C4": {
+      "value": "10uF / 35V",
+      "symbol": "f53db33b2e4bffdd",
+      "device": "d9f06cd5c0234d12",
+      "footprint": "7a326d70c735e6b8",
+      "page_uuid": "f9201e2d6e8b4514",
+      "component_id": "0fec69d9078f482c"
+    },
+    "R_BL": {
+      "value": "2.2kΩ / 0.25W",
+      "symbol": "ce393d26e394ef96",
+      "device": "53f153df50a947da",
+      "footprint": "c3e4bd61c0344a36",
+      "page_uuid": "f9201e2d6e8b4514",
+      "component_id": "a3c94e60bcfb4f2e"
+    },
+    "U1": {
+      "value": "IR2184PbF",
+      "symbol": "09032fa78f1341b5",
+      "device": "24a0cbbb6c76430f",
+      "footprint": "54064a6dc3cad791",
+      "page_uuid": "3e6ec376e5634383",
+      "component_id": "fa5a8c4d277846b1"
+    },
+    "D_BOOT": {
+      "value": "UF4007",
+      "symbol": "d2eb11e8badeca7f",
+      "device": "d4dbb73371fb4f93",
+      "footprint": "bbabf60b4d84cf4f",
+      "page_uuid": "3e6ec376e5634383",
+      "component_id": "af3fb66868e14e7e"
+    },
+    "RG_H": {
+      "value": "4.7Ω",
+      "symbol": "ce393d26e394ef96",
+      "device": "1e5b025134e74ab2",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "3e6ec376e5634383",
+      "component_id": "d41cbcadca2e4bac"
+    },
+    "RG_L": {
+      "value": "4.7Ω",
+      "symbol": "ce393d26e394ef96",
+      "device": "ad2ca59733ab4758",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "3e6ec376e5634383",
+      "component_id": "fbbc09adc25942f6"
+    },
+    "R_GSH": {
+      "value": "10kΩ",
+      "symbol": "ce393d26e394ef96",
+      "device": "0acef061699c40d1",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "3e6ec376e5634383",
+      "component_id": "fbb2c9f44ebd409c"
+    },
+    "R_GSL": {
+      "value": "10kΩ",
+      "symbol": "ce393d26e394ef96",
+      "device": "a3f508d254304064",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "3e6ec376e5634383",
+      "component_id": "d716cab5e4cf4c77"
+    },
+    "R_IN_PD": {
+      "value": "10kΩ",
+      "symbol": "ce393d26e394ef96",
+      "device": "3abaa7e1514540cd",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "3e6ec376e5634383",
+      "component_id": "7ca6a4bc93044cd8"
+    },
+    "R_SD_PD": {
+      "value": "10kΩ",
+      "symbol": "ce393d26e394ef96",
+      "device": "19a7df4786024d08",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "3e6ec376e5634383",
+      "component_id": "23142db4309c44c9"
+    },
+    "R_PWM": {
+      "value": "100Ω",
+      "symbol": "ce393d26e394ef96",
+      "device": "013b8f5bcd774c64",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "3e6ec376e5634383",
+      "component_id": "cae4a7c1d49346f7"
+    },
+    "C_BOOT": {
+      "value": "1uF / 25V",
+      "symbol": "f53db33b2e4bffdd",
+      "device": "1c94be61d63d4957",
+      "footprint": "11d6ba57a7a95d6b",
+      "page_uuid": "3e6ec376e5634383",
+      "component_id": "9a4cfc3a6a6a4ce7"
+    },
+    "C5": {
+      "value": "100nF",
+      "symbol": "f53db33b2e4bffdd",
+      "device": "5d4d5fcb9c374ed0",
+      "footprint": "11d6ba57a7a95d6b",
+      "page_uuid": "3e6ec376e5634383",
+      "component_id": "43e5e359764544d5"
+    },
+    "C6": {
+      "value": "10uF / 25V",
+      "symbol": "f53db33b2e4bffdd",
+      "device": "c45f957bb4de48a6",
+      "footprint": "7a326d70c735e6b8",
+      "page_uuid": "3e6ec376e5634383",
+      "component_id": "db7feffb08254979"
+    },
+    "J_AUX12": {
+      "value": "VIN→12V >=0.2A",
+      "symbol": "a4dd0459b235b863",
+      "device": "5b7122435ea34c14",
+      "footprint": "3709e370e3451a25",
+      "page_uuid": "3e6ec376e5634383",
+      "component_id": "5492a52b81234544"
+    },
+    "J_AUX5": {
+      "value": "VIN→5V >=0.5A",
+      "symbol": "a4dd0459b235b863",
+      "device": "98d1957aa05c4759",
+      "footprint": "3709e370e3451a25",
+      "page_uuid": "3e6ec376e5634383",
+      "component_id": "5e00c00bc37f4bc6"
+    },
+    "U2": {
+      "value": "INA240A1D",
+      "symbol": "10c27a8c738d59fd",
+      "device": "a7239645bade4777",
+      "footprint": "57290d1967242f2a",
+      "page_uuid": "fe11a74f33b846e4",
+      "component_id": "7ca7150d83684976"
+    },
+    "U4": {
+      "value": "INA240A1D",
+      "symbol": "10c27a8c738d59fd",
+      "device": "53961fd1951d426a",
+      "footprint": "57290d1967242f2a",
+      "page_uuid": "fe11a74f33b846e4",
+      "component_id": "9c3ba794f1364f84"
+    },
+    "U3": {
+      "value": "INA181A1DBV",
+      "symbol": "c0f1a8654416570f",
+      "device": "72854335e0034793",
+      "footprint": "ac7d14dad1f62bdb",
+      "page_uuid": "fe11a74f33b846e4",
+      "component_id": "e74cbc312bd34a87"
+    },
+    "C_U2": {
+      "value": "100nF",
+      "symbol": "f53db33b2e4bffdd",
+      "device": "29ff3c26d9c04e59",
+      "footprint": "11d6ba57a7a95d6b",
+      "page_uuid": "fe11a74f33b846e4",
+      "component_id": "bfdf516d4c884cd7"
+    },
+    "C_U3": {
+      "value": "100nF",
+      "symbol": "f53db33b2e4bffdd",
+      "device": "af4a6c942f474961",
+      "footprint": "11d6ba57a7a95d6b",
+      "page_uuid": "fe11a74f33b846e4",
+      "component_id": "d10de2927e18477a"
+    },
+    "C_U4": {
+      "value": "100nF",
+      "symbol": "f53db33b2e4bffdd",
+      "device": "dde59df143a447e8",
+      "footprint": "11d6ba57a7a95d6b",
+      "page_uuid": "fe11a74f33b846e4",
+      "component_id": "0679460d407541e0"
+    },
+    "C_A2": {
+      "value": "100nF",
+      "symbol": "f53db33b2e4bffdd",
+      "device": "91238234575547c6",
+      "footprint": "11d6ba57a7a95d6b",
+      "page_uuid": "fe11a74f33b846e4",
+      "component_id": "50dfdbc36f394d78"
+    },
+    "R_VDDA": {
+      "value": "1Ω",
+      "symbol": "ce393d26e394ef96",
+      "device": "fae3eb19b3724f48",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "fe11a74f33b846e4",
+      "component_id": "9b1ec27b98bd44cf"
+    },
+    "C_A1": {
+      "value": "1uF",
+      "symbol": "f53db33b2e4bffdd",
+      "device": "b436bec944a84c03",
+      "footprint": "11d6ba57a7a95d6b",
+      "page_uuid": "fe11a74f33b846e4",
+      "component_id": "b32308ef6c984019"
+    },
+    "C_A3": {
+      "value": "10uF / 25V",
+      "symbol": "f53db33b2e4bffdd",
+      "device": "d0a4015aebe549ce",
+      "footprint": "7a326d70c735e6b8",
+      "page_uuid": "fe11a74f33b846e4",
+      "component_id": "daddd60e43994e8e"
+    },
+    "R1": {
+      "value": "100kΩ / 0.1%",
+      "symbol": "ce393d26e394ef96",
+      "device": "7b302f75622d49a1",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "99c29beebf8d4e80",
+      "component_id": "7495401444d9431d"
+    },
+    "R2": {
+      "value": "10kΩ / 0.1%",
+      "symbol": "ce393d26e394ef96",
+      "device": "271cd6a5a7cd4a25",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "99c29beebf8d4e80",
+      "component_id": "61449d946d15492f"
+    },
+    "R4": {
+      "value": "10kΩ / 0.1%",
+      "symbol": "ce393d26e394ef96",
+      "device": "b1a1fe4e80ae46d5",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "99c29beebf8d4e80",
+      "component_id": "bdf658ed564f44cb"
+    },
+    "R5": {
+      "value": "1kΩ / 0.1%",
+      "symbol": "ce393d26e394ef96",
+      "device": "5a151f70470d45aa",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "99c29beebf8d4e80",
+      "component_id": "2597c7bf71cb4fbc"
+    },
+    "R3": {
+      "value": "1kΩ",
+      "symbol": "ce393d26e394ef96",
+      "device": "86cb44d406724732",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "99c29beebf8d4e80",
+      "component_id": "c903fed2d7244437"
+    },
+    "R7": {
+      "value": "1kΩ",
+      "symbol": "ce393d26e394ef96",
+      "device": "b58277a01acf4cdf",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "99c29beebf8d4e80",
+      "component_id": "17d70e39dd27450c"
+    },
+    "R6": {
+      "value": "1kΩ",
+      "symbol": "ce393d26e394ef96",
+      "device": "74ce03dfbf164b7b",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "99c29beebf8d4e80",
+      "component_id": "d4e4b76014e641e9"
+    },
+    "R8": {
+      "value": "1kΩ",
+      "symbol": "ce393d26e394ef96",
+      "device": "b19ff78e23ba416a",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "99c29beebf8d4e80",
+      "component_id": "b37f3a7320f74394"
+    },
+    "R_IL_ADC": {
+      "value": "1kΩ",
+      "symbol": "ce393d26e394ef96",
+      "device": "f97c034d2e134054",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "99c29beebf8d4e80",
+      "component_id": "b381d5192f7a41b2"
+    },
+    "C7": {
+      "value": "4.7nF",
+      "symbol": "f53db33b2e4bffdd",
+      "device": "a2630b92fa104ac7",
+      "footprint": "11d6ba57a7a95d6b",
+      "page_uuid": "99c29beebf8d4e80",
+      "component_id": "73b4bd167de74d08"
+    },
+    "C9": {
+      "value": "4.7nF",
+      "symbol": "f53db33b2e4bffdd",
+      "device": "d6085d0a3d954b33",
+      "footprint": "11d6ba57a7a95d6b",
+      "page_uuid": "99c29beebf8d4e80",
+      "component_id": "c6777247de574fe8"
+    },
+    "C8": {
+      "value": "4.7nF",
+      "symbol": "f53db33b2e4bffdd",
+      "device": "db62adb84b2f4c12",
+      "footprint": "11d6ba57a7a95d6b",
+      "page_uuid": "99c29beebf8d4e80",
+      "component_id": "d7d4edea24694bb4"
+    },
+    "C10": {
+      "value": "4.7nF",
+      "symbol": "f53db33b2e4bffdd",
+      "device": "db691b175925448a",
+      "footprint": "11d6ba57a7a95d6b",
+      "page_uuid": "99c29beebf8d4e80",
+      "component_id": "9c0daae48b1b4432"
+    },
+    "C_IL_ADC": {
+      "value": "1nF",
+      "symbol": "f53db33b2e4bffdd",
+      "device": "19ba7ccbe316475a",
+      "footprint": "11d6ba57a7a95d6b",
+      "page_uuid": "99c29beebf8d4e80",
+      "component_id": "8560ac273fef445c"
+    },
+    "D_ADC1": {
+      "value": "BAT54S",
+      "symbol": "cced23b02064f059",
+      "device": "1a171c899f004e74",
+      "footprint": "288c7c865e78632a",
+      "page_uuid": "99c29beebf8d4e80",
+      "component_id": "0e80cfceb3094695"
+    },
+    "D_ADC2": {
+      "value": "BAT54S",
+      "symbol": "cced23b02064f059",
+      "device": "9dfe418c92044978",
+      "footprint": "288c7c865e78632a",
+      "page_uuid": "99c29beebf8d4e80",
+      "component_id": "3bf830937ccb4125"
+    },
+    "D_ADC3": {
+      "value": "BAT54S",
+      "symbol": "cced23b02064f059",
+      "device": "e2be65e4fb8c4834",
+      "footprint": "288c7c865e78632a",
+      "page_uuid": "99c29beebf8d4e80",
+      "component_id": "87043c8fae464e47"
+    },
+    "D_ADC4": {
+      "value": "BAT54S",
+      "symbol": "cced23b02064f059",
+      "device": "3a682f139d9440c3",
+      "footprint": "288c7c865e78632a",
+      "page_uuid": "99c29beebf8d4e80",
+      "component_id": "ce75a5b47d824022"
+    },
+    "D_ADC5": {
+      "value": "BAT54S",
+      "symbol": "cced23b02064f059",
+      "device": "bd2468b240bf4873",
+      "footprint": "288c7c865e78632a",
+      "page_uuid": "99c29beebf8d4e80",
+      "component_id": "9a47fab9b7a74089"
+    },
+    "U5": {
+      "value": "LM393",
+      "symbol": "07bfe5675cc5fcfa",
+      "device": "474341bf0fc54810",
+      "footprint": "57290d1967242f2a",
+      "page_uuid": "8a3a2ed3e5c84a2b",
+      "component_id": "62bad4a7a3df4f2a"
+    },
+    "U9": {
+      "value": "LM393",
+      "symbol": "07bfe5675cc5fcfa",
+      "device": "c778a7d93a124e8b",
+      "footprint": "57290d1967242f2a",
+      "page_uuid": "8a3a2ed3e5c84a2b",
+      "component_id": "6b1526364b984e7d"
+    },
+    "R9": {
+      "value": "10kΩ / 0.1%",
+      "symbol": "ce393d26e394ef96",
+      "device": "6d5be1bd75f74696",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "8a3a2ed3e5c84a2b",
+      "component_id": "7a5ce602cc06495e"
+    },
+    "R16": {
+      "value": "10kΩ / 0.1%",
+      "symbol": "ce393d26e394ef96",
+      "device": "623f40285d9c4bb0",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "8a3a2ed3e5c84a2b",
+      "component_id": "6af500043cb94567"
+    },
+    "R10A": {
+      "value": "49.9kΩ / 0.1%",
+      "symbol": "ce393d26e394ef96",
+      "device": "4a8037cfc3ae4384",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "8a3a2ed3e5c84a2b",
+      "component_id": "19819fa738544bee"
+    },
+    "R15A": {
+      "value": "49.9kΩ / 0.1%",
+      "symbol": "ce393d26e394ef96",
+      "device": "d3f5f33bbe254be8",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "8a3a2ed3e5c84a2b",
+      "component_id": "7b67773f3f9f48be"
+    },
+    "R10B": {
+      "value": "100Ω / 0.1%",
+      "symbol": "ce393d26e394ef96",
+      "device": "0c3b9b43ce834d6e",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "8a3a2ed3e5c84a2b",
+      "component_id": "032ecb53f2054d0a"
+    },
+    "R15B": {
+      "value": "100Ω / 0.1%",
+      "symbol": "ce393d26e394ef96",
+      "device": "9c56669170fd4a48",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "8a3a2ed3e5c84a2b",
+      "component_id": "b8251d37a57c4a69"
+    },
+    "R11": {
+      "value": "23kΩ",
+      "symbol": "ce393d26e394ef96",
+      "device": "bd18c6d2dc3947c4",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "8a3a2ed3e5c84a2b",
+      "component_id": "5d1bc2644d234365"
+    },
+    "R12": {
+      "value": "10kΩ",
+      "symbol": "ce393d26e394ef96",
+      "device": "099ee1d5477f4d75",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "8a3a2ed3e5c84a2b",
+      "component_id": "523177013a0547b3"
+    },
+    "R13": {
+      "value": "10kΩ",
+      "symbol": "ce393d26e394ef96",
+      "device": "7cd0b99dde1243a8",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "8a3a2ed3e5c84a2b",
+      "component_id": "dd4e9f2a914b414f"
+    },
+    "C_REF_POS": {
+      "value": "100nF",
+      "symbol": "f53db33b2e4bffdd",
+      "device": "0a2bdb46550d447a",
+      "footprint": "11d6ba57a7a95d6b",
+      "page_uuid": "8a3a2ed3e5c84a2b",
+      "component_id": "dbcd9df91cc34967"
+    },
+    "C_REF_NEG": {
+      "value": "100nF",
+      "symbol": "f53db33b2e4bffdd",
+      "device": "852c6b7ee1664752",
+      "footprint": "11d6ba57a7a95d6b",
+      "page_uuid": "8a3a2ed3e5c84a2b",
+      "component_id": "f07595513a6041d0"
+    },
+    "C_REF_OV": {
+      "value": "100nF",
+      "symbol": "f53db33b2e4bffdd",
+      "device": "1b202b1c10e446d9",
+      "footprint": "11d6ba57a7a95d6b",
+      "page_uuid": "8a3a2ed3e5c84a2b",
+      "component_id": "c49d303805f242b0"
+    },
+    "C_U5": {
+      "value": "100nF",
+      "symbol": "f53db33b2e4bffdd",
+      "device": "9c0cc13251a94337",
+      "footprint": "11d6ba57a7a95d6b",
+      "page_uuid": "8a3a2ed3e5c84a2b",
+      "component_id": "96e1aecd379f4713"
+    },
+    "C_U9": {
+      "value": "100nF",
+      "symbol": "f53db33b2e4bffdd",
+      "device": "2be4f6c46ebc4373",
+      "footprint": "11d6ba57a7a95d6b",
+      "page_uuid": "8a3a2ed3e5c84a2b",
+      "component_id": "e2610c722ba449a9"
+    },
+    "U6": {
+      "value": "SN74HC74DR",
+      "symbol": "335071b6d90f6d41",
+      "device": "3b34736619204aca",
+      "footprint": "2104f44f31fa0bfb",
+      "page_uuid": "630502d11e8f4bf4",
+      "component_id": "39f60ed7a557455b"
+    },
+    "U7": {
+      "value": "SN74HC08DR",
+      "symbol": "f096e30c86eb113c",
+      "device": "c68e5f19f557407f",
+      "footprint": "2104f44f31fa0bfb",
+      "page_uuid": "630502d11e8f4bf4",
+      "component_id": "b8e0a306691142ba"
+    },
+    "U8": {
+      "value": "SN74HC14DR",
+      "symbol": "0468a499bdea2158",
+      "device": "31e28f15f1c94e31",
+      "footprint": "2104f44f31fa0bfb",
+      "page_uuid": "630502d11e8f4bf4",
+      "component_id": "529e10cf9b63421d"
+    },
+    "R14": {
+      "value": "10kΩ",
+      "symbol": "ce393d26e394ef96",
+      "device": "b80d92c297504e1f",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "630502d11e8f4bf4",
+      "component_id": "8ab2d1c6a054405b"
+    },
+    "R_EN_PD": {
+      "value": "10kΩ",
+      "symbol": "ce393d26e394ef96",
+      "device": "9c683b7dfa4d4ace",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "630502d11e8f4bf4",
+      "component_id": "73764153256e43ca"
+    },
+    "R_ARM_PD": {
+      "value": "10kΩ",
+      "symbol": "ce393d26e394ef96",
+      "device": "00a6cf877cd24334",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "630502d11e8f4bf4",
+      "component_id": "f738f50371fc440e"
+    },
+    "C11": {
+      "value": "100nF",
+      "symbol": "f53db33b2e4bffdd",
+      "device": "838c8d3b26cb42db",
+      "footprint": "11d6ba57a7a95d6b",
+      "page_uuid": "630502d11e8f4bf4",
+      "component_id": "7e5a3d50219248dd"
+    },
+    "C_U6": {
+      "value": "100nF",
+      "symbol": "f53db33b2e4bffdd",
+      "device": "966383cd9f6d4351",
+      "footprint": "11d6ba57a7a95d6b",
+      "page_uuid": "630502d11e8f4bf4",
+      "component_id": "5e5626cb00314808"
+    },
+    "C_U7": {
+      "value": "100nF",
+      "symbol": "f53db33b2e4bffdd",
+      "device": "e8382f617b6f4b73",
+      "footprint": "11d6ba57a7a95d6b",
+      "page_uuid": "630502d11e8f4bf4",
+      "component_id": "60386eda0ae04816"
+    },
+    "C_U8": {
+      "value": "100nF",
+      "symbol": "f53db33b2e4bffdd",
+      "device": "5bd7f413c22940c5",
+      "footprint": "11d6ba57a7a95d6b",
+      "page_uuid": "630502d11e8f4bf4",
+      "component_id": "d90f6074338e4396"
+    },
+    "D_POR": {
+      "value": "BAT54",
+      "symbol": "b403a95d3e327675",
+      "device": "8d1005f0973b41f3",
+      "footprint": "288c7c865e78632a",
+      "page_uuid": "630502d11e8f4bf4",
+      "component_id": "5a66bd2705b54536"
+    },
+    "J_CTL": {
+      "value": "STM32 CONTROL 2x8",
+      "symbol": "477964cc588f036d",
+      "device": "1ab7a8dd61654a09",
+      "footprint": "420f16daa1aef9fe",
+      "page_uuid": "c5ad6535607d489f",
+      "component_id": "2f47872e2b584957"
+    },
+    "TP1": {
+      "value": "VIN_EXT",
+      "symbol": "a83860d7f3d45e2d",
+      "device": "59a3f37a817342b7",
+      "footprint": "eda37bc31c3431bd",
+      "page_uuid": "c5ad6535607d489f",
+      "component_id": "7691adf25cb344d8"
+    },
+    "TP2": {
+      "value": "VIN",
+      "symbol": "a83860d7f3d45e2d",
+      "device": "b2a60d68c4ad4514",
+      "footprint": "eda37bc31c3431bd",
+      "page_uuid": "c5ad6535607d489f",
+      "component_id": "d92eb6e0030d4fc2"
+    },
+    "TP3": {
+      "value": "SW",
+      "symbol": "a83860d7f3d45e2d",
+      "device": "45c3bac29cba444f",
+      "footprint": "eda37bc31c3431bd",
+      "page_uuid": "c5ad6535607d489f",
+      "component_id": "aaf3bc008aa54644"
+    },
+    "TP4": {
+      "value": "VOUT",
+      "symbol": "a83860d7f3d45e2d",
+      "device": "b5e11b68b84e4bc1",
+      "footprint": "eda37bc31c3431bd",
+      "page_uuid": "c5ad6535607d489f",
+      "component_id": "8ed08fc705a04c57"
+    },
+    "TP5": {
+      "value": "GND",
+      "symbol": "a83860d7f3d45e2d",
+      "device": "1b680e1367c944b7",
+      "footprint": "eda37bc31c3431bd",
+      "page_uuid": "c5ad6535607d489f",
+      "component_id": "c30ec6531b5642eb"
+    },
+    "TP6": {
+      "value": "G_H",
+      "symbol": "a83860d7f3d45e2d",
+      "device": "b5cc32b9c7e14ace",
+      "footprint": "eda37bc31c3431bd",
+      "page_uuid": "c5ad6535607d489f",
+      "component_id": "8297b2d36dc54560"
+    },
+    "TP7": {
+      "value": "G_L",
+      "symbol": "a83860d7f3d45e2d",
+      "device": "c455b58a33244d35",
+      "footprint": "eda37bc31c3431bd",
+      "page_uuid": "c5ad6535607d489f",
+      "component_id": "620a7e1d13a04ebc"
+    },
+    "TP8": {
+      "value": "IL_BI",
+      "symbol": "a83860d7f3d45e2d",
+      "device": "643f42b7e1d2465d",
+      "footprint": "eda37bc31c3431bd",
+      "page_uuid": "c5ad6535607d489f",
+      "component_id": "57150fd050cb4969"
+    },
+    "TP9": {
+      "value": "FAULT_N",
+      "symbol": "a83860d7f3d45e2d",
+      "device": "765434679fb54165",
+      "footprint": "eda37bc31c3431bd",
+      "page_uuid": "c5ad6535607d489f",
+      "component_id": "6efcf89690e540e0"
+    },
+    "TP10": {
+      "value": "+3V3_A",
+      "symbol": "a83860d7f3d45e2d",
+      "device": "edcac833e58e403f",
+      "footprint": "eda37bc31c3431bd",
+      "page_uuid": "c5ad6535607d489f",
+      "component_id": "0fd6ab9838bf437b"
+    },
+    "R_PRE": {
+      "value": "22Ω / 5W / pulse≥0.3J",
+      "symbol": "ce393d26e394ef96",
+      "device": "04aa80a891734104",
+      "footprint": "",
+      "page_uuid": "db66fd70791645b2",
+      "component_id": "670369cec67e4e8e"
+    },
+    "J_BYP": {
+      "value": "SPST旁路接口 ≥30VDC/3A",
+      "symbol": "37c94643e5153790",
+      "device": "62e2ae8f3fd24c95",
+      "footprint": "2707b944d7a5ef59",
+      "page_uuid": "db66fd70791645b2",
+      "component_id": "592e951a2f894bc8"
+    },
+    "D_FREE": {
+      "value": "SS56 / 60V / 5A",
+      "symbol": "71a61facf90193b3",
+      "device": "9cbdee5934a14587",
+      "footprint": "e8b11adad9c797c6",
+      "page_uuid": "db66fd70791645b2",
+      "component_id": "20bc2d6bb0b940fc"
+    },
+    "R_SN": {
+      "value": "10Ω / 0.25W / DNP",
+      "symbol": "ce393d26e394ef96",
+      "device": "36c6850004a246a4",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "db66fd70791645b2",
+      "component_id": "56f95c1fac574705"
+    },
+    "C_SN": {
+      "value": "1nF / 100V C0G / DNP",
+      "symbol": "f53db33b2e4bffdd",
+      "device": "f248ac5519fd48ec",
+      "footprint": "11d6ba57a7a95d6b",
+      "page_uuid": "db66fd70791645b2",
+      "component_id": "e042079294d74b4f"
+    },
+    "R_IL_PROT": {
+      "value": "1kΩ / 1%",
+      "symbol": "ce393d26e394ef96",
+      "device": "5292e713e9ea41be",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "db66fd70791645b2",
+      "component_id": "e1183161c0694fbe"
+    },
+    "C_IL_PROT": {
+      "value": "1nF / C0G",
+      "symbol": "f53db33b2e4bffdd",
+      "device": "0be6671e7d3a438a",
+      "footprint": "11d6ba57a7a95d6b",
+      "page_uuid": "db66fd70791645b2",
+      "component_id": "8858a19e16c2433d"
+    },
+    "R_IOUT_PROT": {
+      "value": "1kΩ / 1%",
+      "symbol": "ce393d26e394ef96",
+      "device": "c3a493bf5bff4d1d",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "db66fd70791645b2",
+      "component_id": "5c7c8496c77249e3"
+    },
+    "C_IOUT_PROT": {
+      "value": "1nF / C0G",
+      "symbol": "f53db33b2e4bffdd",
+      "device": "f2ccc871c05f4fa4",
+      "footprint": "11d6ba57a7a95d6b",
+      "page_uuid": "db66fd70791645b2",
+      "component_id": "34c925ac0a69428f"
+    },
+    "R_IOUT_TOP": {
+      "value": "20kΩ / 0.1%",
+      "symbol": "ce393d26e394ef96",
+      "device": "4f03738894594bcb",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "db66fd70791645b2",
+      "component_id": "d6fae19456c8407d"
+    },
+    "R_IOUT_BOT": {
+      "value": "10kΩ / 0.1%",
+      "symbol": "ce393d26e394ef96",
+      "device": "d3221dba12bc4d46",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "db66fd70791645b2",
+      "component_id": "43fa9ed18e584005"
+    },
+    "C_REF_IOUT": {
+      "value": "100nF",
+      "symbol": "f53db33b2e4bffdd",
+      "device": "6c4ef6f1b9284ac9",
+      "footprint": "11d6ba57a7a95d6b",
+      "page_uuid": "db66fd70791645b2",
+      "component_id": "f39fc290d9ba4663"
+    },
+    "R_IOUT_PU": {
+      "value": "10kΩ",
+      "symbol": "ce393d26e394ef96",
+      "device": "8a00b9defc544405",
+      "footprint": "a6364142d2575d28",
+      "page_uuid": "db66fd70791645b2",
+      "component_id": "909777c96af94552"
+    },
+    "C_DRV": {
+      "value": "1uF / 25V X7R",
+      "symbol": "f53db33b2e4bffdd",
+      "device": "4395c23c73754e23",
+      "footprint": "11d6ba57a7a95d6b",
+      "page_uuid": "db66fd70791645b2",
+      "component_id": "df9ae7c3d93b4701"
+    },
+    "TP11": {
+      "value": "IOUT_RAW",
+      "symbol": "a83860d7f3d45e2d",
+      "device": "b40a613eec984cc2",
+      "footprint": "eda37bc31c3431bd",
+      "page_uuid": "db66fd70791645b2",
+      "component_id": "3614fac70a9249ed"
+    },
+    "TP12": {
+      "value": "IL_PROT",
+      "symbol": "a83860d7f3d45e2d",
+      "device": "69112cede1414f5d",
+      "footprint": "eda37bc31c3431bd",
+      "page_uuid": "db66fd70791645b2",
+      "component_id": "660ceee94c684d4d"
+    },
+    "TP13": {
+      "value": "VREF_IOUT",
+      "symbol": "a83860d7f3d45e2d",
+      "device": "41b0cac183e64a3e",
+      "footprint": "eda37bc31c3431bd",
+      "page_uuid": "db66fd70791645b2",
+      "component_id": "483148fc7a0640e7"
+    }
+  },
+  "j_ctl_6_symbol_pin_name": "GND",
+  "nominal_calculations": {
+    "vref_pos_V": 2.75,
+    "vref_neg_V": 0.55,
+    "il_trip_A": 2.2,
+    "iout_trip_A": 1.1,
+    "protection_RC_s": 1.0000000000000002e-06,
+    "precharge_C_F": 0.000471,
+    "precharge_tau_s": 0.010362,
+    "precharge_peak_A": 1.1073522778529543,
+    "precharge_capacitor_energy_J": 0.14193643875,
+    "short_0p1ohm_at_1A_V": 0.1
+  },
+  "open_items": [
+    "PDF preview MOS orientation/network display mismatch",
+    "J_CTL.6 pin name still GND despite IOUT_OC_N net",
+    "Real firmware and load-step/short-circuit behavior unverified",
+    "IR2184 manufacturer logic/timing and physical outputs not measured",
+    "Precharge downstream voltage/bypass state not observed by ADC_VIN",
+    "Whole-system efficiency claim not independently reproduced",
+    "EasyEDA ERC/PCB DRC and native client opening not run"
+  ],
+  "errors": [],
+  "design_modified": false,
+  "native_erc_run": false,
+  "pcb_drc_run": false,
+  "hardware_measurements": false,
+  "multisim_readback": {
+    "sha256": "e13d50ef34a2451f58d882265c8097bf56d856033a53123ab90da4bdba796936",
+    "parts_excluding_ground": 119,
+    "native_execution_run": false,
+    "scope": "Decode and inspect only"
+  }
+}
