@@ -55,9 +55,9 @@
       "x": 47.5,
       "y": 70,
       "angle": 0,
-      "package": "SHUNT_TH_P10_TBD",
+      "package": "SHUNT_M_50m_P10_D0p8",
       "value": "50mΩ / 1% / >=1W",
-      "notes": "已购类型改直插占位；P10仅假设，图片尚未确认本件脚距；高度12、线径0.8来自参数表；功率≥1W；Kelvin取样；RS_L25mΩ尚未购齐",
+      "notes": "用户商品图确认：达科峰M型康铜丝50mΩ、P10、线径0.8、图示体高12、额定5A；孔1.1/焊盘2.6为设计值；平面12×4包络仍为预留；1%精度和连续≥1W待核；Kelvin取样",
       "mechanical_TBD": true
     },
     "RS_OUT": {
@@ -66,9 +66,9 @@
       "x": 108,
       "y": 52,
       "angle": 270,
-      "package": "SHUNT_TH_P10_TBD",
+      "package": "SHUNT_M_50m_P10_D0p8",
       "value": "50mΩ / 1% / >=1W",
-      "notes": "已购类型改直插占位；P10仅假设，图片尚未确认本件脚距；高度12、线径0.8来自参数表；功率≥1W；Kelvin取样；RS_L25mΩ尚未购齐",
+      "notes": "用户商品图确认：达科峰M型康铜丝50mΩ、P10、线径0.8、图示体高12、额定5A；孔1.1/焊盘2.6为设计值；平面12×4包络仍为预留；1%精度和连续≥1W待核；Kelvin取样",
       "mechanical_TBD": true
     },
     "RS_L": {
@@ -79,7 +79,7 @@
       "angle": 270,
       "package": "SHUNT_TH_P10_TBD",
       "value": "25mΩ / 1% / >=1W",
-      "notes": "已购类型改直插占位；P10仅假设，图片尚未确认本件脚距；高度12、线径0.8来自参数表；功率≥1W；Kelvin取样；RS_L25mΩ尚未购齐",
+      "notes": "25mΩ已列B3补料清单；旧参数表记未购，现库存待核；本图仅50mΩ，不能套用到本件；P10仍占位；实际封装、1%与≥1W待核",
       "mechanical_TBD": true
     },
     "C1": {
@@ -2287,6 +2287,44 @@
       ],
       "tbd": true
     },
+    "SHUNT_M_50m_P10_D0p8": {
+      "pads": [
+        {
+          "num": "1",
+          "x": -5.0,
+          "y": 0,
+          "w": 2.6,
+          "h": 2.6,
+          "hole": 1.1
+        },
+        {
+          "num": "2",
+          "x": 5.0,
+          "y": 0,
+          "w": 2.6,
+          "h": 2.6,
+          "hole": 1.1
+        }
+      ],
+      "body_mm": [
+        12,
+        4
+      ],
+      "tbd": true,
+      "confirmed_from_seller": {
+        "pin_pitch_mm": 10,
+        "wire_diameter_mm": 0.8,
+        "illustrated_body_height_mm": 12,
+        "nominal_resistance_ohm": 0.05,
+        "rated_current_A": 5
+      },
+      "still_unconfirmed": [
+        "resistance tolerance 1%",
+        "continuous rated power >=1W and its conditions",
+        "planar depth and welded terminal boss dimensions",
+        "actual board standoff height"
+      ]
+    },
     "RPRE_EXTERNAL_P5.08_TBD": {
       "pads": [
         {
@@ -2448,6 +2486,7 @@
     "6e0e132a40665c18",
     "71235f1803375ddd",
     "76276b7420315623",
+    "778a17523fae5bc9",
     "78d6e8dd499c543c",
     "7931cf78e3e05ef3",
     "798d9656cd2e5813",

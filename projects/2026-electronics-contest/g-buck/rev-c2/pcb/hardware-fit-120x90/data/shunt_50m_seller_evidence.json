@@ -1,0 +1,38 @@
+{
+  "source": "User inline seller image, 2026-10-27",
+  "seller_brand_shown": "达科峰 / dakefeng",
+  "image_local_file_available": false,
+  "applies_to": [
+    "RS_IN",
+    "RS_OUT"
+  ],
+  "does_not_establish_dimensions_for": [
+    "RS_L"
+  ],
+  "marked_values": {
+    "resistance_ohm": 0.05,
+    "pin_pitch_mm": 10,
+    "wire_diameter_mm": 0.8,
+    "illustrated_body_height_mm": 12,
+    "rated_current_A": 5
+  },
+  "design_choices_retained": {
+    "finished_hole_diameter_mm": 1.1,
+    "pad_size_mm": [
+      2.6,
+      2.6
+    ],
+    "planar_envelope_mm": [
+      12,
+      4
+    ]
+  },
+  "remaining_checks": [
+    "resistance tolerance 1%",
+    "continuous rated power >=1W and test conditions",
+    "planar depth/welded terminal boss dimensions",
+    "installed height above board",
+    "RS_L 25mOhm actual footprint and available stock"
+  ],
+  "inventory_note": "Screenshot selection of a 10-piece listing is not evidence of stock quantity; user identified B3/Rev B as the intermediate supplementation baseline."
+}

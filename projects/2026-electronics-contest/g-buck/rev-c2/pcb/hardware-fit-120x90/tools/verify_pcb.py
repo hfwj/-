@@ -110,7 +110,7 @@ def main():
         'routing_complete':not unresolved,'native_desktop_open':'not_run','native_ERC':'not_run','native_DRC':'not_run',
         'manufacturing_release':False,'sqlite_integrity':sqlite3.connect('file:'+str(PATH)+'?mode=ro',uri=True).execute('pragma integrity_check').fetchone()[0]},
         'limitations':['Rectangular pad copper conservatively encloses round/oval pads; checks are not native ERC/DRC.',
-        'F1 clip assembly spacing, shunt pitch, several actual part identities and thermal design remain unconfirmed.',
+        'RS_IN/OUT P10 and D0.8 are supported by seller drawing; their envelope depth/tolerance/power, RS_L pitch, F1 assembly spacing and thermal design remain unconfirmed.',
         'No complete power routing, Kelvin routing or ground plane. No Gerber manufacturing output.',
         'Mounting pattern is proposed, not confirmed to an enclosure. Silk/courtyard/mask/paste/3D checks remain open.']}
     (ROOT/'data/verification.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))

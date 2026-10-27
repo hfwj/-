@@ -57,6 +57,16 @@ def main():
     specs['CP_D10_P5']=twopad(5,2.2,2.2,.9,[10.5,10.5],False)
     specs['L65125_VERTICAL_P10']=twopad(10,2.4,2.4,1.1,[20,10],False)
     specs['SHUNT_TH_P10_TBD']=twopad(10,2.6,2.6,1.1,[12,4],True)
+    # User's 50mOhm M-wire seller drawing confirms P10 and wire D0.8.
+    # Existing copper geometry is retained; 12x4 planar envelope remains a
+    # conservative assumption, not a dimension established by the side view.
+    specs['SHUNT_M_50m_P10_D0p8']=twopad(10,2.6,2.6,1.1,[12,4],True)
+    specs['SHUNT_M_50m_P10_D0p8']['confirmed_from_seller']={
+        'pin_pitch_mm':10,'wire_diameter_mm':.8,'illustrated_body_height_mm':12,
+        'nominal_resistance_ohm':.05,'rated_current_A':5}
+    specs['SHUNT_M_50m_P10_D0p8']['still_unconfirmed']=[
+        'resistance tolerance 1%','continuous rated power >=1W and its conditions',
+        'planar depth and welded terminal boss dimensions','actual board standoff height']
     specs['RPRE_EXTERNAL_P5.08_TBD']=twopad(5.08,2.5,2.5,1.3,[9,5],True)
     # A measured clip is NOT a measured assembled fuse holder. 30 mm clip spacing
     # and axis of the 7.7 mm leg pitch are provisional, never fabrication evidence.
@@ -71,7 +81,8 @@ def main():
     for ref in ['J1','J2','J_BYP','J_MON']:packages[ref]='TERM_2.54_2P'
     for ref in ['C1','C3']:packages[ref]='CP_D10_P5'
     for ref in ['C2','C4','C6']:packages[ref]='C0805'
-    for ref in ['RS_IN','RS_OUT','RS_L']:packages[ref]='SHUNT_TH_P10_TBD'
+    for ref in ['RS_IN','RS_OUT']:packages[ref]='SHUNT_M_50m_P10_D0p8'
+    packages['RS_L']='SHUNT_TH_P10_TBD'
     packages.update(L1='L65125_VERTICAL_P10',F1='FUSE_6X30_4SLOT_TBD',R_PRE='RPRE_EXTERNAL_P5.08_TBD')
     # 0.25 W snubber resistor should not use an unqualified generic 0805.
     packages['R_SN']='R1206'
@@ -115,8 +126,9 @@ def main():
         'U1':'Rev C.2指定IR2184PbF/DIP8；已购表IR2104不可直接代装；1IN 2SD# 3COM 4LO 5VCC 6VS 7HO 8VB',
         'R_SN':'DNP；10Ω≥0.25W，改1206以匹配功率要求；实购功率仍需核对',
     }
-    for ref in ['RS_IN','RS_OUT','RS_L']:
-        notes[ref]='已购类型改直插占位；P10仅假设，图片尚未确认本件脚距；高度12、线径0.8来自参数表；功率≥1W；Kelvin取样；RS_L25mΩ尚未购齐'
+    for ref in ['RS_IN','RS_OUT']:
+        notes[ref]='用户商品图确认：达科峰M型康铜丝50mΩ、P10、线径0.8、图示体高12、额定5A；孔1.1/焊盘2.6为设计值；平面12×4包络仍为预留；1%精度和连续≥1W待核；Kelvin取样'
+    notes['RS_L']='25mΩ已列B3补料清单；旧参数表记未购，现库存待核；本图仅50mΩ，不能套用到本件；P10仍占位；实际封装、1%与≥1W待核'
     for ref in ['QH','QL']:notes[ref]='直立TO220，1G2D3S；金属背板=D；按无散热片实购，热设计待验证'
     for ref,p in parts.items():
         olddev=p['attrs']['Device'];dev=newdoc('device:'+ref,'DEVICE',olddev)
@@ -245,7 +257,7 @@ def main():
       ('U1 = IR2184 ONLY',48,49,.9,3),('J_MON.1 -> PA6 / ADC6',83,5,.85,3),
       ('F1 6x30 / 2A - CLIP SPACING TBD',9,70,.8,13),
       ('M1 12V / M2 5V: EXTERNAL LM2596HV; IN+ GND OUT+ GND',11,12,.8,13),
-      ('SHUNT PITCH TBD | NO FAB RELEASE | NO COPPER FILL',12,8,.8,13)]):
+      ('RS_IN/OUT P10 FROM SELLER | RS_L PITCH TBD | NO FAB RELEASE',12,8,.8,13)]):
         b=copy.deepcopy(stringbase);b.update(text=text,x=mil(x),y=mil(y),fontSize=mil(size),strokeWidth=mil(.12),layerId=layer)
         o['STRING',uid('label:'+str(n))]=b
     # Board association in both project/config metadata and the structural cache.

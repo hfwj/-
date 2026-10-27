@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "comparison_baseline_commit": "523113a",
+  "before_native_sha256": "77b0790f721ed4e9482a3c6a5a171422ef86678d93d012df581b1c61da51bc57",
+  "after_native_sha256": "c143028a9a6c72957ea7ac5133fd1bf2cd2e49857f303de10c5850d879d6f1e9",
+  "same_120_logical_references": true,
+  "same_all_component_values": true,
+  "same_all_pin_nets": true,
+  "same_component_positions": true,
+  "same_copper_pad_and_hole_geometry": true,
+  "same_body_envelopes": true,
+  "same_all_copper_track_records": true,
+  "changed_footprint_associations": [
+    {
+      "ref": "RS_IN",
+      "before": "SHUNT_TH_P10_TBD",
+      "after": "SHUNT_M_50m_P10_D0p8"
+    },
+    {
+      "ref": "RS_OUT",
+      "before": "SHUNT_TH_P10_TBD",
+      "after": "SHUNT_M_50m_P10_D0p8"
+    }
+  ],
+  "physical_pads": 325,
+  "copper_track_segments": 71,
+  "RS_L_dimensions_not_inferred": true,
+  "seller_supported_50m_pitch_mm": 10,
+  "overall_mechanical_release": false,
+  "native_ERC": "not_run",
+  "native_DRC": "not_run",
+  "simulation_or_firmware_changes": false
+}

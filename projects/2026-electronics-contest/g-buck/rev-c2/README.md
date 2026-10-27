@@ -8,6 +8,7 @@
 | 可编辑原理图 | [嘉立创 EDA .eprj2](schematic/native/G题同步Buck_RevC2_PA6修订.eprj2) |
 | BOM 与逐引脚表 | [BOM](schematic/BOM_RevC2.csv) · [接线表](results/data/RevC2_逐引脚接线表.csv) |
 | 按当前PCB更新的采购清单 | [Excel](downloads/GBUCK_RevC2_updated_BOM.xlsx) · [PDF](downloads/GBUCK_RevC2_updated_BOM.pdf) · [明细/说明](reports/updated-bom-2026-10-27/README.md)；120位号、46项合并采购行，外接辅料另列，含库存/补购计算与待确认项 |
+| 50mΩ分流电阻商品图确认 | [证据与修改影响](pcb/hardware-fit-120x90/reports/50mΩ商品图确认.md)；RS_IN/OUT脚距10mm、线径0.8mm，已同步专用封装关联与BOM；铜几何保持，RS_L尺寸不从本图推定 |
 | 核对结论与修订影响 | [完整报告](reports/RevC1评审核对与RevC2修订说明.md) · [原附件](references/RevC1_review.md) |
 | Multisim 配套 | [使用入口](simulation/multisim14/README.md) · [100 ms 主工程](downloads/GBUCK_REVC2_FULL_25V_5R_100ms.ms14) · [10 ms 短检查](downloads/GBUCK_REVC2_FULL_SMOKE_10ms.ms14) · [110 ms 预充](downloads/GBUCK_REVC2_PRECHARGE_ONLY_110ms.ms14) |
 | 全部资料 | [Rev C.2 下载包](downloads/GBUCK_RevC2_核对修订与Multisim_2026-10-27.zip) |
