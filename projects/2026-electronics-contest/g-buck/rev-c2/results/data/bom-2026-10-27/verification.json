@@ -1,0 +1,27 @@
+{
+  "status": "PASS_BOM_COVERAGE_AND_NATIVE_READBACK",
+  "source_csv_sha256": "9aa8a14c018173bbf960e4cbfdfa1e6ac0e6d972f5a61627019066fd39be63c9",
+  "source_native_sha256": "77b0790f721ed4e9482a3c6a5a171422ef86678d93d012df581b1c61da51bc57",
+  "unique_logical_references": 120,
+  "grouped_lines": 46,
+  "design_quantity": 120,
+  "default_populated_logical_references": 104,
+  "bare_testpads": 14,
+  "DNP_references": [
+    "R_SN",
+    "C_SN"
+  ],
+  "DNP_quantity": 2,
+  "cap_counts": {
+    "100nF_default": 16,
+    "4.7nF_default": 5,
+    "1nF_default": 2,
+    "1nF_DNP": 1
+  },
+  "external_accessory_lines": 12,
+  "source_files_modified": false,
+  "source_graph_connected_pins": 310,
+  "manufacturing_release": false,
+  "xlsx_sha256": "2ea87a7b92d1c563919ceb8a75b8f03fdba215ca1644aaad0e91cfca7a3c7718",
+  "pdf_sha256": "c2d50cb9f28e0951a1f0c7838a0a5354a85daa762aa3146a0a96ff510fee0031"
+}
