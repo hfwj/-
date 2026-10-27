@@ -1,0 +1,61 @@
+{
+  "status": "PASS_EXISTING_NATIVE_PIN_AND_PACKAGE_READBACK",
+  "comparison_baseline_commit": "61b2872948d4f9dbb08a7cf6f4fb0783c7c921c6",
+  "user_confirmation": "IR2184直插",
+  "ref": "U1",
+  "quantity_per_assembly": 1,
+  "confirmed_family": "IR2184",
+  "confirmed_package_class": "DIP-8 through-hole",
+  "design_value_retained": "IR2184PbF",
+  "package_retained": "DIP8_300",
+  "user_confirmed_full_order_code_or_manufacturer": false,
+  "native_sha256": "5cd3ffac1f58806eaba3c73288fe8d8296ab5ae2155a8a43c9e851efdc8477d4",
+  "native_file_identical_to_baseline": true,
+  "schematic_pin_map": {
+    "1": {
+      "name": "IN",
+      "net": "PWM_IN"
+    },
+    "2": {
+      "name": "SD#",
+      "net": "DRV_EN"
+    },
+    "3": {
+      "name": "COM",
+      "net": "GND"
+    },
+    "4": {
+      "name": "LO",
+      "net": "LO"
+    },
+    "5": {
+      "name": "VCC",
+      "net": "+12V_DRV"
+    },
+    "6": {
+      "name": "VS",
+      "net": "SW"
+    },
+    "7": {
+      "name": "HO",
+      "net": "HO"
+    },
+    "8": {
+      "name": "VB",
+      "net": "VB"
+    }
+  },
+  "existing_design_geometry_mm": {
+    "pin_pitch": 2.54,
+    "row_pitch": 7.62,
+    "hole_diameter": 0.9,
+    "pad_diameter": 1.8
+  },
+  "geometry_is_existing_design_not_new_vendor_validation": true,
+  "schematic_or_pcb_geometry_changes": false,
+  "BOM_model_or_quantity_changes": false,
+  "BOM_confirmation_status_updated": true,
+  "stock_quantity_unknown": true,
+  "simulation_or_firmware_changes": false,
+  "manufacturing_release": false
+}

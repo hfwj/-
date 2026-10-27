@@ -11,7 +11,7 @@
 | 50mΩ分流电阻商品图确认 | [证据与修改影响](pcb/hardware-fit-120x90/reports/50mΩ商品图确认.md)；RS_IN/OUT脚距10mm、线径0.8mm，已同步专用封装关联与BOM；铜几何保持，RS_L尺寸不从本图推定 |
 | 25mΩ分流电阻商品图确认 | [证据与修改影响](pcb/hardware-fit-120x90/reports/25mΩ商品图确认.md)；RS_L按U型P5、图示线径0.7mm、体高7mm建库，原P10孔位已改P5；网络/阻值保持，精度/功率等待核 |
 | 5×20mm保险管夹确认 | [证据与试装要求](pcb/hardware-fit-120x90/reports/F1_5x20夹P5p66确认.md)；F1为2A快断，用户确认单夹P5.66，四槽更新；两夹15mm中心距仅试装初值，旧6×30/7.7参考作废 |
-| 电感、二极管及C_A3确认 | [确认记录](reports/component-confirmations-2026-10-27/README.md)；C_A3已按用户0805改焊盘（10μF/25V保持）；L1立式；D1/D_FREE均按用户SR560/SMB同步物料标注，铜焊盘/位置/走线保持，厂家数据最终复核待归档；仿真未改 |
+| 电感、二极管、C_A3及U1确认 | [确认记录](reports/component-confirmations-2026-10-27/README.md)；U1已确认IR2184直插，本轮无需改板；C_A3已按用户0805改焊盘（10μF/25V保持）；L1立式；D1/D_FREE均按用户SR560/SMB同步物料标注，铜焊盘/位置/走线保持，厂家数据最终复核待归档；仿真未改 |
 | 核对结论与修订影响 | [完整报告](reports/RevC1评审核对与RevC2修订说明.md) · [原附件](references/RevC1_review.md) |
 | Multisim 配套 | [使用入口](simulation/multisim14/README.md) · [100 ms 主工程](downloads/GBUCK_REVC2_FULL_25V_5R_100ms.ms14) · [10 ms 短检查](downloads/GBUCK_REVC2_FULL_SMOKE_10ms.ms14) · [110 ms 预充](downloads/GBUCK_REVC2_PRECHARGE_ONLY_110ms.ms14) |
 | 全部资料 | [Rev C.2 下载包](downloads/GBUCK_RevC2_核对修订与Multisim_2026-10-27.zip) |
