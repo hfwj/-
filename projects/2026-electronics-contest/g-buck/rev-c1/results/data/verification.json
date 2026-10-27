@@ -1,0 +1,87 @@
+{
+  "status": "PASS_STATIC_NATIVE_READBACK",
+  "date_beijing": "2026-10-27",
+  "pages": 9,
+  "parts": 120,
+  "nets": 51,
+  "connected_pins": 310,
+  "unwired_pins": [
+    "U2.4",
+    "U4.4",
+    "U6.6",
+    "U6.8",
+    "U6.9",
+    "U7.6",
+    "U7.8",
+    "U7.11",
+    "U8.6",
+    "U8.8",
+    "U8.10",
+    "U8.12",
+    "D_POR.2"
+  ],
+  "existing_network_changes": {},
+  "existing_value_changes": {
+    "C_IOUT_PROT": [
+      "1nF / C0G",
+      "100nF / 25V X7R"
+    ]
+  },
+  "new_pin_specification": {
+    "R_VINP_TOP.1": "VIN",
+    "R_VINP_TOP.2": "VIN_POST_DIV",
+    "R_VINP_BOT.1": "VIN_POST_DIV",
+    "R_VINP_BOT.2": "GND",
+    "R_VINP_ADC.1": "VIN_POST_DIV",
+    "R_VINP_ADC.2": "ADC_VIN_POST",
+    "C_VINP_ADC.1": "ADC_VIN_POST",
+    "C_VINP_ADC.2": "GND",
+    "D_ADC6.1": "GND",
+    "D_ADC6.2": "+3V3_A",
+    "D_ADC6.3": "ADC_VIN_POST",
+    "J_MON.1": "ADC_VIN_POST",
+    "J_MON.2": "GND",
+    "TP14.1": "ADC_VIN_POST"
+  },
+  "new_refs": [
+    "C_VINP_ADC",
+    "D_ADC6",
+    "J_MON",
+    "R_VINP_ADC",
+    "R_VINP_BOT",
+    "R_VINP_TOP",
+    "TP14"
+  ],
+  "j_ctl_6": {
+    "ref": "J_CTL",
+    "pin": "6",
+    "name": "PB11/OC#",
+    "net": "IOUT_OC_N",
+    "page": "c5ad6535607d489f",
+    "x": 110,
+    "y": 200,
+    "local_x": -70,
+    "local_y": 30
+  },
+  "source_unchanged": true,
+  "unrelated_design_documents_unchanged": true,
+  "sqlite_integrity": "ok",
+  "unassigned_footprints_inherited_from_RevC": [
+    "R_PRE"
+  ],
+  "nominal_monitor": {
+    "ratio": 11,
+    "adc_at_25V_V": 2.272727272727273,
+    "divider_power_at_25V_W": 0.005681818181818182,
+    "filter_tau_s": 4.742727272727272e-05
+  },
+  "iout_alert_RC_s": 9.999999999999999e-05,
+  "native_sha256": "33d7db27746fce82061b2fcf738c5469512ad8e43f723a8538ef6aaaf2394156",
+  "native_client_open_test": false,
+  "native_erc_run": false,
+  "pcb_drc_run": false,
+  "dynamic_simulation_run": false,
+  "actual_firmware_test": false,
+  "hardware_measurements": false,
+  "errors": []
+}

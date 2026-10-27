@@ -1,0 +1,10 @@
+{
+  "pdf_pages": 10,
+  "pdf_all_120_refs_present": true,
+  "pdf_no_text_outside_page": true,
+  "pdf_all_323_pin_annotations_match_native_csv": true,
+  "native_static_status": "PASS_STATIC_NATIVE_READBACK",
+  "native_client_open_test": false,
+  "erc_drc_performed": false,
+  "firmware_hardware_measured": false
+}
