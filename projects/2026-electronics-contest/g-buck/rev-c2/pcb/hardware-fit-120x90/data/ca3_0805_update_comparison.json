@@ -1,0 +1,91 @@
+{
+  "status": "PASS_STATIC_GEOMETRY_COMPARISON",
+  "comparison_baseline_commit": "c3892ab",
+  "before_native_sha256": "dc0cf5f6df9b6e79e6fdc6ad4ec8cbc0f95c042db030638ac1e793aa9bd7c1e3",
+  "after_native_sha256": "5cd3ffac1f58806eaba3c73288fe8d8296ab5ae2155a8a43c9e851efdc8477d4",
+  "user_confirmation": "0805",
+  "ref": "C_A3",
+  "value_unchanged": "10uF / 25V",
+  "footprint_before": "C1206",
+  "footprint_after": "C0805",
+  "all_component_centers_and_angles_preserved": true,
+  "all_schematic_pin_nets_preserved": true,
+  "all_component_values_preserved": true,
+  "unchanged_other_component_pads_and_holes": true,
+  "changed_pad_keys": [
+    [
+      "C_A3",
+      "p1"
+    ],
+    [
+      "C_A3",
+      "p2"
+    ]
+  ],
+  "changed_body_envelopes": [
+    "C_A3"
+  ],
+  "unchanged_existing_copper_tracks": true,
+  "copper_track_segments": 71,
+  "pad_geometry_mm": {
+    "before": [
+      {
+        "pin": "1",
+        "center": [
+          92.0,
+          23.5
+        ],
+        "local_pad_wh": [
+          1.45,
+          1.9
+        ],
+        "net": "+3V3_A"
+      },
+      {
+        "pin": "2",
+        "center": [
+          92.0,
+          26.5
+        ],
+        "local_pad_wh": [
+          1.45,
+          1.9
+        ],
+        "net": "GND"
+      }
+    ],
+    "after": [
+      {
+        "pin": "1",
+        "center": [
+          92.0,
+          24.0
+        ],
+        "local_pad_wh": [
+          1.35,
+          1.45
+        ],
+        "net": "+3V3_A"
+      },
+      {
+        "pin": "2",
+        "center": [
+          92.0,
+          26.0
+        ],
+        "local_pad_wh": [
+          1.35,
+          1.45
+        ],
+        "net": "GND"
+      }
+    ]
+  },
+  "placement_input": "data/placement_baseline_c3892ab.json",
+  "logical_references": 120,
+  "default_populated_logical_references": 104,
+  "grouped_purchase_rows": 45,
+  "full_manufacturer_part_or_dielectric_verified": false,
+  "simulation_or_firmware_changes": false,
+  "manufacturing_release": false
+}

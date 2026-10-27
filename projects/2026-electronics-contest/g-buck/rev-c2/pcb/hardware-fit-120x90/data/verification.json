@@ -3,7 +3,7 @@
   "errors": [],
   "checks": {
     "source_sha256": "6a1ed47fc5ad60f26e2b3efa9301078c0e1f658fd5d7c378f988992510ee30d6",
-    "delivered_sha256": "dc0cf5f6df9b6e79e6fdc6ad4ec8cbc0f95c042db030638ac1e793aa9bd7c1e3",
+    "delivered_sha256": "5cd3ffac1f58806eaba3c73288fe8d8296ab5ae2155a8a43c9e851efdc8477d4",
     "source_schematic_components": 120,
     "delivered_schematic_components": 120,
     "pcb_components": 120,

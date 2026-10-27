@@ -100,7 +100,7 @@ def main():
     for ref in parts: packages[ref]=bom[ref]['封装/待确认']
     for ref in ['J1','J2','J_BYP','J_MON']:packages[ref]='TERM_2.54_2P'
     for ref in ['C1','C3']:packages[ref]='CP_D10_P5'
-    for ref in ['C2','C4','C6']:packages[ref]='C0805'
+    for ref in ['C2','C4','C6','C_A3']:packages[ref]='C0805'
     for ref in ['RS_IN','RS_OUT']:packages[ref]='SHUNT_M_50m_P10_D0p8'
     packages['RS_L']='SHUNT_U_25m_P5_D0p7'
     packages.update(L1='L65125_VERTICAL_P10',F1='FUSE_5X20_CLIP_P5p66_ASM15_TBD',R_PRE='RPRE_EXTERNAL_P5.08_TBD')
@@ -144,7 +144,7 @@ def main():
         'C2':'1μF/50V X7R，0805；有效容量按实际料号的直流偏压曲线核对',
         'C4':'10μF/50V X7R，0805；由35V提高至实购50V；直流偏压后有效容量待核',
         'C6':'10μF/25V，按实购2×1.25贴片改0805；完整料号/偏压待核',
-        'C_A3':'资料未填写，暂保留C1206；不能从C6推定本件也为0805',
+        'C_A3':'用户明确0805；10μF/25V保持，原1206暂定封装改C0805；中心(92,25)mm/90°保持，焊盘缩小并各向中心移动0.5mm；实际介质/完整料号及偏压容量待归档',
         'R_PRE':'外置22Ω/5W脉冲≥0.3J电阻，板上仅两引出焊盘；不得将电阻实体塞进引出焊盘投影',
         'U1':'Rev C.2指定IR2184PbF/DIP8；已购表IR2104不可直接代装；1IN 2SD# 3COM 4LO 5VCC 6VS 7HO 8VB',
         'R_SN':'DNP；10Ω≥0.25W，改1206以匹配功率要求；实购功率仍需核对',
@@ -213,6 +213,12 @@ def main():
     for ref,(x,y) in {'TP1':(10,68),'TP2':(57,83),'TP3':(83,71),'TP4':(115,42),'TP5':(109,37),
       'TP6':(77,70),'TP7':(77,66),'TP8':(88,49),'TP9':(36,28),'TP10':(103,19),
       'TP11':(109,39),'TP12':(85,43),'TP13':(80,31),'TP14':(101,13)}.items():targets[ref]=(x,y)
+    # Retain all accepted centers/angles instead of re-optimizing unrelated
+    # parts when a footprint becomes smaller. Explicit, versioned input makes
+    # the geometry update reproducible and conflicts visible.
+    placement_baseline=json.loads((ROOT/'data/placement_baseline_c3892ab.json').read_text())
+    assert set(placement_baseline['positions'])==set(parts)
+    positions={ref:tuple(placement_baseline['positions'][ref]) for ref in parts}
     # Mechanical keepouts around four proposed 3.2 mm mounting holes.
     mounting=[(3.5,3.5),(116.5,3.5),(3.5,86.5),(116.5,86.5)]
     occupied=[]
