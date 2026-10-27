@@ -1,0 +1,54 @@
+{
+  "comparison_baseline_commit": "dc43f343362ac4cd07900e92a1ef56207d37d06f",
+  "preceding_question": "这批4.7nF电容实际订单或包装上的完整型号是否为CL21B472JBANNNC？",
+  "user_confirmation": "就是这个型号、",
+  "actual_part_number_confirmed": "CL21B472JBANNNC",
+  "decoded_from_user_code_chart": {
+    "capacitance_nF": 4.7,
+    "package": "0805",
+    "dielectric": "X7R",
+    "rated_voltage_V": 50,
+    "tolerance_percent": 5
+  },
+  "earlier_C0G_statement_superseded": true,
+  "source_values_checked": {
+    "C7": "4.7nF",
+    "C8": "4.7nF",
+    "C9": "4.7nF",
+    "C10": "4.7nF",
+    "C_VINP_ADC": "4.7nF / C0G"
+  },
+  "procurement_allocation": {
+    "X7R": {
+      "refs": [
+        "C7",
+        "C8",
+        "C9",
+        "C10"
+      ],
+      "quantity_per_board": 4,
+      "stock": null
+    },
+    "C0G": {
+      "refs": [
+        "C_VINP_ADC"
+      ],
+      "quantity_per_board": 1,
+      "full_part_number": null,
+      "stock": null,
+      "separate_purchase_confirmed": false
+    }
+  },
+  "total_4p7nF_quantity": 5,
+  "procurement_rows_before": 45,
+  "procurement_rows_after": 46,
+  "logical_references": 120,
+  "default_populated_references": 104,
+  "no_new_logical_component": true,
+  "100nF_stock50_unchanged": true,
+  "schematic_or_PCB_changes": false,
+  "native_identical_to_baseline": true,
+  "native_sha256": "5cd3ffac1f58806eaba3c73288fe8d8296ab5ae2155a8a43c9e851efdc8477d4",
+  "simulation_or_firmware_changes": false,
+  "manufacturing_release": false
+}

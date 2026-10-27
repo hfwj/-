@@ -79,3 +79,9 @@ PCB仍未完整布线，原生ERC/DRC及厂家焊盘最终复核未完成，不�
 该节取代上一节对实物介质符合要求的结论，上一节保留为当时依据口头答复的历史记录。新图只能提供编码规则，不能验证实物或导出可采购的C0G完整型号。
 
 证据：[capacitor_catalogue_code_review.json](../../results/data/component-confirmations-2026-10-27/capacitor_catalogue_code_review.json)。
+
+## 最新状态：实际X7R型号确认，C0G单独备料
+
+**最新4.7nF实际型号确认（比较dc43f34）：**用户对实际完整型号回复“就是这个型号、”，明确采用`CL21B472JBANNNC`。结合用户提供的编码图，登记0805、4.7nF、50V、±5%、X7R；此前口头C0G说法据完整型号纠正。C7/C8/C9/C10源图仅写4.7nF、未指定C0G，采购表按已购X7R款列4只。C_VINP_ADC源图明确4.7nF/C0G，保留要求，另列4.7nF/50V/C0G（NP0）/0805共1只待备，不用该X7R代装。是否另外已有C0G以及两类库存数量尚未确认，故库存/补购数留空，不猜填C0G缺货1只。采购行45→46，仅将原5只按介质拆分4+1；120逻辑位号/104默认有料位号、所有设计值/数量与PCB几何保持。100nF/X7R库存50只、单板补购0保持。原理图/PCB原生文件、网络、脚号和仿真/固件未改，无新增逻辑器件或改板要求；型号确认不构成实测滤波精度验收。
+
+证据：[capacitor_CL21B472JBANNNC_actual_confirmed.json](../../results/data/component-confirmations-2026-10-27/capacitor_CL21B472JBANNNC_actual_confirmed.json)。该节解决上一轮实际型号待核状态；旧C0G口头记录作为历史保留。
