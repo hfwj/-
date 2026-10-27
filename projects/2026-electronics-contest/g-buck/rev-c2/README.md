@@ -10,6 +10,7 @@
 | 按当前PCB更新的采购清单 | [Excel](downloads/GBUCK_RevC2_updated_BOM.xlsx) · [PDF](downloads/GBUCK_RevC2_updated_BOM.pdf) · [明细/说明](reports/updated-bom-2026-10-27/README.md)；120位号、46项合并采购行，外接辅料另列，含库存/补购计算与待确认项 |
 | 50mΩ分流电阻商品图确认 | [证据与修改影响](pcb/hardware-fit-120x90/reports/50mΩ商品图确认.md)；RS_IN/OUT脚距10mm、线径0.8mm，已同步专用封装关联与BOM；铜几何保持，RS_L尺寸不从本图推定 |
 | 25mΩ分流电阻商品图确认 | [证据与修改影响](pcb/hardware-fit-120x90/reports/25mΩ商品图确认.md)；RS_L按U型P5、图示线径0.7mm、体高7mm建库，原P10孔位已改P5；网络/阻值保持，精度/功率等待核 |
+| 5×20mm保险管夹确认 | [证据与试装要求](pcb/hardware-fit-120x90/reports/F1_5x20夹P5p66确认.md)；F1为2A快断，用户确认单夹P5.66，四槽更新；两夹15mm中心距仅试装初值，旧6×30/7.7参考作废 |
 | 核对结论与修订影响 | [完整报告](reports/RevC1评审核对与RevC2修订说明.md) · [原附件](references/RevC1_review.md) |
 | Multisim 配套 | [使用入口](simulation/multisim14/README.md) · [100 ms 主工程](downloads/GBUCK_REVC2_FULL_25V_5R_100ms.ms14) · [10 ms 短检查](downloads/GBUCK_REVC2_FULL_SMOKE_10ms.ms14) · [110 ms 预充](downloads/GBUCK_REVC2_PRECHARGE_ONLY_110ms.ms14) |
 | 全部资料 | [Rev C.2 下载包](downloads/GBUCK_RevC2_核对修订与Multisim_2026-10-27.zip) |

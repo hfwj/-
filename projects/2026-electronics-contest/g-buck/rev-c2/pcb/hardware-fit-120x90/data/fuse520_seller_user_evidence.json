@@ -1,0 +1,49 @@
+{
+  "source": "User inline 5x20 clip photo, fast fuse listing and clip dimension drawing, plus text clarification",
+  "local_image_file_available": false,
+  "user_text_confirmation": "中心距",
+  "confirmed_single_clip_pitch_mm": 5.66,
+  "seller_marked_clip": {
+    "fuse_mm": [
+      5,
+      20
+    ],
+    "material": "brass",
+    "finish": "nickel",
+    "sheet_thickness_mm": 0.5,
+    "tab_width_mm": 1.1,
+    "clip_width_mm": 6.2
+  },
+  "seller_marked_fuse": {
+    "current_A": 2,
+    "voltage_V": 250,
+    "speed": "fast",
+    "dimensions_mm": [
+      5,
+      20
+    ],
+    "merchant_SKU": "BXG16519"
+  },
+  "design_choices_not_vendor_dimensions": {
+    "clip_center_spacing_mm": 15,
+    "slot_xy_mm": [
+      0.9,
+      1.5
+    ],
+    "pad_xy_mm": [
+      2.4,
+      3.0
+    ],
+    "body_envelope_mm": [
+      27,
+      9
+    ]
+  },
+  "remaining_checks": [
+    "trial fit 15mm assembly centers with actual fuse/end stops/contact",
+    "bottom-view orientation and tolerances",
+    "DC breaking capacity/time-current/I2t",
+    "startup and fault behavior"
+  ],
+  "obsolete_reference": "6x30 clip and P7.7 must not be reused"
+}

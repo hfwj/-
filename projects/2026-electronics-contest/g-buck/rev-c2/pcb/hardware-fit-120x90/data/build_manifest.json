@@ -33,9 +33,9 @@
       "x": 29,
       "y": 80,
       "angle": 0,
-      "package": "FUSE_6X30_4SLOT_TBD",
-      "value": "2A / 6x30",
-      "notes": "改用6×30mm管夹；仍需2A保险管；双夹中心距与7.7mm脚距轴向待量；当前4槽为占位，禁止制板",
+      "package": "FUSE_5X20_CLIP_P5p66_ASM15_TBD",
+      "value": "2A / 5x20 FAST",
+      "notes": "最新选型5×20mm、2A快断保险管（商品标250V）；5×20黄铜镀镍夹2只，脚宽1.1/厚0.5/用户确认单夹P5.66；槽0.9×1.5为设计值；两夹中心距15仅试装初值，需验证端帽接触和止挡；旧6×30/7.7作废，禁止直接制板",
       "mechanical_TBD": true
     },
     "D1": {
@@ -2363,50 +2363,81 @@
       ],
       "tbd": true
     },
-    "FUSE_6X30_4SLOT_TBD": {
+    "FUSE_5X20_CLIP_P5p66_ASM15_TBD": {
       "pads": [
         {
           "num": "1",
-          "x": -15,
-          "y": -3.85,
-          "w": 3.0,
-          "h": 2.4,
-          "hole": 1.0,
-          "slot": 1.8
+          "x": -10.33,
+          "y": 0,
+          "w": 2.4,
+          "h": 3.0,
+          "hole": 0.9,
+          "slot": 1.5,
+          "hole_w": 0.9,
+          "hole_h": 1.5
         },
         {
           "num": "1",
-          "x": -15,
-          "y": 3.85,
-          "w": 3.0,
-          "h": 2.4,
-          "hole": 1.0,
-          "slot": 1.8
+          "x": -4.67,
+          "y": 0,
+          "w": 2.4,
+          "h": 3.0,
+          "hole": 0.9,
+          "slot": 1.5,
+          "hole_w": 0.9,
+          "hole_h": 1.5
         },
         {
           "num": "2",
-          "x": 15,
-          "y": -3.85,
-          "w": 3.0,
-          "h": 2.4,
-          "hole": 1.0,
-          "slot": 1.8
+          "x": 4.67,
+          "y": 0,
+          "w": 2.4,
+          "h": 3.0,
+          "hole": 0.9,
+          "slot": 1.5,
+          "hole_w": 0.9,
+          "hole_h": 1.5
         },
         {
           "num": "2",
-          "x": 15,
-          "y": 3.85,
-          "w": 3.0,
-          "h": 2.4,
-          "hole": 1.0,
-          "slot": 1.8
+          "x": 10.33,
+          "y": 0,
+          "w": 2.4,
+          "h": 3.0,
+          "hole": 0.9,
+          "slot": 1.5,
+          "hole_w": 0.9,
+          "hole_h": 1.5
         }
       ],
       "body_mm": [
-        42,
-        14
+        27,
+        9
       ],
-      "tbd": true
+      "tbd": true,
+      "confirmed_from_user_and_seller": {
+        "fuse_mm": [
+          5,
+          20
+        ],
+        "single_clip_pin_pitch_mm": 5.66,
+        "tab_width_mm": 1.1,
+        "material_thickness_mm": 0.5,
+        "clip_width_mm": 6.2
+      },
+      "design_choices": {
+        "clip_center_spacing_mm": 15,
+        "slot_mm_xy": [
+          0.9,
+          1.5
+        ],
+        "slot_orientation": "long side Y; tube axis X, check actual bottom view"
+      },
+      "still_unconfirmed": [
+        "assembled clip spacing/end stops/contact engagement",
+        "full bottom-view orientation and tolerances",
+        "DC breaking capacity and fuse time-current/I2t"
+      ]
     }
   },
   "changed_source_documents": [
@@ -2467,6 +2498,7 @@
     "3b774d78b55454a0",
     "3f293074f57d5efa",
     "3f46ef50943c5a93",
+    "400b296c8c375f94",
     "40de834566555ffd",
     "48b82e3d74515ac7",
     "49edf23529485c68",
@@ -2552,7 +2584,6 @@
     "d9f5c35f5e0b57c6",
     "da52f667c13c5456",
     "dc7a93d3173f5bb0",
-    "ddf1274989b95153",
     "de410badf36a5a44",
     "e63da0ffb3a85557",
     "e7d7836b0f085a9d",

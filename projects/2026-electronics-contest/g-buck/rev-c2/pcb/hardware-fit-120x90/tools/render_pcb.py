@@ -63,12 +63,13 @@ def main():
                 ax.add_patch(plt.Rectangle((x+p['x']-p['w']/2,y+p['y']-p['h']/2),p['w'],p['h'],fill=False,color='black',linewidth=.5))
                 if p['hole']:
                     if p.get('slot'):
-                        ax.add_patch(plt.Rectangle((x+p['x']-p['slot']/2,y+p['y']-p['hole']/2),p['slot'],p['hole'],fill=False,color='black',linewidth=.4))
+                        hw=p.get('hole_w',p['slot']);hh=p.get('hole_h',p['hole'])
+                        ax.add_patch(plt.Rectangle((x+p['x']-hw/2,y+p['y']-hh/2),hw,hh,fill=False,color='black',linewidth=.4))
                     else:ax.add_patch(Circle((x+p['x'],y+p['y']),p['hole']/2,fill=False,color='black',linewidth=.4))
                 ax.text(x+p['x'],y+p['y']+p['h']/2+1,p['num'],ha='center',fontsize=6)
             ax.text(x,y-h/2-5,ref+' '+manifest['parts'][ref]['package'],ha='center',fontsize=7)
             if spec['tbd']:ax.text(x,y-h/2-10,('P10 FROM SELLER; ENVELOPE STILL TBD' if ref=='RS_IN' else 'P5 FROM SELLER; ENVELOPE STILL TBD' if ref=='RS_L' else 'PROVISIONAL - MEASURE ACTUAL PART'),ha='center',fontsize=6,color='#aa2222')
-        ax.text(15,76,'F1: 7.7 mm single-clip pitch; 30 mm clip-center spacing and slot axis are ASSUMPTIONS.',fontsize=7)
+        ax.text(15,76,'F1: 5x20 fuse; confirmed clip P5.66. Assembly centers 15mm are a DESIGN TRIAL - FIT FIRST.',fontsize=7)
         ax.text(15,68,'Seller pitch: RS_IN/OUT 50mOhm P10, wire D0.8; RS_L 25mOhm P5, wire D0.7.',fontsize=7)
         ax.text(15,60,'L1: vertical mounting; footprint 20 x 10 mm. Horizontal mounting needs a 20 x 20 mm area.',fontsize=7)
         ax.text(15,52,'C1/C3: P5, D10 body; drawing reserves D10.5 maximum. J1/J2: P2.54, hole 1.3.',fontsize=7)

@@ -78,12 +78,21 @@ def main():
         'resistance tolerance 1%','continuous rated power >=1W and its conditions',
         'planar depth and welded terminal boss dimensions','actual board standoff height']
     specs['RPRE_EXTERNAL_P5.08_TBD']=twopad(5.08,2.5,2.5,1.3,[9,5],True)
-    # A measured clip is NOT a measured assembled fuse holder. 30 mm clip spacing
-    # and axis of the 7.7 mm leg pitch are provisional, never fabrication evidence.
-    specs['FUSE_6X30_4SLOT_TBD']={'pads':[
-        {'num':str(end+1),'x':x,'y':y,'w':3.0,'h':2.4,'hole':1.0,'slot':1.8}
-        for end,x in enumerate([-15,15]) for y in [-3.85,3.85]],
-        'body_mm':[42,14],'tbd':True}
+    # Latest selected clips are 5x20, replacing the obsolete 6x30 reference.
+    # User explicitly confirmed 5.66 as single-clip pin center spacing.
+    # A 15mm clip-center assembly spacing is a DESIGN TRIAL, not vendor data;
+    # freeze only after fitting the 20mm fuse and checking end stops/contact.
+    specs['FUSE_5X20_CLIP_P5p66_ASM15_TBD']={'pads':[
+        {'num':str(end+1),'x':cx+dx,'y':0,'w':2.4,'h':3.0,'hole':.9,
+         'slot':1.5,'hole_w':.9,'hole_h':1.5}
+        for end,cx in enumerate([-7.5,7.5]) for dx in [-2.83,2.83]],
+        'body_mm':[27,9],'tbd':True,
+        'confirmed_from_user_and_seller':{'fuse_mm':[5,20],'single_clip_pin_pitch_mm':5.66,
+            'tab_width_mm':1.1,'material_thickness_mm':.5,'clip_width_mm':6.2},
+        'design_choices':{'clip_center_spacing_mm':15,'slot_mm_xy':[.9,1.5],
+            'slot_orientation':'long side Y; tube axis X, check actual bottom view'},
+        'still_unconfirmed':['assembled clip spacing/end stops/contact engagement',
+            'full bottom-view orientation and tolerances','DC breaking capacity and fuse time-current/I2t']}
     packages={}
     with (REV/'schematic/BOM_RevC2.csv').open(encoding='utf-8-sig') as f:
         bom={r['位号']:r for r in csv.DictReader(f)}
@@ -93,7 +102,7 @@ def main():
     for ref in ['C2','C4','C6']:packages[ref]='C0805'
     for ref in ['RS_IN','RS_OUT']:packages[ref]='SHUNT_M_50m_P10_D0p8'
     packages['RS_L']='SHUNT_U_25m_P5_D0p7'
-    packages.update(L1='L65125_VERTICAL_P10',F1='FUSE_6X30_4SLOT_TBD',R_PRE='RPRE_EXTERNAL_P5.08_TBD')
+    packages.update(L1='L65125_VERTICAL_P10',F1='FUSE_5X20_CLIP_P5p66_ASM15_TBD',R_PRE='RPRE_EXTERNAL_P5.08_TBD')
     # 0.25 W snubber resistor should not use an unqualified generic 0805.
     packages['R_SN']='R1206'
     package_ids={}
@@ -113,7 +122,8 @@ def main():
             b['defaultPad']={'padType':'RECT' if p['num']=='1' or not p['hole'] else 'ELLIPSE',
                              'width':mil(p['w']),'height':mil(p['h'])}
             b['hole']=({'holeType':'SLOT' if p.get('slot') else 'ROUND',
-                        'width':mil(p.get('slot',p['hole'])),'height':mil(p['hole'])} if p['hole'] else None)
+                        'width':mil(p.get('hole_w',p.get('slot',p['hole']))),
+                        'height':mil(p.get('hole_h',p['hole']))} if p['hole'] else None)
             docs[fp]['PAD','p'+str(n+1)]=b
         w,h=spec['body_mm']
         for layer,extra in [(3,0),(48,0),(47,.5)]:
@@ -124,7 +134,7 @@ def main():
         'J2':'2.54mm 2P；进线朝板外；1=VOUT，2=GND',
         'J_BYP':'2.54mm 2P；外接常开旁路开关；开关额定≥30VDC/3A另核',
         'J_MON':'2.54mm 2P；1=ADC_VIN_POST→PA6，2=GND；PA5保留LCD SCK',
-        'F1':'改用6×30mm管夹；仍需2A保险管；双夹中心距与7.7mm脚距轴向待量；当前4槽为占位，禁止制板',
+        'F1':'最新选型5×20mm、2A快断保险管（商品标250V）；5×20黄铜镀镍夹2只，脚宽1.1/厚0.5/用户确认单夹P5.66；槽0.9×1.5为设计值；两夹中心距15仅试装初值，需验证端帽接触和止挡；旧6×30/7.7作废，禁止直接制板',
         'L1':'65125 220μH±10%；DCR≤55mΩ；卖家6A Max≠Isat；立式20×10投影、P10、线径0.75；孔1.1为设计值',
         'C1':'470μF/50V；实物D10×H18、P5、脚径0.6；按Dmax10.5留空间；ESR/纹波及完整型号待核',
         'C3':'470μF/35V；实物D10×H13、P5、脚径0.6；按Dmax10.5留空间；耐压及完整型号待核',
@@ -147,7 +157,7 @@ def main():
         for k,v in [('Device',dev),('Footprint',package_ids[packages[ref]])]:attr(p['page'],p['id'],k,v)
         if ref in notes:attr(p['page'],p['id'],'Description',notes[ref])
         if ref in ['F1','C4']:
-            value={'F1':'2A / 6x30','C4':'10uF / 50V X7R'}[ref]
+            value={'F1':'2A / 5x20 FAST','C4':'10uF / 50V X7R'}[ref]
             for key in ['Value','Name']:attr(p['page'],p['id'],key,value)
             dm['attributes']['Value']=value;dm['title']=ref+' '+value
         p['attrs']['Device']=dev;p['attrs']['Footprint']=package_ids[packages[ref]]
@@ -265,7 +275,7 @@ def main():
     for n,(text,x,y,size,layer) in enumerate([
       ('G BUCK REV C2 | 120x90 | PCB REVIEW - NOT FOR FAB',21,5,1,3),
       ('U1 = IR2184 ONLY',48,49,.9,3),('J_MON.1 -> PA6 / ADC6',83,5,.85,3),
-      ('F1 6x30 / 2A - CLIP SPACING TBD',9,70,.8,13),
+      ('F1 5x20 / 2A FAST | CLIP P5.66 | ASM15 TRIAL FIT REQUIRED',9,70,.8,13),
       ('M1 12V / M2 5V: EXTERNAL LM2596HV; IN+ GND OUT+ GND',11,12,.8,13),
       ('SELLER PITCH: RS_IN/OUT P10; RS_L P5 | NO FAB RELEASE',12,8,.8,13)]):
         b=copy.deepcopy(stringbase);b.update(text=text,x=mil(x),y=mil(y),fontSize=mil(size),strokeWidth=mil(.12),layerId=layer)

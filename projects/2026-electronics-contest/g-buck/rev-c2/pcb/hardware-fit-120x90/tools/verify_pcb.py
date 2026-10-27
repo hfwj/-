@@ -43,7 +43,7 @@ def main():
     for ref,p in parts.items():
         before=sparts[ref]['attrs']['Value'];after=p['attrs']['Value']
         if before!=after:value_changes[ref]={'before':before,'after':after}
-    require(value_changes=={'F1':{'before':'2A / 5x20','after':'2A / 6x30'},
+    require(value_changes=={'F1':{'before':'2A / 5x20','after':'2A / 5x20 FAST'},
                             'C4':{'before':'10uF / 35V','after':'10uF / 50V X7R'}},'Unexpected component value changes')
     require(parts['U1']['attrs']['Value']=='IR2184PbF','Wrong driver version')
     require(parts['J_MON']['attrs']['Value']=='2P VIN_POST ADC / PA6','VIN monitor not assigned to PA6')
@@ -110,7 +110,7 @@ def main():
         'routing_complete':not unresolved,'native_desktop_open':'not_run','native_ERC':'not_run','native_DRC':'not_run',
         'manufacturing_release':False,'sqlite_integrity':sqlite3.connect('file:'+str(PATH)+'?mode=ro',uri=True).execute('pragma integrity_check').fetchone()[0]},
         'limitations':['Rectangular pad copper conservatively encloses round/oval pads; checks are not native ERC/DRC.',
-        'Seller drawings support RS_IN/OUT P10 D0.8 and RS_L P5 D0.7. Actual mounting-lead diameters/envelope depth/tolerance/power, F1 assembly spacing and thermal design remain unconfirmed.',
+        'Seller drawings support RS_IN/OUT P10 D0.8 and RS_L P5 D0.7. User confirms single 5x20 fuse-clip pitch 5.66; assembly spacing 15 is trial-fit only. Shunt ratings and fuse fit/DC breaking capacity/thermal design remain unconfirmed.',
         'No complete power routing, Kelvin routing or ground plane. No Gerber manufacturing output.',
         'Mounting pattern is proposed, not confirmed to an enclosure. Silk/courtyard/mask/paste/3D checks remain open.']}
     (ROOT/'data/verification.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
