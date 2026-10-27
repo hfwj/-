@@ -20,8 +20,16 @@
   },
   "external_accessory_lines": 12,
   "source_files_modified": false,
+  "confirmed_inventory": {
+    "100nF_50V_0805_X7R": {
+      "available": 50,
+      "per_board": 16,
+      "purchase_needed_one_board": 0,
+      "remaining_after_one_board": 34
+    }
+  },
   "source_graph_connected_pins": 310,
   "manufacturing_release": false,
-  "xlsx_sha256": "d38bac284d025b2757d45dd54e8fc2fe47bdbf78c1efefda980623f70e50bbc2",
-  "pdf_sha256": "f26c474775197a78a7a5b0f4b3cf555a57ff2b57668883fadc171dc6bf90b17b"
+  "xlsx_sha256": "4a69856c70b94c2fb4c9bbefa2571bbb2368a7ae46cb6057987e9e8c5a21ec81",
+  "pdf_sha256": "56e34d379de49e2d14815172c021257b1fd51c497e678c6109149f2b1c17e92d"
 }
