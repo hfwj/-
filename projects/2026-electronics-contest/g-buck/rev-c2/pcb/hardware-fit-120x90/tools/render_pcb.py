@@ -55,7 +55,7 @@ def main():
         ax.plot([15,65],[261,261],color='black',linewidth=.6)
         for x in [15,25,35,45,55,65]:ax.plot([x,x],[259,263],color='black',linewidth=.6)
         ax.text(15,254,'50 mm',fontsize=8)
-        items=[('F1',55,222),('L1',133,222),('C1',45,170),('J1',100,170),('RS_IN',150,170),('U1',45,115),('RS_L',150,115)]
+        items=[('F1',55,222),('L1',133,222),('C1',45,170),('J1',100,170),('RS_IN',150,170),('U1',45,115),('D1',96,115),('RS_L',150,115)]
         for ref,x,y in items:
             spec=manifest['specs'][manifest['parts'][ref]['package']];w,h=spec['body_mm']
             ax.add_patch(plt.Rectangle((x-w/2,y-h/2),w,h,fill=False,color='black',linewidth=.5))

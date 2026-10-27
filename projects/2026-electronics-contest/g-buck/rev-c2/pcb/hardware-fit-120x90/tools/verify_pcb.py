@@ -44,7 +44,9 @@ def main():
         before=sparts[ref]['attrs']['Value'];after=p['attrs']['Value']
         if before!=after:value_changes[ref]={'before':before,'after':after}
     require(value_changes=={'F1':{'before':'2A / 5x20','after':'2A / 5x20 FAST'},
-                            'C4':{'before':'10uF / 35V','after':'10uF / 50V X7R'}},'Unexpected component value changes')
+                            'C4':{'before':'10uF / 35V','after':'10uF / 50V X7R'},
+                            'D1':{'before':'SS56','after':'SR560 / 60V / 5A'},
+                            'D_FREE':{'before':'SS56 / 60V / 5A','after':'SR560 / 60V / 5A'}},'Unexpected component value changes')
     require(parts['U1']['attrs']['Value']=='IR2184PbF','Wrong driver version')
     require(parts['J_MON']['attrs']['Value']=='2P VIN_POST ADC / PA6','VIN monitor not assigned to PA6')
     geometry_errors=[];clearance_errors=[];board=box(0,0,120,90)

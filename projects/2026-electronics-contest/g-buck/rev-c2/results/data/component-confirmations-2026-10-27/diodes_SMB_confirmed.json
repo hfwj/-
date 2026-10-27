@@ -1,0 +1,61 @@
+{
+  "status": "PASS_STATIC_GEOMETRY_COMPARISON",
+  "comparison_baseline_commit": "11bce99",
+  "before_native_sha256": "97dc439fc294c2ed2d724955b9cde683cfc97b35cd4a10225413ab9e1f57bc91",
+  "after_native_sha256": "dc0cf5f6df9b6e79e6fdc6ad4ec8cbc0f95c042db030638ac1e793aa9bd7c1e3",
+  "user_confirmations": [
+    "两个都是SR560贴片",
+    "SMB"
+  ],
+  "refs": [
+    "D1",
+    "D_FREE"
+  ],
+  "quantity": 2,
+  "selected_model": "SR560",
+  "selected_package": "SMB / DO-214AA",
+  "selection_targets": {
+    "VRRM_V": 60,
+    "IF_AV_A": 5
+  },
+  "manufacturer_specific_datasheet_independently_verified": false,
+  "current_footprint_geometry": {
+    "body_mm": [
+      4.6,
+      3.6
+    ],
+    "pad_center_pitch_mm": 4.3,
+    "pad_mm": [
+      2.2,
+      2.6
+    ],
+    "pin1": "K",
+    "pin2": "A"
+  },
+  "same_all_pin_nets": true,
+  "same_all_copper_pads_and_holes": true,
+  "same_all_component_centers": true,
+  "same_all_body_envelopes": true,
+  "same_all_existing_copper_tracks": true,
+  "physical_pads": 325,
+  "copper_track_segments": 71,
+  "changed_model_labels": {
+    "D1": {
+      "before": "SS56",
+      "after": "SR560 / 60V / 5A"
+    },
+    "D_FREE": {
+      "before": "SS56 / 60V / 5A",
+      "after": "SR560 / 60V / 5A"
+    }
+  },
+  "L1_vertical_confirmed": true,
+  "uncommitted_axial_inference_previously_withdrawn": true,
+  "simulation_or_firmware_changes": false,
+  "manufacturing_release": false,
+  "remaining_checks": [
+    "manufacturer full order code/electrical conditions/recommended land pattern final review",
+    "existing board routing/actual native ERC and DRC",
+    "other pending physical components"
+  ]
+}

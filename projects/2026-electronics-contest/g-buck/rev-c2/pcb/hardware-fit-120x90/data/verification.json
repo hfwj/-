@@ -3,7 +3,7 @@
   "errors": [],
   "checks": {
     "source_sha256": "6a1ed47fc5ad60f26e2b3efa9301078c0e1f658fd5d7c378f988992510ee30d6",
-    "delivered_sha256": "97dc439fc294c2ed2d724955b9cde683cfc97b35cd4a10225413ab9e1f57bc91",
+    "delivered_sha256": "dc0cf5f6df9b6e79e6fdc6ad4ec8cbc0f95c042db030638ac1e793aa9bd7c1e3",
     "source_schematic_components": 120,
     "delivered_schematic_components": 120,
     "pcb_components": 120,
@@ -19,9 +19,17 @@
         "before": "2A / 5x20",
         "after": "2A / 5x20 FAST"
       },
+      "D1": {
+        "before": "SS56",
+        "after": "SR560 / 60V / 5A"
+      },
       "C4": {
         "before": "10uF / 35V",
         "after": "10uF / 50V X7R"
+      },
+      "D_FREE": {
+        "before": "SS56 / 60V / 5A",
+        "after": "SR560 / 60V / 5A"
       }
     },
     "preserved_source_PCB_library_documents": 526,

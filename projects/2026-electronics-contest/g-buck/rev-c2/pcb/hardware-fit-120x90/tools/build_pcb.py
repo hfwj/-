@@ -56,6 +56,7 @@ def main():
     specs['TERM_2.54_2P']=twopad(2.54,1.9,2.4,1.3,[5.48,6.3],False)
     specs['CP_D10_P5']=twopad(5,2.2,2.2,.9,[10.5,10.5],False)
     specs['L65125_VERTICAL_P10']=twopad(10,2.4,2.4,1.1,[20,10],False)
+    specs['L65125_VERTICAL_P10']['mounting_orientation_confirmed_by_user']='vertical'
     # 25mOhm seller drawing establishes P5, not the earlier assumed P10.
     # Retain conservative pad/hole/envelope sizes until terminal and depth fit
     # are checked; body-height marking excludes the protruding straight leads.
@@ -135,7 +136,9 @@ def main():
         'J_BYP':'2.54mm 2P；外接常开旁路开关；开关额定≥30VDC/3A另核',
         'J_MON':'2.54mm 2P；1=ADC_VIN_POST→PA6，2=GND；PA5保留LCD SCK',
         'F1':'最新选型5×20mm、2A快断保险管（商品标250V）；5×20黄铜镀镍夹2只，脚宽1.1/厚0.5/用户确认单夹P5.66；槽0.9×1.5为设计值；两夹中心距15仅试装初值，需验证端帽接触和止挡；旧6×30/7.7作废，禁止直接制板',
-        'L1':'65125 220μH±10%；DCR≤55mΩ；卖家6A Max≠Isat；立式20×10投影、P10、线径0.75；孔1.1为设计值',
+        'L1':'用户已确认立式；65125 220μH±10%；DCR≤55mΩ；卖家6A Max≠Isat；20×10投影、P10、线径0.75；孔1.1为设计值',
+        'D1':'用户明确SR560贴片、SMB（DO-214AA）；沿用现有SMB焊盘和位置；1=K色条端接V_SHUNT_IN、2=A接IN_PRE；厂家完整料号、额定条件及推荐焊盘最终复核待归档，不采用DO-201AD轴向目录尺寸',
+        'D_FREE':'用户明确与D1均SR560贴片、SMB（DO-214AA）；沿用现有SMB焊盘和位置；1=K色条端接SW、2=A接GND；厂家电气/热条件及推荐焊盘最终复核待归档',
         'C1':'470μF/50V；实物D10×H18、P5、脚径0.6；按Dmax10.5留空间；ESR/纹波及完整型号待核',
         'C3':'470μF/35V；实物D10×H13、P5、脚径0.6；按Dmax10.5留空间；耐压及完整型号待核',
         'C2':'1μF/50V X7R，0805；有效容量按实际料号的直流偏压曲线核对',
@@ -156,10 +159,12 @@ def main():
         if ref in notes:dm['attributes']['Description']=notes[ref]
         for k,v in [('Device',dev),('Footprint',package_ids[packages[ref]])]:attr(p['page'],p['id'],k,v)
         if ref in notes:attr(p['page'],p['id'],'Description',notes[ref])
-        if ref in ['F1','C4']:
-            value={'F1':'2A / 5x20 FAST','C4':'10uF / 50V X7R'}[ref]
+        if ref in ['F1','C4','D1','D_FREE']:
+            value={'F1':'2A / 5x20 FAST','C4':'10uF / 50V X7R',
+                   'D1':'SR560 / 60V / 5A','D_FREE':'SR560 / 60V / 5A'}[ref]
             for key in ['Value','Name']:attr(p['page'],p['id'],key,value)
             dm['attributes']['Value']=value;dm['title']=ref+' '+value
+            if ref in ['D1','D_FREE']:dm['attributes']['Manufacturer Part']='SR560'
         p['attrs']['Device']=dev;p['attrs']['Footprint']=package_ids[packages[ref]]
     pcb=newdoc('pcb','PCB',legacy['pcb'])
     keep=['META','PRIMITIVE','CANVAS','LAYER','LAYER_PHYS','ACTIVE_LAYER','RULE_TEMPLATE','RULE','SILK_OPTS','PREFERENCE','PANELIZE']

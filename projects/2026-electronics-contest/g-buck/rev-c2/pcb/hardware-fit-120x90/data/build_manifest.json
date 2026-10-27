@@ -45,8 +45,8 @@
       "y": 63,
       "angle": 180,
       "package": "SMB_DO214AA",
-      "value": "SS56",
-      "notes": "",
+      "value": "SR560 / 60V / 5A",
+      "notes": "用户明确SR560贴片、SMB（DO-214AA）；沿用现有SMB焊盘和位置；1=K色条端接V_SHUNT_IN、2=A接IN_PRE；厂家完整料号、额定条件及推荐焊盘最终复核待归档，不采用DO-201AD轴向目录尺寸",
       "mechanical_TBD": false
     },
     "RS_IN": {
@@ -134,7 +134,7 @@
       "angle": 0,
       "package": "L65125_VERTICAL_P10",
       "value": "220uH / Isat>=3A",
-      "notes": "65125 220μH±10%；DCR≤55mΩ；卖家6A Max≠Isat；立式20×10投影、P10、线径0.75；孔1.1为设计值",
+      "notes": "用户已确认立式；65125 220μH±10%；DCR≤55mΩ；卖家6A Max≠Isat；20×10投影、P10、线径0.75；孔1.1为设计值",
       "mechanical_TBD": false
     },
     "C3": {
@@ -1090,8 +1090,8 @@
       "y": 60,
       "angle": 90,
       "package": "SMB_DO214AA",
-      "value": "SS56 / 60V / 5A",
-      "notes": "阴极1接SW，阳极2接GND；紧贴QL；不可承诺消除全部Qrr",
+      "value": "SR560 / 60V / 5A",
+      "notes": "用户明确与D1均SR560贴片、SMB（DO-214AA）；沿用现有SMB焊盘和位置；1=K色条端接SW、2=A接GND；厂家电气/热条件及推荐焊盘最终复核待归档",
       "mechanical_TBD": false
     },
     "R_SN": {
@@ -2260,7 +2260,8 @@
         20,
         10
       ],
-      "tbd": false
+      "tbd": false,
+      "mounting_orientation_confirmed_by_user": "vertical"
     },
     "SHUNT_U_25m_P5_D0p7": {
       "pads": [
