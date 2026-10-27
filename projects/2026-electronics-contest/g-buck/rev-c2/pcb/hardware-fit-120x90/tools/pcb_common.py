@@ -9,6 +9,14 @@ from shapely import affinity
 
 PATH=ROOT/'native/GBUCK_RevC2_120x90_PCB_review.eprj2'
 
+def copper_vias(docs, pcb):
+    return [{'id':i,'net':v['netName'],'x':v['centerX']*.0254,
+             'y':v['centerY']*.0254,'diameter':v['viaDiameter']*.0254,
+             'hole_diameter':v['holeDiameter']*.0254,
+             'geometry':Point(v['centerX']*.0254,v['centerY']*.0254).buffer(v['viaDiameter']*.0254/2),
+             'layers':{1,2},'body':v}
+            for (k,i),v in docs[pcb].items() if k=='VIA']
+
 def copper_geometry(meta,docs,pcb):
     o=docs[pcb];a=attrs(o);pads=[];bodies=[];parts={}
     for (k,cid),c in o.items():

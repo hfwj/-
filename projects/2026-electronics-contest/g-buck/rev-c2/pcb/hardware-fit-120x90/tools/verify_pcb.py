@@ -19,6 +19,7 @@ def main():
     recovered={(p['ref'],p['pin']):p['net'] for p in pins}
     require(recovered==expected,'Schematic connectivity differs from Rev C.2')
     pp,pads,bodies,tracks=copper_geometry(meta,docs,manifest['pcb'])
+    vias=copper_vias(docs,manifest['pcb'])
     actual={}
     for p in pads:
         key=(p['ref'],p['pin'])
@@ -65,6 +66,7 @@ def main():
         d=a['geometry'].distance(b['geometry'])
         if a['net']!=b['net'] and d<.2-1e-5:clearance_errors.append('pad/pad <0.20mm '+a['ref']+'.'+a['pin']+'/'+b['ref']+'.'+b['pin'])
     for t in tracks:
+        if not box(.5,.5,119.5,89.5).covers(t['geometry']):geometry_errors.append('track beyond copper margin '+t['id'])
         for p in pads:
             if t['layer'] in p['layers'] and p['net']!=t['net'] and t['geometry'].distance(p['geometry'])<.2-1e-5:
                 clearance_errors.append('track/pad <0.20mm '+t['id']+'/'+p['ref']+'.'+p['pin'])
@@ -75,6 +77,26 @@ def main():
     for n,h in enumerate(holes):
         for p in pads:
             if h.distance(p['geometry'])<.2-1e-5:clearance_errors.append('mount hole/copper '+str(n)+'/'+p['ref'])
+        for t in tracks:
+            if h.distance(t['geometry'])<.2-1e-5:clearance_errors.append('mount hole/track '+str(n)+'/'+t['id'])
+        for v in vias:
+            if h.distance(v['geometry'])<.2-1e-5:clearance_errors.append('mount hole/via '+str(n)+'/'+v['id'])
+    for v in vias:
+        if not box(.5,.5,119.5,89.5).covers(v['geometry']):geometry_errors.append('via beyond copper margin '+v['id'])
+        if v['body']['viaType']!='NORMAL':geometry_errors.append('unsupported via type '+v['id'])
+        if v['hole_diameter']<=0 or (v['diameter']-v['hole_diameter'])/2<.15-1e-7:
+            geometry_errors.append('via drill/annular ring '+v['id'])
+        for p in pads:
+            if p['net']!=v['net'] and v['geometry'].distance(p['geometry'])<.2-1e-5:
+                clearance_errors.append('via/pad <0.20mm '+v['id']+'/'+p['ref']+'.'+p['pin'])
+        for t in tracks:
+            if t['net']!=v['net'] and v['geometry'].distance(t['geometry'])<.2-1e-5:
+                clearance_errors.append('via/track <0.20mm '+v['id']+'/'+t['id'])
+    for a,b in itertools.combinations(vias,2):
+        drill_gap=math.hypot(a['x']-b['x'],a['y']-b['y'])-(a['hole_diameter']+b['hole_diameter'])/2
+        if drill_gap<.2-1e-5:geometry_errors.append('via drill web <0.20mm '+a['id']+'/'+b['id'])
+        if a['net']!=b['net'] and a['geometry'].distance(b['geometry'])<.2-1e-5:
+            clearance_errors.append('via/via <0.20mm '+a['id']+'/'+b['id'])
     require(not geometry_errors,'Physical geometry violations')
     require(not clearance_errors,'Conservative copper clearance violations')
     # Physical same-layer copper connected components. A net assignment alone is
@@ -83,6 +105,7 @@ def main():
     for p in pads:
         if p['net']:pernet[p['net']].append((p['geometry'],set(p['layers']),p['ref']+'.'+p['pin']))
     for t in tracks:pernet[t['net']].append((t['geometry'],{t['layer']},'trace:'+t['id']))
+    for v in vias:pernet[v['net']].append((v['geometry'],{1,2},'via:'+v['id']))
     unresolved=[]
     for net,nodes in sorted(pernet.items()):
         parent=list(range(len(nodes)))
@@ -94,7 +117,7 @@ def main():
                 parent[find(j)]=find(i)
         groups=collections.defaultdict(list)
         for i,(_,_,name) in enumerate(nodes):
-            if not name.startswith('trace:'):groups[find(i)].append(name)
+            if not name.startswith(('trace:','via:')):groups[find(i)].append(name)
         if len(groups)>1:unresolved.append({'net':net,'copper_islands':len(groups),'minimum_links_remaining':len(groups)-1,'endpoints':list(groups.values())})
     status='PASS_STATIC_REVIEW_ONLY' if not errors else 'FAIL'
     report={'status':status,'errors':errors,'checks':{
@@ -107,7 +130,7 @@ def main():
         'source_schematic_pin_graph_preserved':recovered==expected,'pcb_pad_graph_matches_source':actual==expected,
         'value_changes':value_changes,'preserved_source_PCB_library_documents':len(reference_unchanged),
         'geometric_errors':geometry_errors,'clearance_errors':clearance_errors,
-        'mounting_holes':len(holes),'copper_track_segments':len(tracks),'vias':0,
+        'mounting_holes':len(holes),'copper_track_segments':len(tracks),'vias':len(vias),
         'unfinished_networks':len(unresolved),'minimum_copper_links_remaining':sum(x['minimum_links_remaining'] for x in unresolved),
         'routing_complete':not unresolved,'native_desktop_open':'not_run','native_ERC':'not_run','native_DRC':'not_run',
         'manufacturing_release':False,'sqlite_integrity':sqlite3.connect('file:'+str(PATH)+'?mode=ro',uri=True).execute('pragma integrity_check').fetchone()[0]},

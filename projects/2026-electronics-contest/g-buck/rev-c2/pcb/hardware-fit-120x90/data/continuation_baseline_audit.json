@@ -1,0 +1,13 @@
+{
+  "comparison_commit": "453610ef16354ec8c6537fd6b7c099b6a4c6ef51",
+  "baseline_sha256": "5cd3ffac1f58806eaba3c73288fe8d8296ab5ae2155a8a43c9e851efdc8477d4",
+  "delivered_sha256": "f857ba149ae212b4e0cdec0200371c51a92392f37b03c262cd53fb8e77ab943e",
+  "all_prior_native_records_preserved": true,
+  "only_new_record_types": {
+    "LINE": 65,
+    "VIA": 4
+  },
+  "schematic_and_library_documents_unchanged": true,
+  "component_positions_packages_values_nets_unchanged": true,
+  "previous_71_track_segments_unchanged": true
+}

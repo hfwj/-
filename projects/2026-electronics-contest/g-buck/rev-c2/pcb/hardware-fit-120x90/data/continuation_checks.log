@@ -1,0 +1,13 @@
+15/15 queued pairs connected in saved native copper.
+{"added_pairs": 0, "already_connected": 15, "pending_pairs": 0}
+{"added_pairs": 0, "pending_pairs": 0}
+Idempotence: native SHA-256 unchanged: f857ba149ae212b4e0cdec0200371c51a92392f37b03c262cd53fb8e77ab943e
+test_crossing_layers_are_not_connected (test_connectivity.ConnectivityTests.test_crossing_layers_are_not_connected) ... ok
+test_identical_labels_without_copper_are_open (test_connectivity.ConnectivityTests.test_identical_labels_without_copper_are_open) ... ok
+test_via_bridges_layers_but_smd_endpoint_does_not (test_connectivity.ConnectivityTests.test_via_bridges_layers_but_smd_endpoint_does_not) ... ok
+test_wrong_net_via_cannot_bridge (test_connectivity.ConnectivityTests.test_wrong_net_via_cannot_bridge) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.002s
+
+OK

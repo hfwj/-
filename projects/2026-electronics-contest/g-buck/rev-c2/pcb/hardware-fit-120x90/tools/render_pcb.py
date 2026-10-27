@@ -12,6 +12,7 @@ def main():
     manifest=json.loads((ROOT/'data/build_manifest.json').read_text())
     meta,docs,_=read_project(PATH)
     parts,pads,bodies,tracks=copper_geometry(meta,docs,manifest['pcb'])
+    vias=copper_vias(docs,manifest['pcb'])
     def draw(ax,limits=(0,120,0,90),dark=True):
         bg='#092f2b' if dark else 'white';ax.set_facecolor(bg)
         ax.add_patch(plt.Rectangle((0,0),120,90,fill=False,edgecolor='#90dbbb' if dark else '#144d39',linewidth=1.5))
@@ -19,7 +20,10 @@ def main():
             col='#ffb457' if manifest['parts'][b['ref']]['mechanical_TBD'] else '#71bba6'
             ax.add_patch(PatchPolygon(list(b['geometry'].exterior.coords),fill=False,edgecolor=col,linewidth=.6))
         for t in tracks:
-            g=t['geometry'];ax.add_patch(PatchPolygon(list(g.exterior.coords),color='#ed6d63',linewidth=0))
+            g=t['geometry'];ax.add_patch(PatchPolygon(list(g.exterior.coords),color='#ed6d63' if t['layer']==1 else '#6da9ff',linewidth=0))
+        for v in vias:
+            ax.add_patch(Circle((v['x'],v['y']),v['diameter']/2,color='#6da9ff'))
+            ax.add_patch(Circle((v['x'],v['y']),v['hole_diameter']/2,color='#071b19'))
         for p in pads:
             ax.add_patch(PatchPolygon(list(p['geometry'].exterior.coords),color='#e8c879',linewidth=0))
             if p['hole']:
@@ -36,7 +40,7 @@ def main():
     fig,ax=plt.subplots(figsize=(13,10));draw(ax)
     fig.suptitle('G BUCK Rev C.2 | 120 x 90 mm | PCB review',fontsize=17)
     ax.set_title('Native-record render | 120 components | partial local routes | NOT FOR FAB',fontsize=10)
-    fig.text(.09,.035,'Orange outlines: unverified mechanical footprints. Red: partial top copper. No power routing / Kelvin routing / ground fill.',fontsize=9)
+    fig.text(.09,.035,'Orange: mechanical TBD. Red: top copper. Blue: bottom copper / vias. Power / Kelvin / ground fill incomplete.',fontsize=9)
     fig.tight_layout(rect=(0,.06,1,.94))
     fig.savefig(ROOT/'previews/PCB_RevC2_120x90.png',dpi=190)
     with PdfPages(ROOT/'previews/PCB_RevC2_review.pdf') as pdf:

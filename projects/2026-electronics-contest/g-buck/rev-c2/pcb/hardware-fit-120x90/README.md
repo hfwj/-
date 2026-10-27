@@ -1,5 +1,7 @@
 # Rev C.2 PCB：按实购物料修订封装与布局
 
+**最新布线进度（比较453610e）：**原局部队列15组全部布通；现136段铜线、4过孔。全板仍45个未完成网络、至少204条待连接，尚不能制板。[本轮报告与修改影响](reports/局部布线续接与验证.md)。原理图、器件/BOM、坐标与封装保持；仿真/固件未改。旧说明PDF/Word为历史封装阶段资料，最新布线以本轮报告和验证JSON为准。
+
 以用户最新上传的《G题同步Buck完整原理图_RevC2.pdf》及仓库同版原生工程为电气基准，建立 **120×90 mm 双层 PCB 复核副本**。原 Rev C.2 原理图文件、Rev B PCB 和 GitHub 参考板保留。
 
 **当前是可编辑的封装/布局及局部布线复核版。主功率布线、Kelvin 取样布线、地平面和客户端 ERC/DRC 尚未完成，不能直接制板。**
@@ -51,6 +53,8 @@ Python 3.10+，安装 [tools/requirements.txt](tools/requirements.txt)，在仓�
 ```bash
 python projects/2026-electronics-contest/g-buck/rev-c2/pcb/hardware-fit-120x90/tools/build_pcb.py
 python projects/2026-electronics-contest/g-buck/rev-c2/pcb/hardware-fit-120x90/tools/route_local.py
+python projects/2026-electronics-contest/g-buck/rev-c2/pcb/hardware-fit-120x90/tools/route_pending.py
+python projects/2026-electronics-contest/g-buck/rev-c2/pcb/hardware-fit-120x90/tools/route_driver_bottom.py
 python projects/2026-electronics-contest/g-buck/rev-c2/pcb/hardware-fit-120x90/tools/verify_pcb.py
 python projects/2026-electronics-contest/g-buck/rev-c2/pcb/hardware-fit-120x90/tools/render_pcb.py
 ```

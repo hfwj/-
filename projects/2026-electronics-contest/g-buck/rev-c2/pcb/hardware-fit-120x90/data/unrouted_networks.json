@@ -1,17 +1,15 @@
 [
   {
     "net": "+12V_DRV",
-    "copper_islands": 3,
-    "minimum_links_remaining": 2,
+    "copper_islands": 2,
+    "minimum_links_remaining": 1,
     "endpoints": [
       [
         "U1.5",
+        "D_BOOT.1",
         "C5.1",
         "C6.1",
         "C_DRV.1"
-      ],
-      [
-        "D_BOOT.1"
       ],
       [
         "J_AUX12.3"
@@ -261,13 +259,11 @@
   },
   {
     "net": "DRV_EN",
-    "copper_islands": 3,
-    "minimum_links_remaining": 2,
+    "copper_islands": 2,
+    "minimum_links_remaining": 1,
     "endpoints": [
       [
-        "U1.2"
-      ],
-      [
+        "U1.2",
         "R_SD_PD.1"
       ],
       [
@@ -327,8 +323,8 @@
   },
   {
     "net": "GND",
-    "copper_islands": 86,
-    "minimum_links_remaining": 85,
+    "copper_islands": 77,
+    "minimum_links_remaining": 76,
     "endpoints": [
       [
         "J1.2"
@@ -355,7 +351,10 @@
         "R_BL.2"
       ],
       [
-        "U1.3"
+        "U1.3",
+        "C5.2",
+        "C6.2",
+        "C_DRV.2"
       ],
       [
         "R_GSL.2"
@@ -365,12 +364,6 @@
       ],
       [
         "R_SD_PD.2"
-      ],
-      [
-        "C5.2"
-      ],
-      [
-        "C6.2"
       ],
       [
         "J_AUX12.2"
@@ -393,7 +386,8 @@
         "U2.3"
       ],
       [
-        "U4.2"
+        "U4.2",
+        "C_U4.2"
       ],
       [
         "U4.3"
@@ -402,9 +396,6 @@
         "U3.2",
         "U3.5",
         "C_U3.2"
-      ],
-      [
-        "C_U4.2"
       ],
       [
         "C_A2.2"
@@ -452,10 +443,12 @@
         "D_ADC5.1"
       ],
       [
-        "U5.4"
+        "U5.4",
+        "C_U5.2"
       ],
       [
-        "U9.4"
+        "U9.4",
+        "C_U9.2"
       ],
       [
         "R16.2"
@@ -476,13 +469,8 @@
         "C_REF_OV.2"
       ],
       [
-        "C_U5.2"
-      ],
-      [
-        "C_U9.2"
-      ],
-      [
-        "U6.7"
+        "U6.7",
+        "C_U6.2"
       ],
       [
         "U6.12"
@@ -497,7 +485,8 @@
         "U7.5"
       ],
       [
-        "U7.7"
+        "U7.7",
+        "C_U7.2"
       ],
       [
         "U7.13"
@@ -515,7 +504,8 @@
         "U8.5"
       ],
       [
-        "U8.7"
+        "U8.7",
+        "C_U8.2"
       ],
       [
         "U8.13"
@@ -534,15 +524,6 @@
       ],
       [
         "C11.2"
-      ],
-      [
-        "C_U6.2"
-      ],
-      [
-        "C_U7.2"
-      ],
-      [
-        "C_U8.2"
       ],
       [
         "J_CTL.1"
@@ -578,9 +559,6 @@
         "C_REF_IOUT.2"
       ],
       [
-        "C_DRV.2"
-      ],
-      [
         "R_VINP_BOT.2"
       ],
       [
@@ -611,14 +589,12 @@
   },
   {
     "net": "G_L",
-    "copper_islands": 3,
-    "minimum_links_remaining": 2,
+    "copper_islands": 2,
+    "minimum_links_remaining": 1,
     "endpoints": [
       [
         "QL.1",
-        "RG_L.2"
-      ],
-      [
+        "RG_L.2",
         "R_GSL.1"
       ],
       [
@@ -744,19 +720,6 @@
     ]
   },
   {
-    "net": "LO",
-    "copper_islands": 2,
-    "minimum_links_remaining": 1,
-    "endpoints": [
-      [
-        "U1.4"
-      ],
-      [
-        "RG_L.1"
-      ]
-    ]
-  },
-  {
     "net": "L_RAW",
     "copper_islands": 3,
     "minimum_links_remaining": 2,
@@ -870,20 +833,6 @@
     ]
   },
   {
-    "net": "PWM_IN",
-    "copper_islands": 2,
-    "minimum_links_remaining": 1,
-    "endpoints": [
-      [
-        "U1.1",
-        "R_IN_PD.1"
-      ],
-      [
-        "R_PWM.2"
-      ]
-    ]
-  },
-  {
     "net": "SAFE_OK",
     "copper_islands": 2,
     "minimum_links_remaining": 1,
@@ -925,20 +874,6 @@
       ],
       [
         "R_SN.1"
-      ]
-    ]
-  },
-  {
-    "net": "VB",
-    "copper_islands": 2,
-    "minimum_links_remaining": 1,
-    "endpoints": [
-      [
-        "U1.8",
-        "D_BOOT.2"
-      ],
-      [
-        "C_BOOT.1"
       ]
     ]
   },
