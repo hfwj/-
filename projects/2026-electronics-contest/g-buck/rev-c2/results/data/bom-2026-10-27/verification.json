@@ -37,7 +37,8 @@
       ],
       "quantity": 1,
       "stock": null,
-      "full_part_number": null
+      "full_part_number": null,
+      "separate_purchase_confirmed": true
     }
   },
   "confirmed_inventory": {
@@ -50,6 +51,6 @@
   },
   "source_graph_connected_pins": 310,
   "manufacturing_release": false,
-  "xlsx_sha256": "d917341201578658c3e7c078d36708e95adcf28f4b8c85f5f99f44e6a2383d6a",
-  "pdf_sha256": "d1f3cec9eba892036e142dbf48bc16b40af5d630b4614a6aa5d011a40ad3448c"
+  "xlsx_sha256": "68060413a1253f86f6ded16df4641fd1abd3533a0cd9d03c8d2b6b00b809952e",
+  "pdf_sha256": "01a44eb91114d4bdad5baa15c8ad89721f54ad3a15666edbee247cc15981abe3"
 }
