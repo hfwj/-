@@ -2637,5 +2637,6 @@
   "current_review_artifact": "GBUCK_RevC2_DRC_netlistfix_20261028.eprj2",
   "pcb_export_eligible_components": 120,
   "channel_id_sync": "all_120_nonempty_and_matched",
-  "native_DRC_current_review": "pending_client_recheck"
+  "native_DRC_current_review": "passed_user_reported",
+  "native_DRC_acceptance_record": "data/client_DRC_acceptance_2026-10-28.json"
 }

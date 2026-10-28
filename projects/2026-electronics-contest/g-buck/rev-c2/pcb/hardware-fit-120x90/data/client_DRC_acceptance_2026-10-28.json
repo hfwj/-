@@ -1,0 +1,19 @@
+{
+  "date_client": "2026-10-28",
+  "timezone": "Asia/Shanghai",
+  "baseline_commit": "90a6b5d63dc96437217725f2d2604ccbbe82a31b",
+  "artifact": "GBUCK_RevC2_DRC_netlistfix_20261028.eprj2",
+  "delivered_artifact_sha256": "522404ddacb934a3d011085898ede3b195728565c0848abd487eb9145b70dbab",
+  "native_DRC_status": "passed_user_reported",
+  "evidence": {
+    "type": "user_message",
+    "text": "DRC通过",
+    "context": "Following the v2 netlist-sync engineering file delivery",
+    "native_run_performed_by": "user_in_EDA_client",
+    "rule_settings_and_exported_DRC_report": "not_supplied",
+    "client_saved_file_hash_verified": false
+  },
+  "native_ERC_status": "unconfirmed",
+  "manufacturing_release": false,
+  "change_scope": "Documentation and status only; schematic, physical components/BOM, PCB geometry, simulation/models and firmware unchanged."
+}

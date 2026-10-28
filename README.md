@@ -6,7 +6,7 @@
 
 | 项目 | 资料入口 | 当前结论 |
 |---|---|---|
-| 2026 电子电赛 G题：PCB 网表同步复验 v2 | [独立 v2 工程](projects/2026-electronics-contest/g-buck/rev-c2/pcb/hardware-fit-120x90/native/GBUCK_RevC2_DRC_netlistfix_20261028.eprj2) · [修复与影响](projects/2026-electronics-contest/g-buck/rev-c2/pcb/hardware-fit-120x90/reports/网表同步修复_v2_2026-10-28.md) | 修正R_PRE被排除出PCB网表、补齐18项通道ID；网络/器件值、BOM及PCB几何不变，仿真/固件未改；120项导出一致，原生DRC待复验 |
+| 2026 电子电赛 G题：PCB 网表同步复验 v2 | [独立 v2 工程](projects/2026-electronics-contest/g-buck/rev-c2/pcb/hardware-fit-120x90/native/GBUCK_RevC2_DRC_netlistfix_20261028.eprj2) · [修复与影响](projects/2026-electronics-contest/g-buck/rev-c2/pcb/hardware-fit-120x90/reports/网表同步修复_v2_2026-10-28.md) | 修正R_PRE被排除出PCB网表、补齐18项通道ID；网络/器件值、BOM及PCB几何不变，仿真/固件未改；120项导出一致，客户端DRC已通过（用户反馈），制造/装配检查待完成 |
 | 2026 电子电赛 G题：PCB 原生 DRC 封装同步复验 | [独立工程](projects/2026-electronics-contest/g-buck/rev-c2/pcb/hardware-fit-120x90/native/GBUCK_RevC2_DRC_syncfix_20261028.eprj2) · [定位与影响](projects/2026-electronics-contest/g-buck/rev-c2/pcb/hardware-fit-120x90/reports/客户端DRC与封装同步修复_2026-10-28.md) | 旧封装/新铜组合复现截图全部27条间距错误；新独立工程/库标识及当前封装已导出，原生DRC待复验；相对94c495e原理图、器件/BOM、铜几何及仿真/固件不变，不能制板 |
 | 2026 电子电赛 G题：器件逐项确认 | [记录](projects/2026-electronics-contest/g-buck/rev-c2/reports/component-confirmations-2026-10-27/README.md) | 1nF/50V/C0G/0805库存4只，单板用2只/补购0只/装一板余2只；1206/X7R款分开，原理图/PCB与仿真未改 |
 | 2026 电子电赛 G题：Rev C.2 更新采购清单 | [Excel](projects/2026-electronics-contest/g-buck/rev-c2/downloads/GBUCK_RevC2_updated_BOM.xlsx) · [PDF](projects/2026-electronics-contest/g-buck/rev-c2/downloads/GBUCK_RevC2_updated_BOM.pdf) · [说明](projects/2026-electronics-contest/g-buck/rev-c2/reports/updated-bom-2026-10-27/README.md) | 120位号合并46项采购记录；商品图分别支持50mΩ P10/线径0.8、25mΩ P5/线径0.7，RS_L已从P10改P5；F1按5×20/P5.66更新，双夹15mm待试装；电气网络/2A额定保持，仿真未改 |
