@@ -1,3 +1,5 @@
+**最新Gerber实测更正：**[核定报告](gerber-review/README.md)。实际铜形对应v5，51网连通、无异网铜短路；底层一处约0.199881mm。先前按椭圆及槽孔方向的字段解释不代表实际Gerber，详见报告。
+
 # PCB 功率布局 v5（相对上传 v4）
 
 [核定与修改说明](reports/PCB_v5_核定与修改说明.md) · [验证数据](results/data/verification.json) · [修订工程](native/GBUCK_RevC2_PowerLayout_v5_PCB修正_20261028.eprj2)

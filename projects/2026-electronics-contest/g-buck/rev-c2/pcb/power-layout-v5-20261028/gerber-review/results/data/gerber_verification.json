@@ -1,0 +1,294 @@
+{
+  "gerber_sha256": {
+    "Gerber_BottomLayer.GBL": "d7fb06fccfbc0f6a5b38a163fc735b04045559c90c643b4b3b2ece53db3ccc8b",
+    "Drill_PTH_Through_Via.DRL": "fda40c07de0382363ffca03848f06ccdd80f692b1338b5abbc626e6fe1c8c875",
+    "Drill_PTH_Through.DRL": "7ead0dc3437fbc4b79c5c8d6cdc442faa0f03ef43824f894fcb5be99a92f2a7d",
+    "Drill_NPTH_Through.DRL": "c6809c29f972253a0facc342c068243fe7b668c297d21028f7e77b8d24a19b28",
+    "Gerber_BoardOutlineLayer.GKO": "06dbdf9e83c509e986fbac9e7a25a3fc20f722f228e94540cbf0afc561517452",
+    "Gerber_TopLayer.GTL": "63d86615bd0491e954e975aca46149095fc3e28f0f4d6e4ae6f6e6dfff5f7046"
+  },
+  "layers": {
+    "1": {
+      "objects": {
+        "Region": 10,
+        "Flash": 536,
+        "Line": 584
+      },
+      "unmapped": [],
+      "matched_lines": 584,
+      "native_lines": 584,
+      "pad_shape_differences": [
+        {
+          "pad": "J1.2",
+          "native_size_mm": [
+            1.90000001,
+            2.400000026
+          ],
+          "export_aperture": "<circle aperture d=1.9 [mm]>",
+          "area_difference_mm2": 0.7469187902614731
+        },
+        {
+          "pad": "J2.2",
+          "native_size_mm": [
+            1.90000001,
+            2.400000026
+          ],
+          "export_aperture": "<circle aperture d=1.9 [mm]>",
+          "area_difference_mm2": 0.7469187902614696
+        },
+        {
+          "pad": "F1.2",
+          "native_size_mm": [
+            2.400000026,
+            3.000000096
+          ],
+          "export_aperture": "<circle aperture d=2.4 [mm]>",
+          "area_difference_mm2": 1.1322229025140782
+        },
+        {
+          "pad": "F1.2",
+          "native_size_mm": [
+            2.400000026,
+            3.000000096
+          ],
+          "export_aperture": "<circle aperture d=2.4 [mm]>",
+          "area_difference_mm2": 1.13222290251408
+        },
+        {
+          "pad": "QH.2",
+          "native_size_mm": [
+            1.799999956,
+            2.50000008
+          ],
+          "export_aperture": "<circle aperture d=1.8 [mm]>",
+          "area_difference_mm2": 0.9903754314672857
+        },
+        {
+          "pad": "QH.3",
+          "native_size_mm": [
+            1.799999956,
+            2.50000008
+          ],
+          "export_aperture": "<circle aperture d=1.8 [mm]>",
+          "area_difference_mm2": 0.990375431467271
+        },
+        {
+          "pad": "QL.2",
+          "native_size_mm": [
+            1.799999956,
+            2.50000008
+          ],
+          "export_aperture": "<circle aperture d=1.8 [mm]>",
+          "area_difference_mm2": 0.9903754314672839
+        },
+        {
+          "pad": "QL.3",
+          "native_size_mm": [
+            1.799999956,
+            2.50000008
+          ],
+          "export_aperture": "<circle aperture d=1.8 [mm]>",
+          "area_difference_mm2": 0.9903754314672693
+        },
+        {
+          "pad": "J_BYP.2",
+          "native_size_mm": [
+            1.90000001,
+            2.400000026
+          ],
+          "export_aperture": "<circle aperture d=1.9 [mm]>",
+          "area_difference_mm2": 0.7469187902614705
+        },
+        {
+          "pad": "J_MON.2",
+          "native_size_mm": [
+            1.90000001,
+            2.400000026
+          ],
+          "export_aperture": "<circle aperture d=1.9 [mm]>",
+          "area_difference_mm2": 0.746918790261474
+        }
+      ],
+      "minimum_foreign_copper_distance_mm": 0.2027558574254828,
+      "minimum_pair": [
+        "fill:f4d1d30098625939",
+        "line:904f5e0b946c53ce"
+      ],
+      "below_0p20mm": [],
+      "shorts": []
+    },
+    "2": {
+      "objects": {
+        "Region": 8,
+        "Flash": 277,
+        "Line": 215
+      },
+      "unmapped": [],
+      "matched_lines": 215,
+      "native_lines": 216,
+      "pad_shape_differences": [
+        {
+          "pad": "J1.2",
+          "native_size_mm": [
+            1.90000001,
+            2.400000026
+          ],
+          "export_aperture": "<circle aperture d=1.9 [mm]>",
+          "area_difference_mm2": 0.7469187902614731
+        },
+        {
+          "pad": "J2.2",
+          "native_size_mm": [
+            1.90000001,
+            2.400000026
+          ],
+          "export_aperture": "<circle aperture d=1.9 [mm]>",
+          "area_difference_mm2": 0.7469187902614696
+        },
+        {
+          "pad": "F1.2",
+          "native_size_mm": [
+            2.400000026,
+            3.000000096
+          ],
+          "export_aperture": "<circle aperture d=2.4 [mm]>",
+          "area_difference_mm2": 1.1322229025140782
+        },
+        {
+          "pad": "F1.2",
+          "native_size_mm": [
+            2.400000026,
+            3.000000096
+          ],
+          "export_aperture": "<circle aperture d=2.4 [mm]>",
+          "area_difference_mm2": 1.13222290251408
+        },
+        {
+          "pad": "QH.2",
+          "native_size_mm": [
+            1.799999956,
+            2.50000008
+          ],
+          "export_aperture": "<circle aperture d=1.8 [mm]>",
+          "area_difference_mm2": 0.9903754314672857
+        },
+        {
+          "pad": "QH.3",
+          "native_size_mm": [
+            1.799999956,
+            2.50000008
+          ],
+          "export_aperture": "<circle aperture d=1.8 [mm]>",
+          "area_difference_mm2": 0.990375431467271
+        },
+        {
+          "pad": "QL.2",
+          "native_size_mm": [
+            1.799999956,
+            2.50000008
+          ],
+          "export_aperture": "<circle aperture d=1.8 [mm]>",
+          "area_difference_mm2": 0.9903754314672839
+        },
+        {
+          "pad": "QL.3",
+          "native_size_mm": [
+            1.799999956,
+            2.50000008
+          ],
+          "export_aperture": "<circle aperture d=1.8 [mm]>",
+          "area_difference_mm2": 0.9903754314672693
+        },
+        {
+          "pad": "J_BYP.2",
+          "native_size_mm": [
+            1.90000001,
+            2.400000026
+          ],
+          "export_aperture": "<circle aperture d=1.9 [mm]>",
+          "area_difference_mm2": 0.7469187902614705
+        },
+        {
+          "pad": "J_MON.2",
+          "native_size_mm": [
+            1.90000001,
+            2.400000026
+          ],
+          "export_aperture": "<circle aperture d=1.9 [mm]>",
+          "area_difference_mm2": 0.746918790261474
+        }
+      ],
+      "minimum_foreign_copper_distance_mm": 0.19988376336084487,
+      "minimum_pair": [
+        "via:1ac348e637e15f5f",
+        "line:ffb6f40ab54c5e38"
+      ],
+      "below_0p20mm": [
+        [
+          "via:1ac348e637e15f5f",
+          "line:ffb6f40ab54c5e38",
+          0.19988376336084487
+        ]
+      ],
+      "shorts": []
+    }
+  },
+  "connectivity": {
+    "net_count": 51,
+    "unresolved": [],
+    "orphan_groups": []
+  },
+  "target_clearances_mm": {
+    "QH.2": {
+      "1": 1.7720981200301267,
+      "2": 0.20514351644633372
+    },
+    "F1.2": {
+      "1": 0.20514497570251447,
+      "2": 0.20514497570251022
+    },
+    "J_BYP.2": {
+      "1": 0.2537970490115373,
+      "2": 0.20511953685515494
+    },
+    "QL.3": {
+      "1": 4.1015755065989055,
+      "2": 0.5470911564610861
+    }
+  },
+  "drill_counts": {
+    "Drill_PTH_Through.DRL": 273,
+    "Drill_PTH_Through_Via.DRL": 207,
+    "Drill_NPTH_Through.DRL": 4
+  },
+  "note_via_drills_are_subset_of_PTH": true,
+  "minimum_foreign_clearance_exact_mm": 0.1998814429176506,
+  "borderline_pair": {
+    "layer": "bottom",
+    "via_net": "GND",
+    "via_center_mm": [
+      65.75,
+      39.0
+    ],
+    "trace_net": "FAULT_N",
+    "trace_start_mm": [
+      68.5,
+      39
+    ],
+    "trace_end_mm": [
+      53.5,
+      35.5
+    ],
+    "via_diameter_mm": 0.6,
+    "trace_width_mm": 0.25
+  },
+  "notes": [
+    "Actual Gerber pads marked ELLIPSE in the native file are exported as circles. Native unequal width/height fields alone do not establish elliptical manufactured pads.",
+    "F1 drill slots are vertical: width 0.9 mm, overall height 1.5 mm. Native relativeAngle=90 was omitted in the earlier slot direction assessment.",
+    "Four 3.2mm mounting-hole copper flashes coincide with 3.2mm NPTH drill removals and are excluded from electrical connectivity.",
+    "Copper topology is mapped to v5 tracks and via coordinates; this is not an independent schematic ERC or native DRC."
+  ],
+  "manufacturing_release": false,
+  "native_DRC": "not_supplied",
+  "scope": "Top/bottom copper geometry, mapped connectivity, board outline and drill spot checks; excludes full mask, silk, paste, 3D, DFM and physical fit validation."
+}
