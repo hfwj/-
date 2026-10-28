@@ -13,13 +13,32 @@ def search(router,a,b,width,step=.5):
     obstacles={l:router.obstacles(a['net'],l) for l in (1,2)}
     forbidden={l:union_all(obstacles[l]).buffer(width/2+.205) for l in (1,2)}
     for g in forbidden.values():prepare(g)
-    via_forbid=union_all(obstacles[1]+obstacles[2]+[p['geometry'] for p in router.pads+router.vias]).buffer(.505)
+    # Joining copper of the same net is intentional. Keep the new drill out
+    # of solder pads and preserve drill web, rather than imposing foreign-net
+    # copper clearance on that connection and making legal fanouts impossible.
+    via_foreign=union_all(obstacles[1]+obstacles[2]).buffer(.505)
+    via_pad_keepout=[p['geometry'].buffer(.255) for p in router.pads if p['net']==a['net']]
+    via_drill_keepout=[Point(v['x'],v['y']).buffer(.15+v['hole_diameter']/2+.205)
+                       for v in router.vias if v['net']==a['net']]
+    via_forbid=union_all([via_foreign]+via_pad_keepout+via_drill_keepout)
     prepare(via_forbid)
     transitions=union_all([p['geometry'] for p in router.pads if p['net']==a['net'] and 2 in p['layers']]
                           +[v['geometry'] for v in router.vias if v['net']==a['net']])
     for margin in (10.,25.):
         xs=np.arange(max(1.,math.floor((min(start[0],end[0])-margin)/step)*step),min(119.,max(start[0],end[0])+margin),step)
         ys=np.arange(max(1.,math.floor((min(start[1],end[1])-margin)/step)*step),min(89.,max(start[1],end[1])+margin),step)
+        # Pin-pitch corridors can be legal yet narrower than the regular grid.
+        # Add exact clearance-edge coordinates around both endpoints instead
+        # of weakening clearance or relying on a coincidental grid phase.
+        cx=[start[0],end[0]];cy=[start[1],end[1]];radius=width/2+.207
+        for p in router.pads:
+            if min(math.dist((p['x'],p['y']),start),math.dist((p['x'],p['y']),end))>4:continue
+            x0,y0,x1,y1=p['geometry'].bounds
+            cx += [x0-radius,x1+radius];cy += [y0-radius,y1+radius]
+            vr=.257 if p['net']==a['net'] else .507
+            cx += [x0-vr,x1+vr];cy += [y0-vr,y1+vr]
+        xs=np.unique(np.concatenate((xs,[x for x in cx if xs[0]<=x<=xs[-1]])))
+        ys=np.unique(np.concatenate((ys,[y for y in cy if ys[0]<=y<=ys[-1]])))
         xx,yy=np.meshgrid(xs,ys,indexing='ij')
         free={l:~intersects_xy(forbidden[l],xx,yy) for l in (1,2)}
         via_free=~intersects_xy(via_forbid,xx,yy)
@@ -27,7 +46,7 @@ def search(router,a,b,width,step=.5):
         def pt(n):return float(xs[n[0]]),float(ys[n[1]])
         def clear(p,q,l):return not forbidden[l].intersects(LineString([p,q]))
         def anchors(p,layers):
-            i,j=int(round((p[0]-xs[0])/step)),int(round((p[1]-ys[0])/step))
+            i,j=int(np.searchsorted(xs,p[0])),int(np.searchsorted(ys,p[1]))
             return [(x,y,l) for x in range(max(0,i-2),min(len(xs),i+3)) for y in range(max(0,j-2),min(len(ys),j+3))
                     for l in layers if free[l][x,y] and clear(p,pt((x,y,l)),l)]
         targets=set(anchors(end,b['layers']));cost={};prev={};queue=[];counter=itertools.count()
@@ -46,7 +65,7 @@ def search(router,a,b,width,step=.5):
                 x,y=n[0]+dx,n[1]+dy
                 if 0<=x<len(xs) and 0<=y<len(ys) and free[n[2]][x,y]:
                     q=(x,y,n[2])
-                    if clear(pt(n),pt(q),n[2]):neighbors.append((q,step*math.hypot(dx,dy)))
+                    if clear(pt(n),pt(q),n[2]):neighbors.append((q,math.dist(pt(n),pt(q))))
             if (via_free[n[0],n[1]] or existing[n[0],n[1]]) and free[3-n[2]][n[0],n[1]]:
                 neighbors.append(((n[0],n[1],3-n[2]),.05 if existing[n[0],n[1]] else 4.))
             for q,edge in neighbors:

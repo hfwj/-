@@ -1,0 +1,23 @@
+add_ground_copper.py: Static ground regions already exist; inspect before replacing.
+connect_ground_islands.py: No GND pad islands remain in the audited queue.
+stitch_ground_regions.py: {"region_stitch_vias": 0, "pending_ground_groups": []}
+reroute_ground_gate_bundles.py: {"opened_fence_bundles": 0, "pending_ground_groups": []}
+connect_precharge_terminal.py: Precharge terminal already connected.
+test_crossing_layers_are_not_connected (test_connectivity.ConnectivityTests.test_crossing_layers_are_not_connected) ... ok
+test_identical_labels_without_copper_are_open (test_connectivity.ConnectivityTests.test_identical_labels_without_copper_are_open) ... ok
+test_native_round_pad_uses_a_conservative_circle_without_square_corners (test_connectivity.ConnectivityTests.test_native_round_pad_uses_a_conservative_circle_without_square_corners) ... ok
+test_native_solid_fill_preserves_clearance_holes (test_connectivity.ConnectivityTests.test_native_solid_fill_preserves_clearance_holes) ... ok
+test_plane_does_not_connect_an_smd_on_the_other_layer (test_connectivity.ConnectivityTests.test_plane_does_not_connect_an_smd_on_the_other_layer) ... ok
+test_router_preserves_clearance_in_a_corridor_between_grid_rows (test_connectivity.ConnectivityTests.test_router_preserves_clearance_in_a_corridor_between_grid_rows) ... ok
+test_via_bridges_layers_but_smd_endpoint_does_not (test_connectivity.ConnectivityTests.test_via_bridges_layers_but_smd_endpoint_does_not) ... ok
+test_wrong_net_via_cannot_bridge (test_connectivity.ConnectivityTests.test_wrong_net_via_cannot_bridge) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.018s
+
+OK
+
+Native SHA-256: c6318ad0ea032586d0910d8e7d7a010b93f6b9816638f8f4bc2189199643430d
+Repeat routing entrypoints: no native changes.
+Static readback: 51 nets connected; 0 unfinished links; 0 orphan copper groups.
+Inner ellipse contact audit: PASS.

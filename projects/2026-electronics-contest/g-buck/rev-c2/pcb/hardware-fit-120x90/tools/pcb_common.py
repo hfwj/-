@@ -45,7 +45,14 @@ def copper_geometry(meta,docs,pcb):
             if pk=='PAD':
                 x=p['centerX']*.0254;y=p['centerY']*.0254
                 w=p['defaultPad']['width']*.0254;h=p['defaultPad']['height']*.0254
-                g=box(x-w/2,y-h/2,x+w/2,y+h/2)
+                if p['defaultPad']['padType']=='ELLIPSE':
+                    # Circumscribe the native ellipse: never gain clearance
+                    # from the small chord error of an inscribed circle.
+                    factor=1/math.cos(math.pi/128)
+                    g=affinity.scale(Point(0,0).buffer(1,quad_segs=32),w/2*factor,h/2*factor)
+                    g=affinity.translate(g,x,y)
+                else:
+                    g=box(x-w/2,y-h/2,x+w/2,y+h/2)
                 g=affinity.rotate(g,p.get('padAngle',0),origin=(x,y));g=transform(g)
                 center=transform(Point(x,y))
                 pads.append({'ref':ref,'pin':p['num'],'pid':pid,'net':nets[pid],

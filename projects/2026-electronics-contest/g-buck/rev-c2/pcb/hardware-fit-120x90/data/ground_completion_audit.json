@@ -1,0 +1,45 @@
+{
+  "status": "PASS_GROUND_AND_ALL_NET_CONTACT_AUDIT",
+  "comparison_commit": "ea19975484126b024eb23974dcb06828404c4aed",
+  "baseline_sha256": "c838ae50ffa001b1e1bd7bf08ea63e3069613d0163a3ebc35d761ff76bc0a43c",
+  "delivered_sha256": "c6318ad0ea032586d0910d8e7d7a010b93f6b9816638f8f4bc2189199643430d",
+  "schematic_and_library_documents_unchanged": true,
+  "all_component_positions_values_packages_unchanged": true,
+  "pad_and_net_associations_unchanged": true,
+  "removed_native_records": {
+    "LINE": 19
+  },
+  "changed_native_records": {},
+  "added_native_records": {
+    "LINE": 204,
+    "VIA": 87,
+    "FILL": 44
+  },
+  "added_vias_by_net": {
+    "GND": 76,
+    "ADC_IIN": 3,
+    "ADC_IL": 4,
+    "ADC_VOUT": 2,
+    "+3V3_A": 2
+  },
+  "locally_rerouted_signal_nets": [
+    "+3V3",
+    "+3V3_A",
+    "ADC_IIN",
+    "ADC_IL",
+    "ADC_IOUT",
+    "ADC_VIN",
+    "ADC_VOUT",
+    "ARM",
+    "FAULT_N"
+  ],
+  "connected_networks": 51,
+  "inscribed_ellipse_contact_graph_complete": true,
+  "inner_contact_tolerance_mm": 1e-08,
+  "orphan_copper_groups": [],
+  "unfinished_networks": [],
+  "native_desktop_open": "not_run",
+  "native_ERC": "not_run",
+  "native_DRC": "not_run",
+  "manufacturing_release": false
+}

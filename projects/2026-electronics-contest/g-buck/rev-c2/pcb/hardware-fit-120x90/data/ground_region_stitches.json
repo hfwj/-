@@ -1,0 +1,41 @@
+{
+  "baseline_sha256": "3910bd2f22061d5838043f9fa6cbe50cdb2a083a085235ed7a2a516c2e85dfb3",
+  "delivered_sha256": "9edbf3dbc562f3814503e544a6bfcef5536d6e1fa8bdf84462b5faaad9a39c5e",
+  "added_vias": [
+    {
+      "via_id": "4c253bcbafd35598",
+      "center_mm": [
+        78.36158084111875,
+        37.15310744156656
+      ],
+      "joined_ground_pads": [
+        "C_U9.2"
+      ]
+    },
+    {
+      "via_id": "5b6e3a3b79055495",
+      "center_mm": [
+        91.12500011799999,
+        29.312121354388715
+      ],
+      "joined_ground_pads": [
+        "R2.2"
+      ]
+    }
+  ],
+  "pending_ground_groups": [
+    [
+      "C8.2",
+      "D_ADC3.1"
+    ],
+    [
+      "D_ADC1.1"
+    ],
+    [
+      "J_CTL.10"
+    ]
+  ],
+  "same_net_pad_to_drill_gap_mm": 0.1,
+  "native_DRC": "not_run",
+  "manufacturing_release": false
+}

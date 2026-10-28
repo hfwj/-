@@ -2622,13 +2622,16 @@
   ],
   "native_path": "GBUCK_RevC2_120x90_PCB_review.eprj2",
   "manufacturing_release": false,
-  "routing": "paused_before_ground_copper",
+  "routing": "all_nets_connected_static_ground_draft",
   "routed_local_pairs": 40,
   "pending_local_pairs": 15,
   "continued_local_pairs": 11,
   "remaining_pending_local_pairs": 0,
   "driver_bottom_pairs": 4,
   "saved_non_ground_networks_complete": true,
-  "remaining_unfinished_networks": 1,
-  "minimum_ground_links_remaining": 79
+  "remaining_unfinished_networks": 0,
+  "minimum_ground_links_remaining": 0,
+  "static_ground_regions": 44,
+  "copper_track_segments": 768,
+  "via_count": 188
 }

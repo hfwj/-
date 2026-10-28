@@ -3,7 +3,7 @@ import sys
 import unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
-from pcb_common import Point, LineString, Polygon, copper_fills
+from pcb_common import Point, LineString, Polygon, box, copper_fills, copper_geometry
 from route_pending import connected
 
 
@@ -48,6 +48,42 @@ class ConnectivityTests(unittest.TestCase):
         self.assertFalse(fill['geometry'].covers(Point(1.27,1.27)))
         self.assertTrue(fill['geometry'].covers(Point(.25,.25)))
         self.assertAlmostEqual(fill['geometry'].area,7500*.0254**2)
+
+    def test_router_preserves_clearance_in_a_corridor_between_grid_rows(self):
+        from types import SimpleNamespace
+        from route_multilayer import search
+        def pad(x,y,g,net,layers):
+            return {'x':x,'y':y,'geometry':g,'net':net,'layers':layers}
+        a=pad(20,20.7,Point(20,20.7).buffer(.25),'A',[1])
+        b=pad(24,20.7,Point(24,20.7).buffer(.25),'A',[1])
+        low=box(21.5,18.825,22.5,19.825)
+        high=box(21.5,20.445,22.5,21.445)
+        walls=[low,high,box(21.5,1,22.5,18.825),box(21.5,21.445,22.5,89)]
+        router=SimpleNamespace(pads=[a,b,pad(22,19.325,low,'B',[1,2]),
+                                    pad(22,20.945,high,'B',[1,2])],vias=[],
+                               obstacles=lambda net,layer:walls)
+        result=search(router,a,b,.2)
+        self.assertIsNotNone(result)
+        for layer,points in result[0]:
+            copper=LineString(points).buffer(.1)
+            self.assertTrue(all(copper.distance(g)>=.2-1e-7 for g in walls))
+
+    def test_native_round_pad_uses_a_conservative_circle_without_square_corners(self):
+        import json,math
+        docs={'pcb':{('COMPONENT','c'):{'x':0,'y':0,'angle':0},
+                     ('ATTR','a'):{'parentId':'c','key':'Designator','value':'J'},
+                     ('ATTR','b'):{'parentId':'c','key':'Footprint','value':'fp'},
+                     ('PAD_NET',json.dumps(['PAD_NET','c','x','p'])):{'padNet':'GND'}},
+              'fp':{('PAD','p'):{'centerX':0,'centerY':0,'defaultPad':{
+                  'padType':'ELLIPSE','width':2/.0254,'height':2/.0254},
+                  'padAngle':0,'num':'1','layerId':12,'hole':None}}}
+        _,pads,_,_=copper_geometry({},docs,'pcb');g=pads[0]['geometry']
+        self.assertFalse(g.covers(Point(.9,.9)))
+        self.assertGreaterEqual(g.area,math.pi)
+        self.assertLess(g.area,math.pi+.01)
+        for n in range(360):
+            angle=math.radians(n)
+            self.assertTrue(g.covers(Point(math.cos(angle),math.sin(angle))))
 
 
 if __name__=='__main__':

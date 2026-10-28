@@ -1,0 +1,22 @@
+{
+  "baseline_sha256": "abf622b2920b9d1aff49aabc9025210aa78ded503186b07e6dab9dd465882d2a",
+  "delivered_sha256": "c6318ad0ea032586d0910d8e7d7a010b93f6b9816638f8f4bc2189199643430d",
+  "from": "R_PRE.2",
+  "to_trunk_id": "07a02aaff425570d",
+  "net": "IN_PRE",
+  "width_mm": 2.0,
+  "layer": 1,
+  "points_mm": [
+    [
+      21.5400001,
+      58.000000078
+    ],
+    [
+      22.48651897626022,
+      55.9401947115304
+    ]
+  ],
+  "length_mm": 2.2668692354994504,
+  "reason": "Native round pad missed the trunk although its former rectangular proxy touched",
+  "schematic_or_component_change": false
+}
