@@ -97,6 +97,23 @@ class ConnectivityTests(unittest.TestCase):
             angle=math.radians(n)
             self.assertTrue(g.covers(Point(math.cos(angle),math.sin(angle))))
 
+    def test_native_round_pad_ignores_stale_height_and_cannot_invent_a_layer_bridge(self):
+        import json
+        docs={'pcb':{('COMPONENT','c'):{'x':0,'y':0,'angle':0},
+                     ('ATTR','a'):{'parentId':'c','key':'Designator','value':'J'},
+                     ('ATTR','b'):{'parentId':'c','key':'Footprint','value':'fp'},
+                     ('PAD_NET',json.dumps(['PAD_NET','c','x','p'])):{'padNet':'A'}},
+              'fp':{('PAD','p'):{'centerX':0,'centerY':0,'defaultPad':{
+                  'padType':'ELLIPSE','width':2/.0254,'height':4/.0254},
+                  'padAngle':0,'num':'1','layerId':12,'hole':None}}}
+        _,pads,_,_=copper_geometry({},docs,'pcb')
+        self.assertFalse(pads[0]['geometry'].covers(Point(0,1.5)))
+        a={'net':'A','geometry':Point(-3,1.5).buffer(.1),'layers':[1]}
+        b={'net':'A','geometry':Point(3,0).buffer(.1),'layers':[2]}
+        tracks=[{'net':'A','layer':1,'geometry':LineString([(-3,1.5),(0,1.5)]).buffer(.1)},
+                {'net':'A','layer':2,'geometry':LineString([(0,0),(3,0)]).buffer(.1)}]
+        self.assertFalse(connected(a,b,[a,b]+pads,tracks))
+
 
 if __name__=='__main__':
     unittest.main()

@@ -1,0 +1,302 @@
+{
+  "baseline_native_v3_sha256": "1584597ad237e959d9a694e01f6ffeb77966021066d4344dd931222dbdcbd1ba",
+  "prepared_source_sha256": "d095080306efdba9f93878e643f78a5714bad7e8518e79f73c3f11aec0249760",
+  "moved_components": [
+    {
+      "ref": "C1",
+      "before_mm_deg": [
+        59.999999888000005,
+        75.99999989199999,
+        0
+      ],
+      "after_mm_deg": [
+        59.99999999999999,
+        82.0,
+        180
+      ]
+    },
+    {
+      "ref": "C2",
+      "before_mm_deg": [
+        66.00000008,
+        68.999999922,
+        0
+      ],
+      "after_mm_deg": [
+        72.7,
+        73.0,
+        270
+      ]
+    },
+    {
+      "ref": "QH",
+      "before_mm_deg": [
+        73.00000005,
+        73.00000005,
+        0
+      ],
+      "after_mm_deg": [
+        73.0,
+        77.5,
+        0
+      ]
+    },
+    {
+      "ref": "QL",
+      "before_mm_deg": [
+        73.00000005,
+        64.00000001599999,
+        0
+      ],
+      "after_mm_deg": [
+        75.54,
+        68.5,
+        180
+      ]
+    },
+    {
+      "ref": "U1",
+      "before_mm_deg": [
+        60.99999991999999,
+        61.999999951999996,
+        0
+      ],
+      "after_mm_deg": [
+        65.0,
+        67.8,
+        270
+      ]
+    },
+    {
+      "ref": "D_BOOT",
+      "before_mm_deg": [
+        60.99999991999999,
+        50.000000076,
+        0
+      ],
+      "after_mm_deg": [
+        56.8,
+        68.0,
+        90
+      ]
+    },
+    {
+      "ref": "RG_H",
+      "before_mm_deg": [
+        69.999999954,
+        68.999999922,
+        0
+      ],
+      "after_mm_deg": [
+        71.0,
+        73.0,
+        90
+      ]
+    },
+    {
+      "ref": "RG_L",
+      "before_mm_deg": [
+        70.999999986,
+        59.500000125999996,
+        90
+      ],
+      "after_mm_deg": [
+        77.8,
+        73.0,
+        90
+      ]
+    },
+    {
+      "ref": "R_GSH",
+      "before_mm_deg": [
+        73.00000005,
+        68.499999906,
+        90
+      ],
+      "after_mm_deg": [
+        66.5,
+        77.5,
+        90
+      ]
+    },
+    {
+      "ref": "R_GSL",
+      "before_mm_deg": [
+        73.500000066,
+        59.500000125999996,
+        90
+      ],
+      "after_mm_deg": [
+        81.5,
+        66.0,
+        270
+      ]
+    },
+    {
+      "ref": "C_BOOT",
+      "before_mm_deg": [
+        67.99999989,
+        59.999999888000005,
+        0
+      ],
+      "after_mm_deg": [
+        66.27,
+        61.6,
+        180
+      ]
+    },
+    {
+      "ref": "C5",
+      "before_mm_deg": [
+        65.000000048,
+        55.499999998,
+        0
+      ],
+      "after_mm_deg": [
+        59.00000000000001,
+        64.0,
+        90
+      ]
+    },
+    {
+      "ref": "C6",
+      "before_mm_deg": [
+        68.999999922,
+        53.999999949999996,
+        0
+      ],
+      "after_mm_deg": [
+        59.00000000000001,
+        68.0,
+        90
+      ]
+    },
+    {
+      "ref": "U4",
+      "before_mm_deg": [
+        102.99999999399999,
+        86.49999997399999,
+        0
+      ],
+      "after_mm_deg": [
+        115.5,
+        77.0,
+        90
+      ]
+    },
+    {
+      "ref": "C_U4",
+      "before_mm_deg": [
+        108.99999993199998,
+        86.49999997399999,
+        0
+      ],
+      "after_mm_deg": [
+        115.5,
+        82.0,
+        0
+      ]
+    },
+    {
+      "ref": "TP2",
+      "before_mm_deg": [
+        57.000000046,
+        83.000000116,
+        0
+      ],
+      "after_mm_deg": [
+        64.0,
+        88.5,
+        0
+      ]
+    },
+    {
+      "ref": "TP6",
+      "before_mm_deg": [
+        76.999999924,
+        68.999999922,
+        0
+      ],
+      "after_mm_deg": [
+        70.0,
+        83.5,
+        0
+      ]
+    },
+    {
+      "ref": "TP7",
+      "before_mm_deg": [
+        79.500000004,
+        70.49999996999999,
+        0
+      ],
+      "after_mm_deg": [
+        82.5,
+        68.5,
+        0
+      ]
+    },
+    {
+      "ref": "D_FREE",
+      "before_mm_deg": [
+        80.7,
+        65.9,
+        270
+      ],
+      "after_mm_deg": [
+        75.54,
+        63.599999999999994,
+        180
+      ]
+    },
+    {
+      "ref": "C_DRV",
+      "before_mm_deg": [
+        64.00000001599999,
+        52.99999991799999,
+        0
+      ],
+      "after_mm_deg": [
+        59.00000000000001,
+        72.0,
+        90
+      ]
+    }
+  ],
+  "electrical_schematic_unchanged": true,
+  "component_values_ratings_packages_and_BOM_unchanged": true,
+  "simulation_firmware_changed": false,
+  "counts": {
+    "components": 120,
+    "pads": 325,
+    "tracks": 804,
+    "vias": 209,
+    "ground_fills": 17
+  },
+  "C2_local_branch_copper_length_mm_each": 3.5,
+  "C2_branch_vias": 0,
+  "C2_branch_widths_mm": [
+    2.0,
+    1.0
+  ],
+  "C1_positive_branch_before_mm": 18.7,
+  "C1_positive_branch_after_mm": 13.8078864794,
+  "bulk_ground_return_after_mm": 23.995210241841384,
+  "bulk_ground_return_note": "About 24mm, roughly unchanged from the old bulk return. Local C2 return is the high-frequency improvement.",
+  "Kelvin_L_RAW_length_mm": 7.9338426894,
+  "Kelvin_V_CAP_length_mm": 7.933842803,
+  "Kelvin_width_mm": 0.2,
+  "Kelvin_paired_trunk_center_pitch_mm": 0.5,
+  "Kelvin_vias": 0,
+  "IL_BI_to_SW_minimum_mm": 16.74905067496918,
+  "IL_BI_to_L1_body_minimum_mm": 11.125120689072437,
+  "native_DRC": "not_run",
+  "native_Gerber": "not_exported",
+  "manufacturing_release": false,
+  "Kelvin_route_enclosed_area_mm2": 11.20525,
+  "D_FREE_SW_branch_mm": 5.869233360568642,
+  "D_FREE_GND_branch_mm": 4.915495904378322,
+  "D_FREE_branch_width_mm": 2.0,
+  "D_FREE_local_power_vias": 0,
+  "Kelvin_bottom_reference_coverage": true
+}

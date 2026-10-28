@@ -1,0 +1,16 @@
+test_crossing_layers_are_not_connected (test_connectivity.ConnectivityTests.test_crossing_layers_are_not_connected) ... ok
+test_external_part_export_flag_must_keep_its_board_terminals (test_connectivity.ConnectivityTests.test_external_part_export_flag_must_keep_its_board_terminals) ... ok
+test_identical_labels_without_copper_are_open (test_connectivity.ConnectivityTests.test_identical_labels_without_copper_are_open) ... ok
+test_instance_override_controls_PCB_export (test_connectivity.ConnectivityTests.test_instance_override_controls_PCB_export) ... ok
+test_native_round_pad_ignores_stale_height_and_cannot_invent_a_layer_bridge (test_connectivity.ConnectivityTests.test_native_round_pad_ignores_stale_height_and_cannot_invent_a_layer_bridge) ... ok
+test_native_round_pad_uses_a_conservative_circle_without_square_corners (test_connectivity.ConnectivityTests.test_native_round_pad_uses_a_conservative_circle_without_square_corners) ... ok
+test_native_solid_fill_preserves_clearance_holes (test_connectivity.ConnectivityTests.test_native_solid_fill_preserves_clearance_holes) ... ok
+test_plane_does_not_connect_an_smd_on_the_other_layer (test_connectivity.ConnectivityTests.test_plane_does_not_connect_an_smd_on_the_other_layer) ... ok
+test_router_preserves_clearance_in_a_corridor_between_grid_rows (test_connectivity.ConnectivityTests.test_router_preserves_clearance_in_a_corridor_between_grid_rows) ... ok
+test_via_bridges_layers_but_smd_endpoint_does_not (test_connectivity.ConnectivityTests.test_via_bridges_layers_but_smd_endpoint_does_not) ... ok
+test_wrong_net_via_cannot_bridge (test_connectivity.ConnectivityTests.test_wrong_net_via_cannot_bridge) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.019s
+
+OK

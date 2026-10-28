@@ -1,0 +1,2472 @@
+{
+  "parts": {
+    "J1": {
+      "id": "0e79698bbec25ba7",
+      "schematic_id": "4187235ac2f944c9",
+      "x": 4.999999906,
+      "y": 66.00000008,
+      "angle": 90,
+      "package": "TERM_2.54_2P",
+      "value": "2P POWER",
+      "notes": "2.54mm 2P；5.48×6.3×8.8mm；孔径1.3mm来自图；供应商标称6A/150V",
+      "mechanical_TBD": false
+    },
+    "J2": {
+      "id": "653fdc83132b5a7f",
+      "schematic_id": "c444938c712c4392",
+      "x": 115.800000048,
+      "y": 51.000000107999995,
+      "angle": 90,
+      "package": "TERM_2.54_2P",
+      "value": "2P POWER",
+      "notes": "2.54mm 2P；进线朝板外；1=VOUT，2=GND",
+      "mechanical_TBD": false
+    },
+    "F1": {
+      "id": "2909d5fe963a50d7",
+      "schematic_id": "20049ddff7d0470b",
+      "x": 28.999999911999996,
+      "y": 80.00000002,
+      "angle": 0,
+      "package": "FUSE_5X20_CLIP_P5p66_ASM15_TBD",
+      "value": "2A / 5x20 FAST",
+      "notes": "最新选型5×20mm、2A快断保险管（商品标250V）；5×20黄铜镀镍夹2只，脚宽1.1/厚0.5/用户确认单夹P5.66；槽0.9×1.5为设计值；两夹中心距15仅试装初值，需验证端帽接触和止挡；旧6×30/7.7作废，禁止直接制板",
+      "mechanical_TBD": true
+    },
+    "D1": {
+      "id": "c48bbc695e14582b",
+      "schematic_id": "db9bb847d1fc458e",
+      "x": 40.00000001,
+      "y": 62.999999984,
+      "angle": 180,
+      "package": "SMB_DO214AA",
+      "value": "SR560 / 60V / 5A",
+      "notes": "用户明确SR560贴片、SMB（DO-214AA）；沿用现有SMB焊盘和位置；1=K色条端接V_SHUNT_IN、2=A接IN_PRE；厂家完整料号、额定条件及推荐焊盘最终复核待归档，不采用DO-201AD轴向目录尺寸",
+      "mechanical_TBD": false
+    },
+    "RS_IN": {
+      "id": "ceb88f240fa159f3",
+      "schematic_id": "30d6b3ec36684742",
+      "x": 47.499999996,
+      "y": 69.999999954,
+      "angle": 0,
+      "package": "SHUNT_M_50m_P10_D0p8",
+      "value": "50mΩ / 1% / >=1W",
+      "notes": "用户商品图确认：达科峰M型康铜丝50mΩ、P10、线径0.8、图示体高12、额定5A；孔1.1/焊盘2.6为设计值；平面12×4包络仍为预留；1%精度和连续≥1W待核；Kelvin取样",
+      "mechanical_TBD": true
+    },
+    "RS_OUT": {
+      "id": "449c6d7948cd5412",
+      "schematic_id": "a628f44be7c847df",
+      "x": 107.99999989999999,
+      "y": 51.999999886,
+      "angle": 270,
+      "package": "SHUNT_M_50m_P10_D0p8",
+      "value": "50mΩ / 1% / >=1W",
+      "notes": "用户商品图确认：达科峰M型康铜丝50mΩ、P10、线径0.8、图示体高12、额定5A；孔1.1/焊盘2.6为设计值；平面12×4包络仍为预留；1%精度和连续≥1W待核；Kelvin取样",
+      "mechanical_TBD": true
+    },
+    "RS_L": {
+      "id": "1dde996b3e135ab4",
+      "schematic_id": "c6af1606a7ac473c",
+      "x": 107.99999989999999,
+      "y": 76.999999924,
+      "angle": 270,
+      "package": "SHUNT_U_25m_P5_D0p7",
+      "value": "25mΩ / 1% / >=1W",
+      "notes": "用户DILIN迪林图确认25mΩ、U型、P5、图示线径0.7、体高7；从P10占位改P5；孔1.1/焊盘2.6及12×4包络为保守设计预留；实际焊脚径、深度、1%精度与连续≥1W待核；库存未知",
+      "mechanical_TBD": true
+    },
+    "C1": {
+      "id": "85fd402a18d4574a",
+      "schematic_id": "cc124e744ffd4456",
+      "x": 59.99999999999999,
+      "y": 82.0,
+      "angle": 180,
+      "package": "CP_D10_P5",
+      "value": "470uF / 50V",
+      "notes": "470μF/50V；实物D10×H18、P5、脚径0.6；按Dmax10.5留空间；ESR/纹波及完整型号待核",
+      "mechanical_TBD": false
+    },
+    "C2": {
+      "id": "867d834a9a9f5140",
+      "schematic_id": "1d5e1b5eef8b426f",
+      "x": 72.7,
+      "y": 73.0,
+      "angle": 270,
+      "package": "C0805",
+      "value": "1uF / 50V",
+      "notes": "1μF/50V X7R，0805；有效容量按实际料号的直流偏压曲线核对",
+      "mechanical_TBD": false
+    },
+    "QH": {
+      "id": "10e3c76d745a5423",
+      "schematic_id": "c4b6c0df7ade4062",
+      "x": 73.0,
+      "y": 77.5,
+      "angle": 0,
+      "package": "TO220_3",
+      "value": "IRF540N",
+      "notes": "直立TO220，1G2D3S；金属背板=D；按无散热片实购，热设计待验证",
+      "mechanical_TBD": false
+    },
+    "QL": {
+      "id": "88060a77e33b552a",
+      "schematic_id": "0f0289ebfdc24a0f",
+      "x": 75.54,
+      "y": 68.5,
+      "angle": 180,
+      "package": "TO220_3",
+      "value": "IRF540N",
+      "notes": "直立TO220，1G2D3S；金属背板=D；按无散热片实购，热设计待验证",
+      "mechanical_TBD": false
+    },
+    "L1": {
+      "id": "bef99538c9e95441",
+      "schematic_id": "3b371163aeb24ee0",
+      "x": 90.00000008599999,
+      "y": 76.999999924,
+      "angle": 0,
+      "package": "L65125_VERTICAL_P10",
+      "value": "220uH / Isat>=3A",
+      "notes": "用户已确认立式；65125 220μH±10%；DCR≤55mΩ；卖家6A Max≠Isat；20×10投影、P10、线径0.75；孔1.1为设计值",
+      "mechanical_TBD": false
+    },
+    "C3": {
+      "id": "c97066aeead0534c",
+      "schematic_id": "452d2fda69a9466c",
+      "x": 107.99999989999999,
+      "y": 64.699999886,
+      "angle": 0,
+      "package": "CP_D10_P5",
+      "value": "470uF / 35V",
+      "notes": "470μF/35V；实物D10×H13、P5、脚径0.6；按Dmax10.5留空间；耐压及完整型号待核",
+      "mechanical_TBD": false
+    },
+    "C4": {
+      "id": "9f5e3f7efc335102",
+      "schematic_id": "0fec69d9078f482c",
+      "x": 99.999999898,
+      "y": 62.999999984,
+      "angle": 0,
+      "package": "C0805",
+      "value": "10uF / 50V X7R",
+      "notes": "10μF/50V X7R，0805；由35V提高至实购50V；直流偏压后有效容量待核",
+      "mechanical_TBD": false
+    },
+    "R_BL": {
+      "id": "8eb0aefd0dbc5bd3",
+      "schematic_id": "a3c94e60bcfb4f2e",
+      "x": 112.00000002799999,
+      "y": 43.000000105999995,
+      "angle": 90,
+      "package": "R1206",
+      "value": "2.2kΩ / 0.25W",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "U1": {
+      "id": "9c0c4fbfa0fb5c87",
+      "schematic_id": "fa5a8c4d277846b1",
+      "x": 65.0,
+      "y": 67.8,
+      "angle": 270,
+      "package": "DIP8_300",
+      "value": "IR2184PbF",
+      "notes": "Rev C.2指定IR2184PbF/DIP8；已购表IR2104不可直接代装；1IN 2SD# 3COM 4LO 5VCC 6VS 7HO 8VB",
+      "mechanical_TBD": false
+    },
+    "D_BOOT": {
+      "id": "b7d33e4175205d66",
+      "schematic_id": "af3fb66868e14e7e",
+      "x": 56.8,
+      "y": 68.0,
+      "angle": 90,
+      "package": "DO41_P10.16",
+      "value": "UF4007",
+      "notes": "自定义符号/封装：1=A，2=K",
+      "mechanical_TBD": true
+    },
+    "RG_H": {
+      "id": "318e5c13188c504e",
+      "schematic_id": "d41cbcadca2e4bac",
+      "x": 71.0,
+      "y": 73.0,
+      "angle": 90,
+      "package": "R0805",
+      "value": "4.7Ω",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "RG_L": {
+      "id": "72414eb143385163",
+      "schematic_id": "fbbc09adc25942f6",
+      "x": 77.8,
+      "y": 73.0,
+      "angle": 90,
+      "package": "R0805",
+      "value": "4.7Ω",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "R_GSH": {
+      "id": "2b4690e9cc4b5f1e",
+      "schematic_id": "fbb2c9f44ebd409c",
+      "x": 66.5,
+      "y": 77.5,
+      "angle": 90,
+      "package": "R0805",
+      "value": "10kΩ",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "R_GSL": {
+      "id": "37a3211db1c75989",
+      "schematic_id": "d716cab5e4cf4c77",
+      "x": 81.5,
+      "y": 66.0,
+      "angle": 270,
+      "package": "R0805",
+      "value": "10kΩ",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "R_IN_PD": {
+      "id": "544f60d9556654ed",
+      "schematic_id": "7ca6a4bc93044cd8",
+      "x": 53.499999934,
+      "y": 61.499999936,
+      "angle": 0,
+      "package": "R0805",
+      "value": "10kΩ",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "R_SD_PD": {
+      "id": "3385040b71ec592e",
+      "schematic_id": "23142db4309c44c9",
+      "x": 50.50000009199999,
+      "y": 59.999999888000005,
+      "angle": 90,
+      "package": "R0805",
+      "value": "10kΩ",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "R_PWM": {
+      "id": "02b137f5d66f5e75",
+      "schematic_id": "cae4a7c1d49346f7",
+      "x": 53.999999949999996,
+      "y": 59.000000109999995,
+      "angle": 0,
+      "package": "R0805",
+      "value": "100Ω",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "C_BOOT": {
+      "id": "f0b43fd0bfdc5324",
+      "schematic_id": "9a4cfc3a6a6a4ce7",
+      "x": 66.27,
+      "y": 61.6,
+      "angle": 180,
+      "package": "C0805",
+      "value": "1uF / 25V",
+      "notes": "X7R；确认有效容量",
+      "mechanical_TBD": false
+    },
+    "C5": {
+      "id": "ad0fd45bd83c5f6e",
+      "schematic_id": "43e5e359764544d5",
+      "x": 59.00000000000001,
+      "y": 64.0,
+      "angle": 90,
+      "package": "C0805",
+      "value": "100nF",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "C6": {
+      "id": "edb83fe4085a539c",
+      "schematic_id": "db7feffb08254979",
+      "x": 59.00000000000001,
+      "y": 68.0,
+      "angle": 90,
+      "package": "C0805",
+      "value": "10uF / 25V",
+      "notes": "10μF/25V，按实购2×1.25贴片改0805；完整料号/偏压待核",
+      "mechanical_TBD": false
+    },
+    "J_AUX12": {
+      "id": "8bfe30c3c7b75699",
+      "schematic_id": "5492a52b81234544",
+      "x": 6.99999997,
+      "y": 43.000000105999995,
+      "angle": 90,
+      "package": "HDR_1X4_2.54",
+      "value": "VIN→12V >=0.2A",
+      "notes": "M1必须为低静态功耗开关降压模块；输入15–25V、输出12V；计入整机输入功率",
+      "mechanical_TBD": true
+    },
+    "J_AUX5": {
+      "id": "9f2e776af7cd55fa",
+      "schematic_id": "5e00c00bc37f4bc6",
+      "x": 6.99999997,
+      "y": 27.99999988,
+      "angle": 90,
+      "package": "HDR_1X4_2.54",
+      "value": "VIN→5V >=0.5A",
+      "notes": "M2必须为开关降压模块，禁止7805等线性替代；输入15–25V，输出5V；计入整机输入功率",
+      "mechanical_TBD": true
+    },
+    "U2": {
+      "id": "159253faea4a59e4",
+      "schematic_id": "7ca7150d83684976",
+      "x": 47.499999996,
+      "y": 64.79999993999999,
+      "angle": 0,
+      "package": "SOIC8_150",
+      "value": "INA240A1D",
+      "notes": "SOIC-8脚序；4=NC；不得套用TSSOP脚序",
+      "mechanical_TBD": false
+    },
+    "U4": {
+      "id": "f30c84de2f125dff",
+      "schematic_id": "9c3ba794f1364f84",
+      "x": 115.5,
+      "y": 77.0,
+      "angle": 90,
+      "package": "SOIC8_150",
+      "value": "INA240A1D",
+      "notes": "SOIC-8脚序；4=NC；不得套用TSSOP脚序",
+      "mechanical_TBD": false
+    },
+    "U3": {
+      "id": "bc35b1ed680651f0",
+      "schematic_id": "e74cbc312bd34a87",
+      "x": 101.999999962,
+      "y": 53.999999949999996,
+      "angle": 0,
+      "package": "SOT23_6",
+      "value": "INA181A1DBV",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "C_U2": {
+      "id": "b4a005c651ba5ad9",
+      "schematic_id": "bfdf516d4c884cd7",
+      "x": 52.499999902,
+      "y": 64.79999993999999,
+      "angle": 90,
+      "package": "C0805",
+      "value": "100nF",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "C_U3": {
+      "id": "60ea1c855cbb5a51",
+      "schematic_id": "d10de2927e18477a",
+      "x": 101.999999962,
+      "y": 57.000000046,
+      "angle": 0,
+      "package": "C0805",
+      "value": "100nF",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "C_U4": {
+      "id": "e143c8fc49eb5eb3",
+      "schematic_id": "0679460d407541e0",
+      "x": 115.5,
+      "y": 82.0,
+      "angle": 0,
+      "package": "C0805",
+      "value": "100nF",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "C_A2": {
+      "id": "68e41e45191d5496",
+      "schematic_id": "50dfdbc36f394d78",
+      "x": 94.999999992,
+      "y": 25.000000038,
+      "angle": 90,
+      "package": "C0805",
+      "value": "100nF",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "R_VDDA": {
+      "id": "b8c62ca8768c5cdb",
+      "schematic_id": "9b1ec27b98bd44cf",
+      "x": 101.999999962,
+      "y": 26.00000007,
+      "angle": 0,
+      "package": "R0805",
+      "value": "1Ω",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "C_A1": {
+      "id": "b506b8dc2b9954e3",
+      "schematic_id": "b32308ef6c984019",
+      "x": 98.000000088,
+      "y": 25.000000038,
+      "angle": 0,
+      "package": "C0805",
+      "value": "1uF",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "C_A3": {
+      "id": "6aaff9b85b5858d6",
+      "schematic_id": "daddd60e43994e8e",
+      "x": 91.99999989599999,
+      "y": 25.000000038,
+      "angle": 90,
+      "package": "C0805",
+      "value": "10uF / 25V",
+      "notes": "用户明确0805；10μF/25V保持，原1206暂定封装改C0805；中心(92,25)mm/90°保持，焊盘缩小并各向中心移动0.5mm；实际介质/完整料号及偏压容量待归档",
+      "mechanical_TBD": false
+    },
+    "R1": {
+      "id": "6d6a9202eda35f67",
+      "schematic_id": "7495401444d9431d",
+      "x": 86.99999998999999,
+      "y": 28.999999911999996,
+      "angle": 0,
+      "package": "R0805",
+      "value": "100kΩ / 0.1%",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "R2": {
+      "id": "d7daa69e901554ab",
+      "schematic_id": "61449d946d15492f",
+      "x": 91.00000011799999,
+      "y": 28.999999911999996,
+      "angle": 0,
+      "package": "R0805",
+      "value": "10kΩ / 0.1%",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "R4": {
+      "id": "b55222bea3c95b97",
+      "schematic_id": "bdf658ed564f44cb",
+      "x": 86.99999998999999,
+      "y": 22.999999973999998,
+      "angle": 0,
+      "package": "R0805",
+      "value": "10kΩ / 0.1%",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "R5": {
+      "id": "dc2468d740695bf3",
+      "schematic_id": "2597c7bf71cb4fbc",
+      "x": 91.00000011799999,
+      "y": 20.99999991,
+      "angle": 0,
+      "package": "R0805",
+      "value": "1kΩ / 0.1%",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "R3": {
+      "id": "ad1503290c6855a0",
+      "schematic_id": "c903fed2d7244437",
+      "x": 94.499999976,
+      "y": 28.999999911999996,
+      "angle": 90,
+      "package": "R0805",
+      "value": "1kΩ",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "R7": {
+      "id": "49e29c1ad01a5c12",
+      "schematic_id": "17d70e39dd27450c",
+      "x": 93.99999996,
+      "y": 34.000000072,
+      "angle": 90,
+      "package": "R0805",
+      "value": "1kΩ",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "R6": {
+      "id": "68bbcea891485660",
+      "schematic_id": "d4e4b76014e641e9",
+      "x": 94.499999976,
+      "y": 20.99999991,
+      "angle": 90,
+      "package": "R0805",
+      "value": "1kΩ",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "R8": {
+      "id": "5492e1bc03fa5a79",
+      "schematic_id": "b37f3a7320f74394",
+      "x": 93.99999996,
+      "y": 38.999999978,
+      "angle": 0,
+      "package": "R0805",
+      "value": "1kΩ",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "R_IL_ADC": {
+      "id": "e2c784ef396b5dd4",
+      "schematic_id": "b381d5192f7a41b2",
+      "x": 88.000000022,
+      "y": 32.000000007999994,
+      "angle": 90,
+      "package": "R0805",
+      "value": "1kΩ",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "C7": {
+      "id": "54c50b9e456f59f0",
+      "schematic_id": "73b4bd167de74d08",
+      "x": 98.000000088,
+      "y": 27.99999988,
+      "angle": 0,
+      "package": "C0805",
+      "value": "4.7nF",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "C9": {
+      "id": "070dc009bdf55f34",
+      "schematic_id": "c6777247de574fe8",
+      "x": 98.000000088,
+      "y": 34.000000072,
+      "angle": 0,
+      "package": "C0805",
+      "value": "4.7nF",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "C8": {
+      "id": "ffc66c205c9551c3",
+      "schematic_id": "d7d4edea24694bb4",
+      "x": 98.000000088,
+      "y": 21.999999942,
+      "angle": 0,
+      "package": "C0805",
+      "value": "4.7nF",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "C10": {
+      "id": "33d54d57148b5dfb",
+      "schematic_id": "9c0daae48b1b4432",
+      "x": 98.000000088,
+      "y": 38.999999978,
+      "angle": 0,
+      "package": "C0805",
+      "value": "4.7nF",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "C_IL_ADC": {
+      "id": "6cfb9fe059a15164",
+      "schematic_id": "8560ac273fef445c",
+      "x": 91.00000011799999,
+      "y": 32.000000007999994,
+      "angle": 0,
+      "package": "C0805",
+      "value": "1nF",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "D_ADC1": {
+      "id": "b8e9e5201d555aba",
+      "schematic_id": "0e80cfceb3094695",
+      "x": 102.99999999399999,
+      "y": 28.999999911999996,
+      "angle": 0,
+      "package": "SOT23_3",
+      "value": "BAT54S",
+      "notes": "1=A1，2=K2，3=K1/A2；必须用BAT54S串联双二极管",
+      "mechanical_TBD": false
+    },
+    "D_ADC2": {
+      "id": "16311c1360f75d2c",
+      "schematic_id": "3bf830937ccb4125",
+      "x": 102.99999999399999,
+      "y": 35.000000103999994,
+      "angle": 0,
+      "package": "SOT23_3",
+      "value": "BAT54S",
+      "notes": "1=A1，2=K2，3=K1/A2；必须用BAT54S串联双二极管",
+      "mechanical_TBD": false
+    },
+    "D_ADC3": {
+      "id": "41fc471cad345d6c",
+      "schematic_id": "87043c8fae464e47",
+      "x": 102.99999999399999,
+      "y": 22.999999973999998,
+      "angle": 0,
+      "package": "SOT23_3",
+      "value": "BAT54S",
+      "notes": "1=A1，2=K2，3=K1/A2；必须用BAT54S串联双二极管",
+      "mechanical_TBD": false
+    },
+    "D_ADC4": {
+      "id": "d499e3e588335caf",
+      "schematic_id": "ce75a5b47d824022",
+      "x": 102.99999999399999,
+      "y": 40.00000001,
+      "angle": 0,
+      "package": "SOT23_3",
+      "value": "BAT54S",
+      "notes": "1=A1，2=K2，3=K1/A2；必须用BAT54S串联双二极管",
+      "mechanical_TBD": false
+    },
+    "D_ADC5": {
+      "id": "03169c1a08ad5601",
+      "schematic_id": "9a47fab9b7a74089",
+      "x": 91.00000011799999,
+      "y": 35.000000103999994,
+      "angle": 0,
+      "package": "SOT23_3",
+      "value": "BAT54S",
+      "notes": "1=A1，2=K2，3=K1/A2；必须用BAT54S串联双二极管",
+      "mechanical_TBD": false
+    },
+    "U5": {
+      "id": "07936f5638135198",
+      "schematic_id": "62bad4a7a3df4f2a",
+      "x": 52.99999991799999,
+      "y": 35.000000103999994,
+      "angle": 0,
+      "package": "SOIC8_150",
+      "value": "LM393",
+      "notes": "具体订货后缀待确认；输出开集电极并联，上拉至3.3V",
+      "mechanical_TBD": false
+    },
+    "U9": {
+      "id": "64cc96de0b465d75",
+      "schematic_id": "6b1526364b984e7d",
+      "x": 72.000000018,
+      "y": 35.000000103999994,
+      "angle": 0,
+      "package": "SOIC8_150",
+      "value": "LM393",
+      "notes": "具体订货后缀待确认；输出开集电极并联，上拉至3.3V",
+      "mechanical_TBD": false
+    },
+    "R9": {
+      "id": "d679a9242a395d0e",
+      "schematic_id": "7a5ce602cc06495e",
+      "x": 45.999999947999996,
+      "y": 41.000000042,
+      "angle": 90,
+      "package": "R0805",
+      "value": "10kΩ / 0.1%",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "R16": {
+      "id": "aa253bde9936542e",
+      "schematic_id": "6af500043cb94567",
+      "x": 57.000000046,
+      "y": 42.000000074,
+      "angle": 90,
+      "package": "R0805",
+      "value": "10kΩ / 0.1%",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "R10A": {
+      "id": "7e60d793344e5e0c",
+      "schematic_id": "19819fa738544bee",
+      "x": 49.000000044,
+      "y": 42.000000074,
+      "angle": 0,
+      "package": "R0805",
+      "value": "49.9kΩ / 0.1%",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "R15A": {
+      "id": "d22a62d51bc7577e",
+      "schematic_id": "7b67773f3f9f48be",
+      "x": 59.999999888000005,
+      "y": 42.000000074,
+      "angle": 0,
+      "package": "R0805",
+      "value": "49.9kΩ / 0.1%",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "R10B": {
+      "id": "58555b8f64235d61",
+      "schematic_id": "032ecb53f2054d0a",
+      "x": 51.999999886,
+      "y": 42.000000074,
+      "angle": 90,
+      "package": "R0805",
+      "value": "100Ω / 0.1%",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "R15B": {
+      "id": "9a027b688b39564c",
+      "schematic_id": "b8251d37a57c4a69",
+      "x": 62.999999984,
+      "y": 42.000000074,
+      "angle": 90,
+      "package": "R0805",
+      "value": "100Ω / 0.1%",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "R11": {
+      "id": "2889078af7e55a59",
+      "schematic_id": "5d1bc2644d234365",
+      "x": 67.000000112,
+      "y": 41.000000042,
+      "angle": 0,
+      "package": "R0805",
+      "value": "23kΩ",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "R12": {
+      "id": "180b66292f02559a",
+      "schematic_id": "523177013a0547b3",
+      "x": 69.999999954,
+      "y": 41.000000042,
+      "angle": 90,
+      "package": "R0805",
+      "value": "10kΩ",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "R13": {
+      "id": "125a04d70c5452e2",
+      "schematic_id": "dd4e9f2a914b414f",
+      "x": 34.000000072,
+      "y": 32.000000007999994,
+      "angle": 0,
+      "package": "R0805",
+      "value": "10kΩ",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "C_REF_POS": {
+      "id": "6ec0f6ac8ff154d1",
+      "schematic_id": "dbcd9df91cc34967",
+      "x": 50.000000076,
+      "y": 38.999999978,
+      "angle": 0,
+      "package": "C0805",
+      "value": "100nF",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "C_REF_NEG": {
+      "id": "0e82574c346f5928",
+      "schematic_id": "f07595513a6041d0",
+      "x": 59.999999888000005,
+      "y": 38.999999978,
+      "angle": 0,
+      "package": "C0805",
+      "value": "100nF",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "C_REF_OV": {
+      "id": "6cf57115ad1f5984",
+      "schematic_id": "c49d303805f242b0",
+      "x": 67.000000112,
+      "y": 37.999999945999996,
+      "angle": 90,
+      "package": "C0805",
+      "value": "100nF",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "C_U5": {
+      "id": "464cdb8225a0558c",
+      "schematic_id": "96e1aecd379f4713",
+      "x": 58.000000078,
+      "y": 35.000000103999994,
+      "angle": 90,
+      "package": "C0805",
+      "value": "100nF",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "C_U9": {
+      "id": "5067206830285679",
+      "schematic_id": "e2610c722ba449a9",
+      "x": 76.999999924,
+      "y": 35.000000103999994,
+      "angle": 90,
+      "package": "C0805",
+      "value": "100nF",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "U6": {
+      "id": "4b1b6c4f4e7151e2",
+      "schematic_id": "39f60ed7a557455b",
+      "x": 29.999999944000002,
+      "y": 19.999999878,
+      "angle": 0,
+      "package": "SOIC14_150",
+      "value": "SN74HC74DR",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "U7": {
+      "id": "67a678c71d1a5b27",
+      "schematic_id": "b8e0a306691142ba",
+      "x": 44.999999916,
+      "y": 19.999999878,
+      "angle": 0,
+      "package": "SOIC14_150",
+      "value": "SN74HC08DR",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "U8": {
+      "id": "d763e12344cd5a5c",
+      "schematic_id": "529e10cf9b63421d",
+      "x": 59.999999888000005,
+      "y": 19.999999878,
+      "angle": 0,
+      "package": "SOIC14_150",
+      "value": "SN74HC14DR",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "R14": {
+      "id": "337d8f459cb255f7",
+      "schematic_id": "8ab2d1c6a054405b",
+      "x": 60.99999991999999,
+      "y": 28.999999911999996,
+      "angle": 90,
+      "package": "R0805",
+      "value": "10kΩ",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "R_EN_PD": {
+      "id": "99b573b0dd46599f",
+      "schematic_id": "73764153256e43ca",
+      "x": 41.000000042,
+      "y": 28.999999911999996,
+      "angle": 0,
+      "package": "R0805",
+      "value": "10kΩ",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "R_ARM_PD": {
+      "id": "7b88bdc1e88d599d",
+      "schematic_id": "f738f50371fc440e",
+      "x": 27.000000102,
+      "y": 27.99999988,
+      "angle": 0,
+      "package": "R0805",
+      "value": "10kΩ",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "C11": {
+      "id": "a9a69e365bc752b1",
+      "schematic_id": "7e5a3d50219248dd",
+      "x": 65.000000048,
+      "y": 27.000000102,
+      "angle": 0,
+      "package": "C0805",
+      "value": "100nF",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "C_U6": {
+      "id": "0a376e389aba5a54",
+      "schematic_id": "5e5626cb00314808",
+      "x": 35.000000103999994,
+      "y": 22.999999973999998,
+      "angle": 90,
+      "package": "C0805",
+      "value": "100nF",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "C_U7": {
+      "id": "59661fac60b856ec",
+      "schematic_id": "60386eda0ae04816",
+      "x": 50.000000076,
+      "y": 22.999999973999998,
+      "angle": 90,
+      "package": "C0805",
+      "value": "100nF",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "C_U8": {
+      "id": "5fef3b93eb8358cd",
+      "schematic_id": "d90f6074338e4396",
+      "x": 65.000000048,
+      "y": 22.999999973999998,
+      "angle": 90,
+      "package": "C0805",
+      "value": "100nF",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "D_POR": {
+      "id": "74320fc8f62a5481",
+      "schematic_id": "5a66bd2705b54536",
+      "x": 58.000000078,
+      "y": 27.99999988,
+      "angle": 0,
+      "package": "SOT23_3",
+      "value": "BAT54",
+      "notes": "1=A，3=K，2=NC；与BAT54S不混用",
+      "mechanical_TBD": false
+    },
+    "J_CTL": {
+      "id": "3b04dbafcd9354ef",
+      "schematic_id": "2f47872e2b584957",
+      "x": 113.00000006,
+      "y": 20.99999991,
+      "angle": 0,
+      "package": "HDR_2X8_2.54",
+      "value": "STM32 CONTROL 2x8",
+      "notes": "pin6由GND改IOUT_OC_N，外接STM32 PB11/EXTI11；旧排线/控制板必须同步改线",
+      "mechanical_TBD": true
+    },
+    "TP1": {
+      "id": "a1bd10eccf2a5175",
+      "schematic_id": "7691adf25cb344d8",
+      "x": 10.000000065999998,
+      "y": 67.99999989,
+      "angle": 0,
+      "package": "TP_D1.5",
+      "value": "VIN_EXT",
+      "notes": "SMD测试点；探针和夹具兼容性待确认",
+      "mechanical_TBD": false
+    },
+    "TP2": {
+      "id": "73da5c7c3fd95835",
+      "schematic_id": "d92eb6e0030d4fc2",
+      "x": 64.0,
+      "y": 88.5,
+      "angle": 0,
+      "package": "TP_D1.5",
+      "value": "VIN",
+      "notes": "SMD测试点；探针和夹具兼容性待确认",
+      "mechanical_TBD": false
+    },
+    "TP3": {
+      "id": "5979d421feca5105",
+      "schematic_id": "aaf3bc008aa54644",
+      "x": 83.000000116,
+      "y": 70.49999996999999,
+      "angle": 0,
+      "package": "TP_D1.5",
+      "value": "SW",
+      "notes": "SMD测试点；探针和夹具兼容性待确认",
+      "mechanical_TBD": false
+    },
+    "TP4": {
+      "id": "c0dc564fa975561e",
+      "schematic_id": "8ed08fc705a04c57",
+      "x": 115.00000012399998,
+      "y": 42.000000074,
+      "angle": 0,
+      "package": "TP_D1.5",
+      "value": "VOUT",
+      "notes": "SMD测试点；探针和夹具兼容性待确认",
+      "mechanical_TBD": false
+    },
+    "TP5": {
+      "id": "4586286adb06524a",
+      "schematic_id": "c30ec6531b5642eb",
+      "x": 108.99999993199998,
+      "y": 36.499999898,
+      "angle": 0,
+      "package": "TP_D1.5",
+      "value": "GND",
+      "notes": "SMD测试点；探针和夹具兼容性待确认",
+      "mechanical_TBD": false
+    },
+    "TP6": {
+      "id": "dfd2e5c2a296514d",
+      "schematic_id": "8297b2d36dc54560",
+      "x": 70.0,
+      "y": 83.5,
+      "angle": 0,
+      "package": "TP_D1.5",
+      "value": "G_H",
+      "notes": "SMD测试点；探针和夹具兼容性待确认",
+      "mechanical_TBD": false
+    },
+    "TP7": {
+      "id": "3ce3d7d84ee15f7a",
+      "schematic_id": "620a7e1d13a04ebc",
+      "x": 82.5,
+      "y": 68.5,
+      "angle": 0,
+      "package": "TP_D1.5",
+      "value": "G_L",
+      "notes": "SMD测试点；探针和夹具兼容性待确认",
+      "mechanical_TBD": false
+    },
+    "TP8": {
+      "id": "5710b8e8a6135a9e",
+      "schematic_id": "57150fd050cb4969",
+      "x": 88.000000022,
+      "y": 49.000000044,
+      "angle": 0,
+      "package": "TP_D1.5",
+      "value": "IL_BI",
+      "notes": "SMD测试点；探针和夹具兼容性待确认",
+      "mechanical_TBD": false
+    },
+    "TP9": {
+      "id": "6a0a8c713fc55ef9",
+      "schematic_id": "6efcf89690e540e0",
+      "x": 35.999999882,
+      "y": 27.99999988,
+      "angle": 0,
+      "package": "TP_D1.5",
+      "value": "FAULT_N",
+      "notes": "SMD测试点；探针和夹具兼容性待确认",
+      "mechanical_TBD": false
+    },
+    "TP10": {
+      "id": "e40068467f51534a",
+      "schematic_id": "0fd6ab9838bf437b",
+      "x": 102.99999999399999,
+      "y": 19.0000001,
+      "angle": 0,
+      "package": "TP_D1.5",
+      "value": "+3V3_A",
+      "notes": "SMD测试点；探针和夹具兼容性待确认",
+      "mechanical_TBD": false
+    },
+    "R_PRE": {
+      "id": "b3510a0d713f5256",
+      "schematic_id": "670369cec67e4e8e",
+      "x": 19.0000001,
+      "y": 58.000000078,
+      "angle": 0,
+      "package": "RPRE_EXTERNAL_P5.08_TBD",
+      "value": "22Ω / 5W / pulse≥0.3J",
+      "notes": "外置22Ω/5W脉冲≥0.3J电阻，板上仅两引出焊盘；不得将电阻实体塞进引出焊盘投影",
+      "mechanical_TBD": true
+    },
+    "J_BYP": {
+      "id": "b060e34528595fce",
+      "schematic_id": "592e951a2f894bc8",
+      "x": 6.99999997,
+      "y": 56.000000013999994,
+      "angle": 90,
+      "package": "TERM_2.54_2P",
+      "value": "SPST旁路接口 ≥30VDC/3A",
+      "notes": "2.54mm 2P；外接常开旁路开关；开关额定≥30VDC/3A另核",
+      "mechanical_TBD": false
+    },
+    "D_FREE": {
+      "id": "561cc246cd4159cf",
+      "schematic_id": "20bc2d6bb0b940fc",
+      "x": 75.54,
+      "y": 63.599999999999994,
+      "angle": 180,
+      "package": "SMB_DO214AA",
+      "value": "SR560 / 60V / 5A",
+      "notes": "用户明确与D1均SR560贴片、SMB（DO-214AA）；沿用现有SMB焊盘和位置；1=K色条端接SW、2=A接GND；厂家电气/热条件及推荐焊盘最终复核待归档",
+      "mechanical_TBD": false
+    },
+    "R_SN": {
+      "id": "4d21e7f027ea573b",
+      "schematic_id": "56f95c1fac574705",
+      "x": 88.0,
+      "y": 68.5,
+      "angle": 90,
+      "package": "R1206",
+      "value": "10Ω / 0.25W / DNP",
+      "notes": "DNP；10Ω≥0.25W，改1206以匹配功率要求；实购功率仍需核对",
+      "mechanical_TBD": false
+    },
+    "C_SN": {
+      "id": "dfa73836d8155579",
+      "schematic_id": "e042079294d74b4f",
+      "x": 91.0,
+      "y": 68.5,
+      "angle": 90,
+      "package": "C0805",
+      "value": "1nF / 100V C0G / DNP",
+      "notes": "默认不装，配合R_SN",
+      "mechanical_TBD": false
+    },
+    "R_IL_PROT": {
+      "id": "45c6c4c4d1525ec1",
+      "schematic_id": "e1183161c0694fbe",
+      "x": 91.99999989599999,
+      "y": 45.999999947999996,
+      "angle": 0,
+      "package": "R0805",
+      "value": "1kΩ / 1%",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "C_IL_PROT": {
+      "id": "1be15b94647e5f2c",
+      "schematic_id": "8858a19e16c2433d",
+      "x": 88.000000022,
+      "y": 43.999999884,
+      "angle": 0,
+      "package": "C0805",
+      "value": "1nF / C0G",
+      "notes": "RC时间常数1us，不是固定1us blanking或总响应时间",
+      "mechanical_TBD": false
+    },
+    "R_IOUT_PROT": {
+      "id": "519ee0eab4fd53b9",
+      "schematic_id": "5c7c8496c77249e3",
+      "x": 91.00000011799999,
+      "y": 38.999999978,
+      "angle": 90,
+      "package": "R0805",
+      "value": "1kΩ / 1%",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "C_IOUT_PROT": {
+      "id": "bfdadf39dbf85944",
+      "schematic_id": "34c925ac0a69428f",
+      "x": 86.99999998999999,
+      "y": 36.999999914,
+      "angle": 0,
+      "package": "C0805",
+      "value": "100nF / 25V X7R",
+      "notes": "告警RC时间常数100us；不替代固件持续判据或输出硬限流",
+      "mechanical_TBD": false
+    },
+    "R_IOUT_TOP": {
+      "id": "d91bbca549155b49",
+      "schematic_id": "d6fae19456c8407d",
+      "x": 76.999999924,
+      "y": 41.000000042,
+      "angle": 90,
+      "package": "R0805",
+      "value": "20kΩ / 0.1%",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "R_IOUT_BOT": {
+      "id": "a2628fc566b05963",
+      "schematic_id": "43fa9ed18e584005",
+      "x": 80.00000002,
+      "y": 38.999999978,
+      "angle": 0,
+      "package": "R0805",
+      "value": "10kΩ / 0.1%",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "C_REF_IOUT": {
+      "id": "f572174f250a5ce6",
+      "schematic_id": "f39fc290d9ba4663",
+      "x": 80.00000002,
+      "y": 35.000000103999994,
+      "angle": 0,
+      "package": "C0805",
+      "value": "100nF",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "R_IOUT_PU": {
+      "id": "65f145dda7d450ca",
+      "schematic_id": "909777c96af94552",
+      "x": 82.5,
+      "y": 23.0,
+      "angle": 0,
+      "package": "R0805",
+      "value": "10kΩ",
+      "notes": "U9B独立开集电极告警上拉，接PB11，禁止直接并入FAULT_N造成正常负载切换误锁存",
+      "mechanical_TBD": false
+    },
+    "C_DRV": {
+      "id": "333542aeb01557d3",
+      "schematic_id": "df9ae7c3d93b4701",
+      "x": 59.00000000000001,
+      "y": 72.0,
+      "angle": 90,
+      "package": "C0805",
+      "value": "1uF / 25V X7R",
+      "notes": "新增贴近U1.VCC/COM的低ESR陶瓷",
+      "mechanical_TBD": false
+    },
+    "TP11": {
+      "id": "80559ba446fb5e17",
+      "schematic_id": "3614fac70a9249ed",
+      "x": 108.99999993199998,
+      "y": 38.999999978,
+      "angle": 0,
+      "package": "TP_D1.5",
+      "value": "IOUT_RAW",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "TP12": {
+      "id": "cba1f55a75a05dfc",
+      "schematic_id": "660ceee94c684d4d",
+      "x": 84.49999991,
+      "y": 43.000000105999995,
+      "angle": 0,
+      "package": "TP_D1.5",
+      "value": "IL_PROT",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "TP13": {
+      "id": "008b449fec3c5309",
+      "schematic_id": "483148fc7a0640e7",
+      "x": 80.00000002,
+      "y": 29.499999927999998,
+      "angle": 0,
+      "package": "TP_D1.5",
+      "value": "VREF_IOUT",
+      "notes": "",
+      "mechanical_TBD": false
+    },
+    "R_VINP_TOP": {
+      "id": "e835db31bdc0596e",
+      "schematic_id": "b657cf1068325b35",
+      "x": 86.99999998999999,
+      "y": 18.000000068,
+      "angle": 0,
+      "package": "R0805",
+      "value": "100kΩ / 0.1%",
+      "notes": "预充后VIN分压上臂",
+      "mechanical_TBD": false
+    },
+    "R_VINP_BOT": {
+      "id": "46cf7989db3254b1",
+      "schematic_id": "94a9b720ea6c508f",
+      "x": 91.00000011799999,
+      "y": 18.000000068,
+      "angle": 0,
+      "package": "R0805",
+      "value": "10kΩ / 0.1%",
+      "notes": "预充后VIN分压下臂",
+      "mechanical_TBD": false
+    },
+    "R_VINP_ADC": {
+      "id": "644e18d531fc5b8c",
+      "schematic_id": "4b62c164a813529b",
+      "x": 93.99999996,
+      "y": 13.99999994,
+      "angle": 90,
+      "package": "R0805",
+      "value": "1kΩ",
+      "notes": "ADC串联滤波/限流",
+      "mechanical_TBD": false
+    },
+    "C_VINP_ADC": {
+      "id": "17b3b138b3365f6b",
+      "schematic_id": "29b5f4e9a63d5e1c",
+      "x": 96.50000003999999,
+      "y": 11.000000098,
+      "angle": 90,
+      "package": "C0805",
+      "value": "4.7nF / C0G",
+      "notes": "含分压源阻抗的标称τ约47.4us",
+      "mechanical_TBD": false
+    },
+    "D_ADC6": {
+      "id": "9ad4c618df72510a",
+      "schematic_id": "79754a0873115dc5",
+      "x": 94.999999992,
+      "y": 6.99999997,
+      "angle": 0,
+      "package": "SOT23_3",
+      "value": "BAT54S",
+      "notes": "1=A1，2=K2，3=K1/A2；串联双二极管钳位",
+      "mechanical_TBD": false
+    },
+    "J_MON": {
+      "id": "611ef422146d58f8",
+      "schematic_id": "cef7a383737c5ef6",
+      "x": 100.99999993,
+      "y": 9.000000034,
+      "angle": 0,
+      "package": "TERM_2.54_2P",
+      "value": "2P VIN_POST ADC / PA6",
+      "notes": "2.54mm 2P；1=ADC_VIN_POST→PA6，2=GND；PA5保留LCD SCK",
+      "mechanical_TBD": false
+    },
+    "TP14": {
+      "id": "aad621db099c5419",
+      "schematic_id": "6bb5b552d8bb5f6e",
+      "x": 100.99999993,
+      "y": 13.99999994,
+      "angle": 0,
+      "package": "TP_D1.5",
+      "value": "ADC_VIN_POST",
+      "notes": "新增ADC节点测试点",
+      "mechanical_TBD": false
+    }
+  },
+  "specs": {
+    "R0805": {
+      "pads": [
+        {
+          "num": "1",
+          "x": -1.0,
+          "y": 0,
+          "w": 1.2,
+          "h": 1.45,
+          "hole": null
+        },
+        {
+          "num": "2",
+          "x": 1.0,
+          "y": 0,
+          "w": 1.2,
+          "h": 1.45,
+          "hole": null
+        }
+      ],
+      "body_mm": [
+        2,
+        1.25
+      ],
+      "tbd": false
+    },
+    "C0805": {
+      "pads": [
+        {
+          "num": "1",
+          "x": -1.0,
+          "y": 0,
+          "w": 1.35,
+          "h": 1.45,
+          "hole": null
+        },
+        {
+          "num": "2",
+          "x": 1.0,
+          "y": 0,
+          "w": 1.35,
+          "h": 1.45,
+          "hole": null
+        }
+      ],
+      "body_mm": [
+        2,
+        1.25
+      ],
+      "tbd": false
+    },
+    "R1206": {
+      "pads": [
+        {
+          "num": "1",
+          "x": -1.5,
+          "y": 0,
+          "w": 1.45,
+          "h": 1.9,
+          "hole": null
+        },
+        {
+          "num": "2",
+          "x": 1.5,
+          "y": 0,
+          "w": 1.45,
+          "h": 1.9,
+          "hole": null
+        }
+      ],
+      "body_mm": [
+        3.2,
+        1.6
+      ],
+      "tbd": false
+    },
+    "C1206": {
+      "pads": [
+        {
+          "num": "1",
+          "x": -1.5,
+          "y": 0,
+          "w": 1.45,
+          "h": 1.9,
+          "hole": null
+        },
+        {
+          "num": "2",
+          "x": 1.5,
+          "y": 0,
+          "w": 1.45,
+          "h": 1.9,
+          "hole": null
+        }
+      ],
+      "body_mm": [
+        3.2,
+        1.6
+      ],
+      "tbd": false
+    },
+    "R2512": {
+      "pads": [
+        {
+          "num": "1",
+          "x": -2.7,
+          "y": 0,
+          "w": 2,
+          "h": 3.5,
+          "hole": null
+        },
+        {
+          "num": "2",
+          "x": 2.7,
+          "y": 0,
+          "w": 2,
+          "h": 3.5,
+          "hole": null
+        }
+      ],
+      "body_mm": [
+        6.3,
+        3.2
+      ],
+      "tbd": false
+    },
+    "SMB_DO214AA": {
+      "pads": [
+        {
+          "num": "1",
+          "x": -2.15,
+          "y": 0,
+          "w": 2.2,
+          "h": 2.6,
+          "hole": null
+        },
+        {
+          "num": "2",
+          "x": 2.15,
+          "y": 0,
+          "w": 2.2,
+          "h": 2.6,
+          "hole": null
+        }
+      ],
+      "body_mm": [
+        4.6,
+        3.6
+      ],
+      "tbd": false
+    },
+    "TO220_3": {
+      "pads": [
+        {
+          "num": "1",
+          "x": -2.54,
+          "y": 0,
+          "w": 1.8,
+          "h": 2.5,
+          "hole": 1.2
+        },
+        {
+          "num": "2",
+          "x": 0,
+          "y": 0,
+          "w": 1.8,
+          "h": 2.5,
+          "hole": 1.2
+        },
+        {
+          "num": "3",
+          "x": 2.54,
+          "y": 0,
+          "w": 1.8,
+          "h": 2.5,
+          "hole": 1.2
+        }
+      ],
+      "body_mm": [
+        10.2,
+        4.5
+      ],
+      "tbd": false
+    },
+    "DIP8_300": {
+      "pads": [
+        {
+          "num": "1",
+          "x": -3.81,
+          "y": 3.81,
+          "w": 1.8,
+          "h": 1.8,
+          "hole": 0.9
+        },
+        {
+          "num": "2",
+          "x": -3.81,
+          "y": 1.27,
+          "w": 1.8,
+          "h": 1.8,
+          "hole": 0.9
+        },
+        {
+          "num": "3",
+          "x": -3.81,
+          "y": -1.27,
+          "w": 1.8,
+          "h": 1.8,
+          "hole": 0.9
+        },
+        {
+          "num": "4",
+          "x": -3.81,
+          "y": -3.81,
+          "w": 1.8,
+          "h": 1.8,
+          "hole": 0.9
+        },
+        {
+          "num": "8",
+          "x": 3.81,
+          "y": 3.81,
+          "w": 1.8,
+          "h": 1.8,
+          "hole": 0.9
+        },
+        {
+          "num": "7",
+          "x": 3.81,
+          "y": 1.27,
+          "w": 1.8,
+          "h": 1.8,
+          "hole": 0.9
+        },
+        {
+          "num": "6",
+          "x": 3.81,
+          "y": -1.27,
+          "w": 1.8,
+          "h": 1.8,
+          "hole": 0.9
+        },
+        {
+          "num": "5",
+          "x": 3.81,
+          "y": -3.81,
+          "w": 1.8,
+          "h": 1.8,
+          "hole": 0.9
+        }
+      ],
+      "body_mm": [
+        6.6,
+        10.2
+      ],
+      "tbd": false
+    },
+    "SOIC8_150": {
+      "pads": [
+        {
+          "num": "1",
+          "x": -2.7,
+          "y": 1.905,
+          "w": 1.55,
+          "h": 0.65,
+          "hole": null
+        },
+        {
+          "num": "2",
+          "x": -2.7,
+          "y": 0.635,
+          "w": 1.55,
+          "h": 0.65,
+          "hole": null
+        },
+        {
+          "num": "3",
+          "x": -2.7,
+          "y": -0.635,
+          "w": 1.55,
+          "h": 0.65,
+          "hole": null
+        },
+        {
+          "num": "4",
+          "x": -2.7,
+          "y": -1.905,
+          "w": 1.55,
+          "h": 0.65,
+          "hole": null
+        },
+        {
+          "num": "8",
+          "x": 2.7,
+          "y": 1.905,
+          "w": 1.55,
+          "h": 0.65,
+          "hole": null
+        },
+        {
+          "num": "7",
+          "x": 2.7,
+          "y": 0.635,
+          "w": 1.55,
+          "h": 0.65,
+          "hole": null
+        },
+        {
+          "num": "6",
+          "x": 2.7,
+          "y": -0.635,
+          "w": 1.55,
+          "h": 0.65,
+          "hole": null
+        },
+        {
+          "num": "5",
+          "x": 2.7,
+          "y": -1.905,
+          "w": 1.55,
+          "h": 0.65,
+          "hole": null
+        }
+      ],
+      "body_mm": [
+        3.9,
+        4.9
+      ],
+      "tbd": false
+    },
+    "SOIC14_150": {
+      "pads": [
+        {
+          "num": "1",
+          "x": -2.7,
+          "y": 3.81,
+          "w": 1.55,
+          "h": 0.65,
+          "hole": null
+        },
+        {
+          "num": "2",
+          "x": -2.7,
+          "y": 2.54,
+          "w": 1.55,
+          "h": 0.65,
+          "hole": null
+        },
+        {
+          "num": "3",
+          "x": -2.7,
+          "y": 1.27,
+          "w": 1.55,
+          "h": 0.65,
+          "hole": null
+        },
+        {
+          "num": "4",
+          "x": -2.7,
+          "y": 0.0,
+          "w": 1.55,
+          "h": 0.65,
+          "hole": null
+        },
+        {
+          "num": "5",
+          "x": -2.7,
+          "y": -1.27,
+          "w": 1.55,
+          "h": 0.65,
+          "hole": null
+        },
+        {
+          "num": "6",
+          "x": -2.7,
+          "y": -2.5399999999999996,
+          "w": 1.55,
+          "h": 0.65,
+          "hole": null
+        },
+        {
+          "num": "7",
+          "x": -2.7,
+          "y": -3.81,
+          "w": 1.55,
+          "h": 0.65,
+          "hole": null
+        },
+        {
+          "num": "14",
+          "x": 2.7,
+          "y": 3.81,
+          "w": 1.55,
+          "h": 0.65,
+          "hole": null
+        },
+        {
+          "num": "13",
+          "x": 2.7,
+          "y": 2.54,
+          "w": 1.55,
+          "h": 0.65,
+          "hole": null
+        },
+        {
+          "num": "12",
+          "x": 2.7,
+          "y": 1.27,
+          "w": 1.55,
+          "h": 0.65,
+          "hole": null
+        },
+        {
+          "num": "11",
+          "x": 2.7,
+          "y": 0.0,
+          "w": 1.55,
+          "h": 0.65,
+          "hole": null
+        },
+        {
+          "num": "10",
+          "x": 2.7,
+          "y": -1.27,
+          "w": 1.55,
+          "h": 0.65,
+          "hole": null
+        },
+        {
+          "num": "9",
+          "x": 2.7,
+          "y": -2.5399999999999996,
+          "w": 1.55,
+          "h": 0.65,
+          "hole": null
+        },
+        {
+          "num": "8",
+          "x": 2.7,
+          "y": -3.81,
+          "w": 1.55,
+          "h": 0.65,
+          "hole": null
+        }
+      ],
+      "body_mm": [
+        3.9,
+        8.65
+      ],
+      "tbd": false
+    },
+    "SOT23_3": {
+      "pads": [
+        {
+          "num": "1",
+          "x": -0.95,
+          "y": -1,
+          "w": 0.65,
+          "h": 1.1,
+          "hole": null
+        },
+        {
+          "num": "2",
+          "x": 0.95,
+          "y": -1,
+          "w": 0.65,
+          "h": 1.1,
+          "hole": null
+        },
+        {
+          "num": "3",
+          "x": 0,
+          "y": 1,
+          "w": 0.65,
+          "h": 1.1,
+          "hole": null
+        }
+      ],
+      "body_mm": [
+        2.9,
+        1.3
+      ],
+      "tbd": false
+    },
+    "SOT23_6": {
+      "pads": [
+        {
+          "num": "1",
+          "x": -0.95,
+          "y": -1.1,
+          "w": 0.6,
+          "h": 1,
+          "hole": null
+        },
+        {
+          "num": "2",
+          "x": 0.0,
+          "y": -1.1,
+          "w": 0.6,
+          "h": 1,
+          "hole": null
+        },
+        {
+          "num": "3",
+          "x": 0.95,
+          "y": -1.1,
+          "w": 0.6,
+          "h": 1,
+          "hole": null
+        },
+        {
+          "num": "6",
+          "x": -0.95,
+          "y": 1.1,
+          "w": 0.6,
+          "h": 1,
+          "hole": null
+        },
+        {
+          "num": "5",
+          "x": 0.0,
+          "y": 1.1,
+          "w": 0.6,
+          "h": 1,
+          "hole": null
+        },
+        {
+          "num": "4",
+          "x": 0.95,
+          "y": 1.1,
+          "w": 0.6,
+          "h": 1,
+          "hole": null
+        }
+      ],
+      "body_mm": [
+        2.9,
+        1.6
+      ],
+      "tbd": false
+    },
+    "TERM_5.08_2P": {
+      "pads": [
+        {
+          "num": "1",
+          "x": -2.54,
+          "y": 0,
+          "w": 2.6,
+          "h": 2.6,
+          "hole": 1.3
+        },
+        {
+          "num": "2",
+          "x": 2.54,
+          "y": 0,
+          "w": 2.6,
+          "h": 2.6,
+          "hole": 1.3
+        }
+      ],
+      "body_mm": [
+        10.16,
+        8.5
+      ],
+      "tbd": true
+    },
+    "HDR_1X4_2.54": {
+      "pads": [
+        {
+          "num": "1",
+          "x": -3.81,
+          "y": 0,
+          "w": 1.8,
+          "h": 1.8,
+          "hole": 1
+        },
+        {
+          "num": "2",
+          "x": -1.27,
+          "y": 0,
+          "w": 1.8,
+          "h": 1.8,
+          "hole": 1
+        },
+        {
+          "num": "3",
+          "x": 1.27,
+          "y": 0,
+          "w": 1.8,
+          "h": 1.8,
+          "hole": 1
+        },
+        {
+          "num": "4",
+          "x": 3.81,
+          "y": 0,
+          "w": 1.8,
+          "h": 1.8,
+          "hole": 1
+        }
+      ],
+      "body_mm": [
+        10.16,
+        2.54
+      ],
+      "tbd": true
+    },
+    "HDR_2X8_2.54": {
+      "pads": [
+        {
+          "num": "1",
+          "x": -1.27,
+          "y": 8.89,
+          "w": 1.8,
+          "h": 1.8,
+          "hole": 1
+        },
+        {
+          "num": "3",
+          "x": -1.27,
+          "y": 6.3500000000000005,
+          "w": 1.8,
+          "h": 1.8,
+          "hole": 1
+        },
+        {
+          "num": "5",
+          "x": -1.27,
+          "y": 3.8100000000000005,
+          "w": 1.8,
+          "h": 1.8,
+          "hole": 1
+        },
+        {
+          "num": "7",
+          "x": -1.27,
+          "y": 1.2700000000000005,
+          "w": 1.8,
+          "h": 1.8,
+          "hole": 1
+        },
+        {
+          "num": "9",
+          "x": -1.27,
+          "y": -1.2699999999999996,
+          "w": 1.8,
+          "h": 1.8,
+          "hole": 1
+        },
+        {
+          "num": "11",
+          "x": -1.27,
+          "y": -3.8099999999999987,
+          "w": 1.8,
+          "h": 1.8,
+          "hole": 1
+        },
+        {
+          "num": "13",
+          "x": -1.27,
+          "y": -6.35,
+          "w": 1.8,
+          "h": 1.8,
+          "hole": 1
+        },
+        {
+          "num": "15",
+          "x": -1.27,
+          "y": -8.89,
+          "w": 1.8,
+          "h": 1.8,
+          "hole": 1
+        },
+        {
+          "num": "2",
+          "x": 1.27,
+          "y": 8.89,
+          "w": 1.8,
+          "h": 1.8,
+          "hole": 1
+        },
+        {
+          "num": "4",
+          "x": 1.27,
+          "y": 6.3500000000000005,
+          "w": 1.8,
+          "h": 1.8,
+          "hole": 1
+        },
+        {
+          "num": "6",
+          "x": 1.27,
+          "y": 3.8100000000000005,
+          "w": 1.8,
+          "h": 1.8,
+          "hole": 1
+        },
+        {
+          "num": "8",
+          "x": 1.27,
+          "y": 1.2700000000000005,
+          "w": 1.8,
+          "h": 1.8,
+          "hole": 1
+        },
+        {
+          "num": "10",
+          "x": 1.27,
+          "y": -1.2699999999999996,
+          "w": 1.8,
+          "h": 1.8,
+          "hole": 1
+        },
+        {
+          "num": "12",
+          "x": 1.27,
+          "y": -3.8099999999999987,
+          "w": 1.8,
+          "h": 1.8,
+          "hole": 1
+        },
+        {
+          "num": "14",
+          "x": 1.27,
+          "y": -6.35,
+          "w": 1.8,
+          "h": 1.8,
+          "hole": 1
+        },
+        {
+          "num": "16",
+          "x": 1.27,
+          "y": -8.89,
+          "w": 1.8,
+          "h": 1.8,
+          "hole": 1
+        }
+      ],
+      "body_mm": [
+        5.08,
+        20.32
+      ],
+      "tbd": true
+    },
+    "CP_D12.5_P5_TBD": {
+      "pads": [
+        {
+          "num": "1",
+          "x": -2.5,
+          "y": 0,
+          "w": 2.4,
+          "h": 2.4,
+          "hole": 1
+        },
+        {
+          "num": "2",
+          "x": 2.5,
+          "y": 0,
+          "w": 2.4,
+          "h": 2.4,
+          "hole": 1
+        }
+      ],
+      "body_mm": [
+        12.5,
+        12.5
+      ],
+      "tbd": true
+    },
+    "L_TH_D18_P10_TBD": {
+      "pads": [
+        {
+          "num": "1",
+          "x": -5,
+          "y": 0,
+          "w": 3,
+          "h": 3,
+          "hole": 1.5
+        },
+        {
+          "num": "2",
+          "x": 5,
+          "y": 0,
+          "w": 3,
+          "h": 3,
+          "hole": 1.5
+        }
+      ],
+      "body_mm": [
+        18,
+        18
+      ],
+      "tbd": true
+    },
+    "FUSE_5X20_P22.5_TBD": {
+      "pads": [
+        {
+          "num": "1",
+          "x": -11.25,
+          "y": 0,
+          "w": 3,
+          "h": 3,
+          "hole": 1.5
+        },
+        {
+          "num": "2",
+          "x": 11.25,
+          "y": 0,
+          "w": 3,
+          "h": 3,
+          "hole": 1.5
+        }
+      ],
+      "body_mm": [
+        27,
+        9
+      ],
+      "tbd": true
+    },
+    "DO41_P10.16": {
+      "pads": [
+        {
+          "num": "1",
+          "x": -5.08,
+          "y": 0,
+          "w": 2.4,
+          "h": 2.4,
+          "hole": 1
+        },
+        {
+          "num": "2",
+          "x": 5.08,
+          "y": 0,
+          "w": 2.4,
+          "h": 2.4,
+          "hole": 1
+        }
+      ],
+      "body_mm": [
+        5.2,
+        2.8
+      ],
+      "tbd": true
+    },
+    "TP_D1.5": {
+      "pads": [
+        {
+          "num": "1",
+          "x": 0,
+          "y": 0,
+          "w": 1.5,
+          "h": 1.5,
+          "hole": null
+        }
+      ],
+      "body_mm": [
+        1.5,
+        1.5
+      ],
+      "tbd": false
+    },
+    "TERM_2.54_2P": {
+      "pads": [
+        {
+          "num": "1",
+          "x": -1.27,
+          "y": 0,
+          "w": 1.9,
+          "h": 2.4,
+          "hole": 1.3
+        },
+        {
+          "num": "2",
+          "x": 1.27,
+          "y": 0,
+          "w": 1.9,
+          "h": 2.4,
+          "hole": 1.3
+        }
+      ],
+      "body_mm": [
+        5.48,
+        6.3
+      ],
+      "tbd": false
+    },
+    "CP_D10_P5": {
+      "pads": [
+        {
+          "num": "1",
+          "x": -2.5,
+          "y": 0,
+          "w": 2.2,
+          "h": 2.2,
+          "hole": 0.9
+        },
+        {
+          "num": "2",
+          "x": 2.5,
+          "y": 0,
+          "w": 2.2,
+          "h": 2.2,
+          "hole": 0.9
+        }
+      ],
+      "body_mm": [
+        10.5,
+        10.5
+      ],
+      "tbd": false
+    },
+    "L65125_VERTICAL_P10": {
+      "pads": [
+        {
+          "num": "1",
+          "x": -5.0,
+          "y": 0,
+          "w": 2.4,
+          "h": 2.4,
+          "hole": 1.1
+        },
+        {
+          "num": "2",
+          "x": 5.0,
+          "y": 0,
+          "w": 2.4,
+          "h": 2.4,
+          "hole": 1.1
+        }
+      ],
+      "body_mm": [
+        20,
+        10
+      ],
+      "tbd": false,
+      "mounting_orientation_confirmed_by_user": "vertical"
+    },
+    "SHUNT_U_25m_P5_D0p7": {
+      "pads": [
+        {
+          "num": "1",
+          "x": -2.5,
+          "y": 0,
+          "w": 2.6,
+          "h": 2.6,
+          "hole": 1.1
+        },
+        {
+          "num": "2",
+          "x": 2.5,
+          "y": 0,
+          "w": 2.6,
+          "h": 2.6,
+          "hole": 1.1
+        }
+      ],
+      "body_mm": [
+        12,
+        4
+      ],
+      "tbd": true,
+      "confirmed_from_seller": {
+        "pin_pitch_mm": 5,
+        "wire_diameter_mm": 0.7,
+        "illustrated_body_height_mm": 7,
+        "nominal_resistance_ohm": 0.025
+      },
+      "still_unconfirmed": [
+        "resistance tolerance 1%",
+        "continuous rated power >=1W and its conditions",
+        "actual mounting-lead diameter and welded terminal boss dimensions",
+        "planar depth/envelope",
+        "actual board standoff height"
+      ]
+    },
+    "SHUNT_M_50m_P10_D0p8": {
+      "pads": [
+        {
+          "num": "1",
+          "x": -5.0,
+          "y": 0,
+          "w": 2.6,
+          "h": 2.6,
+          "hole": 1.1
+        },
+        {
+          "num": "2",
+          "x": 5.0,
+          "y": 0,
+          "w": 2.6,
+          "h": 2.6,
+          "hole": 1.1
+        }
+      ],
+      "body_mm": [
+        12,
+        4
+      ],
+      "tbd": true,
+      "confirmed_from_seller": {
+        "pin_pitch_mm": 10,
+        "wire_diameter_mm": 0.8,
+        "illustrated_body_height_mm": 12,
+        "nominal_resistance_ohm": 0.05,
+        "rated_current_A": 5
+      },
+      "still_unconfirmed": [
+        "resistance tolerance 1%",
+        "continuous rated power >=1W and its conditions",
+        "planar depth and welded terminal boss dimensions",
+        "actual board standoff height"
+      ]
+    },
+    "RPRE_EXTERNAL_P5.08_TBD": {
+      "pads": [
+        {
+          "num": "1",
+          "x": -2.54,
+          "y": 0,
+          "w": 2.5,
+          "h": 2.5,
+          "hole": 1.3
+        },
+        {
+          "num": "2",
+          "x": 2.54,
+          "y": 0,
+          "w": 2.5,
+          "h": 2.5,
+          "hole": 1.3
+        }
+      ],
+      "body_mm": [
+        9,
+        5
+      ],
+      "tbd": true
+    },
+    "FUSE_5X20_CLIP_P5p66_ASM15_TBD": {
+      "pads": [
+        {
+          "num": "1",
+          "x": -10.33,
+          "y": 0,
+          "w": 2.4,
+          "h": 3.0,
+          "hole": 0.9,
+          "slot": 1.5,
+          "hole_w": 0.9,
+          "hole_h": 1.5
+        },
+        {
+          "num": "1",
+          "x": -4.67,
+          "y": 0,
+          "w": 2.4,
+          "h": 3.0,
+          "hole": 0.9,
+          "slot": 1.5,
+          "hole_w": 0.9,
+          "hole_h": 1.5
+        },
+        {
+          "num": "2",
+          "x": 4.67,
+          "y": 0,
+          "w": 2.4,
+          "h": 3.0,
+          "hole": 0.9,
+          "slot": 1.5,
+          "hole_w": 0.9,
+          "hole_h": 1.5
+        },
+        {
+          "num": "2",
+          "x": 10.33,
+          "y": 0,
+          "w": 2.4,
+          "h": 3.0,
+          "hole": 0.9,
+          "slot": 1.5,
+          "hole_w": 0.9,
+          "hole_h": 1.5
+        }
+      ],
+      "body_mm": [
+        27,
+        9
+      ],
+      "tbd": true,
+      "confirmed_from_user_and_seller": {
+        "fuse_mm": [
+          5,
+          20
+        ],
+        "single_clip_pin_pitch_mm": 5.66,
+        "tab_width_mm": 1.1,
+        "material_thickness_mm": 0.5,
+        "clip_width_mm": 6.2
+      },
+      "design_choices": {
+        "clip_center_spacing_mm": 15,
+        "slot_mm_xy": [
+          0.9,
+          1.5
+        ],
+        "slot_orientation": "long side Y; tube axis X, check actual bottom view"
+      },
+      "still_unconfirmed": [
+        "assembled clip spacing/end stops/contact engagement",
+        "full bottom-view orientation and tolerances",
+        "DC breaking capacity and fuse time-current/I2t"
+      ]
+    }
+  },
+  "mounting_holes_mm": [
+    [
+      3.5,
+      3.5
+    ],
+    [
+      116.5,
+      3.5
+    ],
+    [
+      3.5,
+      86.5
+    ],
+    [
+      116.5,
+      86.5
+    ]
+  ],
+  "board_mm": [
+    120,
+    90
+  ],
+  "pcb": "0048b6fc3c815d11",
+  "manufacturing_release": false,
+  "source_native_v3_sha256": "1584597ad237e959d9a694e01f6ffeb77966021066d4344dd931222dbdcbd1ba",
+  "routing": "all_51_nets_connected_static",
+  "copper_track_segments": 804,
+  "via_count": 209,
+  "static_ground_regions": 17,
+  "native_DRC": "not_run",
+  "native_Gerber": "not_exported",
+  "native_path": "GBUCK_RevC2_PowerLayout_v4_20261028.eprj2",
+  "native_sha256": "f18ec7bfd37780776eaf521893867fd54d447a2d478cca23adf9cf5ec14188d5"
+}

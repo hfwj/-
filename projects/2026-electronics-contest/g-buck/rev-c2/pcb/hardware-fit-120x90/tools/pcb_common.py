@@ -58,10 +58,12 @@ def copper_geometry(meta,docs,pcb):
                 x=p['centerX']*.0254;y=p['centerY']*.0254
                 w=p['defaultPad']['width']*.0254;h=p['defaultPad']['height']*.0254
                 if p['defaultPad']['padType']=='ELLIPSE':
-                    # Circumscribe the native ellipse: never gain clearance
-                    # from the small chord error of an inscribed circle.
+                    # Native ELLIPSE is exported as a circular aperture using
+                    # width as diameter (confirmed against client v3 Gerber).
+                    # height is not an independent ellipse axis; treating it
+                    # as one can invent a layer transition outside real copper.
                     factor=1/math.cos(math.pi/128)
-                    g=affinity.scale(Point(0,0).buffer(1,quad_segs=32),w/2*factor,h/2*factor)
+                    g=affinity.scale(Point(0,0).buffer(1,quad_segs=32),w/2*factor,w/2*factor)
                     g=affinity.translate(g,x,y)
                 else:
                     g=box(x-w/2,y-h/2,x+w/2,y+h/2)

@@ -1,0 +1,16 @@
+{
+  "errors": [],
+  "components": 120,
+  "pads": 325,
+  "tracks": 804,
+  "vias": 209,
+  "fills": 17,
+  "minimum_foreign_copper_clearance_mm": 0.2000435691898999,
+  "schematic_all_documents_unchanged": true,
+  "BOM_values_and_libraries_unchanged": true,
+  "manufacturing_release": false,
+  "native_DRC": "not_run",
+  "saved_native_sha256": "f18ec7bfd37780776eaf521893867fd54d447a2d478cca23adf9cf5ec14188d5",
+  "Kelvin_trunk_bottom_GND_reference_continuous": true
+}
+CONTACTS 51 0 0

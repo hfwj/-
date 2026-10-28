@@ -1,0 +1,380 @@
+{
+  "saved_native_critical_segments_verified": true,
+  "segments": [
+    {
+      "key": "v4critical:0:0",
+      "id": "e0c58c62499b5546",
+      "net": "VIN",
+      "layer": 1,
+      "start_mm": [
+        62.500000079999985,
+        82.0
+      ],
+      "end_mm": [
+        66.0,
+        80.5
+      ],
+      "width_mm": 2.0
+    },
+    {
+      "key": "v4critical:0:1",
+      "id": "934cbc9055d25607",
+      "net": "VIN",
+      "layer": 1,
+      "start_mm": [
+        66.0,
+        80.5
+      ],
+      "end_mm": [
+        73.0,
+        80.5
+      ],
+      "width_mm": 2.0
+    },
+    {
+      "key": "v4critical:0:2",
+      "id": "077b61b21baf5387",
+      "net": "VIN",
+      "layer": 1,
+      "start_mm": [
+        73.0,
+        80.5
+      ],
+      "end_mm": [
+        73.0,
+        77.5
+      ],
+      "width_mm": 2.0
+    },
+    {
+      "key": "v4critical:1:0",
+      "id": "4930772ce2a25945",
+      "net": "VIN",
+      "layer": 1,
+      "start_mm": [
+        73.0,
+        77.5
+      ],
+      "end_mm": [
+        73.0,
+        75.5
+      ],
+      "width_mm": 2.0
+    },
+    {
+      "key": "v4critical:2:0",
+      "id": "e7215b0d46eb547a",
+      "net": "VIN",
+      "layer": 1,
+      "start_mm": [
+        73.0,
+        75.5
+      ],
+      "end_mm": [
+        73.0,
+        74.000000032
+      ],
+      "width_mm": 1.0
+    },
+    {
+      "key": "v4critical:3:0",
+      "id": "592f56addb435696",
+      "net": "GND",
+      "layer": 1,
+      "start_mm": [
+        73.0,
+        68.5
+      ],
+      "end_mm": [
+        73.0,
+        70.5
+      ],
+      "width_mm": 2.0
+    },
+    {
+      "key": "v4critical:4:0",
+      "id": "93cdb66ea9f85f3b",
+      "net": "GND",
+      "layer": 1,
+      "start_mm": [
+        73.0,
+        70.5
+      ],
+      "end_mm": [
+        73.0,
+        71.999999968
+      ],
+      "width_mm": 1.0
+    },
+    {
+      "key": "v4critical:6:0",
+      "id": "371bb95329ed502d",
+      "net": "SW",
+      "layer": 1,
+      "start_mm": [
+        75.54,
+        68.5
+      ],
+      "end_mm": [
+        75.54,
+        77.5
+      ],
+      "width_mm": 2.0
+    },
+    {
+      "key": "v4critical:6:1",
+      "id": "5dc0718985bf5872",
+      "net": "SW",
+      "layer": 1,
+      "start_mm": [
+        75.54,
+        77.5
+      ],
+      "end_mm": [
+        85.00000017999999,
+        76.999999924
+      ],
+      "width_mm": 2.0
+    },
+    {
+      "key": "v4critical:7:0",
+      "id": "cd3cf0af84485647",
+      "net": "VIN",
+      "layer": 1,
+      "start_mm": [
+        52.499999902,
+        69.999999954
+      ],
+      "end_mm": [
+        52.99999999999999,
+        75.0
+      ],
+      "width_mm": 2.0
+    },
+    {
+      "key": "v4critical:7:1",
+      "id": "78dc97a29f71529c",
+      "net": "VIN",
+      "layer": 1,
+      "start_mm": [
+        52.99999999999999,
+        75.0
+      ],
+      "end_mm": [
+        61.5,
+        78.5
+      ],
+      "width_mm": 2.0
+    },
+    {
+      "key": "v4critical:7:2",
+      "id": "5922914a91f350cf",
+      "net": "VIN",
+      "layer": 1,
+      "start_mm": [
+        61.5,
+        78.5
+      ],
+      "end_mm": [
+        62.500000079999985,
+        82.0
+      ],
+      "width_mm": 2.0
+    },
+    {
+      "key": "v4critical:8:0",
+      "id": "7ff98e4c15e65820",
+      "net": "L_RAW",
+      "layer": 1,
+      "start_mm": [
+        107.99999989999999,
+        79.500000004
+      ],
+      "end_mm": [
+        110.0,
+        77.25
+      ],
+      "width_mm": 0.2
+    },
+    {
+      "key": "v4critical:8:1",
+      "id": "57293077d89652e7",
+      "net": "L_RAW",
+      "layer": 1,
+      "start_mm": [
+        110.0,
+        77.25
+      ],
+      "end_mm": [
+        112.00000000000001,
+        77.25
+      ],
+      "width_mm": 0.2
+    },
+    {
+      "key": "v4critical:8:2",
+      "id": "0b256cd789535586",
+      "net": "L_RAW",
+      "layer": 1,
+      "start_mm": [
+        112.00000000000001,
+        77.25
+      ],
+      "end_mm": [
+        113.595,
+        79.699999934
+      ],
+      "width_mm": 0.2
+    },
+    {
+      "key": "v4critical:9:0",
+      "id": "c9dca15048445573",
+      "net": "V_CAP",
+      "layer": 1,
+      "start_mm": [
+        107.99999989999999,
+        74.49999984399999
+      ],
+      "end_mm": [
+        110.0,
+        76.75
+      ],
+      "width_mm": 0.2
+    },
+    {
+      "key": "v4critical:9:1",
+      "id": "a159245dc2b25c1b",
+      "net": "V_CAP",
+      "layer": 1,
+      "start_mm": [
+        110.0,
+        76.75
+      ],
+      "end_mm": [
+        112.00000000000001,
+        76.75
+      ],
+      "width_mm": 0.2
+    },
+    {
+      "key": "v4critical:9:2",
+      "id": "09435ce4fc2e50d1",
+      "net": "V_CAP",
+      "layer": 1,
+      "start_mm": [
+        112.00000000000001,
+        76.75
+      ],
+      "end_mm": [
+        113.595,
+        74.300000066
+      ],
+      "width_mm": 0.2
+    },
+    {
+      "key": "v4critical:5:0",
+      "id": "5a3ee8b5b74456a3",
+      "net": "GND",
+      "layer": 2,
+      "start_mm": [
+        57.49999991999999,
+        82.0
+      ],
+      "end_mm": [
+        65.0,
+        75.0
+      ],
+      "width_mm": 2.0
+    },
+    {
+      "key": "v4-ground-escape:0",
+      "id": "786a9e2c1cfb5bbb",
+      "net": "GND",
+      "layer": 2,
+      "start_mm": [
+        65.0,
+        75.0
+      ],
+      "end_mm": [
+        72.0,
+        75.0
+      ],
+      "width_mm": 2.0
+    },
+    {
+      "key": "v4-ground-escape:1",
+      "id": "21f8e3b8b48a57f9",
+      "net": "GND",
+      "layer": 2,
+      "start_mm": [
+        72.0,
+        75.0
+      ],
+      "end_mm": [
+        72.0,
+        70.5
+      ],
+      "width_mm": 2.0
+    },
+    {
+      "key": "v4-ground-escape:2",
+      "id": "364e85a612cd5841",
+      "net": "GND",
+      "layer": 2,
+      "start_mm": [
+        72.0,
+        70.5
+      ],
+      "end_mm": [
+        73.0,
+        68.5
+      ],
+      "width_mm": 2.0
+    },
+    {
+      "key": "v4-freewheel-local:0:0",
+      "id": "a519e4971f1c5f99",
+      "net": "SW",
+      "layer": 1,
+      "start_mm": [
+        77.690000018,
+        63.599999999999994
+      ],
+      "end_mm": [
+        75.54,
+        65.5
+      ],
+      "width_mm": 2.0
+    },
+    {
+      "key": "v4-freewheel-local:0:1",
+      "id": "79833eb7274d5a9a",
+      "net": "SW",
+      "layer": 1,
+      "start_mm": [
+        75.54,
+        65.5
+      ],
+      "end_mm": [
+        75.54,
+        68.5
+      ],
+      "width_mm": 2.0
+    },
+    {
+      "key": "v4-freewheel-local:1:0",
+      "id": "c34ac209311c579e",
+      "net": "GND",
+      "layer": 1,
+      "start_mm": [
+        73.389999982,
+        63.599999999999994
+      ],
+      "end_mm": [
+        73.0,
+        68.5
+      ],
+      "width_mm": 2.0
+    }
+  ]
+}

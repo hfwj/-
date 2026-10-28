@@ -1,0 +1,19 @@
+{
+  "errors": [],
+  "components": 120,
+  "pads": 325,
+  "tracks": 804,
+  "vias": 209,
+  "fills": 17,
+  "minimum_foreign_copper_clearance_mm": 0.2000435691898999,
+  "actual_round_pad_contact_audit": {
+    "networks": 51,
+    "unfinished_networks": {},
+    "orphan_copper_groups": [],
+    "foreign_copper_clearance_errors": []
+  },
+  "schematic_all_documents_unchanged": true,
+  "BOM_values_and_libraries_unchanged": true,
+  "manufacturing_release": false,
+  "native_DRC": "not_run"
+}
