@@ -1,0 +1,86 @@
+{
+  "date_local": "2026-10-28",
+  "timezone": "Asia/Shanghai",
+  "comparison_baseline": "cee600eb4c9181aca9f146b2a7ef9964a31cae06",
+  "scope": "J_BYP only, following latest explicit user scope; other attached PCB allegations not independently reviewed in this task",
+  "uploaded_report": {
+    "path": "pcb/power-layout-v4-120x90/references/external-review-2026-10-28/GBUCK_RevC2_PowerLayout_v4_PCB问题清单_20261028.docx",
+    "sha256": "dcd907eeda2cae252daedd9a510430780690e2101a7a971036c2fc59ace0130f",
+    "claims_native_sha256": "f18ec7bfd37780776eaf521893867fd54d447a2d478cca23adf9cf5ec14188d5"
+  },
+  "native_file": {
+    "path": "pcb/power-layout-v4-120x90/native/GBUCK_RevC2_PowerLayout_v4_20261028.eprj2",
+    "sha256": "f18ec7bfd37780776eaf521893867fd54d447a2d478cca23adf9cf5ec14188d5"
+  },
+  "pad": {
+    "ref": "J_BYP",
+    "pin": "2",
+    "net": "IN_PRE",
+    "x_mm": 6.99999997,
+    "y_mm": 57.270000014,
+    "native_pad_type": "ELLIPSE",
+    "width_mm": 1.90000001,
+    "height_mm": 2.400000026,
+    "component_rotation_deg": 90,
+    "pad_rotation_deg": 0
+  },
+  "results": [
+    {
+      "layer": 1,
+      "fill_id": "f4d1d30098625939",
+      "width_based_round_model_clearance_mm": 0.25354714244966936,
+      "ellipse_model_clearance_mm": 0.0038295387308682895,
+      "ellipse_model_overlap_mm2": 0.0
+    },
+    {
+      "layer": 2,
+      "fill_id": "d91c4a4b457155c8",
+      "width_based_round_model_clearance_mm": 0.20493825783271627,
+      "ellipse_model_clearance_mm": 0.0,
+      "ellipse_model_overlap_mm2": 0.05130329893587235
+    }
+  ],
+  "geometry_method": {
+    "round": "Existing router model: circumscribed 128-sided circle based on native pad width; conservative distance approximation",
+    "ellipse": "512-sided inscribed ellipse using width and height, rotated into world coordinates; reproduces external-report hypothesis"
+  },
+  "prior_gerber_evidence": {
+    "path": "pcb/hardware-fit-120x90/references/gerber-v3-2026-10-28/Gerber_RevC2_F1_slotfix_v3_20261028.zip",
+    "sha256": "49cee30d201615b02b3824495600aa2924b4ba726b71fff4fc1fdffab3113f0b",
+    "flashes": [
+      {
+        "layer_file": "Gerber_TopLayer.GTL",
+        "line_number": 48614,
+        "flash": "G01X700000Y5727000D03*",
+        "aperture": "%ADD12C,1.9*%",
+        "scope": "v3 only; not v4 manufacturing data"
+      },
+      {
+        "layer_file": "Gerber_BottomLayer.GBL",
+        "line_number": 27900,
+        "flash": "G01X700000Y5727000D03*",
+        "aperture": "%ADD12C,1.9*%",
+        "scope": "v3 only; not v4 manufacturing data"
+      }
+    ]
+  },
+  "conclusions": {
+    "external_ellipse_model_J_BYP_overlap_reproduced": true,
+    "actual_v4_pad_shape_confirmed_by_client": false,
+    "actual_v4_short_confirmed": false,
+    "actual_v4_short_excluded": false,
+    "switch_manufacturer_and_model_received": false,
+    "switch_DC_rating_verified": false,
+    "native_DRC_run": false,
+    "v4_gerber_received": false,
+    "manufacturing_release": false
+  },
+  "impact": {
+    "schematic_changed": false,
+    "native_project_changed": false,
+    "BOM_changed": false,
+    "PCB_geometry_changed": false,
+    "simulation_model_changed": false,
+    "firmware_changed": false
+  }
+}
