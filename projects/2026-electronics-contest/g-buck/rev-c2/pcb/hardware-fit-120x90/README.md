@@ -1,5 +1,7 @@
 # Rev C.2 PCB：按实购物料修订封装与布局
 
+**v3实际导出复核：**[Gerber ZIP](references/gerber-v3-2026-10-28/Gerber_RevC2_F1_slotfix_v3_20261028.zip) · [槽孔与阻焊检查结果](reports/Gerber_v3_槽孔与阻焊复核.md)。四个F1槽孔已确认0.9×1.5mm、Y向；188个普通过孔双面盖油。本轮仅审核归档，无原理图/器件/BOM/PCB及仿真/固件改动；完整制造验收和v3原生DRC结果仍待完成。
+
 **当前工程（F1槽孔修复 v3）：**[下载](native/GBUCK_RevC2_F1_slotfix_v3_20261028.eprj2) · [修改与复验说明](reports/F1槽孔修复_v3_2026-10-28.md)。仅修正四槽孔的原生长短轴与方向，原理图、器件/BOM、孔位及铜走线不变，仿真/固件未改；v3需重跑DRC、重新导出Gerber复验。
 
 **当前下载入口（网表同步复验 v2，2026-10-28）：**[独立 v2 工程](native/GBUCK_RevC2_DRC_netlistfix_20261028.eprj2) · [v2 资料包](../../downloads/GBUCK_RevC2_DRC_netlistfix_20261028.zip) · [修复与影响说明](reports/网表同步修复_v2_2026-10-28.md)。客户端导入表拟删除 R_PRE；已修正其 PCB 导出开关、补齐18项通道ID并保留保护滤波说明。相对 d68f3dd，电气网络/数值、器件/BOM、封装、位置和铜几何不变，仿真/固件未改。120项全部允许导入PCB，51网静态连通；**v2 客户端 DRC 已通过（用户反馈）**；[通过记录与范围](reports/客户端DRC通过记录_2026-10-28.md)，制造/装配检查仍未放行。

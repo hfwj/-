@@ -2639,5 +2639,6 @@
   "channel_id_sync": "all_120_nonempty_and_matched",
   "native_DRC_current_review": "v3_pending_client_recheck",
   "native_DRC_acceptance_record": "data/client_DRC_acceptance_2026-10-28.json",
-  "native_Gerber_current_review": "pending_F1_slot_reexport"
+  "native_Gerber_current_review": "F1_slots_and_via_mask_verified_from_client_export",
+  "gerber_review_record": "data/Gerber_v3_slot_mask_review.json"
 }

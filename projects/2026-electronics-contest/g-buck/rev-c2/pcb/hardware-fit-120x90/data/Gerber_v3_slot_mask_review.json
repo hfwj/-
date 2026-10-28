@@ -1,0 +1,72 @@
+{
+  "slots": [
+    {
+      "tool": "04",
+      "diameter_mm": 0.9,
+      "start": [
+        18.67,
+        80.3
+      ],
+      "end": [
+        18.67,
+        79.7
+      ],
+      "travel_mm": 0.6,
+      "overall_length_mm": 1.5
+    },
+    {
+      "tool": "04",
+      "diameter_mm": 0.9,
+      "start": [
+        24.33,
+        80.3
+      ],
+      "end": [
+        24.33,
+        79.7
+      ],
+      "travel_mm": 0.6,
+      "overall_length_mm": 1.5
+    },
+    {
+      "tool": "04",
+      "diameter_mm": 0.9,
+      "start": [
+        33.67,
+        80.3
+      ],
+      "end": [
+        33.67,
+        79.7
+      ],
+      "travel_mm": 0.6,
+      "overall_length_mm": 1.5
+    },
+    {
+      "tool": "04",
+      "diameter_mm": 0.9,
+      "start": [
+        39.33,
+        80.3
+      ],
+      "end": [
+        39.33,
+        79.7
+      ],
+      "travel_mm": 0.6,
+      "overall_length_mm": 1.5
+    }
+  ],
+  "via_count": 188,
+  "via_hole_mask_overlap_count": 0,
+  "review_scope": "F1 slots and via solder mask; not full manufacturing release",
+  "date": "2026-10-28",
+  "baseline_native_commit": "03748c7796cd7887d31bb5c9361d502ee25e0f9d",
+  "gerber_sha256": "49cee30d201615b02b3824495600aa2924b4ba726b71fff4fc1fdffab3113f0b",
+  "gerber_generated_at": "2026-10-28 16:21:41",
+  "F1_slots_result": "PASS",
+  "via_mask_result": "PASS_BOTH_SIDES_TENTED",
+  "native_DRC_v3": "not_reported",
+  "manufacturing_release": false,
+  "impact": "Review and archive only; schematic, components/BOM, PCB native file, simulation/models and firmware unchanged."
+}
