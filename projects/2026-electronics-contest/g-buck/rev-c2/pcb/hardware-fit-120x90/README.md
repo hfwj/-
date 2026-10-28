@@ -1,6 +1,8 @@
 # Rev C.2 PCB：按实购物料修订封装与布局
 
-**最新：地铜及整板静态连通草稿已完成（比较ea19975）**。768段铜线、188个过孔、44块静态地铜；51网全部连通，未布连接及悬空铜组均为0。[本轮复核与修改影响](reports/地铜与整板连通复核_2026-10-28.md) · [最终审计](data/ground_completion_audit.json)。原理图、器件/BOM及全部器件位置保持；本轮改PCB铜和局部走线，仿真/固件未改。原生ERC/DRC未运行，不能制板。下文此前计数为历史阶段。
+**当前下载入口（2026-10-28）：**[独立 DRC 封装同步复验工程](native/GBUCK_RevC2_DRC_syncfix_20261028.eprj2) · [复验包](../../downloads/GBUCK_RevC2_DRC_syncfix_20261028.zip) · [定位、影响及操作说明](reports/客户端DRC与封装同步修复_2026-10-28.md)。用户截图有 36 条原生 DRC 错误；用上传件中的 F1/RS_L/C_A3 旧封装与新铜组合复现了全部 27 条间距错误。新副本使用独立工程/库标识和当前封装，避免版本混用；几何与 `94c495e` 一致，原理图、器件/BOM、仿真/固件不变。静态 51 网连通，**独立副本的原生 DRC 仍待客户端复验，不能制板**。下面的同名旧工程/地铜包保留为历史和工程源，不再作为本轮导入入口。
+
+**历史地铜阶段（比较ea19975）**。768段铜线、188个过孔、44块静态地铜；51网全部连通，未布连接及悬空铜组均为0。[本轮复核与修改影响](reports/地铜与整板连通复核_2026-10-28.md) · [最终审计](data/ground_completion_audit.json)。原理图、器件/BOM及全部器件位置保持；本轮改PCB铜和局部走线，仿真/固件未改。当时原生ERC/DRC未运行；后续客户端反馈及当前复验文件见上方。
 
 
 **历史保存检查点（2026-10-28，比较e6e0b37）：583段铜线、101个过孔；非地网络全部连通，剩余GND至少79条连接，地铜尚未保存，不能制板。** [保存记录与下次续接入口](reports/进度保存_2026-10-28.md) · [检查点审计](data/progress_checkpoint_2026-10-28.json)。本轮仅改PCB铜线/过孔及4项器件位置；原理图、器件规格/BOM和仿真/固件保持。下文此前136段等数字为历史阶段。
@@ -14,13 +16,14 @@
 
 | 内容 | 入口 |
 |---|---|
-| 整包下载 | [PCB复核资料包](../../downloads/GBUCK_RevC2_PCB_ground_draft_2026-10-28.zip) |
-| 嘉立创 EDA 专业版可编辑工程 | [GBUCK_RevC2_120x90_PCB_review.eprj2](native/GBUCK_RevC2_120x90_PCB_review.eprj2) |
+| 当前导入复验包 | [DRC封装同步复验包](../../downloads/GBUCK_RevC2_DRC_syncfix_20261028.zip) |
+| 当前嘉立创 EDA 专业版可编辑工程 | [GBUCK_RevC2_DRC_syncfix_20261028.eprj2](native/GBUCK_RevC2_DRC_syncfix_20261028.eprj2) |
+| 历史工程源及地铜资料包 | [历史源工程](native/GBUCK_RevC2_120x90_PCB_review.eprj2) · [地铜阶段包](../../downloads/GBUCK_RevC2_PCB_ground_draft_2026-10-28.zip) |
 | 实际工程记录绘制的 PCB 总览 | [PNG](previews/PCB_RevC2_120x90.png) · [总览与局部 PDF](previews/PCB_RevC2_review.pdf) |
 | 封装核对打印页，必须按 100% 打印 | [1:1 核对 PDF](previews/Footprint_1to1_CHECK_ONLY.pdf) |
 | 修改、接线、依据及未完成项 | [详细说明](PCB修改说明与待确认项.md) · [PDF](PCB修改说明与待确认项.pdf) · [Word](PCB修改说明与待确认项.docx) |
 | PCB BOM 和坐标 | [CSV](data/PCB_BOM_RevC2.csv) |
-| 保存后原生工程回读 | [验证 JSON](data/verification.json) · [逐焊盘 CSV](data/PCB_pin_readback.csv) |
+| 当前独立工程回读 | [独立导入审计](data/isolated_import_audit.json) · [错误复现数据](data/client_DRC_footprint_mismatch.json) · [逐焊盘 CSV](data/PCB_pin_readback.csv) |
 | 局部走线与未布网络 | [局部连接](data/local_routing.json) · [未布网络](data/unrouted_networks.json) |
 
 ## 本轮变动

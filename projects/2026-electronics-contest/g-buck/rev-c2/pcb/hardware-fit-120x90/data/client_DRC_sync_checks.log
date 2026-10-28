@@ -1,0 +1,50 @@
+{
+  "comparison_baseline": "94c495eef7ea6575df013086f031b1b6a7edf036",
+  "source_sha256": "c6318ad0ea032586d0910d8e7d7a010b93f6b9816638f8f4bc2189199643430d",
+  "export_sha256": "5b6eece4ff37f3446bccfc344841f0c8be23e7dfc0fcbf8e92b59e7ad542a5b9",
+  "export_file": "GBUCK_RevC2_DRC_syncfix_20261028.eprj2",
+  "project_uuid": "6e529cb70dfcc3c57cbbac0c371825edcad5b251c378c51ef54e15f483f7d25c",
+  "branch_uuid": "97889fbf7f9c5a1ab70fbb8bbed6090f",
+  "pcb_uuid": "39d7e45c69d4559f",
+  "library_and_document_identity_overlap": false,
+  "metadata_version": "1793163028203",
+  "normalized_document_bodies_equal_source": true,
+  "excluded_legacy_boards": true,
+  "included_documents": 176,
+  "components": 120,
+  "physical_component_pads": 325,
+  "track_segments": 768,
+  "vias": 188,
+  "static_copper_regions": 44,
+  "schematic_pin_graph_and_library_associations_preserved": true,
+  "native_desktop_open": "not_run",
+  "inscribed_ellipse_contact_audit": {
+    "networks": 51,
+    "unfinished_networks": {},
+    "orphan_copper_groups": [],
+    "foreign_copper_clearance_errors": []
+  },
+  "native_DRC_of_export": "not_run",
+  "manufacturing_release": false,
+  "impact": {
+    "schematic_topology_values_pins": "unchanged from 94c495e",
+    "components_BOM_copper_positions_and_shapes": "unchanged from 94c495e",
+    "simulation_firmware": "unchanged",
+    "changes": "Independent project/document/library identities, current metadata, single-revision navigation"
+  }
+}
+
+REGRESSION CHECKS
+test_crossing_layers_are_not_connected (test_connectivity.ConnectivityTests.test_crossing_layers_are_not_connected) ... ok
+test_identical_labels_without_copper_are_open (test_connectivity.ConnectivityTests.test_identical_labels_without_copper_are_open) ... ok
+test_native_round_pad_uses_a_conservative_circle_without_square_corners (test_connectivity.ConnectivityTests.test_native_round_pad_uses_a_conservative_circle_without_square_corners) ... ok
+test_native_solid_fill_preserves_clearance_holes (test_connectivity.ConnectivityTests.test_native_solid_fill_preserves_clearance_holes) ... ok
+test_plane_does_not_connect_an_smd_on_the_other_layer (test_connectivity.ConnectivityTests.test_plane_does_not_connect_an_smd_on_the_other_layer) ... ok
+test_router_preserves_clearance_in_a_corridor_between_grid_rows (test_connectivity.ConnectivityTests.test_router_preserves_clearance_in_a_corridor_between_grid_rows) ... ok
+test_via_bridges_layers_but_smd_endpoint_does_not (test_connectivity.ConnectivityTests.test_via_bridges_layers_but_smd_endpoint_does_not) ... ok
+test_wrong_net_via_cannot_bridge (test_connectivity.ConnectivityTests.test_wrong_net_via_cannot_bridge) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.021s
+
+OK

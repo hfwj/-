@@ -1,0 +1,548 @@
+{
+  "canonical_baseline_commit": "94c495eef7ea6575df013086f031b1b6a7edf036",
+  "canonical_sha256": "c6318ad0ea032586d0910d8e7d7a010b93f6b9816638f8f4bc2189199643430d",
+  "uploaded_original_sha256": "c3816e350afb17298a6d4deed13a8b23fdce2c5b3e39964208dc8b045b4faac7",
+  "uploaded_tracks": 71,
+  "uploaded_static_fills": 0,
+  "canonical_tracks": 768,
+  "canonical_static_fills": 44,
+  "uploaded_F1_value": "2A / 6x30",
+  "canonical_F1_value": "2A / 5x20 FAST",
+  "affected_footprint_geometry": {
+    "F1": {
+      "uploaded": [
+        {
+          "physical_pad_id": "p1",
+          "logical_pin": "1",
+          "net": "VIN_EXT",
+          "center_mm": [
+            14.0,
+            76.15
+          ],
+          "size_mm": [
+            3.0,
+            2.4
+          ]
+        },
+        {
+          "physical_pad_id": "p2",
+          "logical_pin": "1",
+          "net": "VIN_EXT",
+          "center_mm": [
+            14.0,
+            83.85
+          ],
+          "size_mm": [
+            3.0,
+            2.4
+          ]
+        },
+        {
+          "physical_pad_id": "p3",
+          "logical_pin": "2",
+          "net": "FUSED",
+          "center_mm": [
+            44.0,
+            76.15
+          ],
+          "size_mm": [
+            3.0,
+            2.4
+          ]
+        },
+        {
+          "physical_pad_id": "p4",
+          "logical_pin": "2",
+          "net": "FUSED",
+          "center_mm": [
+            44.0,
+            83.85
+          ],
+          "size_mm": [
+            3.0,
+            2.4
+          ]
+        }
+      ],
+      "current": [
+        {
+          "physical_pad_id": "p1",
+          "logical_pin": "1",
+          "net": "VIN_EXT",
+          "center_mm": [
+            18.67,
+            80.0
+          ],
+          "size_mm": [
+            2.4,
+            3.0
+          ]
+        },
+        {
+          "physical_pad_id": "p2",
+          "logical_pin": "1",
+          "net": "VIN_EXT",
+          "center_mm": [
+            24.33,
+            80.0
+          ],
+          "size_mm": [
+            2.4,
+            3.0
+          ]
+        },
+        {
+          "physical_pad_id": "p3",
+          "logical_pin": "2",
+          "net": "FUSED",
+          "center_mm": [
+            33.67,
+            80.0
+          ],
+          "size_mm": [
+            2.4,
+            3.0
+          ]
+        },
+        {
+          "physical_pad_id": "p4",
+          "logical_pin": "2",
+          "net": "FUSED",
+          "center_mm": [
+            39.33,
+            80.0
+          ],
+          "size_mm": [
+            2.4,
+            3.0
+          ]
+        }
+      ]
+    },
+    "RS_L": {
+      "uploaded": [
+        {
+          "physical_pad_id": "p1",
+          "logical_pin": "1",
+          "net": "L_RAW",
+          "center_mm": [
+            108.0,
+            82.0
+          ],
+          "size_mm": [
+            2.6,
+            2.6
+          ]
+        },
+        {
+          "physical_pad_id": "p2",
+          "logical_pin": "2",
+          "net": "V_CAP",
+          "center_mm": [
+            108.0,
+            72.0
+          ],
+          "size_mm": [
+            2.6,
+            2.6
+          ]
+        }
+      ],
+      "current": [
+        {
+          "physical_pad_id": "p1",
+          "logical_pin": "1",
+          "net": "L_RAW",
+          "center_mm": [
+            108.0,
+            79.5
+          ],
+          "size_mm": [
+            2.6,
+            2.6
+          ]
+        },
+        {
+          "physical_pad_id": "p2",
+          "logical_pin": "2",
+          "net": "V_CAP",
+          "center_mm": [
+            108.0,
+            74.5
+          ],
+          "size_mm": [
+            2.6,
+            2.6
+          ]
+        }
+      ]
+    },
+    "C_A3": {
+      "uploaded": [
+        {
+          "physical_pad_id": "p1",
+          "logical_pin": "1",
+          "net": "+3V3_A",
+          "center_mm": [
+            92.0,
+            23.5
+          ],
+          "size_mm": [
+            1.45,
+            1.9
+          ]
+        },
+        {
+          "physical_pad_id": "p2",
+          "logical_pin": "2",
+          "net": "GND",
+          "center_mm": [
+            92.0,
+            26.5
+          ],
+          "size_mm": [
+            1.45,
+            1.9
+          ]
+        }
+      ],
+      "current": [
+        {
+          "physical_pad_id": "p1",
+          "logical_pin": "1",
+          "net": "+3V3_A",
+          "center_mm": [
+            92.0,
+            24.0
+          ],
+          "size_mm": [
+            1.35,
+            1.45
+          ]
+        },
+        {
+          "physical_pad_id": "p2",
+          "logical_pin": "2",
+          "net": "GND",
+          "center_mm": [
+            92.0,
+            26.0
+          ],
+          "size_mm": [
+            1.35,
+            1.45
+          ]
+        }
+      ]
+    }
+  },
+  "controlled_comparison": "Current copper with uploaded F1, RS_L and C_A3 pad geometry",
+  "reproduced_clearance_findings": [
+    {
+      "kind": "fill/pad",
+      "ref": "F1",
+      "pin": "1",
+      "physical_pad_id": "p1",
+      "net": "VIN_EXT",
+      "fill_id": "3b45d972fa785289",
+      "layer": 1,
+      "distance_mil": 0.0,
+      "minimum_mil": 6.0
+    },
+    {
+      "kind": "fill/drill",
+      "ref": "F1",
+      "pin": "1",
+      "physical_pad_id": "p1",
+      "net": "VIN_EXT",
+      "fill_id": "3b45d972fa785289",
+      "layer": 1,
+      "distance_mil": 0.0,
+      "minimum_mil": 6.9
+    },
+    {
+      "kind": "fill/pad",
+      "ref": "F1",
+      "pin": "1",
+      "physical_pad_id": "p2",
+      "net": "VIN_EXT",
+      "fill_id": "3b45d972fa785289",
+      "layer": 1,
+      "distance_mil": 0.0,
+      "minimum_mil": 6.0
+    },
+    {
+      "kind": "fill/drill",
+      "ref": "F1",
+      "pin": "1",
+      "physical_pad_id": "p2",
+      "net": "VIN_EXT",
+      "fill_id": "3b45d972fa785289",
+      "layer": 1,
+      "distance_mil": 0.0,
+      "minimum_mil": 6.9
+    },
+    {
+      "kind": "fill/pad",
+      "ref": "F1",
+      "pin": "2",
+      "physical_pad_id": "p3",
+      "net": "FUSED",
+      "fill_id": "3b45d972fa785289",
+      "layer": 1,
+      "distance_mil": 0.0,
+      "minimum_mil": 6.0
+    },
+    {
+      "kind": "fill/drill",
+      "ref": "F1",
+      "pin": "2",
+      "physical_pad_id": "p3",
+      "net": "FUSED",
+      "fill_id": "3b45d972fa785289",
+      "layer": 1,
+      "distance_mil": 0.0,
+      "minimum_mil": 6.9
+    },
+    {
+      "kind": "fill/pad",
+      "ref": "F1",
+      "pin": "2",
+      "physical_pad_id": "p4",
+      "net": "FUSED",
+      "fill_id": "3b45d972fa785289",
+      "layer": 1,
+      "distance_mil": 0.0,
+      "minimum_mil": 6.0
+    },
+    {
+      "kind": "fill/drill",
+      "ref": "F1",
+      "pin": "2",
+      "physical_pad_id": "p4",
+      "net": "FUSED",
+      "fill_id": "3b45d972fa785289",
+      "layer": 1,
+      "distance_mil": 0.0,
+      "minimum_mil": 6.9
+    },
+    {
+      "kind": "fill/pad",
+      "ref": "RS_L",
+      "pin": "1",
+      "physical_pad_id": "p1",
+      "net": "L_RAW",
+      "fill_id": "3b45d972fa785289",
+      "layer": 1,
+      "distance_mil": 0.0,
+      "minimum_mil": 6.0
+    },
+    {
+      "kind": "fill/drill",
+      "ref": "RS_L",
+      "pin": "1",
+      "physical_pad_id": "p1",
+      "net": "L_RAW",
+      "fill_id": "3b45d972fa785289",
+      "layer": 1,
+      "distance_mil": 0.0,
+      "minimum_mil": 6.9
+    },
+    {
+      "kind": "fill/pad",
+      "ref": "RS_L",
+      "pin": "2",
+      "physical_pad_id": "p2",
+      "net": "V_CAP",
+      "fill_id": "3b45d972fa785289",
+      "layer": 1,
+      "distance_mil": 0.0,
+      "minimum_mil": 6.0
+    },
+    {
+      "kind": "fill/drill",
+      "ref": "RS_L",
+      "pin": "2",
+      "physical_pad_id": "p2",
+      "net": "V_CAP",
+      "fill_id": "3b45d972fa785289",
+      "layer": 1,
+      "distance_mil": 5.417,
+      "minimum_mil": 6.9
+    },
+    {
+      "kind": "fill/pad",
+      "ref": "C_A3",
+      "pin": "1",
+      "physical_pad_id": "p1",
+      "net": "+3V3_A",
+      "fill_id": "7cba272b4d655e74",
+      "layer": 1,
+      "distance_mil": 0.0,
+      "minimum_mil": 6.0
+    },
+    {
+      "kind": "fill/pad",
+      "ref": "F1",
+      "pin": "1",
+      "physical_pad_id": "p1",
+      "net": "VIN_EXT",
+      "fill_id": "e1ed4b0692335d89",
+      "layer": 2,
+      "distance_mil": 0.0,
+      "minimum_mil": 6.0
+    },
+    {
+      "kind": "fill/drill",
+      "ref": "F1",
+      "pin": "1",
+      "physical_pad_id": "p1",
+      "net": "VIN_EXT",
+      "fill_id": "e1ed4b0692335d89",
+      "layer": 2,
+      "distance_mil": 0.0,
+      "minimum_mil": 6.9
+    },
+    {
+      "kind": "fill/pad",
+      "ref": "F1",
+      "pin": "1",
+      "physical_pad_id": "p2",
+      "net": "VIN_EXT",
+      "fill_id": "e1ed4b0692335d89",
+      "layer": 2,
+      "distance_mil": 0.0,
+      "minimum_mil": 6.0
+    },
+    {
+      "kind": "fill/drill",
+      "ref": "F1",
+      "pin": "1",
+      "physical_pad_id": "p2",
+      "net": "VIN_EXT",
+      "fill_id": "e1ed4b0692335d89",
+      "layer": 2,
+      "distance_mil": 0.0,
+      "minimum_mil": 6.9
+    },
+    {
+      "kind": "fill/pad",
+      "ref": "F1",
+      "pin": "2",
+      "physical_pad_id": "p3",
+      "net": "FUSED",
+      "fill_id": "e1ed4b0692335d89",
+      "layer": 2,
+      "distance_mil": 0.0,
+      "minimum_mil": 6.0
+    },
+    {
+      "kind": "fill/drill",
+      "ref": "F1",
+      "pin": "2",
+      "physical_pad_id": "p3",
+      "net": "FUSED",
+      "fill_id": "e1ed4b0692335d89",
+      "layer": 2,
+      "distance_mil": 0.0,
+      "minimum_mil": 6.9
+    },
+    {
+      "kind": "fill/pad",
+      "ref": "F1",
+      "pin": "2",
+      "physical_pad_id": "p4",
+      "net": "FUSED",
+      "fill_id": "e1ed4b0692335d89",
+      "layer": 2,
+      "distance_mil": 0.0,
+      "minimum_mil": 6.0
+    },
+    {
+      "kind": "fill/drill",
+      "ref": "F1",
+      "pin": "2",
+      "physical_pad_id": "p4",
+      "net": "FUSED",
+      "fill_id": "e1ed4b0692335d89",
+      "layer": 2,
+      "distance_mil": 0.0,
+      "minimum_mil": 6.9
+    },
+    {
+      "kind": "fill/pad",
+      "ref": "RS_L",
+      "pin": "1",
+      "physical_pad_id": "p1",
+      "net": "L_RAW",
+      "fill_id": "e1ed4b0692335d89",
+      "layer": 2,
+      "distance_mil": 0.0,
+      "minimum_mil": 6.0
+    },
+    {
+      "kind": "fill/drill",
+      "ref": "RS_L",
+      "pin": "1",
+      "physical_pad_id": "p1",
+      "net": "L_RAW",
+      "fill_id": "e1ed4b0692335d89",
+      "layer": 2,
+      "distance_mil": 0.0,
+      "minimum_mil": 6.9
+    },
+    {
+      "kind": "fill/pad",
+      "ref": "RS_L",
+      "pin": "2",
+      "physical_pad_id": "p2",
+      "net": "V_CAP",
+      "fill_id": "e1ed4b0692335d89",
+      "layer": 2,
+      "distance_mil": 0.0,
+      "minimum_mil": 6.0
+    },
+    {
+      "kind": "fill/drill",
+      "ref": "RS_L",
+      "pin": "2",
+      "physical_pad_id": "p2",
+      "net": "V_CAP",
+      "fill_id": "e1ed4b0692335d89",
+      "layer": 2,
+      "distance_mil": 0.0,
+      "minimum_mil": 6.9
+    },
+    {
+      "kind": "fill/pad",
+      "ref": "RS_L",
+      "pin": "1",
+      "physical_pad_id": "p1",
+      "net": "L_RAW",
+      "fill_id": "9ebc91c54bb95ede",
+      "layer": 2,
+      "distance_mil": 0.0,
+      "minimum_mil": 6.0
+    },
+    {
+      "kind": "fill/drill",
+      "ref": "RS_L",
+      "pin": "1",
+      "physical_pad_id": "p1",
+      "net": "L_RAW",
+      "fill_id": "9ebc91c54bb95ede",
+      "layer": 2,
+      "distance_mil": 0.0,
+      "minimum_mil": 6.9
+    }
+  ],
+  "reproduced_clearance_count": 27,
+  "user_screenshot_counts": {
+    "connection_errors": 9,
+    "clearance_errors": 27,
+    "total": 36
+  },
+  "conclusion": "The 27 screenshot clearance findings match the old-footprint/current-copper combination. Exact client cache/import mechanism is not reproduced.",
+  "native_DRC_executed_here": false,
+  "manufacturing_release": false
+}
