@@ -6,6 +6,7 @@
 
 | 项目 | 资料入口 | 当前结论 |
 |---|---|---|
+| 2026 电子电赛 G题：STM32固件起点 | [源码与操作](projects/2026-electronics-contest/g-buck/rev-c2/firmware/README.md) · [默认诊断包](projects/2026-electronics-contest/g-buck/rev-c2/downloads/GBUCK_RevC2_STM32_diagnostic_2026-10-28.zip) | 三配置ARM编译/主机逻辑测试通过；默认禁止功率输出，未上板/未整定；主板原理图/BOM与仿真不改，可选控制板按键待确认 |
 | 2026 电子电赛 G题：器件逐项确认 | [记录](projects/2026-electronics-contest/g-buck/rev-c2/reports/component-confirmations-2026-10-27/README.md) | 1nF/50V/C0G/0805库存4只，单板用2只/补购0只/装一板余2只；1206/X7R款分开，原理图/PCB与仿真未改 |
 | 2026 电子电赛 G题：Rev C.2 更新采购清单 | [Excel](projects/2026-electronics-contest/g-buck/rev-c2/downloads/GBUCK_RevC2_updated_BOM.xlsx) · [PDF](projects/2026-electronics-contest/g-buck/rev-c2/downloads/GBUCK_RevC2_updated_BOM.pdf) · [说明](projects/2026-electronics-contest/g-buck/rev-c2/reports/updated-bom-2026-10-27/README.md) | 120位号合并46项采购记录；商品图分别支持50mΩ P10/线径0.8、25mΩ P5/线径0.7，RS_L已从P10改P5；F1按5×20/P5.66更新，双夹15mm待试装；电气网络/2A额定保持，仿真未改 |
 | 2026 电子电赛 G题：Rev C.2 PCB实物适配 | [工程/说明](projects/2026-electronics-contest/g-buck/rev-c2/pcb/hardware-fit-120x90/README.md) · [PCB预览](projects/2026-electronics-contest/g-buck/rev-c2/pcb/hardware-fit-120x90/previews/PCB_RevC2_120x90.png) | 当前768段铜线/188过孔/44地铜块，51网静态全连通；仅改PCB铜与局部走线，原理图/器件/BOM及位置保持；原生ERC/DRC和实物检查待完成，不能制板 |

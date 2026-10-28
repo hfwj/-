@@ -1,0 +1,25 @@
+{
+  "baseline": "94c495e",
+  "compiler": "arm-none-eabi-gcc 12.2.1 20221205",
+  "date_beijing": "2026-10-28",
+  "checks": [
+    {
+      "configuration": "p0-k0-l1",
+      "binary_bytes": 4824,
+      "sha256": "74567db5fac900e98ed07762cd0149057f6de0d5adda5c2a117deda5df92d943",
+      "vectors": "stack + reset/exceptions/SysTick/EXTI40 addresses passed"
+    },
+    {
+      "configuration": "p1-k1-l1",
+      "binary_bytes": 5244,
+      "sha256": "d2b852963dbd92479c2faaf30a22a7392c88305419d7466863162c1d8e36932d",
+      "vectors": "stack + reset/exceptions/SysTick/EXTI40 addresses passed"
+    },
+    {
+      "configuration": "p0-k0-l0",
+      "binary_bytes": 3368,
+      "sha256": "11dc767dca89118885336a7211516a0446f9f8db3ef58c787ab121169e450f37",
+      "vectors": "stack + reset/exceptions/SysTick/EXTI40 addresses passed"
+    }
+  ]
+}
