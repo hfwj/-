@@ -1,3 +1,5 @@
+**2026-10-28外接旁路开关：**[MN11SS4W01替代评估与接线](reports/component-confirmations-2026-10-28/MN11SS4W01/README.md)。按J_BYP两线SPST旁路用途明确采用MN11SS4W01（4A/30VDC），面板安装、两焊片接FUSED/IN_PRE。旧MSS-22D18实际用法未确认，不能用于双路/换向的直接替换。主板原理图/PCB/Gerber与仿真/固件不改，外接BOM更新；库存未知。
+
 **最新Gerber实测更正：**[核定报告](pcb/power-layout-v5-20261028/gerber-review/README.md)。实际铜形对应v5，51网连通、无异网铜短路；底层一处约0.199881mm。先前按椭圆及槽孔方向的字段解释不代表实际Gerber，详见报告。
 
 **2026-10-28 上传v4核定与v5修订：**[工程与报告](pcb/power-layout-v5-20261028/README.md)。确认并修正三组地铜短路及LO间距，51网静态连通、静态铜间距≥0.20mm。原理图/器件/BOM/封装/位置与仿真/固件不变；F1实物朝向、客户端复铺/原生ERC/DRC待核，不能直接放行投板。

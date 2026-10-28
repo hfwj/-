@@ -1,0 +1,16 @@
+{
+  "comparison_commit": "8fe83d4",
+  "use_case": "J_BYP external precharge bypass only",
+  "new_part": "NKK MN11SS4W01",
+  "old_part_named_by_user": "MSS-22D18",
+  "old_part_found_in_native_project": false,
+  "quantity_per_unit": 1,
+  "purchased_quantity": null,
+  "schematic_or_native_PCB_changed": false,
+  "gerber_changed": false,
+  "firmware_or_simulation_changed": false,
+  "xlsx_external_row_readback": "PASS",
+  "csv_external_row_readback": "PASS",
+  "hardware_test": "not_run",
+  "old_switch_actual_wiring": "unconfirmed"
+}
