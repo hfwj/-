@@ -1,0 +1,256 @@
+{
+  "baseline_sha256": "f18ec7bfd37780776eaf521893867fd54d447a2d478cca23adf9cf5ec14188d5",
+  "before": {
+    "clearance_violations": [
+      [
+        "F1.2",
+        "fill:f4d1d30098625939",
+        0.0
+      ],
+      [
+        "F1.2",
+        "fill:d91c4a4b457155c8",
+        0.0
+      ],
+      [
+        "F1.2",
+        "fill:f4d1d30098625939",
+        0.0
+      ],
+      [
+        "F1.2",
+        "fill:d91c4a4b457155c8",
+        0.0
+      ],
+      [
+        "QH.2",
+        "fill:d91c4a4b457155c8",
+        0.0
+      ],
+      [
+        "QL.3",
+        "line:1f785d3e1e9f5837",
+        0.10353256217840065
+      ],
+      [
+        "J_BYP.2",
+        "fill:f4d1d30098625939",
+        0.0034817900385973205
+      ],
+      [
+        "J_BYP.2",
+        "fill:d91c4a4b457155c8",
+        0.0
+      ]
+    ],
+    "shorts": [
+      [
+        "F1.2",
+        "fill:f4d1d30098625939"
+      ],
+      [
+        "F1.2",
+        "fill:d91c4a4b457155c8"
+      ],
+      [
+        "F1.2",
+        "fill:f4d1d30098625939"
+      ],
+      [
+        "F1.2",
+        "fill:d91c4a4b457155c8"
+      ],
+      [
+        "QH.2",
+        "fill:d91c4a4b457155c8"
+      ],
+      [
+        "J_BYP.2",
+        "fill:d91c4a4b457155c8"
+      ]
+    ],
+    "unfinished_nets": [],
+    "orphan_groups": [],
+    "net_count": 51
+  },
+  "lo_route": {
+    "points_mm": [
+      [
+        61.19,
+        71.61
+      ],
+      [
+        63.25,
+        70.25
+      ],
+      [
+        73.0,
+        66.75
+      ],
+      [
+        79.25,
+        66.75
+      ],
+      [
+        79.5,
+        67.5
+      ],
+      [
+        79.5,
+        70.75
+      ],
+      [
+        79.0,
+        72.0
+      ]
+    ],
+    "width_mm": 0.4,
+    "before_length_mm": 39.82092936562532,
+    "after_length_mm": 25.664476097798328
+  },
+  "after": {
+    "clearance_violations": [],
+    "shorts": [],
+    "unfinished_nets": [],
+    "orphan_groups": [],
+    "net_count": 51
+  },
+  "output_sha256": "e2b7227dd8e03601dd85e1d3a61189f1038e1f215fd7194b05d626417317d8f1",
+  "readback": "PASS",
+  "sqlite_integrity": "ok",
+  "removed_records": [
+    [
+      "LINE",
+      "fdacae236da0564a"
+    ],
+    [
+      "LINE",
+      "284fe4641d8d52ce"
+    ],
+    [
+      "LINE",
+      "c1d4584efb815028"
+    ],
+    [
+      "LINE",
+      "95e50abce12c55ab"
+    ],
+    [
+      "VIA",
+      "2942503df7435d9b"
+    ],
+    [
+      "VIA",
+      "ad626e5fc7a05e1a"
+    ],
+    [
+      "LINE",
+      "140a6089e5a55ec5"
+    ],
+    [
+      "LINE",
+      "d6bd89b84fc657e8"
+    ],
+    [
+      "LINE",
+      "bc46f076a4735780"
+    ],
+    [
+      "LINE",
+      "1f785d3e1e9f5837"
+    ],
+    [
+      "LINE",
+      "72f391c9968d55a5"
+    ],
+    [
+      "LINE",
+      "7f46bc8f91ef5b60"
+    ],
+    [
+      "LINE",
+      "4361cd3128865554"
+    ],
+    [
+      "FILL",
+      "f4d1d30098625939"
+    ],
+    [
+      "FILL",
+      "89b304d7a0295bee"
+    ],
+    [
+      "FILL",
+      "278584b40f295342"
+    ],
+    [
+      "FILL",
+      "5454bf732bb854f5"
+    ],
+    [
+      "FILL",
+      "23053ebebc215d13"
+    ],
+    [
+      "FILL",
+      "6a0ae669e99c5445"
+    ],
+    [
+      "FILL",
+      "64ea7eefac135d86"
+    ],
+    [
+      "FILL",
+      "c30e3b958a4f5eca"
+    ],
+    [
+      "FILL",
+      "c80ead46aa755616"
+    ],
+    [
+      "FILL",
+      "517facb224865a4f"
+    ],
+    [
+      "FILL",
+      "d91c4a4b457155c8"
+    ],
+    [
+      "FILL",
+      "67ade4ba94f355f5"
+    ],
+    [
+      "FILL",
+      "24020dda6ea45f45"
+    ],
+    [
+      "FILL",
+      "f8c01c83858459ed"
+    ],
+    [
+      "FILL",
+      "9fdd11face3c5d3e"
+    ],
+    [
+      "FILL",
+      "7856ff23cda85377"
+    ],
+    [
+      "FILL",
+      "5ccf17c8d5b65ae9"
+    ]
+  ],
+  "native_ERC": "not_run",
+  "native_DRC": "not_run",
+  "inner_ellipse_pad_connectivity": "PASS",
+  "copper_fills": 18,
+  "physical_pads": 325,
+  "unique_logical_pins": 323,
+  "components": 120,
+  "target_clearances_mm": {
+    "QH.2": 0.2052391307297654,
+    "F1.2": 0.20532200504094078,
+    "J_BYP.2": 0.20524750586947246,
+    "QL.3": 0.2319703368928698
+  }
+}
