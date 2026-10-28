@@ -1,0 +1,89 @@
+{
+  "board_outline_expected_mm": [
+    120,
+    90
+  ],
+  "copper_region_counts": {
+    "1": 28,
+    "2": 16
+  },
+  "PTH_count_including_vias": 254,
+  "via_count": 188,
+  "NPTH_count": 4,
+  "PTH_centers_match_native": true,
+  "extra_drill_centers": [],
+  "missing_drill_centers": [],
+  "physical_Gerber_net_count": 51,
+  "physical_Gerber_shorts": [],
+  "physical_Gerber_open_nets": {},
+  "missing_pad_center_copper": [],
+  "missing_pad_center_mask_openings": [],
+  "via_hole_mask_overlap": [],
+  "annular_margin_below_0_145_mm": [],
+  "copper_board_bounds": {
+    "1": [
+      1.0,
+      1.0,
+      119.0,
+      89.0
+    ],
+    "2": [
+      1.0,
+      1.0,
+      119.0,
+      89.0
+    ]
+  },
+  "floating_copper_islands": 0,
+  "scope": "Geometric parser for this export (C/R/roundrect apertures, linear paths, even-odd regions). Not vendor CAM acceptance or electrical/thermal validation.",
+  "minimum_different_group_copper_clearance_mm": 0.19992083232433427,
+  "copper_clearance_below_0_195_mm": [],
+  "top_silk_stroke_apertures_mm": [
+    [
+      "10",
+      "0.12"
+    ],
+    [
+      "11",
+      "0.0125"
+    ]
+  ],
+  "main_PTH_unique_hole_centers": 254,
+  "outline_vertices_mm": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      90.0
+    ],
+    [
+      120.0,
+      90.0
+    ],
+    [
+      120.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ]
+  ],
+  "top_silk_used_stroke_widths_mm": [
+    0.12
+  ],
+  "unused_silk_aperture_mm": [
+    0.0125
+  ],
+  "silk_overlap_mask_openings_area_mm2": 76.13559857527187,
+  "silk_outside_board_area_mm2": 0.0,
+  "PTH_drill_diameters_match_native": true,
+  "compared_PTH_count": 254,
+  "Gerber_zip_sha256": "49cee30d201615b02b3824495600aa2924b4ba726b71fff4fc1fdffab3113f0b",
+  "comparison_baseline": "8d59a3df28f02535c742b6fd1d766b14157d073d",
+  "native_DRC_v3": "not_reported",
+  "manufacturing_release": false,
+  "impact": "Read-only review and documentation; native schematic, components/BOM, PCB geometry, simulation and firmware unchanged."
+}
