@@ -1,5 +1,7 @@
 # G 题同步 Buck Rev C.2
 
+**布局复核更新：**[已投产v3与外部检查报告对照](pcb/hardware-fit-120x90/reports/外部检查报告与已投产v3对照.md)。功率回路和Kelvin采样需作为调试重点；已下单文件保持，工程/器件未改。
+
 **v3 Gerber局部复核通过：**[四槽孔及过孔阻焊检查](pcb/hardware-fit-120x90/reports/Gerber_v3_槽孔与阻焊复核.md)，实际导出四槽孔为0.9×1.5mm、188个过孔双面盖油；本轮仅审核归档，工程与器件不变，完整制造验收仍待完成。
 
 **当前PCB：**[F1槽孔修复v3](pcb/hardware-fit-120x90/native/GBUCK_RevC2_F1_slotfix_v3_20261028.eprj2) · [说明与影响](pcb/hardware-fit-120x90/reports/F1槽孔修复_v3_2026-10-28.md)。仅修正F1槽孔原生定义；网络/物料/铜走线不变，DRC和Gerber待重新复验。
