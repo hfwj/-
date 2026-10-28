@@ -1,5 +1,7 @@
 # Rev C.2 PCB：按实购物料修订封装与布局
 
+**当前工程（F1槽孔修复 v3）：**[下载](native/GBUCK_RevC2_F1_slotfix_v3_20261028.eprj2) · [修改与复验说明](reports/F1槽孔修复_v3_2026-10-28.md)。仅修正四槽孔的原生长短轴与方向，原理图、器件/BOM、孔位及铜走线不变，仿真/固件未改；v3需重跑DRC、重新导出Gerber复验。
+
 **当前下载入口（网表同步复验 v2，2026-10-28）：**[独立 v2 工程](native/GBUCK_RevC2_DRC_netlistfix_20261028.eprj2) · [v2 资料包](../../downloads/GBUCK_RevC2_DRC_netlistfix_20261028.zip) · [修复与影响说明](reports/网表同步修复_v2_2026-10-28.md)。客户端导入表拟删除 R_PRE；已修正其 PCB 导出开关、补齐18项通道ID并保留保护滤波说明。相对 d68f3dd，电气网络/数值、器件/BOM、封装、位置和铜几何不变，仿真/固件未改。120项全部允许导入PCB，51网静态连通；**v2 客户端 DRC 已通过（用户反馈）**；[通过记录与范围](reports/客户端DRC通过记录_2026-10-28.md)，制造/装配检查仍未放行。
 
 **历史封装同步候选版（2026-10-28）：**[独立 DRC 封装同步复验工程](native/GBUCK_RevC2_DRC_syncfix_20261028.eprj2) · [复验包](../../downloads/GBUCK_RevC2_DRC_syncfix_20261028.zip) · [定位、影响及操作说明](reports/客户端DRC与封装同步修复_2026-10-28.md)。用户截图有 36 条原生 DRC 错误；用上传件中的 F1/RS_L/C_A3 旧封装与新铜组合复现了全部 27 条间距错误。新副本使用独立工程/库标识和当前封装，避免版本混用；几何与 `94c495e` 一致，原理图、器件/BOM、仿真/固件不变。静态 51 网连通，**独立副本的原生 DRC 仍待客户端复验，不能制板**。下面的同名旧工程/地铜包保留为历史和工程源，不再作为本轮导入入口。
@@ -18,8 +20,8 @@
 
 | 内容 | 入口 |
 |---|---|
-| 当前导入复验包 | [网表同步复验 v2 资料包](../../downloads/GBUCK_RevC2_DRC_netlistfix_20261028.zip) |
-| 当前嘉立创 EDA 专业版可编辑工程 | [GBUCK_RevC2_DRC_netlistfix_20261028.eprj2](native/GBUCK_RevC2_DRC_netlistfix_20261028.eprj2) |
+| 历史v2复验包 | [网表同步复验 v2 资料包](../../downloads/GBUCK_RevC2_DRC_netlistfix_20261028.zip) |
+| 当前嘉立创 EDA 专业版可编辑工程 | [GBUCK_RevC2_F1_slotfix_v3_20261028.eprj2](native/GBUCK_RevC2_F1_slotfix_v3_20261028.eprj2) |
 | 历史工程源及地铜资料包 | [历史源工程](native/GBUCK_RevC2_120x90_PCB_review.eprj2) · [地铜阶段包](../../downloads/GBUCK_RevC2_PCB_ground_draft_2026-10-28.zip) |
 | 实际工程记录绘制的 PCB 总览 | [PNG](previews/PCB_RevC2_120x90.png) · [总览与局部 PDF](previews/PCB_RevC2_review.pdf) |
 | 封装核对打印页，必须按 100% 打印 | [1:1 核对 PDF](previews/Footprint_1to1_CHECK_ONLY.pdf) |

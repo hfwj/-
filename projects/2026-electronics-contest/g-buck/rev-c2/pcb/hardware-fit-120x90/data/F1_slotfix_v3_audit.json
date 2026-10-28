@@ -1,0 +1,95 @@
+{
+  "uploaded_baseline_sha256": "a7dcfc595a4b786f03c2d10123c17f8ba6f612dbd3032924968bcdcd61f3657e",
+  "patched_source_sha256": "edbd78370aef49c491a1fcccfc149a246a3f64b4e913112a3a2f2ee083ae7123",
+  "changes": [
+    {
+      "pad": "p1",
+      "before": {
+        "holeType": "SLOT",
+        "width": 35.43307,
+        "height": 59.05512
+      },
+      "after": {
+        "holeType": "SLOT",
+        "width": 59.05511811023622,
+        "height": 35.43307086614173
+      },
+      "relativeAngle_before": 0,
+      "relativeAngle_after": 90
+    },
+    {
+      "pad": "p2",
+      "before": {
+        "holeType": "SLOT",
+        "width": 35.43307,
+        "height": 59.05512
+      },
+      "after": {
+        "holeType": "SLOT",
+        "width": 59.05511811023622,
+        "height": 35.43307086614173
+      },
+      "relativeAngle_before": 0,
+      "relativeAngle_after": 90
+    },
+    {
+      "pad": "p3",
+      "before": {
+        "holeType": "SLOT",
+        "width": 35.43307,
+        "height": 59.05512
+      },
+      "after": {
+        "holeType": "SLOT",
+        "width": 59.05511811023622,
+        "height": 35.43307086614173
+      },
+      "relativeAngle_before": 0,
+      "relativeAngle_after": 90
+    },
+    {
+      "pad": "p4",
+      "before": {
+        "holeType": "SLOT",
+        "width": 35.43307,
+        "height": 59.05512
+      },
+      "after": {
+        "holeType": "SLOT",
+        "width": 59.05511811023622,
+        "height": 35.43307086614173
+      },
+      "relativeAngle_before": 0,
+      "relativeAngle_after": 90
+    }
+  ],
+  "only_four_pad_hole_definitions_changed": true,
+  "other_document_bodies_unchanged": true,
+  "expected_drill_diameter_mm": 0.9,
+  "expected_slot_travel_mm": 0.6,
+  "expected_slot_overall_mm": [
+    0.9,
+    1.5
+  ],
+  "expected_centers_mm": [
+    [
+      18.67,
+      80
+    ],
+    [
+      24.33,
+      80
+    ],
+    [
+      33.67,
+      80
+    ],
+    [
+      39.33,
+      80
+    ]
+  ],
+  "native_Gerber_reexport": "pending_client",
+  "native_DRC": "pending_client",
+  "manufacturing_release": false
+}

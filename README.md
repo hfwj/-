@@ -1,5 +1,7 @@
 # 电子设计与仿真资料
 
+当前PCB：[F1槽孔修复v3及影响说明](projects/2026-electronics-contest/g-buck/rev-c2/pcb/hardware-fit-120x90/reports/F1槽孔修复_v3_2026-10-28.md)。四槽孔原生定义已修正，v3原生DRC与Gerber待复验。
+
 按项目、版本和资料类型归档，报告、仿真源代码及验证数据一起保存。
 
 ## 项目目录

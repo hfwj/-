@@ -125,6 +125,13 @@ def main():
             b['hole']=({'holeType':'SLOT' if p.get('slot') else 'ROUND',
                         'width':mil(p.get('hole_w',p.get('slot',p['hole']))),
                         'height':mil(p.get('hole_h',p['hole']))} if p['hole'] else None)
+            if p.get('slot'):
+                # Native SLOT width is the overall long axis; height is the
+                # drill diameter. A reversed pair exports zero G85 travel.
+                hw=p.get('hole_w',p.get('slot',p['hole']))
+                hh=p.get('hole_h',p['hole'])
+                b['hole'].update(width=mil(max(hw,hh)),height=mil(min(hw,hh)))
+                b['relativeAngle']=90 if hh>hw else 0
             docs[fp]['PAD','p'+str(n+1)]=b
         w,h=spec['body_mm']
         for layer,extra in [(3,0),(48,0),(47,.5)]:
