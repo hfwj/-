@@ -1,6 +1,8 @@
 # 电子设计与仿真资料
 
-当前PCB：[F1槽孔修复v3及影响说明](projects/2026-electronics-contest/g-buck/rev-c2/pcb/hardware-fit-120x90/reports/F1槽孔修复_v3_2026-10-28.md)。四槽孔原生定义已修正，v3原生DRC与Gerber待复验。
+当前重新打样PCB：[功率布局v4工程与资料](projects/2026-electronics-contest/g-buck/rev-c2/pcb/power-layout-v4-120x90/README.md)。v4原生DRC与客户端Gerber待复验；已投产v3保留作历史版本。
+
+最新器件核实：[v4剩余器件清单](projects/2026-electronics-contest/g-buck/rev-c2/reports/component-verification-2026-10-28/README.md)。区分已确认信息与电感Isat、开关DC额定、脉冲电阻、分流器、保险夹实装等待核项；本轮只整理证据，原理图/器件/BOM/PCB及仿真/固件均未改。
 
 按项目、版本和资料类型归档，报告、仿真源代码及验证数据一起保存。
 

@@ -2,6 +2,8 @@
 
 本版用于替代已投产的 v3 进行新一轮打样。**PCB 已改版并通过静态复核；v4 原生 ERC/DRC、客户端 Gerber 与厂家生产稿仍待复验。**旧 v3 工程和导出包保持原样。
 
+**器件核实补充：**[剩余器件与实装检查清单](../../reports/component-verification-2026-10-28/README.md)。当前BOM中的机械标记不能替代实物匹配/额定验收；F1两夹15mm、MOS本体/散热与C2/D_FREE空间等须在重新下单前核实。本次仅新增说明与证据，工程/BOM/ZIP及仿真/固件保持a1ff59a版本。
+
 | 资料 | 文件 |
 |---|---|
 | 当前可编辑工程 | [GBUCK_RevC2_PowerLayout_v4_20261028.eprj2](native/GBUCK_RevC2_PowerLayout_v4_20261028.eprj2) |

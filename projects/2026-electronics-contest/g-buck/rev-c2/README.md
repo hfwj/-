@@ -1,5 +1,7 @@
 # G 题同步 Buck Rev C.2
 
+**最新器件核实（比较a1ff59a的v4）：**[待核清单与判定条件](reports/component-verification-2026-10-28/README.md) · [可筛选CSV](results/data/component-verification-2026-10-28/remaining_components.csv)。19组器件/辅料分类核实；优先L1电流定义、J_BYP直流额定、R_PRE脉冲能力、分流器精度/功率、F1夹实装和MOS散热/机械空间。既有小电容库存按单板与五板情景分列，未知库存不填0。仅新增文档/证据索引，原理图、器件/BOM/PCB、仿真与固件均未改；不构成制造或上电放行。
+
 **当前重新打样版本：PCB功率布局 v4（2026-10-28）** — [工程及资料](pcb/power-layout-v4-120x90/README.md) · [可编辑工程](pcb/power-layout-v4-120x90/native/GBUCK_RevC2_PowerLayout_v4_20261028.eprj2) · [v4整包](downloads/GBUCK_RevC2_PowerLayout_v4_20261028.zip)。C2改为半桥局部旁路，D_FREE靠近QL，Kelvin双线各约7.934mm且主干下方地连续；20项移位/旋转。原理图网络/器件值、封装/BOM、仿真/固件保持。804段/209过孔/17块地铜，51网静态连通；原生ERC/DRC与v4 Gerber待客户端复验，不能沿用旧Gerber下单。
 
 **布局复核更新：**[已投产v3与外部检查报告对照](pcb/hardware-fit-120x90/reports/外部检查报告与已投产v3对照.md)。功率回路和Kelvin采样需作为调试重点；已下单文件保持，工程/器件未改。

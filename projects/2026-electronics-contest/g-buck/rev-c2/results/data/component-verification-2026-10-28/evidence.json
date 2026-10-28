@@ -1,0 +1,143 @@
+{
+  "date": "2026-10-28",
+  "comparison_baseline": "a1ff59afff20335d274f83c1b6c5e530fc2c24d8",
+  "scope": "Review of existing evidence for unresolved component selection, ratings and assembly, against v4",
+  "new_user_part_numbers_received": false,
+  "remaining_groups": 19,
+  "impact": {
+    "schematic_changed": false,
+    "native_project_changed": false,
+    "pcb_geometry_changed": false,
+    "bom_design_changed": false,
+    "simulation_changed": false,
+    "firmware_changed": false,
+    "future_replacement_or_mechanical_impact": "unconfirmed"
+  },
+  "validation_boundary": {
+    "manufacturer_ratings_of_unknown_parts_verified": false,
+    "new_hardware_tests_performed": false,
+    "v4_native_erc_drc_run": false,
+    "v4_client_gerber_exported": false,
+    "manufacturing_release": false
+  },
+  "input_files": [
+    {
+      "path": "pcb/power-layout-v4-120x90/native/GBUCK_RevC2_PowerLayout_v4_20261028.eprj2",
+      "sha256": "f18ec7bfd37780776eaf521893867fd54d447a2d478cca23adf9cf5ec14188d5"
+    },
+    {
+      "path": "pcb/power-layout-v4-120x90/data/PCB_BOM_RevC2_PowerLayout_v4.csv",
+      "sha256": "6054c93567aaf79e1e656897ad1bef639fb90900c8f6a23a0fa19551e6bf9856"
+    },
+    {
+      "path": "downloads/GBUCK_RevC2_PowerLayout_v4_20261028.zip",
+      "sha256": "f41a95dd81239bfa2a9d2961986ec96cdaf8b9ecf12ebecf71daf78a5ae72797"
+    },
+    {
+      "path": "pcb/hardware-fit-120x90/references/G题EDA与PCB元器件参数填写表.docx",
+      "sha256": "786b651213490668b3556e7006239da5e22ad8c3ffd7be49e689fcf7c8fed60a"
+    },
+    {
+      "path": "pcb/hardware-fit-120x90/PCB修改说明与待确认项.md",
+      "sha256": "c1d927e6a7dbddaca2f849ee94a8dbb9a74464af190fd733c465f59d6754da98"
+    },
+    {
+      "path": "pcb/hardware-fit-120x90/reports/F1_5x20夹P5p66确认.md",
+      "sha256": "40ea766996c2ae5bab0733564aa86b6c4ec1cc9a5984680a4b8350b153b9d48a"
+    },
+    {
+      "path": "pcb/hardware-fit-120x90/reports/50mΩ商品图确认.md",
+      "sha256": "66d259195353d746964ddb38c30473d0acbb9f263b6f97481b9bdc2872e744e2"
+    },
+    {
+      "path": "pcb/hardware-fit-120x90/reports/25mΩ商品图确认.md",
+      "sha256": "9c821de85d9bc9b52e8d03dd184f2315e2033f5db020c1420486d19e5ef4096e"
+    },
+    {
+      "path": "reports/component-confirmations-2026-10-27/README.md",
+      "sha256": "9739243dfb9a3972b63f5e31086ce70b3a89a2263278d87b6767c3805b634e38"
+    },
+    {
+      "path": "reports/updated-bom-2026-10-27/物料清单.md",
+      "sha256": "9faf6551ffe1dda05d5bc0cf17fbd401341f4f7203e3ef05ce207dc26e41a887"
+    }
+  ],
+  "source_precedence": "Later explicit user confirmations supersede earlier generic or conflicting records; design target and seller marking do not establish actual performance.",
+  "inventory_basis": "Previously user-confirmed available quantities; not physically counted or deducted this round; one-board default; five-board quantities are only a scenario.",
+  "unknown_inventory": null,
+  "known_inventory": [
+    {
+      "batch": "100nF/50V/0805/X7R",
+      "available": 50,
+      "per_board": 16,
+      "supplement_for_one": 0,
+      "remaining_after_one": 34,
+      "supplement_for_five_scenario": 30
+    },
+    {
+      "batch": "CL21B472JBANNNC 4.7nF/50V/X7R/0805",
+      "available": 50,
+      "per_board": 4,
+      "supplement_for_one": 0,
+      "remaining_after_one": 46,
+      "supplement_for_five_scenario": 0
+    },
+    {
+      "batch": "4.7nF/50V/C0G/0805 separate batch",
+      "available": 2,
+      "per_board": 1,
+      "supplement_for_one": 0,
+      "remaining_after_one": 1,
+      "supplement_for_five_scenario": 3
+    },
+    {
+      "batch": "1nF/50V/C0G/0805 separate batch",
+      "available": 4,
+      "per_board": 2,
+      "supplement_for_one": 0,
+      "remaining_after_one": 2,
+      "supplement_for_five_scenario": 6
+    }
+  ],
+  "manufacturer_references": [
+    {
+      "url": "https://www.coilcraft.com/en-us/resources/application-notes/current-and-temperature-ratings/",
+      "supports": "Isat and temperature-rise current have different meanings and product-specific test conditions"
+    },
+    {
+      "url": "https://www.vishay.com/docs/48516/_ms9702509-2401-vishaychecklistpulseload.pdf",
+      "supports": "Pulse-load verification needs duration, repetition, shape and temperature, beyond continuous watts"
+    },
+    {
+      "url": "https://www.littelfuse.com/assetdocs/fuse-fundamentals-at-the-heart-of-electrical-systems-fuses-keep-operations-live?assetguid=55d2e833-b53b-467f-a0c2-f15ff2316db3",
+      "supports": "Fuse voltage and interrupting ratings, with AC/DC application conditions"
+    },
+    {
+      "url": "https://www.infineon.com/assets/row/public/documents/24/49/infineon-irf540n-datasheet-en.pdf",
+      "supports": "Infineon IRF540N package and thermal conditions; drain tab"
+    },
+    {
+      "url": "https://www.sem.samsung.co.kr/kr/support/library/technical-documents/view.do?id=41",
+      "supports": "Class II MLCC DC bias changes effective capacitance, no user-part capacitance curve obtained"
+    },
+    {
+      "url": "https://product.samsungsem.com/resources/file/product-catalog/MLCC_Automotive_2512.pdf",
+      "supports": "Samsung MLCC coding reference only"
+    },
+    {
+      "url": "https://www.ti.com/product/INA240",
+      "supports": "TI A1 gain 20 V/V and D SOIC package option; not authentication of actual purchased IC"
+    }
+  ],
+  "reference_access_date": "2026-10-28",
+  "output_files": [
+    {
+      "path": "reports/component-verification-2026-10-28/README.md",
+      "sha256": "52c053a918ca8d095aff54c707307ab41e3af7f6564f97c9c87b922cb902cd81"
+    },
+    {
+      "path": "results/data/component-verification-2026-10-28/remaining_components.csv",
+      "sha256": "82d1fedc2c0405e39bb1e9ce8f761ce9d45c9bf90aa92499770dc8a18d06a7d0"
+    }
+  ]
+}
