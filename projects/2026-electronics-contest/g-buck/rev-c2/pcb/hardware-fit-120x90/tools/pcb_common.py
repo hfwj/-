@@ -9,6 +9,18 @@ from shapely import affinity
 
 PATH=ROOT/'native/GBUCK_RevC2_120x90_PCB_review.eprj2'
 
+def pcb_export_references(docs, parts):
+    """Resolve schematic instance overrides before device PCB-export flags."""
+    included=set()
+    for ref,p in parts.items():
+        device=docs[p['attrs']['Device']]['META','META']['attributes']
+        value=p['attrs'].get('Convert to PCB',device.get('Convert to PCB'))
+        flag=str(value).strip().lower()
+        if flag in ('yes','true','1'):included.add(ref)
+        elif flag not in ('no','false','0'):
+            raise ValueError('Unknown PCB-export flag for '+ref+': '+str(value))
+    return included
+
 def copper_vias(docs, pcb):
     return [{'id':i,'net':v['netName'],'x':v['centerX']*.0254,
              'y':v['centerY']*.0254,'diameter':v['viaDiameter']*.0254,

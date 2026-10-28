@@ -1,6 +1,8 @@
 # G 题同步 Buck Rev C.2
 
-**当前 PCB 导入入口（2026-10-28）：**[独立 DRC 封装同步复验工程](pcb/hardware-fit-120x90/native/GBUCK_RevC2_DRC_syncfix_20261028.eprj2) · [复验包](downloads/GBUCK_RevC2_DRC_syncfix_20261028.zip) · [定位与修改影响](pcb/hardware-fit-120x90/reports/客户端DRC与封装同步修复_2026-10-28.md)。旧封装与新铜组合复现用户截图的 27 条间距错误；已导出独立工程/库标识的当前版本，原生 DRC 待复验。相对 `94c495e`，原理图、器件/BOM、布局/铜形状及仿真/固件均保持；不能制板。下列旧工程包是历史阶段。
+**当前 PCB 导入入口（网表同步复验 v2，2026-10-28）：**[独立 v2 工程](pcb/hardware-fit-120x90/native/GBUCK_RevC2_DRC_netlistfix_20261028.eprj2) · [v2 资料包](downloads/GBUCK_RevC2_DRC_netlistfix_20261028.zip) · [修复及影响](pcb/hardware-fit-120x90/reports/网表同步修复_v2_2026-10-28.md)。已修正导致导入时移除 R_PRE 的 PCB 导出属性，补齐通道 ID；原理图网络/值、器件/BOM及全部PCB几何不变，仿真/固件未改。120项导出一致，51网静态连通；v2 原生DRC待客户端复验，不能制板。
+
+**历史封装同步候选版（2026-10-28）：**[独立 DRC 封装同步复验工程](pcb/hardware-fit-120x90/native/GBUCK_RevC2_DRC_syncfix_20261028.eprj2) · [复验包](downloads/GBUCK_RevC2_DRC_syncfix_20261028.zip) · [定位与修改影响](pcb/hardware-fit-120x90/reports/客户端DRC与封装同步修复_2026-10-28.md)。旧封装与新铜组合复现用户截图的 27 条间距错误；已导出独立工程/库标识的当前版本，原生 DRC 待复验。相对 `94c495e`，原理图、器件/BOM、布局/铜形状及仿真/固件均保持；不能制板。下列旧工程包是历史阶段。
 
 **2026-10-28历史地铜阶段：**[地铜与整板复核](pcb/hardware-fit-120x90/reports/地铜与整板连通复核_2026-10-28.md) · [地铜阶段包](downloads/GBUCK_RevC2_PCB_ground_draft_2026-10-28.zip)。768段/188过孔/44地铜块，51网静态全连通，未布与悬空铜0；该阶段未做原生ERC/DRC，不能制板。其后客户端反馈和当前独立导入入口见上方。本轮原理图、器件/BOM和位置不变，仅改PCB铜及局部走线；仿真/固件未改。
 

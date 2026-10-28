@@ -1,0 +1,338 @@
+{
+  "comparison_baseline": "d68f3dd7f6f9e370f4e26f39c72e2d565cb69e9f",
+  "baseline_native_sha256": "c6318ad0ea032586d0910d8e7d7a010b93f6b9816638f8f4bc2189199643430d",
+  "saved_native_sha256": "2d1da959b34d0fd12b568976f9710d64fde8c489d47abe4ba76bfcb8dcdea7f4",
+  "client_import_csv_sha256": "c8ee14f4b094cde140e1263272043c60316f053eb2cd9a36bc466e66d4bcc81e",
+  "client_import_change_count": 19,
+  "property_changes": [
+    {
+      "ref": "TP14",
+      "property": "Channel ID",
+      "before": "",
+      "after": "$1I7"
+    },
+    {
+      "ref": "R_PRE",
+      "property": "Channel ID",
+      "before": "",
+      "after": "$3I1"
+    },
+    {
+      "ref": "J_BYP",
+      "property": "Channel ID",
+      "before": "",
+      "after": "$3I2"
+    },
+    {
+      "ref": "D_FREE",
+      "property": "Channel ID",
+      "before": "",
+      "after": "$3I3"
+    },
+    {
+      "ref": "R_SN",
+      "property": "Channel ID",
+      "before": "",
+      "after": "$3I4"
+    },
+    {
+      "ref": "C_SN",
+      "property": "Channel ID",
+      "before": "",
+      "after": "$3I5"
+    },
+    {
+      "ref": "R_IL_PROT",
+      "property": "Channel ID",
+      "before": "",
+      "after": "$3I6"
+    },
+    {
+      "ref": "C_IL_PROT",
+      "property": "Channel ID",
+      "before": "",
+      "after": "$3I7"
+    },
+    {
+      "ref": "R_IOUT_PROT",
+      "property": "Channel ID",
+      "before": "",
+      "after": "$3I8"
+    },
+    {
+      "ref": "C_IOUT_PROT",
+      "property": "Channel ID",
+      "before": "",
+      "after": "$3I9"
+    },
+    {
+      "ref": "R_IOUT_TOP",
+      "property": "Channel ID",
+      "before": "",
+      "after": "$3I10"
+    },
+    {
+      "ref": "R_IOUT_BOT",
+      "property": "Channel ID",
+      "before": "",
+      "after": "$3I11"
+    },
+    {
+      "ref": "C_REF_IOUT",
+      "property": "Channel ID",
+      "before": "",
+      "after": "$3I12"
+    },
+    {
+      "ref": "R_IOUT_PU",
+      "property": "Channel ID",
+      "before": "",
+      "after": "$3I13"
+    },
+    {
+      "ref": "C_DRV",
+      "property": "Channel ID",
+      "before": "",
+      "after": "$3I14"
+    },
+    {
+      "ref": "TP11",
+      "property": "Channel ID",
+      "before": "",
+      "after": "$3I15"
+    },
+    {
+      "ref": "TP12",
+      "property": "Channel ID",
+      "before": "",
+      "after": "$3I16"
+    },
+    {
+      "ref": "TP13",
+      "property": "Channel ID",
+      "before": "",
+      "after": "$3I17"
+    },
+    {
+      "ref": "R_PRE",
+      "property": "Convert to PCB",
+      "before": "no",
+      "after": "yes",
+      "reason": "Keep the external resistor board-side terminals in the PCB netlist"
+    },
+    {
+      "ref": "C_IOUT_PROT",
+      "property": "Description",
+      "before": "",
+      "after": "1kΩ+100nF，τ=100us；不替代软件持续判据"
+    }
+  ],
+  "changed_records": [
+    {
+      "document": "db66fd70791645b2",
+      "type": "ATTR",
+      "id": "794b2746a5d953f8"
+    },
+    {
+      "document": "db66fd70791645b2",
+      "type": "ATTR",
+      "id": "6d1d7a1edd7b5a77"
+    },
+    {
+      "document": "db66fd70791645b2",
+      "type": "ATTR",
+      "id": "ece70aaf217c54c3"
+    },
+    {
+      "document": "db66fd70791645b2",
+      "type": "ATTR",
+      "id": "c4bc62a61c53563e"
+    },
+    {
+      "document": "db66fd70791645b2",
+      "type": "ATTR",
+      "id": "8060324154125e70"
+    },
+    {
+      "document": "db66fd70791645b2",
+      "type": "ATTR",
+      "id": "3c2bc309890e5685"
+    },
+    {
+      "document": "db66fd70791645b2",
+      "type": "ATTR",
+      "id": "4b07a18aaec15cf0"
+    },
+    {
+      "document": "db66fd70791645b2",
+      "type": "ATTR",
+      "id": "0acc5f895f67575c"
+    },
+    {
+      "document": "db66fd70791645b2",
+      "type": "ATTR",
+      "id": "af054f8977385361"
+    },
+    {
+      "document": "db66fd70791645b2",
+      "type": "ATTR",
+      "id": "a5fc71cedc9d5f30"
+    },
+    {
+      "document": "db66fd70791645b2",
+      "type": "ATTR",
+      "id": "e10c2917d6a951b7"
+    },
+    {
+      "document": "db66fd70791645b2",
+      "type": "ATTR",
+      "id": "0dd6ba2bcd395df1"
+    },
+    {
+      "document": "db66fd70791645b2",
+      "type": "ATTR",
+      "id": "a98f74132e74589f"
+    },
+    {
+      "document": "db66fd70791645b2",
+      "type": "ATTR",
+      "id": "736a5fe2eb9b5d93"
+    },
+    {
+      "document": "db66fd70791645b2",
+      "type": "ATTR",
+      "id": "2dd722977e5941a9"
+    },
+    {
+      "document": "db66fd70791645b2",
+      "type": "ATTR",
+      "id": "1264be037416521c"
+    },
+    {
+      "document": "db66fd70791645b2",
+      "type": "ATTR",
+      "id": "37398f7f891d57ec"
+    },
+    {
+      "document": "db66fd70791645b2",
+      "type": "ATTR",
+      "id": "3ec6605d55ac5937"
+    },
+    {
+      "document": "db66fd70791645b2",
+      "type": "ATTR",
+      "id": "1c8bb28b6adb59da"
+    },
+    {
+      "document": "c27abd24d4c85ca0",
+      "type": "ATTR",
+      "id": "a1ddac95c0cb5dfd"
+    },
+    {
+      "document": "30582c8450fe591c",
+      "type": "COMPONENT",
+      "id": "b060e34528595fce"
+    },
+    {
+      "document": "30582c8450fe591c",
+      "type": "COMPONENT",
+      "id": "45c6c4c4d1525ec1"
+    },
+    {
+      "document": "30582c8450fe591c",
+      "type": "COMPONENT",
+      "id": "f572174f250a5ce6"
+    },
+    {
+      "document": "30582c8450fe591c",
+      "type": "COMPONENT",
+      "id": "65f145dda7d450ca"
+    },
+    {
+      "document": "30582c8450fe591c",
+      "type": "COMPONENT",
+      "id": "561cc246cd4159cf"
+    },
+    {
+      "document": "30582c8450fe591c",
+      "type": "COMPONENT",
+      "id": "a2628fc566b05963"
+    },
+    {
+      "document": "30582c8450fe591c",
+      "type": "COMPONENT",
+      "id": "b3510a0d713f5256"
+    },
+    {
+      "document": "30582c8450fe591c",
+      "type": "COMPONENT",
+      "id": "4d21e7f027ea573b"
+    },
+    {
+      "document": "30582c8450fe591c",
+      "type": "COMPONENT",
+      "id": "519ee0eab4fd53b9"
+    },
+    {
+      "document": "30582c8450fe591c",
+      "type": "COMPONENT",
+      "id": "bfdadf39dbf85944"
+    },
+    {
+      "document": "30582c8450fe591c",
+      "type": "COMPONENT",
+      "id": "cba1f55a75a05dfc"
+    },
+    {
+      "document": "30582c8450fe591c",
+      "type": "COMPONENT",
+      "id": "1be15b94647e5f2c"
+    },
+    {
+      "document": "30582c8450fe591c",
+      "type": "COMPONENT",
+      "id": "d91bbca549155b49"
+    },
+    {
+      "document": "30582c8450fe591c",
+      "type": "COMPONENT",
+      "id": "008b449fec3c5309"
+    },
+    {
+      "document": "30582c8450fe591c",
+      "type": "COMPONENT",
+      "id": "333542aeb01557d3"
+    },
+    {
+      "document": "30582c8450fe591c",
+      "type": "COMPONENT",
+      "id": "dfa73836d8155579"
+    },
+    {
+      "document": "30582c8450fe591c",
+      "type": "COMPONENT",
+      "id": "80559ba446fb5e17"
+    },
+    {
+      "document": "30582c8450fe591c",
+      "type": "COMPONENT",
+      "id": "aad621db099c5419"
+    },
+    {
+      "document": "40de834566555ffd",
+      "type": "META",
+      "id": "META"
+    }
+  ],
+  "pcb_export_inventory": 120,
+  "R_PRE_included_in_PCB_export": true,
+  "missing_or_mismatched_channel_ids": [],
+  "schematic_pin_graph_preserved": true,
+  "component_values_preserved": true,
+  "footprints_positions_and_copper_preserved": true,
+  "tracks": 768,
+  "physical_pads": 325,
+  "simulation_firmware_changed": false,
+  "native_ERC_DRC": "pending_client_recheck",
+  "manufacturing_release": false
+}

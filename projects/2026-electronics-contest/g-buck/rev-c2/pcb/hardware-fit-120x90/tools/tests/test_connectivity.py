@@ -3,7 +3,7 @@ import sys
 import unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
-from pcb_common import Point, LineString, Polygon, box, copper_fills, copper_geometry
+from pcb_common import Point, LineString, Polygon, box, copper_fills, copper_geometry, pcb_export_references
 from route_pending import connected
 
 
@@ -17,6 +17,18 @@ class ConnectivityTests(unittest.TestCase):
 
     def test_identical_labels_without_copper_are_open(self):
         self.assertFalse(connected(self.a,self.b,[self.a,self.b],[]))
+
+    def test_external_part_export_flag_must_keep_its_board_terminals(self):
+        docs={'device':{('META','META'):{'attributes':{'Convert to PCB':'no','Add into BOM':'yes'}}}}
+        parts={'R_PRE':{'attrs':{'Device':'device'}}}
+        self.assertEqual(pcb_export_references(docs,parts),set())
+        docs['device']['META','META']['attributes']['Convert to PCB']='yes'
+        self.assertEqual(pcb_export_references(docs,parts),{'R_PRE'})
+
+    def test_instance_override_controls_PCB_export(self):
+        docs={'device':{('META','META'):{'attributes':{'Convert to PCB':'yes'}}}}
+        parts={'R_PRE':{'attrs':{'Device':'device','Convert to PCB':'no'}}}
+        self.assertEqual(pcb_export_references(docs,parts),set())
 
     def test_crossing_layers_are_not_connected(self):
         self.b['layers'] = [1,2]

@@ -80,7 +80,8 @@ def contact_groups(pads, tracks, vias, fills):
             'orphan_copper_groups': orphans, 'foreign_copper_clearance_errors': clearance_errors}
 
 
-def export(source, dest, manifest_path, audit_path):
+def export(source, dest, manifest_path, audit_path, baseline='94c495eef7ea6575df013086f031b1b6a7edf036',
+           display_name='GBUCK RevC2 DRC封装同步复验 20261028', pcb_title='Rev C2 120x90 — DRC封装同步复验版'):
     meta, docs, _ = read_project(source)
     manifest = json.loads(manifest_path.read_text())
     pcb = manifest['pcb']
@@ -97,7 +98,7 @@ def export(source, dest, manifest_path, audit_path):
     for head in out_meta.values():
         head.update(updateTime=stamp, version=str(stamp), client=uid('client')[:16])
     board = docs[pcb]['META', 'META']['board']
-    out_docs[mapping[pcb]]['META', 'META']['title'] = 'Rev C2 120x90 — DRC封装同步复验版'
+    out_docs[mapping[pcb]]['META', 'META']['title'] = pcb_title
     out_docs[mapping[board]]['META', 'META']['title'] = 'G题 Rev C.2 — 独立导入复验工程'
     dest.parent.mkdir(parents=True, exist_ok=True)
     if dest.resolve() == source.resolve():
@@ -144,7 +145,7 @@ def export(source, dest, manifest_path, audit_path):
                 (history, None, key.hex()))
     con.execute('INSERT INTO history_data (uuid,history_uuid,dataStr) VALUES (?,?,?)', (history, history, encrypted))
     con.execute('UPDATE projects SET uuid=?,name=?,ticket=?,g_ticket=?,branch_uuid=?,default_sheet=?',
-                (project, 'GBUCK RevC2 DRC封装同步复验 20261028', ticket, ticket, branch, mapping[pcb]))
+                (project, display_name, ticket, ticket, branch, mapping[pcb]))
     # The navigation structure contains only this revision, with matching current
     # document timestamps. Older boards remain in the canonical source file.
     structure = {'boards': {}, 'schematics': {}, 'sheets': {}, 'pcbs': {}, 'panels': {}, 'blockSymbols': {}}
@@ -195,6 +196,7 @@ def export(source, dest, manifest_path, audit_path):
     inner_contacts = contact_groups(inner_pads, tracks, vias, fills)
     assert not inner_contacts['unfinished_networks'] and not inner_contacts['orphan_copper_groups']
     assert len(pp) == len(actual_parts) == 120
+    assert pcb_export_references(rd,actual_parts)==set(pp)
     expected = {(p['ref'], p['pin']): p['net'] for p in actual_pins}
     assert {(p['ref'], p['pin']): p['net'] for p in pads} == expected
     a = attrs(rd[mapping[pcb]])
@@ -203,8 +205,10 @@ def export(source, dest, manifest_path, audit_path):
         assert dev['Footprint'] == at['Footprint'] == actual_parts[ref]['attrs']['Footprint']
         assert dev['Symbol'] == actual_parts[ref]['attrs']['Symbol']
         assert c['attrs']['Unique ID'] == actual_parts[ref]['id']
+        assert actual_parts[ref]['attrs'].get('Channel ID')
+        assert c['attrs'].get('Channel ID')==actual_parts[ref]['attrs']['Channel ID']
     assert sha(source) == source_hash
-    report = {'comparison_baseline': '94c495eef7ea6575df013086f031b1b6a7edf036',
+    report = {'comparison_baseline': baseline,
               'source_sha256': source_hash, 'export_sha256': sha(dest), 'export_file': dest.name,
               'project_uuid': project, 'branch_uuid': branch, 'pcb_uuid': mapping[pcb],
               'document_uuid_map': mapping, 'library_and_document_identity_overlap': False,
@@ -213,11 +217,13 @@ def export(source, dest, manifest_path, audit_path):
               'components': len(pp), 'physical_component_pads': len(pads),
               'track_segments': len(tracks), 'vias': len(vias), 'static_copper_regions': len(fills),
               'schematic_pin_graph_and_library_associations_preserved': True,
+              'pcb_export_eligible_components':len(pcb_export_references(rd,actual_parts)),
+              'missing_or_mismatched_channel_ids':[],
               'geometry_contact_audit': contacts, 'native_desktop_open': 'not_run',
               'inscribed_ellipse_contact_audit': inner_contacts,
               'native_DRC_of_export': 'not_run', 'manufacturing_release': False,
-              'impact': {'schematic_topology_values_pins': 'unchanged from 94c495e',
-                         'components_BOM_copper_positions_and_shapes': 'unchanged from 94c495e',
+              'impact': {'schematic_topology_values_pins': 'unchanged from '+baseline,
+                         'components_BOM_copper_positions_and_shapes': 'unchanged from '+baseline,
                          'simulation_firmware': 'unchanged',
                          'changes': 'Independent project/document/library identities, current metadata, single-revision navigation'}}
     audit_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
@@ -230,5 +236,8 @@ if __name__ == '__main__':
     parser.add_argument('--output', type=Path, default=ROOT / 'native/GBUCK_RevC2_DRC_syncfix_20261028.eprj2')
     parser.add_argument('--manifest', type=Path, default=ROOT / 'data/build_manifest.json')
     parser.add_argument('--audit', type=Path, default=ROOT / 'data/isolated_import_audit.json')
+    parser.add_argument('--baseline',default='94c495eef7ea6575df013086f031b1b6a7edf036')
+    parser.add_argument('--display-name',default='GBUCK RevC2 DRC封装同步复验 20261028')
+    parser.add_argument('--pcb-title',default='Rev C2 120x90 — DRC封装同步复验版')
     args = parser.parse_args()
-    export(args.source, args.output, args.manifest, args.audit)
+    export(args.source, args.output, args.manifest, args.audit,args.baseline,args.display_name,args.pcb_title)

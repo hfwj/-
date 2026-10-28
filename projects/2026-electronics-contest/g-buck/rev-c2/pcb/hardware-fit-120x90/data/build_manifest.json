@@ -2633,5 +2633,9 @@
   "minimum_ground_links_remaining": 0,
   "static_ground_regions": 44,
   "copper_track_segments": 768,
-  "via_count": 188
+  "via_count": 188,
+  "current_review_artifact": "GBUCK_RevC2_DRC_netlistfix_20261028.eprj2",
+  "pcb_export_eligible_components": 120,
+  "channel_id_sync": "all_120_nonempty_and_matched",
+  "native_DRC_current_review": "pending_client_recheck"
 }

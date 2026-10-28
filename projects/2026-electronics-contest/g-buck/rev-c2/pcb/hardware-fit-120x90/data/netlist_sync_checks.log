@@ -1,0 +1,117 @@
+NETLIST SYNC VALIDATION
+{
+  "comparison_baseline": "d68f3dd7f6f9e370f4e26f39c72e2d565cb69e9f",
+  "source_sha256": "2d1da959b34d0fd12b568976f9710d64fde8c489d47abe4ba76bfcb8dcdea7f4",
+  "export_sha256": "522404ddacb934a3d011085898ede3b195728565c0848abd487eb9145b70dbab",
+  "export_file": "GBUCK_RevC2_DRC_netlistfix_20261028.eprj2",
+  "project_uuid": "bac098367bec809a1505157ae9721958ad4fbc01d61aaef83981ac6ff548e405",
+  "branch_uuid": "b71f061f6f5d5ada8042709e16ca1346",
+  "pcb_uuid": "e2b904905781582e",
+  "library_and_document_identity_overlap": false,
+  "metadata_version": "1793163807297",
+  "normalized_document_bodies_equal_source": true,
+  "excluded_legacy_boards": true,
+  "included_documents": 176,
+  "components": 120,
+  "physical_component_pads": 325,
+  "track_segments": 768,
+  "vias": 188,
+  "static_copper_regions": 44,
+  "schematic_pin_graph_and_library_associations_preserved": true,
+  "pcb_export_eligible_components": 120,
+  "missing_or_mismatched_channel_ids": [],
+  "native_desktop_open": "not_run",
+  "inscribed_ellipse_contact_audit": {
+    "networks": 51,
+    "unfinished_networks": {},
+    "orphan_copper_groups": [],
+    "foreign_copper_clearance_errors": []
+  },
+  "native_DRC_of_export": "not_run",
+  "manufacturing_release": false,
+  "impact": {
+    "schematic_topology_values_pins": "unchanged from d68f3dd7f6f9e370f4e26f39c72e2d565cb69e9f",
+    "components_BOM_copper_positions_and_shapes": "unchanged from d68f3dd7f6f9e370f4e26f39c72e2d565cb69e9f",
+    "simulation_firmware": "unchanged",
+    "changes": "Independent project/document/library identities, current metadata, single-revision navigation"
+  }
+}
+
+REGRESSION CHECKS
+test_crossing_layers_are_not_connected (test_connectivity.ConnectivityTests.test_crossing_layers_are_not_connected) ... ok
+test_external_part_export_flag_must_keep_its_board_terminals (test_connectivity.ConnectivityTests.test_external_part_export_flag_must_keep_its_board_terminals) ... ok
+test_identical_labels_without_copper_are_open (test_connectivity.ConnectivityTests.test_identical_labels_without_copper_are_open) ... ok
+test_instance_override_controls_PCB_export (test_connectivity.ConnectivityTests.test_instance_override_controls_PCB_export) ... ok
+test_native_round_pad_uses_a_conservative_circle_without_square_corners (test_connectivity.ConnectivityTests.test_native_round_pad_uses_a_conservative_circle_without_square_corners) ... ok
+test_native_solid_fill_preserves_clearance_holes (test_connectivity.ConnectivityTests.test_native_solid_fill_preserves_clearance_holes) ... ok
+test_plane_does_not_connect_an_smd_on_the_other_layer (test_connectivity.ConnectivityTests.test_plane_does_not_connect_an_smd_on_the_other_layer) ... ok
+test_router_preserves_clearance_in_a_corridor_between_grid_rows (test_connectivity.ConnectivityTests.test_router_preserves_clearance_in_a_corridor_between_grid_rows) ... ok
+test_via_bridges_layers_but_smd_endpoint_does_not (test_connectivity.ConnectivityTests.test_via_bridges_layers_but_smd_endpoint_does_not) ... ok
+test_wrong_net_via_cannot_bridge (test_connectivity.ConnectivityTests.test_wrong_net_via_cannot_bridge) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.019s
+
+OK
+
+STATIC ENGINEERING SOURCE VERIFICATION
+{
+  "status": "PASS_STATIC_REVIEW_ONLY",
+  "errors": [],
+  "checks": {
+    "source_sha256": "6a1ed47fc5ad60f26e2b3efa9301078c0e1f658fd5d7c378f988992510ee30d6",
+    "delivered_sha256": "2d1da959b34d0fd12b568976f9710d64fde8c489d47abe4ba76bfcb8dcdea7f4",
+    "source_schematic_components": 120,
+    "delivered_schematic_components": 120,
+    "pcb_components": 120,
+    "source_networks": 51,
+    "pcb_export_eligible_components": 120,
+    "channel_id_errors": [],
+    "source_connected_logical_pins": 310,
+    "explicit_NC_logical_pins": 13,
+    "physical_component_pads": 325,
+    "duplicate_fuse_terminal_pads": 2,
+    "source_schematic_pin_graph_preserved": true,
+    "pcb_pad_graph_matches_source": true,
+    "value_changes": {
+      "F1": {
+        "before": "2A / 5x20",
+        "after": "2A / 5x20 FAST"
+      },
+      "D1": {
+        "before": "SS56",
+        "after": "SR560 / 60V / 5A"
+      },
+      "C4": {
+        "before": "10uF / 35V",
+        "after": "10uF / 50V X7R"
+      },
+      "D_FREE": {
+        "before": "SS56 / 60V / 5A",
+        "after": "SR560 / 60V / 5A"
+      }
+    },
+    "preserved_source_PCB_library_documents": 526,
+    "geometric_errors": [],
+    "clearance_errors": [],
+    "mounting_holes": 4,
+    "copper_track_segments": 768,
+    "vias": 188,
+    "static_copper_regions": 44,
+    "orphan_copper_groups": [],
+    "unfinished_networks": 0,
+    "minimum_copper_links_remaining": 0,
+    "routing_complete": true,
+    "native_desktop_open": "not_run",
+    "native_ERC": "not_run",
+    "native_DRC": "not_run",
+    "manufacturing_release": false,
+    "sqlite_integrity": "ok"
+  },
+  "limitations": [
+    "Native ELLIPSE pads use conservative circumscribed 128-edge polygons; other pad shapes use enclosing rectangles. Checks are not native ERC/DRC.",
+    "Seller drawings support RS_IN/OUT P10 D0.8 and RS_L P5 D0.7. User confirms single 5x20 fuse-clip pitch 5.66; assembly spacing 15 is trial-fit only. Shunt ratings and fuse fit/DC breaking capacity/thermal design remain unconfirmed.",
+    "Power, Kelvin branches and static ground copper are layout drafts, not transient/thermal/EMI acceptance. No Gerber manufacturing output.",
+    "Mounting pattern is proposed, not confirmed to an enclosure. Silk/courtyard/mask/paste/3D checks remain open."
+  ]
+}

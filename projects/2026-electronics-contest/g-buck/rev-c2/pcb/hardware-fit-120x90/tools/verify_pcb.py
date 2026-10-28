@@ -28,11 +28,17 @@ def main():
         actual[key]=p['net']
     require(actual==expected,'PCB pad-to-net graph differs from Rev C.2')
     require(set(pp)==set(sparts),'PCB reference inventory differs')
+    export_refs=pcb_export_references(docs,parts)
+    require(export_refs==set(pp),'Schematic PCB-export flags exclude board components: '+','.join(sorted(set(pp)-export_refs)))
+    channel_errors=[]
     for ref,(cid,c,a) in pp.items():
         require(c['attrs']['Unique ID']==parts[ref]['id'],'Broken schematic association '+ref)
         dev=docs[a['Device']]['META','META']['attributes']
         require(dev['Footprint']==a['Footprint']==parts[ref]['attrs']['Footprint'],'Footprint association mismatch '+ref)
         require(dev['Symbol']==parts[ref]['attrs']['Symbol'],'Symbol association mismatch '+ref)
+        channel=parts[ref]['attrs'].get('Channel ID','')
+        if not channel or c['attrs'].get('Channel ID','')!=channel:channel_errors.append(ref)
+    require(not channel_errors,'Missing/mismatched schematic/PCB channel IDs: '+','.join(channel_errors))
     source_hash=sha(source)
     require(source_hash==manifest['source_sha256'],'Source file has changed')
     reference_unchanged=[]
@@ -152,6 +158,7 @@ def main():
         'source_sha256':source_hash,'delivered_sha256':sha(PATH),
         'source_schematic_components':len(sparts),'delivered_schematic_components':len(parts),'pcb_components':len(pp),
         'source_networks':len(set(expected.values())-{''}),
+        'pcb_export_eligible_components':len(export_refs),'channel_id_errors':channel_errors,
         'source_connected_logical_pins':sum(bool(v) for v in expected.values()),
         'explicit_NC_logical_pins':sum(not v for v in expected.values()),
         'physical_component_pads':len(pads),'duplicate_fuse_terminal_pads':len(pads)-len(expected),
