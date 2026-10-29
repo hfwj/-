@@ -1,0 +1,51 @@
+{
+  "comparison_commit": "ea1c52f",
+  "baseline_file": "GBUCK_RevC2_PowerLayout_v5_PCB修正_20261028.eprj2",
+  "baseline_sha256": "e2b7227dd8e03601dd85e1d3a61189f1038e1f215fd7194b05d626417317d8f1",
+  "output_file": "GBUCK_RevC2_PowerLayout_v6_ILBI清理_20261029.eprj2",
+  "output_sha256": "590090b95df92842cef6e51bd4176fc2f04a639aee4149e582da5f85dfb2b09b",
+  "deleted_type": "LINE",
+  "deleted_id": "9be901802e2f590c",
+  "net": "IL_BI",
+  "layer": 2,
+  "start_mm": [
+    88.000000022,
+    45.999999947999996
+  ],
+  "end_mm": [
+    87.99999986399999,
+    45.999999947999996
+  ],
+  "original_length_mm": 1.5800000510353128e-07,
+  "removed_object": {
+    "partitionId": "",
+    "groupId": 0,
+    "netName": "IL_BI",
+    "layerId": 2,
+    "startX": 3464.56693,
+    "startY": 1811.02362,
+    "endX": 3464.5669237795273,
+    "endY": 1811.02362,
+    "width": 9.84251968503937,
+    "locked": false,
+    "zIndex": -1
+  },
+  "semantic_changes": {
+    "deleted": 1,
+    "added": 0,
+    "modified": 0
+  },
+  "readback": "PASS",
+  "IL_BI_pad_connectivity": "PASS",
+  "IL_BI_pad_count": 4,
+  "IL_BI_copper_symmetric_difference_mm2_by_layer": {
+    "1": 0.0,
+    "2": 1.2825070394986381e-05
+  },
+  "schematic_unchanged": true,
+  "component_BOM_and_footprints_unchanged": true,
+  "remaining_PCB_objects_unchanged": true,
+  "native_DRC": "not_run",
+  "new_Gerber_export": "not_run",
+  "manufacturing_release": false
+}
