@@ -1,0 +1,20 @@
+{
+  "comparison_commit": "bc4d3a1",
+  "v6_sha256": "590090b95df92842cef6e51bd4176fc2f04a639aee4149e582da5f85dfb2b09b",
+  "F1_component_and_library_identical_to_v5": true,
+  "value": "2A / 5x20 FAST",
+  "F1_pin_1_net": "VIN_EXT",
+  "F1_pin_2_net": "FUSED",
+  "R_PRE_and_J_BYP_parallel_endpoints": [
+    "FUSED",
+    "IN_PRE"
+  ],
+  "bypass_switch_does_not_bypass_fuse": true,
+  "newly_confirmed_F1_wiring_or_single_clip_nominal_geometry_error": false,
+  "dual_clip_15mm_assembly_verified": false,
+  "specific_fuse_manufacturer_datasheet_provided": false,
+  "DC_breaking_and_time_current_coordination_verified": false,
+  "clip_current_and_temperature_rating_verified": false,
+  "design_changes": false,
+  "manufacturing_release": false
+}

@@ -1,3 +1,5 @@
+**2026-10-29 F1对v6再次核对：**[输入串联接法、商品额定与安装边界](reports/component-confirmations-2026-10-29/F1-fit/README.md)。F1接法与封装保持，J_BYP未绕过F1；双夹15mm实装、具体保险管DC分断/时间-电流及夹具载流温升仍未确认。仅补充记录，未改原理图、器件/BOM、PCB/Gerber或仿真/固件。
+
 **2026-10-29最新PCB v6：**[IL_BI极短对象删除与工程](pcb/power-layout-v6-20261029/README.md)。按用户指定ID删除9be901802e2f590c；其余对象不变，IL_BI连通保持。此前v5“已清除此对象”的报告需以本轮更正。原理图/器件/BOM与仿真/固件不变，未重新导出Gerber、未运行原生DRC。
 
 **2026-10-29 F1实物图复核：**[尺寸结论与1:1核对](reports/component-confirmations-2026-10-29/F1-fit/README.md)。5×20/2A快断标注匹配，单夹P5.66与竖向0.9×1.5槽名义可匹配；双夹15mm仍需组合实物核对。未修改原理图、器件/BOM、PCB/Gerber或仿真/固件，不构成制造放行。
