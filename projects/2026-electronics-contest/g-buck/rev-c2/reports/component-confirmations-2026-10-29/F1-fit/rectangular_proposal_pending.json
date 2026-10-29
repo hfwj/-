@@ -1,0 +1,35 @@
+{
+  "comparison_commit": "6343be3",
+  "source": "user inline proposed footprint modification screenshot; treated as unverified engineering proposal",
+  "current_v6_holes_collinear": true,
+  "candidate_holes_mm": [
+    [
+      18.75,
+      77.17
+    ],
+    [
+      18.75,
+      82.83
+    ],
+    [
+      "18.75+L",
+      77.17
+    ],
+    [
+      "18.75+L",
+      82.83
+    ]
+  ],
+  "candidate_single_clip_pair_axis": "Y",
+  "candidate_tube_axis": "X",
+  "candidate_slot_xy_mm": [
+    1.5,
+    0.9
+  ],
+  "L_mm": null,
+  "L_measurement_required": true,
+  "actual_clip_orientation_confirmed": false,
+  "native_or_gerber_modified": false,
+  "old_print_template": "old geometry only; not validated assembly template",
+  "manufacturing_release": false
+}
