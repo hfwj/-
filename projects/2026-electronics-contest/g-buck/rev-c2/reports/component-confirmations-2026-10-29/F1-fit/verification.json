@@ -1,0 +1,59 @@
+{
+  "comparison_commit": "bbbd961",
+  "date_client": "2026-10-29",
+  "evidence": "three inline seller images plus prior user confirmation of 5.66mm pin pitch",
+  "fuse_seller_marking": {
+    "diameter_mm": 5,
+    "length_mm": 20,
+    "current_A": 2,
+    "voltage_marking_V": 250,
+    "speed": "fast",
+    "sku": "BXG16519"
+  },
+  "clip": {
+    "single_clip_pitch_mm": 5.66,
+    "tab_width_nominal_mm": 1.1,
+    "stock_thickness_nominal_mm": 0.5,
+    "tolerances": "unconfirmed"
+  },
+  "actual_gerber": {
+    "slot_width_mm": 0.9,
+    "slot_overall_length_mm": 1.5,
+    "slot_axis": "Y",
+    "slot_centers_mm": [
+      [
+        18.67,
+        80
+      ],
+      [
+        24.33,
+        80
+      ],
+      [
+        33.67,
+        80
+      ],
+      [
+        39.33,
+        80
+      ]
+    ],
+    "clip_centers_mm": [
+      [
+        21.5,
+        80
+      ],
+      [
+        36.5,
+        80
+      ]
+    ],
+    "clip_center_distance_mm": 15
+  },
+  "nominal_corner_clearance_mm": 0.09644660940672622,
+  "single_clip_nominal_fit": "consistent when tab broad dimension aligns with Y",
+  "dual_clip_assembly_fit": "unconfirmed",
+  "manufacturing_release": false,
+  "design_files_changed": false,
+  "pdf_sha256": "c396368fd09de15af24a1469d01c204c334e5abca4cfa621f813b8d7b271714e"
+}

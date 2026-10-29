@@ -1,3 +1,5 @@
+**2026-10-29 F1实物图复核：**[尺寸结论与1:1核对](../component-confirmations-2026-10-29/F1-fit/README.md)。5×20/2A快断标注匹配，单夹P5.66与竖向0.9×1.5槽名义可匹配；双夹15mm仍需组合实物核对。未修改原理图、器件/BOM、PCB/Gerber或仿真/固件，不构成制造放行。
+
 **2026-10-28外接旁路开关：**[MN11SS4W01替代评估与接线](../component-confirmations-2026-10-28/MN11SS4W01/README.md)。按J_BYP两线SPST旁路用途明确采用MN11SS4W01（4A/30VDC），面板安装、两焊片接FUSED/IN_PRE。旧MSS-22D18实际用法未确认，不能用于双路/换向的直接替换。主板原理图/PCB/Gerber与仿真/固件不改，外接BOM更新；库存未知。
 
 # Rev C2 更新物料清单
