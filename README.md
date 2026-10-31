@@ -6,6 +6,7 @@
 
 | 项目 | 资料入口 | 当前结论 |
 |---|---|---|
+| 2026 电子电赛 G题：采样/比较/逻辑芯片图 | [位置、型号、1脚方向及PDF](projects/2026-electronics-contest/g-buck/rev-c2/reports/ic-placement-2026-10-31/README.md) | U2～U9共8只，80脚坐标/网络交叉核对；仅图文，原理图/器件/PCB/仿真/固件不改 |
 | 2026 电子电赛 G题：二极管位置图 | [位置、方向、脚位及PDF](projects/2026-electronics-contest/g-buck/rev-c2/reports/diode-placement-2026-10-31/README.md) | 标出10只二极管，核对27焊盘；仅图文，原理图/器件/PCB/仿真/固件不改 |
 | 2026 电子电赛 G题：电容位置图 | [总览、分区、PDF](projects/2026-electronics-contest/g-buck/rev-c2/reports/capacitor-placement-2026-10-31/README.md) | 标出33电容及容量/耐压/介质、电解极性；仅图文，原理图/器件/PCB/仿真/固件不改 |
 | 2026 电子电赛 G题：电阻位置图 | [总览、分区、PDF](projects/2026-electronics-contest/g-buck/rev-c2/reports/resistor-placement-2026-10-31/README.md) | 按原生PCB核对120器件坐标，标出43电阻位号；仅图文，原理图/器件/PCB/仿真/固件不改 |

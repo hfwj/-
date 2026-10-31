@@ -1,5 +1,7 @@
 # G 题同步 Buck Rev C.2
 
+**采样、比较及逻辑芯片位置图：**[位置、型号、1脚方向与PDF](reports/ic-placement-2026-10-31/README.md)，覆盖U2～U9共8只，核对80个脚的坐标和网络。仅图文，不改原理图/器件/BOM/PCB/仿真/固件。
+
 **二极管位置与方向图：**[总览、分区、SOT-23脚位放大图与PDF](reports/diode-placement-2026-10-31/README.md)，10只二极管全部标出型号和脚号，区分BAT54/BAT54S。仅图文，不改原理图/器件/BOM/PCB/仿真/固件。
 
 **电容位置图：**[总览、三处分区、容量/耐压/介质与PDF](reports/capacitor-placement-2026-10-31/README.md)，33个位号含C_SN默认不装，C1/C3标正负极。仅图文，不改原理图/器件/BOM/PCB/仿真/固件。
