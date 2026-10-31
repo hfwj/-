@@ -6,6 +6,7 @@
 
 | 项目 | 资料入口 | 当前结论 |
 |---|---|---|
+| 2026 电子电赛 G题：电容位置图 | [总览、分区、PDF](projects/2026-electronics-contest/g-buck/rev-c2/reports/capacitor-placement-2026-10-31/README.md) | 标出33电容及容量/耐压/介质、电解极性；仅图文，原理图/器件/PCB/仿真/固件不改 |
 | 2026 电子电赛 G题：电阻位置图 | [总览、分区、PDF](projects/2026-electronics-contest/g-buck/rev-c2/reports/resistor-placement-2026-10-31/README.md) | 按原生PCB核对120器件坐标，标出43电阻位号；仅图文，原理图/器件/PCB/仿真/固件不改 |
 | 2026 电子电赛 G题：实物装配步骤 | [焊接、排线与首次调试](projects/2026-electronics-contest/g-buck/rev-c2/reports/实物装配与首次调试步骤.md) | 按Rev C.2和当前采购清单整理；原生ERC/DRC及实物验证待完成；仅文档，不改原理图/器件/PCB/仿真/固件 |
 | 2026 电子电赛 G题：STM32固件起点 | [源码与操作](projects/2026-electronics-contest/g-buck/rev-c2/firmware/README.md) · [默认诊断包](projects/2026-electronics-contest/g-buck/rev-c2/downloads/GBUCK_RevC2_STM32_diagnostic_2026-10-28.zip) | 三配置ARM编译/主机逻辑测试通过；默认禁止功率输出，未上板/未整定；主板原理图/BOM与仿真不改，可选控制板按键待确认 |
