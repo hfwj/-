@@ -1,0 +1,29 @@
+{
+  "comparison_commit": "7cf10ec",
+  "native_sha256": "590090b95df92842cef6e51bd4176fc2f04a639aee4149e582da5f85dfb2b09b",
+  "native_part": "IR2184PbF",
+  "native_footprint": "DIP8_300",
+  "pin_net_readback": {
+    "1": "PWM_IN",
+    "2": "DRV_EN",
+    "3": "GND",
+    "4": "LO",
+    "8": "VB",
+    "7": "HO",
+    "6": "SW",
+    "5": "+12V_DRV"
+  },
+  "expected_pin_map_match": true,
+  "VCC_nominal_V": 12,
+  "recommended_VCC_V": [
+    10,
+    20
+  ],
+  "logic_nominal_V": 3.3,
+  "source_code_only_EN_initial_low": "checked, not hardware tested",
+  "native_design_files_changed": false,
+  "BOM_changed": false,
+  "firmware_or_model_changed": false,
+  "F1_rectangular_proposal": "still pending physical orientation and L",
+  "manufacturing_release": false
+}

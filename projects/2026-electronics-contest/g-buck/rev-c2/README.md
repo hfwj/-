@@ -1,3 +1,5 @@
+**U1手册截图核对：**[IR2184与v6引脚/供电/关断逻辑](reports/U1-IR2184-datasheet-review/README.md)。DIP8引脚映射一致，12V和3.3V名义兼容；低电平关断，IR21844的DT调节参数不适用于IR2184。未改原理图/器件/BOM/PCB或仿真/固件；F1方向及L仍待测量。
+
 **F1最新待核：**用户提出四孔矩形排列方案，与当前v6四孔共线方向不同；[候选方案和方向更正说明](reports/component-confirmations-2026-10-29/F1-fit/README.md)。等待单夹脚对方向及双夹L实测，未将19.5/20.5mm估算值写入生产工程；旧1:1图不能当正确装配模板，F1暂未放行。仅更新记录，原理图/器件/BOM、PCB/Gerber与仿真/固件不改。
 
 **2026-10-29 F1对v6再次核对：**[输入串联接法、商品额定与安装边界](reports/component-confirmations-2026-10-29/F1-fit/README.md)。F1接法与封装保持，J_BYP未绕过F1；双夹15mm实装、具体保险管DC分断/时间-电流及夹具载流温升仍未确认。仅补充记录，未改原理图、器件/BOM、PCB/Gerber或仿真/固件。
