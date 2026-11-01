@@ -1,6 +1,6 @@
 # G 题同步 Buck Rev C.2
 
-**板外模块接线：**[电源模块、预充/旁路、STM32、LCD及输入/负载逐线表](reports/external-wiring-2026-11-01/README.md)。电源脚及屏幕版本须按实物核对；仅说明，不改原理图/器件/BOM/PCB/仿真/固件。
+**板外模块接线：**[三张接线图 / PDF](reports/external-wiring-2026-11-01/README.md#接线图) · [电源模块、预充/旁路、STM32、LCD及输入/负载逐线表](reports/external-wiring-2026-11-01/README.md)。电源脚及屏幕版本须按实物核对；仅说明，不改原理图/器件/BOM/PCB/仿真/固件。
 
 **直插与功率件位置图：**[主功率、驱动/预充、端子排针、关键脚位及PDF](reports/through-hole-power-placement-2026-11-01/README.md)，覆盖22个位号，标出极性与外置连接。仅图文，不改原理图/器件/BOM/PCB/仿真/固件。
 

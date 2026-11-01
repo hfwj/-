@@ -1,5 +1,16 @@
 # Rev C.2 板外模块逐线接线
 
+## 接线图
+
+- [① 降压模块、预充/旁路、输入与负载](figures/Wiring_1_Power.png)
+- [② 主板与STM32逐脚排线](figures/Wiring_2_STM32.png)
+- [③ 屏幕与SWD下载器](figures/Wiring_3_LCD_SWD.png)
+- [三页高清PDF](figures/External_Wiring_RevC2.pdf)
+
+图为按端口名称连接的功能示意，不代表外接模块或核心板的实际焊盘排列。J_CTL按脚号逐线接，屏幕括号内11Pin编号仅适用于归档版本。所有接线插拔均断电并确认电容放电。
+
+新增图的比较基准为f1d3276：已按PCB回读表核对34个主板外接脚位网络，人工核对屏幕/SWD映射。仅新增绘图脚本、PNG、PDF与索引，不改原理图、器件/BOM、PCB封装/位置/铜线或库存，不改仿真/模型/固件；实物核心板电源方向、屏幕版本及电气验证待核。
+
 比较基准：47f59a5的Rev C.2原理图、PCB逐焊盘表、固件接口和已归档LCD资料。以下是按该版设计整理的接线要求，未代表实物排针、线束和模块已确认或完成通电验证。断电接线、每根导通检查；元件面俯视的接口方向见[端子/排针位置图](../through-hole-power-placement-2026-11-01/Power_C.png)和[脚位放大图](../through-hole-power-placement-2026-11-01/Power_Pinout.png)。底面观察会镜像。
 
 ## 1. 外置22Ω预充电阻、旁路开关
