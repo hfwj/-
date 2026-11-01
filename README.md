@@ -6,6 +6,7 @@
 
 | 项目 | 资料入口 | 当前结论 |
 |---|---|---|
+| 2026 电子电赛 G题：板外模块接线 | [外置电阻/开关、降压模块、STM32、LCD接线表](projects/2026-electronics-contest/g-buck/rev-c2/reports/external-wiring-2026-11-01/README.md) | 按当前接口整理，实物板版本与电源方向待核；仅文档，原理图/器件/PCB/仿真/固件不改 |
 | 2026 电子电赛 G题：直插与功率件图 | [位置、极性、接线及PDF](projects/2026-electronics-contest/g-buck/rev-c2/reports/through-hole-power-placement-2026-11-01/README.md) | 覆盖22位号，区分外置R_PRE与板上件；仅图文，原理图/器件/PCB/仿真/固件不改 |
 | 2026 电子电赛 G题：采样/比较/逻辑芯片图 | [位置、型号、1脚方向及PDF](projects/2026-electronics-contest/g-buck/rev-c2/reports/ic-placement-2026-10-31/README.md) | U2～U9共8只，80脚坐标/网络交叉核对；仅图文，原理图/器件/PCB/仿真/固件不改 |
 | 2026 电子电赛 G题：二极管位置图 | [位置、方向、脚位及PDF](projects/2026-electronics-contest/g-buck/rev-c2/reports/diode-placement-2026-10-31/README.md) | 标出10只二极管，核对27焊盘；仅图文，原理图/器件/PCB/仿真/固件不改 |
