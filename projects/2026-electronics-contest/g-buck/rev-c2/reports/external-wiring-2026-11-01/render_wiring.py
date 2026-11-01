@@ -33,7 +33,7 @@ with PdfPages(OUT/'External_Wiring_RevC2.pdf') as pdf:
  fig,axs=plt.subplots(2,2,figsize=(17,12));fig.subplots_adjust(left=.04,right=.96,bottom=.09,top=.85,hspace=.28,wspace=.12)
  title(fig,'Rev C.2 板外接线①｜辅助电源、预充与输入/负载','功能接线示意，按端口名称接线；模块焊盘的实际排列以实物标识为准。')
  for ax,ref,volts in [(axs[0,0],'J_AUX12','12V'),(axs[0,1],'J_AUX5','5V')]:
-  axis(ax);ax.set_title(ref+' ↔ LM2596HV（先调至'+volts+'）',fontsize=16,color=BLUE,pad=12)
+  axis(ax);ax.set_title(ref+' ↔ 外接降压模块（目标'+volts+'）',fontsize=16,color=BLUE,pad=12)
   box(ax,.02,.12,.32,.76,'',fc='#edf3fc');box(ax,.68,.12,.30,.76,'',fc='#f0f8ef')
   ax.text(.18,.83,'主板 '+ref,ha='center',fontsize=13,weight='bold');ax.text(.83,.83,'外接降压模块',ha='center',fontsize=13,weight='bold')
   ll=['1  VIN（预充后）','2  GND','3  '+volts+'返回主板','4  GND'];rr=['IN+','IN−','OUT+  '+volts,'OUT−']

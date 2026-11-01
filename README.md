@@ -6,6 +6,7 @@
 
 | 项目 | 资料入口 | 当前结论 |
 |---|---|---|
+| 2026 电子电赛 G题：辅助模块实物端口 | [XL7015_V2背面照片接线](projects/2026-electronics-contest/g-buck/rev-c2/reports/external-wiring-2026-11-01/XL7015_V2_背面照片接线.md) | 记录一块PCB丝印/四角端口，正面型号与两路分配待核；主板设计/PCB不改，外接模块差异单列 |
 | 2026 电子电赛 G题：板外模块接线 | [三张接线图/PDF及外置电阻/开关、降压模块、STM32、LCD接线表](projects/2026-electronics-contest/g-buck/rev-c2/reports/external-wiring-2026-11-01/README.md) | 按当前接口整理，实物板版本与电源方向待核；仅文档，原理图/器件/PCB/仿真/固件不改 |
 | 2026 电子电赛 G题：直插与功率件图 | [位置、极性、接线及PDF](projects/2026-electronics-contest/g-buck/rev-c2/reports/through-hole-power-placement-2026-11-01/README.md) | 覆盖22位号，区分外置R_PRE与板上件；仅图文，原理图/器件/PCB/仿真/固件不改 |
 | 2026 电子电赛 G题：采样/比较/逻辑芯片图 | [位置、型号、1脚方向及PDF](projects/2026-electronics-contest/g-buck/rev-c2/reports/ic-placement-2026-10-31/README.md) | U2～U9共8只，80脚坐标/网络交叉核对；仅图文，原理图/器件/PCB/仿真/固件不改 |
