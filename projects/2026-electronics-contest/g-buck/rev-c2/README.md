@@ -1,6 +1,6 @@
 # G 题同步 Buck Rev C.2
 
-**2026-11-03 A1用户上板复测续接：**[软件旁路确认、J_BYP压降0V与下一步测量](reports/firmware-bringup-2026-11-03/README.md)。最新照片为`GBUCK C2 LOCKED A1`、READY/FAULT 0、BYPASS CONFIRMED，VIN=14.830V、POST=13.731V；随后用户报告J_BYP两端压降0V。VIN_EXT至VIN间仍含F1、D1和RS_IN，不能把1.099V显示差直接判为ADC误差。下一步在当前工况下测TP1/TP2对地电压；采样标定、保护/门极与功率验收仍未完成。仅更新文档，固件、原理图、器件/BOM/PCB与仿真不改；下方发布时“待复测”状态为历史记录。
+**2026-11-03 A1用户上板复测续接：**[旁路确认、实测与VIN原始ADC偏差记录](reports/firmware-bringup-2026-11-03/README.md)。已观察到READY/FAULT 0、BYPASS CONFIRMED，用户报告J_BYP压降0V；后续J1.1=13.7V但屏幕VIN约14.8V，PA0/PA6分次测得1.25/1.23V，RAW截图分别为1679/1561。默认公式换算14.883/13.837V，下一步以核心板本地GND同步核对PA0与RAW；根因、采样标定、保护/门极与功率验收仍待完成。仅更新文档，原理图、器件/BOM/PCB、固件与仿真均不改；发布时待复测描述保留为历史。
 
 **2026-11-03 ADC诊断修订：**[ADCFIX1 / A1 HEX](downloads/GBUCK_RevC2_diagnostic_ADCFIX1_2026-11-03.hex) · [源码及默认诊断包](downloads/GBUCK_RevC2_STM32_diagnostic_ADCFIX1_2026-11-03.zip) · [缺陷、RAW观察、复测与修改影响](firmware/docs/ADC采样修正与上板复测_2026-11-03.md)。修正SMPR2通道采样时间配置，仍禁止功率输出；主机回归与三配置ARM编译通过，VIN异常是否解决仍待上板复测。主板原理图/器件/BOM/PCB及仿真不改。10月28日旧诊断包保留为历史，不作为当前推荐镜像。
 
