@@ -1,5 +1,7 @@
 # G 题同步 Buck Rev C.2
 
+**2026-11-03 A1用户上板复测：**[现场读数与下一步检查](reports/firmware-bringup-2026-11-03/README.md)。照片确认`GBUCK C2 LOCKED A1`、OFF/FAULT 0、VIN=14.865V、POST=13.589V，旧版VIN为0的现象在本次照片中未再出现；精度、预充READY、启动瞬态及保护/功率验收仍未完成。仅更新文档，固件镜像、原理图、器件/BOM/PCB与仿真不改；下方发布说明的待复测状态为构建时历史记录。
+
 **2026-11-03 ADC诊断修订：**[ADCFIX1 / A1 HEX](downloads/GBUCK_RevC2_diagnostic_ADCFIX1_2026-11-03.hex) · [源码及默认诊断包](downloads/GBUCK_RevC2_STM32_diagnostic_ADCFIX1_2026-11-03.zip) · [缺陷、RAW观察、复测与修改影响](firmware/docs/ADC采样修正与上板复测_2026-11-03.md)。修正SMPR2通道采样时间配置，仍禁止功率输出；主机回归与三配置ARM编译通过，VIN异常是否解决仍待上板复测。主板原理图/器件/BOM/PCB及仿真不改。10月28日旧诊断包保留为历史，不作为当前推荐镜像。
 
 **辅助模块实物照片：**[XL7015_V2背面四角端口与接线](reports/external-wiring-2026-11-01/XL7015_V2_背面照片接线.md)。仅确认该块PCB丝印/端口，正面型号及M1/M2分配待核；主板原理图/器件/PCB不改，外接模块与历史选型差异单列。

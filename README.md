@@ -4,7 +4,7 @@
 
 ## 项目目录
 
-2026-11-03：[G题Rev C.2 ADCFIX1 / A1诊断HEX与复测](projects/2026-electronics-contest/g-buck/rev-c2/firmware/docs/ADC采样修正与上板复测_2026-11-03.md)。修正ADC采样时间寄存器，仍禁止功率输出；软件回归/ARM编译通过，实机VIN异常待复测。原理图/器件/BOM/PCB和仿真不改，旧诊断包仅留档。
+2026-11-03：[G题Rev C.2 ADCFIX1 / A1诊断HEX与修正说明](projects/2026-electronics-contest/g-buck/rev-c2/firmware/docs/ADC采样修正与上板复测_2026-11-03.md) · [用户上板复测](projects/2026-electronics-contest/g-buck/rev-c2/reports/firmware-bringup-2026-11-03/README.md)。软件回归/ARM编译通过；用户照片确认A1运行、OFF/FAULT 0、VIN=14.865V，采样精度及保护/功率验收仍待完成。仍禁止功率输出；原理图/器件/BOM/PCB和仿真不改，旧诊断包仅留档。
 
 | 项目 | 资料入口 | 当前结论 |
 |---|---|---|
