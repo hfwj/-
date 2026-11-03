@@ -1,6 +1,6 @@
 # G 题同步 Buck Rev C.2
 
-**2026-11-03 A1用户上板复测续接：**[ADC实测、旁路确认及STM32发热暂停点](reports/firmware-bringup-2026-11-03/README.md)。已观察到READY/FAULT 0、BYPASS CONFIRMED，J_BYP压降报告0V；后续记录PA0=1.35V/RAW0=1664、两板地差0V。用户现报告STM32本体发烫、辅助5V供电，原因未定：暂停功率启动，先断电隔离并核查辅助模块实际输出，再安排主控单板限流测试。ADC精度、供电健康、保护/门极及功率验收仍未完成。本次仅文档更新，原理图、器件/BOM/PCB、固件与仿真均未改。
+**2026-11-03 A1用户上板复测续接：**[ADC/旁路记录及核心板过流停机点](reports/firmware-bringup-2026-11-03/README.md)。当前用户确认已隔离主板/LCD/USB/ST-Link，仅核心板5V/GND供电，限流设0.6A仍显示CC，3.3V轨约2.89V，STM32本体发烫。已要求立即断电，不提高限流；下一步核对供电脚/极性并做断电电阻检查，尚不能唯一判定芯片损坏。校准、功率启动与闭环验收暂停。本次仅文档更新，原理图、器件/BOM/PCB、固件与仿真均未改。
 
 **2026-11-03 ADC诊断修订：**[ADCFIX1 / A1 HEX](downloads/GBUCK_RevC2_diagnostic_ADCFIX1_2026-11-03.hex) · [源码及默认诊断包](downloads/GBUCK_RevC2_STM32_diagnostic_ADCFIX1_2026-11-03.zip) · [缺陷、RAW观察、复测与修改影响](firmware/docs/ADC采样修正与上板复测_2026-11-03.md)。修正SMPR2通道采样时间配置，仍禁止功率输出；主机回归与三配置ARM编译通过，VIN异常是否解决仍待上板复测。主板原理图/器件/BOM/PCB及仿真不改。10月28日旧诊断包保留为历史，不作为当前推荐镜像。
 
