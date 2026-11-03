@@ -8,6 +8,11 @@ volatile u32 debug_command;
 volatile i32 debug_value;
 volatile App debug_status;
 volatile Sample debug_sample;
+/* Latest complete raw scan, order PA0/PA1/PA2/PA3/PA4/PA6, widened to
+ * 32 bits for CubeProgrammer. Read again if debug_adc_scans changes while
+ * capturing these words; these are observations, never command inputs. */
+volatile u32 debug_adc_raw[6];
+volatile u32 debug_adc_scans, debug_adc_failures;
 u32 millis(void){return ticks;}
 void delay_ms(u32 ms){u32 start=ticks;while(ticks-start<ms){__asm volatile("nop");}}
 static void lock(void){__asm volatile("cpsid i":::"memory");}
@@ -23,7 +28,11 @@ void SysTick_Handler(void){
  if(previous && start-previous>CPU_HZ/1000*2){app_trip(&app,F_TIMING);}
  previous=start;
  u16 raw[6];u8 good=board_sample(raw);
- if(good)adc_convert(raw,&sample);else sample.valid=0;
+ if(good){
+  adc_convert(raw,&sample);
+  for(u32 n=0;n<6;n++)debug_adc_raw[n]=raw[n];
+  debug_adc_scans++;
+ }else{sample.valid=0;debug_adc_failures++;}
  /* Mailbox dispatch and all App mutations occur only here. */
  Command cmd=(Command)debug_command;i32 value=debug_value;debug_command=0;
  if(cmd==CMD_PRECHARGE && (REG(GPIOB+8)&(1u<<10))){

@@ -24,6 +24,8 @@ test:
 	ASAN_OPTIONS=detect_leaks=0 ./build/tests/app
 	gcc -std=c11 -Wall -Wextra -Werror -Iinclude src/app.c src/measurement.c tests/test_locked.c -o build/tests/locked
 	./build/tests/locked
+	gcc -std=c11 -Wall -Wextra -Werror -Iinclude tests/test_adc_registers.c src/measurement.c -o build/tests/adc_registers
+	./build/tests/adc_registers
 flash: all
 	openocd -f interface/stlink.cfg -f target/stm32f1x.cfg -c "program $(BUILD)/gbuck.elf verify reset exit"
 clean:

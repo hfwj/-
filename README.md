@@ -4,6 +4,8 @@
 
 ## 项目目录
 
+2026-11-03：[G题Rev C.2 ADCFIX1 / A1诊断HEX与复测](projects/2026-electronics-contest/g-buck/rev-c2/firmware/docs/ADC采样修正与上板复测_2026-11-03.md)。修正ADC采样时间寄存器，仍禁止功率输出；软件回归/ARM编译通过，实机VIN异常待复测。原理图/器件/BOM/PCB和仿真不改，旧诊断包仅留档。
+
 | 项目 | 资料入口 | 当前结论 |
 |---|---|---|
 | 2026 电子电赛 G题：辅助模块实物端口 | [XL7015_V2背面照片接线](projects/2026-electronics-contest/g-buck/rev-c2/reports/external-wiring-2026-11-01/XL7015_V2_背面照片接线.md) | 记录一块PCB丝印/四角端口，正面型号与两路分配待核；主板设计/PCB不改，外接模块差异单列 |
@@ -14,7 +16,7 @@
 | 2026 电子电赛 G题：电容位置图 | [总览、分区、PDF](projects/2026-electronics-contest/g-buck/rev-c2/reports/capacitor-placement-2026-10-31/README.md) | 标出33电容及容量/耐压/介质、电解极性；仅图文，原理图/器件/PCB/仿真/固件不改 |
 | 2026 电子电赛 G题：电阻位置图 | [总览、分区、PDF](projects/2026-electronics-contest/g-buck/rev-c2/reports/resistor-placement-2026-10-31/README.md) | 按原生PCB核对120器件坐标，标出43电阻位号；仅图文，原理图/器件/PCB/仿真/固件不改 |
 | 2026 电子电赛 G题：实物装配步骤 | [焊接、排线与首次调试](projects/2026-electronics-contest/g-buck/rev-c2/reports/实物装配与首次调试步骤.md) | 按Rev C.2和当前采购清单整理；原生ERC/DRC及实物验证待完成；仅文档，不改原理图/器件/PCB/仿真/固件 |
-| 2026 电子电赛 G题：STM32固件起点 | [源码与操作](projects/2026-electronics-contest/g-buck/rev-c2/firmware/README.md) · [默认诊断包](projects/2026-electronics-contest/g-buck/rev-c2/downloads/GBUCK_RevC2_STM32_diagnostic_2026-10-28.zip) | 三配置ARM编译/主机逻辑测试通过；默认禁止功率输出，未上板/未整定；主板原理图/BOM与仿真不改，可选控制板按键待确认 |
+| 2026 电子电赛 G题：STM32固件起点 | [源码与操作](projects/2026-electronics-contest/g-buck/rev-c2/firmware/README.md) · [A1诊断包](projects/2026-electronics-contest/g-buck/rev-c2/downloads/GBUCK_RevC2_STM32_diagnostic_ADCFIX1_2026-11-03.zip) | 三配置ARM编译/主机逻辑测试通过；默认禁止功率输出，未上板/未整定；主板原理图/BOM与仿真不改，可选控制板按键待确认 |
 | 2026 电子电赛 G题：器件逐项确认 | [记录](projects/2026-electronics-contest/g-buck/rev-c2/reports/component-confirmations-2026-10-27/README.md) | 1nF/50V/C0G/0805库存4只，单板用2只/补购0只/装一板余2只；1206/X7R款分开，原理图/PCB与仿真未改 |
 | 2026 电子电赛 G题：Rev C.2 更新采购清单 | [Excel](projects/2026-electronics-contest/g-buck/rev-c2/downloads/GBUCK_RevC2_updated_BOM.xlsx) · [PDF](projects/2026-electronics-contest/g-buck/rev-c2/downloads/GBUCK_RevC2_updated_BOM.pdf) · [说明](projects/2026-electronics-contest/g-buck/rev-c2/reports/updated-bom-2026-10-27/README.md) | 120位号合并46项采购记录；商品图分别支持50mΩ P10/线径0.8、25mΩ P5/线径0.7，RS_L已从P10改P5；F1按5×20/P5.66更新，双夹15mm待试装；电气网络/2A额定保持，仿真未改 |
 | 2026 电子电赛 G题：Rev C.2 PCB实物适配 | [工程/说明](projects/2026-electronics-contest/g-buck/rev-c2/pcb/hardware-fit-120x90/README.md) · [PCB预览](projects/2026-electronics-contest/g-buck/rev-c2/pcb/hardware-fit-120x90/previews/PCB_RevC2_120x90.png) | 当前768段铜线/188过孔/44地铜块，51网静态全连通；仅改PCB铜与局部走线，原理图/器件/BOM及位置保持；原生ERC/DRC和实物检查待完成，不能制板 |

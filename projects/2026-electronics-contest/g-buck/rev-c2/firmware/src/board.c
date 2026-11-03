@@ -30,8 +30,10 @@ void board_init(void){
  REG(0x40010414)=1u<<10;
  *(volatile u8 *)(0xE000E400u+40u)=0;
  REG(0xE000E104)=1u<<8; /* EXTI15_10 IRQ40 */
- REG(ADC1+0x0C)=7u<<18; /* 239.5 cycle acquisition channels 0..6 */
- for(u32 n=0;n<5;n++)REG(ADC1+0x0C)|=7u<<(n*3);
+ /* STM32F103: SMPR2 (+0x10) owns channels 0..9. SMPR1 (+0x0C)
+  * configures channels 10..17 and cannot set acquisition for PA0..PA6. */
+ REG(ADC1+0x10)=7u<<18; /* 239.5 cycle acquisition on channel 6 */
+ for(u32 n=0;n<5;n++)REG(ADC1+0x10)|=7u<<(n*3);
  REG(ADC1+8)=1;for(volatile u32 n=0;n<1000;n++){}
  REG(ADC1+8)|=8;while(REG(ADC1+8)&8){}
  REG(ADC1+8)|=4;while(REG(ADC1+8)&4){}

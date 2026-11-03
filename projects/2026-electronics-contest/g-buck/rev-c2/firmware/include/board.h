@@ -1,7 +1,9 @@
 #ifndef BOARD_H
 #define BOARD_H
 #include "app.h"
+#ifndef REG
 #define REG(a) (*(volatile u32 *)(a))
+#endif
 #define RCC 0x40021000u
 #define GPIOA 0x40010800u
 #define GPIOB 0x40010C00u

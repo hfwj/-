@@ -60,7 +60,7 @@ void lcd_init(void){
 }
 void lcd_update(const App *a,const Sample *s){
  static const char *states[]={"OFF","PRECHARGE","READY","ARMING","SOFTSTART","RUN","FAULT"};
- text(0,POWER_STAGE_ALLOWED?"GBUCK C2 BENCH":"GBUCK C2 LOCKED");
+ text(0,POWER_STAGE_ALLOWED?"GBUCK C2 BENCH":"GBUCK C2 LOCKED A1");
  text(16,states[a->state]);
  value(32,"VIN V  ",s->vin);value(44,"IIN A  ",s->iin);
  value(56,"VOUT V ",s->vout);value(68,"IOUT A ",s->iout);

@@ -1,25 +1,86 @@
 {
-  "baseline": "94c495e",
-  "compiler": "arm-none-eabi-gcc 12.2.1 20221205",
-  "date_beijing": "2026-10-28",
+  "date_beijing": "2026-11-03",
+  "version": "ADCFIX1 / A1",
+  "source_comparison_baseline": "16c6e675947681a9e10155302117c70150e9f457",
+  "compiler": "arm-none-eabi-gcc (15:12.2.rel1-1) 12.2.1 20221205",
+  "hardware_retest": "pending; VIN-zero root cause is not established",
   "checks": [
     {
       "configuration": "p0-k0-l1",
-      "binary_bytes": 4824,
-      "sha256": "74567db5fac900e98ed07762cd0149057f6de0d5adda5c2a117deda5df92d943",
-      "vectors": "stack + reset/exceptions/SysTick/EXTI40 addresses passed"
-    },
-    {
-      "configuration": "p1-k1-l1",
-      "binary_bytes": 5244,
-      "sha256": "d2b852963dbd92479c2faaf30a22a7392c88305419d7466863162c1d8e36932d",
-      "vectors": "stack + reset/exceptions/SysTick/EXTI40 addresses passed"
+      "binary_bytes": 4868,
+      "size": {
+        "text": 4844,
+        "data": 24,
+        "bss": 260
+      },
+      "sha256": "7ca238f2fbd3b45dcf05ebd8853b454c8e6697a0365769bb316d76d05789c1a0",
+      "vectors": "stack and Reset/exceptions/SysTick/EXTI40 Thumb/Flash range passed",
+      "intel_hex": "record checksums and byte-for-byte BIN comparison passed",
+      "symbols": {
+        "debug_adc_failures": "0x2000001C",
+        "debug_adc_scans": "0x20000020",
+        "debug_adc_raw": "0x20000024",
+        "debug_sample": "0x2000003C",
+        "debug_status": "0x20000058",
+        "debug_value": "0x20000098",
+        "debug_command": "0x2000009C"
+      }
     },
     {
       "configuration": "p0-k0-l0",
-      "binary_bytes": 3368,
-      "sha256": "11dc767dca89118885336a7211516a0446f9f8db3ef58c787ab121169e450f37",
-      "vectors": "stack + reset/exceptions/SysTick/EXTI40 addresses passed"
+      "binary_bytes": 3412,
+      "size": {
+        "text": 3388,
+        "data": 24,
+        "bss": 260
+      },
+      "sha256": "789aaa8a0fddf685d98deec76b40ce4f7d06e79e0067a749b5f01ad48a254192",
+      "vectors": "stack and Reset/exceptions/SysTick/EXTI40 Thumb/Flash range passed",
+      "intel_hex": "record checksums and byte-for-byte BIN comparison passed",
+      "symbols": {
+        "debug_adc_failures": "0x2000001C",
+        "debug_adc_scans": "0x20000020",
+        "debug_adc_raw": "0x20000024",
+        "debug_sample": "0x2000003C",
+        "debug_status": "0x20000058",
+        "debug_value": "0x20000098",
+        "debug_command": "0x2000009C"
+      }
+    },
+    {
+      "configuration": "p1-k1-l1",
+      "binary_bytes": 5288,
+      "size": {
+        "text": 5264,
+        "data": 24,
+        "bss": 272
+      },
+      "sha256": "400f98fa6c5a3825bbc5d2b9d3f39ee608ac7dfb20968d580b3950efa7f591a6",
+      "vectors": "stack and Reset/exceptions/SysTick/EXTI40 Thumb/Flash range passed",
+      "intel_hex": "record checksums and byte-for-byte BIN comparison passed",
+      "symbols": {
+        "debug_adc_failures": "0x20000028",
+        "debug_adc_scans": "0x2000002C",
+        "debug_adc_raw": "0x20000030",
+        "debug_sample": "0x20000048",
+        "debug_status": "0x20000064",
+        "debug_value": "0x200000A4",
+        "debug_command": "0x200000A8"
+      }
     }
-  ]
+  ],
+  "source_sha256": {
+    "Makefile": "22b9da1dc2ae5bd49bfc94c6d1a2f06e28a1bc42d958d8cd45a0420ebc028739",
+    "include/app.h": "774be988b29c21390891c39275a0b5beff23137fbf0c83c14cc15f9a92fea01a",
+    "include/board.h": "3171499c4350fa7519fb43b36287640407ae432df2401875a1ec9328601ff3f6",
+    "include/config.h": "f06ea0570d739e4dec56f235167a729f518d54200669d9b0452ec74f5b5b949c",
+    "src/app.c": "0339b253ada7a408dc701e8004c4ae14d1486bd1996b50701d7d10b92d147c4e",
+    "src/board.c": "ae1f474cb5616d11723b3cbd7444f23baae5ae142827d5b97dcc3f9143d58150",
+    "src/keys.c": "b3dd372eff53d36d3282527731818b2b1ab3ae8820518256c981e9331689065a",
+    "src/lcd.c": "7e3733b34dc509920d4a3caa804a543106a2727f41b53dc7b222223c812bde45",
+    "src/main.c": "81a8cbb945d06e64fc1cc8e1e7f54409a66160e9808965970024702ecabb0333",
+    "src/measurement.c": "259fe394497bc69820331977bc8e5d8d68cf8bb33377ee431bf4bbae2b80c5e3",
+    "src/startup.c": "7f890b223697f1a3c64353f8d2fc4826a569dcc23b8a66b855e0da16eb416266",
+    "stm32f103c8.ld": "29e5ff6b31069aa026a176870934aaf005b47cd423e857e99a0e9d1e07918187"
+  }
 }

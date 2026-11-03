@@ -1,5 +1,7 @@
 # G 题同步 Buck Rev C.2
 
+**2026-11-03 ADC诊断修订：**[ADCFIX1 / A1 HEX](downloads/GBUCK_RevC2_diagnostic_ADCFIX1_2026-11-03.hex) · [源码及默认诊断包](downloads/GBUCK_RevC2_STM32_diagnostic_ADCFIX1_2026-11-03.zip) · [缺陷、RAW观察、复测与修改影响](firmware/docs/ADC采样修正与上板复测_2026-11-03.md)。修正SMPR2通道采样时间配置，仍禁止功率输出；主机回归与三配置ARM编译通过，VIN异常是否解决仍待上板复测。主板原理图/器件/BOM/PCB及仿真不改。10月28日旧诊断包保留为历史，不作为当前推荐镜像。
+
 **辅助模块实物照片：**[XL7015_V2背面四角端口与接线](reports/external-wiring-2026-11-01/XL7015_V2_背面照片接线.md)。仅确认该块PCB丝印/端口，正面型号及M1/M2分配待核；主板原理图/器件/PCB不改，外接模块与历史选型差异单列。
 
 **板外模块接线：**[三张接线图 / PDF](reports/external-wiring-2026-11-01/README.md#接线图) · [电源模块、预充/旁路、STM32、LCD及输入/负载逐线表](reports/external-wiring-2026-11-01/README.md)。电源脚及屏幕版本须按实物核对；仅说明，不改原理图/器件/BOM/PCB/仿真/固件。
@@ -16,7 +18,7 @@
 
 **2026-10-31实物装配：**[焊接、外接模块、完整排线及首次调试步骤](reports/实物装配与首次调试步骤.md)。按当前采购清单和接口逐项核对；先诊断、后受控功率调试。PCB原生ERC/DRC与硬件验证仍待完成，本次仅文档归档，不改原理图、器件/BOM、PCB、仿真或固件。
 
-**2026-10-28 STM32固件起点：**[源码/编译/接线](firmware/README.md) · [上板操作](firmware/docs/上板调试与操作.md) · [验证与影响](firmware/docs/验证与修改影响.md) · [默认禁止输出诊断包](downloads/GBUCK_RevC2_STM32_diagnostic_2026-10-28.zip)。STM32F103C8T6，六路ADC、30kHz PWM、双PI CV/CC、20ms独立保护与手动恢复；三配置ARM编译和主机逻辑测试通过，未上板/未整定，不代表硬件验收。主板原理图/器件/PCB与仿真不改，可选控制板按键接线待确认。下文“固件未改”等属于此前各轮历史记录。
+**2026-10-28 STM32固件起点：**[源码/编译/接线](firmware/README.md) · [上板操作](firmware/docs/上板调试与操作.md) · [验证与影响](firmware/docs/验证与修改影响.md) · [2026-10-28旧诊断包，仅历史](downloads/GBUCK_RevC2_STM32_diagnostic_2026-10-28.zip)。STM32F103C8T6，六路ADC、30kHz PWM、双PI CV/CC、20ms独立保护与手动恢复；三配置ARM编译和主机逻辑测试通过，未上板/未整定，不代表硬件验收。主板原理图/器件/PCB与仿真不改，可选控制板按键接线待确认。下文“固件未改”等属于此前各轮历史记录。
 
 **2026-10-28最新PCB：**[地铜与整板复核](pcb/hardware-fit-120x90/reports/地铜与整板连通复核_2026-10-28.md) · [最新工程包](downloads/GBUCK_RevC2_PCB_ground_draft_2026-10-28.zip)。768段/188过孔/44地铜块，51网静态全连通，未布与悬空铜0；原生ERC/DRC及制造检查未完成，不能制板。本轮原理图、器件/BOM和位置不变，仅改PCB铜及局部走线；仿真/固件未改。下文旧保存包与2026-10-27整包为历史版本。
 
