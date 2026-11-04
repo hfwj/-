@@ -1,0 +1,430 @@
+--- a/Makefile
++++ b/Makefile
+@@ -5,10 +5,16 @@
+ POWER ?= 0
+ KEYS ?= 0
+ LCD ?= 1
+-BUILD = build/p$(POWER)-k$(KEYS)-l$(LCD)
+-CFLAGS = -mcpu=cortex-m3 -mthumb -std=c11 -Os -g3 -ffreestanding -fno-builtin -Wall -Wextra -Werror -ffunction-sections -fdata-sections -Iinclude -DPOWER_STAGE_ALLOWED=$(POWER) -DKEYS_ENABLED=$(KEYS) -DLCD_ENABLED=$(LCD)
++BENCH ?= 0
++ifneq ($(BENCH),0)
++ifneq ($(BENCH),1)
++$(error BENCH must be 0 or 1)
++endif
++endif
++BUILD = build/p$(POWER)-k$(KEYS)-l$(LCD)$(if $(filter 1,$(BENCH)),-b1,)
++CFLAGS = -mcpu=cortex-m3 -mthumb -std=c11 -Os -g3 -ffreestanding -fno-builtin -Wall -Wextra -Werror -ffunction-sections -fdata-sections -Iinclude -DPOWER_STAGE_ALLOWED=$(POWER) -DKEYS_ENABLED=$(KEYS) -DLCD_ENABLED=$(LCD) -DBENCH_LIMITED=$(BENCH)
+ SRC = $(wildcard src/*.c)
+-.PHONY: all test clean flash
++.PHONY: all test bench-test clean flash
+ all: $(BUILD)/gbuck.bin $(BUILD)/gbuck.hex
+ $(BUILD)/gbuck.elf: $(SRC) $(wildcard include/*.h) stm32f103c8.ld Makefile
+ 	mkdir -p $(BUILD)
+@@ -28,5 +34,9 @@
+ 	./build/tests/adc_registers
+ flash: all
+ 	openocd -f interface/stlink.cfg -f target/stm32f1x.cfg -c "program $(BUILD)/gbuck.elf verify reset exit"
++bench-test:
++	mkdir -p build/tests
++	gcc -std=c11 -Wall -Wextra -Werror -g -fsanitize=address,undefined -Iinclude -DPOWER_STAGE_ALLOWED=1 -DBENCH_LIMITED=1 src/app.c src/measurement.c tests/test_bench.c -o build/tests/bench
++	ASAN_OPTIONS=detect_leaks=0 ./build/tests/bench
+ clean:
+ 	rm -rf build
+--- a/include/config.h
++++ b/include/config.h
+@@ -10,6 +10,12 @@
+ #ifndef LCD_ENABLED
+ #define LCD_ENABLED 1
+ #endif
++#ifndef BENCH_LIMITED
++#define BENCH_LIMITED 0
++#endif
++#if BENCH_LIMITED && !POWER_STAGE_ALLOWED
++#error "B1 requires POWER=1; normal builds remain locked by default"
++#endif
+ #define CPU_HZ 64000000u
+ #define PWM_PERIOD 2133u /* TIM1 64MHz / 2133 = 30004.7 Hz */
+ #define ADC_VDDA_MV 3300
+@@ -18,13 +24,28 @@
+ #define LCD_X_OFFSET 0
+ #define LCD_Y_OFFSET 0
+ #define LCD_MADCTL 0x00 /* module-specific RGB/BGR + rotation */
++#if BENCH_LIMITED
++#define DUTY_MAX 2500 /* B1: 25% hard cap; not a final power firmware */
++#define DEFAULT_VSET_MV 2000
++#define DEFAULT_ISET_MA 200
++#define VSET_MAX_MV 2000
++#define ISET_MAX_MA 200
++#define VIN_MAX_MV 16000
++#define OUTPUT_OV_MV 3000
++#else
+ #define DUTY_MAX 8500 /* basis points; 85%, preserves bootstrap refresh */
++#define DEFAULT_VSET_MV 10000
++#define DEFAULT_ISET_MA 1000
++#define VSET_MAX_MV 10000
++#define ISET_MAX_MA 1000
++#define VIN_MAX_MV 27000
++#define OUTPUT_OV_MV 11500
++#endif
+ #define SOFTSTART_MS 300u
+ #define PRECHARGE_MS 100u
+ #define OC_DELAY_MS 20u
+ #define UV_DELAY_MS 20u
+ #define VIN_MIN_MV 12000
+-#define VIN_MAX_MV 27000
+ /* Conservative starting gains, NOT tuned on the actual power stage.
+  * Incremental PI: duty_bp += kp*(err-previous_err) + ki*err.
+  * Gains below are scaled by 1000; error is mV or mA, step is 1ms. */
+--- a/src/app.c
++++ b/src/app.c
+@@ -1,7 +1,7 @@
+ #include "app.h"
+ static i32 clamp(i32 x,i32 lo,i32 hi){return x<lo?lo:(x>hi?hi:x);}
+ void app_init(App *a){
+- *a=(App){0}; a->vset=10000; a->iset=1000; a->state=OFF;
++ *a=(App){0}; a->vset=DEFAULT_VSET_MV; a->iset=DEFAULT_ISET_MA; a->state=OFF;
+ }
+ void app_trip(App *a,Fault f){
+  a->enable=0; a->arm=0; a->duty=0; a->fault=f; a->state=TRIPPED;
+@@ -10,8 +10,8 @@
+ void app_command(App *a,Command c,i32 v){
+  if(c==CMD_STOP){i32 vs=a->vset,is=a->iset;app_init(a);a->vset=vs;a->iset=is;return;}
+  /* Settings may only change with the stage stopped; do not restart implicitly. */
+- if(c==CMD_SET_V && (a->state==OFF || a->state==TRIPPED)) a->vset=clamp(v,200,10000);
+- if(c==CMD_SET_I && (a->state==OFF || a->state==TRIPPED)) a->iset=clamp(v,100,1000);
++ if(c==CMD_SET_V && (a->state==OFF || a->state==TRIPPED)) a->vset=clamp(v,200,VSET_MAX_MV);
++ if(c==CMD_SET_I && (a->state==OFF || a->state==TRIPPED)) a->iset=clamp(v,100,ISET_MAX_MA);
+  if(c==CMD_PRECHARGE && (a->state==OFF || a->state==TRIPPED)){
+   a->state=PRECHARGE;a->fault=F_NONE;a->pre_ms=0;a->bypass_confirmed=0;
+  }
+@@ -46,7 +46,7 @@
+   if(s->vin_post<s->vin-1500){a->state=PRECHARGE;a->pre_ms=0;a->bypass_confirmed=0;}
+   return;
+  }
+- if(s->vout>11500){app_trip(a,F_OV);return;}
++ if(s->vout>OUTPUT_OV_MV){app_trip(a,F_OV);return;}
+  if(a->state==ARMING){
+   if(!oc_n){app_trip(a,F_OC);return;}
+   /* 1ms positive ARM pulse, then settle 1ms, still disabled. */
+@@ -54,7 +54,7 @@
+   if(++a->age>=2){a->state=SOFTSTART;a->age=0;a->enable=1;}
+   return;
+  }
+- if(s->vout>11500){app_trip(a,F_OV);return;}
++ if(s->vout>OUTPUT_OV_MV){app_trip(a,F_OV);return;}
+  if(!oc_n){if(++a->oc_ms>=OC_DELAY_MS){app_trip(a,F_OC);return;}}else a->oc_ms=0;
+  if(a->state==RUN && a->vset>1000 && s->vout<500){
+   if(++a->uv_ms>=UV_DELAY_MS){app_trip(a,F_LOW_OUTPUT);return;}
+--- a/src/lcd.c
++++ b/src/lcd.c
+@@ -60,7 +60,11 @@
+ }
+ void lcd_update(const App *a,const Sample *s){
+  static const char *states[]={"OFF","PRECHARGE","READY","ARMING","SOFTSTART","RUN","FAULT"};
++#if BENCH_LIMITED
++ text(0,"GBUCK C2 BENCH B1");
++#else
+  text(0,POWER_STAGE_ALLOWED?"GBUCK C2 BENCH":"GBUCK C2 LOCKED A1");
++#endif
+  text(16,states[a->state]);
+  value(32,"VIN V  ",s->vin);value(44,"IIN A  ",s->iin);
+  value(56,"VOUT V ",s->vout);value(68,"IOUT A ",s->iout);
+--- /dev/null
++++ b/tests/test_bench.c
+@@ -0,0 +1,245 @@
++#include <assert.h>
++#include <limits.h>
++#include <stdio.h>
++#include "app.h"
++
++/* Exercise the production App/ADC functions. These samples are test inputs,
++ * not a model of converter dynamics or evidence of real hardware limits. */
++static const Sample healthy = {15000, 50, 2000, 200, 200, 14500, 1};
++
++static void outputs_off(const App *a)
++{
++    assert(a->enable == 0);
++    assert(a->arm == 0);
++    assert(a->duty == 0);
++}
++
++static void tick(App *a, const Sample *s, unsigned count, u8 fault_n, u8 oc_n)
++{
++    while (count--) app_tick(a, s, fault_n, oc_n);
++}
++
++static void enter_ready(App *a)
++{
++    app_init(a);
++    app_command(a, CMD_START, 0);
++    app_command(a, CMD_CONFIRM_BYPASS, 0);
++    assert(a->state == OFF && !a->bypass_confirmed);
++    outputs_off(a);
++
++    app_command(a, CMD_PRECHARGE, 0);
++    assert(a->state == PRECHARGE);
++    app_command(a, CMD_START, 0);
++    app_command(a, CMD_CONFIRM_BYPASS, 0);
++    assert(a->state == PRECHARGE && !a->bypass_confirmed);
++    tick(a, &healthy, PRECHARGE_MS - 1, 1, 1);
++    assert(a->state == PRECHARGE);
++    outputs_off(a);
++    tick(a, &healthy, 1, 1, 1);
++    assert(a->state == READY);
++    outputs_off(a);
++
++    app_command(a, CMD_START, 0);
++    assert(a->state == READY && !a->bypass_confirmed);
++    outputs_off(a);
++}
++
++static void manual_start(App *a)
++{
++    assert(a->state == READY);
++    app_command(a, CMD_CONFIRM_BYPASS, 0);
++    assert(a->bypass_confirmed);
++    app_command(a, CMD_START, 0);
++    assert(a->state == ARMING && !a->enable && !a->arm);
++
++    tick(a, &healthy, 1, 1, 1);
++    assert(a->state == ARMING && a->arm && !a->enable);
++    assert(a->duty == 0);
++    tick(a, &healthy, 1, 1, 1);
++    assert(a->state == SOFTSTART && !a->arm && a->enable);
++    tick(a, &healthy, SOFTSTART_MS - 1, 1, 1);
++    assert(a->state == SOFTSTART);
++    tick(a, &healthy, 1, 1, 1);
++    assert(a->state == RUN && a->enable && !a->arm);
++}
++
++static void enter_run(App *a)
++{
++    enter_ready(a);
++    manual_start(a);
++}
++
++static void test_boot_and_limits(void)
++{
++    App a;
++    assert(POWER_STAGE_ALLOWED == 1);
++    assert(DUTY_MAX == 2500);
++    app_init(&a);
++    assert(a.state == OFF && a.fault == F_NONE);
++    assert(a.vset == 2000 && a.iset == 200);
++    outputs_off(&a);
++
++    app_command(&a, CMD_SET_V, INT_MAX);
++    app_command(&a, CMD_SET_I, INT_MAX);
++    assert(a.vset == 2000 && a.iset == 200);
++    app_command(&a, CMD_SET_V, INT_MIN);
++    app_command(&a, CMD_SET_I, INT_MIN);
++    assert(a.vset == 200 && a.iset == 100);
++    app_command(&a, CMD_SET_V, 1500);
++    app_command(&a, CMD_SET_I, 150);
++    assert(a.vset == 1500 && a.iset == 150);
++    outputs_off(&a);
++
++    enter_run(&a);
++    app_command(&a, CMD_SET_V, 1500);
++    app_command(&a, CMD_SET_I, 100);
++    assert(a.vset == 2000 && a.iset == 200);
++    app_command(&a, CMD_STOP, 0);
++    assert(a.state == OFF && !a.bypass_confirmed);
++    assert(a.vset == 2000 && a.iset == 200);
++    outputs_off(&a);
++    tick(&a, &healthy, 1000, 1, 1);
++    assert(a.state == OFF);
++    outputs_off(&a);
++}
++
++static void test_hard_fault_manual_recovery(void)
++{
++    App a;
++    enter_run(&a);
++    tick(&a, &healthy, 1, 0, 1);
++    assert(a.state == TRIPPED && a.fault == F_HARDWARE);
++    assert(!a.bypass_confirmed);
++    outputs_off(&a);
++
++    tick(&a, &healthy, 1000, 1, 1);
++    app_command(&a, CMD_START, 0);
++    app_command(&a, CMD_CONFIRM_BYPASS, 0);
++    assert(a.state == TRIPPED && !a.bypass_confirmed);
++    outputs_off(&a);
++
++    app_command(&a, CMD_SET_V, INT_MAX);
++    app_command(&a, CMD_SET_I, INT_MAX);
++    assert(a.vset == 2000 && a.iset == 200);
++    app_command(&a, CMD_PRECHARGE, 0);
++    tick(&a, &healthy, PRECHARGE_MS, 1, 1);
++    assert(a.state == READY && !a.bypass_confirmed);
++    app_command(&a, CMD_START, 0);
++    assert(a.state == READY);
++    outputs_off(&a);
++    manual_start(&a);
++}
++
++static void test_duty_cap_and_stop(void)
++{
++    App a;
++    Sample s = healthy;
++    int reached_cap = 0;
++    enter_run(&a);
++    for (unsigned n = 0; n < 5000; n++) {
++        /* Positive CV/CC errors demand more duty, including saturation. */
++        s.vout = 600 + (i32)(n % 1200);
++        s.iout = (i32)(n % 90);
++        app_tick(&a, &s, 1, 1);
++        assert(a.state == RUN && a.enable && !a.arm);
++        assert(a.duty >= 0 && a.duty <= 2500);
++        if (a.duty == 2500) reached_cap = 1;
++    }
++    assert(reached_cap);
++    app_command(&a, CMD_STOP, 0);
++    assert(a.state == OFF && !a.bypass_confirmed);
++    outputs_off(&a);
++}
++
++static void test_retained_fault_boundaries(void)
++{
++    App a;
++    Sample s = healthy;
++    enter_run(&a);
++    tick(&a, &healthy, OC_DELAY_MS - 1, 1, 0);
++    assert(a.state == RUN);
++    tick(&a, &healthy, 1, 1, 0);
++    assert(a.state == TRIPPED && a.fault == F_OC);
++    outputs_off(&a);
++
++    enter_run(&a);
++    s.vout = 100;
++    tick(&a, &s, UV_DELAY_MS - 1, 1, 1);
++    assert(a.state == RUN);
++    tick(&a, &s, 1, 1, 1);
++    assert(a.state == TRIPPED && a.fault == F_LOW_OUTPUT);
++    outputs_off(&a);
++
++    enter_run(&a);
++    s = healthy;
++    s.valid = 0;
++    tick(&a, &s, 1, 1, 1);
++    assert(a.state == TRIPPED && a.fault == F_ADC);
++    outputs_off(&a);
++
++    enter_run(&a);
++    s = healthy;
++    s.vin_post = 10000;
++    tick(&a, &s, 1, 1, 1);
++    assert(a.state == TRIPPED && a.fault == F_INPUT);
++    outputs_off(&a);
++}
++
++static void test_adc_units_and_invalid_rails(void)
++{
++    const u16 raw[6] = {1692, 124, 226, 248, 2048, 1636};
++    u16 invalid[6] = {1692, 124, 226, 248, 2048, 1636};
++    Sample s;
++    adc_convert(raw, &s);
++    assert(s.valid);
++    assert(s.vin >= 14990 && s.vin <= 15010);
++    assert(s.iin >= 98 && s.iin <= 101);
++    assert(s.vout >= 1995 && s.vout <= 2010);
++    assert(s.iout >= 198 && s.iout <= 202);
++    assert(s.il >= -2 && s.il <= 2);
++    assert(s.vin_post >= 14490 && s.vin_post <= 14510);
++
++    invalid[0] = 4095;
++    adc_convert(invalid, &s);
++    assert(!s.valid);
++    invalid[0] = raw[0];
++    invalid[4] = 0;
++    adc_convert(invalid, &s);
++    assert(!s.valid);
++}
++
++static void test_bench_voltage_boundaries(void)
++{
++    App a;
++    Sample s = healthy;
++    enter_run(&a);
++    s.vout = 3000;
++    tick(&a, &s, 1, 1, 1);
++    assert(a.state == RUN);
++    s.vout = 3001;
++    tick(&a, &s, 1, 1, 1);
++    assert(a.state == TRIPPED && a.fault == F_OV);
++    outputs_off(&a);
++
++    enter_run(&a);
++    s = healthy;
++    s.vin = 16000;
++    tick(&a, &s, 1, 1, 1);
++    assert(a.state == RUN);
++    s.vin = 16001;
++    tick(&a, &s, 1, 1, 1);
++    assert(a.state == TRIPPED && a.fault == F_INPUT);
++    outputs_off(&a);
++}
++
++int main(void)
++{
++    test_boot_and_limits();
++    test_hard_fault_manual_recovery();
++    test_duty_cap_and_stop();
++    test_retained_fault_boundaries();
++    test_adc_units_and_invalid_rails();
++    test_bench_voltage_boundaries();
++    puts("PASS B1: 2V/200mA command caps, 25% duty cap, manual interlocks/ARM/recovery, OC/UV/input/ADC faults, STOP and ADC units");
++    return 0;
++}
+--- /dev/null
++++ b/docs/B1_台架整组测试_2026-11-04.md
+@@ -0,0 +1,48 @@
++# B1受限台架版与整组测试步骤
++
++2026-11-04。基准ADCFIX1/A1发布660a38db1e50648b254b3846872b12072adeab8b。本版已主机测试和ARM交叉编译，尚未在实际功率板运行。不是最终固件或硬件验收。
++
++## 版本与限值
++
++构建 make POWER=1 KEYS=0 LCD=1 BENCH=1；默认make仍是原A1锁定版。B1标题GBUCK C2 BENCH B1；上电OFF，不自动ARM或输出。默认及命令允许上限2.000V/0.200A，占空比上限25%；输入上限16V，软件输出过压门限3V。3V门限保留原ARMING及运行状态检查位置，不是任意状态硬件限幅；输入/ADC/FAULT/20ms OC及UV/看门狗/人工恢复逻辑保留。0.2A是软件设定上限，不是逐周期电流峰值保证。
++
++HEX/BIN加载地址0x08000000；BOOT0=0。新镜像独立核对MAP后debug_command仍为0x2000009C，debug_value为0x20000098，仅适用于本次B1镜像。默认目标无需另写设定。
++
++## 一次准备
++
++1. 断电并放电，保持单路核心板供电安排，烧录并校验B1；主功率输入不接。确认标题B1、OFF、SET V=2.000/SET A=0.200。不要沿用A1的READY/旁路确认RAM状态。
++2. 断电接好10Ω至少5W假负载，红输出J2.1、负端J2.2。不接真实电池；旁路开关先断开。
++3. 主输入15V，先保持0.1A限流；这仅是本轮低功率试验设置。若持续CC、发热或异常，不提高限流掩盖。
++4. 示波器DC耦合：CH1差分探头跨QH G-S（或U1.7 HO至U1.6 VS）；CH2普通探头测QL G-S（或U1.4 LO至U1.3 COM）。普通探头地夹只接COM/低边S，不能接SW/高边S。检查探头倍率匹配。先设5V/div、10µs/div，准备单次触发记录启动。
++
++## 启动及整组采集
++
++只用Hot plug、32位写0x2000009C；每条命令等入口归零，分别写1（预充）→READY/FAULT0；按已核对实体接线闭合旁路→写2（确认）；探头和负载已连接后写3（此操作实际开启功率并软启动）。不在功率运行中暂停/单步内核。
++
++异常时写4（STOP）并断开主输入。硬件故障恢复不自动重启，正常恢复也必须重走1/2/3。
++
++一次记录：
++- 两路门极全周期同屏：约30kHz，门极高电平约10～12V，占空比不超过25%。PA8逻辑PWM可另拍一张，幅度约3.3V。
++- 两个切换方向各拍边沿放大图，先用200ns/div，观察双方没有同时处于高电平、存在非重叠间隔。IR2184通常为亚微秒死区，实测值按具体器件资料判断，不把约0.5µs写成已测结果。
++- 万用表实际输出电压、10Ω负载两端电压估算电流I=V/R，LCD状态/FAULT、输入电源实际电流及CV/CC。若输出约2V，则电阻电流约0.2A。LCD电流精度仍不是独立实测；电流表不能并联到输出。
++- 短时运行无异常后记录温升，再写4；确认回OFF并验证驱动关闭。
++
++B1是真实带母线的小功率实验，不是零母线空载驱动测试。10Ω在2V稳态下较100Ω更有利于避免持续负电感电流，但启动/瞬态反向电流仍待实测。0.1A输入限流不限制已充电C1的首个故障脉冲。
++
++## 后续测试路线
++
++本轮门极波形、实际输出和停止功能未通过时停止，不继续提高功率。通过后才进入正常量程台架固件；B1不能执行25V输入、10V输出或1A测试。
++
++正常量程固件阶段：先15V输入/20Ω假负载，小目标逐步升至10V，观察软启动、CV稳定性和输出电感电流；再在25V输入下依次20Ω、8Ω、5Ω。设定10V/1A时20Ω预计10V/0.5A，8Ω预计进入约8V/1A恒流，5Ω预计约5V/1A，不能要求各负载始终10V。负载额定及散热按实际功率选择，建议至少20W。
++
++0.1A限流仅用于B1；正常量程各工况的输入电流预算按Pout/(Vin×效率)+辅助消耗计算，不盲目提高限流。正常量程固件尚未作为本B1交付，不用B1越过限制。
++
++接着在同一负载做15→25V输入变化、20→8→5Ω负载变化、CV/CC转换与恢复波形。空载反向电流单独测试，不能从10Ω结果推定。
++
++最终记录：同一输入端总功率，计入辅助模块/主控/LCD，效率=Pout/Pin；显示与设定精度、温升、复位/掉电/看门狗及真实关断延迟。用户跳过的物理故障输入/锁存测试记未测，不能列为保护验收。短路测试另需受控限能方案，不用裸线直接短路。
++
++## 修改影响与验证边界
++
++原理图/主板连接/脚位/阻容数值不改；器件BOM/PCB不改。10Ω至少5W电阻为外部台架负载，不是主板改版。固件新增B1配置与命令上限、25%占空比、16V输入和3V软件OV边界；CV/CC增益、ADC比例、硬件保护链与看门狗不改。SPICE/Multisim及模型未改。新增测试调用真实app.c/measurement.c；主机模型不能证明实际闭环稳定性、效率或故障能量安全。
++
++已执行原状态机/锁定/ADC寄存器模型回归；新增B1启动互锁、命令限值、占空比饱和、OC/UV、ADC/输入故障、16V及3V边界和STOP的ASan/UBSan测试；GCC12.2.1 -Wall -Wextra -Werror交叉编译；向量/Flash/HEX校验与BIN一致性检查。重建默认A1得到原BIN SHA256 7ca238f2fbd3b45dcf05ebd8853b454c8e6697a0365769bb316d76d05789c1a0。独立代码复核未发现阻断交付的问题。硬件测试尚未执行。
