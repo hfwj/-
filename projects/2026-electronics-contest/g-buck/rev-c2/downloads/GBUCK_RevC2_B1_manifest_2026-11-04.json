@@ -1,0 +1,48 @@
+{
+  "version": "B1 limited power bench",
+  "date": "2026-11-04 Asia/Shanghai",
+  "configuration": "POWER=1 KEYS=0 LCD=1 BENCH=1",
+  "baseline": "ADCFIX1/A1 release 660a38db1e50648b254b3846872b12072adeab8b",
+  "limits": {
+    "default_and_max_vset_mV": 2000,
+    "default_and_max_iset_mA": 200,
+    "max_duty_bp": 2500,
+    "max_input_mV": 16000,
+    "software_output_OV_mV": 3000
+  },
+  "boot": "OFF; manual PRECHARGE/bypass confirmation/START required",
+  "physical_hardware_test": "not performed",
+  "skipped_test": "physical fault stimulus/latching remains untested",
+  "image_checks": {
+    "initial_SP": "0x20005000",
+    "reset_vector": "0x8000dc5",
+    "vectors": "passed Cortex-M3/EXTI40 Thumb and Flash bounds",
+    "hex_checksums_and_bin_match": "passed",
+    "bytes": 4972
+  },
+  "symbols": {
+    "debug_adc_failures": "0x2000001C",
+    "debug_adc_scans": "0x20000020",
+    "debug_adc_raw": "0x20000024",
+    "debug_sample": "0x2000003C",
+    "debug_status": "0x20000058",
+    "debug_value": "0x20000098",
+    "debug_command": "0x2000009C"
+  },
+  "sha256": {
+    "gbuck.elf": "51eb4ecd3688d10a763fca3a7766adc6efaabf0030d1c4aea32313061f3d27a5",
+    "gbuck.map": "e9ed1e86ed649e9465bd37ebf0c2657a3c6f2c08e9584ab2c0ae411ab2bc648c",
+    "gbuck.hex": "2b48b42ef373b66b36bc51c33bd20fe4b4b0c79b87671c6ec2dfc49d94fdf3aa",
+    "gbuck.bin": "beb3e6d3749a8d92eb7d5578164b37f4567d36868901dafc82051311f14011d2"
+  },
+  "original_A1_bin_sha256": "7ca238f2fbd3b45dcf05ebd8853b454c8e6697a0365769bb316d76d05789c1a0",
+  "source_patch_sha256": "b57a359e995c0a78f4b20c5526d2bea5066521f34bf68cdfa5bafc51079c3a7f",
+  "source_sha256": {
+    "Makefile": "34adc6a8e9675e6001ff6e412ae02489e6eeebf12746c88799fe5b89e283769a",
+    "include/config.h": "e895172d90907775d59218e556420a55e14483c6d273b498630312769b50f50a",
+    "src/app.c": "c4271e5a59bd003ce6458a97254f6f41bba4f7c1b7db3077b814a72aa227307a",
+    "src/lcd.c": "b3f1900065d69f02982dc40a0755a74f1313098f686565d9e11dadb02cec2ce9",
+    "tests/test_bench.c": "36759fcb3736db20d6b1e737f1dc0569d2e8833c956b58c488d0596751ab52f6",
+    "docs/B1_\u53f0\u67b6\u6574\u7ec4\u6d4b\u8bd5_2026-11-04.md": "d08482ec1ae93f5b8b313f4e0ae0f5caad6b24c1ddcae2ee91ba6db1d4b7dc89"
+  }
+}
