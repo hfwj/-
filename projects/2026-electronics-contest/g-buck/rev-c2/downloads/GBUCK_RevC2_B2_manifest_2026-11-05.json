@@ -1,0 +1,179 @@
+{
+  "version": "GBUCK RevC2 BENCH B2",
+  "date_utc": "2026-11-05",
+  "baseline": "B1 2026-11-04; remote main f2a8bca666c22b64ba9496c4920f991fcd0d807e",
+  "hardware_status": "NOT FLASHED OR HARDWARE VERIFIED; user observes SOFTSTART/STARTUP directly FAULT, no observed RUN",
+  "build": {
+    "compiler": "arm-none-eabi-gcc 12.2.1",
+    "make": "make POWER=1 LCD=1",
+    "cpu": "STM32F103C8 Cortex-M3 HSI PLL64MHz",
+    "flash_capacity": 65536,
+    "ram_capacity": 20480,
+    "flash_bytes": 8064,
+    "static_ram_end": "0x20002A70",
+    "static_to_stack_gap_bytes": 9616,
+    "runtime_stack_usage": "not measured"
+  },
+  "limits": {
+    "default_max_mv": 2000,
+    "default_max_ma": 200,
+    "max_duty_bp": 2500,
+    "vin_mv": [
+      12000,
+      16000
+    ],
+    "post_min_mv": 11000,
+    "post_gap_max_mv": 1500,
+    "software_ov_mv": 3000,
+    "prebias_max_mv": "min(100,Vset/4)",
+    "no_rise_ms": 250,
+    "startup_deadline_ms": 1000,
+    "software_current_guard": "Iout>400mA or abs(IL)>800mA, 2 samples at 1kHz; immediate before ARM; not peak protection"
+  },
+  "swd": {
+    "base": "0x20000000",
+    "magic": "0x42324332",
+    "abi": "0x00020001",
+    "words": 64,
+    "command": "0x20000010",
+    "value": "0x20000014",
+    "old_B1_command": "0x2000009C reserved/ignored",
+    "trace": "0x20000100",
+    "trace_bytes": 10240,
+    "records": 256,
+    "words_per_record": 10,
+    "read_without_halting": true
+  },
+  "tests": {
+    "controller_ASan_UBSan": "PASS",
+    "power_locked": "PASS",
+    "ADC_register_model": "PASS",
+    "diagnostic_ABI_trace": "PASS",
+    "real_main_ISR_host_model": "PASS",
+    "ELF_vectors_flash_RAM": "PASS",
+    "HEX_checksums_BIN_equality": "PASS",
+    "approximate_LC": "PASS; R10/8/5 reach RUN404ms, not hardware evidence"
+  },
+  "impact": {
+    "baseline": "B1 and RevC.2",
+    "schematic": "unchanged",
+    "pins": "unchanged",
+    "components_BOM_PCB": "unchanged",
+    "physical_ms14_models": "unchanged",
+    "firmware": "rewritten control/startup/protection/diagnostics; old SWD command addresses invalid",
+    "test_model": "added approximate averaged LC executing actual app.c; excludes switching driver, parasitics and ADC filters/delay"
+  },
+  "unverified": [
+    "actual hardware cause",
+    "gate-source waveforms",
+    "simultaneous deadtime",
+    "skipped physical fault stimulus",
+    "peak currents",
+    "closed-loop hardware stability",
+    "efficiency",
+    "old MCU damage root cause"
+  ],
+  "source_files": [
+    {
+      "path": "projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/.gitignore",
+      "sha256": "c7cd0fc55d4b88bc4ed87b1cdc33670d9046174ab762188a0f2ce10290bb56e0"
+    },
+    {
+      "path": "projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/Makefile",
+      "sha256": "cfd1a723234fc191968fc7981167385219c5ed82128dcb1ec4705d2c3b8b5df5"
+    },
+    {
+      "path": "projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/README.md",
+      "sha256": "c0bc2a1e411af70aeba2fff97d6091eb0d45074af48045bd2eb467821a3cc3bb"
+    },
+    {
+      "path": "projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/include/app.h",
+      "sha256": "0bb87506f228b5e0f2799228d323a2a6a0ffc282c0e31fcfc09fcc612a0a61f8"
+    },
+    {
+      "path": "projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/include/board.h",
+      "sha256": "3171499c4350fa7519fb43b36287640407ae432df2401875a1ec9328601ff3f6"
+    },
+    {
+      "path": "projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/include/config.h",
+      "sha256": "24c884dd5d782edd73f5be6797fcb1156f9ed4ff3488029970e1ab824dcc0524"
+    },
+    {
+      "path": "projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/include/diag.h",
+      "sha256": "d3410a8c70f180cb67999e6bf0a5c6c6da7cbe5203718740067979b15bac0290"
+    },
+    {
+      "path": "projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/src/app.c",
+      "sha256": "439f49b11210152905ec77acdcc40c572b5521b0b8bdc31731da8aabbe06188b"
+    },
+    {
+      "path": "projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/src/board.c",
+      "sha256": "ef7d943b764ed53bd41d8287df716ed270c240730777b680369ddd259f471ad4"
+    },
+    {
+      "path": "projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/src/diag.c",
+      "sha256": "4969a8368f7dce8932406010b5a3c2c541387881434ed61a0fdc37b580b3100d"
+    },
+    {
+      "path": "projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/src/lcd.c",
+      "sha256": "8fcf5623b9e4c597480cbfe7611cb1fc356ddeec5010c675b9ab4dc979d3e650"
+    },
+    {
+      "path": "projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/src/main.c",
+      "sha256": "b0ca41c3afbc898a52e6fef8edd2b0337bc46089520f08935d124ddc5e53a0f6"
+    },
+    {
+      "path": "projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/src/measurement.c",
+      "sha256": "259fe394497bc69820331977bc8e5d8d68cf8bb33377ee431bf4bbae2b80c5e3"
+    },
+    {
+      "path": "projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/src/startup.c",
+      "sha256": "7f890b223697f1a3c64353f8d2fc4826a569dcc23b8a66b855e0da16eb416266"
+    },
+    {
+      "path": "projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/stm32f103c8.ld",
+      "sha256": "cd24f16ceb8f4b92740c70bc3b0066650324c892712354d5197c2acd4ad463b9"
+    },
+    {
+      "path": "projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/tests/test_adc_registers.c",
+      "sha256": "2d84bbc5a72129c9d25116c044cd48c9b954f20816848d468258d05349caa554"
+    },
+    {
+      "path": "projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/tests/test_control.c",
+      "sha256": "965a8af36a102069f17294d423135fb07b22b26e7f603048c272a390292c4cfc"
+    },
+    {
+      "path": "projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/tests/test_diag.c",
+      "sha256": "acf98e5cf563775ac74b6bac1ef250991721c4f3d8dbd0c9acbc6df2d6e32f42"
+    },
+    {
+      "path": "projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/tests/test_locked.c",
+      "sha256": "e854ee5b9e7ff9729b50aaa5e0503552adcdd3c4fad3029575e3db6783732573"
+    },
+    {
+      "path": "projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/tests/test_platform.c",
+      "sha256": "aad0e3b02dc4c5a67cd47a763c6aea2b5551d5798ac2b469e07a546ff1667d49"
+    },
+    {
+      "path": "projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/tests/verify_image.py",
+      "sha256": "c102ef8e00a649bac50ded4da4d6e3b09c897ea0afc7f29087ef6dc0b339cb31"
+    }
+  ],
+  "artifacts": {
+    "GBUCK_RevC2_B2_2026-11-05.hex": {
+      "bytes": 22744,
+      "sha256": "27d57850511f7ccb1e5e85017a03c3a70b7b7ee30a63a11a436abaed75630b1a"
+    },
+    "GBUCK_RevC2_B2_source_2026-11-05.patch": {
+      "bytes": 96350,
+      "sha256": "3da9049aea32cacc06c6a2b2d3ea8e0cf91b2c0a1e7f70733359a0859c79db96"
+    },
+    "B2_启动重写与一次测试_2026-11-05.md": {
+      "bytes": 11105,
+      "sha256": "c0bc2a1e411af70aeba2fff97d6091eb0d45074af48045bd2eb467821a3cc3bb"
+    }
+  },
+  "enabled_bin_sha256": "181cf2118e3a8a6715490f1898c549bdae19e30a59fd78c0a937da3bce2ca515",
+  "locked_bin_sha256": "28c980619045175dd3115430faa0da572cd438d9e07956171348112a63987ce7",
+  "source_reproduction": "PASS: clean git apply and independent rebuild BIN matches released image byte-for-byte; source SHA list checked"
+}
