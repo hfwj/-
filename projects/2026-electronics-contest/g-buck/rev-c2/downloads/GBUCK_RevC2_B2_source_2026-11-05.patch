@@ -1,0 +1,2302 @@
+diff --git a/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/.gitignore b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/.gitignore
+new file mode 100644
+--- /dev/null
++++ b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/.gitignore
+@@ -0,0 +1,2 @@
++build/
++__pycache__/
+diff --git a/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/Makefile b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/Makefile
+new file mode 100644
+--- /dev/null
++++ b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/Makefile
+@@ -0,0 +1,33 @@
++PREFIX ?= arm-none-eabi-
++CC = $(PREFIX)gcc
++OBJCOPY = $(PREFIX)objcopy
++SIZE = $(PREFIX)size
++POWER ?= 0
++LCD ?= 1
++BUILD = build/p$(POWER)-l$(LCD)
++CFLAGS = -mcpu=cortex-m3 -mthumb -std=c11 -Os -g3 -ffreestanding -fno-builtin -Wall -Wextra -Werror -ffunction-sections -fdata-sections -Iinclude -DPOWER_STAGE_ALLOWED=$(POWER) -DLCD_ENABLED=$(LCD)
++SRC = $(wildcard src/*.c)
++.PHONY: all test clean
++all: $(BUILD)/gbuck.bin $(BUILD)/gbuck.hex
++$(BUILD)/gbuck.elf: $(SRC) $(wildcard include/*.h) stm32f103c8.ld Makefile
++	mkdir -p $(BUILD)
++	$(CC) $(CFLAGS) $(SRC) -nostdlib -Tstm32f103c8.ld -Wl,--gc-sections,-Map=$(BUILD)/gbuck.map -lgcc -o $@
++	$(SIZE) $@
++$(BUILD)/gbuck.bin: $(BUILD)/gbuck.elf
++	$(OBJCOPY) -O binary $< $@
++$(BUILD)/gbuck.hex: $(BUILD)/gbuck.elf
++	$(OBJCOPY) -O ihex $< $@
++test:
++	mkdir -p build/tests
++	gcc -std=c11 -Wall -Wextra -Werror -g -fsanitize=address,undefined -Iinclude -DPOWER_STAGE_ALLOWED=1 src/app.c src/measurement.c tests/test_control.c -lm -o build/tests/control
++	ASAN_OPTIONS=detect_leaks=0 ./build/tests/control
++	gcc -std=c11 -Wall -Wextra -Werror -Iinclude src/app.c tests/test_locked.c -o build/tests/locked
++	./build/tests/locked
++	gcc -std=c11 -Wall -Wextra -Werror -Iinclude tests/test_adc_registers.c src/measurement.c -o build/tests/adc_registers
++	./build/tests/adc_registers
++	gcc -std=c11 -Wall -Wextra -Werror -Iinclude src/app.c src/measurement.c src/diag.c tests/test_diag.c -o build/tests/diag
++	./build/tests/diag
++	gcc -std=c11 -Wall -Wextra -Werror -Iinclude -DPOWER_STAGE_ALLOWED=1 src/app.c src/measurement.c src/diag.c tests/test_platform.c -o build/tests/platform
++	./build/tests/platform
++clean:
++	rm -rf build
+diff --git a/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/README.md b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/README.md
+new file mode 100644
+--- /dev/null
++++ b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/README.md
+@@ -0,0 +1,96 @@
++# Rev C.2 B2 受限台架固件（2026-11-05）
++
++[BENCH B2 HEX下载](../../downloads/GBUCK_RevC2_B2_2026-11-05.hex) · [完整源码补丁](../../downloads/GBUCK_RevC2_B2_source_2026-11-05.patch) · [构建与SHA256清单](../../downloads/GBUCK_RevC2_B2_manifest_2026-11-05.json)
++
++基准为 B1（2026-11-04），针对用户报告的 **STARTUP/SOFTSTART 直接 FAULT、未观察到 RUN、未捕获波形** 重写控制与诊断。该现象尚不能定位为硬件驱动、连接或控制器单一原因。B2 未上板，不是最终功率固件。
++
++源码保存在独立 `firmware/b2/`，不覆盖 A1/B1。公开的完整源码补丁只新增此目录，可在仓库根目录执行 `git apply 下载的B2_source.patch`；也可在空目录执行同一命令取得完整工程。预编译 BENCH B2 HEX 为 `POWER=1 LCD=1`；源码默认 `make` 是禁止输出的 LOCKED B2，二者均上电 OFF、禁止自动重启。
++
++## 本次实际修改
++
++- 启动不再仅按时间切换 RUN。300ms 电压目标斜坡后，实测 CV 电压/电流或 CC 电压/电流满足条件持续 100ms 才进入 RUN。没有足够电压上升在 250ms 报 F8，响应不足最迟 1s 报 F9；不通过延长或取消原保护假装启动成功。
++- CV 使用输入电压前馈加有界 PI 修正；CC 在低电流时跟踪实际请求，接近设定时限制占空比，避免由零占空比缓慢开放。上升限速每毫秒20基点。此控制器已通过近似 LC 主机回归，尚未进行实机整定。
++- 保留硬件故障输入、PB10 EXTI 优先关断、PB11 连续20ms软件判据、输入/ADC检查、3V软件过压；输出曾升起后跌落20ms会锁存。新增两次连续1kHz采样的400mA输出/±800mA电感电流保护，不能代替硬件峰值保护。START/ARMING 已知超过这些电流值时立即拒绝启动。
++- 预偏置须不超过 `min(100mV,Vset/4)`；这是放电后启动的容差，不支持带电池、外部电源或预充输出的同步启动。
++- ARM 2ms高、2ms关断等待后才进入 STARTUP。下一个控制周期读取本地 PB1/PB0：请求高而本地引脚低分别报 F12/F13；这不能验证排线另一端、SAFE_OK 或 DRV_EN。
++- 第一次故障先记录状态、采样、占空比/PI请求和 GPIO/TIM1 信息，再清输出。屏幕保留原因、故障前电压、占空比及状态。STOP保留记录，PRECHARGE/CLEAR_RECORD或成功的新START才开始新记录。
++- 固定 SWD 地址、命令回执、256条环形轨迹（每条10字、正常每5ms及状态/EN/ARM改变时记录），首次故障冻结。硬件 EXTI 先关断，若快照已在关断后采到，会标记 `AFTER_KILL=1`，不伪称故障前寄存器。
++- LCD 初始化及看门狗启动完成前拒绝预充/旁路确认/启动命令。看门狗不因调试暂停冻结；用 Hot plug 实时读内存，不暂停CPU做通电测试。
++
++## 限制、编译与复现
++
++默认及最大设定 **2.000V / 0.200A**，允许电压200–2000mV、电流100–200mA；25%占空比上限，VIN须12–16V，POST≥11V且与VIN相差≤1.5V。200mA是控制目标，不能保证瞬态峰值。无按键控制，仅SWD命令。
++
++```sh
++cd projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2
++make                         # POWER=0，禁止功率输出
++make POWER=1                 # 同下载BENCH镜像，仍上电OFF
++make test                    # 主机控制/采样寄存器/诊断/中断适配测试
++python3 tests/verify_image.py build/p1-l1
++```
++
++需要 GNU Arm Embedded GCC、Make、主机GCC/Python3；验证工具链为 arm-none-eabi-gcc12.2.1。不同编译器可得到不同校验值。所有ARM配置均限真实64KB Flash/20KB RAM；链接脚本留≥2KB栈空间。HEX自带Flash地址，BIN基址0x08000000。
++
++## 一次完成的上板操作
++
++1. 断电换线/接负载。沿用已经核实的 C.2 排线、辅助12V/5V/3.3V及共地；电源15V、限流0.1A，保持CV。接10Ω、至少5W电阻负载；没有合适负载先停在READY。启动前用已验证的放电方式使输出低于100mV，不直接短接带电电容。不要接电池或提高功率。
++2. CubeProgrammer烧录并勾选校验 **BENCH B2 HEX**；BOOT0=0，运行后标题须为`GBUCK C2 BENCH B2`且状态OFF。若擦写失败，功率输入断开，ST-Link共地、100kHz、NRST配合Connect under reset再烧录。烧录时不要依赖故障记录保存，复位会清记录。
++3. **所有A1/B1旧命令地址停止使用。** B2数据宽度32位，命令地址固定 **0x20000010**，值地址 **0x20000014**。先等约1秒，读0x20000000、长度0x100，开头必须`42324332 00020001 00000040`；FLAGS位2=1表示初始化完成。只写CMD和VALUE，不改状态、GPIO/TIM1或其它RAM。
++4. 在CMD写`00000001`（PRECHARGE），等至少0.2秒至READY。按原台架流程确认物理旁路已正确接好，再写`00000002`（CONFIRM_BYPASS），屏幕显示BYPASS CONFIRMED。**软件命令不驱动、检测或验证物理旁路。** 写`00000003`启动一次，不连续重试。写`00000004`随时STOP。
++5. 启动后等1–2秒，只需保存一张屏幕照片和一次 **0x20000000、长度0x100、32位**的完整读取；保持CPU运行。若FAULT，不再复位或写PRECHARGE/CLEAR；首故障字段和轨迹保持冻结，一次读取可用，当前值/计数可能跨越不同毫秒。电源进CC、主控重新发热或电流异常则直接停电。0x200000F8的序号可选用于快速读取一致性校验：前后相同且为偶数说明同次快照；低速SWD不一定能做到，不要为此反复读取或暂停CPU。
++
++设定修改仅OFF/FAULT允许：先往VALUE写十进制毫伏/毫安，再往CMD写5/6；如2000=`000007D0`，200=`000000C8`。默认值已正确，首次无需修改。命令回执：0x18为计数，0x1C为结果（0接受、1状态不允许、2参数错误、3LOCKED版禁止、4未知命令）。输入命令会被清零表示已消费，不等于执行成功。
++
++## 故障名称与下一步
++
++| 代码 | 含义/证据边界 |
++|---|---|
++| 1 | FAULT_N硬件输入/下降沿锁存；需查物理保护链 |
++| 2 | ADC超时、无效或数据不合理 |
++| 3 | VIN/POST启动条件丢失 |
++| 4 | OC_N启动前低或运行连续20ms低 |
++| 5 | 实测输出已升起后低于最低输出连续20ms |
++| 6 | VOUT>3V软件过压 |
++| 7 | ISR/控制周期超时或非法状态 |
++| 8 | STARTUP 250ms仍未充分升压；不是证明无PWM |
++| 9 | STARTUP 1s仍不能持续满足电压/电流目标 |
++| 10 | 采样电流超门限；不能据此确定真实峰值 |
++| 11 | 输出未充分放电/预偏置 |
++| 12 / 13 | 已请求ARM/EN，但本地PB1/PB0读回低；不能确认远端连接 |
++
++## 固定诊断窗口
++
++每个地址为32位字；电压mV、电流mA、占空比基点（10000=100%），负数按有符号补码解释。状态：0OFF、1PRECHARGE、2READY、3ARMING、4STARTUP、5RUN、6FAULT。
++
++| 偏移（加0x20000000） | 字段 |
++|---|---|
++| 00 / 04 / 08 / 0C | magic / ABI / 64字长度 / FLAGS：bit0允许台架输出、bit1轨迹冻结、bit2初始化完成 |
++| 10 / 14 / 18 / 1C | CMD / VALUE / ACK_SEQ / ACK结果 |
++| 20 / 24 / 28 / 2C | 当前状态 / 当前故障 / Vset / Iset |
++| 30 / 34 / 38 / 3C / 40 / 44 | VIN / IIN / VOUT / IOUT / IL / POST |
++| 48 / 4C / 50 / 54 / 58 / 5C | 当前duty / EN请求 / ARM请求 / tick / 成功扫描 / ADC失败 |
++| 60 / 64 / 68 / 6C | 故障记录有效 / 首故障码 / 故障前状态 / 故障tick |
++| 70 / 74 / 78 / 7C / 80 | 首故障VOUT / IOUT / IL / VIN / POST |
++| 84 / 88 / 8C / 90 | 首故障duty / CV请求 / CC请求 / 记录flags |
++| 94 / 98 / 9C / A0 / A4 / A8 / AC | GPIOB_IDR / CCR1 / 保留忽略旧CMD / BDTR / TIM_CR1 / CCER / GPIOB_CRL |
++| B0 / B4 / B8 / BC / C0 | 最近命令 / 命令序号 / 轨迹基址 / 容量256 / 每条10字 |
++| C4 / C8 / CC / D0 / D4 | 轨迹条数 / 下一写入索引 / 冻结 / PB1高观察次数 / PB0高观察次数 |
++| D8 / DC / E0 / E4 / E8 / EC | EXTI次数 / ISR已测周期最大值 / 本次最大VOUT / 启动ms / 当前GPIOB_IDR / 控制目标 |
++| F0 / F4 / F8 / FC | 六个RAW值数组地址 / AFTER_KILL / 一致性序号 / END2标识 |
++
++记录flags：bit0采样有效，bit1FAULT_N高，bit2OC_N高，bit3EN请求，bit4ARM请求，bit5CC选中，bit6软件旁路确认，bit7输出已升起。D0/D4是本地高电平被扫描到的次数，不代表远端连线正常或脉冲宽度合格。DC包含控制及诊断工作到末端测量点，仍非外部示波器实测ISR延迟。
++
++轨迹基址固定0x20000100，总0x2800字节。每条依次为tick、state/fault/EN/ARM打包、VIN、POST、VOUT、IOUT、IL、duty、GPIOB_IDR、CCR1/MOE/CEN/CC1E打包。未满从0读；满后从NEXT索引环形读取，最后一条在NEXT-1。最终故障条目duty为故障前请求，其状态为FAULT；首故障前状态以记录0x68为准。末字低16位CCR1，bit16MOE、17CEN、18CC1E。故障前硬件快照最多比首故障样本早一个1ms周期；EXTI后采到则AFTER_KILL=1。
++
++## 测试证据及未测项目
++
++- ASan/UBSan控制回归：手动互锁/边界参数、ARM2ms+等待2ms、无响应故障、实测启动完成、STARTUP/RUN保护、首次故障及STOP保留、ADC单位转换。
++- 用户B1照片数据回放：VIN14960、POST13828、VOUT8、IOUT0、IL−12，产生非零PWM请求后在STARTUP报F8，保存这些采样与故障前非零占空比；不据此断言实板PWM存在。
++- 实际main.c适配层主机测试：看门狗前命令拒绝、已接受预充才清旧锁存、临界区新故障不丢失、待决边沿/低故障线、ARM/EN回读、STOP及旧地址不启机。寄存器模型测试SMPR2、0/1/2/3/4/6采样和超时，仅主机证据。
++- 真实C控制器+近似平均LC：Vin13.8V、L220µH、C470µF、DCR0.15Ω、1kHz控制/1µs RK4。10Ω/8Ω/5Ω约404ms进入RUN，末段均值分别1.9921V/0.1992A、1.5971V/0.1996A、0.9995V/0.1999A。这不是厂家MOS模型，未包含驱动死区/传播、开关寄生、ADC通道滤波/延迟、真实标定、硬件比较器和真实电源瞬态，不能推出硬件稳定性/效率。
++- 两种ARM镜像编译、64KB/20KB范围、固定RAM区、向量Thumb地址、HEX逐行校验和与BIN字节一致性均检查。
++- **未上板；G—S实际波形、同步死区、已跳过的物理故障刺激、峰值电流、闭环稳定性及硬件故障根因仍未验证。** 普通两通道CH1−CH2只可辅助观察高边，不能替代同步两路VGS/死区测量；两探头地均接已确认COM，不能夹SW，不能断示波器保护地。初步台架通过也不授权提高电压/电流或连接电池。
++
++## 对原理图、器件及模型的影响
++
++比较基准：B1台架镜像/源码（2026-11-04）与Rev C.2既有硬件。原理图网络/拓扑、PA/PB脚位及阻容值不改；器件/BOM、封装及PCB不改，本程序不要求换器件。外置假负载属于台架用品。实体 `.ms14` 与既有模型不改；新增近似LC仅用于执行真实C控制器的主机回归。修改了控制律、启动判据、诊断ABI及软件保护，B1旧测试不能作为B2实板验收。旧主控损毁原因仍未确定，本修改不证明已消除其原因。
+diff --git a/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/include/app.h b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/include/app.h
+new file mode 100644
+--- /dev/null
++++ b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/include/app.h
+@@ -0,0 +1,68 @@
++#ifndef APP_H
++#define APP_H
++#include "config.h"
++
++typedef unsigned int u32;
++typedef unsigned short u16;
++typedef unsigned char u8;
++typedef signed int i32;
++
++typedef enum {
++ OFF=0, PRECHARGE=1, READY=2, ARMING=3, STARTUP=4, RUN=5, TRIPPED=6
++} State;
++#define SOFTSTART STARTUP
++typedef enum {
++ F_NONE=0, F_HARDWARE=1, F_ADC=2, F_INPUT=3, F_OC=4,
++ F_LOW_OUTPUT=5, F_OV=6, F_TIMING=7, F_START_NO_RISE=8,
++ F_START_TIMEOUT=9, F_CURRENT=10, F_PREBIAS=11, F_ARM_PIN=12, F_EN_PIN=13
++} Fault;
++typedef enum {
++ CMD_NONE=0, CMD_PRECHARGE=1, CMD_CONFIRM_BYPASS=2, CMD_START=3,
++ CMD_STOP=4, CMD_SET_V=5, CMD_SET_I=6, CMD_CLEAR_RECORD=7
++} Command;
++typedef enum {
++ CMD_OK=0, CMD_BAD_STATE=1, CMD_BAD_VALUE=2, CMD_LOCKED=3, CMD_UNKNOWN=4
++} CmdResult;
++typedef struct {
++ i32 vin, iin, vout, iout, il, vin_post; /* mV and mA */
++ u8 valid;
++} Sample;
++
++#define RECORD_SAMPLE_VALID (1u<<0)
++#define RECORD_FAULT_N      (1u<<1)
++#define RECORD_OC_N         (1u<<2)
++#define RECORD_ENABLE       (1u<<3)
++#define RECORD_ARM          (1u<<4)
++#define RECORD_CC_MODE      (1u<<5)
++#define RECORD_BYPASS       (1u<<6)
++#define RECORD_OUTPUT_ROSE  (1u<<7)
++typedef struct {
++ u32 valid, code, state_before, tick_ms, startup_ms;
++ i32 vout, iout, il, vin, vin_post, duty, cv_out, cc_out;
++ u32 flags;
++ u32 state_ms;
++ i32 target_mv, max_vout;
++} FaultRecord;
++
++typedef struct {
++ State state;
++ Fault fault;
++ i32 vset, iset, duty;
++ u8 enable, arm, bypass_confirmed, cc_mode, edit_current;
++ u32 tick_ms, state_ms, startup_ms;
++ i32 target_mv, max_vout, cv_out, cc_out;
++ FaultRecord last_fault;
++ /* Private controller state is exposed for deterministic SWD diagnostics. */
++ Sample last_sample;
++ u32 oc_ms, uv_ms, pre_ms, stable_ms, current_ms;
++ i32 cv_integral, cc_integral;
++ u8 fault_n, oc_n, sample_seen, output_rose;
++} App;
++
++void app_init(App *a);
++CmdResult app_command(App *a, Command c, i32 value);
++void app_tick(App *a, const Sample *s, u8 fault_n, u8 oc_n);
++void app_trip(App *a, Fault f);
++void adc_convert(const u16 raw[6], Sample *s);
++extern i32 adc_offset[6], adc_gain_ppm[6];
++#endif
+diff --git a/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/include/board.h b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/include/board.h
+new file mode 100644
+--- /dev/null
++++ b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/include/board.h
+@@ -0,0 +1,22 @@
++#ifndef BOARD_H
++#define BOARD_H
++#include "app.h"
++#ifndef REG
++#define REG(a) (*(volatile u32 *)(a))
++#endif
++#define RCC 0x40021000u
++#define GPIOA 0x40010800u
++#define GPIOB 0x40010C00u
++#define TIM1 0x40012C00u
++#define ADC1 0x40012400u
++#define SPI1 0x40013000u
++void board_init(void);
++u8 board_sample(u16 raw[6]);
++void board_outputs(const App *a);
++void board_kill(void);
++void delay_ms(u32 ms);
++u32 millis(void);
++void lcd_init(void);
++void lcd_update(const App *a,const Sample *s);
++void keys_tick(App *a);
++#endif
+diff --git a/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/include/config.h b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/include/config.h
+new file mode 100644
+--- /dev/null
++++ b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/include/config.h
+@@ -0,0 +1,72 @@
++#ifndef CONFIG_H
++#define CONFIG_H
++
++/* B2 is a bounded diagnostic prototype, never a higher-power build. */
++#ifndef POWER_STAGE_ALLOWED
++#define POWER_STAGE_ALLOWED 0
++#endif
++#ifndef KEYS_ENABLED
++#define KEYS_ENABLED 0
++#endif
++#ifndef LCD_ENABLED
++#define LCD_ENABLED 1
++#endif
++#if POWER_STAGE_ALLOWED != 0 && POWER_STAGE_ALLOWED != 1
++#error "POWER_STAGE_ALLOWED must be 0 or 1"
++#endif
++#define CPU_HZ 64000000u
++#define PWM_PERIOD 2133u
++#define ADC_VDDA_MV 3300
++#define LCD_WIDTH 128
++#define LCD_HEIGHT 160
++#define LCD_X_OFFSET 0
++#define LCD_Y_OFFSET 0
++#define LCD_MADCTL 0x00
++
++#define DEFAULT_VSET_MV 2000
++#define DEFAULT_ISET_MA 200
++#define VSET_MIN_MV 200
++#define VSET_MAX_MV 2000
++#define ISET_MIN_MA 100
++#define ISET_MAX_MA 200
++#define DUTY_MAX 2500 /* basis points, 25% absolute software ceiling */
++#define VIN_MIN_MV 12000
++#define VIN_MAX_MV 16000
++#define VIN_POST_MIN_MV 11000
++#define PRECHARGE_GAP_MAX_MV 1500
++#define PRECHARGE_MS 100u
++#define OUTPUT_OV_MV 3000
++#define PREBIAS_MAX_MV 100 /* also limited to Vset/4; discharge before START */
++
++#define ARM_MS 2u
++#define DRIVER_SETTLE_MS 2u
++#define STARTUP_RAMP_MS 300u
++#define STARTUP_SETTLE_MS 100u
++#define STARTUP_NO_RISE_MS 250u
++#define STARTUP_TIMEOUT_MS 1000u
++#define OC_DELAY_MS 20u
++#define UV_DELAY_MS 20u
++#define SOFTSTART_MS STARTUP_RAMP_MS
++#define STARTUP_V_TOLERANCE_MIN_MV 100
++#define STARTUP_V_TOLERANCE_PERCENT 5
++#define STARTUP_CC_TOLERANCE_PERCENT 10
++#define STARTUP_RISE_MAX_MV 100
++#define OUTPUT_FLOOR_MAX_MV 500
++
++/* A 1 kHz ADC guard; this cannot detect or replace peak-current protection. */
++#define SAMPLED_IOUT_TRIP_MA 400
++#define SAMPLED_IL_TRIP_MA 800
++#define SAMPLED_CURRENT_DELAY_MS 2u
++
++/* Error gains scale by 1000; integral advances once per 1 ms sample.
++ * Feedforward supplies nominal buck duty. CV only adds a bounded trim.
++ * These conservative starting values have not been tuned on hardware. */
++#define CV_KP 100
++#define CV_KI 2
++#define CV_TRIM_MAX_BP 600
++#define CC_KP 500
++#define CC_KI 10
++#define CC_RELEASE_MARGIN_MA 20
++#define DUTY_RISE_MAX_BP_PER_MS 20
++
++#endif
+diff --git a/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/include/diag.h b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/include/diag.h
+new file mode 100644
+--- /dev/null
++++ b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/include/diag.h
+@@ -0,0 +1,32 @@
++#ifndef DIAG_H
++#define DIAG_H
++#include "app.h"
++/* Fixed, all-32-bit SWD ABI. Only CMD and VALUE are input words. */
++enum {
++ D_MAGIC=0,D_ABI,D_WORDS,D_FLAGS,D_CMD,D_VALUE,D_ACK_SEQ,D_ACK,
++ D_STATE,D_FAULT,D_VSET,D_ISET,D_VIN,D_IIN,D_VOUT,D_IOUT,D_IL,D_POST,
++ D_DUTY,D_EN,D_ARM,D_TICKS,D_SCANS,D_ADC_FAILURES,
++ D_RECORD,D_RECORD_CODE,D_RECORD_STATE,D_RECORD_TICK,D_RECORD_VOUT,
++ D_RECORD_IOUT,D_RECORD_IL,D_RECORD_VIN,D_RECORD_POST,D_RECORD_DUTY,
++ D_RECORD_CV,D_RECORD_CC,D_RECORD_FLAGS,D_HW_IDR,D_HW_CCR,
++ D_RESERVED_OLD_CMD,D_HW_BDTR,D_HW_CR1,D_HW_CCER,D_HW_CRL,
++ D_LAST_CMD,D_LAST_CMD_SEQ,D_TRACE_BASE,D_TRACE_CAP,D_TRACE_WORDS,
++ D_TRACE_COUNT,D_TRACE_NEXT,D_TRACE_FROZEN,D_ARM_SEEN,D_EN_SEEN,
++ D_IRQ_COUNT,D_ISR_CYCLES,D_MAX_VOUT,D_STARTUP_MS,D_CURRENT_IDR,
++ D_TARGET,D_RAW_BASE,D_AFTER_KILL,D_SEQ,D_END
++};
++#define TRACE_CAPACITY 256u
++#define TRACE_WORDS 10u
++typedef struct { volatile u32 w[64]; } DebugWindow;
++typedef struct { u32 idr,ccr,bdtr,cr1,ccer,crl,after_kill; } HwSnapshot;
++typedef struct { u32 w[TRACE_WORDS]; } TraceRecord;
++extern volatile DebugWindow debug_window;
++extern volatile TraceRecord debug_trace[TRACE_CAPACITY];
++extern volatile u32 debug_adc_raw[6];
++void diag_init(void);
++void diag_set_ready(void);
++void diag_reset_trace(void);
++void diag_ack(Command cmd,CmdResult result);
++void diag_update(const App *a,const Sample *s,const HwSnapshot *before,
++                 u32 current_idr,u32 scans,u32 failures,u32 irq_count,u32 cycles);
++#endif
+diff --git a/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/src/app.c b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/src/app.c
+new file mode 100644
+--- /dev/null
++++ b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/src/app.c
+@@ -0,0 +1,293 @@
++#include "app.h"
++
++static i32 clamp(i32 x, i32 lo, i32 hi) {
++ return x < lo ? lo : (x > hi ? hi : x);
++}
++static u32 advance(u32 x) { return x == ~0u ? x : x + 1u; }
++static void enter(App *a, State state) { a->state = state; a->state_ms = 0; }
++static void outputs_off(App *a) { a->enable = 0; a->arm = 0; a->duty = 0; }
++static void clear_record(App *a) { a->last_fault = (FaultRecord){0}; }
++static void reset_control(App *a) {
++ outputs_off(a);
++ a->startup_ms = a->oc_ms = a->uv_ms = a->pre_ms = 0;
++ a->stable_ms = a->current_ms = 0;
++ a->target_mv = a->max_vout = a->cv_out = a->cc_out = 0;
++ a->cv_integral = a->cc_integral = 0;
++ a->cc_mode = a->output_rose = 0;
++}
++static u8 plausible(const Sample *s) {
++ /* ADC conversion should never approach these bounds. They also bound every
++  * fixed-point multiplication when a damaged/debug-written sample is used. */
++ return s && s->valid &&
++  s->vin >= -100000 && s->vin <= 100000 &&
++  s->iin >= -100000 && s->iin <= 100000 &&
++  s->vout >= -100000 && s->vout <= 100000 &&
++  s->iout >= -100000 && s->iout <= 100000 &&
++  s->il >= -100000 && s->il <= 100000 &&
++  s->vin_post >= -100000 && s->vin_post <= 100000;
++}
++static u8 post_ready(const Sample *s) {
++ return s->vin_post >= VIN_POST_MIN_MV &&
++  s->vin_post >= s->vin - PRECHARGE_GAP_MAX_MV &&
++  s->vin_post <= s->vin + PRECHARGE_GAP_MAX_MV;
++}
++static i32 output_floor(const App *a) {
++ i32 floor = a->vset / 4;
++ return floor < OUTPUT_FLOOR_MAX_MV ? floor : OUTPUT_FLOOR_MAX_MV;
++}
++static i32 rise_floor(const App *a) {
++ i32 floor = a->vset / 4;
++ return floor < STARTUP_RISE_MAX_MV ? floor : STARTUP_RISE_MAX_MV;
++}
++static i32 prebias_limit(const App *a) {
++ i32 limit = a->vset / 4;
++ return limit < PREBIAS_MAX_MV ? limit : PREBIAS_MAX_MV;
++}
++static u8 sampled_current_fault(const Sample *s) {
++ return s->iout > SAMPLED_IOUT_TRIP_MA || s->il > SAMPLED_IL_TRIP_MA ||
++        s->il < -SAMPLED_IL_TRIP_MA;
++}
++
++void app_init(App *a) {
++ *a = (App){0};
++ a->state = OFF;
++ a->vset = DEFAULT_VSET_MV;
++ a->iset = DEFAULT_ISET_MA;
++}
++
++void app_trip(App *a, Fault f) {
++ if (a->state == TRIPPED) { outputs_off(a); return; }
++ /* A record survives STOP and idle faults. Only an explicit new attempt or
++  * CLEAR_RECORD permits replacement, so repeated faults cannot erase cause. */
++ if (!a->last_fault.valid) {
++  const Sample *s = &a->last_sample;
++  FaultRecord *r = &a->last_fault;
++  r->valid = 1;
++  r->code = (u32)f;
++  r->state_before = (u32)a->state;
++  r->tick_ms = a->tick_ms;
++  r->startup_ms = a->startup_ms;
++  r->vout = s->vout; r->iout = s->iout; r->il = s->il;
++  r->vin = s->vin; r->vin_post = s->vin_post;
++  r->duty = a->duty; r->cv_out = a->cv_out; r->cc_out = a->cc_out;
++  r->flags = (s->valid && a->sample_seen ? RECORD_SAMPLE_VALID : 0u) |
++   (a->fault_n ? RECORD_FAULT_N : 0u) | (a->oc_n ? RECORD_OC_N : 0u) |
++   (a->enable ? RECORD_ENABLE : 0u) | (a->arm ? RECORD_ARM : 0u) |
++   (a->cc_mode ? RECORD_CC_MODE : 0u) |
++   (a->bypass_confirmed ? RECORD_BYPASS : 0u) |
++   (a->output_rose ? RECORD_OUTPUT_ROSE : 0u);
++  r->state_ms = a->state_ms;
++  r->target_mv = a->target_mv; r->max_vout = a->max_vout;
++ }
++ outputs_off(a);
++ a->fault = f;
++ a->bypass_confirmed = 0;
++ enter(a, TRIPPED);
++}
++
++CmdResult app_command(App *a, Command c, i32 value) {
++ switch (c) {
++ case CMD_NONE:
++  return CMD_OK;
++ case CMD_STOP:
++  reset_control(a);
++  a->fault = F_NONE;
++  a->bypass_confirmed = 0;
++  enter(a, OFF);
++  return CMD_OK;
++ case CMD_SET_V:
++ case CMD_SET_I:
++  if (a->state != OFF && a->state != TRIPPED) return CMD_BAD_STATE;
++  if (c == CMD_SET_V) {
++   if (value < VSET_MIN_MV || value > VSET_MAX_MV) return CMD_BAD_VALUE;
++   a->vset = value;
++  } else {
++   if (value < ISET_MIN_MA || value > ISET_MAX_MA) return CMD_BAD_VALUE;
++   a->iset = value;
++  }
++  return CMD_OK;
++ case CMD_CLEAR_RECORD:
++  if (a->state != OFF && a->state != READY && a->state != TRIPPED)
++   return CMD_BAD_STATE;
++  clear_record(a);
++  return CMD_OK;
++ case CMD_PRECHARGE:
++  if (a->state != OFF && a->state != TRIPPED) return CMD_BAD_STATE;
++  reset_control(a);
++  clear_record(a);
++  a->fault = F_NONE;
++  a->bypass_confirmed = 0;
++  enter(a, PRECHARGE);
++  return CMD_OK;
++ case CMD_CONFIRM_BYPASS:
++  if (a->state != READY) return CMD_BAD_STATE;
++  a->bypass_confirmed = 1;
++  return CMD_OK;
++ case CMD_START:
++  if (a->state != READY || !a->bypass_confirmed) return CMD_BAD_STATE;
++  if (!POWER_STAGE_ALLOWED) return CMD_LOCKED;
++  if (!a->sample_seen || !plausible(&a->last_sample)) {
++   app_trip(a, F_ADC); return CMD_BAD_STATE;
++  }
++  if (a->last_sample.vout > prebias_limit(a)) {
++   app_trip(a, F_PREBIAS); return CMD_BAD_STATE;
++  }
++  if (!a->fault_n) { app_trip(a, F_HARDWARE); return CMD_BAD_STATE; }
++  if (!a->oc_n) { app_trip(a, F_OC); return CMD_BAD_STATE; }
++  if (sampled_current_fault(&a->last_sample)) {
++   app_trip(a, F_CURRENT); return CMD_BAD_STATE;
++  }
++  if (a->last_sample.vin < VIN_MIN_MV || a->last_sample.vin > VIN_MAX_MV ||
++      !post_ready(&a->last_sample)) {
++   app_trip(a, F_INPUT); return CMD_BAD_STATE;
++  }
++  reset_control(a);
++  clear_record(a);
++  a->fault = F_NONE;
++  enter(a, ARMING);
++  return CMD_OK;
++ default:
++  return CMD_UNKNOWN;
++ }
++}
++
++static void regulate(App *a, const Sample *s) {
++ i32 ev = a->target_mv - s->vout;
++ i32 ei = a->iset - s->iout;
++ i32 ff = a->target_mv * 10000 / s->vin_post;
++ i32 cv_p = CV_KP * ev;
++ i32 cv_next = clamp(a->cv_integral + CV_KI * ev,
++                     -CV_TRIM_MAX_BP * 1000, CV_TRIM_MAX_BP * 1000);
++ i32 trim = (cv_p + cv_next) / 1000;
++ i32 cv_request = ff + clamp(trim, -CV_TRIM_MAX_BP, CV_TRIM_MAX_BP);
++ if (!((trim > CV_TRIM_MAX_BP && ev > 0) ||
++       (trim < -CV_TRIM_MAX_BP && ev < 0) ||
++       (cv_request > DUTY_MAX && ev > 0) || (cv_request < 0 && ev < 0)))
++  a->cv_integral = cv_next;
++ trim = clamp((cv_p + a->cv_integral) / 1000,
++              -CV_TRIM_MAX_BP, CV_TRIM_MAX_BP);
++ a->cv_out = clamp(ff + trim, 0, DUTY_MAX);
++
++ /* Below current demand the CC regulator tracks actual selected duty.
++  * It therefore starts with useful headroom, rather than slowly opening from
++  * zero while a zero-current output is waiting for the CV regulator. */
++ if ((!a->cc_mode && s->iout < a->iset) ||
++     s->iout < a->iset - CC_RELEASE_MARGIN_MA) {
++  a->cc_out = a->cv_out;
++  a->cc_mode = 0;
++ } else {
++  i32 next = a->cc_integral + CC_KI * ei;
++  i32 request = (CC_KP * ei + next) / 1000;
++  if (!((request > DUTY_MAX && ei > 0) || (request < 0 && ei < 0)))
++   a->cc_integral = next;
++  a->cc_out = clamp((CC_KP * ei + a->cc_integral) / 1000, 0, DUTY_MAX);
++  a->cc_mode = a->cc_out < a->cv_out;
++ }
++ i32 selected = a->cc_mode ? a->cc_out : a->cv_out;
++ if (selected > a->duty + DUTY_RISE_MAX_BP_PER_MS)
++  selected = a->duty + DUTY_RISE_MAX_BP_PER_MS;
++ a->duty = clamp(selected, 0, DUTY_MAX);
++ if (a->cc_mode) {
++  /* Back-calculate the inactive voltage loop; its bounded trim never winds
++   * up against the selected current limiter. */
++  a->cv_integral = clamp((a->duty - ff) * 1000 - cv_p,
++                         -CV_TRIM_MAX_BP * 1000, CV_TRIM_MAX_BP * 1000);
++ } else {
++  /* Includes the slew limiter, so CC takeover starts from applied demand. */
++  a->cc_integral = a->duty * 1000 - CC_KP * ei;
++ }
++}
++
++void app_tick(App *a, const Sample *s, u8 fault_n, u8 oc_n) {
++ a->tick_ms = advance(a->tick_ms);
++ a->fault_n = fault_n != 0;
++ a->oc_n = oc_n != 0;
++ if (s) { a->last_sample = *s; a->sample_seen = 1; }
++ else { a->last_sample.valid = 0; a->sample_seen = 0; }
++ if (a->state == TRIPPED) { outputs_off(a); return; }
++ if (!fault_n) { app_trip(a, F_HARDWARE); return; }
++ if (a->state == OFF) { outputs_off(a); return; }
++ if (a->state < PRECHARGE || a->state > RUN) {
++  app_trip(a, F_TIMING); return;
++ }
++ a->state_ms = advance(a->state_ms);
++ if (!plausible(s)) { app_trip(a, F_ADC); return; }
++ if (s->vin < VIN_MIN_MV || s->vin > VIN_MAX_MV) {
++  app_trip(a, F_INPUT); return;
++ }
++ if (s->vout > OUTPUT_OV_MV) { app_trip(a, F_OV); return; }
++ if (a->state == PRECHARGE) {
++  outputs_off(a);
++  if (post_ready(s)) {
++   a->pre_ms = advance(a->pre_ms);
++   if (a->pre_ms >= PRECHARGE_MS) enter(a, READY);
++  } else a->pre_ms = 0;
++  return;
++ }
++ if (a->state == READY) {
++  outputs_off(a);
++  if (!post_ready(s)) {
++   a->pre_ms = 0; a->bypass_confirmed = 0; enter(a, PRECHARGE);
++  }
++  return;
++ }
++ if (!post_ready(s)) { app_trip(a, F_INPUT); return; }
++ if (a->state == ARMING) {
++  /* Recheck the fresh scan before the first physical ARM output. */
++  if (s->vout > prebias_limit(a)) { app_trip(a, F_PREBIAS); return; }
++  if (!oc_n) { app_trip(a, F_OC); return; }
++  if (sampled_current_fault(s)) { app_trip(a, F_CURRENT); return; }
++  outputs_off(a);
++  if (a->state_ms <= ARM_MS) a->arm = 1;
++  else if (a->state_ms > ARM_MS + DRIVER_SETTLE_MS) {
++   enter(a, STARTUP); a->enable = 1;
++  }
++  return;
++ }
++ a->arm = 0;
++ a->enable = 1;
++ if (!oc_n) {
++  a->oc_ms = advance(a->oc_ms);
++  if (a->oc_ms >= OC_DELAY_MS) { app_trip(a, F_OC); return; }
++ } else a->oc_ms = 0;
++ if (sampled_current_fault(s)) {
++  a->current_ms = advance(a->current_ms);
++  if (a->current_ms >= SAMPLED_CURRENT_DELAY_MS) {
++   app_trip(a, F_CURRENT); return;
++  }
++ } else a->current_ms = 0;
++ if (s->vout > a->max_vout) a->max_vout = s->vout;
++ if (s->vout >= output_floor(a)) a->output_rose = 1;
++ if ((a->state == RUN || a->output_rose) && s->vout < output_floor(a)) {
++  a->uv_ms = advance(a->uv_ms);
++  if (a->uv_ms >= UV_DELAY_MS) { app_trip(a, F_LOW_OUTPUT); return; }
++ } else a->uv_ms = 0;
++
++ if (a->state == STARTUP) {
++  a->startup_ms = advance(a->startup_ms);
++  if (a->startup_ms >= STARTUP_NO_RISE_MS && a->max_vout < rise_floor(a)) {
++   app_trip(a, F_START_NO_RISE); return;
++  }
++  i32 tolerance = a->vset * STARTUP_V_TOLERANCE_PERCENT / 100;
++  if (tolerance < STARTUP_V_TOLERANCE_MIN_MV)
++   tolerance = STARTUP_V_TOLERANCE_MIN_MV;
++  i32 current_tolerance = a->iset * STARTUP_CC_TOLERANCE_PERCENT / 100;
++  u8 voltage_ok = s->vout >= a->vset - tolerance &&
++                  s->vout <= a->vset + tolerance &&
++                  s->iout >= -current_tolerance &&
++                  s->iout <= a->iset + current_tolerance;
++  u8 current_ok = s->iout >= a->iset - current_tolerance &&
++                  s->iout <= a->iset + current_tolerance &&
++                  s->vout >= output_floor(a) && s->vout <= a->vset + tolerance;
++  if (a->startup_ms >= STARTUP_RAMP_MS && (voltage_ok || current_ok))
++   a->stable_ms = advance(a->stable_ms);
++  else a->stable_ms = 0;
++  if (a->stable_ms >= STARTUP_SETTLE_MS) enter(a, RUN);
++  else if (a->startup_ms >= STARTUP_TIMEOUT_MS) {
++   app_trip(a, F_START_TIMEOUT); return;
++  }
++  a->target_mv = a->startup_ms < STARTUP_RAMP_MS ?
++    (i32)(a->startup_ms * (u32)a->vset / STARTUP_RAMP_MS) : a->vset;
++ } else a->target_mv = a->vset;
++ regulate(a, s);
++}
+diff --git a/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/src/board.c b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/src/board.c
+new file mode 100644
+--- /dev/null
++++ b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/src/board.c
+@@ -0,0 +1,65 @@
++#include "board.h"
++static void pin(u32 port,u32 n,u32 mode){
++ u32 address=port+(n<8?0:4),shift=(n%8)*4;
++ REG(address)=(REG(address)&~(15u<<shift))|(mode<<shift);
++}
++static void pwm_off(void){REG(GPIOB+0x14)=1;REG(TIM1+0x44)&=~(1u<<15);REG(TIM1+0x34)=0;}
++void board_kill(void){REG(GPIOB+0x14)=3;REG(TIM1+0x44)&=~(1u<<15);REG(TIM1+0x34)=0;}
++void board_init(void){
++ /* Internal HSI 8MHz -> PLL 64MHz, APB1 32MHz, ADC 8MHz. No crystal assumption. */
++ REG(RCC)|=1;while(!(REG(RCC)&2)){}
++ REG(0x40022000)=0x12; /* flash prefetch, two wait states */
++ REG(RCC+4)=(14u<<18)|(4u<<8)|(3u<<14);
++ REG(RCC)|=1u<<24;while(!(REG(RCC)&(1u<<25))){}
++ REG(RCC+4)|=2;while((REG(RCC+4)&12)!=8){}
++ REG(RCC+0x18)|=(1u<<0)|(1u<<2)|(1u<<3)|(1u<<9)|(1u<<11)|(1u<<12);
++ REG(GPIOB+0x14)=3; /* EN, ARM low BEFORE switching pin mode */
++ pin(GPIOB,0,2);pin(GPIOB,1,2);
++ for(u32 n=0;n<5;n++)pin(GPIOA,n,0);
++ pin(GPIOA,6,0);
++ /* External board pullups are expected; internal pullups also enabled. */
++ REG(GPIOB+0x10)=(1u<<10)|(1u<<11);
++ pin(GPIOB,10,8);pin(GPIOB,11,8);
++ pin(GPIOA,8,0xA); /* TIM1_CH1, AF push-pull */
++ REG(TIM1+0x28)=0;REG(TIM1+0x2C)=PWM_PERIOD-1;
++ REG(TIM1+0x34)=0;REG(TIM1+0x18)=(6u<<4)|(1u<<3);
++ REG(TIM1+0x20)=1; /* CH1 only; IR2184 generates complementary signals/dead time */
++ REG(TIM1+0x44)=0;REG(TIM1+0x14)=1;REG(TIM1)=0x81;
++ /* EXTI10 falling edge, highest priority. Do not EXTI-latch PB11 OC. */
++ REG(0x40010010)=(REG(0x40010010)&~(15u<<8))|(1u<<8);
++ REG(0x40010400)|=1u<<10;REG(0x4001040C)|=1u<<10;
++ REG(0x40010414)=1u<<10;
++ *(volatile u8 *)(0xE000E400u+40u)=0;
++ REG(0xE000E104)=1u<<8; /* EXTI15_10 IRQ40 */
++ /* STM32F103: SMPR2 (+0x10) owns channels 0..9. SMPR1 (+0x0C)
++  * configures channels 10..17 and cannot set acquisition for PA0..PA6. */
++ REG(ADC1+0x10)=7u<<18; /* 239.5 cycle acquisition on channel 6 */
++ for(u32 n=0;n<5;n++)REG(ADC1+0x10)|=7u<<(n*3);
++ REG(ADC1+8)=1;for(volatile u32 n=0;n<1000;n++){}
++ REG(ADC1+8)|=8;while(REG(ADC1+8)&8){}
++ REG(ADC1+8)|=4;while(REG(ADC1+8)&4){}
++ REG(ADC1+8)|=(7u<<17)|(1u<<20); /* software trigger enabled */
++ /* SysTick 1kHz at lower priority than hardware fault EXTI. */
++ *(volatile u8 *)0xE000ED23u=0x80;
++ REG(0xE000E014)=CPU_HZ/1000-1;REG(0xE000E018)=0;REG(0xE000E010)=7;
++
++}
++u8 board_sample(u16 raw[6]){
++ static const u8 channels[6]={0,1,2,3,4,6};
++ for(u32 n=0;n<6;n++){
++  REG(ADC1)=0;REG(ADC1+0x34)=channels[n];REG(ADC1+8)|=1u<<22;
++  u32 timeout=20000;while(!(REG(ADC1)&2) && --timeout){}
++  if(!timeout)return 0;
++  raw[n]=(u16)REG(ADC1+0x4C);
++ }
++ return 1;
++}
++void board_outputs(const App *a){
++ /* Called with interrupts masked, after checking sticky EXTI fault. */
++ if(!a->enable || !POWER_STAGE_ALLOWED){pwm_off();}
++ else{
++  REG(TIM1+0x34)=(u32)a->duty*PWM_PERIOD/10000;
++  REG(TIM1+0x44)|=1u<<15;REG(GPIOB+0x10)=1;
++ }
++ if(a->arm && POWER_STAGE_ALLOWED)REG(GPIOB+0x10)=2;else REG(GPIOB+0x14)=2;
++}
+diff --git a/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/src/diag.c b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/src/diag.c
+new file mode 100644
+--- /dev/null
++++ b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/src/diag.c
+@@ -0,0 +1,89 @@
++#include "diag.h"
++#include <stdint.h>
++_Static_assert(sizeof(u32)==4,"SWD requires 32-bit words");
++_Static_assert(sizeof(DebugWindow)==256,"SWD window is 256 bytes");
++_Static_assert(sizeof(TraceRecord)==40,"Trace ABI is ten words");
++_Static_assert(D_END==63,"SWD ABI must end at word 63");
++__attribute__((section(".swd_mailbox"),used,aligned(4)))
++volatile DebugWindow debug_window;
++__attribute__((section(".swd_trace"),used,aligned(4)))
++volatile TraceRecord debug_trace[TRACE_CAPACITY];
++volatile u32 debug_adc_raw[6];
++static u32 trace_count,trace_next,trace_frozen,last_state,last_en,last_arm;
++static HwSnapshot first_hw;
++static u32 hw_saved;
++static u32 platform_ready;
++void diag_reset_trace(void){
++ trace_count=trace_next=trace_frozen=hw_saved=0;
++ last_state=last_en=last_arm=0xFFFFFFFFu;
++}
++void diag_init(void){
++ platform_ready=0;
++ for(u32 i=0;i<64;i++)debug_window.w[i]=0;
++ for(u32 i=0;i<TRACE_CAPACITY;i++)for(u32 j=0;j<TRACE_WORDS;j++)debug_trace[i].w[j]=0;
++ for(u32 i=0;i<6;i++)debug_adc_raw[i]=0;
++ diag_reset_trace();
++ debug_window.w[D_MAGIC]=0x42324332u;
++ debug_window.w[D_ABI]=0x00020001u;
++ debug_window.w[D_WORDS]=64;
++ debug_window.w[D_TRACE_BASE]=(u32)(uintptr_t)debug_trace;
++ debug_window.w[D_TRACE_CAP]=TRACE_CAPACITY;
++ debug_window.w[D_TRACE_WORDS]=TRACE_WORDS;
++ debug_window.w[D_RAW_BASE]=(u32)(uintptr_t)debug_adc_raw;
++ debug_window.w[D_END]=0x454E4432u;
++}
++void diag_set_ready(void){platform_ready=1;}
++void diag_ack(Command cmd,CmdResult result){
++ debug_window.w[D_SEQ]++;
++ debug_window.w[D_LAST_CMD]=(u32)cmd;
++ debug_window.w[D_LAST_CMD_SEQ]=++debug_window.w[D_ACK_SEQ];
++ debug_window.w[D_ACK]=(u32)result;
++ debug_window.w[D_SEQ]++;
++}
++void diag_update(const App *a,const Sample *s,const HwSnapshot *before,
++                 u32 current_idr,u32 scans,u32 failures,u32 irq_count,u32 cycles){
++ debug_window.w[D_SEQ]++;
++ if(a->last_fault.valid && !hw_saved){first_hw=*before;hw_saved=1;}
++ if(!trace_frozen && (a->tick_ms%5==0 || (u32)a->state!=last_state ||
++     a->enable!=last_en || a->arm!=last_arm || a->last_fault.valid)){
++  volatile TraceRecord *t=&debug_trace[trace_next];
++  t->w[0]=a->tick_ms;
++  t->w[1]=(u32)a->state|((u32)a->fault<<8)|((u32)a->enable<<16)|((u32)a->arm<<17);
++  t->w[2]=(u32)s->vin;t->w[3]=(u32)s->vin_post;t->w[4]=(u32)s->vout;
++  t->w[5]=(u32)s->iout;t->w[6]=(u32)s->il;
++  t->w[7]=(u32)(a->last_fault.valid?a->last_fault.duty:a->duty);
++  t->w[8]=before->idr;
++  t->w[9]=(before->ccr&0xFFFFu)|((before->bdtr&(1u<<15))<<1)|
++          ((before->cr1&1u)<<17)|((before->ccer&1u)<<18);
++  trace_next=(trace_next+1)%TRACE_CAPACITY;
++  if(trace_count<TRACE_CAPACITY)trace_count++;
++ }
++ last_state=(u32)a->state;last_en=a->enable;last_arm=a->arm;
++ if(a->last_fault.valid)trace_frozen=1;
++ volatile u32 *d=debug_window.w;
++ d[D_FLAGS]=(POWER_STAGE_ALLOWED?1u:0u)|(trace_frozen<<1)|(platform_ready<<2);
++ d[D_STATE]=a->state;d[D_FAULT]=a->fault;d[D_VSET]=(u32)a->vset;d[D_ISET]=(u32)a->iset;
++ d[D_VIN]=(u32)s->vin;d[D_IIN]=(u32)s->iin;d[D_VOUT]=(u32)s->vout;
++ d[D_IOUT]=(u32)s->iout;d[D_IL]=(u32)s->il;d[D_POST]=(u32)s->vin_post;
++ d[D_DUTY]=(u32)a->duty;d[D_EN]=a->enable;d[D_ARM]=a->arm;d[D_TICKS]=a->tick_ms;
++ d[D_SCANS]=scans;d[D_ADC_FAILURES]=failures;
++ const FaultRecord *f=&a->last_fault;
++ d[D_RECORD]=f->valid;d[D_RECORD_CODE]=f->code;d[D_RECORD_STATE]=f->state_before;
++ d[D_RECORD_TICK]=f->tick_ms;d[D_RECORD_VOUT]=(u32)f->vout;d[D_RECORD_IOUT]=(u32)f->iout;
++ d[D_RECORD_IL]=(u32)f->il;d[D_RECORD_VIN]=(u32)f->vin;d[D_RECORD_POST]=(u32)f->vin_post;
++ d[D_RECORD_DUTY]=(u32)f->duty;d[D_RECORD_CV]=(u32)f->cv_out;d[D_RECORD_CC]=(u32)f->cc_out;
++ d[D_RECORD_FLAGS]=f->flags;
++ const HwSnapshot *h=hw_saved?&first_hw:before;
++ d[D_HW_IDR]=h->idr;d[D_HW_CCR]=h->ccr;d[D_HW_BDTR]=h->bdtr;
++ d[D_HW_CR1]=h->cr1;d[D_HW_CCER]=h->ccer;d[D_HW_CRL]=h->crl;d[D_AFTER_KILL]=h->after_kill;
++ d[D_RESERVED_OLD_CMD]=0; /* A1/B1 0x2000009C can never start B2. */
++ d[D_TRACE_COUNT]=trace_count;d[D_TRACE_NEXT]=trace_next;d[D_TRACE_FROZEN]=trace_frozen;
++ if(current_idr&2u)d[D_ARM_SEEN]++;
++ if(current_idr&1u)d[D_EN_SEEN]++;
++ d[D_IRQ_COUNT]=irq_count;
++ if(cycles>d[D_ISR_CYCLES])d[D_ISR_CYCLES]=cycles;
++ d[D_MAX_VOUT]=(u32)(f->valid?f->max_vout:a->max_vout);
++ d[D_STARTUP_MS]=f->valid?f->startup_ms:a->startup_ms;
++ d[D_CURRENT_IDR]=current_idr;d[D_TARGET]=(u32)(f->valid?f->target_mv:a->target_mv);
++ debug_window.w[D_SEQ]++;
++}
+diff --git a/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/src/lcd.c b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/src/lcd.c
+new file mode 100644
+--- /dev/null
++++ b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/src/lcd.c
+@@ -0,0 +1,95 @@
++#include "board.h"
++#if LCD_ENABLED
++static void out(u8 byte){
++ u32 timeout=100000;while(!(REG(SPI1+8)&2) && --timeout){}
++ *(volatile u8 *)(SPI1+0x0C)=byte;
++ timeout=100000;while((REG(SPI1+8)&128) && --timeout){}
++}
++static void cs(u8 high){REG(GPIOB+(high?0x10:0x14))=1u<<12;}
++static void command(u8 c){cs(0);REG(GPIOB+0x14)=1u<<13;out(c);cs(1);}
++static void data(u8 c){cs(0);REG(GPIOB+0x10)=1u<<13;out(c);cs(1);}
++static void window(u16 x,u16 y,u16 w,u16 h){
++ u16 x1=x+LCD_X_OFFSET,x2=x1+w-1,y1=y+LCD_Y_OFFSET,y2=y1+h-1;
++ command(0x2A);data(x1>>8);data(x1);data(x2>>8);data(x2);
++ command(0x2B);data(y1>>8);data(y1);data(y2>>8);data(y2);command(0x2C);
++}
++/* Original 5x7 font subset, columns low-bit first. */
++static const char glyphs[]="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ.-: /";
++static const u8 font[][5]={
++ {62,81,73,69,62},{0,66,127,64,0},{98,81,73,73,70},{34,65,73,73,54},{24,20,18,127,16},
++ {39,69,69,69,57},{60,74,73,73,48},{1,113,9,5,3},{54,73,73,73,54},{6,73,73,41,30},
++ {126,17,17,17,126},{127,73,73,73,54},{62,65,65,65,34},{127,65,65,34,28},{127,73,73,73,65},
++ {127,9,9,9,1},{62,65,73,73,122},{127,8,8,8,127},{0,65,127,65,0},{32,64,65,63,1},
++ {127,8,20,34,65},{127,64,64,64,64},{127,2,12,2,127},{127,4,8,16,127},{62,65,65,65,62},
++ {127,9,9,9,6},{62,65,81,33,94},{127,9,25,41,70},{38,73,73,73,50},{1,1,127,1,1},
++ {63,64,64,64,63},{31,32,64,32,31},{63,64,56,64,63},{99,20,8,20,99},{7,8,112,8,7},
++ {97,81,73,69,67},{0,96,96,0,0},{8,8,8,8,8},{0,54,54,0,0},{0,0,0,0,0},{32,16,8,4,2}
++};
++static void text(u16 y,const char *str){
++ for(u32 x=0;x<LCD_WIDTH/6;x++){
++  char c=*str;if(c)str++;
++  u32 index=39;for(u32 j=0;glyphs[j];j++)if(glyphs[j]==c){index=j;break;}
++  window((u16)(x*6),y,6,8);cs(0);REG(GPIOB+0x10)=1u<<13;
++  for(u32 row=0;row<8;row++)for(u32 col=0;col<6;col++){
++   u16 pixel=(col<5 && ((font[index][col]>>row)&1))?0xFFFF:0;
++   out(pixel>>8);out(pixel);
++  }
++  cs(1);
++ }
++}
++static void value(u16 y,const char *name,i32 n){
++ char b[22];u32 k=0;while(*name && k<10)b[k++]=*name++;
++ if(n<0){b[k++]='-';n=n<-99999?99999:-n;}
++ n=n>99999?99999:n;
++ b[k++]=(char)('0'+n/10000);b[k++]=(char)('0'+n/1000%10);b[k++]='.';
++ b[k++]=(char)('0'+n/100%10);b[k++]=(char)('0'+n/10%10);b[k++]=(char)('0'+n%10);b[k]=0;
++ text(y,b);
++}
++void lcd_init(void){
++ /* SPI1 transmit-only: PA6 remains ADC input. PA5/PA7 AF push-pull. */
++ REG(GPIOA)=(REG(GPIOA)&~0xF0F00000u)|0xB0B00000u;
++ REG(GPIOB+4)=(REG(GPIOB+4)&~0x0FFF0000u)|0x02220000u;
++ REG(GPIOB+0x10)=(1u<<12)|(1u<<13)|(1u<<14);
++ REG(SPI1)=(1u<<15)|(1u<<14)|(1u<<9)|(1u<<8)|(2u<<3)|(1u<<2)|(1u<<6);
++ REG(GPIOB+0x14)=1u<<14;delay_ms(20);REG(GPIOB+0x10)=1u<<14;delay_ms(120);
++ command(1);delay_ms(150);command(0x11);delay_ms(120);
++ command(0x3A);data(5);command(0x36);data(LCD_MADCTL);
++ command(0x29);delay_ms(20);
++ window(0,0,LCD_WIDTH,LCD_HEIGHT);cs(0);REG(GPIOB+0x10)=1u<<13;
++ for(u32 n=0;n<LCD_WIDTH*LCD_HEIGHT;n++){out(0);out(0);}cs(1);
++}
++static void number(u16 y,const char *name,u32 n){
++ char b[22];u32 k=0;while(*name && k<13)b[k++]=*name++;
++ char digits[10];u32 j=0;do{digits[j++]=(char)('0'+n%10);n/=10;}while(n && j<10);
++ while(j && k<21)b[k++]=digits[--j];
++ b[k]=0;text(y,b);
++}
++void lcd_update(const App *a,const Sample *s){
++ static const char *states[]={"OFF","PRECHARGE","READY","ARMING","STARTUP","RUN","FAULT"};
++ static const char *faults[]={"NONE","HW FAULT","ADC INVALID","INPUT RANGE","OC INPUT",
++  "OUTPUT DROPPED","OVERVOLTAGE","TIMING","NO OUTPUT RISE","START TIMEOUT",
++  "SAMPLED CURRENT","OUTPUT PREBIAS","ARM PIN LOW","EN PIN LOW"};
++ text(0,POWER_STAGE_ALLOWED?"GBUCK C2 BENCH B2":"GBUCK C2 LOCKED B2");
++ text(12,states[a->state<=TRIPPED?a->state:TRIPPED]);
++ value(24,"VIN V  ",s->vin);value(34,"POST V ",s->vin_post);
++ value(44,"VOUT V ",s->vout);value(54,"IOUT A ",s->iout);value(64,"IL A   ",s->il);
++ value(74,"SET V  ",a->vset);value(84,"SET A  ",a->iset);
++ if(a->last_fault.valid){
++  number(94,"FAULT ",a->last_fault.code);
++  text(104,faults[a->last_fault.code<=F_EN_PIN?a->last_fault.code:0]);
++  value(114,"TRIP V ",a->last_fault.vout);
++  number(124,"TRIP BP ",(u32)a->last_fault.duty);
++  number(134,"FROM STATE ",a->last_fault.state_before);
++ }else{
++  text(94,a->bypass_confirmed?"BYPASS CONFIRMED":"CONFIRM BYPASS");
++  number(104,"DUTY BP ",(u32)a->duty);
++  number(114,"START MS ",a->startup_ms);
++  text(124,"MAX 2V / 0.2A");
++  text(134,"MANUAL START ONLY");
++ }
++ text(150,"CMD 20000010");
++}
++#else
++void lcd_init(void){}
++void lcd_update(const App *a,const Sample *s){(void)a;(void)s;}
++#endif
+diff --git a/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/src/main.c b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/src/main.c
+new file mode 100644
+--- /dev/null
++++ b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/src/main.c
+@@ -0,0 +1,92 @@
++#include "board.h"
++#include "diag.h"
++static App app;
++static Sample sample;
++static volatile u32 ticks,hard_fault,fault_irq_count;
++static volatile u32 platform_ready;
++static u32 scans,failures;
++u32 millis(void){return ticks;}
++void delay_ms(u32 ms){u32 start=ticks;while(ticks-start<ms){__asm volatile("nop");}}
++#ifdef HOST_TEST
++extern void platform_test_lock(void),platform_test_unlock(void);
++static void lock(void){platform_test_lock();}
++static void unlock(void){platform_test_unlock();}
++#else
++static void lock(void){__asm volatile("cpsid i":::"memory");}
++static void unlock(void){__asm volatile("cpsie i":::"memory");}
++#endif
++static HwSnapshot hardware(void){
++ HwSnapshot h={REG(GPIOB+8),REG(TIM1+0x34),REG(TIM1+0x44),
++               REG(TIM1),REG(TIM1+0x20),REG(GPIOB),hard_fault};
++ return h;
++}
++void EXTI15_10_IRQHandler(void){
++ if(REG(0x40010414)&(1u<<10)){
++  board_kill();hard_fault=1;fault_irq_count++;REG(0x40010414)=1u<<10;
++ }
++}
++void SysTick_Handler(void){
++ const u32 start=REG(0xE0001004);static u32 previous;
++ const HwSnapshot before=hardware();
++ const u8 requested_arm=app.arm,requested_en=app.enable;
++ ticks++;
++ u16 raw[6];
++ if(board_sample(raw)){
++  adc_convert(raw,&sample);
++  for(u32 i=0;i<6;i++)debug_adc_raw[i]=raw[i];
++  scans++;
++ }else{sample.valid=0;failures++;}
++ /* VALUE first, CMD last. Only the IRQ mutates the controller. */
++ u32 requested_cmd=debug_window.w[D_CMD];
++ if(requested_cmd){
++  i32 value=(i32)debug_window.w[D_VALUE];debug_window.w[D_CMD]=0;
++  lock();
++  CmdResult result;
++  if(!platform_ready && (requested_cmd==CMD_PRECHARGE ||
++     requested_cmd==CMD_CONFIRM_BYPASS || requested_cmd==CMD_START))result=CMD_BAD_STATE;
++  else result=app_command(&app,(Command)requested_cmd,value);
++  if(result==CMD_OK && requested_cmd==CMD_PRECHARGE){
++   if((REG(GPIOB+8)&(1u<<10)) && !(REG(0x40010414)&(1u<<10)))hard_fault=0;
++  }
++  unlock();
++  if(result==CMD_OK && (requested_cmd==CMD_PRECHARGE || requested_cmd==CMD_CLEAR_RECORD || requested_cmd==CMD_START))diag_reset_trace();
++  diag_ack((Command)requested_cmd,result);
++ }
++ /* A 1 ms delayed pad readback: detects a local low/stuck output, not a
++  * disconnected cable or the remote SAFE_OK/DRV_EN path. */
++ if(hard_fault)app_trip(&app,F_HARDWARE);
++ else if(POWER_STAGE_ALLOWED && requested_arm && !(before.idr&2u))app_trip(&app,F_ARM_PIN);
++ else if(POWER_STAGE_ALLOWED && requested_en && !(before.idr&1u))app_trip(&app,F_EN_PIN);
++ if(previous && start-previous>CPU_HZ/1000*2)app_trip(&app,F_TIMING);
++ previous=start;
++ app_tick(&app,&sample,(REG(GPIOB+8)&(1u<<10))!=0,(REG(GPIOB+8)&(1u<<11))!=0);
++ if(REG(0xE0001004)-start>CPU_HZ/1000)app_trip(&app,F_TIMING);
++ lock();
++ if(hard_fault || !(REG(GPIOB+8)&(1u<<10)) || (REG(0x40010414)&(1u<<10)))app_trip(&app,F_HARDWARE);
++ board_outputs(&app);
++ diag_update(&app,&sample,&before,REG(GPIOB+8),scans,failures,fault_irq_count,REG(0xE0001004)-start);
++ u32 elapsed=REG(0xE0001004)-start;
++ if(elapsed>debug_window.w[D_ISR_CYCLES])debug_window.w[D_ISR_CYCLES]=elapsed;
++ if(elapsed>CPU_HZ/1000){
++  app_trip(&app,F_TIMING);board_kill();
++  diag_update(&app,&sample,&before,REG(GPIOB+8),scans,failures,fault_irq_count,elapsed);
++ }
++ unlock();
++}
++int main(void){
++ app_init(&app);diag_init(); /* NOLOAD diagnostic memory explicitly cleared. */
++ REG(0xE000EDFC)|=1u<<24;REG(0xE0001000)|=1;
++ board_init();lcd_init();
++ /* Do not freeze IWDG on debugger halt: halted control must not leave PWM. */
++ REG(0xE0042004)&=~(1u<<8);
++ REG(0x40003000)=0x5555;REG(0x40003004)=3;REG(0x40003008)=312;
++ REG(0x40003000)=0xAAAA;REG(0x40003000)=0xCCCC;
++ lock();platform_ready=1;diag_set_ready();unlock();
++ for(;;){
++  App a;Sample s;
++  lock();a=app;s=sample;unlock();
++  lcd_update(&a,&s);
++  REG(0x40003000)=0xAAAA;
++  delay_ms(50);
++ }
++}
+diff --git a/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/src/measurement.c b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/src/measurement.c
+new file mode 100644
+--- /dev/null
++++ b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/src/measurement.c
+@@ -0,0 +1,19 @@
++#include "app.h"
++i32 adc_offset[6]={0,0,0,0,0,0};
++i32 adc_gain_ppm[6]={1000000,1000000,1000000,1000000,1000000,1000000};
++void adc_convert(const u16 raw[6],Sample *s){
++ i32 x[6]; s->valid=1;
++ for(u32 n=0;n<6;n++){
++  if(raw[n]>=4090)s->valid=0;
++  /* VIN/VOUT/VIN_POST: 11:1; IIN/IOUT: 1V/A;
++   * IL: 0.5V/A around VDDA/2, INA240A1, 25mOhm. */
++  if(n==0 || n==2 || n==5)x[n]=(i32)raw[n]*ADC_VDDA_MV*11/4095;
++  else if(n==4)x[n]=((i32)raw[n]*ADC_VDDA_MV/4095-ADC_VDDA_MV/2)*2;
++  else x[n]=(i32)raw[n]*ADC_VDDA_MV/4095;
++  /* 64 bit intermediate prevents calibration multiplication overflow. */
++  x[n]=(i32)(((long long)x[n]+adc_offset[n])*adc_gain_ppm[n]/1000000);
++ }
++ s->vin=x[0];s->iin=x[1];s->vout=x[2];s->iout=x[3];s->il=x[4];s->vin_post=x[5];
++ /* ADC disconnected/stuck-at-zero cannot satisfy the arm prerequisites. */
++ if(raw[4]<100 || raw[4]>3995)s->valid=0;
++}
+diff --git a/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/src/startup.c b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/src/startup.c
+new file mode 100644
+--- /dev/null
++++ b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/src/startup.c
+@@ -0,0 +1,22 @@
++#include "board.h"
++extern u32 _estack,_sidata,_sdata,_edata,_sbss,_ebss;
++extern int main(void);
++extern void SysTick_Handler(void),EXTI15_10_IRQHandler(void);
++void Default_Handler(void){board_kill();while(1){}}
++void Reset_Handler(void){
++ u32 *source=&_sidata;
++ for(u32 *p=&_sdata;p<&_edata;)*p++=*source++;
++ for(u32 *p=&_sbss;p<&_ebss;)*p++=0;
++ main();Default_Handler();
++}
++__attribute__((section(".isr_vector"),used))
++void (* const vectors[76])(void)={
++ [0]=(void (*)(void))(&_estack),[1]=Reset_Handler,
++ [2]=Default_Handler,[3]=Default_Handler,[4]=Default_Handler,
++ [5]=Default_Handler,[6]=Default_Handler,[11]=Default_Handler,
++ [12]=Default_Handler,[14]=Default_Handler,[15]=SysTick_Handler,
++ [56]=EXTI15_10_IRQHandler
++};
++/* Freestanding compiler aggregate helpers. */
++void *memset(void *d,int v,unsigned int n){u8 *p=d;while(n--)*p++=(u8)v;return d;}
++void *memcpy(void *d,const void *s,unsigned int n){u8 *p=d;const u8 *q=s;while(n--)*p++=*q++;return d;}
+diff --git a/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/stm32f103c8.ld b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/stm32f103c8.ld
+new file mode 100644
+--- /dev/null
++++ b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/stm32f103c8.ld
+@@ -0,0 +1,18 @@
++ENTRY(Reset_Handler)
++MEMORY { FLASH (rx) : ORIGIN = 0x08000000, LENGTH = 64K
++         RAM (rwx) : ORIGIN = 0x20000000, LENGTH = 20K }
++_estack = ORIGIN(RAM) + LENGTH(RAM);
++SECTIONS {
++ .isr_vector : { KEEP(*(.isr_vector)) } > FLASH
++ .text : { *(.text*) *(.rodata*) . = ALIGN(4); } > FLASH
++ .ARM.exidx : { *(.ARM.exidx*) } > FLASH
++ .swd_mailbox 0x20000000 (NOLOAD) : { KEEP(*(.swd_mailbox)) } > RAM
++ .swd_trace 0x20000100 (NOLOAD) : { KEEP(*(.swd_trace)) } > RAM
++ ASSERT(SIZEOF(.swd_mailbox)==0x100,"SWD ABI window size mismatch")
++ ASSERT(SIZEOF(.swd_trace)==0x2800,"SWD trace size mismatch")
++ _sidata = LOADADDR(.data);
++ .data : { . = ALIGN(4); _sdata = .; *(.data*) . = ALIGN(4); _edata = .; } > RAM AT > FLASH
++ .bss (NOLOAD) : { . = ALIGN(4); _sbss = .; *(.bss*) *(COMMON) . = ALIGN(4); _ebss = .; } > RAM
++ ASSERT(_ebss + 2048 < _estack,"Need 2KB stack margin")
++ /DISCARD/ : { *(.comment) *(.note*) }
++}
+diff --git a/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/tests/test_adc_registers.c b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/tests/test_adc_registers.c
+new file mode 100644
+--- /dev/null
++++ b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/tests/test_adc_registers.c
+@@ -0,0 +1,78 @@
++/* Host register-model regression, NOT a physical ADC/settling-time test.
++ * ADC offsets/channel fields follow ST's stm32f103xb.h (CMSIS device F1).
++ * Compile the real board driver with a narrow register-access override.
++ */
++#define _GNU_SOURCE
++#include <assert.h>
++#include <stdint.h>
++#include <stdio.h>
++#include <sys/mman.h>
++#include "app.h"
++
++static volatile u32 *mock_reg(u32 address);
++#define REG(a) (*mock_reg(a))
++#include "../src/board.c"
++
++static int sampling, stalled_channel = -1;
++static u32 reads, read_channels[6];
++static const u16 inputs[7] = {1675, 12, 1000, 24, 2048, 4095, 1660};
++#define DIRECT(a) (*(volatile u32 *)(uintptr_t)(a))
++
++static volatile u32 *mock_reg(u32 address){
++ assert((address >= 0x40010000u && address < 0x40024000u) ||
++        (address >= 0xE000E000u && address < 0xE0010000u));
++ if(address == RCC){
++  if(DIRECT(RCC)&1u) DIRECT(RCC)|=2u;
++  if(DIRECT(RCC)&(1u<<24)) DIRECT(RCC)|=1u<<25;
++ }
++ if(address == RCC+4){
++  DIRECT(RCC+4)=(DIRECT(RCC+4)&~12u)|((DIRECT(RCC+4)&3u)<<2);
++ }
++ if(address == ADC1+8) DIRECT(ADC1+8)&=~12u; /* CAL/RSTCAL complete */
++ if(sampling && address == ADC1 && (DIRECT(ADC1+8)&(1u<<22))){
++  u32 channel=DIRECT(ADC1+0x34)&31u;
++  assert(channel<7);
++  if((int)channel != stalled_channel){
++   DIRECT(ADC1+0x4C)=inputs[channel];
++   DIRECT(ADC1+8)&=~(1u<<22);
++   DIRECT(ADC1)|=2u;
++  }
++ }
++ if(sampling && address == ADC1+0x4C){
++  assert(reads<6);
++  read_channels[reads++]=DIRECT(ADC1+0x34)&31u;
++  DIRECT(ADC1)&=~2u; /* DR read clears EOC */
++ }
++ return (volatile u32 *)(uintptr_t)address;
++}
++
++int main(void){
++ void *a=mmap((void *)(uintptr_t)0x40010000u,0x14000,
++              PROT_READ|PROT_WRITE,MAP_PRIVATE|MAP_ANONYMOUS|MAP_FIXED,-1,0);
++ void *b=mmap((void *)(uintptr_t)0xE000E000u,0x2000,
++              PROT_READ|PROT_WRITE,MAP_PRIVATE|MAP_ANONYMOUS|MAP_FIXED,-1,0);
++ assert(a!=MAP_FAILED && b!=MAP_FAILED);
++ DIRECT(GPIOA)=DIRECT(GPIOA+4)=0x44444444u;
++ DIRECT(GPIOB)=DIRECT(GPIOB+4)=0x44444444u;
++ board_init();
++ /* SMPR2 at +0x10 owns channels 0..9; SMPR1 at +0x0C owns 10..17. */
++ for(u32 c=0;c<=6;c++) if(c!=5) assert(((DIRECT(ADC1+0x10)>>(3*c))&7u)==7u);
++ assert(((DIRECT(ADC1+0x10)>>15)&7u)==0u); /* PA5 is LCD SCK, not ADC */
++ assert(DIRECT(ADC1+0x0C)==0u);
++ for(u32 c=0;c<=6;c++) if(c!=5) assert(((DIRECT(GPIOA)>>(4*c))&15u)==0);
++ assert(!(DIRECT(TIM1+0x44)&(1u<<15)) && DIRECT(TIM1+0x34)==0);
++ u16 raw[6]; const u32 channels[6]={0,1,2,3,4,6};
++ sampling=1;
++ assert(board_sample(raw));
++ assert(reads==6);
++ for(u32 i=0;i<6;i++){
++  assert(read_channels[i]==channels[i]);
++  assert(raw[i]==inputs[channels[i]]);
++ }
++ Sample s;adc_convert(raw,&s);
++ assert(s.valid && s.vin>14000 && s.vin_post>14000);
++ reads=0;stalled_channel=0;
++ assert(!board_sample(raw) && reads==0);
++ munmap(a,0x14000);munmap(b,0x2000);
++ puts("PASS: actual board driver SMPR2/channel mapping, analog GPIO, disabled PWM, six-channel reads and ADC timeout (host register model only)");
++}
+diff --git a/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/tests/test_control.c b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/tests/test_control.c
+new file mode 100644
+--- /dev/null
++++ b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/tests/test_control.c
+@@ -0,0 +1,740 @@
++#include <assert.h>
++#include <limits.h>
++#include <math.h>
++#include <stdio.h>
++#include "app.h"
++
++/* This file exercises the real production app.c. Scripted ADC replays test
++ * interlocks and protections; the small averaged LC model below is a separate,
++ * approximate control regression. Neither is evidence of hardware safety. */
++static const Sample cold = {13800, 0, 0, 0, 0, 13800, 1};
++
++static void off(const App *a)
++{
++    assert(!a->enable && !a->arm && a->duty == 0);
++}
++
++static void bounded(const App *a)
++{
++    assert(a->duty >= 0 && a->duty <= 2500);
++    assert(!(a->enable && a->arm));
++    if (!a->enable) assert(a->duty == 0);
++}
++
++static void ticks(App *a, const Sample *s, unsigned n, u8 fault_n, u8 oc_n)
++{
++    while (n--) {
++        app_tick(a, s, fault_n, oc_n);
++        bounded(a);
++    }
++}
++
++static void ready_with(App *a, const Sample *s)
++{
++    app_init(a);
++    assert(app_command(a, CMD_PRECHARGE, 0) == CMD_OK);
++    ticks(a, s, PRECHARGE_MS - 1, 1, 1);
++    assert(a->state == PRECHARGE);
++    off(a);
++    ticks(a, s, 1, 1, 1);
++    assert(a->state == READY && !a->bypass_confirmed);
++    off(a);
++}
++
++static void ready(App *a)
++{
++    ready_with(a, &cold);
++}
++
++static void request_start(App *a)
++{
++    assert(a->state == READY);
++    assert(app_command(a, CMD_CONFIRM_BYPASS, 0) == CMD_OK);
++    assert(a->bypass_confirmed);
++    assert(app_command(a, CMD_START, 0) == CMD_OK);
++    assert(a->state == ARMING);
++    off(a);
++}
++
++static void startup(App *a)
++{
++    ready(a);
++    request_start(a);
++    for (unsigned n = 0; n < ARM_MS + DRIVER_SETTLE_MS + 3; ++n) {
++        ticks(a, &cold, 1, 1, 1);
++        if (a->state == STARTUP) break;
++        assert(a->state == ARMING);
++    }
++    assert(a->state == STARTUP && a->enable && !a->arm);
++}
++
++/* A plausible measured response for protection/state tests. Actual dynamics
++ * are checked independently by plant_run(); this helper does not model them. */
++static void running(App *a)
++{
++    Sample s = cold;
++    startup(a);
++    for (unsigned ms = 1; ms <= STARTUP_TIMEOUT_MS; ++ms) {
++        s.vout = ms < STARTUP_RAMP_MS ?
++            (i32)(2000u * ms / STARTUP_RAMP_MS) : 2000;
++        s.iout = s.vout / 10;
++        s.il = s.iout;
++        ticks(a, &s, 1, 1, 1);
++        assert(a->state == STARTUP || a->state == RUN);
++        if (a->state == RUN) return;
++    }
++    assert(!"a sustained measured response must complete startup");
++}
++
++static void record_equal(const FaultRecord *a, const FaultRecord *b)
++{
++#define SAME(field) assert(a->field == b->field)
++    SAME(valid); SAME(code); SAME(state_before); SAME(tick_ms);
++    SAME(startup_ms); SAME(vout); SAME(iout); SAME(il); SAME(vin);
++    SAME(vin_post); SAME(duty); SAME(cv_out); SAME(cc_out); SAME(flags);
++    SAME(state_ms); SAME(target_mv); SAME(max_vout);
++#undef SAME
++}
++
++static void test_commands_and_interlocks(void)
++{
++    App a;
++    assert(POWER_STAGE_ALLOWED == 1);
++    assert(DUTY_MAX == 2500);
++    assert(OFF == 0 && PRECHARGE == 1 && READY == 2 && ARMING == 3);
++    assert(STARTUP == 4 && RUN == 5 && TRIPPED == 6);
++    assert(CMD_PRECHARGE == 1 && CMD_CONFIRM_BYPASS == 2 && CMD_START == 3);
++    assert(CMD_STOP == 4 && CMD_SET_V == 5 && CMD_SET_I == 6);
++    assert(CMD_CLEAR_RECORD == 7);
++    app_init(&a);
++    assert(a.state == OFF && a.fault == F_NONE && !a.last_fault.valid);
++    assert(a.vset == 2000 && a.iset == 200);
++    off(&a);
++    assert(app_command(&a, CMD_START, 0) == CMD_BAD_STATE);
++    assert(app_command(&a, CMD_CONFIRM_BYPASS, 0) == CMD_BAD_STATE);
++    assert(app_command(&a, (Command)INT_MAX, 0) == CMD_UNKNOWN);
++    assert(app_command(&a, (Command)INT_MIN, 0) == CMD_UNKNOWN);
++    off(&a);
++
++    const i32 bad_v[] = {INT_MIN, -1, 0, 199, 2001, INT_MAX};
++    const i32 bad_i[] = {INT_MIN, -1, 0, 99, 201, INT_MAX};
++    for (unsigned n = 0; n < sizeof bad_v / sizeof bad_v[0]; ++n) {
++        assert(app_command(&a, CMD_SET_V, bad_v[n]) == CMD_BAD_VALUE);
++        assert(app_command(&a, CMD_SET_I, bad_i[n]) == CMD_BAD_VALUE);
++        assert(a.vset == 2000 && a.iset == 200);
++    }
++    assert(app_command(&a, CMD_SET_V, 200) == CMD_OK);
++    assert(app_command(&a, CMD_SET_I, 100) == CMD_OK);
++    assert(a.vset == 200 && a.iset == 100);
++    assert(app_command(&a, CMD_SET_V, 2000) == CMD_OK);
++    assert(app_command(&a, CMD_SET_I, 200) == CMD_OK);
++
++    assert(app_command(&a, CMD_PRECHARGE, 0) == CMD_OK);
++    assert(app_command(&a, CMD_CONFIRM_BYPASS, 0) == CMD_BAD_STATE);
++    assert(app_command(&a, CMD_START, 0) == CMD_BAD_STATE);
++    assert(app_command(&a, CMD_SET_V, 1000) == CMD_BAD_STATE);
++    assert(app_command(&a, CMD_SET_I, 100) == CMD_BAD_STATE);
++    ticks(&a, &cold, PRECHARGE_MS, 1, 1);
++    assert(a.state == READY && !a.bypass_confirmed);
++    assert(app_command(&a, CMD_START, 0) == CMD_BAD_STATE);
++    off(&a);
++
++    /* A momentary post-precharge droop invalidates manual confirmation. */
++    assert(app_command(&a, CMD_CONFIRM_BYPASS, 0) == CMD_OK);
++    Sample droop = cold;
++    droop.vin_post = 11000;
++    ticks(&a, &droop, 1, 1, 1);
++    assert(!a.bypass_confirmed);
++    assert(app_command(&a, CMD_START, 0) != CMD_OK);
++    off(&a);
++
++    /* Continuous good precharge time is required; partial intervals do not
++     * accumulate across a bad sample. */
++    ready(&a);
++    assert(app_command(&a, CMD_STOP, 0) == CMD_OK);
++    assert(app_command(&a, CMD_PRECHARGE, 0) == CMD_OK);
++    ticks(&a, &cold, PRECHARGE_MS - 1, 1, 1);
++    ticks(&a, &droop, 1, 1, 1);
++    ticks(&a, &cold, PRECHARGE_MS - 1, 1, 1);
++    assert(a.state == PRECHARGE);
++    ticks(&a, &cold, 1, 1, 1);
++    assert(a.state == READY && !a.bypass_confirmed);
++}
++
++static void test_arm_timing_and_start_edit_lock(void)
++{
++    App a;
++    ready(&a);
++    request_start(&a);
++    assert(app_command(&a, CMD_SET_V, 1500) == CMD_BAD_STATE);
++    assert(app_command(&a, CMD_SET_I, 100) == CMD_BAD_STATE);
++    assert(a.vset == 2000 && a.iset == 200);
++    for (unsigned n = 0; n < ARM_MS; ++n) {
++        ticks(&a, &cold, 1, 1, 1);
++        assert(a.state == ARMING && a.arm && !a.enable && !a.duty);
++    }
++    for (unsigned n = 0; n < DRIVER_SETTLE_MS; ++n) {
++        ticks(&a, &cold, 1, 1, 1);
++        assert(a.state == ARMING);
++        off(&a);
++    }
++    ticks(&a, &cold, 1, 1, 1);
++    assert(a.state == STARTUP && a.enable && !a.arm);
++    assert(app_command(&a, CMD_SET_V, 1500) == CMD_BAD_STATE);
++    assert(app_command(&a, CMD_SET_I, 100) == CMD_BAD_STATE);
++}
++
++static void test_input_and_prebias_boundaries(void)
++{
++    App a;
++    Sample s = cold;
++    s.vin = 12000;
++    s.vin_post = 11000;
++    ready_with(&a, &s);
++    request_start(&a);
++    ticks(&a, &s, 1, 1, 1);
++    assert(a.state == ARMING);
++
++    s = cold;
++    s.vin = s.vin_post = 16000;
++    ready_with(&a, &s);
++    request_start(&a);
++    ticks(&a, &s, 1, 1, 1);
++    assert(a.state == ARMING);
++
++    const i32 bad_vin[] = {11999, 16001};
++    for (unsigned n = 0; n < sizeof bad_vin / sizeof bad_vin[0]; ++n) {
++        startup(&a);
++        s = cold;
++        s.vin = bad_vin[n];
++        ticks(&a, &s, 1, 1, 1);
++        assert(a.state == TRIPPED && a.fault == F_INPUT);
++        off(&a);
++    }
++    startup(&a);
++    s = cold;
++    s.vin_post = 10999;
++    ticks(&a, &s, 1, 1, 1);
++    assert(a.state == TRIPPED && a.fault == F_INPUT);
++    off(&a);
++
++    s = cold;
++    s.vout = 100;
++    ready_with(&a, &s);
++    request_start(&a);
++    ticks(&a, &s, 1, 1, 1);
++    assert(a.state == ARMING);
++
++    s.vout = 101;
++    ready_with(&a, &s);
++    assert(app_command(&a, CMD_CONFIRM_BYPASS, 0) == CMD_OK);
++    assert(app_command(&a, CMD_START, 0) != CMD_OK);
++    assert(a.state == TRIPPED && a.fault == F_PREBIAS);
++    off(&a);
++
++    /* At a 200 mV setpoint, the discharged-output boundary is Vset/4. */
++    s = cold;
++    s.vout = 50;
++    ready_with(&a, &s);
++    assert(app_command(&a, CMD_STOP, 0) == CMD_OK);
++    assert(app_command(&a, CMD_SET_V, 200) == CMD_OK);
++    assert(app_command(&a, CMD_PRECHARGE, 0) == CMD_OK);
++    ticks(&a, &s, PRECHARGE_MS, 1, 1);
++    request_start(&a);
++    ticks(&a, &s, 1, 1, 1);
++    assert(a.state == ARMING);
++    assert(app_command(&a, CMD_STOP, 0) == CMD_OK);
++    s.vout = 51;
++    assert(app_command(&a, CMD_PRECHARGE, 0) == CMD_OK);
++    ticks(&a, &s, PRECHARGE_MS, 1, 1);
++    assert(app_command(&a, CMD_CONFIRM_BYPASS, 0) == CMD_OK);
++    assert(app_command(&a, CMD_START, 0) != CMD_OK);
++    assert(a.state == TRIPPED && a.fault == F_PREBIAS);
++    off(&a);
++
++    /* A new output appearing after the last READY sample is also blocked. */
++    ready(&a);
++    request_start(&a);
++    s = cold;
++    s.vout = 101;
++    ticks(&a, &s, 1, 1, 1);
++    assert(a.state == TRIPPED && a.fault == F_PREBIAS);
++    off(&a);
++}
++
++static void test_current_before_arm_or_enable(void)
++{
++    assert(SAMPLED_IOUT_TRIP_MA == 400);
++    assert(SAMPLED_IL_TRIP_MA == 800);
++    for (unsigned channel = 0; channel < 3; ++channel) {
++        App a;
++        Sample limit = cold;
++        if (channel == 0) limit.iout = 400;
++        else if (channel == 1) limit.il = 800;
++        else limit.il = -800;
++
++        /* Equality is allowed both in the last READY sample and in the
++         * fresh ARMING scan; EN remains low throughout the ARM pulse. */
++        ready_with(&a, &limit);
++        request_start(&a);
++        ticks(&a, &limit, 1, 1, 1);
++        assert(a.state == ARMING && a.arm && !a.enable && !a.duty);
++        assert(app_command(&a, CMD_STOP, 0) == CMD_OK);
++        off(&a);
++
++        Sample over = limit;
++        if (channel == 0) ++over.iout;
++        else if (channel == 1) ++over.il;
++        else --over.il;
++
++        /* A known unsafe current must reject START before any ARM output. */
++        ready_with(&a, &over);
++        assert(app_command(&a, CMD_CONFIRM_BYPASS, 0) == CMD_OK);
++        assert(app_command(&a, CMD_START, 0) != CMD_OK);
++        assert(a.state == TRIPPED && a.fault == F_CURRENT);
++        assert(a.last_fault.valid && a.last_fault.state_before == READY);
++        assert(a.last_fault.code == F_CURRENT && !a.last_fault.duty);
++        assert(!(a.last_fault.flags & (RECORD_ARM | RECORD_ENABLE)));
++        off(&a);
++
++        /* The ADC scan may change between START and the first ARM tick. */
++        ready(&a);
++        request_start(&a);
++        ticks(&a, &over, 1, 1, 1);
++        assert(a.state == TRIPPED && a.fault == F_CURRENT);
++        assert(a.last_fault.state_before == ARMING);
++        assert(!(a.last_fault.flags & (RECORD_ARM | RECORD_ENABLE)));
++        off(&a);
++
++        /* A later ARMING sample also trips immediately and records the
++         * already asserted ARM level before the outputs are cleared. */
++        ready(&a);
++        request_start(&a);
++        ticks(&a, &cold, 1, 1, 1);
++        assert(a.arm && !a.enable);
++        ticks(&a, &over, 1, 1, 1);
++        assert(a.state == TRIPPED && a.fault == F_CURRENT);
++        assert(a.last_fault.state_before == ARMING);
++        assert(a.last_fault.flags & RECORD_ARM);
++        assert(!(a.last_fault.flags & RECORD_ENABLE));
++        off(&a);
++    }
++}
++
++static void test_no_feedback_and_response_gating(void)
++{
++    App a;
++    Sample replay = cold;
++    unsigned elapsed = 0;
++    int saw_pwm = 0;
++    startup(&a);
++    while (a.state != TRIPPED && elapsed <= STARTUP_NO_RISE_MS + 2) {
++        ticks(&a, &replay, 1, 1, 1);
++        saw_pwm |= a.enable && a.duty > 0;
++        ++elapsed;
++    }
++    assert(saw_pwm);
++    assert(a.state == TRIPPED && a.fault == F_START_NO_RISE);
++    assert(elapsed <= STARTUP_NO_RISE_MS + 1);
++    assert(a.last_fault.state_before == STARTUP);
++    off(&a);
++
++    /* Hold the values read from the reported B1 photograph. This is an ADC
++     * replay of that observation, not a reconstructed converter waveform. */
++    startup(&a);
++    replay = (Sample){14960, 0, 8, 0, -12, 13828, 1};
++    elapsed = 0;
++    saw_pwm = 0;
++    while (a.state != TRIPPED && elapsed <= STARTUP_NO_RISE_MS + 2) {
++        ticks(&a, &replay, 1, 1, 1);
++        saw_pwm |= a.enable && a.duty > 0;
++        ++elapsed;
++    }
++    assert(saw_pwm && elapsed <= STARTUP_NO_RISE_MS + 1);
++    assert(a.state == TRIPPED && a.fault == F_START_NO_RISE);
++    assert(a.last_fault.valid && a.last_fault.code == F_START_NO_RISE);
++    assert(a.last_fault.state_before == STARTUP);
++    assert(a.last_fault.vin == 14960 && a.last_fault.vin_post == 13828);
++    assert(a.last_fault.vout == 8 && a.last_fault.iout == 0);
++    assert(a.last_fault.il == -12 && a.last_fault.duty > 0);
++    off(&a);
++
++    /* There is a real rise, but neither CV nor CC regulation is reached.
++     * Expiry of the reference ramp cannot by itself authorize RUN. */
++    startup(&a);
++    replay.vout = 700;
++    replay.iout = replay.il = 20;
++    ticks(&a, &replay, STARTUP_RAMP_MS + STARTUP_SETTLE_MS + 50, 1, 1);
++    assert(a.state == STARTUP && a.enable);
++    for (elapsed = 0; elapsed <= STARTUP_TIMEOUT_MS; ++elapsed) {
++        if (a.state == TRIPPED) break;
++        ticks(&a, &replay, 1, 1, 1);
++        assert(a.state != RUN);
++    }
++    assert(a.state == TRIPPED && a.fault == F_START_TIMEOUT);
++    off(&a);
++
++    /* Voltage at target does not establish CV regulation while measured
++     * current exceeds the 200 mA command. This remains below the separate
++     * sampled-current trip, so completion itself must reject the response. */
++    startup(&a);
++    replay = cold;
++    replay.vout = 2000;
++    replay.iout = replay.il = 300;
++    for (elapsed = 0; elapsed <= STARTUP_TIMEOUT_MS; ++elapsed) {
++        if (a.state == TRIPPED) break;
++        ticks(&a, &replay, 1, 1, 1);
++        assert(a.state != RUN);
++    }
++    assert(a.state == TRIPPED && a.fault == F_START_TIMEOUT);
++    off(&a);
++
++    /* Qualification needs 100 consecutive near-target samples after ramp. */
++    startup(&a);
++    replay = cold;
++    replay.vout = 700;
++    replay.iout = replay.il = 20;
++    ticks(&a, &replay, STARTUP_RAMP_MS + 10, 1, 1);
++    assert(a.state == STARTUP);
++    replay.vout = 2000;
++    replay.iout = replay.il = 200;
++    ticks(&a, &replay, STARTUP_SETTLE_MS - 1, 1, 1);
++    assert(a.state == STARTUP);
++    ticks(&a, &replay, 1, 1, 1);
++    assert(a.state == RUN);
++}
++
++static void test_immediate_and_delayed_protection(void)
++{
++    App a;
++    Sample s = cold;
++    ready(&a);
++    request_start(&a);
++    ticks(&a, &s, 1, 0, 1);
++    assert(a.state == TRIPPED && a.fault == F_HARDWARE);
++    off(&a);
++    startup(&a);
++    ticks(&a, &s, 1, 0, 1);
++    assert(a.state == TRIPPED && a.fault == F_HARDWARE);
++    off(&a);
++    running(&a);
++    s = a.last_sample;
++    ticks(&a, &s, 1, 0, 0);
++    assert(a.state == TRIPPED && a.fault == F_HARDWARE);
++    off(&a);
++
++    for (unsigned active = 0; active < 2; ++active) {
++        if (active) running(&a); else startup(&a);
++        s = a.last_sample;
++        ticks(&a, &s, OC_DELAY_MS - 1, 1, 0);
++        assert(a.state == (active ? RUN : STARTUP));
++        ticks(&a, &s, 1, 1, 0);
++        assert(a.state == TRIPPED && a.fault == F_OC);
++        off(&a);
++
++        if (active) running(&a); else startup(&a);
++        s = a.last_sample;
++        ticks(&a, &s, OC_DELAY_MS - 1, 1, 0);
++        ticks(&a, &s, 1, 1, 1);
++        ticks(&a, &s, OC_DELAY_MS - 1, 1, 0);
++        assert(a.state == (active ? RUN : STARTUP));
++        ticks(&a, &s, 1, 1, 0);
++        assert(a.state == TRIPPED && a.fault == F_OC);
++
++        if (active) running(&a); else startup(&a);
++        s = a.last_sample;
++        s.vout = 3000;
++        ticks(&a, &s, 1, 1, 1);
++        assert(a.state == (active ? RUN : STARTUP));
++        s.vout = 3001;
++        ticks(&a, &s, 1, 1, 1);
++        assert(a.state == TRIPPED && a.fault == F_OV);
++        off(&a);
++
++        if (active) running(&a); else startup(&a);
++        s = a.last_sample;
++        s.valid = 0;
++        ticks(&a, &s, 1, 1, 1);
++        assert(a.state == TRIPPED && a.fault == F_ADC);
++        off(&a);
++
++        if (active) running(&a); else startup(&a);
++        s = a.last_sample;
++        s.vin = 16001;
++        ticks(&a, &s, 1, 1, 1);
++        assert(a.state == TRIPPED && a.fault == F_INPUT);
++        off(&a);
++
++        if (active) running(&a); else startup(&a);
++        s = a.last_sample;
++        s.vin_post = 10999;
++        ticks(&a, &s, 1, 1, 1);
++        assert(a.state == TRIPPED && a.fault == F_INPUT);
++        off(&a);
++    }
++
++    running(&a);
++    s = a.last_sample;
++    s.vout = s.iout = s.il = 0;
++    ticks(&a, &s, UV_DELAY_MS - 1, 1, 1);
++    assert(a.state == RUN);
++    ticks(&a, &s, 1, 1, 1);
++    assert(a.state == TRIPPED && a.fault == F_LOW_OUTPUT);
++    off(&a);
++
++    startup(&a);
++    s = cold;
++    s.iout = SAMPLED_IOUT_TRIP_MA + 1;
++    ticks(&a, &s, SAMPLED_CURRENT_DELAY_MS - 1, 1, 1);
++    assert(a.state == STARTUP);
++    ticks(&a, &s, 1, 1, 1);
++    assert(a.state == TRIPPED && a.fault == F_CURRENT);
++    off(&a);
++    running(&a);
++    s = a.last_sample;
++    s.il = SAMPLED_IL_TRIP_MA + 1;
++    ticks(&a, &s, SAMPLED_CURRENT_DELAY_MS, 1, 1);
++    assert(a.state == TRIPPED && a.fault == F_CURRENT);
++    off(&a);
++    running(&a);
++    s = a.last_sample;
++    s.il = -SAMPLED_IL_TRIP_MA - 1;
++    ticks(&a, &s, SAMPLED_CURRENT_DELAY_MS, 1, 1);
++    assert(a.state == TRIPPED && a.fault == F_CURRENT);
++    off(&a);
++}
++
++static void test_implausible_samples_do_not_reach_control_math(void)
++{
++    const i32 extremes[] = {INT_MIN, INT_MAX};
++    for (unsigned active = 0; active < 2; ++active) {
++        for (unsigned channel = 0; channel < 6; ++channel) {
++            for (unsigned value = 0; value < 2; ++value) {
++                App a;
++                if (active) running(&a); else startup(&a);
++                Sample s = a.last_sample;
++                switch (channel) {
++                case 0: s.vin = extremes[value]; break;
++                case 1: s.iin = extremes[value]; break;
++                case 2: s.vout = extremes[value]; break;
++                case 3: s.iout = extremes[value]; break;
++                case 4: s.il = extremes[value]; break;
++                default: s.vin_post = extremes[value]; break;
++                }
++                ticks(&a, &s, 1, 1, 1);
++                assert(a.state == TRIPPED && a.fault == F_ADC);
++                off(&a);
++            }
++        }
++    }
++}
++
++static void test_first_fault_and_manual_restart(void)
++{
++    App a;
++    running(&a);
++    Sample s = a.last_sample;
++    i32 duty_before = a.duty;
++    assert(duty_before > 0);
++    s.vout = 3001;
++    s.iout = 173;
++    s.il = 185;
++    ticks(&a, &s, 1, 1, 1);
++    assert(a.state == TRIPPED && a.fault == F_OV);
++    assert(a.last_fault.valid && a.last_fault.code == F_OV);
++    assert(a.last_fault.state_before == RUN);
++    assert(a.last_fault.vout == 3001 && a.last_fault.iout == 173);
++    assert(a.last_fault.il == 185 && a.last_fault.vin == s.vin);
++    assert(a.last_fault.vin_post == s.vin_post);
++    assert(a.last_fault.duty == duty_before);
++    assert(a.last_fault.flags & RECORD_ENABLE);
++    assert(!(a.last_fault.flags & RECORD_ARM));
++    assert(a.last_fault.flags & RECORD_SAMPLE_VALID);
++    assert(a.last_fault.flags & RECORD_BYPASS);
++    FaultRecord first = a.last_fault;
++    off(&a);
++
++    s.valid = 0;
++    ticks(&a, &s, 1000, 0, 0);
++    app_trip(&a, F_TIMING);
++    assert(a.state == TRIPPED && a.fault == F_OV);
++    record_equal(&first, &a.last_fault);
++    assert(app_command(&a, CMD_START, 0) == CMD_BAD_STATE);
++    assert(app_command(&a, CMD_CONFIRM_BYPASS, 0) == CMD_BAD_STATE);
++    record_equal(&first, &a.last_fault);
++
++    assert(app_command(&a, CMD_STOP, 0) == CMD_OK);
++    assert(a.state == OFF && !a.bypass_confirmed);
++    record_equal(&first, &a.last_fault);
++    ticks(&a, &cold, 1000, 1, 1);
++    assert(a.state == OFF);
++    record_equal(&first, &a.last_fault);
++    off(&a);
++    assert(app_command(&a, CMD_PRECHARGE, 0) == CMD_OK);
++    assert(!a.last_fault.valid && a.fault == F_NONE);
++    ticks(&a, &cold, PRECHARGE_MS, 1, 1);
++    assert(a.state == READY && !a.bypass_confirmed);
++    assert(app_command(&a, CMD_START, 0) == CMD_BAD_STATE);
++    off(&a);
++
++    running(&a);
++    app_trip(&a, F_TIMING);
++    assert(a.state == TRIPPED && a.last_fault.valid);
++    assert(app_command(&a, CMD_CLEAR_RECORD, 0) == CMD_OK);
++    assert(!a.last_fault.valid);
++    assert(a.state == TRIPPED && a.fault == F_TIMING);
++    assert(app_command(&a, CMD_START, 0) == CMD_BAD_STATE);
++    off(&a);
++}
++
++static void test_stop_from_every_state(void)
++{
++    for (unsigned state = OFF; state <= TRIPPED; ++state) {
++        App a;
++        if (state == OFF) app_init(&a);
++        else if (state == PRECHARGE) {
++            app_init(&a);
++            assert(app_command(&a, CMD_PRECHARGE, 0) == CMD_OK);
++        } else if (state == READY) ready(&a);
++        else if (state == ARMING) { ready(&a); request_start(&a); }
++        else if (state == STARTUP) startup(&a);
++        else {
++            running(&a);
++            if (state == TRIPPED) app_trip(&a, F_TIMING);
++        }
++        assert(a.state == (State)state);
++        FaultRecord saved = a.last_fault;
++        assert(app_command(&a, CMD_STOP, 0) == CMD_OK);
++        assert(a.state == OFF && !a.bypass_confirmed);
++        assert(a.vset == 2000 && a.iset == 200);
++        record_equal(&saved, &a.last_fault);
++        off(&a);
++        ticks(&a, &cold, STARTUP_TIMEOUT_MS + 1, 1, 1);
++        assert(a.state == OFF);
++        off(&a);
++    }
++}
++
++static void test_adc_units(void)
++{
++    const u16 raw[6] = {1692, 124, 226, 248, 2048, 1636};
++    u16 bad[6] = {1692, 124, 226, 248, 2048, 1636};
++    Sample s;
++    adc_convert(raw, &s);
++    assert(s.valid);
++    assert(s.vin >= 14990 && s.vin <= 15010);
++    assert(s.iin >= 98 && s.iin <= 101);
++    assert(s.vout >= 1995 && s.vout <= 2010);
++    assert(s.iout >= 198 && s.iout <= 202);
++    assert(s.il >= -2 && s.il <= 2);
++    assert(s.vin_post >= 14490 && s.vin_post <= 14510);
++    bad[0] = 4095;
++    adc_convert(bad, &s);
++    assert(!s.valid);
++    bad[0] = raw[0];
++    bad[4] = 0;
++    adc_convert(bad, &s);
++    assert(!s.valid);
++}
++
++typedef struct { double il, vout; } Plant;
++
++/* Approximate averaged synchronous buck: no switching ripple, dead time,
++ * diode/body-diode paths, ADC noise/delay, saturation, or hardware protection.
++ * RK4 at 1 us avoids disguising the 220 uH/470 uF resonance with a coarse
++ * 1 ms Euler step. The production controller still executes only at 1 kHz. */
++static Plant derivative(Plant p, double duty, double load)
++{
++    Plant d = {(duty * 13.8 - p.vout - .15 * p.il) / 220e-6,
++               (p.il - p.vout / load) / 470e-6};
++    return d;
++}
++
++static Plant plus(Plant p, Plant k, double step)
++{
++    Plant q = {p.il + step * k.il, p.vout + step * k.vout};
++    return q;
++}
++
++static void integrate(Plant *p, double duty, double load)
++{
++    const double dt = 1e-6;
++    for (unsigned us = 0; us < 1000; ++us) {
++        Plant k1 = derivative(*p, duty, load);
++        Plant k2 = derivative(plus(*p, k1, dt / 2), duty, load);
++        Plant k3 = derivative(plus(*p, k2, dt / 2), duty, load);
++        Plant k4 = derivative(plus(*p, k3, dt), duty, load);
++        p->il += dt / 6 * (k1.il + 2 * k2.il + 2 * k3.il + k4.il);
++        p->vout += dt / 6 * (k1.vout + 2 * k2.vout + 2 * k3.vout + k4.vout);
++        assert(isfinite(p->il) && isfinite(p->vout));
++    }
++}
++
++static void plant_run(double load)
++{
++    App a;
++    Plant p = {0, 0};
++    Sample s = cold;
++    double peak = 0, v_sum = 0, i_sum = 0;
++    double v_min = 100, v_max = -100;
++    unsigned first_run = 0, count = 0;
++    int saw_pwm_before_run = 0;
++    ready(&a);
++    request_start(&a);
++    for (unsigned ms = 1; ms <= 1600; ++ms) {
++        s.vout = (i32)lround(1000 * p.vout);
++        s.iout = (i32)lround(1000 * p.vout / load);
++        s.il = (i32)lround(1000 * p.il);
++        s.iin = (i32)lround(1000 * p.il * a.duty / 10000.0);
++        ticks(&a, &s, 1, 1, 1);
++        if (a.state == TRIPPED) {
++            fprintf(stderr, "LC R=%.1f tripped at %u ms: fault=%d V=%.4f I=%.4f IL=%.4f duty=%d\n",
++                    load, ms, a.fault, p.vout, p.vout / load, p.il,
++                    a.last_fault.duty);
++        }
++        assert(a.state == ARMING || a.state == STARTUP || a.state == RUN);
++        if (a.state == STARTUP && a.duty > 0) saw_pwm_before_run = 1;
++        if (a.state == RUN && !first_run) first_run = ms;
++        integrate(&p, a.enable ? a.duty / 10000.0 : 0, load);
++        if (p.vout > peak) peak = p.vout;
++        assert(p.vout <= 3.0);
++        if (ms > 1400) {
++            v_sum += p.vout;
++            i_sum += p.vout / load;
++            if (p.vout < v_min) v_min = p.vout;
++            if (p.vout > v_max) v_max = p.vout;
++            ++count;
++        }
++    }
++    assert(saw_pwm_before_run && first_run && first_run <= 1005);
++    assert(a.state == RUN);
++    double mean_v = v_sum / count, mean_i = i_sum / count;
++    double expected_v = load < 10 ? .2 * load : 2.0;
++    printf("LC approximate R=%.1f: RUN=%ums mean=%.4fV/%.4fA peak=%.4fV ripple=%.4fV\n",
++           load, first_run, mean_v, mean_i, peak, v_max - v_min);
++    fflush(stdout);
++    assert(fabs(mean_v - expected_v) <= expected_v * .15);
++    assert(fabs(mean_i - .2) <= .2 * .15);
++    assert(v_max - v_min <= .10);
++    assert(app_command(&a, CMD_STOP, 0) == CMD_OK);
++    off(&a);
++}
++
++int main(void)
++{
++    test_commands_and_interlocks();
++    test_arm_timing_and_start_edit_lock();
++    test_input_and_prebias_boundaries();
++    test_current_before_arm_or_enable();
++    test_no_feedback_and_response_gating();
++    test_immediate_and_delayed_protection();
++    test_implausible_samples_do_not_reach_control_math();
++    test_first_fault_and_manual_restart();
++    test_stop_from_every_state();
++    test_adc_units();
++    plant_run(10);
++    plant_run(8);
++    plant_run(5);
++    puts("PASS B2: real controller interlocks, startup/response, protections, first-fault retention, STOP, ADC and approximate LC regressions");
++    return 0;
++}
+diff --git a/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/tests/test_diag.c b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/tests/test_diag.c
+new file mode 100644
+--- /dev/null
++++ b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/tests/test_diag.c
+@@ -0,0 +1,40 @@
++#include "diag.h"
++#include <assert.h>
++#include <stdio.h>
++int main(void){
++ diag_init();
++ assert(D_CMD*4==0x10 && D_VALUE*4==0x14 && D_RESERVED_OLD_CMD*4==0x9C);
++ assert(debug_window.w[D_MAGIC]==0x42324332u && debug_window.w[D_CMD]==0);
++ App a;app_init(&a);Sample s={15000,30,20,0,0,13800,1};
++ HwSnapshot h={0xC03,400,0x8000,0x81,1,0x33333322,0};
++ debug_window.w[D_CMD]=CMD_STOP;debug_window.w[D_VALUE]=123;
++ debug_window.w[D_RESERVED_OLD_CMD]=CMD_START;
++ diag_update(&a,&s,&h,0xC03,1,0,0,1234);
++ assert(debug_window.w[D_CMD]==CMD_STOP && debug_window.w[D_VALUE]==123);
++ assert(debug_window.w[D_RESERVED_OLD_CMD]==0);
++ assert(debug_window.w[D_SEQ]%2==0 && debug_window.w[D_TRACE_COUNT]==1);
++ diag_ack(CMD_STOP,CMD_OK);
++ assert(debug_window.w[D_ACK_SEQ]==1 && debug_window.w[D_LAST_CMD]==CMD_STOP);
++ assert(debug_window.w[D_SEQ]%2==0);
++ for(u32 i=1;i<2000;i++){a.tick_ms=i;diag_update(&a,&s,&h,0,1,0,0,1200);}
++ assert(debug_window.w[D_TRACE_COUNT]==256);
++ a.state=STARTUP;a.enable=1;a.duty=1100;a.last_sample=s;
++ app_trip(&a,F_START_NO_RISE);
++ diag_update(&a,&s,&h,0,2000,0,0,1300);
++ assert(debug_window.w[D_TRACE_FROZEN]==1 && debug_window.w[D_RECORD_DUTY]==1100);
++ assert(debug_window.w[D_HW_CCR]==400 && debug_window.w[D_HW_BDTR]==0x8000);
++ u32 count=debug_window.w[D_TRACE_COUNT],next=debug_window.w[D_TRACE_NEXT];
++ h.ccr=0;h.bdtr=0;h.after_kill=1;
++ app_command(&a,CMD_STOP,0);
++ for(u32 i=0;i<100;i++){a.tick_ms++;diag_update(&a,&s,&h,0,2000,0,1,1200);}
++ assert(debug_window.w[D_TRACE_COUNT]==count && debug_window.w[D_TRACE_NEXT]==next);
++ assert(debug_window.w[D_HW_CCR]==400 && debug_window.w[D_AFTER_KILL]==0);
++ assert(debug_window.w[D_RECORD_CODE]==F_START_NO_RISE);
++ diag_reset_trace();app_command(&a,CMD_CLEAR_RECORD,0);
++ a.tick_ms++;diag_update(&a,&s,&h,0,2000,0,1,1200);
++ assert(debug_window.w[D_TRACE_FROZEN]==0 && debug_window.w[D_TRACE_COUNT]==1);
++ assert(debug_window.w[D_RECORD]==0);
++ assert(debug_window.w[D_ISR_CYCLES]==1300);
++ puts("diag: fixed ABI, legacy address inert, first hardware capture and trace freeze pass");
++ return 0;
++}
+diff --git a/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/tests/test_locked.c b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/tests/test_locked.c
+new file mode 100644
+--- /dev/null
++++ b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/tests/test_locked.c
+@@ -0,0 +1,17 @@
++#include "app.h"
++#include <assert.h>
++#include <stdio.h>
++int main(void){
++ App a;Sample s={15000,30,0,0,0,13800,1};app_init(&a);
++ assert(app_command(&a,CMD_PRECHARGE,0)==CMD_OK);
++ for(u32 i=0;i<PRECHARGE_MS;i++)app_tick(&a,&s,1,1);
++ assert(a.state==READY);
++ assert(app_command(&a,CMD_CONFIRM_BYPASS,0)==CMD_OK);
++ assert(app_command(&a,CMD_START,0)==CMD_LOCKED);
++ for(u32 i=0;i<2000;i++){
++  app_tick(&a,&s,1,1);
++  assert(a.state==READY && !a.arm && !a.enable && a.duty==0);
++ }
++ puts("locked: POWER=0 refuses START and keeps requests off");
++ return 0;
++}
+diff --git a/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/tests/test_platform.c b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/tests/test_platform.c
+new file mode 100644
+--- /dev/null
++++ b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/tests/test_platform.c
+@@ -0,0 +1,244 @@
++/* Integration regression for the real SysTick/mailbox adapter. This narrow
++ * host register/IRQ model does not establish physical pin or timing behavior. */
++#include <assert.h>
++#include <stdio.h>
++#include <string.h>
++#include "app.h"
++
++#if !POWER_STAGE_ALLOWED
++#error "Platform adapter regression requires POWER_STAGE_ALLOWED=1"
++#endif
++
++static volatile u32 *mock_reg(u32 address);
++#define REG(a) (*mock_reg(a))
++#define HOST_TEST 1
++#define main firmware_main
++#include "../src/main.c"
++#undef main
++
++static u32 idr, ccr, bdtr, cr1, ccer, crl, exti_pr, cycles;
++static u32 other_register;
++static u32 irq_masked, inject_fault_on_unlock, output_calls, kill_calls;
++static u32 expect_rearm_lock;
++static const u16 healthy_raw[6] = {1692, 0, 0, 0, 2048, 1557};
++
++static volatile u32 *mock_reg(u32 address) {
++ switch (address) {
++ case GPIOB + 8: return &idr;
++ case GPIOB: return &crl;
++ case TIM1 + 0x34: return &ccr;
++ case TIM1 + 0x44: return &bdtr;
++ case TIM1: return &cr1;
++ case TIM1 + 0x20: return &ccer;
++ case 0x40010414u: return &exti_pr;
++ case 0xE0001004u: return &cycles;
++ default:
++  assert(0 && "unexpected host register access");
++  return &other_register;
++ }
++}
++
++void platform_test_lock(void) {
++ assert(!irq_masked);
++ if (expect_rearm_lock) {
++  /* PRECHARGE must not mutate the state/record before masking IRQs. */
++  assert(app.state == TRIPPED && app.last_fault.valid);
++  expect_rearm_lock = 0;
++ }
++ irq_masked = 1;
++}
++
++static void dispatch_fault_irq(void) {
++ assert(!irq_masked);
++ exti_pr |= 1u << 10;
++ EXTI15_10_IRQHandler();
++ /* The actual handler writes one to clear EXTI_PR10. A plain host lvalue
++  * cannot implement W1C, so apply that peripheral effect after dispatch. */
++ assert(exti_pr == (1u << 10));
++ exti_pr = 0;
++}
++
++void platform_test_unlock(void) {
++ assert(irq_masked);
++ irq_masked = 0;
++ if (inject_fault_on_unlock) {
++  inject_fault_on_unlock = 0;
++  dispatch_fault_irq(); /* A fresh pulse after the atomic manual rearm. */
++ }
++}
++
++u8 board_sample(u16 raw[6]) {
++ memcpy(raw, healthy_raw, sizeof(healthy_raw));
++ return 1;
++}
++void board_kill(void) {
++ kill_calls++;
++ idr &= ~3u;
++ bdtr &= ~(1u << 15);
++ ccr = 0;
++}
++void board_outputs(const App *a) {
++ assert(irq_masked);
++ output_calls++;
++ idr = (idr & ~3u) | (a->enable ? 1u : 0u) | (a->arm ? 2u : 0u);
++ ccr = a->enable ? (u32)a->duty * PWM_PERIOD / 10000u : 0;
++ bdtr = a->enable ? bdtr | (1u << 15) : bdtr & ~(1u << 15);
++}
++void board_init(void) {}
++void lcd_init(void) {}
++void lcd_update(const App *a, const Sample *s) { (void)a; (void)s; }
++
++static void reset_fixture(void) {
++ app_init(&app);
++ diag_init();
++ sample = (Sample){0};
++ ticks = hard_fault = fault_irq_count = scans = failures = 0;
++ platform_ready = 1;
++ idr = (1u << 10) | (1u << 11);
++ ccr = bdtr = exti_pr = other_register = 0;
++ cr1 = 0x81; ccer = 1; crl = 0x44444422;
++ /* Keep DWT constant: these tests exercise dispatch, not elapsed-time checks.
++  * SysTick's function-local previous counter therefore stays consistent. */
++ cycles = 1000;
++ irq_masked = inject_fault_on_unlock = output_calls = kill_calls = 0;
++ expect_rearm_lock = 0;
++}
++
++static void command_tick(Command command) {
++ debug_window.w[D_VALUE] = 0;
++ debug_window.w[D_CMD] = (u32)command;
++ SysTick_Handler();
++ assert(!irq_masked);
++ assert(debug_window.w[D_CMD] == 0);
++ assert(debug_window.w[D_LAST_CMD] == (u32)command);
++ assert(output_calls == 1);
++}
++
++static void set_running(void) {
++ app.state = RUN;
++ app.enable = 1;
++ app.duty = 500;
++ app.target_mv = app.vset;
++ idr |= 1u;
++ ccr = 500u * PWM_PERIOD / 10000u;
++ bdtr = 1u << 15;
++}
++
++static void assert_off(void) {
++ assert(!app.enable && !app.arm && !app.duty);
++ assert(!(idr & 3u) && !ccr && !(bdtr & (1u << 15)));
++}
++
++static void test_not_ready(void) {
++ const Command commands[] = {CMD_PRECHARGE, CMD_CONFIRM_BYPASS, CMD_START};
++ for (u32 i = 0; i < sizeof(commands) / sizeof(commands[0]); i++) {
++  reset_fixture();
++  platform_ready = 0;
++  if (commands[i] != CMD_PRECHARGE) app.state = READY;
++  if (commands[i] == CMD_START) app.bypass_confirmed = 1;
++  command_tick(commands[i]);
++  assert(debug_window.w[D_ACK] == CMD_BAD_STATE);
++  assert(app.state == (commands[i] == CMD_PRECHARGE ? OFF : READY));
++  assert_off();
++ }
++}
++
++static void test_rejected_rearm_preserves_fault(void) {
++ reset_fixture();
++ set_running();
++ hard_fault = 1;
++ command_tick(CMD_PRECHARGE);
++ assert(debug_window.w[D_ACK] == CMD_BAD_STATE);
++ assert(hard_fault == 1 && app.state == TRIPPED && app.fault == F_HARDWARE);
++ assert(app.last_fault.state_before == RUN);
++ assert_off();
++}
++
++static void test_accepted_rearm(void) {
++ reset_fixture();
++ app_trip(&app, F_HARDWARE);
++ hard_fault = 1;
++ command_tick(CMD_PRECHARGE);
++ assert(debug_window.w[D_ACK] == CMD_OK);
++ assert(!hard_fault && app.state == PRECHARGE && app.fault == F_NONE);
++ assert(!app.last_fault.valid && app.pre_ms == 1);
++ assert_off();
++}
++
++static void test_pending_or_low_fault_preserved(void) {
++ for (u32 pending = 0; pending < 2; pending++) {
++  reset_fixture();
++  app_trip(&app, F_HARDWARE);
++  hard_fault = 1;
++  if (pending) exti_pr = 1u << 10;
++  else idr &= ~(1u << 10);
++  command_tick(CMD_PRECHARGE);
++  assert(debug_window.w[D_ACK] == CMD_OK);
++  assert(hard_fault == 1 && app.state == TRIPPED && app.fault == F_HARDWARE);
++  assert_off();
++ }
++ /* An undispatched pending edge also blocks outputs without a prior sticky. */
++ reset_fixture();
++ exti_pr = 1u << 10;
++ command_tick(CMD_PRECHARGE);
++ assert(app.state == TRIPPED && app.fault == F_HARDWARE);
++ assert_off();
++}
++
++static void test_fault_at_rearm_unlock(void) {
++ reset_fixture();
++ app_trip(&app, F_HARDWARE);
++ hard_fault = 1;
++ expect_rearm_lock = 1;
++ inject_fault_on_unlock = 1;
++ command_tick(CMD_PRECHARGE);
++ assert(debug_window.w[D_ACK] == CMD_OK);
++ assert(hard_fault == 1 && fault_irq_count == 1 && kill_calls == 1);
++ assert(!expect_rearm_lock);
++ assert(app.state == TRIPPED && app.fault == F_HARDWARE);
++ assert_off();
++}
++
++static void test_pad_readbacks(void) {
++ reset_fixture();
++ app.state = ARMING; app.arm = 1; /* Requested last tick, pad still low. */
++ SysTick_Handler();
++ assert(app.state == TRIPPED && app.fault == F_ARM_PIN);
++ assert(app.last_fault.code == F_ARM_PIN);
++ assert_off();
++
++ reset_fixture();
++ set_running();
++ idr &= ~1u;
++ SysTick_Handler();
++ assert(app.state == TRIPPED && app.fault == F_EN_PIN);
++ assert(app.last_fault.code == F_EN_PIN);
++ assert_off();
++}
++
++static void test_stop_and_inert_legacy_mailbox(void) {
++ reset_fixture();
++ set_running();
++ command_tick(CMD_STOP);
++ assert(debug_window.w[D_ACK] == CMD_OK && app.state == OFF);
++ assert_off();
++
++ reset_fixture();
++ debug_window.w[D_RESERVED_OLD_CMD] = CMD_START;
++ SysTick_Handler();
++ assert(app.state == OFF && debug_window.w[D_ACK_SEQ] == 0);
++ assert(debug_window.w[D_RESERVED_OLD_CMD] == 0);
++ assert_off();
++}
++
++int main(void) {
++ test_not_ready();
++ test_rejected_rearm_preserves_fault();
++ test_accepted_rearm();
++ test_pending_or_low_fault_preserved();
++ test_fault_at_rearm_unlock();
++ test_pad_readbacks();
++ test_stop_and_inert_legacy_mailbox();
++ puts("platform: real SysTick mailbox, readiness gate, atomic rearm, pending/new IRQ, pad readback and STOP pass (host model only)");
++ return 0;
++}
+diff --git a/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/tests/verify_image.py b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/tests/verify_image.py
+new file mode 100644
+--- /dev/null
++++ b/projects/2026-electronics-contest/g-buck/rev-c2/firmware/b2/tests/verify_image.py
+@@ -0,0 +1,60 @@
++#!/usr/bin/env python3
++"""Check actual ELF placement, vector entries, Intel HEX checksum and BIN match."""
++import hashlib
++from pathlib import Path
++import struct
++import sys
++
++build = Path(sys.argv[1] if len(sys.argv) > 1 else 'build/p1-l1')
++elf = (build / 'gbuck.elf').read_bytes()
++h = struct.unpack_from('<16sHHIIIIIHHHHHH', elf)
++assert h[0][:7] == b'\x7fELF\x01\x01\x01' and h[2] == 40
++sections = [struct.unpack_from('<IIIIIIIIII', elf, h[6] + i*h[11]) for i in range(h[12])]
++namesec = sections[h[13]]
++names = elf[namesec[4]:namesec[4]+namesec[5]]
++def name(offset):
++    return names[offset:names.index(0, offset)].decode()
++sections = {name(s[0]): s for s in sections}
++assert sections['.swd_mailbox'][3:6:2] == (0x20000000, 0x100)
++assert sections['.swd_trace'][3:6:2] == (0x20000100, 0x2800)
++assert sections['.data'][3] >= 0x20002900
++bss = sections['.bss']
++assert bss[3]+bss[5]+2048 < 0x20005000
++image = (build / 'gbuck.bin').read_bytes()
++assert 0 < len(image) <= 65536
++vectors = struct.unpack_from('<76I', image)
++assert vectors[0] == 0x20005000
++assert h[4] == vectors[1]
++for i in (1,2,3,4,5,6,11,12,14,15,56):
++    assert vectors[i] & 1 and 0x08000000 <= (vectors[i] & ~1) < 0x08000000+len(image)
++decoded = {}
++base = 0
++ended = False
++for line in (build / 'gbuck.hex').read_text().splitlines():
++    assert line.startswith(':') and not ended
++    data = bytes.fromhex(line[1:])
++    assert len(data) == data[0]+5 and sum(data)%256 == 0
++    address = int.from_bytes(data[1:3], 'big')
++    kind = data[3]
++    payload = data[4:-1]
++    if kind == 0:
++        for i, byte in enumerate(payload):
++            addr = base+address+i
++            assert 0x08000000 <= addr < 0x08010000 and addr not in decoded
++            decoded[addr] = byte
++    elif kind == 4:
++        assert len(payload) == 2
++        base = int.from_bytes(payload, 'big') << 16
++    elif kind == 1:
++        assert not payload
++        ended = True
++    else:
++        assert kind == 5  # optional start-linear address
++assert ended and len(decoded) == len(image)
++assert bytes(decoded[0x08000000+i] for i in range(len(image))) == image
++print(f'{build}: ELF ABI/vectors/RAM, HEX checksum/address and BIN equality PASS')
++print(f'flash={len(image)}B static_ram_end=0x{bss[3]+bss[5]:08X} '
++      f'stack_gap={0x20005000-bss[3]-bss[5]}B')
++for ext in ('bin','hex'):
++    p=build / f'gbuck.{ext}'
++    print(f'{p.name} sha256={hashlib.sha256(p.read_bytes()).hexdigest()}')
