@@ -36,13 +36,15 @@
     "gbuck.bin": "beb3e6d3749a8d92eb7d5578164b37f4567d36868901dafc82051311f14011d2"
   },
   "original_A1_bin_sha256": "7ca238f2fbd3b45dcf05ebd8853b454c8e6697a0365769bb316d76d05789c1a0",
-  "source_patch_sha256": "d003cc2e0e9f054d38c36e7439d184dd63ba9d1ff8279fabf768bf26f8ba2ecb",
+  "source_patch_sha256": "59a13bc682b22002cfde258a5bacbc6c871cd287b870e5b8dad44ed724ba511d",
   "source_sha256": {
     "Makefile": "34adc6a8e9675e6001ff6e412ae02489e6eeebf12746c88799fe5b89e283769a",
     "include/config.h": "e895172d90907775d59218e556420a55e14483c6d273b498630312769b50f50a",
     "src/app.c": "c4271e5a59bd003ce6458a97254f6f41bba4f7c1b7db3077b814a72aa227307a",
     "src/lcd.c": "b3f1900065d69f02982dc40a0755a74f1313098f686565d9e11dadb02cec2ce9",
     "tests/test_bench.c": "36759fcb3736db20d6b1e737f1dc0569d2e8833c956b58c488d0596751ab52f6",
-    "docs/B1_\u53f0\u67b6\u6574\u7ec4\u6d4b\u8bd5_2026-11-04.md": "73efa934624067705d7203ad9c63d0d2eaa36bd98fc62a6c2a74affc84484647"
-  }
+    "docs/B1_台架整组测试_2026-11-04.md": "0526c24f8141f5720dd5f5fb3a1177506c79362d71b7ddad3dc2c8537efbe14f"
+  },
+  "test_plan_revision": "two-channel passive-probe, three B1 runs collected in one batch",
+  "firmware_unchanged_in_plan_revision": true
 }
