@@ -1,0 +1,15 @@
+{
+  "python": "3.12.14",
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "matplotlib": "3.10.8",
+    "python-docx": "1.2.0",
+    "casadi": "3.7.2"
+  },
+  "document_tools": [
+    "pandoc 3.1.11.1",
+    "XeTeX / TeX Live 2025",
+    "LibreOffice headless Word/guide preview"
+  ]
+}

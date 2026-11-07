@@ -1,0 +1,15 @@
+{
+  "system": "ChatGPT via Codex workspace assistant",
+  "verified_model_release": null,
+  "current_prompt_exact": "写出最终论文初版",
+  "current_manuscript_output": "reports/UPC_2026_A_Paper_Draft01_EN.md",
+  "scope": [
+    "manuscript drafting",
+    "numerical-source consolidation",
+    "figure generation",
+    "document formatting and checks"
+  ],
+  "earlier_full_queries_and_outputs_available_as_verified_transcript": false,
+  "disclosure_complete": false,
+  "required_next_step": "Append verbatim queries and complete outputs from actual session exports; do not replace with summaries or repository links"
+}

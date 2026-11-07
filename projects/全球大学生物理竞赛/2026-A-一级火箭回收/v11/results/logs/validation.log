@@ -1,0 +1,24 @@
+{
+  "document_build_checks_pass": true,
+  "abstract_words_whitespace_count": 220,
+  "pdf_pages": 20,
+  "figure_count": 4,
+  "table_count": 9,
+  "reference_count": 12,
+  "word_math_object_count": 132,
+  "word_embedded_image_count": 4,
+  "anonymous_page_headers_pass": true,
+  "first_page_only_cover_items_pass": true,
+  "no_overflow_or_missing_glyphs": true,
+  "original_input_hashes_pass": true,
+  "historical_versions_unchanged": {
+    "v8": true,
+    "v9": true,
+    "v10": true
+  },
+  "team_number": "TBA",
+  "team_placeholder_unresolved": true,
+  "full_AI_transcript_attached": false,
+  "full_M1_contact_safety": "NOT_VERIFIED",
+  "submission_ready": false
+}

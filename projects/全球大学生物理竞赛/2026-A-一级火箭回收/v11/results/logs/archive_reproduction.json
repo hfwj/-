@@ -1,0 +1,12 @@
+{
+  "archive_extract_and_document_validation_pass": true,
+  "pdf_pages": 20,
+  "abstract_words": 220,
+  "historical_versions_unchanged": {
+    "v8": true,
+    "v9": true,
+    "v10": true
+  },
+  "submission_ready": false,
+  "note": "Research reproduction bundle, not a complete AI transcript or ready-to-submit anonymous supplement"
+}

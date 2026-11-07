@@ -1,0 +1,1070 @@
+{
+  "nominal": {
+    "M0_subset_pass": true,
+    "full_v4_status": "NOT_VERIFIED",
+    "mass_balance_error_kg": 7.566995918750763e-10,
+    "min_usable_kg": 711.1065143789447,
+    "pair_ignition_count": 2,
+    "third_ignition_count": 1,
+    "atmosphere_domain_pass": true,
+    "terminal_vertical_thrust_over_weight": 0.9502038368400237,
+    "contact_event": true,
+    "initial_propellant_kg": 149299.61841799685,
+    "ignition_command_s": 40.0,
+    "consumed_kg": 147842.01381152793,
+    "toff_s": 160.41609349365027,
+    "restart_command_s": 165.41609349365027,
+    "designed_end_s": 217.7461429094268,
+    "actual_end_s": 217.74601110173282,
+    "final": {
+      "time_s": 217.74601110173282,
+      "height_m": 32.5,
+      "speed_m_s": 0.9999364967181767,
+      "vt_m_s": 1.0418008387408948e-06,
+      "vr_m_s": -0.9999364967176341,
+      "range_m": 206349.55435623787,
+      "mass_kg": 131457.60460646893,
+      "usable_kg": 711.1065143789447,
+      "q_Pa": 0.6105132670779646,
+      "n_sum": 0.9515210449685422,
+      "n_proper": 0.9515210449685416,
+      "thrust_N": 1226649.9030333508,
+      "pair_actual_throttle": 0.6133249515166754,
+      "third_actual_throttle": 0.0,
+      "beta_deg": -0.0006458581416600537,
+      "global_thrust_rate_deg_s": 4.900003347163953
+    },
+    "peaks": {
+      "q_Pa": 47007.577095395536,
+      "n_sum": 2.5275302144410747,
+      "n_proper": 2.490953713462279
+    },
+    "command_min": 0.3000000844506506,
+    "command_max": 1.0999999932891285,
+    "max_actual_throttle_slew_per_s": 1.0,
+    "max_global_thrust_rate_deg_s": 4.914800670473086
+  },
+  "verification": {
+    "density_max_relative_error": 2.6645352591003757e-15,
+    "replays": [
+      {
+        "nodes": 160,
+        "max_step_s": 0.1,
+        "summary": {
+          "M0_subset_pass": true,
+          "full_v4_status": "NOT_VERIFIED",
+          "mass_balance_error_kg": 3.754394128918648e-09,
+          "min_usable_kg": 711.1661015106246,
+          "pair_ignition_count": 2,
+          "third_ignition_count": 1,
+          "atmosphere_domain_pass": true,
+          "terminal_vertical_thrust_over_weight": 0.950439551335076,
+          "contact_event": true,
+          "initial_propellant_kg": 149327.91125581373,
+          "ignition_command_s": 40.0,
+          "consumed_kg": 147870.10559802403,
+          "toff_s": 163.31757921467127,
+          "restart_command_s": 168.31757921467127,
+          "designed_end_s": 217.57639985722196,
+          "actual_end_s": 217.57611562620932,
+          "final": {
+            "time_s": 217.57611562620932,
+            "height_m": 32.5,
+            "speed_m_s": 0.9998631660362807,
+            "vt_m_s": 3.213464282839261e-06,
+            "vr_m_s": -0.9998631660311168,
+            "range_m": 206077.01432953082,
+            "mass_kg": 131457.8056577897,
+            "usable_kg": 711.1661015106246,
+            "q_Pa": 0.6104237259666231,
+            "n_sum": 0.9517570828295676,
+            "n_proper": 0.9517570828295656,
+            "thrust_N": 1226956.071544966,
+            "pair_actual_throttle": 0.6134780357724829,
+            "third_actual_throttle": 0.0,
+            "beta_deg": -0.0013927324934935243,
+            "global_thrust_rate_deg_s": 4.900001870145234
+          },
+          "peaks": {
+            "q_Pa": 47015.55515676478,
+            "n_sum": 2.54354988831139,
+            "n_proper": 2.5043112614296397
+          },
+          "command_min": 0.3000000068274494,
+          "command_max": 1.1000000076421548,
+          "max_actual_throttle_slew_per_s": 1.0000000056225757,
+          "max_global_thrust_rate_deg_s": 4.914800686149822
+        }
+      },
+      {
+        "nodes": 320,
+        "max_step_s": 0.1,
+        "summary": {
+          "M0_subset_pass": true,
+          "full_v4_status": "NOT_VERIFIED",
+          "mass_balance_error_kg": 3.1723175197839737e-09,
+          "min_usable_kg": 711.106776907719,
+          "pair_ignition_count": 2,
+          "third_ignition_count": 1,
+          "atmosphere_domain_pass": true,
+          "terminal_vertical_thrust_over_weight": 0.9502048754772334,
+          "contact_event": true,
+          "initial_propellant_kg": 149299.61841799685,
+          "ignition_command_s": 40.0,
+          "consumed_kg": 147842.01354899915,
+          "toff_s": 160.41609349365027,
+          "restart_command_s": 165.41609349365027,
+          "designed_end_s": 217.7461429094268,
+          "actual_end_s": 217.74601043010182,
+          "final": {
+            "time_s": 217.74601043010182,
+            "height_m": 32.5,
+            "speed_m_s": 0.9999361663135187,
+            "vt_m_s": 1.0454574296815475e-06,
+            "vr_m_s": -0.9999361663129721,
+            "range_m": 206349.55435790663,
+            "mass_kg": 131457.6048689977,
+            "usable_kg": 711.106776907719,
+            "q_Pa": 0.6105128636195558,
+            "n_sum": 0.9515220850301663,
+            "n_proper": 0.951522085030166,
+            "thrust_N": 1226651.2462953446,
+            "pair_actual_throttle": 0.6133256231476722,
+            "third_actual_throttle": 0.0,
+            "beta_deg": -0.0006491491358066112,
+            "global_thrust_rate_deg_s": 4.9000033471639854
+          },
+          "peaks": {
+            "q_Pa": 47007.57710443556,
+            "n_sum": 2.527530214540396,
+            "n_proper": 2.4909537135546973
+          },
+          "command_min": 0.3000000844506506,
+          "command_max": 1.0999999932891285,
+          "max_actual_throttle_slew_per_s": 1.0,
+          "max_global_thrust_rate_deg_s": 4.914800670473086
+        }
+      },
+      {
+        "nodes": 320,
+        "max_step_s": 0.05,
+        "summary": {
+          "M0_subset_pass": true,
+          "full_v4_status": "NOT_VERIFIED",
+          "mass_balance_error_kg": 7.566995918750763e-10,
+          "min_usable_kg": 711.1065143789447,
+          "pair_ignition_count": 2,
+          "third_ignition_count": 1,
+          "atmosphere_domain_pass": true,
+          "terminal_vertical_thrust_over_weight": 0.9502038368400237,
+          "contact_event": true,
+          "initial_propellant_kg": 149299.61841799685,
+          "ignition_command_s": 40.0,
+          "consumed_kg": 147842.01381152793,
+          "toff_s": 160.41609349365027,
+          "restart_command_s": 165.41609349365027,
+          "designed_end_s": 217.7461429094268,
+          "actual_end_s": 217.74601110173282,
+          "final": {
+            "time_s": 217.74601110173282,
+            "height_m": 32.5,
+            "speed_m_s": 0.9999364967181767,
+            "vt_m_s": 1.0418008387408948e-06,
+            "vr_m_s": -0.9999364967176341,
+            "range_m": 206349.55435623787,
+            "mass_kg": 131457.60460646893,
+            "usable_kg": 711.1065143789447,
+            "q_Pa": 0.6105132670779646,
+            "n_sum": 0.9515210449685422,
+            "n_proper": 0.9515210449685416,
+            "thrust_N": 1226649.9030333508,
+            "pair_actual_throttle": 0.6133249515166754,
+            "third_actual_throttle": 0.0,
+            "beta_deg": -0.0006458581416600537,
+            "global_thrust_rate_deg_s": 4.900003347163953
+          },
+          "peaks": {
+            "q_Pa": 47007.577095395536,
+            "n_sum": 2.5275302144410747,
+            "n_proper": 2.490953713462279
+          },
+          "command_min": 0.3000000844506506,
+          "command_max": 1.0999999932891285,
+          "max_actual_throttle_slew_per_s": 1.0,
+          "max_global_thrust_rate_deg_s": 4.914800670473086
+        }
+      }
+    ],
+    "grid_fuel_relative_difference": 0.0001894678468273847,
+    "grid_terminal_speed_difference_m_s": 7.300027723800007e-05,
+    "replay_halving_terminal_speed_difference_m_s": 3.304046580776543e-07
+  },
+  "comparison": [
+    {
+      "label": "立即点火（320区间）",
+      "M0_subset_pass": true,
+      "full_v4_status": "NOT_VERIFIED",
+      "mass_balance_error_kg": 2.8870999813079834e-08,
+      "min_usable_kg": 711.0486351652946,
+      "pair_ignition_count": 2,
+      "third_ignition_count": 1,
+      "atmosphere_domain_pass": true,
+      "terminal_vertical_thrust_over_weight": 0.9500000495170023,
+      "contact_event": true,
+      "initial_propellant_kg": 150862.05068348203,
+      "ignition_command_s": 0.0,
+      "consumed_kg": 149396.69179489932,
+      "toff_s": 162.64794928528593,
+      "restart_command_s": 167.64794928528593,
+      "designed_end_s": 214.70113444597942,
+      "actual_end_s": 214.7011507268286,
+      "final": {
+        "time_s": 214.7011507268286,
+        "height_m": 32.5,
+        "speed_m_s": 1.0000083966581321,
+        "vt_m_s": -1.0268655667845777e-06,
+        "vr_m_s": -1.000008396657605,
+        "range_m": 195234.52530313315,
+        "mass_kg": 131465.3588885827,
+        "usable_kg": 711.0486351652946,
+        "q_Pa": 0.6106010675443828,
+        "n_sum": 0.9513169778147832,
+        "n_proper": 0.9513169778147832,
+        "thrust_N": 1226459.1678953017,
+        "pair_actual_throttle": 0.6132295839476508,
+        "third_actual_throttle": 0.0,
+        "beta_deg": 0.0,
+        "global_thrust_rate_deg_s": -9.234776797020809e-12
+      },
+      "peaks": {
+        "q_Pa": 47005.355731045434,
+        "n_sum": 2.558209434175025,
+        "n_proper": 2.5159227898379095
+      },
+      "command_min": 0.30000003087106186,
+      "command_max": 1.0999999961568372,
+      "max_actual_throttle_slew_per_s": 1.0,
+      "max_global_thrust_rate_deg_s": 4.904876358804873
+    },
+    {
+      "label": "先滑行20秒（80区间）",
+      "M0_subset_pass": true,
+      "full_v4_status": "NOT_VERIFIED",
+      "mass_balance_error_kg": 2.916203811764717e-08,
+      "min_usable_kg": 712.5857738582318,
+      "pair_ignition_count": 2,
+      "third_ignition_count": 1,
+      "atmosphere_domain_pass": true,
+      "terminal_vertical_thrust_over_weight": 0.9547025513027966,
+      "contact_event": true,
+      "initial_propellant_kg": 150021.7560825249,
+      "ignition_command_s": 20.0,
+      "consumed_kg": 148559.06152825404,
+      "toff_s": 160.1798229631279,
+      "restart_command_s": 165.1798229631279,
+      "designed_end_s": 216.7878077923187,
+      "actual_end_s": 216.78390066936024,
+      "final": {
+        "time_s": 216.78390066936024,
+        "height_m": 32.5,
+        "speed_m_s": 0.9981870080923181,
+        "vt_m_s": 5.091800339636251e-05,
+        "vr_m_s": -0.998187006793642,
+        "range_m": 202278.30874102522,
+        "mass_kg": 131462.69455427086,
+        "usable_kg": 712.5857738582318,
+        "q_Pa": 0.6083788282237228,
+        "n_sum": 0.9560259736726481,
+        "n_proper": 0.9560259736722838,
+        "thrust_N": 1232505.2325768836,
+        "pair_actual_throttle": 0.6162526162884419,
+        "third_actual_throttle": 0.0,
+        "beta_deg": -0.019144905778939014,
+        "global_thrust_rate_deg_s": 4.900000840596058
+      },
+      "peaks": {
+        "q_Pa": 47039.08345991842,
+        "n_sum": 2.5124809575557885,
+        "n_proper": 2.4779561928237186
+      },
+      "command_min": 0.3000000054647642,
+      "command_max": 1.10000000720082,
+      "max_actual_throttle_slew_per_s": 1.0,
+      "max_global_thrust_rate_deg_s": 4.914775300233354
+    },
+    {
+      "label": "先滑行40秒（80区间）",
+      "M0_subset_pass": true,
+      "full_v4_status": "NOT_VERIFIED",
+      "mass_balance_error_kg": 2.87545844912529e-08,
+      "min_usable_kg": 710.5992977436914,
+      "pair_ignition_count": 2,
+      "third_ignition_count": 1,
+      "atmosphere_domain_pass": true,
+      "terminal_vertical_thrust_over_weight": 0.9500032948671882,
+      "contact_event": true,
+      "initial_propellant_kg": 149425.44067005644,
+      "ignition_command_s": 40.0,
+      "consumed_kg": 147967.71416896247,
+      "toff_s": 160.73628247566546,
+      "restart_command_s": 165.73628247566546,
+      "designed_end_s": 217.58521444199133,
+      "actual_end_s": 217.58638050407,
+      "final": {
+        "time_s": 217.58638050407,
+        "height_m": 32.5,
+        "speed_m_s": 1.0005701522752657,
+        "vt_m_s": -1.4555506480474714e-05,
+        "vr_m_s": -1.0005701521693946,
+        "range_m": 205941.98450513458,
+        "mass_kg": 131457.72650109397,
+        "usable_kg": 710.5992977436914,
+        "q_Pa": 0.6112872716269816,
+        "n_sum": 0.9513202384042105,
+        "n_proper": 0.9513202384042094,
+        "thrust_N": 1226392.1537938875,
+        "pair_actual_throttle": 0.6131960768969438,
+        "third_actual_throttle": 0.0,
+        "beta_deg": 0.0,
+        "global_thrust_rate_deg_s": -1.3090014687674566e-10
+      },
+      "peaks": {
+        "q_Pa": 47022.05645113262,
+        "n_sum": 2.520836261197127,
+        "n_proper": 2.484490346359407
+      },
+      "command_min": 0.30000001899202905,
+      "command_max": 1.100000007253804,
+      "max_actual_throttle_slew_per_s": 1.0,
+      "max_global_thrust_rate_deg_s": 4.91480024797596
+    },
+    {
+      "label": "先滑行50秒（80区间）",
+      "M0_subset_pass": true,
+      "full_v4_status": "NOT_VERIFIED",
+      "mass_balance_error_kg": 3.958120942115784e-09,
+      "min_usable_kg": 711.6464550957223,
+      "pair_ignition_count": 2,
+      "third_ignition_count": 1,
+      "atmosphere_domain_pass": true,
+      "terminal_vertical_thrust_over_weight": 0.951865595900728,
+      "contact_event": true,
+      "initial_propellant_kg": 151042.59343111957,
+      "ignition_command_s": 50.0,
+      "consumed_kg": 149575.73400886825,
+      "toff_s": 169.5567470829751,
+      "restart_command_s": 174.5567470829751,
+      "designed_end_s": 224.9226514013247,
+      "actual_end_s": 224.92113985016215,
+      "final": {
+        "time_s": 224.92113985016215,
+        "height_m": 32.5,
+        "speed_m_s": 0.9992777560377154,
+        "vt_m_s": 2.1006039452832398e-05,
+        "vr_m_s": -0.9992777558169291,
+        "range_m": 218865.34805797247,
+        "mass_kg": 131466.85942225132,
+        "usable_kg": 711.6464550957223,
+        "q_Pa": 0.6097091411058699,
+        "n_sum": 0.95318508694557,
+        "n_proper": 0.9531850869455167,
+        "thrust_N": 1228881.6426054155,
+        "pair_actual_throttle": 0.6144408213027078,
+        "third_actual_throttle": 0.0,
+        "beta_deg": -0.007406602033774491,
+        "global_thrust_rate_deg_s": 4.900000884846569
+      },
+      "peaks": {
+        "q_Pa": 47028.71274391222,
+        "n_sum": 2.5332499534137822,
+        "n_proper": 2.4962822482076388
+      },
+      "command_min": 0.3023056304882565,
+      "command_max": 1.1000000085810284,
+      "max_actual_throttle_slew_per_s": 1.0,
+      "max_global_thrust_rate_deg_s": 4.914817890247758
+    },
+    {
+      "label": "先滑行40秒（最终320区间）",
+      "M0_subset_pass": true,
+      "full_v4_status": "NOT_VERIFIED",
+      "mass_balance_error_kg": 7.566995918750763e-10,
+      "min_usable_kg": 711.1065143789447,
+      "pair_ignition_count": 2,
+      "third_ignition_count": 1,
+      "atmosphere_domain_pass": true,
+      "terminal_vertical_thrust_over_weight": 0.9502038368400237,
+      "contact_event": true,
+      "initial_propellant_kg": 149299.61841799685,
+      "ignition_command_s": 40.0,
+      "consumed_kg": 147842.01381152793,
+      "toff_s": 160.41609349365027,
+      "restart_command_s": 165.41609349365027,
+      "designed_end_s": 217.7461429094268,
+      "actual_end_s": 217.74601110173282,
+      "final": {
+        "time_s": 217.74601110173282,
+        "height_m": 32.5,
+        "speed_m_s": 0.9999364967181767,
+        "vt_m_s": 1.0418008387408948e-06,
+        "vr_m_s": -0.9999364967176341,
+        "range_m": 206349.55435623787,
+        "mass_kg": 131457.60460646893,
+        "usable_kg": 711.1065143789447,
+        "q_Pa": 0.6105132670779646,
+        "n_sum": 0.9515210449685422,
+        "n_proper": 0.9515210449685416,
+        "thrust_N": 1226649.9030333508,
+        "pair_actual_throttle": 0.6133249515166754,
+        "third_actual_throttle": 0.0,
+        "beta_deg": -0.0006458581416600537,
+        "global_thrust_rate_deg_s": 4.900003347163953
+      },
+      "peaks": {
+        "q_Pa": 47007.577095395536,
+        "n_sum": 2.5275302144410747,
+        "n_proper": 2.490953713462279
+      },
+      "command_min": 0.3000000844506506,
+      "command_max": 1.0999999932891285,
+      "max_actual_throttle_slew_per_s": 1.0,
+      "max_global_thrust_rate_deg_s": 4.914800670473086
+    }
+  ],
+  "audit": {
+    "nominal": {
+      "M0_subset_pass": true,
+      "event": "REFERENCE_CONTACT",
+      "final": {
+        "time_s": 217.7460113625135,
+        "height_m": 32.500000000000014,
+        "vt_m_s": 1.0648090551868342e-06,
+        "vr_m_s": -0.9999366509021783,
+        "mass_kg": 131457.60450451192,
+        "range_m": 206349.55435064613,
+        "q_Pa": 0.6105134553533846,
+        "n_sum": 0.9515206411343416,
+        "n_proper": 0.9515206411343412,
+        "beta_deg": -0.0006445803153825554,
+        "local_direction_rate_deg_s": 4.900003347154584,
+        "global_direction_rate_deg_s": 4.9000033471641595,
+        "usable_kg": 711.1064124219401,
+        "energy_balance_residual_J_kg": 7.683411240577698e-09,
+        "angular_momentum_balance_residual_m2_s": -5.7220458984375e-06,
+        "vertical_thrust_over_weight": 0.9502034335584214
+      },
+      "peaks": {
+        "q_Pa": 47007.57706295695,
+        "n_sum": 2.52753021443614
+      },
+      "domain_pass": true,
+      "max_energy_balance_residual_J_kg": 4.893518052995205e-07,
+      "max_angular_momentum_balance_residual_m2_s": 2.4080276489257812e-05
+    },
+    "rk45": {
+      "M0_subset_pass": true,
+      "event": "REFERENCE_CONTACT",
+      "final": {
+        "time_s": 217.74603280687975,
+        "height_m": 32.49999999999999,
+        "vt_m_s": 8.331634408387476e-07,
+        "vr_m_s": -0.9999471057200399,
+        "mass_kg": 131457.59612196367,
+        "range_m": 206349.55430951813,
+        "q_Pa": 0.6105262218425525,
+        "n_sum": 0.951487433221836,
+        "n_proper": 0.9514874332218359,
+        "beta_deg": -0.0005395028490285969,
+        "local_direction_rate_deg_s": 4.900003347154584,
+        "global_direction_rate_deg_s": 4.900003347162076,
+        "usable_kg": 711.0980298736822,
+        "energy_balance_residual_J_kg": 1.909211277961731e-08,
+        "angular_momentum_balance_residual_m2_s": 1.9073486328125e-05,
+        "vertical_thrust_over_weight": 0.9501702711257815
+      },
+      "peaks": {
+        "q_Pa": 47007.5769028957,
+        "n_sum": 2.5275302110386773
+      },
+      "domain_pass": true,
+      "max_energy_balance_residual_J_kg": 2.407468855381012e-07,
+      "max_angular_momentum_balance_residual_m2_s": 4.482269287109375e-05
+    },
+    "actuator_max_actual_error": 1.1216567674665612e-09,
+    "frozen_open_loop_sensitivity": [
+      {
+        "name": "Cd_minus10pct",
+        "parameters": {
+          "cd": 0.45
+        },
+        "M0_subset_pass": false,
+        "event": "REFERENCE_CONTACT",
+        "final": {
+          "time_s": 204.64569535119918,
+          "height_m": 32.50000000000083,
+          "vt_m_s": 72.42315465735541,
+          "vr_m_s": -80.86601995592908,
+          "mass_kg": 140565.6428959419,
+          "range_m": 206895.45752024566,
+          "q_Pa": 7195.462573682699,
+          "n_sum": 1.686360685390229,
+          "n_proper": 1.6801250505912613,
+          "beta_deg": -19.857199211857857,
+          "local_direction_rate_deg_s": -0.1046751092015572,
+          "global_direction_rate_deg_s": -0.10402379544654344,
+          "usable_kg": 9819.14480385193,
+          "energy_balance_residual_J_kg": 6.28642737865448e-09,
+          "angular_momentum_balance_residual_m2_s": 1.33514404296875e-05,
+          "vertical_thrust_over_weight": 1.4990068361758313
+        },
+        "peaks": {
+          "q_Pa": 52380.959779324774,
+          "n_sum": 2.5148186089031137
+        },
+        "domain_pass": true,
+        "max_energy_balance_residual_J_kg": 6.003538146615028e-07,
+        "max_angular_momentum_balance_residual_m2_s": 4.029273986816406e-05
+      },
+      {
+        "name": "Cd_plus10pct",
+        "parameters": {
+          "cd": 0.55
+        },
+        "M0_subset_pass": false,
+        "event": "NO_CONTACT_BY_PLANNED_END",
+        "final": {
+          "time_s": 217.7461429094268,
+          "height_m": 560.1464183791666,
+          "vt_m_s": -7.504022729129824,
+          "vr_m_s": 3.652421079152872,
+          "mass_kg": 131457.55309021586,
+          "range_m": 205414.17866389788,
+          "q_Pa": 40.41374488818117,
+          "n_sum": 0.9519713655023582,
+          "n_proper": 0.9510176102333044,
+          "beta_deg": 0.0,
+          "local_direction_rate_deg_s": 4.900003347154584,
+          "global_direction_rate_deg_s": 4.899935867789739,
+          "usable_kg": 711.05499812588,
+          "energy_balance_residual_J_kg": 5.587935447692871e-09,
+          "angular_momentum_balance_residual_m2_s": 3.814697265625e-06,
+          "vertical_thrust_over_weight": 0.950157367712734
+        },
+        "peaks": {
+          "q_Pa": 44976.667364855646,
+          "n_sum": 2.536904325958118
+        },
+        "domain_pass": true,
+        "max_energy_balance_residual_J_kg": 1.555308699607849e-07,
+        "max_angular_momentum_balance_residual_m2_s": 1.9073486328125e-05
+      },
+      {
+        "name": "Isp_minus1pct",
+        "parameters": {
+          "isp": 316.8
+        },
+        "M0_subset_pass": false,
+        "event": "USABLE_PROPELLANT_EXHAUSTED",
+        "final": {
+          "time_s": 216.5329437148376,
+          "height_m": 299.8756457069619,
+          "vt_m_s": -0.12198690055574032,
+          "vr_m_s": -2.4197953888296904,
+          "mass_kg": 130746.49809208998,
+          "range_m": 206207.56377234118,
+          "q_Pa": 3.4931774502844193,
+          "n_sum": 1.7158732552515916,
+          "n_proper": 1.715872633865515,
+          "beta_deg": -5.944680010095637,
+          "local_direction_rate_deg_s": 4.900003126182283,
+          "global_direction_rate_deg_s": 4.900002029179365,
+          "usable_kg": -9.094947017729282e-13,
+          "energy_balance_residual_J_kg": 3.725290298461914e-09,
+          "angular_momentum_balance_residual_m2_s": -5.7220458984375e-06,
+          "vertical_thrust_over_weight": 1.7043906586756825
+        },
+        "peaks": {
+          "q_Pa": 46157.572823238654,
+          "n_sum": 2.5319760401326583
+        },
+        "domain_pass": true,
+        "max_energy_balance_residual_J_kg": 3.173481673002243e-07,
+        "max_angular_momentum_balance_residual_m2_s": 1.9311904907226562e-05
+      },
+      {
+        "name": "Isp_plus1pct",
+        "parameters": {
+          "isp": 323.2
+        },
+        "M0_subset_pass": false,
+        "event": "REFERENCE_CONTACT",
+        "final": {
+          "time_s": 209.19086064565664,
+          "height_m": 32.499999999999396,
+          "vt_m_s": 37.94658422335482,
+          "vr_m_s": -53.95800099897642,
+          "mass_kg": 138784.38487718368,
+          "range_m": 206354.23029564123,
+          "q_Pa": 2656.9304388131877,
+          "n_sum": 1.6540109915422099,
+          "n_proper": 1.6527737448320488,
+          "beta_deg": -20.20261398960218,
+          "local_direction_rate_deg_s": -0.04442687675579037,
+          "global_direction_rate_deg_s": -0.04408561666601121,
+          "usable_kg": 8037.886785093694,
+          "energy_balance_residual_J_kg": 2.7939677238464355e-09,
+          "angular_momentum_balance_residual_m2_s": 1.1444091796875e-05,
+          "vertical_thrust_over_weight": 1.514913009755446
+        },
+        "peaks": {
+          "q_Pa": 48212.86328346528,
+          "n_sum": 2.523343510942562
+        },
+        "domain_pass": true,
+        "max_energy_balance_residual_J_kg": 3.727036528289318e-07,
+        "max_angular_momentum_balance_residual_m2_s": 1.9788742065429688e-05
+      },
+      {
+        "name": "rho_minus5pct",
+        "parameters": {
+          "density_factor": 0.95
+        },
+        "M0_subset_pass": false,
+        "event": "REFERENCE_CONTACT",
+        "final": {
+          "time_s": 208.49304870047817,
+          "height_m": 32.499999999998224,
+          "vt_m_s": 45.40259208061611,
+          "vr_m_s": -56.686796610887654,
+          "mass_kg": 137868.43701848618,
+          "range_m": 206654.67686820275,
+          "q_Pa": 3059.700402997161,
+          "n_sum": 1.6707319213767386,
+          "n_proper": 1.668532920164765,
+          "beta_deg": -20.16743877522965,
+          "local_direction_rate_deg_s": -0.05549861342174373,
+          "global_direction_rate_deg_s": -0.05509030018441942,
+          "usable_kg": 7121.938926396192,
+          "energy_balance_residual_J_kg": 6.984919309616089e-10,
+          "angular_momentum_balance_residual_m2_s": -2.6702880859375e-05,
+          "vertical_thrust_over_weight": 1.5253217642521604
+        },
+        "peaks": {
+          "q_Pa": 47094.84390152686,
+          "n_sum": 2.5216358645667274
+        },
+        "domain_pass": true,
+        "max_energy_balance_residual_J_kg": 3.523891791701317e-07,
+        "max_angular_momentum_balance_residual_m2_s": 3.4332275390625e-05
+      },
+      {
+        "name": "rho_plus5pct",
+        "parameters": {
+          "density_factor": 1.05
+        },
+        "M0_subset_pass": false,
+        "event": "NO_CONTACT_BY_PLANNED_END",
+        "final": {
+          "time_s": 217.7461429094268,
+          "height_m": 302.0830463447547,
+          "vt_m_s": -3.852781697987849,
+          "vr_m_s": 1.3970474071473027,
+          "mass_kg": 131457.55309021528,
+          "range_m": 205873.04702205013,
+          "q_Pa": 10.491920358927443,
+          "n_sum": 0.951464423429904,
+          "n_proper": 0.9512544453925154,
+          "beta_deg": 0.0,
+          "local_direction_rate_deg_s": 4.900003347154584,
+          "global_direction_rate_deg_s": 4.899968699899156,
+          "usable_kg": 711.054998125298,
+          "energy_balance_residual_J_kg": 6.51925802230835e-09,
+          "angular_momentum_balance_residual_m2_s": -1.9073486328125e-06,
+          "vertical_thrust_over_weight": 0.9500804019953841
+        },
+        "peaks": {
+          "q_Pa": 48255.86577949702,
+          "n_sum": 2.5325926459348276
+        },
+        "domain_pass": true,
+        "max_energy_balance_residual_J_kg": 3.4819822758436203e-07,
+        "max_angular_momentum_balance_residual_m2_s": 1.52587890625e-05
+      },
+      {
+        "name": "initial_vt_minus1m_s",
+        "parameters": {
+          "dv_t": -1
+        },
+        "M0_subset_pass": false,
+        "event": "REFERENCE_CONTACT",
+        "final": {
+          "time_s": 215.93368857175406,
+          "height_m": 32.499999999999886,
+          "vt_m_s": 1.9663119270808043,
+          "vr_m_s": -11.542378253614379,
+          "mass_kg": 132652.14004441103,
+          "range_m": 206169.11219471882,
+          "q_Pa": 83.707652134656,
+          "n_sum": 1.6924100375545499,
+          "n_proper": 1.692409920887693,
+          "beta_deg": -8.881032001921495,
+          "local_direction_rate_deg_s": 4.900002820597992,
+          "global_direction_rate_deg_s": 4.900020503975784,
+          "usable_kg": 1905.6419523210488,
+          "energy_balance_residual_J_kg": -1.1641532182693481e-09,
+          "angular_momentum_balance_residual_m2_s": -7.62939453125e-06,
+          "vertical_thrust_over_weight": 1.668599368043965
+        },
+        "peaks": {
+          "q_Pa": 46951.805420745404,
+          "n_sum": 2.5266960290881024
+        },
+        "domain_pass": true,
+        "max_energy_balance_residual_J_kg": 6.239279173314571e-07,
+        "max_angular_momentum_balance_residual_m2_s": 3.361701965332031e-05
+      },
+      {
+        "name": "initial_vt_plus1m_s",
+        "parameters": {
+          "dv_t": 1
+        },
+        "M0_subset_pass": false,
+        "event": "NO_CONTACT_BY_PLANNED_END",
+        "final": {
+          "time_s": 217.7461429094268,
+          "height_m": 42.67616854499292,
+          "vt_m_s": 0.3410154052148507,
+          "vr_m_s": -0.9337228648565263,
+          "mass_kg": 131457.55309021485,
+          "range_m": 206529.23515594436,
+          "q_Pa": 0.6027534015425989,
+          "n_sum": 0.9513168155797278,
+          "n_proper": 0.9513162696067202,
+          "beta_deg": 0.0,
+          "local_direction_rate_deg_s": 4.900003347154584,
+          "global_direction_rate_deg_s": 4.900006413959259,
+          "usable_kg": 711.0549981248614,
+          "energy_balance_residual_J_kg": 7.916241884231567e-09,
+          "angular_momentum_balance_residual_m2_s": 2.6702880859375e-05,
+          "vertical_thrust_over_weight": 0.9500030387279469
+        },
+        "peaks": {
+          "q_Pa": 47077.113196101796,
+          "n_sum": 2.52836527651567
+        },
+        "domain_pass": true,
+        "max_energy_balance_residual_J_kg": 4.059402272105217e-07,
+        "max_angular_momentum_balance_residual_m2_s": 3.0517578125e-05
+      },
+      {
+        "name": "initial_vr_minus1m_s",
+        "parameters": {
+          "dv_r": -1
+        },
+        "M0_subset_pass": false,
+        "event": "REFERENCE_CONTACT",
+        "final": {
+          "time_s": 212.7450379041148,
+          "height_m": 32.49999999999959,
+          "vt_m_s": 15.271034075910595,
+          "vr_m_s": -30.00680087410305,
+          "mass_kg": 134887.55919172213,
+          "range_m": 206139.5847726228,
+          "q_Pa": 692.1734278657985,
+          "n_sum": 1.6732137810540622,
+          "n_proper": 1.6731454118333526,
+          "beta_deg": -20.271521396278402,
+          "local_direction_rate_deg_s": 0.007183073490019502,
+          "global_direction_rate_deg_s": 0.007320408498332541,
+          "usable_kg": 4141.0610996321475,
+          "energy_balance_residual_J_kg": 1.862645149230957e-09,
+          "angular_momentum_balance_residual_m2_s": 3.814697265625e-06,
+          "vertical_thrust_over_weight": 1.557987067433766
+        },
+        "peaks": {
+          "q_Pa": 47696.78684705735,
+          "n_sum": 2.5297239968744556
+        },
+        "domain_pass": true,
+        "max_energy_balance_residual_J_kg": 2.2118911147117615e-08,
+        "max_angular_momentum_balance_residual_m2_s": 1.52587890625e-05
+      }
+    ]
+  },
+  "checks": {
+    "coordinate_rhs_max_absolute_error_mixed_SI": 3.694822225952521e-13,
+    "density_max_relative_error": 0.0,
+    "rounded_geopotential_anchor_max_relerr": 2.2775526749674313e-05,
+    "vacuum_max_energy_relerr": 2.220446049250313e-16,
+    "vacuum_max_angular_momentum_relerr": 1.7763568394002505e-15,
+    "ideal_rocket_velocity_error_m_s": 1.0800249583553523e-12,
+    "quadratic_drag_velocity_error_m_s": 6.963318810448982e-13,
+    "negative_controls": [
+      {
+        "name": "beta_add_2pi",
+        "rejected": true,
+        "reason": "Direction outside +/-90 deg"
+      },
+      {
+        "name": "nan_throttle",
+        "rejected": true,
+        "reason": "Missing/nonfinite U1"
+      },
+      {
+        "name": "wrong_shape",
+        "rejected": true,
+        "reason": "Invalid grid/shapes"
+      },
+      {
+        "name": "invalid_timing",
+        "rejected": true,
+        "reason": "Invalid timing/mass"
+      }
+    ],
+    "v8_manifest_pass": true
+  },
+  "reproduction": {
+    "elapsed_s": 120.30713953700251,
+    "initial_propellant_kg": 149299.61841799683,
+    "initial_propellant_difference_kg": 0.0,
+    "final_time_difference_s": 0.0,
+    "shutdown_time_difference_s": 0.0,
+    "max_state_control_node_absolute_difference_mixed_solver_units": 0.0
+  },
+  "reliability": {
+    "independent_vs_v8": {
+      "contact_time_difference_s": 2.607806948162761e-07,
+      "radial_velocity_difference_m_s": -1.541845442432077e-07,
+      "mass_difference_kg": -0.00010195700451731682,
+      "range_difference_m": -5.591748049482703e-06,
+      "q_peak_difference_Pa": -3.243858373025432e-05
+    },
+    "cross_solver_radial_velocity_difference_m_s": 1.0454817861549337e-05,
+    "conditional_attitude": {
+      "max_incoming_misalignment_if_body_follows_thrust_deg": 29.78274316654512,
+      "minimum_required_net_gimbal_for_C07_deg": 24.78274316654512,
+      "max_thrust_tilt_below_232_5m_deg": 20.278320241372196,
+      "minimum_required_net_gimbal_for_C08_deg": 15.278320241372196
+    },
+    "sensitivity_pass_count": 0,
+    "sensitivity_case_count": 9,
+    "nearest_200m_reference_clearance_sample": {
+      "time_s": 209.65,
+      "height_m": 231.78015064335784,
+      "vt_m_s": 34.54939604763828,
+      "vr_m_s": -47.667022868262556,
+      "beta_deg": -20.221990696513682,
+      "local_direction_rate_deg_s": -0.0399183658451486
+    },
+    "final_if_body_follows_thrust_angular_rate_deg_s": 4.900003347154584
+  },
+  "attitude": {
+    "full_M1_status": "NOT_VERIFIED",
+    "angle_only_necessary_condition": "no torque/rate/attitude trajectory guarantee",
+    "attitude_interval_conflict_sample_count": 0,
+    "minimum_required_peak_relative_deflection_deg": 24.782743166545107,
+    "binding_sample": {
+      "time_s": 175.41825792813825,
+      "height_m": 5306.299950209245,
+      "q_Pa": 46985.81548065616,
+      "beta_deg": -14.340450771384116
+    },
+    "binding_incoming_direction_deg": -44.12319393792922,
+    "deflection_scan": [
+      {
+        "assumed_net_deflection_limit_deg": 3,
+        "sampled_angle_necessary_condition_pass": false,
+        "approximate_incompatible_duration_s": 104.2
+      },
+      {
+        "assumed_net_deflection_limit_deg": 5,
+        "sampled_angle_necessary_condition_pass": false,
+        "approximate_incompatible_duration_s": 103.8
+      },
+      {
+        "assumed_net_deflection_limit_deg": 10,
+        "sampled_angle_necessary_condition_pass": false,
+        "approximate_incompatible_duration_s": 100.55000000000001
+      },
+      {
+        "assumed_net_deflection_limit_deg": 15,
+        "sampled_angle_necessary_condition_pass": false,
+        "approximate_incompatible_duration_s": 87.65
+      },
+      {
+        "assumed_net_deflection_limit_deg": 20,
+        "sampled_angle_necessary_condition_pass": false,
+        "approximate_incompatible_duration_s": 26.508421848750586
+      },
+      {
+        "assumed_net_deflection_limit_deg": 25,
+        "sampled_angle_necessary_condition_pass": true,
+        "approximate_incompatible_duration_s": 0.0
+      },
+      {
+        "assumed_net_deflection_limit_deg": 30,
+        "sampled_angle_necessary_condition_pass": true,
+        "approximate_incompatible_duration_s": 0.0
+      }
+    ],
+    "near_ground_required_relative_deflection_deg": 15.278320241372196,
+    "binding_moment_surrogate": {
+      "thrust_N": 1369428.366317297,
+      "assumed_engine_axial_lever_m": 32.5,
+      "required_relative_deflection_deg": 24.782743166545107,
+      "thrust_moment_N_m": -18656141.905408822,
+      "aero_drag_force_N": 904113.0430138491,
+      "status": "illustration only: real engine lever, aerodynamic moment, mass properties unknown"
+    },
+    "uniform_dry_cylinder_surrogate_inertia_kg_m2": 46168958.333333336,
+    "minimum_bang_bang_coast_torque_90deg_in_5s_N_m": 11603524.825911462,
+    "geometry_examples": [
+      {
+        "theta_deg": 0,
+        "foot_height_difference_m": 0.0,
+        "cg_height_at_lowest_foot_contact_m": 32.5,
+        "reference_height_difference_m": 0.0,
+        "body_min_clearance_at_foot_contact_m": 2.0,
+        "body_clears_at_foot_contact": true
+      },
+      {
+        "theta_deg": 2,
+        "foot_height_difference_m": 0.3489949670250097,
+        "cg_height_at_lowest_foot_contact_m": 32.654699361633114,
+        "reference_height_difference_m": 0.1546993616331136,
+        "body_min_clearance_at_foot_contact_m": 2.05113089909194,
+        "body_clears_at_foot_contact": true
+      },
+      {
+        "theta_deg": 5,
+        "foot_height_difference_m": 0.8715574274765816,
+        "cg_height_at_lowest_foot_contact_m": 32.81210640172002,
+        "reference_height_difference_m": 0.3121064017200226,
+        "body_min_clearance_at_foot_contact_m": 2.1231230103049814,
+        "body_clears_at_foot_contact": true
+      },
+      {
+        "theta_deg": 20,
+        "foot_height_difference_m": 3.420201433256687,
+        "cg_height_at_lowest_foot_contact_m": 32.25011089217037,
+        "reference_height_difference_m": -0.24988910782963103,
+        "body_min_clearance_at_foot_contact_m": 2.3924154565603204,
+        "body_clears_at_foot_contact": true
+      },
+      {
+        "theta_deg": 45,
+        "foot_height_difference_m": 7.071067811865475,
+        "cg_height_at_lowest_foot_contact_m": 26.516504294495533,
+        "reference_height_difference_m": -5.983495705504467,
+        "body_min_clearance_at_foot_contact_m": 2.4748737341529177,
+        "body_clears_at_foot_contact": true
+      },
+      {
+        "theta_deg": 85,
+        "foot_height_difference_m": 9.961946980917455,
+        "cg_height_at_lowest_foot_contact_m": 7.813535129757617,
+        "reference_height_difference_m": -24.686464870242382,
+        "body_min_clearance_at_foot_contact_m": 1.6686035326329343,
+        "body_clears_at_foot_contact": true
+      },
+      {
+        "theta_deg": 100,
+        "foot_height_difference_m": 9.84807753012208,
+        "cg_height_at_lowest_foot_contact_m": -0.719527009114195,
+        "reference_height_difference_m": -33.219527009114195,
+        "body_min_clearance_at_foot_contact_m": -9.809919918832158,
+        "body_clears_at_foot_contact": false
+      },
+      {
+        "theta_deg": 120,
+        "foot_height_difference_m": 8.660254037844387,
+        "cg_height_at_lowest_foot_contact_m": -11.919872981077798,
+        "reference_height_difference_m": -44.4198729810778,
+        "body_min_clearance_at_foot_contact_m": -31.200961894323328,
+        "body_clears_at_foot_contact": false
+      }
+    ],
+    "conditional_foot_velocity_examples": [
+      {
+        "theta_deg": 0,
+        "omega_deg_s": 0.5,
+        "foot_vx_m_s": [
+          -0.28361600344907856,
+          -0.28361600344907856
+        ],
+        "foot_vz_m_s": [
+          -0.9563667687001418,
+          -1.0436332312998582
+        ],
+        "horizontal_reference_limit_pass": true
+      },
+      {
+        "theta_deg": 0,
+        "omega_deg_s": 4.9,
+        "foot_vx_m_s": [
+          -2.77943683380097,
+          -2.77943683380097
+        ],
+        "foot_vz_m_s": [
+          -0.5723943332613892,
+          -1.4276056667386108
+        ],
+        "horizontal_reference_limit_pass": false
+      }
+    ],
+    "conditional_shutdown_tail": {
+      "initial_per_engine_throttle": 0.6133249515166754,
+      "total_impulse_N_s": 386167.4961529323,
+      "propellant_kg": 123.056642735074,
+      "assumptions": "same response as v8, immediate off command, two engines; no extra off delay or plume/ground effect"
+    },
+    "upright_static_tip_angle_deg": 8.74616226255521,
+    "energy_only_contact_screen": {
+      "mass_kg": 131457.6045045,
+      "vertical_kinetic_at_1m_s_J": 65728.80225225,
+      "horizontal_kinetic_at_point5m_s_J": 16432.2005630625,
+      "rigid_pivot_tip_barrier_J": 492930.5844264661,
+      "total_translation_energy_J": 82161.0028153125,
+      "energy_barrier_pass": true,
+      "status": "A limited energy screen only for zero thrust, zero initial angular rate, no external work, rigid pivot/no sliding and upright initial body; not C18 verification"
+    },
+    "energy_absorption_stroke_scan": [
+      {
+        "assumed_stroke_m": 0.2,
+        "vertical_initial_speed_m_s": 1.0,
+        "minimum_mean_total_support_N": 1617802.7284753048,
+        "mean_support_over_weight": 1.2549290532444821
+      },
+      {
+        "assumed_stroke_m": 0.2,
+        "vertical_initial_speed_m_s": 2.0,
+        "minimum_mean_total_support_N": 2603734.7622590545,
+        "mean_support_over_weight": 2.0197162129779285
+      },
+      {
+        "assumed_stroke_m": 0.5,
+        "vertical_initial_speed_m_s": 1.0,
+        "minimum_mean_total_support_N": 1420616.3217185547,
+        "mean_support_over_weight": 1.1019716212977928
+      },
+      {
+        "assumed_stroke_m": 0.5,
+        "vertical_initial_speed_m_s": 2.0,
+        "minimum_mean_total_support_N": 1814989.1352320546,
+        "mean_support_over_weight": 1.4078864851911712
+      },
+      {
+        "assumed_stroke_m": 1.0,
+        "vertical_initial_speed_m_s": 1.0,
+        "minimum_mean_total_support_N": 1354887.5194663047,
+        "mean_support_over_weight": 1.0509858106488965
+      },
+      {
+        "assumed_stroke_m": 1.0,
+        "vertical_initial_speed_m_s": 2.0,
+        "minimum_mean_total_support_N": 1552073.9262230548,
+        "mean_support_over_weight": 1.2039432425955856
+      }
+    ]
+  }
+}
