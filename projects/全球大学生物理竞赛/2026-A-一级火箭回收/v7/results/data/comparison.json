@@ -1,0 +1,113 @@
+{
+  "initial_propellant_kg": 70000,
+  "cases": [
+    {
+      "event": "reference_contact",
+      "final": {
+        "time_s": 130.01326272321006,
+        "height_CG_m": 32.50000000093132,
+        "range_m": 203053.76662455805,
+        "speed_m_s": 888.2426267920288,
+        "mass_kg": 200000.0,
+        "usable_kg": 69650.0,
+        "thrust_N": 0.0,
+        "q_Pa": 481740.86525425245,
+        "n_sum": 4.726272771386045,
+        "impulse_Ns": 0.0
+      },
+      "max_q_Pa": 576052.7903534807,
+      "max_n_sum": 5.6515500641443195,
+      "consumed_kg": 0.0,
+      "mass_impulse_error_kg": 0.0,
+      "limitations": "M0 only. Retrograde thrust direction assumes ideal steering, not validated attitude. Contact uses prescribed upright 32.5 m CG offset, not full C10 collision detection. No safe landing assertion.",
+      "strategy": "无推力",
+      "burn_windows": []
+    },
+    {
+      "event": "reference_contact",
+      "final": {
+        "time_s": 138.69674206708203,
+        "height_CG_m": 32.49999999906868,
+        "range_m": 194516.17589948644,
+        "speed_m_s": 710.8962274204092,
+        "mass_kg": 171957.80395083147,
+        "usable_kg": 41607.803950831476,
+        "thrust_N": 5.723266434547176e-157,
+        "q_Pa": 308576.38369169703,
+        "n_sum": 3.5210815615044284,
+        "impulse_Ns": 88000000.60338485
+      },
+      "max_q_Pa": 356438.98225157947,
+      "max_n_sum": 4.067228713981493,
+      "consumed_kg": 28042.196049168524,
+      "mass_impulse_error_kg": 8.36735125631094e-11,
+      "limitations": "M0 only. Retrograde thrust direction assumes ideal steering, not validated attitude. Contact uses prescribed upright 32.5 m CG offset, not full C10 collision detection. No safe landing assertion.",
+      "strategy": "提前单次",
+      "burn_windows": [
+        [
+          60,
+          40
+        ]
+      ]
+    },
+    {
+      "event": "reference_contact",
+      "final": {
+        "time_s": 136.37541328823136,
+        "height_CG_m": 32.49999999906868,
+        "range_m": 200662.65493250944,
+        "speed_m_s": 652.2902605235872,
+        "mass_kg": 171957.80384567208,
+        "usable_kg": 41607.80384567209,
+        "thrust_N": 2.5861813484302207e-38,
+        "q_Pa": 259795.75714541686,
+        "n_sum": 2.9644590420606405,
+        "impulse_Ns": 88000000.93338855
+      },
+      "max_q_Pa": 322695.7072356601,
+      "max_n_sum": 4.902320019260866,
+      "consumed_kg": 28042.19615432791,
+      "mass_impulse_error_kg": 5.820766091346741e-11,
+      "limitations": "M0 only. Retrograde thrust direction assumes ideal steering, not validated attitude. Contact uses prescribed upright 32.5 m CG offset, not full C10 collision detection. No safe landing assertion.",
+      "strategy": "稍晚单次",
+      "burn_windows": [
+        [
+          85,
+          40
+        ]
+      ]
+    },
+    {
+      "event": "reference_contact",
+      "final": {
+        "time_s": 136.6253102402074,
+        "height_CG_m": 32.5,
+        "range_m": 197209.92909882742,
+        "speed_m_s": 656.1786921432667,
+        "mass_kg": 171957.8037829249,
+        "usable_kg": 41607.8037829249,
+        "thrust_N": 1.1017740912610118e-17,
+        "q_Pa": 262902.37729134,
+        "n_sum": 2.9999078444868608,
+        "impulse_Ns": 88000001.13029733
+      },
+      "max_q_Pa": 362808.30410876445,
+      "max_n_sum": 5.277168397274556,
+      "consumed_kg": 28042.1962170751,
+      "mass_impulse_error_kg": 3.2741809263825417e-11,
+      "limitations": "M0 only. Retrograde thrust direction assumes ideal steering, not validated attitude. Contact uses prescribed upright 32.5 m CG offset, not full C10 collision detection. No safe landing assertion.",
+      "strategy": "两段燃烧",
+      "burn_windows": [
+        [
+          60,
+          20
+        ],
+        [
+          110,
+          20
+        ]
+      ]
+    }
+  ],
+  "two_burn_refinement_speed_error_m_s": 1.508338755229488e-06
+}
