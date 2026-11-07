@@ -1,0 +1,54 @@
+{
+  "A_Power_Sense": {
+    "json_parse": "PASS",
+    "project_shape": "PASS",
+    "all_component_pin_numbers": "PASS",
+    "pin_net_equality": "PASS",
+    "unintended_net_shorts": "NONE",
+    "components": 29,
+    "pins": 82,
+    "no_connect_pins": 2,
+    "bound_footprints": false,
+    "native_editor_import_test": "NOT RUN",
+    "hardware_validation": "NOT RUN"
+  },
+  "B_CC_DAC": {
+    "json_parse": "PASS",
+    "project_shape": "PASS",
+    "all_component_pin_numbers": "PASS",
+    "pin_net_equality": "PASS",
+    "unintended_net_shorts": "NONE",
+    "components": 15,
+    "pins": 61,
+    "no_connect_pins": 3,
+    "bound_footprints": false,
+    "native_editor_import_test": "NOT RUN",
+    "hardware_validation": "NOT RUN"
+  },
+  "C_MCU_LCD": {
+    "json_parse": "PASS",
+    "project_shape": "PASS",
+    "all_component_pin_numbers": "PASS",
+    "pin_net_equality": "PASS",
+    "unintended_net_shorts": "NONE",
+    "components": 24,
+    "pins": 110,
+    "no_connect_pins": 22,
+    "bound_footprints": false,
+    "native_editor_import_test": "NOT RUN",
+    "hardware_validation": "NOT RUN"
+  },
+  "D_Aux_Power": {
+    "json_parse": "PASS",
+    "project_shape": "PASS",
+    "all_component_pin_numbers": "PASS",
+    "pin_net_equality": "PASS",
+    "unintended_net_shorts": "NONE",
+    "components": 3,
+    "pins": 8,
+    "no_connect_pins": 0,
+    "bound_footprints": false,
+    "native_editor_import_test": "NOT RUN",
+    "hardware_validation": "NOT RUN"
+  }
+}

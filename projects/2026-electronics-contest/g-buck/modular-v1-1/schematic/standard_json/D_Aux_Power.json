@@ -1,0 +1,63 @@
+{
+  "editorVersion": "6.5.51",
+  "docType": "5",
+  "title": "D 板：3.3V 辅助电源（题目允许成品辅源）",
+  "description": "Independent board schematic. DRAFT, no PCB or bound footprints.",
+  "colors": {},
+  "schematics": [
+    {
+      "docType": "1",
+      "title": "D_Aux_Power",
+      "description": "",
+      "dataStr": {
+        "head": {
+          "docType": "1",
+          "editorVersion": "6.5.51",
+          "newgId": true,
+          "c_para": {
+            "Prefix Start": "1"
+          },
+          "c_spiceCmd": null,
+          "x": "0",
+          "y": "0",
+          "hasIdFlag": false
+        },
+        "canvas": "CA~1100~740~#FFFFFF~yes~#CCCCCC~5~1100~740~line~5~pixel~5~0~0",
+        "shape": [
+          "T~L~50~45~0~#000080~Arial~22pt~~~~comment~D 板：3.3V 辅助电源（题目允许成品辅源）~1~start~gge1108~0~",
+          "T~L~50~75~0~#000080~Arial~12pt~~~~comment~G题 / 四块板独立制作 / DRAFT：未经实物验证 / 同名网络相连 / NC 为不连接~1~start~gge1109~0~",
+          "LIB~170~210~package``nameAlias`Value`name`INPUT FROM A.J4`Manufacturer Part`INPUT FROM A.J4`spicePre`U`Contributor`Custom_G_Draft`Recommended footprint`1x2 2.54mm`Status`DRAFT - footprint unbound~~0~gge1115~~d4858b3b42f14300ba6f5bf484bd3ba6~0~~yes~yes#@$R~170~210~~~85~70~#880000~1~0~none~gge1110~0~#@$T~P~170~186~0~#000080~Arial~12pt~~~~comment~J1~1~start~gge1111~0~#@$T~N~170~202~0~#000080~Arial~10pt~~~~comment~INPUT FROM A.J4~1~start~gge1112~0~#@$P~show~0~1~150~230~180~gge1113~0^^150~230^^M 150 230 L 170 230~#880000^^1~174~233~0~1~start~Arial~8pt~#000080^^1~158~226~0~1~start~Arial~7pt~#000080^^0~170~230^^0~M 170 230 L 170 230#@$P~show~0~2~150~250~180~gge1114~0^^150~250^^M 150 250 L 170 250~#880000^^1~174~253~0~2~start~Arial~8pt~#000080^^1~158~246~0~2~start~Arial~7pt~#000080^^0~170~250^^0~M 170 250 L 170 250",
+          "W~150 230 85 230~#008000~1~0~none~gge1116~0",
+          "N~85~230~0~#000080~VIN_SYS~gge1117~end~85~226~Arial~9pt~0",
+          "W~150 250 85 250~#008000~1~0~none~gge1118~0",
+          "N~85~250~0~#000080~GND~gge1119~end~85~246~Arial~9pt~0",
+          "LIB~530~220~package``nameAlias`Value`name`Aux buck module: 15-25V to 3.3V`Manufacturer Part`Aux buck module: 15-25V to 3.3V`spicePre`U`Contributor`Custom_G_Draft`Recommended footprint`Purchased auxiliary module; custom pin mapping only`Status`DRAFT - footprint unbound~~0~gge1127~~2fdc011f4122450183b8312054f8834d~0~~yes~yes#@$R~530~220~~~220~80~#880000~1~0~none~gge1120~0~#@$T~P~530~196~0~#000080~Arial~12pt~~~~comment~M1~1~start~gge1121~0~#@$T~N~530~212~0~#000080~Arial~10pt~~~~comment~Aux buck module: 15-25V to 3.3V~1~start~gge1122~0~#@$P~show~0~1~510~240~180~gge1123~0^^510~240^^M 510 240 L 530 240~#880000^^1~534~243~0~IN+~start~Arial~8pt~#000080^^1~518~236~0~1~start~Arial~7pt~#000080^^0~530~240^^0~M 530 240 L 530 240#@$P~show~0~2~510~265~180~gge1124~0^^510~265^^M 510 265 L 530 265~#880000^^1~534~268~0~IN-~start~Arial~8pt~#000080^^1~518~261~0~2~start~Arial~7pt~#000080^^0~530~265^^0~M 530 265 L 530 265#@$P~show~0~3~770~240~0~gge1125~0^^770~240^^M 770 240 L 750 240~#880000^^1~746~243~0~OUT+~end~Arial~8pt~#000080^^1~762~236~0~3~end~Arial~7pt~#000080^^0~750~240^^0~M 750 240 L 750 240#@$P~show~0~4~770~265~0~gge1126~0^^770~265^^M 770 265 L 750 265~#880000^^1~746~268~0~OUT-~end~Arial~8pt~#000080^^1~762~261~0~4~end~Arial~7pt~#000080^^0~750~265^^0~M 750 265 L 750 265",
+          "W~510 240 445 240~#008000~1~0~none~gge1128~0",
+          "N~445~240~0~#000080~VIN_SYS~gge1129~end~445~236~Arial~9pt~0",
+          "W~510 265 445 265~#008000~1~0~none~gge1130~0",
+          "N~445~265~0~#000080~GND~gge1131~end~445~261~Arial~9pt~0",
+          "W~770 240 835 240~#008000~1~0~none~gge1132~0",
+          "N~835~240~0~#000080~+3V3~gge1133~start~835~236~Arial~9pt~0",
+          "W~770 265 835 265~#008000~1~0~none~gge1134~0",
+          "N~835~265~0~#000080~GND~gge1135~start~835~261~Arial~9pt~0",
+          "LIB~920~410~package``nameAlias`Value`name`OUTPUT TO C.JP`Manufacturer Part`OUTPUT TO C.JP`spicePre`U`Contributor`Custom_G_Draft`Recommended footprint`1x2 2.54mm`Status`DRAFT - footprint unbound~~0~gge1141~~d2c62d896b2a4e15b776841e58fc6959~0~~yes~yes#@$R~920~410~~~85~70~#880000~1~0~none~gge1136~0~#@$T~P~920~386~0~#000080~Arial~12pt~~~~comment~J2~1~start~gge1137~0~#@$T~N~920~402~0~#000080~Arial~10pt~~~~comment~OUTPUT TO C.JP~1~start~gge1138~0~#@$P~show~0~1~900~430~180~gge1139~0^^900~430^^M 900 430 L 920 430~#880000^^1~924~433~0~1~start~Arial~8pt~#000080^^1~908~426~0~1~start~Arial~7pt~#000080^^0~920~430^^0~M 920 430 L 920 430#@$P~show~0~2~900~450~180~gge1140~0^^900~450^^M 900 450 L 920 450~#880000^^1~924~453~0~2~start~Arial~8pt~#000080^^1~908~446~0~2~start~Arial~7pt~#000080^^0~920~450^^0~M 920 450 L 920 450",
+          "W~900 430 835 430~#008000~1~0~none~gge1142~0",
+          "N~835~430~0~#000080~+3V3~gge1143~end~835~426~Arial~9pt~0",
+          "W~900 450 835 450~#008000~1~0~none~gge1144~0",
+          "N~835~450~0~#000080~GND~gge1145~end~835~446~Arial~9pt~0",
+          "T~L~60~550~0~#000080~Arial~13pt~~~~comment~仅作为 MCU、液晶、采样和 DAC 的辅助供电，禁止代替 A 板主功率电路。~1~start~gge1146~0~",
+          "T~L~60~590~0~#000080~Arial~13pt~~~~comment~可选 MP1584EN 辅源小板；上机前独立调整到 3.30V，输出额定电流不小于0.3A。~1~start~gge1147~0~",
+          "T~L~60~630~0~#000080~Arial~13pt~~~~comment~M1 的 1/2/3/4 是本图自定义端口号，实际接模块 IN+/IN-/OUT+/OUT- 丝印。~1~start~gge1148~0~",
+          "T~L~60~670~0~#000080~Arial~13pt~~~~comment~所有板均由同一输入取电；本方案不接真实电池。~1~start~gge1149~0~"
+        ],
+        "BBox": {
+          "x": 0,
+          "y": 0,
+          "width": 1100,
+          "height": 740
+        },
+        "colors": {}
+      }
+    }
+  ]
+}

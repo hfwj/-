@@ -1,0 +1,22 @@
+{
+  "baseline_commit": "c687afef92f692c33848f950f2d64b0fb943c0f3",
+  "pin_maps": "IDENTICAL",
+  "component_count": 71,
+  "pin_count": 261,
+  "added_components": 0,
+  "removed_components": 0,
+  "value_changes": [
+    {
+      "board": "B_CC_DAC",
+      "reference": "C14",
+      "before": "1uF X7R",
+      "after": "220nF X7R"
+    }
+  ],
+  "configuration_changes": {
+    "DAC_A": "VDD/G1 -> internal 2.048V/G2",
+    "current_target": "0.98A -> calibrated 0.95A"
+  },
+  "native_editor_test": "NOT RUN",
+  "hardware_test": "NOT RUN"
+}
