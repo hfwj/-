@@ -1,0 +1,24 @@
+{
+  "scope": "Analytical/numerical model checks, not observed-ball calibration or experimental validation.",
+  "tests_run": 15,
+  "failures": 0,
+  "errors": 0,
+  "passed": true,
+  "metrics": {
+    "ballistic_goal_error_m": 5.329070518200751e-15,
+    "buoyancy_weight_ratio": 0.015883064439881606,
+    "deterministic_step_goal_spread_m": 1.7763568394002505e-15,
+    "magnus_dot_relative_velocity_N_m_s": -5.551115123125783e-16,
+    "no_wind_energy_drop_J": 58.40531262762261,
+    "ou_same_nodes_refinement_goal_errors_m": [
+      0.0003014113456801226,
+      3.1223446552832766e-05,
+      2.2336690247786097e-05
+    ],
+    "ou_empirical_covariance_relative_error": 0.016676309498574897,
+    "ou_empirical_lag1_correlation": 0.8168393303594068,
+    "ou_theoretical_lag1_correlation": 0.8187307530779818
+  },
+  "parameter_inference_performed": false,
+  "experimental_validation_performed": false
+}

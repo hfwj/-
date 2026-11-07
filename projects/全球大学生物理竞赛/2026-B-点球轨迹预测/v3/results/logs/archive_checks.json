@@ -1,0 +1,23 @@
+{
+  "scope": "Document/archive integrity and completed forward numerical checks; no parameter estimation or experimental calibration.",
+  "baseline_commit": "c30f693",
+  "pdf_pages": 6,
+  "physics_checks_passed": true,
+  "physics_check_count": 15,
+  "forward_example_count": 7,
+  "parameter_inference_performed": false,
+  "v1_v2_unchanged": true,
+  "schematic_components_BOM_PCB_firmware": "unchanged",
+  "sha256": {
+    "simulation/README.md": "6d2ed3fc4e5079dcb3877583389044bc7757becf976b42bbb15fb0b84fd0b025",
+    "simulation/configs/forward_examples.json": "5655010a7cac98f95ee5817f0d4150f48b7332c358641010331eae59b0a91711",
+    "simulation/physics_model.py": "286b3690f107bc3decc5375a57b8340b93ee25c486e7e6009331f85524b3d1ad",
+    "simulation/requirements.txt": "815360a00e0e1d7a128cade3de11b66d3fe997cbd6e2c69f8081eb9bc8b88197",
+    "simulation/run_forward.py": "fb1689126a9804fbe55211f28c34fdd23b007b908321258d4dbc286c5036a3ee",
+    "simulation/verify_physics.py": "4c203ad73effe006bcb18781801ecd1b6c2a3a163a6c7f4e93265037f9e2bcf4",
+    "reports/2026_UPC_B题_物理主动力模型.docx": "4a594186756224168ca21a8ff387a5a1caf3c45a49dcbf42ebfe686b81d56a9c",
+    "reports/2026_UPC_B题_物理主动力模型.pdf": "b7ba7d25803155e8bc5df09e09d2b4234f1c03f676bb55f8245a4669c6896f67",
+    "reports/物理主动力模型_方程与使用说明.md": "a3ad1e5ee641f2536ef51ebc61a9139ab29a72e2e58b378a2986ae42b209e8d6",
+    "references/README.md": "1cfcfc1a1ad33942aa817644d4ede40c2535d7dc33c4155232b858a0913b02c9"
+  }
+}

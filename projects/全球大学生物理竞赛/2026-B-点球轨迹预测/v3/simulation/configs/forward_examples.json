@@ -1,0 +1,26 @@
+{
+  "purpose": "Manually specified forward demonstrations; no observation fitting and no calibrated uncertainty region.",
+  "base": {
+    "ball": {"mass_kg": 0.43, "radius_m": 0.11},
+    "air": {"density_kg_m3": 1.225, "dynamic_viscosity_pa_s": 0.000018, "gravity_m_s2": 9.81, "wind_m_s": [0, 0, 0]},
+    "aerodynamics": {
+      "drag": {"kind": "constant", "coefficient": 0.25},
+      "lift": {"kind": "linear_spin", "spin_slope": 0.6, "saturation_coefficient": 0.3},
+      "spin_decay_per_s": 0,
+      "include_buoyancy": true
+    },
+    "initial": {"position_m": [0, 0, 0.11], "velocity_m_s": [30, 9, 6.82], "spin_rad_s": [0, 0, 0]},
+    "goal": {"plane_x_m": 11, "width_m": 7.32, "height_m": 2.44},
+    "solver": {"max_time_s": 2, "max_step_s": 0.01, "output_step_s": 0.002, "relative_tolerance": 1e-9, "absolute_tolerance": 1e-11},
+    "ou": {"enabled": false}
+  },
+  "cases": [
+    {"name": "ballistic", "overrides": {"aerodynamics": {"drag": {"coefficient": 0}, "lift": {"kind": "none"}, "include_buoyancy": false}}},
+    {"name": "drag_only", "overrides": {}},
+    {"name": "side_spin", "overrides": {"initial": {"spin_rad_s": [0, 0, -10]}}},
+    {"name": "backspin", "overrides": {"initial": {"spin_rad_s": [0, -10, 0]}}},
+    {"name": "spin_decay", "overrides": {"initial": {"spin_rad_s": [0, -10, -10]}, "aerodynamics": {"spin_decay_per_s": 0.5}}},
+    {"name": "crosswind", "overrides": {"initial": {"spin_rad_s": [0, -10, -10]}, "air": {"wind_m_s": [0, 3, 0]}}},
+    {"name": "ou_example", "overrides": {"initial": {"spin_rad_s": [0, -10, -10]}, "ou": {"enabled": true, "step_s": 0.002, "correlation_time_s": 0.12, "covariance_m2_s4": [[0, 0, 0], [0, 0.36, 0], [0, 0, 0.16]], "initial_m_s2": [0, 0, 0], "seed": 20261107}}}
+  ]
+}

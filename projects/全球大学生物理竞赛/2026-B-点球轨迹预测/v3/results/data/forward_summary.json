@@ -1,0 +1,655 @@
+{
+  "purpose": "Manually specified forward demonstrations; no observation fitting and no calibrated uncertainty region.",
+  "observation_data_used_for_fitting": false,
+  "covariance_or_probability_calibrated": false,
+  "cases": [
+    {
+      "case": "ballistic",
+      "prescribed_input": {
+        "ball": {
+          "mass_kg": 0.43,
+          "radius_m": 0.11
+        },
+        "air": {
+          "density_kg_m3": 1.225,
+          "dynamic_viscosity_pa_s": 1.8e-05,
+          "gravity_m_s2": 9.81,
+          "wind_m_s": [
+            0,
+            0,
+            0
+          ]
+        },
+        "aerodynamics": {
+          "drag": {
+            "kind": "constant",
+            "coefficient": 0
+          },
+          "lift": {
+            "kind": "none",
+            "spin_slope": 0.6,
+            "saturation_coefficient": 0.3
+          },
+          "spin_decay_per_s": 0,
+          "include_buoyancy": false
+        },
+        "initial": {
+          "position_m": [
+            0,
+            0,
+            0.11
+          ],
+          "velocity_m_s": [
+            30,
+            9,
+            6.82
+          ],
+          "spin_rad_s": [
+            0,
+            0,
+            0
+          ]
+        },
+        "goal": {
+          "plane_x_m": 11,
+          "width_m": 7.32,
+          "height_m": 2.44
+        },
+        "solver": {
+          "max_time_s": 2,
+          "max_step_s": 0.01,
+          "output_step_s": 0.002,
+          "relative_tolerance": 1e-09,
+          "absolute_tolerance": 1e-11
+        },
+        "ou": {
+          "enabled": false
+        }
+      },
+      "status": "goal_plane",
+      "time_s": 0.36666666666666636,
+      "position_m": [
+        11.0,
+        3.2999999999999945,
+        1.9512166666666662
+      ],
+      "velocity_m_s": [
+        30.0,
+        9.0,
+        3.223
+      ],
+      "spin_rad_s": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "center_inside_goal_rectangle": true,
+      "ball_clearance_margin_at_center_plane_m": 0.25000000000000566,
+      "clearance_is_not_a_goalpost_collision_simulation": true,
+      "minimum_reynolds": 471420.03303193866,
+      "maximum_reynolds": 479932.10196892306,
+      "drag_table_outside_range_clamped": false,
+      "probability_estimated": false,
+      "parameters_fitted": false
+    },
+    {
+      "case": "drag_only",
+      "prescribed_input": {
+        "ball": {
+          "mass_kg": 0.43,
+          "radius_m": 0.11
+        },
+        "air": {
+          "density_kg_m3": 1.225,
+          "dynamic_viscosity_pa_s": 1.8e-05,
+          "gravity_m_s2": 9.81,
+          "wind_m_s": [
+            0,
+            0,
+            0
+          ]
+        },
+        "aerodynamics": {
+          "drag": {
+            "kind": "constant",
+            "coefficient": 0.25
+          },
+          "lift": {
+            "kind": "linear_spin",
+            "spin_slope": 0.6,
+            "saturation_coefficient": 0.3
+          },
+          "spin_decay_per_s": 0,
+          "include_buoyancy": true
+        },
+        "initial": {
+          "position_m": [
+            0,
+            0,
+            0.11
+          ],
+          "velocity_m_s": [
+            30,
+            9,
+            6.82
+          ],
+          "spin_rad_s": [
+            0,
+            0,
+            0
+          ]
+        },
+        "goal": {
+          "plane_x_m": 11,
+          "width_m": 7.32,
+          "height_m": 2.44
+        },
+        "solver": {
+          "max_time_s": 2,
+          "max_step_s": 0.01,
+          "output_step_s": 0.002,
+          "relative_tolerance": 1e-09,
+          "absolute_tolerance": 1e-11
+        },
+        "ou": {
+          "enabled": false
+        }
+      },
+      "status": "goal_plane",
+      "time_s": 0.3972063910353025,
+      "position_m": [
+        11.0,
+        3.300000000000003,
+        1.8874752806725885
+      ],
+      "velocity_m_s": [
+        25.63032074214244,
+        7.689096222642734,
+        2.2702761086019843
+      ],
+      "spin_rad_s": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "center_inside_goal_rectangle": true,
+      "ball_clearance_margin_at_center_plane_m": 0.24999999999999722,
+      "clearance_is_not_a_goalpost_collision_simulation": true,
+      "minimum_reynolds": 402078.65721453406,
+      "maximum_reynolds": 479932.10196892306,
+      "drag_table_outside_range_clamped": false,
+      "probability_estimated": false,
+      "parameters_fitted": false
+    },
+    {
+      "case": "side_spin",
+      "prescribed_input": {
+        "ball": {
+          "mass_kg": 0.43,
+          "radius_m": 0.11
+        },
+        "air": {
+          "density_kg_m3": 1.225,
+          "dynamic_viscosity_pa_s": 1.8e-05,
+          "gravity_m_s2": 9.81,
+          "wind_m_s": [
+            0,
+            0,
+            0
+          ]
+        },
+        "aerodynamics": {
+          "drag": {
+            "kind": "constant",
+            "coefficient": 0.25
+          },
+          "lift": {
+            "kind": "linear_spin",
+            "spin_slope": 0.6,
+            "saturation_coefficient": 0.3
+          },
+          "spin_decay_per_s": 0,
+          "include_buoyancy": true
+        },
+        "initial": {
+          "position_m": [
+            0,
+            0,
+            0.11
+          ],
+          "velocity_m_s": [
+            30,
+            9,
+            6.82
+          ],
+          "spin_rad_s": [
+            0,
+            0,
+            -10
+          ]
+        },
+        "goal": {
+          "plane_x_m": 11,
+          "width_m": 7.32,
+          "height_m": 2.44
+        },
+        "solver": {
+          "max_time_s": 2,
+          "max_step_s": 0.01,
+          "output_step_s": 0.002,
+          "relative_tolerance": 1e-09,
+          "absolute_tolerance": 1e-11
+        },
+        "ou": {
+          "enabled": false
+        }
+      },
+      "status": "goal_plane",
+      "time_s": 0.3963341538917034,
+      "position_m": [
+        11.0,
+        3.2174795352285415,
+        1.8854910746792766
+      ],
+      "velocity_m_s": [
+        25.744816060817453,
+        7.327639100181698,
+        2.2794182873226165
+      ],
+      "spin_rad_s": [
+        0.0,
+        0.0,
+        -10.0
+      ],
+      "center_inside_goal_rectangle": true,
+      "ball_clearance_margin_at_center_plane_m": 0.3325204647714587,
+      "clearance_is_not_a_goalpost_collision_simulation": true,
+      "minimum_reynolds": 402216.87111383106,
+      "maximum_reynolds": 479932.10196892306,
+      "drag_table_outside_range_clamped": false,
+      "probability_estimated": false,
+      "parameters_fitted": false
+    },
+    {
+      "case": "backspin",
+      "prescribed_input": {
+        "ball": {
+          "mass_kg": 0.43,
+          "radius_m": 0.11
+        },
+        "air": {
+          "density_kg_m3": 1.225,
+          "dynamic_viscosity_pa_s": 1.8e-05,
+          "gravity_m_s2": 9.81,
+          "wind_m_s": [
+            0,
+            0,
+            0
+          ]
+        },
+        "aerodynamics": {
+          "drag": {
+            "kind": "constant",
+            "coefficient": 0.25
+          },
+          "lift": {
+            "kind": "linear_spin",
+            "spin_slope": 0.6,
+            "saturation_coefficient": 0.3
+          },
+          "spin_decay_per_s": 0,
+          "include_buoyancy": true
+        },
+        "initial": {
+          "position_m": [
+            0,
+            0,
+            0.11
+          ],
+          "velocity_m_s": [
+            30,
+            9,
+            6.82
+          ],
+          "spin_rad_s": [
+            0,
+            -10,
+            0
+          ]
+        },
+        "goal": {
+          "plane_x_m": 11,
+          "width_m": 7.32,
+          "height_m": 2.44
+        },
+        "solver": {
+          "max_time_s": 2,
+          "max_step_s": 0.01,
+          "output_step_s": 0.002,
+          "relative_tolerance": 1e-09,
+          "absolute_tolerance": 1e-11
+        },
+        "ou": {
+          "enabled": false
+        }
+      },
+      "status": "goal_plane",
+      "time_s": 0.3977614125850265,
+      "position_m": [
+        11.0,
+        3.3043015832833738,
+        1.9649084553249112
+      ],
+      "velocity_m_s": [
+        25.565506274638853,
+        7.687877022484134,
+        2.6283842610522097
+      ],
+      "spin_rad_s": [
+        0.0,
+        -10.0,
+        0.0
+      ],
+      "center_inside_goal_rectangle": true,
+      "ball_clearance_margin_at_center_plane_m": 0.2456984167166264,
+      "clearance_is_not_a_goalpost_collision_simulation": true,
+      "minimum_reynolds": 401637.21264638915,
+      "maximum_reynolds": 479932.10196892306,
+      "drag_table_outside_range_clamped": false,
+      "probability_estimated": false,
+      "parameters_fitted": false
+    },
+    {
+      "case": "spin_decay",
+      "prescribed_input": {
+        "ball": {
+          "mass_kg": 0.43,
+          "radius_m": 0.11
+        },
+        "air": {
+          "density_kg_m3": 1.225,
+          "dynamic_viscosity_pa_s": 1.8e-05,
+          "gravity_m_s2": 9.81,
+          "wind_m_s": [
+            0,
+            0,
+            0
+          ]
+        },
+        "aerodynamics": {
+          "drag": {
+            "kind": "constant",
+            "coefficient": 0.25
+          },
+          "lift": {
+            "kind": "linear_spin",
+            "spin_slope": 0.6,
+            "saturation_coefficient": 0.3
+          },
+          "spin_decay_per_s": 0.5,
+          "include_buoyancy": true
+        },
+        "initial": {
+          "position_m": [
+            0,
+            0,
+            0.11
+          ],
+          "velocity_m_s": [
+            30,
+            9,
+            6.82
+          ],
+          "spin_rad_s": [
+            0,
+            -10,
+            -10
+          ]
+        },
+        "goal": {
+          "plane_x_m": 11,
+          "width_m": 7.32,
+          "height_m": 2.44
+        },
+        "solver": {
+          "max_time_s": 2,
+          "max_step_s": 0.01,
+          "output_step_s": 0.002,
+          "relative_tolerance": 1e-09,
+          "absolute_tolerance": 1e-11
+        },
+        "ou": {
+          "enabled": false
+        }
+      },
+      "status": "goal_plane",
+      "time_s": 0.39690659178143767,
+      "position_m": [
+        11.0,
+        3.2265023979467333,
+        1.958035442874388
+      ],
+      "velocity_m_s": [
+        25.675390571255395,
+        7.360228823988844,
+        2.6035694332188815
+      ],
+      "spin_rad_s": [
+        0.0,
+        -8.199980671254362,
+        -8.199980671254362
+      ],
+      "center_inside_goal_rectangle": true,
+      "ball_clearance_margin_at_center_plane_m": 0.32349760205326683,
+      "clearance_is_not_a_goalpost_collision_simulation": true,
+      "minimum_reynolds": 401796.3205514982,
+      "maximum_reynolds": 479932.10196892306,
+      "drag_table_outside_range_clamped": false,
+      "probability_estimated": false,
+      "parameters_fitted": false
+    },
+    {
+      "case": "crosswind",
+      "prescribed_input": {
+        "ball": {
+          "mass_kg": 0.43,
+          "radius_m": 0.11
+        },
+        "air": {
+          "density_kg_m3": 1.225,
+          "dynamic_viscosity_pa_s": 1.8e-05,
+          "gravity_m_s2": 9.81,
+          "wind_m_s": [
+            0,
+            3,
+            0
+          ]
+        },
+        "aerodynamics": {
+          "drag": {
+            "kind": "constant",
+            "coefficient": 0.25
+          },
+          "lift": {
+            "kind": "linear_spin",
+            "spin_slope": 0.6,
+            "saturation_coefficient": 0.3
+          },
+          "spin_decay_per_s": 0,
+          "include_buoyancy": true
+        },
+        "initial": {
+          "position_m": [
+            0,
+            0,
+            0.11
+          ],
+          "velocity_m_s": [
+            30,
+            9,
+            6.82
+          ],
+          "spin_rad_s": [
+            0,
+            -10,
+            -10
+          ]
+        },
+        "goal": {
+          "plane_x_m": 11,
+          "width_m": 7.32,
+          "height_m": 2.44
+        },
+        "solver": {
+          "max_time_s": 2,
+          "max_step_s": 0.01,
+          "output_step_s": 0.002,
+          "relative_tolerance": 1e-09,
+          "absolute_tolerance": 1e-11
+        },
+        "ou": {
+          "enabled": false
+        }
+      },
+      "status": "goal_plane",
+      "time_s": 0.3964587064461,
+      "position_m": [
+        10.999999999999998,
+        3.3133442051413113,
+        1.9651550934654092
+      ],
+      "velocity_m_s": [
+        25.732471757698864,
+        7.780141644287623,
+        2.6565414811575994
+      ],
+      "spin_rad_s": [
+        0.0,
+        -10.0,
+        -10.0
+      ],
+      "center_inside_goal_rectangle": true,
+      "ball_clearance_margin_at_center_plane_m": 0.23665579485868882,
+      "clearance_is_not_a_goalpost_collision_simulation": true,
+      "minimum_reynolds": 393876.76002934907,
+      "maximum_reynolds": 469305.1116044725,
+      "drag_table_outside_range_clamped": false,
+      "probability_estimated": false,
+      "parameters_fitted": false
+    },
+    {
+      "case": "ou_example",
+      "prescribed_input": {
+        "ball": {
+          "mass_kg": 0.43,
+          "radius_m": 0.11
+        },
+        "air": {
+          "density_kg_m3": 1.225,
+          "dynamic_viscosity_pa_s": 1.8e-05,
+          "gravity_m_s2": 9.81,
+          "wind_m_s": [
+            0,
+            0,
+            0
+          ]
+        },
+        "aerodynamics": {
+          "drag": {
+            "kind": "constant",
+            "coefficient": 0.25
+          },
+          "lift": {
+            "kind": "linear_spin",
+            "spin_slope": 0.6,
+            "saturation_coefficient": 0.3
+          },
+          "spin_decay_per_s": 0,
+          "include_buoyancy": true
+        },
+        "initial": {
+          "position_m": [
+            0,
+            0,
+            0.11
+          ],
+          "velocity_m_s": [
+            30,
+            9,
+            6.82
+          ],
+          "spin_rad_s": [
+            0,
+            -10,
+            -10
+          ]
+        },
+        "goal": {
+          "plane_x_m": 11,
+          "width_m": 7.32,
+          "height_m": 2.44
+        },
+        "solver": {
+          "max_time_s": 2,
+          "max_step_s": 0.01,
+          "output_step_s": 0.002,
+          "relative_tolerance": 1e-09,
+          "absolute_tolerance": 1e-11
+        },
+        "ou": {
+          "enabled": true,
+          "step_s": 0.002,
+          "correlation_time_s": 0.12,
+          "covariance_m2_s4": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0.36,
+              0
+            ],
+            [
+              0,
+              0,
+              0.16
+            ]
+          ],
+          "initial_m_s2": [
+            0,
+            0,
+            0
+          ],
+          "seed": 20261107
+        }
+      },
+      "status": "goal_plane",
+      "time_s": 0.3969414677108828,
+      "position_m": [
+        11.0,
+        3.2258748993046527,
+        1.9640662290384618
+      ],
+      "velocity_m_s": [
+        25.692745354592944,
+        7.285743778214303,
+        2.6189711534409126
+      ],
+      "spin_rad_s": [
+        0.0,
+        -10.0,
+        -10.0
+      ],
+      "center_inside_goal_rectangle": true,
+      "ball_clearance_margin_at_center_plane_m": 0.3241251006953475,
+      "clearance_is_not_a_goalpost_collision_simulation": true,
+      "minimum_reynolds": 401763.12698706577,
+      "maximum_reynolds": 479932.10196892306,
+      "drag_table_outside_range_clamped": false,
+      "probability_estimated": false,
+      "parameters_fitted": false
+    }
+  ]
+}
