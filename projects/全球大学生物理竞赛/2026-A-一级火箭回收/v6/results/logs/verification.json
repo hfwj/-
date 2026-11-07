@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "vacuum_energy_speed_error_m_s": 3.001332515850663e-11,
+  "fuel_exhaustion_event": "fuel_exhausted",
+  "fuel_exhaustion_time_s": 1.0587872888119165,
+  "fuel_mass_impulse_error_kg": 5.684341886080802e-14,
+  "limits": "Numerical and conservation checks only; no safe landing."
+}
