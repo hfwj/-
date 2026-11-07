@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "assumption_count": 13,
+  "criterion_count": 18,
+  "pdf_pages": 8,
+  "source_links_last_page": 12,
+  "validation": [
+    "CSV/JSON row counts and unique identifiers",
+    "chosen assumptions marked H",
+    "unverified thermal/structure limit remains null",
+    "PDF page count and source hyperlinks",
+    "local Markdown links",
+    "planar foot velocity vs geometry differentiation",
+    "first-foot event at nonzero tilt"
+  ],
+  "foot_velocity_max_difference_m_s": 2.617329963872095e-12,
+  "first_contact_at_2deg_foot_heights_m": [
+    0.348994967025007,
+    0.0
+  ],
+  "limits": "Document and formula consistency only. No descent, fuel optimization, attitude, thermal or post-contact simulation was performed."
+}

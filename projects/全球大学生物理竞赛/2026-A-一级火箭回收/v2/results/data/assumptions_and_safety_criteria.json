@@ -1,0 +1,329 @@
+{
+  "version": "A-v2-assumptions-and-criteria",
+  "date_UTC": "2026-11-07",
+  "baseline_commit": "97be239d169f4ccca9b84c8fe0a07b1b6c911e3f",
+  "scope": "Two-dimensional academic reference design. Thresholds marked H are chosen, not certified hardware ratings.",
+  "given": {
+    "dry_mass_kg": 130000,
+    "height_m": 65,
+    "diameter_m": 7,
+    "separation_height_m": 70000,
+    "speed_m_s": 1666.6666666666665
+  },
+  "nominal": {
+    "gamma0_deg": 0,
+    "wind_m_s": 0,
+    "engine_count": 3,
+    "landing_active_engines": 2,
+    "engine_T_ref_N": 1000000.0,
+    "Isp_s": 320,
+    "throttle_min": 0.3,
+    "throttle_max": 1.1,
+    "throttle_slew_per_s": 1,
+    "ignition_delay_s": 0.5,
+    "max_ignitions_each": 3,
+    "thrust_direction_rate_deg_s": 5,
+    "Cd": 0.5,
+    "OF_mass_ratio": 3.4,
+    "CG_to_base_m": 32.5,
+    "foot_half_span_m": 5,
+    "deck_half_width_m": 20,
+    "deck_edge_margin_m": 2,
+    "unusable_propellant_fraction": 0.005,
+    "reserve_full_landing_thrust_s": 1
+  },
+  "assumptions": [
+    {
+      "id": "A01",
+      "assumption": "空间与地球",
+      "baseline": "二维竖直大圆平面；球形地球，g=GM/(R_E+h)^2",
+      "status": "H（本文假设）",
+      "reason": "保留地球曲率与高度重力变化；承接v1地球常数。",
+      "boundary": "忽略侧向运动、自转、非球形与侧风；结论限于二维模型。"
+    },
+    {
+      "id": "A02",
+      "assumption": "速度方向与参考系",
+      "baseline": "地面相对速率1666.667 m/s；γ0=0°（当地水平向前）",
+      "status": "H（本文假设）",
+      "reason": "题目未给方向，以水平分离作为可重复的参考工况。",
+      "boundary": "不是题目事实；γ0=15/30/45/60°作为不同任务情景单独计算。"
+    },
+    {
+      "id": "A03",
+      "assumption": "分离状态位置",
+      "baseline": "h_CG,0=70000 m，航程s0=0，发动机初始关闭",
+      "status": "H（本文假设）",
+      "reason": "题中高度按质心几何高度解释；把分离点定义为航程原点。",
+      "boundary": "若改为箭体底部高度，初始位置需相应平移。"
+    },
+    {
+      "id": "A04",
+      "assumption": "大气与风",
+      "baseline": "USSA1976参考大气；基准无风；覆盖实际轨迹全高度域",
+      "status": "H（本文假设）",
+      "reason": "参考环境可复算，不以海平面密度代替高空密度。",
+      "boundary": "v1程序仅0–70 km；高于70 km须补充环境后再算，超约86 km需适当高层模型。"
+    },
+    {
+      "id": "A05",
+      "assumption": "质量与刚性",
+      "baseline": "干质量130000 kg固定；推进剂为单一可用质量池；不计晃动、弹性、泄漏和烧蚀",
+      "status": "H（本文假设）",
+      "reason": "先隔离下降控制和推进剂需求。",
+      "boundary": "不代表晃动、柔性和热防护损耗已验证。"
+    },
+    {
+      "id": "A06",
+      "assumption": "虚拟发动机族",
+      "baseline": "安装3台；每台T_ref=1 MN，Isp=320 s，稳态u∈[0.3,1.1]；关机T=0；氧燃质量比3.4",
+      "status": "H（本文假设）",
+      "reason": "沿用v1虚拟V0族，推力与比冲一起定义等效发动机。",
+      "boundary": "常数等效性能；不称为Prometheus/BE-4实机，也不做虚构背压修正。"
+    },
+    {
+      "id": "A07",
+      "assumption": "发动机调度",
+      "baseline": "可开0–3台；末次连续着陆燃烧使用2台，每台最多3次点火",
+      "status": "H（本文假设）",
+      "reason": "两台最大2.2 MN高于干重；为再入/着陆分段留下可选控制。",
+      "boundary": "安装数、重启次数均为H；无发动机失效冗余保证。"
+    },
+    {
+      "id": "A08",
+      "assumption": "启动与节流",
+      "baseline": "指令延迟0.5 s；延迟后|du/dt|≤1 s^-1；启动可经0–0.3过渡",
+      "status": "H（本文假设）",
+      "reason": "避免优化利用无代价的瞬时满推力切换；从零至1.1至少再需1.1 s。",
+      "boundary": "不含额外无效启动耗剂；燃烧过渡按实际T曲线统一计入质量流率，避免重复计数。"
+    },
+    {
+      "id": "A09",
+      "assumption": "推力方向与姿态",
+      "baseline": "M0质点规划：开机推力方向连续，转向速率≤5°/s；姿态另以M1核查",
+      "status": "H（本文假设）",
+      "reason": "M0先求平动与质量；M1至少含二维刚体θ、ω与力矩/执行器。",
+      "boundary": "推力方向不是箭体姿态；M0不能直接判定倾角、角速度、翻转或关机转动能力。"
+    },
+    {
+      "id": "A10",
+      "assumption": "气动闭合",
+      "baseline": "A_ref=38.48451 m²；第一轮Cd=0.5，零升力；可替换Mach/攻角/喷流气动图",
+      "status": "H（本文假设）",
+      "reason": "与v1保持同一面积定义，便于建立参考轨迹。",
+      "boundary": "Cd=0.5是参考闭合，不是跨声速实测；气动力矩未知，M1不得静默置零当作已知。"
+    },
+    {
+      "id": "A11",
+      "assumption": "船和甲板",
+      "baseline": "每个名义任务选一次船位并固定；静止水平甲板h_deck=0，有效二维半宽20 m",
+      "status": "H（本文假设）",
+      "reason": "题目允许便利船位；避免把运动目标误设为始终跟随火箭。",
+      "boundary": "扰动检验固定同一船位；甲板升沉、横摇、三维覆盖暂不建模。"
+    },
+    {
+      "id": "A12",
+      "assumption": "着陆几何",
+      "baseline": "参考重心至脚部中心ℓ=32.5 m；二维脚半跨b=5 m；甲板边缘余量2 m",
+      "status": "H（本文假设）",
+      "reason": "给出可执行接触事件及范围检查，32.5 m和5 m均明确设为H。",
+      "boundary": "ℓ不是从65 m必然推出；终端扫描ℓ=26/32.5/39 m，b=4/5/6 m。"
+    },
+    {
+      "id": "A13",
+      "assumption": "不可用残余与储备",
+      "baseline": "不可用残余m_unusable=0.005 m_p0（f_un=0.005）；名义触地可用余量≥1 s着陆最大推力耗剂",
+      "status": "H（本文假设）",
+      "reason": "分别建账不可用残余与应急可用储备；本族1 s储备约701.05 kg。",
+      "boundary": "0.5%和1 s都是H；储备随终端总质量进入动力学，不保证现实任务充足。"
+    }
+  ],
+  "criteria": [
+    {
+      "id": "C01",
+      "stage": "全程",
+      "name": "质量和流量",
+      "rule": "m=m_d+f_un*m_p0+m_use；m_use>=0；dm_use/dt=-ΣT_i/(Isp_i*g0)",
+      "nominal_value": 0,
+      "unit": "kg",
+      "status": "定义/守恒",
+      "note": "点火响应期间也按实际推力积分；不可用残余不得用于推力。"
+    },
+    {
+      "id": "C02",
+      "stage": "全程",
+      "name": "环境和数据有效域",
+      "rule": "所有状态/系数有限，h与Mach等均在模型覆盖域；禁止静默外推",
+      "nominal_value": null,
+      "unit": "—",
+      "status": "必要有效性条件",
+      "note": "越界则NOT_VERIFIED，不把数值失败自动解释为物理不可行。"
+    },
+    {
+      "id": "C03",
+      "stage": "全程",
+      "name": "发动机和控制约束",
+      "rule": "满足A06–A09数量、节流、延迟、速率和点火计数",
+      "nominal_value": null,
+      "unit": "—",
+      "status": "H",
+      "note": "最终候选须连续时间回放；仅优化节点不够。"
+    },
+    {
+      "id": "C04",
+      "stage": "全程",
+      "name": "最大动压",
+      "rule": "max(q)<=50000；q=0.5*rho*|v-w|^2",
+      "nominal_value": 50000,
+      "unit": "Pa",
+      "status": "H，论文名义设计目标",
+      "note": "扫描30/50/70 kPa；不是实机额定或已证明保守值。"
+    },
+    {
+      "id": "C05",
+      "stage": "全程",
+      "name": "非重力合加速度",
+      "rule": "n_proper=|T_vec+F_aero|/(m*g0)<=4",
+      "nominal_value": 4,
+      "unit": "1",
+      "status": "H，论文名义设计目标",
+      "note": "自由落体为0；不是|dv/dt|/g0，也不是内部结构应力。"
+    },
+    {
+      "id": "C06",
+      "stage": "全程",
+      "name": "力幅值预算",
+      "rule": "n_sum=(Σ|T_i|+|F_aero|)/(m*g0)<=4",
+      "nominal_value": 4,
+      "unit": "1",
+      "status": "H，附加筛查",
+      "note": "避免推力和阻力方向相反时净值抵消掩盖载荷；仍不替代内力/弯矩分析。"
+    },
+    {
+      "id": "C07",
+      "stage": "下降且高动压",
+      "name": "发动机端迎风姿态",
+      "rule": "当v_r<0且q>=10000 Pa，α_b=acos(e_b·(-v_rel/|v_rel|))<=5°",
+      "nominal_value": 5,
+      "unit": "deg",
+      "status": "H；需M1状态",
+      "note": "e_b从脚部中心指向箭体顶部；q门槛10 kPa为H。M0缺姿态则NOT_VERIFIED。"
+    },
+    {
+      "id": "C08",
+      "stage": "末段",
+      "name": "竖直化",
+      "rule": "脚部最低间隙<=200 m时|θ|<=5°",
+      "nominal_value": 5,
+      "unit": "deg",
+      "status": "H；需M1状态",
+      "note": "200 m是姿态检查门槛，不是统一点火高度。"
+    },
+    {
+      "id": "C09",
+      "stage": "点火前后",
+      "name": "可制停性筛查",
+      "rule": "a_b>0且h_clear>=w*tau+0.5*g*tau^2+(w+g*tau)^2/(2*a_b)+20 m",
+      "nominal_value": 20,
+      "unit": "m",
+      "status": "H，辅助筛查",
+      "note": "仅近竖直/姿态已稳定时使用；所有τ与a_b须按当前最不利有效控制确定，不替代全轨迹积分。"
+    },
+    {
+      "id": "C10",
+      "stage": "首次接触",
+      "name": "接触事件",
+      "rule": "首次min_j(h_foot,j-h_deck)=0；此前脚及箭体几何包络不穿透甲板，脚外先碰撞不合格",
+      "nominal_value": 0,
+      "unit": "m",
+      "status": "几何定义",
+      "note": "事件定位容差0.01 m；不以质心高度为零判定落地；完整几何未建时标未核实。"
+    },
+    {
+      "id": "C11",
+      "stage": "首次接触",
+      "name": "相对竖直速度",
+      "rule": "对所有当前接触脚 -2<=v_rel,z<=0",
+      "nominal_value": 2,
+      "unit": "m/s",
+      "status": "H，名义软触地目标",
+      "note": "速度为脚部相对甲板速度；理想优化瞄准0而不是2。"
+    },
+    {
+      "id": "C12",
+      "stage": "首次接触",
+      "name": "相对水平速度",
+      "rule": "对所有当前接触脚 |v_rel,x|<=0.5",
+      "nominal_value": 0.5,
+      "unit": "m/s",
+      "status": "H，名义软触地目标",
+      "note": "包含质心平动与角速度带来的脚端运动。"
+    },
+    {
+      "id": "C13",
+      "stage": "首次接触",
+      "name": "位置与甲板覆盖",
+      "rule": "|x_B-x_ship|<=5 m；全部脚满足|x_foot,j-x_ship|<=18 m",
+      "nominal_value": 5,
+      "unit": "m",
+      "status": "H，名义软触地目标",
+      "note": "B为脚部中心；18 m=20 m半宽减2 m边缘余量，不能只检查质心。"
+    },
+    {
+      "id": "C14",
+      "stage": "首次接触",
+      "name": "箭体倾角",
+      "rule": "|θ|<=2°",
+      "nominal_value": 2,
+      "unit": "deg",
+      "status": "H；需M1状态",
+      "note": "相对甲板法向；两脚可能不同时接触，仍需接触后核查。"
+    },
+    {
+      "id": "C15",
+      "stage": "首次接触",
+      "name": "箭体角速度",
+      "rule": "|ω|<=0.5°/s",
+      "nominal_value": 0.5,
+      "unit": "deg/s",
+      "status": "H；需M1状态",
+      "note": "不允许由推力摆角速率直接代替。"
+    },
+    {
+      "id": "C16",
+      "stage": "名义触地",
+      "name": "可用燃料储备",
+      "rule": "m_use(td)>=2.2e6*1/(320*g0)",
+      "nominal_value": 701.0548964223258,
+      "unit": "kg",
+      "status": "H，储备设计目标",
+      "note": "固定名义任务1 s最大着陆推力耗剂；扰动时允许使用储备但须m_use>=0。"
+    },
+    {
+      "id": "C17",
+      "stage": "全程",
+      "name": "结构与热核查",
+      "rule": "应力/稳定性满足选定结构模型；热流/累计热量/壁温均不超各自有效限值",
+      "nominal_value": null,
+      "unit": "—",
+      "status": "U，补充证据门槛",
+      "note": "未有材料/TPS/壁面与喷流热模型时为NOT_VERIFIED；q及4倍力预算不能替代。"
+    },
+    {
+      "id": "C18",
+      "stage": "接触后",
+      "name": "稳定支撑与吸能",
+      "rule": "接触后至少2 s窗口内不倾覆、不滑移、支撑和吸能载荷均在能力内",
+      "nominal_value": 2,
+      "unit": "s",
+      "status": "H窗口；能力U",
+      "note": "着陆腿、摩擦、接触载荷与燃机关停逻辑需模型。M0止于首次触地时本项NOT_VERIFIED。"
+    }
+  ],
+  "classification": {
+    "PASS": "Required modeled checks pass; applies only within stated assumptions.",
+    "FAIL": "At least one physically evaluated criterion is violated.",
+    "NOT_VERIFIED": "A required state, validated model, material limit, or valid numerical solution is missing."
+  },
+  "current_evaluation": "NOT_RUN: specification only; no flight solution, attitude, thermal or post-contact verification."
+}

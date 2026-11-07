@@ -1,0 +1,13 @@
+{
+  "reserve_kg": 701.0548964223258,
+  "dry_weight_standard_N": 1274864.5,
+  "dry_weight_model_sea_N": 1276632.5633183108,
+  "two_engine_max_N": 2200000.0,
+  "touchdown_vertical_energy_dry_only_J": 260000.0,
+  "hypothetical_stroke_m": 0.5,
+  "average_vertical_contact_load_ratio_at_2m_s": 1.4078864851911712,
+  "planar_static_tip_angle_deg": 8.74616226255521,
+  "q50kPa_drag_Cd05_N": 962112.7501618741,
+  "initial_full_thrust_delay_envelope_s": 1.6,
+  "note": "Arithmetic illustrations, not simulated flight or evidence of actual structural/leg strength."
+}
