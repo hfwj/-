@@ -1,0 +1,10 @@
+﻿q_limit_example_Pa,n_sum_limit,mass_reference_kg,Cd_reference,evaluation,state,aero_force_N,load_based_thrust_budget_N,installed_limited_thrust_N
+30000,3,130000,0.5,"At q=q_limit, not an assumption that all flight points have this q.",VALID_REFERENCE,577267.6500971244,3247325.8499028757,3247325.8499028757
+30000,4,130000,0.5,"At q=q_limit, not an assumption that all flight points have this q.",VALID_REFERENCE,577267.6500971244,4522190.349902876,3300000.0
+30000,5,130000,0.5,"At q=q_limit, not an assumption that all flight points have this q.",VALID_REFERENCE,577267.6500971244,5797054.849902876,3300000.0
+50000,3,130000,0.5,"At q=q_limit, not an assumption that all flight points have this q.",VALID_REFERENCE,962112.7501618741,2862480.749838126,2862480.749838126
+50000,4,130000,0.5,"At q=q_limit, not an assumption that all flight points have this q.",VALID_REFERENCE,962112.7501618741,4137345.249838126,3300000.0
+50000,5,130000,0.5,"At q=q_limit, not an assumption that all flight points have this q.",VALID_REFERENCE,962112.7501618741,5412209.749838126,3300000.0
+70000,3,130000,0.5,"At q=q_limit, not an assumption that all flight points have this q.",VALID_REFERENCE,1346957.8502266237,2477635.649773376,2477635.649773376
+70000,4,130000,0.5,"At q=q_limit, not an assumption that all flight points have this q.",VALID_REFERENCE,1346957.8502266237,3752500.149773376,3300000.0
+70000,5,130000,0.5,"At q=q_limit, not an assumption that all flight points have this q.",VALID_REFERENCE,1346957.8502266237,5027364.649773376,3300000.0

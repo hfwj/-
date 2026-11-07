@@ -1,0 +1,121 @@
+{
+  "status": "PASS",
+  "dry_weight_standard_N": 1274864.5,
+  "engines": [
+    {
+      "active_engines": 1,
+      "minimum_thrust_N": 300000.0,
+      "maximum_thrust_N": 1100000.0,
+      "minimum_TWR_dry_standard_g": 0.2353191260718296,
+      "maximum_TWR_dry_standard_g": 0.8628367955967086,
+      "required_uniform_hover_throttle_dry": 1.2748645,
+      "hover_within_steady_throttle_range": false,
+      "downward_thrust_headroom_from_hover_N": 974864.5,
+      "upward_thrust_headroom_from_hover_N": -174864.5
+    },
+    {
+      "active_engines": 2,
+      "minimum_thrust_N": 600000.0,
+      "maximum_thrust_N": 2200000.0,
+      "minimum_TWR_dry_standard_g": 0.4706382521436592,
+      "maximum_TWR_dry_standard_g": 1.7256735911934171,
+      "required_uniform_hover_throttle_dry": 0.63743225,
+      "hover_within_steady_throttle_range": true,
+      "downward_thrust_headroom_from_hover_N": 674864.5,
+      "upward_thrust_headroom_from_hover_N": 925135.5
+    },
+    {
+      "active_engines": 3,
+      "minimum_thrust_N": 900000.0,
+      "maximum_thrust_N": 3300000.0,
+      "minimum_TWR_dry_standard_g": 0.7059573782154888,
+      "maximum_TWR_dry_standard_g": 2.5885103867901256,
+      "required_uniform_hover_throttle_dry": 0.42495483333333334,
+      "hover_within_steady_throttle_range": true,
+      "downward_thrust_headroom_from_hover_N": 374864.5,
+      "upward_thrust_headroom_from_hover_N": 2025135.5
+    }
+  ],
+  "joint_design_cases": 9,
+  "contour_node_count_spacing_1m": 128,
+  "contour_node_count_spacing_0p5m": 254,
+  "analytic_geometry_cases": [
+    {
+      "theta_deg": -100,
+      "spacing_m": 1.0,
+      "body_clearance_error_m": 0.0
+    },
+    {
+      "theta_deg": -100,
+      "spacing_m": 0.5,
+      "body_clearance_error_m": 0.0
+    },
+    {
+      "theta_deg": -45,
+      "spacing_m": 1.0,
+      "body_clearance_error_m": 0.0
+    },
+    {
+      "theta_deg": -45,
+      "spacing_m": 0.5,
+      "body_clearance_error_m": 0.0
+    },
+    {
+      "theta_deg": 0,
+      "spacing_m": 1.0,
+      "body_clearance_error_m": 0.0
+    },
+    {
+      "theta_deg": 0,
+      "spacing_m": 0.5,
+      "body_clearance_error_m": 0.0
+    },
+    {
+      "theta_deg": 2,
+      "spacing_m": 1.0,
+      "body_clearance_error_m": 0.0
+    },
+    {
+      "theta_deg": 2,
+      "spacing_m": 0.5,
+      "body_clearance_error_m": 0.0
+    },
+    {
+      "theta_deg": 30,
+      "spacing_m": 1.0,
+      "body_clearance_error_m": 0.0
+    },
+    {
+      "theta_deg": 30,
+      "spacing_m": 0.5,
+      "body_clearance_error_m": 0.0
+    },
+    {
+      "theta_deg": 100,
+      "spacing_m": 1.0,
+      "body_clearance_error_m": 0.0
+    },
+    {
+      "theta_deg": 100,
+      "spacing_m": 0.5,
+      "body_clearance_error_m": 0.0
+    },
+    {
+      "theta_deg": 170,
+      "spacing_m": 1.0,
+      "body_clearance_error_m": 0.0
+    },
+    {
+      "theta_deg": 170,
+      "spacing_m": 0.5,
+      "body_clearance_error_m": 0.0
+    }
+  ],
+  "body_first_example": {
+    "theta_deg": 100,
+    "CG_height_m": 8,
+    "min_body_height_m": -1.0903929097179628,
+    "min_foot_height_m": 8.719527009114195
+  },
+  "scope": "Static H geometry and arithmetic only. No continuous collision-time integration, trajectory, real engine optimality, or actual booster clearance was verified."
+}

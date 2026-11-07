@@ -1,0 +1,4 @@
+﻿active_engines,minimum_thrust_N,maximum_thrust_N,minimum_TWR_dry_standard_g,maximum_TWR_dry_standard_g,required_uniform_hover_throttle_dry,hover_within_steady_throttle_range,downward_thrust_headroom_from_hover_N,upward_thrust_headroom_from_hover_N
+1,300000.0,1100000.0,0.2353191260718296,0.8628367955967086,1.2748645,False,974864.5,-174864.5
+2,600000.0,2200000.0,0.4706382521436592,1.7256735911934171,0.63743225,True,674864.5,925135.5
+3,900000.0,3300000.0,0.7059573782154888,2.5885103867901256,0.42495483333333334,True,374864.5,2025135.5

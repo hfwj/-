@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "pdf_pages": 10,
+  "criterion_groups": 18,
+  "check_records": 19,
+  "unique_check_ids": true,
+  "C13_children": [
+    "C13a",
+    "C13b"
+  ],
+  "table_captions": 10,
+  "joint_scan_cases": 9,
+  "checks": [
+    "C13a/C13b values and group mapping",
+    "C05 diagnostic role and coupled scan definition",
+    "engine hover comparison including 3-engine feasibility",
+    "analytic H contour checks",
+    "local links and PDF text",
+    "older versions unchanged"
+  ],
+  "limitations": "Review consistency, arithmetic and static H geometry only; no real engine optimality, trajectory, continuous collision, thermal or landing validation."
+}
