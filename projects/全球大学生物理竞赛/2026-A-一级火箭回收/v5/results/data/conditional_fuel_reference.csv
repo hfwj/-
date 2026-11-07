@@ -1,0 +1,4 @@
+﻿prescribed_delta_v_T_m_s,propellant_reference_kg,final_mass_assumed_kg,interpretation
+700.0,32486.898197845167,130000,Conditional rocket-equation conversion only; not an actual demand interval.
+1100.0,54576.1099859864,130000,Conditional rocket-equation conversion only; not an actual demand interval.
+1400.0,73092.24681505306,130000,Conditional rocket-equation conversion only; not an actual demand interval.

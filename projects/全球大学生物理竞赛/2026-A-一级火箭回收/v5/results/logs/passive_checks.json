@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "refinement_cases": [
+    {
+      "case": "vacuum_130t",
+      "differences": {
+        "time_to_surface_s": 6.94910795573378e-12,
+        "surface_arc_range_m": 1.1350493878126144e-08,
+        "surface_speed_m_s": 3.524291969370097e-11,
+        "max_q_Pa": 0.0
+      }
+    },
+    {
+      "case": "air_130t_Cd0.5",
+      "differences": {
+        "time_to_surface_s": 3.850857410725439e-10,
+        "surface_arc_range_m": 1.266889739781618e-07,
+        "surface_speed_m_s": 1.0680764717108104e-08,
+        "max_q_Pa": 2.137548290193081e-05
+      }
+    },
+    {
+      "case": "air_130t_Cd1",
+      "differences": {
+        "time_to_surface_s": 8.994334166345652e-10,
+        "surface_arc_range_m": 4.313187673687935e-07,
+        "surface_speed_m_s": 2.7173427952220663e-09,
+        "max_q_Pa": 7.400522008538246e-06
+      }
+    },
+    {
+      "case": "air_200t_Cd0.5",
+      "differences": {
+        "time_to_surface_s": 3.3509195418446325e-10,
+        "surface_arc_range_m": 1.017178874462843e-07,
+        "surface_speed_m_s": 1.3256908459879924e-08,
+        "max_q_Pa": 2.1336600184440613e-05
+      }
+    },
+    {
+      "case": "air_200t_Cd1",
+      "differences": {
+        "time_to_surface_s": 1.375127567371237e-09,
+        "surface_arc_range_m": 4.4639455154538155e-07,
+        "surface_speed_m_s": 1.8528112377680372e-08,
+        "max_q_Pa": 5.198922008275986e-05
+      }
+    }
+  ],
+  "vacuum_tangential_velocity_angular_momentum_prediction_m_s": 1684.9788102338719,
+  "maximum_energy_work_residual_J_kg": 1.7951242625713348e-07,
+  "maximum_angular_momentum_decay_relative_residual": 2.6651354906555665e-15,
+  "scope": "Checks apply only to these passive arcs and scalar reference equations, not to a controlled landing or proposed fuel range."
+}

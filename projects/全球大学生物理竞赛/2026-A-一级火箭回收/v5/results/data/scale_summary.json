@@ -1,0 +1,248 @@
+{
+  "classification": "D: calculations from given/reference/H inputs; not a recovered-booster flight solution.",
+  "nominal_inputs": {
+    "source_commit": "894029b89dd9dfd0f7d20a1b863171a86ba19fa7",
+    "source": "A题v2假设规范；nominal为H，不是实机额定",
+    "given": {
+      "dry_mass_kg": 130000,
+      "height_m": 65,
+      "diameter_m": 7,
+      "separation_height_m": 70000,
+      "speed_m_s": 1666.6666666666665
+    },
+    "nominal": {
+      "gamma0_deg": 0,
+      "wind_m_s": 0,
+      "engine_count": 3,
+      "landing_active_engines": 2,
+      "engine_T_ref_N": 1000000.0,
+      "Isp_s": 320,
+      "throttle_min": 0.3,
+      "throttle_max": 1.1,
+      "throttle_slew_per_s": 1,
+      "ignition_delay_s": 0.5,
+      "max_ignitions_each": 3,
+      "thrust_direction_rate_deg_s": 5,
+      "Cd": 0.5,
+      "OF_mass_ratio": 3.4,
+      "CG_to_base_m": 32.5,
+      "foot_half_span_m": 5,
+      "deck_half_width_m": 20,
+      "deck_edge_margin_m": 2,
+      "unusable_propellant_fraction": 0.005,
+      "reserve_full_landing_thrust_s": 1
+    }
+  },
+  "scales": {
+    "initial_speed_m_s": 1666.6666666666665,
+    "area_ref_m2": 38.48451000647496,
+    "side_area_m2": 455,
+    "side_to_base_area_ratio": 11.822938629683655,
+    "specific_initial_kinetic_energy_J_kg": 1388888.8888888885,
+    "specific_gravity_potential_drop_J_kg": 679946.7644334614,
+    "gravity_to_initial_kinetic_ratio": 0.4895616703920923,
+    "total_initial_dry_mass_mechanical_energy_above_surface_J": 268948634931.90546,
+    "equivalent_vacuum_surface_speed_m_s": 2034.1266692722702,
+    "gravity_sea_model_m_s2": 9.820250487063928,
+    "gravity_70km_m_s2": 9.607959802616183,
+    "gravity_fraction_change_sea_to_70km": 0.021617644552691773,
+    "constant_sea_gravity_potential_overestimate_fraction": 0.010987286140317742,
+    "h0_over_earth_radius": 0.01098728614032334,
+    "gravity_fall_time_scale_s": 120.05550096549791,
+    "gravity_velocity_scale_over_fall_time_m_s": 1166.1273233971497,
+    "initial_curvature_acceleration_m_s2": 0.4312649864582793,
+    "curvature_over_initial_gravity": 0.04488621885583335,
+    "vacuum_gamma0_range_m": 204746.01852593682,
+    "vacuum_gamma0_time_s": 123.2965167969802,
+    "tangent_plane_surface_sag_at_vacuum_gamma0_range_m": 3289.980544829953,
+    "rotation_rate_rad_s": 7.292106590880652e-05,
+    "coriolis_acceleration_bound_initial_m_s2": 0.24307021969602172,
+    "coriolis_acceleration_bound_over_initial_gravity": 0.025298838118560336,
+    "frozen_coriolis_drift_scale_over_vacuum_flight_m": 1847.5805140933362,
+    "equatorial_centrifugal_acceleration_m_s2": 0.03387767688722461,
+    "initial_drag_N": 2213.6248975104445,
+    "initial_drag_over_dry_gravity_weight": 0.00177226842917961,
+    "ballistic_coefficient_Cd05_dry_kg_m2": 6755.964931247803,
+    "initial_Mach": 5.6105117155612945,
+    "initial_Re_diameter": 67214.08879376581,
+    "viscosity_based_mean_free_path_70km_m": 0.0008664911963035122,
+    "initial_Kn_diameter": 0.00012378445661478745,
+    "exhaust_equivalent_velocity_m_s": 3138.1279999999997,
+    "initial_speed_over_exhaust_velocity": 0.5311021942593376,
+    "three_engine_max_N": 3300000.0,
+    "two_engine_max_N": 2200000.0,
+    "two_engine_hover_mass_model_sea_kg": 224026.87211472128,
+    "three_engine_hover_mass_model_sea_kg": 336040.3081720819,
+    "single_engine_max_mass_flow_kg_s": 350.5274482111629,
+    "two_engine_max_mass_flow_kg_s": 701.0548964223258,
+    "reference_50t_burn_time_two_engine_max_s": 71.3210909090909,
+    "gravity_velocity_scale_over_reference_burn_m_s": 700.3909777379306,
+    "sea_nozzle_backpressure_loss_per_m2_N": 101325,
+    "sea_nozzle_loss_per_m2_relative_to_1MN": 0.101325,
+    "ideal_perfect_gas_stagnation_temperature_K": 1601.9960741456089,
+    "body_length_over_initial_height": 0.0009285714285714286,
+    "CG_foot_lever_over_200m": 0.1625,
+    "foot_rotation_speed_at_omega05_m_s": 0.28361600344907856,
+    "foot_rotation_speed_over_horizontal_tolerance": 0.5672320068981571,
+    "CG_base_horizontal_offset_at_tilt2_m": 1.1342336428312816,
+    "foot_height_difference_at_tilt2_m": 0.3489949670250097,
+    "wind_speed_ratio_initial": 0.006,
+    "terminal_relative_wind_angle_at_descent2_deg": 78.69006752597979,
+    "sea_crosswind_side_force_per_unit_Cside_N": 27868.73079644546,
+    "sea_crosswind_drift_20s_per_unit_Cside_m": 42.87497045606994,
+    "illustrative_uniform_rod_inertia_dry_kg_m2": 45770833.333333336,
+    "pitch_acceleration_at_q50kPa_Cm001_rad_s2": 0.027326279294538434,
+    "geometric_closed_cylinder_displaced_volume_m3": 2501.4931504208726,
+    "sea_buoyancy_over_dry_weight_closed_cylinder_proxy": 0.02357174613634203,
+    "max_n_sum_given_q50_Cd05_T3p3_dry": 3.3431888252923145,
+    "max_n_sum_given_q50_Cd10_T3p3_dry": 4.0978672637945035,
+    "pitch_time_to_omega05_at_Cm001_s": 0.3193499622071051
+  },
+  "vacuum_diagnostics": [
+    {
+      "gamma_deg": 0,
+      "time_to_surface_s": 123.2965167969802,
+      "surface_arc_range_m": 204746.01852593682,
+      "apogee_geometric_m": 70000.0,
+      "surface_speed_m_s": 2034.1266692722716,
+      "energy_max_relative_drift": 4.926331020554749e-16,
+      "angular_momentum_scaled_drift": 5.330270981311133e-16
+    },
+    {
+      "gamma_deg": 15,
+      "time_to_surface_s": 178.82665838909946,
+      "surface_arc_range_m": 285695.2088207402,
+      "apogee_geometric_m": 80122.21815974452,
+      "surface_speed_m_s": 2034.1266692722381,
+      "energy_max_relative_drift": 9.852662041109498e-16,
+      "angular_momentum_scaled_drift": 7.107027975081511e-16
+    },
+    {
+      "gamma_deg": 30,
+      "time_to_surface_s": 243.15209158197797,
+      "surface_arc_range_m": 346039.95262689743,
+      "apogee_geometric_m": 107612.59252892621,
+      "surface_speed_m_s": 2034.1266692722586,
+      "energy_max_relative_drift": 9.852662041109498e-16,
+      "angular_momentum_scaled_drift": 1.2437298956392643e-15
+    },
+    {
+      "gamma_deg": 45,
+      "time_to_surface_s": 304.3502325843772,
+      "surface_arc_range_m": 350842.8704627258,
+      "apogee_geometric_m": 144786.04888874665,
+      "surface_speed_m_s": 2034.1266692722636,
+      "energy_max_relative_drift": 7.389496530832123e-16,
+      "angular_momentum_scaled_drift": 1.0660541962622266e-15
+    },
+    {
+      "gamma_deg": 60,
+      "time_to_surface_s": 353.37381109559396,
+      "surface_arc_range_m": 285844.6788345472,
+      "apogee_geometric_m": 181535.4001622945,
+      "surface_speed_m_s": 2034.126669272238,
+      "energy_max_relative_drift": 1.2315827551386872e-15,
+      "angular_momentum_scaled_drift": 6.218649478196321e-16
+    },
+    {
+      "gamma_deg": 90,
+      "time_to_surface_s": 395.4466485128552,
+      "surface_arc_range_m": 3.88819079321329e-11,
+      "apogee_geometric_m": 217874.8390189493,
+      "surface_speed_m_s": 2034.1266692722318,
+      "energy_max_relative_drift": 1.4778993061664247e-15,
+      "angular_momentum_scaled_drift": 5.917789570942947e-32
+    }
+  ],
+  "rocket_reference": [
+    {
+      "prescribed_engine_delta_v_m_s": 500.0,
+      "Isp_s": 320,
+      "assumed_final_mass_kg": 130000,
+      "propellant_kg": 22454.335022984378,
+      "expended_fraction_of_initial_mass": 0.14728564471190086
+    },
+    {
+      "prescribed_engine_delta_v_m_s": 1000.0,
+      "Isp_s": 320,
+      "assumed_final_mass_kg": 130000,
+      "propellant_kg": 48787.10974846432,
+      "expended_fraction_of_initial_mass": 0.2728782282856014
+    },
+    {
+      "prescribed_engine_delta_v_m_s": 1666.6666666666665,
+      "Isp_s": 320,
+      "assumed_final_mass_kg": 130000,
+      "propellant_kg": 91104.76627124366,
+      "expended_fraction_of_initial_mass": 0.41204342994343
+    },
+    {
+      "prescribed_engine_delta_v_m_s": 2000.0,
+      "Isp_s": 320,
+      "assumed_final_mass_kg": 130000,
+      "propellant_kg": 115883.31240161095,
+      "expended_fraction_of_initial_mass": 0.471293929098914
+    }
+  ],
+  "terminal_reference": [
+    {
+      "instantaneous_mass_kg": 130000.0,
+      "two_engine_max_N": 2200000.0,
+      "TWR_using_model_sea_gravity": 1.723283631651702,
+      "frozen_mass_net_upward_acceleration_m_s2": 7.102826436012995,
+      "descent_speed_example_m_s": 100.0,
+      "no_delay_frozen_mass_stop_distance_m": 703.9451188964478,
+      "wait_envelope_s": 1.6,
+      "delayed_frozen_mass_required_height_m": 1135.1073608051902
+    },
+    {
+      "instantaneous_mass_kg": 160000.0,
+      "two_engine_max_N": 2200000.0,
+      "TWR_using_model_sea_gravity": 1.400167950717008,
+      "frozen_mass_net_upward_acceleration_m_s2": 3.9297495129360716,
+      "descent_speed_example_m_s": 100.0,
+      "no_delay_frozen_mass_stop_distance_m": 1272.3457267545539,
+      "wait_envelope_s": 1.6,
+      "delayed_frozen_mass_required_height_m": 1896.159379701478
+    },
+    {
+      "instantaneous_mass_kg": 200000.0,
+      "two_engine_max_N": 2200000.0,
+      "TWR_using_model_sea_gravity": 1.1201343605736063,
+      "frozen_mass_net_upward_acceleration_m_s2": 1.1797495129360716,
+      "descent_speed_example_m_s": 100.0,
+      "no_delay_frozen_mass_stop_distance_m": 4238.187806118586,
+      "wait_envelope_s": 1.6,
+      "delayed_frozen_mass_required_height_m": 5867.232019354658
+    },
+    {
+      "instantaneous_mass_kg": 220000.0,
+      "two_engine_max_N": 2200000.0,
+      "TWR_using_model_sea_gravity": 1.018303964157824,
+      "frozen_mass_net_upward_acceleration_m_s2": 0.17974951293607155,
+      "descent_speed_example_m_s": 100.0,
+      "no_delay_frozen_mass_stop_distance_m": 27816.487056508824,
+      "wait_envelope_s": 1.6,
+      "delayed_frozen_mass_required_height_m": 37437.06498323828
+    },
+    {
+      "instantaneous_mass_kg": 250000.0,
+      "two_engine_max_N": 2200000.0,
+      "TWR_using_model_sea_gravity": 0.8961074884588852,
+      "frozen_mass_net_upward_acceleration_m_s2": -1.0202504870639277,
+      "descent_speed_example_m_s": 100.0,
+      "no_delay_frozen_mass_stop_distance_m": null,
+      "wait_envelope_s": 1.6,
+      "delayed_frozen_mass_required_height_m": null
+    }
+  ],
+  "frozen_speed_diagnostic_warning": "Velocity held at 1666.667 m/s at all altitudes only to compare force scales; not an actual descent.",
+  "interpretation_notes": [
+    "130 t is a dry-mass limiting comparison, not a feasible powered state carrying fuel.",
+    "Vacuum arcs omit atmosphere, thrust and Earth rotation at every height, including above 70 km.",
+    "Coriolis drift is a frozen-acceleration scale, not an actual error prediction or rigorous bound.",
+    "Cside and Cm cases are coefficient normalizations and uniform-rod inertia is an H approximation.",
+    "The n_sum maximum calculation assumes drag only, zero lift/side force, q<=50 kPa and m>=130 t.",
+    "Nozzle correction is per square meter of an unspecified exit area, not an inferred real engine area."
+  ]
+}

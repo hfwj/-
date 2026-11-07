@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "full_pdf_pages": 12,
+  "insert_pdf_pages": 3,
+  "new_passive_cases": 5,
+  "table_captions": 11,
+  "checks": [
+    "passive values reproduce proposed time/range scales",
+    "tangential velocity and early q50 states retained",
+    "mass inconsistency explicitly documented",
+    "conditional references not called fuel bounds",
+    "section inserted before section 4",
+    "local Markdown links and older versions unchanged"
+  ],
+  "limits": "Document and diagnostic consistency only. Controlled M0 development remains stopped; no fuel-demand interval or actual safe landing verified."
+}
