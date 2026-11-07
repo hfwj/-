@@ -1,0 +1,360 @@
+{
+  "nominal": {
+    "M0_subset_pass": true,
+    "event": "REFERENCE_CONTACT",
+    "final": {
+      "time_s": 217.7460113625135,
+      "height_m": 32.500000000000014,
+      "vt_m_s": 1.0648090551868342e-06,
+      "vr_m_s": -0.9999366509021783,
+      "mass_kg": 131457.60450451192,
+      "range_m": 206349.55435064613,
+      "q_Pa": 0.6105134553533846,
+      "n_sum": 0.9515206411343416,
+      "n_proper": 0.9515206411343412,
+      "beta_deg": -0.0006445803153825554,
+      "local_direction_rate_deg_s": 4.900003347154584,
+      "global_direction_rate_deg_s": 4.9000033471641595,
+      "usable_kg": 711.1064124219401,
+      "energy_balance_residual_J_kg": 7.683411240577698e-09,
+      "angular_momentum_balance_residual_m2_s": -5.7220458984375e-06,
+      "vertical_thrust_over_weight": 0.9502034335584214
+    },
+    "peaks": {
+      "q_Pa": 47007.57706295695,
+      "n_sum": 2.52753021443614
+    },
+    "domain_pass": true,
+    "max_energy_balance_residual_J_kg": 4.893518052995205e-07,
+    "max_angular_momentum_balance_residual_m2_s": 2.4080276489257812e-05
+  },
+  "rk45": {
+    "M0_subset_pass": true,
+    "event": "REFERENCE_CONTACT",
+    "final": {
+      "time_s": 217.74603280687975,
+      "height_m": 32.49999999999999,
+      "vt_m_s": 8.331634408387476e-07,
+      "vr_m_s": -0.9999471057200399,
+      "mass_kg": 131457.59612196367,
+      "range_m": 206349.55430951813,
+      "q_Pa": 0.6105262218425525,
+      "n_sum": 0.951487433221836,
+      "n_proper": 0.9514874332218359,
+      "beta_deg": -0.0005395028490285969,
+      "local_direction_rate_deg_s": 4.900003347154584,
+      "global_direction_rate_deg_s": 4.900003347162076,
+      "usable_kg": 711.0980298736822,
+      "energy_balance_residual_J_kg": 1.909211277961731e-08,
+      "angular_momentum_balance_residual_m2_s": 1.9073486328125e-05,
+      "vertical_thrust_over_weight": 0.9501702711257815
+    },
+    "peaks": {
+      "q_Pa": 47007.5769028957,
+      "n_sum": 2.5275302110386773
+    },
+    "domain_pass": true,
+    "max_energy_balance_residual_J_kg": 2.407468855381012e-07,
+    "max_angular_momentum_balance_residual_m2_s": 4.482269287109375e-05
+  },
+  "actuator_max_actual_error": 1.1216567674665612e-09,
+  "frozen_open_loop_sensitivity": [
+    {
+      "name": "Cd_minus10pct",
+      "parameters": {
+        "cd": 0.45
+      },
+      "M0_subset_pass": false,
+      "event": "REFERENCE_CONTACT",
+      "final": {
+        "time_s": 204.64569535119918,
+        "height_m": 32.50000000000083,
+        "vt_m_s": 72.42315465735541,
+        "vr_m_s": -80.86601995592908,
+        "mass_kg": 140565.6428959419,
+        "range_m": 206895.45752024566,
+        "q_Pa": 7195.462573682699,
+        "n_sum": 1.686360685390229,
+        "n_proper": 1.6801250505912613,
+        "beta_deg": -19.857199211857857,
+        "local_direction_rate_deg_s": -0.1046751092015572,
+        "global_direction_rate_deg_s": -0.10402379544654344,
+        "usable_kg": 9819.14480385193,
+        "energy_balance_residual_J_kg": 6.28642737865448e-09,
+        "angular_momentum_balance_residual_m2_s": 1.33514404296875e-05,
+        "vertical_thrust_over_weight": 1.4990068361758313
+      },
+      "peaks": {
+        "q_Pa": 52380.959779324774,
+        "n_sum": 2.5148186089031137
+      },
+      "domain_pass": true,
+      "max_energy_balance_residual_J_kg": 6.003538146615028e-07,
+      "max_angular_momentum_balance_residual_m2_s": 4.029273986816406e-05
+    },
+    {
+      "name": "Cd_plus10pct",
+      "parameters": {
+        "cd": 0.55
+      },
+      "M0_subset_pass": false,
+      "event": "NO_CONTACT_BY_PLANNED_END",
+      "final": {
+        "time_s": 217.7461429094268,
+        "height_m": 560.1464183791666,
+        "vt_m_s": -7.504022729129824,
+        "vr_m_s": 3.652421079152872,
+        "mass_kg": 131457.55309021586,
+        "range_m": 205414.17866389788,
+        "q_Pa": 40.41374488818117,
+        "n_sum": 0.9519713655023582,
+        "n_proper": 0.9510176102333044,
+        "beta_deg": 0.0,
+        "local_direction_rate_deg_s": 4.900003347154584,
+        "global_direction_rate_deg_s": 4.899935867789739,
+        "usable_kg": 711.05499812588,
+        "energy_balance_residual_J_kg": 5.587935447692871e-09,
+        "angular_momentum_balance_residual_m2_s": 3.814697265625e-06,
+        "vertical_thrust_over_weight": 0.950157367712734
+      },
+      "peaks": {
+        "q_Pa": 44976.667364855646,
+        "n_sum": 2.536904325958118
+      },
+      "domain_pass": true,
+      "max_energy_balance_residual_J_kg": 1.555308699607849e-07,
+      "max_angular_momentum_balance_residual_m2_s": 1.9073486328125e-05
+    },
+    {
+      "name": "Isp_minus1pct",
+      "parameters": {
+        "isp": 316.8
+      },
+      "M0_subset_pass": false,
+      "event": "USABLE_PROPELLANT_EXHAUSTED",
+      "final": {
+        "time_s": 216.5329437148376,
+        "height_m": 299.8756457069619,
+        "vt_m_s": -0.12198690055574032,
+        "vr_m_s": -2.4197953888296904,
+        "mass_kg": 130746.49809208998,
+        "range_m": 206207.56377234118,
+        "q_Pa": 3.4931774502844193,
+        "n_sum": 1.7158732552515916,
+        "n_proper": 1.715872633865515,
+        "beta_deg": -5.944680010095637,
+        "local_direction_rate_deg_s": 4.900003126182283,
+        "global_direction_rate_deg_s": 4.900002029179365,
+        "usable_kg": -9.094947017729282e-13,
+        "energy_balance_residual_J_kg": 3.725290298461914e-09,
+        "angular_momentum_balance_residual_m2_s": -5.7220458984375e-06,
+        "vertical_thrust_over_weight": 1.7043906586756825
+      },
+      "peaks": {
+        "q_Pa": 46157.572823238654,
+        "n_sum": 2.5319760401326583
+      },
+      "domain_pass": true,
+      "max_energy_balance_residual_J_kg": 3.173481673002243e-07,
+      "max_angular_momentum_balance_residual_m2_s": 1.9311904907226562e-05
+    },
+    {
+      "name": "Isp_plus1pct",
+      "parameters": {
+        "isp": 323.2
+      },
+      "M0_subset_pass": false,
+      "event": "REFERENCE_CONTACT",
+      "final": {
+        "time_s": 209.19086064565664,
+        "height_m": 32.499999999999396,
+        "vt_m_s": 37.94658422335482,
+        "vr_m_s": -53.95800099897642,
+        "mass_kg": 138784.38487718368,
+        "range_m": 206354.23029564123,
+        "q_Pa": 2656.9304388131877,
+        "n_sum": 1.6540109915422099,
+        "n_proper": 1.6527737448320488,
+        "beta_deg": -20.20261398960218,
+        "local_direction_rate_deg_s": -0.04442687675579037,
+        "global_direction_rate_deg_s": -0.04408561666601121,
+        "usable_kg": 8037.886785093694,
+        "energy_balance_residual_J_kg": 2.7939677238464355e-09,
+        "angular_momentum_balance_residual_m2_s": 1.1444091796875e-05,
+        "vertical_thrust_over_weight": 1.514913009755446
+      },
+      "peaks": {
+        "q_Pa": 48212.86328346528,
+        "n_sum": 2.523343510942562
+      },
+      "domain_pass": true,
+      "max_energy_balance_residual_J_kg": 3.727036528289318e-07,
+      "max_angular_momentum_balance_residual_m2_s": 1.9788742065429688e-05
+    },
+    {
+      "name": "rho_minus5pct",
+      "parameters": {
+        "density_factor": 0.95
+      },
+      "M0_subset_pass": false,
+      "event": "REFERENCE_CONTACT",
+      "final": {
+        "time_s": 208.49304870047817,
+        "height_m": 32.499999999998224,
+        "vt_m_s": 45.40259208061611,
+        "vr_m_s": -56.686796610887654,
+        "mass_kg": 137868.43701848618,
+        "range_m": 206654.67686820275,
+        "q_Pa": 3059.700402997161,
+        "n_sum": 1.6707319213767386,
+        "n_proper": 1.668532920164765,
+        "beta_deg": -20.16743877522965,
+        "local_direction_rate_deg_s": -0.05549861342174373,
+        "global_direction_rate_deg_s": -0.05509030018441942,
+        "usable_kg": 7121.938926396192,
+        "energy_balance_residual_J_kg": 6.984919309616089e-10,
+        "angular_momentum_balance_residual_m2_s": -2.6702880859375e-05,
+        "vertical_thrust_over_weight": 1.5253217642521604
+      },
+      "peaks": {
+        "q_Pa": 47094.84390152686,
+        "n_sum": 2.5216358645667274
+      },
+      "domain_pass": true,
+      "max_energy_balance_residual_J_kg": 3.523891791701317e-07,
+      "max_angular_momentum_balance_residual_m2_s": 3.4332275390625e-05
+    },
+    {
+      "name": "rho_plus5pct",
+      "parameters": {
+        "density_factor": 1.05
+      },
+      "M0_subset_pass": false,
+      "event": "NO_CONTACT_BY_PLANNED_END",
+      "final": {
+        "time_s": 217.7461429094268,
+        "height_m": 302.0830463447547,
+        "vt_m_s": -3.852781697987849,
+        "vr_m_s": 1.3970474071473027,
+        "mass_kg": 131457.55309021528,
+        "range_m": 205873.04702205013,
+        "q_Pa": 10.491920358927443,
+        "n_sum": 0.951464423429904,
+        "n_proper": 0.9512544453925154,
+        "beta_deg": 0.0,
+        "local_direction_rate_deg_s": 4.900003347154584,
+        "global_direction_rate_deg_s": 4.899968699899156,
+        "usable_kg": 711.054998125298,
+        "energy_balance_residual_J_kg": 6.51925802230835e-09,
+        "angular_momentum_balance_residual_m2_s": -1.9073486328125e-06,
+        "vertical_thrust_over_weight": 0.9500804019953841
+      },
+      "peaks": {
+        "q_Pa": 48255.86577949702,
+        "n_sum": 2.5325926459348276
+      },
+      "domain_pass": true,
+      "max_energy_balance_residual_J_kg": 3.4819822758436203e-07,
+      "max_angular_momentum_balance_residual_m2_s": 1.52587890625e-05
+    },
+    {
+      "name": "initial_vt_minus1m_s",
+      "parameters": {
+        "dv_t": -1
+      },
+      "M0_subset_pass": false,
+      "event": "REFERENCE_CONTACT",
+      "final": {
+        "time_s": 215.93368857175406,
+        "height_m": 32.499999999999886,
+        "vt_m_s": 1.9663119270808043,
+        "vr_m_s": -11.542378253614379,
+        "mass_kg": 132652.14004441103,
+        "range_m": 206169.11219471882,
+        "q_Pa": 83.707652134656,
+        "n_sum": 1.6924100375545499,
+        "n_proper": 1.692409920887693,
+        "beta_deg": -8.881032001921495,
+        "local_direction_rate_deg_s": 4.900002820597992,
+        "global_direction_rate_deg_s": 4.900020503975784,
+        "usable_kg": 1905.6419523210488,
+        "energy_balance_residual_J_kg": -1.1641532182693481e-09,
+        "angular_momentum_balance_residual_m2_s": -7.62939453125e-06,
+        "vertical_thrust_over_weight": 1.668599368043965
+      },
+      "peaks": {
+        "q_Pa": 46951.805420745404,
+        "n_sum": 2.5266960290881024
+      },
+      "domain_pass": true,
+      "max_energy_balance_residual_J_kg": 6.239279173314571e-07,
+      "max_angular_momentum_balance_residual_m2_s": 3.361701965332031e-05
+    },
+    {
+      "name": "initial_vt_plus1m_s",
+      "parameters": {
+        "dv_t": 1
+      },
+      "M0_subset_pass": false,
+      "event": "NO_CONTACT_BY_PLANNED_END",
+      "final": {
+        "time_s": 217.7461429094268,
+        "height_m": 42.67616854499292,
+        "vt_m_s": 0.3410154052148507,
+        "vr_m_s": -0.9337228648565263,
+        "mass_kg": 131457.55309021485,
+        "range_m": 206529.23515594436,
+        "q_Pa": 0.6027534015425989,
+        "n_sum": 0.9513168155797278,
+        "n_proper": 0.9513162696067202,
+        "beta_deg": 0.0,
+        "local_direction_rate_deg_s": 4.900003347154584,
+        "global_direction_rate_deg_s": 4.900006413959259,
+        "usable_kg": 711.0549981248614,
+        "energy_balance_residual_J_kg": 7.916241884231567e-09,
+        "angular_momentum_balance_residual_m2_s": 2.6702880859375e-05,
+        "vertical_thrust_over_weight": 0.9500030387279469
+      },
+      "peaks": {
+        "q_Pa": 47077.113196101796,
+        "n_sum": 2.52836527651567
+      },
+      "domain_pass": true,
+      "max_energy_balance_residual_J_kg": 4.059402272105217e-07,
+      "max_angular_momentum_balance_residual_m2_s": 3.0517578125e-05
+    },
+    {
+      "name": "initial_vr_minus1m_s",
+      "parameters": {
+        "dv_r": -1
+      },
+      "M0_subset_pass": false,
+      "event": "REFERENCE_CONTACT",
+      "final": {
+        "time_s": 212.7450379041148,
+        "height_m": 32.49999999999959,
+        "vt_m_s": 15.271034075910595,
+        "vr_m_s": -30.00680087410305,
+        "mass_kg": 134887.55919172213,
+        "range_m": 206139.5847726228,
+        "q_Pa": 692.1734278657985,
+        "n_sum": 1.6732137810540622,
+        "n_proper": 1.6731454118333526,
+        "beta_deg": -20.271521396278402,
+        "local_direction_rate_deg_s": 0.007183073490019502,
+        "global_direction_rate_deg_s": 0.007320408498332541,
+        "usable_kg": 4141.0610996321475,
+        "energy_balance_residual_J_kg": 1.862645149230957e-09,
+        "angular_momentum_balance_residual_m2_s": 3.814697265625e-06,
+        "vertical_thrust_over_weight": 1.557987067433766
+      },
+      "peaks": {
+        "q_Pa": 47696.78684705735,
+        "n_sum": 2.5297239968744556
+      },
+      "domain_pass": true,
+      "max_energy_balance_residual_J_kg": 2.2118911147117615e-08,
+      "max_angular_momentum_balance_residual_m2_s": 1.52587890625e-05
+    }
+  ]
+}

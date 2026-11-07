@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Cd_minus10pct",
+    "final_max_height_or_velocity_absolute_difference": 4.395913180132993e-07,
+    "event": "REFERENCE_CONTACT",
+    "M0_subset_pass": false
+  },
+  {
+    "name": "Isp_minus1pct",
+    "final_max_height_or_velocity_absolute_difference": 7.136632461879344e-06,
+    "event": "USABLE_PROPELLANT_EXHAUSTED",
+    "M0_subset_pass": false
+  },
+  {
+    "name": "initial_vt_minus1m_s",
+    "final_max_height_or_velocity_absolute_difference": 4.593781691042409e-06,
+    "event": "REFERENCE_CONTACT",
+    "M0_subset_pass": false
+  }
+]

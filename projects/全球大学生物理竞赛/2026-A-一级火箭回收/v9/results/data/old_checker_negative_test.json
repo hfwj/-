@@ -1,0 +1,6 @@
+{
+  "mutation": "add 2pi to both phase beta arrays, outside declared +/-pi/2",
+  "old_checker_M0_subset_pass": true,
+  "beta_max_deg": 360.0,
+  "meaning": "Input guard omission. Nominal delivered controls unchanged; periodic force direction alone cannot enforce declared control bounds."
+}

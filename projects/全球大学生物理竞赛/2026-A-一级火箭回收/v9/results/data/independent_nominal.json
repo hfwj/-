@@ -1,0 +1,29 @@
+{
+  "M0_subset_pass": true,
+  "event": "REFERENCE_CONTACT",
+  "final": {
+    "time_s": 217.7460113625135,
+    "height_m": 32.500000000000014,
+    "vt_m_s": 1.0648090551868342e-06,
+    "vr_m_s": -0.9999366509021783,
+    "mass_kg": 131457.60450451192,
+    "range_m": 206349.55435064613,
+    "q_Pa": 0.6105134553533846,
+    "n_sum": 0.9515206411343416,
+    "n_proper": 0.9515206411343412,
+    "beta_deg": -0.0006445803153825554,
+    "local_direction_rate_deg_s": 4.900003347154584,
+    "global_direction_rate_deg_s": 4.9000033471641595,
+    "usable_kg": 711.1064124219401,
+    "energy_balance_residual_J_kg": 7.683411240577698e-09,
+    "angular_momentum_balance_residual_m2_s": -5.7220458984375e-06,
+    "vertical_thrust_over_weight": 0.9502034335584214
+  },
+  "peaks": {
+    "q_Pa": 47007.57706295695,
+    "n_sum": 2.52753021443614
+  },
+  "domain_pass": true,
+  "max_energy_balance_residual_J_kg": 4.893518052995205e-07,
+  "max_angular_momentum_balance_residual_m2_s": 2.4080276489257812e-05
+}

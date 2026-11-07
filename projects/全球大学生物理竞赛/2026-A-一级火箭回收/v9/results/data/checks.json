@@ -1,0 +1,32 @@
+{
+  "coordinate_rhs_max_absolute_error_mixed_SI": 3.694822225952521e-13,
+  "density_max_relative_error": 0.0,
+  "rounded_geopotential_anchor_max_relerr": 2.2775526749674313e-05,
+  "vacuum_max_energy_relerr": 2.220446049250313e-16,
+  "vacuum_max_angular_momentum_relerr": 1.7763568394002505e-15,
+  "ideal_rocket_velocity_error_m_s": 1.0800249583553523e-12,
+  "quadratic_drag_velocity_error_m_s": 6.963318810448982e-13,
+  "negative_controls": [
+    {
+      "name": "beta_add_2pi",
+      "rejected": true,
+      "reason": "Direction outside +/-90 deg"
+    },
+    {
+      "name": "nan_throttle",
+      "rejected": true,
+      "reason": "Missing/nonfinite U1"
+    },
+    {
+      "name": "wrong_shape",
+      "rejected": true,
+      "reason": "Invalid grid/shapes"
+    },
+    {
+      "name": "invalid_timing",
+      "rejected": true,
+      "reason": "Invalid timing/mass"
+    }
+  ],
+  "v8_manifest_pass": true
+}

@@ -1,0 +1,27 @@
+{
+  "independent_vs_v8": {
+    "contact_time_difference_s": 2.607806948162761e-07,
+    "radial_velocity_difference_m_s": -1.541845442432077e-07,
+    "mass_difference_kg": -0.00010195700451731682,
+    "range_difference_m": -5.591748049482703e-06,
+    "q_peak_difference_Pa": -3.243858373025432e-05
+  },
+  "cross_solver_radial_velocity_difference_m_s": 1.0454817861549337e-05,
+  "conditional_attitude": {
+    "max_incoming_misalignment_if_body_follows_thrust_deg": 29.78274316654512,
+    "minimum_required_net_gimbal_for_C07_deg": 24.78274316654512,
+    "max_thrust_tilt_below_232_5m_deg": 20.278320241372196,
+    "minimum_required_net_gimbal_for_C08_deg": 15.278320241372196
+  },
+  "sensitivity_pass_count": 0,
+  "sensitivity_case_count": 9,
+  "nearest_200m_reference_clearance_sample": {
+    "time_s": 209.65,
+    "height_m": 231.78015064335784,
+    "vt_m_s": 34.54939604763828,
+    "vr_m_s": -47.667022868262556,
+    "beta_deg": -20.221990696513682,
+    "local_direction_rate_deg_s": -0.0399183658451486
+  },
+  "final_if_body_follows_thrust_angular_rate_deg_s": 4.900003347154584
+}

@@ -1,0 +1,8 @@
+{
+  "elapsed_s": 120.30713953700251,
+  "initial_propellant_kg": 149299.61841799683,
+  "initial_propellant_difference_kg": 0.0,
+  "final_time_difference_s": 0.0,
+  "shutdown_time_difference_s": 0.0,
+  "max_state_control_node_absolute_difference_mixed_solver_units": 0.0
+}
