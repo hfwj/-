@@ -1,5 +1,7 @@
 # G题四块独立板：Modular V1.1 最简试改
 
+**2026-11-07补充：[C14实际偏压与7V余量核对](reports/C14偏压与7V余量补充核对.md) · [C14采购约束](schematic/C14_selection_addendum.csv) · [补充下载包](downloads/GBUCK_Modular_V1_1_bias_addendum.zip)。原理图和值不改；C14属于3.3V控制域，不能按输出5~7V直接推偏压。原整包保留，采购/调试时同时读此补充。当前目录校验见 [SHA256SUMS](SHA256SUMS.txt)，初版清单保存在 [4ff1171基准清单](references/SHA256SUMS_4ff1171.txt)。**
+
 2026-11-07。已先核对《A板可行性审查》，再尝试最小修改。**A板不加器件；四板仍71件。唯一实体变更：B.C14从1uF改220nF；DAC A改内参/G2，电流目标改为经校准的0.95A。**
 
 [下载完整资料包](downloads/GBUCK_Modular_V1_1_reviewed_draft.zip) · [仅嘉立创JSON与说明](downloads/GBUCK_Modular_V1_1_JSON.zip) · [审查逐项核对](reports/审查核对与最简试改.md) · [导入/配置/调试](reports/导入与首次调试.md)

@@ -1,0 +1,2 @@
+﻿Board,Reference,Nominal_value,Dielectric,Voltage_rating,Preferred_size,Qualification,Actual_replacement_required
+B,C14,220nF,X7R; C0G optional,>=25V,0805;1206 optional,"Check exact MPN DC-bias curve, initial tolerance, temperature, and measured differential bias; calculate with effective capacitance",Unconfirmed until actual part identified

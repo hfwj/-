@@ -4,6 +4,8 @@
 
 ## 项目目录
 
+2026-11-07：[G题V1.1 C14偏压与7V余量补充](projects/2026-electronics-contest/g-buck/modular-v1-1/reports/C14偏压与7V余量补充核对.md)。C14稳态偏压不等于5~7V输出；补充≥25V、优先0805选型约束，连接与标称值、71件数量不变，现有器件是否替换待核。
+
 2026-11-07：[G题四板 V1.1 最简试改](projects/2026-electronics-contest/g-buck/modular-v1-1/README.md) · [审查核对](projects/2026-electronics-contest/g-buck/modular-v1-1/reports/审查核对与最简试改.md)。A板不加器件；B.C14改220nF，DAC参考/电流目标需按新配置校准。71件/261脚静态核对通过，环路/瞬时1A/效率与原生导入尚未验证。
 
 2026-11-07：[G题四块独立板简化方案 Modular V1](projects/2026-electronics-contest/g-buck/modular-v1/README.md) · [嘉立创EDA完整资料包](projects/2026-electronics-contest/g-buck/modular-v1/downloads/G题_嘉立创EDA_四块独立板.zip)。四个独立标准版JSON、BOM/逐针表/预览；静态连接核对通过，未做原生导入/ERC/封装绑定/PCB或效率验证。新方案与旧Rev C.2不兼容；本次归档不改四板草案、旧硬件/固件/仿真。

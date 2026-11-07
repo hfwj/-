@@ -1,0 +1,53 @@
+{
+  "baseline_commit": "4ff11716e5357529642209baad2c784c7fb0482e",
+  "status": "DC arithmetic only; not measured; diode Vf assumed 0.2V",
+  "C14_connection": [
+    "I_ERR",
+    "COMP"
+  ],
+  "CC_steady_states": [
+    {
+      "load_ohm": 8.0,
+      "VREG_V": 7.6475,
+      "I_ERR_V": 0.95,
+      "COMP_approx_V": 1.03125,
+      "C14_signed_V_I_ERR_minus_COMP": -0.08125000000000004,
+      "C14_abs_dc_V": 0.08125000000000004
+    },
+    {
+      "load_ohm": 5.0,
+      "VREG_V": 4.797499999999999,
+      "I_ERR_V": 0.95,
+      "COMP_approx_V": 1.3162500000000001,
+      "C14_signed_V_I_ERR_minus_COMP": -0.3662500000000002,
+      "C14_abs_dc_V": 0.3662500000000002
+    }
+  ],
+  "CV20R_C14_abs_V_approx": 0.20045124688279303,
+  "effective_capacitance_examples": [
+    {
+      "C_eff_nF": 120,
+      "R12_times_C_eff_ms": 12.0,
+      "integration_rate_relative_to_220nF": 1.8333333333333333
+    },
+    {
+      "C_eff_nF": 160,
+      "R12_times_C_eff_ms": 16.0,
+      "integration_rate_relative_to_220nF": 1.375
+    },
+    {
+      "C_eff_nF": 220,
+      "R12_times_C_eff_ms": 22.0,
+      "integration_rate_relative_to_220nF": 1.0
+    }
+  ],
+  "examples_are_not_vendor_derating_data": true,
+  "DAC_A_7V_target_V": 3.0891771220400717,
+  "headroom_at_3p3_V": 0.21082287795992816,
+  "headroom_at_3p25_V": 0.16082287795992833,
+  "buffer_load_uA_at_7V": 44.521020036429846,
+  "schematic_changed": false,
+  "physical_part_count": 71,
+  "selection_constraints_added": "C14 220nF X7R >=25V, prefer 0805; 1206 optional; verify exact part bias/temperature/tolerance; C0G optional, not mandatory",
+  "existing_part_reuse": "UNCONFIRMED without actual part number and measurements"
+}
