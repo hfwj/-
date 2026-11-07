@@ -1,0 +1,58 @@
+{
+  "date": "2026-11-07",
+  "scope": "Numerical reproduction and archive checks; not physical validation or calibrated uncertainty estimation.",
+  "ballistic_max_abs_error_m": 4.440892098500626e-16,
+  "step_convergence": [
+    {
+      "max_step_s": 0.02,
+      "goal_time_s": 0.400501892223603,
+      "position_m": [
+        10.999999999999996,
+        2.6040051879524118,
+        1.9613395757402965
+      ]
+    },
+    {
+      "max_step_s": 0.01,
+      "goal_time_s": 0.40050189222334753,
+      "position_m": [
+        11.0,
+        2.6040051879560204,
+        1.9613395757440162
+      ]
+    },
+    {
+      "max_step_s": 0.005,
+      "goal_time_s": 0.4005018922233515,
+      "position_m": [
+        10.999999999999998,
+        2.604005187955869,
+        1.9613395757440055
+      ]
+    }
+  ],
+  "max_position_spread_m": 3.7196912217041245e-12,
+  "scenario_count": 7,
+  "max_observation_RMSE_m": 5.466730375166419e-12,
+  "pdf_pages": 5,
+  "docx_archive_valid": true,
+  "broken_relative_links": [],
+  "not_completed": [
+    "measurement-noise calibration",
+    "physically supported prior calibration",
+    "posterior sampling",
+    "prediction-region coverage validation",
+    "external measured-trajectory validation"
+  ],
+  "impact": {
+    "baseline": "repository before initial UPC project archive",
+    "schematic": "unchanged",
+    "components_BOM_PCB_firmware": "unchanged",
+    "models": "new independent penalty model only; existing electronics models unchanged"
+  },
+  "report_SHA256": {
+    "基本建模思路.md": "c44a6c34f1204e1f1e7f960de86e8f1b2be88523a49b50da0387b668183778f7",
+    "2026_UPC_B题_基本建模思路.docx": "bbaa30b3eb9ac62019f814bf1fe3b7457a506305ea910ab32751db05f2c14c58",
+    "2026_UPC_B题_基本建模思路.pdf": "0dd413c5fc125b4a1ae4639b3d98d9c722dbee8c259908e632d6e8e57a2a0311"
+  }
+}
