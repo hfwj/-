@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-07",
+  "scope": "Document integrity, pagination, references and links only; no model execution or performance validation.",
+  "pdf_pages": 6,
+  "docx_archive_valid": true,
+  "reference_hyperlinks": [
+    "https://www.uphysicsc.com/2022-GM-B-358.pdf",
+    "https://www.uphysicsc.com/2022-GM-B-471.pdf",
+    "https://www.uphysicsc.com/2022-GM-B-480.pdf",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC3660809/",
+    "https://www.jstage.jst.go.jp/article/jjpehss/55/2/55_09053/_article/-char/en",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC8100144/"
+  ],
+  "report_SHA256": {
+    "2026_UPC_B题_主动力模型推荐与创新路线.md": "19b7fc731d53f2ac09ef36c6401d904453355362589a7822be673286276bf91a",
+    "2026_UPC_B题_主动力模型推荐与创新路线.docx": "1357951c7f7bed3c8710c1545c5feffa5bc1bb67378c9aade6603e270ab8cce0",
+    "2026_UPC_B题_主动力模型推荐与创新路线.pdf": "53de46e376241b1e65552dc6472c5d88fcbddb407a8148e8000af8f9c0483377"
+  },
+  "model_implementation_changed": false,
+  "baseline_commit": "43debb7",
+  "schematic_components_BOM_PCB_firmware": "unchanged"
+}
