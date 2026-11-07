@@ -4,6 +4,8 @@
 
 ## 项目目录
 
+2026-11-07：[G题四块独立板简化方案 Modular V1](projects/2026-electronics-contest/g-buck/modular-v1/README.md) · [嘉立创EDA完整资料包](projects/2026-electronics-contest/g-buck/modular-v1/downloads/G题_嘉立创EDA_四块独立板.zip)。四个独立标准版JSON、BOM/逐针表/预览；静态连接核对通过，未做原生导入/ERC/封装绑定/PCB或效率验证。新方案与旧Rev C.2不兼容；本次归档不改四板草案、旧硬件/固件/仿真。
+
 2026-11-03：[G题Rev C.2 ADCFIX1 / A1诊断HEX与修正说明](projects/2026-electronics-contest/g-buck/rev-c2/firmware/docs/ADC采样修正与上板复测_2026-11-03.md) · [用户上板复测](projects/2026-electronics-contest/g-buck/rev-c2/reports/firmware-bringup-2026-11-03/README.md)。软件回归/ARM编译通过；用户照片确认A1运行、OFF/FAULT 0、VIN=14.865V，采样精度及保护/功率验收仍待完成。仍禁止功率输出；原理图/器件/BOM/PCB和仿真不改，旧诊断包仅留档。
 
 | 项目 | 资料入口 | 当前结论 |
