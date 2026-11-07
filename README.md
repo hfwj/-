@@ -4,6 +4,8 @@
 
 ## 项目目录
 
+2026-11-08：[G题主功率＋CC主板：六功能区已连线](projects/2026-electronics-contest/g-buck/mainboard-v1/README.md) · [嘉立创JSON资料包](projects/2026-electronics-contest/g-buck/mainboard-v1/downloads/GBUCK_Mainboard_Functional_Std.zip)。42件/123脚静态核对通过；减少两只板间插座，保留芯片与阻容参数；尚未绑定封装/设计PCB或实测。
+
 2026-11-07：[G题V1.1 C14偏压与7V余量补充](projects/2026-electronics-contest/g-buck/modular-v1-1/reports/C14偏压与7V余量补充核对.md)。C14稳态偏压不等于5~7V输出；补充≥25V、优先0805选型约束，连接与标称值、71件数量不变，现有器件是否替换待核。
 
 2026-11-07：[G题四板 V1.1 最简试改](projects/2026-electronics-contest/g-buck/modular-v1-1/README.md) · [审查核对](projects/2026-electronics-contest/g-buck/modular-v1-1/reports/审查核对与最简试改.md)。A板不加器件；B.C14改220nF，DAC参考/电流目标需按新配置校准。71件/261脚静态核对通过，环路/瞬时1A/效率与原生导入尚未验证。

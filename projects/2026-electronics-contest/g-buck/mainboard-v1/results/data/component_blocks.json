@@ -1,0 +1,377 @@
+{
+  "J1": {
+    "value": "INPUT 15-25V",
+    "zone": 1,
+    "pins": {
+      "1": "RAW+",
+      "2": "GND"
+    }
+  },
+  "F1": {
+    "value": "2A fuse",
+    "zone": 1,
+    "pins": {
+      "1": "RAW+",
+      "2": "FUSED"
+    }
+  },
+  "RS1": {
+    "value": "0.05R 1% 1W",
+    "zone": 1,
+    "pins": {
+      "1": "FUSED",
+      "2": "VIN_SYS"
+    }
+  },
+  "J4": {
+    "value": "TO AUX D",
+    "zone": 1,
+    "pins": {
+      "1": "VIN_SYS",
+      "2": "GND"
+    }
+  },
+  "U3": {
+    "value": "INA226AIDGSR",
+    "zone": 1,
+    "pins": {
+      "10": "FUSED",
+      "9": "VIN_SYS",
+      "8": "RAW+",
+      "1": "GND",
+      "2": "GND",
+      "6": "+3V3",
+      "7": "GND",
+      "5": "SCL",
+      "4": "SDA",
+      "3": "NC"
+    }
+  },
+  "C9": {
+    "value": "100nF",
+    "zone": 1,
+    "pins": {
+      "1": "+3V3",
+      "2": "GND"
+    }
+  },
+  "J3": {
+    "value": "TO BOARD C",
+    "zone": 1,
+    "pins": {
+      "1": "+3V3",
+      "2": "GND",
+      "3": "SCL",
+      "4": "SDA",
+      "5": "VSET_DRV",
+      "6": "CC_OUT",
+      "7": "ISENSE",
+      "8": "VOUT_ADC",
+      "9": "RUN",
+      "10": "GND"
+    }
+  },
+  "U1": {
+    "value": "TPS54302DDCR",
+    "zone": 2,
+    "pins": {
+      "3": "VIN_SYS",
+      "1": "GND",
+      "5": "EN_A",
+      "4": "FB",
+      "2": "SW",
+      "6": "BOOT"
+    }
+  },
+  "C1": {
+    "value": "100uF 50V",
+    "zone": 2,
+    "pins": {
+      "1": "VIN_SYS",
+      "2": "GND"
+    }
+  },
+  "C2": {
+    "value": "10uF 50V X7R",
+    "zone": 2,
+    "pins": {
+      "1": "VIN_SYS",
+      "2": "GND"
+    }
+  },
+  "C3": {
+    "value": "100nF 50V",
+    "zone": 2,
+    "pins": {
+      "1": "VIN_SYS",
+      "2": "GND"
+    }
+  },
+  "L1": {
+    "value": "22uH Isat>=5A",
+    "zone": 2,
+    "pins": {
+      "1": "SW",
+      "2": "VREG"
+    }
+  },
+  "RS2": {
+    "value": "0.05R 1% 1W",
+    "zone": 2,
+    "pins": {
+      "1": "VREG",
+      "2": "OUT+"
+    }
+  },
+  "J2": {
+    "value": "OUTPUT LOAD",
+    "zone": 2,
+    "pins": {
+      "1": "OUT+",
+      "2": "GND"
+    }
+  },
+  "C5": {
+    "value": "22uF 25V X7R",
+    "zone": 2,
+    "pins": {
+      "1": "VREG",
+      "2": "GND"
+    }
+  },
+  "C6": {
+    "value": "22uF 25V X7R",
+    "zone": 2,
+    "pins": {
+      "1": "VREG",
+      "2": "GND"
+    }
+  },
+  "C4": {
+    "value": "100nF 16V",
+    "zone": 2,
+    "pins": {
+      "1": "BOOT",
+      "2": "SW"
+    }
+  },
+  "R1": {
+    "value": "100k 0.1%",
+    "zone": 3,
+    "pins": {
+      "1": "VREG",
+      "2": "FB"
+    }
+  },
+  "R2": {
+    "value": "5.49k 0.1%",
+    "zone": 3,
+    "pins": {
+      "1": "FB",
+      "2": "GND"
+    }
+  },
+  "R3": {
+    "value": "56k 0.1%",
+    "zone": 3,
+    "pins": {
+      "1": "VSET_DRV",
+      "2": "FB"
+    }
+  },
+  "D1": {
+    "value": "BAT54 (1=A,3=K)",
+    "zone": 3,
+    "pins": {
+      "1": "CC_OUT",
+      "3": "CC_K",
+      "2": "NC"
+    }
+  },
+  "R4": {
+    "value": "10k 1%",
+    "zone": 3,
+    "pins": {
+      "1": "CC_K",
+      "2": "FB"
+    }
+  },
+  "R5": {
+    "value": "1k",
+    "zone": 3,
+    "pins": {
+      "1": "RUN",
+      "2": "EN_A"
+    }
+  },
+  "R6": {
+    "value": "100k",
+    "zone": 3,
+    "pins": {
+      "1": "EN_A",
+      "2": "GND"
+    }
+  },
+  "U2": {
+    "value": "INA180A1IDBVR",
+    "zone": 4,
+    "pins": {
+      "3": "VREG",
+      "4": "OUT+",
+      "2": "GND",
+      "5": "+3V3",
+      "1": "ISENSE"
+    }
+  },
+  "C8": {
+    "value": "100nF",
+    "zone": 4,
+    "pins": {
+      "1": "+3V3",
+      "2": "GND"
+    }
+  },
+  "R7": {
+    "value": "100k 0.1%",
+    "zone": 4,
+    "pins": {
+      "1": "OUT+",
+      "2": "VOUT_ADC"
+    }
+  },
+  "R8": {
+    "value": "10k 0.1%",
+    "zone": 4,
+    "pins": {
+      "1": "VOUT_ADC",
+      "2": "GND"
+    }
+  },
+  "C7": {
+    "value": "10nF",
+    "zone": 4,
+    "pins": {
+      "1": "VOUT_ADC",
+      "2": "GND"
+    }
+  },
+  "U4": {
+    "value": "MCP4728-E/UN",
+    "zone": 5,
+    "pins": {
+      "1": "+3V3",
+      "10": "GND",
+      "2": "SCL",
+      "3": "SDA",
+      "4": "GND",
+      "5": "RDY",
+      "6": "DAC_V",
+      "7": "DAC_I",
+      "8": "NC",
+      "9": "NC"
+    }
+  },
+  "C10": {
+    "value": "100nF",
+    "zone": 5,
+    "pins": {
+      "1": "+3V3",
+      "2": "GND"
+    }
+  },
+  "R9": {
+    "value": "100k",
+    "zone": 5,
+    "pins": {
+      "1": "RDY",
+      "2": "+3V3"
+    }
+  },
+  "R10": {
+    "value": "1k",
+    "zone": 5,
+    "pins": {
+      "1": "DAC_V",
+      "2": "V_FILT"
+    }
+  },
+  "C12": {
+    "value": "100nF",
+    "zone": 5,
+    "pins": {
+      "1": "V_FILT",
+      "2": "GND"
+    }
+  },
+  "U5": {
+    "value": "MCP6002-I/SN",
+    "zone": 6,
+    "pins": {
+      "3": "I_FILT",
+      "2": "I_ERR",
+      "5": "V_FILT",
+      "6": "VSET_DRV",
+      "4": "GND",
+      "1": "CC_OUT",
+      "7": "VSET_DRV",
+      "8": "+3V3"
+    }
+  },
+  "R11": {
+    "value": "1k",
+    "zone": 6,
+    "pins": {
+      "1": "ISENSE",
+      "2": "I_FILT"
+    }
+  },
+  "C13": {
+    "value": "10nF",
+    "zone": 6,
+    "pins": {
+      "1": "I_FILT",
+      "2": "GND"
+    }
+  },
+  "R12": {
+    "value": "100k 1%",
+    "zone": 6,
+    "pins": {
+      "1": "DAC_I",
+      "2": "I_ERR"
+    }
+  },
+  "R13": {
+    "value": "1k 1%",
+    "zone": 6,
+    "pins": {
+      "1": "CC_OUT",
+      "2": "COMP"
+    }
+  },
+  "C14": {
+    "value": "220nF X7R",
+    "zone": 6,
+    "pins": {
+      "1": "COMP",
+      "2": "I_ERR"
+    }
+  },
+  "D2": {
+    "value": "BAT54 (1=A,3=K)",
+    "zone": 6,
+    "pins": {
+      "1": "I_ERR",
+      "3": "CC_OUT",
+      "2": "NC"
+    }
+  },
+  "C11": {
+    "value": "100nF",
+    "zone": 6,
+    "pins": {
+      "1": "+3V3",
+      "2": "GND"
+    }
+  }
+}

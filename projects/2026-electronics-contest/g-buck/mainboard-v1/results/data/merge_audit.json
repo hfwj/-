@@ -1,0 +1,18 @@
+{
+  "baseline": "abc0556 / Modular V1.1",
+  "original_A_plus_B_components": 44,
+  "mainboard_components": 42,
+  "mainboard_pins": 123,
+  "removed": [
+    "A.J3 to B",
+    "B.J1 to A"
+  ],
+  "renamed": [
+    "B.J2 to mainboard.J3, same pin mapping"
+  ],
+  "active_and_passive_values": "IDENTICAL",
+  "retained_component_pin_nets": "IDENTICAL",
+  "PCB": "NOT CREATED",
+  "footprints": "UNBOUND",
+  "native_ERC": "NOT RUN"
+}

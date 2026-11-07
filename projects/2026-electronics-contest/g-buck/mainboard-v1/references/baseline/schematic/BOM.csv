@@ -1,0 +1,72 @@
+﻿Board,Reference,Part_or_value,Recommended_footprint,Footprint_bound
+A_Power_Sense,J1,INPUT 15-25V,TerminalBlock_2P_5.08mm,False
+A_Power_Sense,F1,2A fuse,Fuse holder - select actual part,False
+A_Power_Sense,RS1,0.05R 1% 1W,"R2512, Kelvin route",False
+A_Power_Sense,U1,TPS54302DDCR,SOT-23-THIN-6 (DDC),False
+A_Power_Sense,L1,22uH Isat>=5A,"Inductor, DCR<=80mR, select exact part",False
+A_Power_Sense,RS2,0.05R 1% 1W,"R2512, Kelvin route",False
+A_Power_Sense,C4,100nF 16V,,False
+A_Power_Sense,C5,22uF 25V X7R,"C1210, effective Cout total>=22uF",False
+A_Power_Sense,C6,22uF 25V X7R,"C1210, effective Cout total>=22uF",False
+A_Power_Sense,C1,100uF 50V,,False
+A_Power_Sense,C2,10uF 50V X7R,,False
+A_Power_Sense,C3,100nF 50V,,False
+A_Power_Sense,J2,OUTPUT LOAD,TerminalBlock_2P_5.08mm,False
+A_Power_Sense,U3,INA226AIDGSR,VSSOP-10 (DGS),False
+A_Power_Sense,U2,INA180A1IDBVR,"SOT-23-5 DBV, pinout A",False
+A_Power_Sense,J3,TO BOARD B,"2x5 keyed header, assign exact footprint",False
+A_Power_Sense,J4,TO AUX D,1x2 2.54mm,False
+A_Power_Sense,R1,100k 0.1%,,False
+A_Power_Sense,R2,5.49k 0.1%,,False
+A_Power_Sense,R3,56k 0.1%,,False
+A_Power_Sense,D1,"BAT54 (1=A,3=K)",,False
+A_Power_Sense,R4,10k 1%,,False
+A_Power_Sense,R5,1k,,False
+A_Power_Sense,R6,100k,,False
+A_Power_Sense,R7,100k 0.1%,,False
+A_Power_Sense,R8,10k 0.1%,,False
+A_Power_Sense,C7,10nF,,False
+A_Power_Sense,C8,100nF,,False
+A_Power_Sense,C9,100nF,,False
+B_CC_DAC,U4,MCP4728-E/UN,MSOP-10,False
+B_CC_DAC,U5,MCP6002-I/SN,SOIC-8,False
+B_CC_DAC,J1,TO BOARD A,2x5 keyed header,False
+B_CC_DAC,J2,TO BOARD C,2x5 keyed header,False
+B_CC_DAC,R10,1k,,False
+B_CC_DAC,C12,100nF,,False
+B_CC_DAC,R9,100k,,False
+B_CC_DAC,R11,1k,,False
+B_CC_DAC,C13,10nF,,False
+B_CC_DAC,R12,100k 1%,,False
+B_CC_DAC,R13,1k 1%,,False
+B_CC_DAC,C14,220nF X7R,,False
+B_CC_DAC,D2,"BAT54 (1=A,3=K)",,False
+B_CC_DAC,C10,100nF,,False
+B_CC_DAC,C11,100nF,,False
+C_MCU_LCD,U6,STM32F103C8T6,LQFP-48 7x7mm pitch0.5mm,False
+C_MCU_LCD,JLCD,PCD8544 LCD,Module header: verify actual silkscreen order,False
+C_MCU_LCD,J1,TO BOARD B,2x5 keyed header,False
+C_MCU_LCD,JP,3V3 FROM D,1x2 2.54mm,False
+C_MCU_LCD,JSWD,SWD DEBUG,"1x4 2.54mm, voltage reference only",False
+C_MCU_LCD,R14,4.7k,,False
+C_MCU_LCD,R15,4.7k,,False
+C_MCU_LCD,R16,10k,,False
+C_MCU_LCD,C15,100nF,,False
+C_MCU_LCD,R17,10k,,False
+C_MCU_LCD,R18,10k,,False
+C_MCU_LCD,R19,10k,,False
+C_MCU_LCD,R20,10k,,False
+C_MCU_LCD,R21,10k,,False
+C_MCU_LCD,K1,NO momentary,2-pin normally-open switch; verify physical contacts,False
+C_MCU_LCD,K2,NO momentary,2-pin normally-open switch; verify physical contacts,False
+C_MCU_LCD,K3,NO momentary,2-pin normally-open switch; verify physical contacts,False
+C_MCU_LCD,C16,100nF,,False
+C_MCU_LCD,C17,100nF,,False
+C_MCU_LCD,C18,100nF,,False
+C_MCU_LCD,C19,100nF,,False
+C_MCU_LCD,C20,4.7uF,,False
+C_MCU_LCD,C21,100nF,,False
+C_MCU_LCD,C22,1uF,,False
+D_Aux_Power,J1,INPUT FROM A.J4,1x2 2.54mm,False
+D_Aux_Power,M1,Aux buck module: 15-25V to 3.3V,Purchased auxiliary module; custom pin mapping only,False
+D_Aux_Power,J2,OUTPUT TO C.JP,1x2 2.54mm,False
