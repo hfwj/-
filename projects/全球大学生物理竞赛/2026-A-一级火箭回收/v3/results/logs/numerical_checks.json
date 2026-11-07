@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "checks": {
+    "max_vacuum_energy_relative_drift": 1.4778993061664247e-15,
+    "max_scaled_angular_momentum_drift": 1.2437298956392643e-15,
+    "max_surface_speed_error_against_energy_m_s": 3.842615114990622e-11,
+    "refined_gamma0_time_difference_s": 1.1368683772161603e-12,
+    "refined_gamma0_range_difference_m": 1.8044374883174896e-09
+  },
+  "scope": "Conservation and numerical refinement of vacuum diagnostics only; no powered descent, actual drag calibration, heat safety, or fuel result."
+}

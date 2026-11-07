@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "pdf_pages": 9,
+  "source_links": 14,
+  "tradeoff_rows": 12,
+  "vacuum_cases": 6,
+  "checks": [
+    "Word/PDF/Markdown/CSV/JSON consistency",
+    "source and local Markdown hyperlinks",
+    "reference-only labels retained",
+    "figures in PNG and PDF",
+    "old versions unchanged by intended scope"
+  ],
+  "software_versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "matplotlib": "3.10.8",
+    "python-docx": "1.2.0",
+    "PyMuPDF": "1.26.6"
+  },
+  "python_version": "3.12.14",
+  "scope": "Document and numerical diagnostic consistency, not a successful landing or fuel solution."
+}
