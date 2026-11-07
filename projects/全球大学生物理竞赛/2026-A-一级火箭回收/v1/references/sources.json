@@ -1,0 +1,114 @@
+[
+  {
+    "id": "S1",
+    "title": "UPC — The 2026 University Physics Competition Problems",
+    "institution": "University Physics Competition",
+    "year": "2026",
+    "url": "https://university-physics-competition.com/2026-competition",
+    "locator": "Problem A",
+    "supports": "分离高度、速率、干质量、尺寸、推进剂类型与船位可选。",
+    "boundary": "没有给出速度方向、发动机型号或安全限值。",
+    "accessed_UTC": "2026-11-07"
+  },
+  {
+    "id": "S2",
+    "title": "U.S. Standard Atmosphere, 1976",
+    "institution": "NOAA / NASA / USAF",
+    "year": "1976",
+    "url": "https://ntrs.nasa.gov/citations/19770009539",
+    "pdf": "https://ntrs.nasa.gov/api/citations/19770009539/downloads/19770009539.pdf",
+    "locator": "NASA-TM-X-74335；常数、位势高度和低层分层大气公式",
+    "supports": "标准海平面、分层温度、压强与密度；本项目复算几何高度0–70 km。",
+    "boundary": "标准参考环境，非当天海上实测；本代码不含高层大气。",
+    "accessed_UTC": "2026-11-07"
+  },
+  {
+    "id": "S3",
+    "title": "Earth Fact Sheet",
+    "institution": "NASA NSSDC",
+    "year": "网页，检索于2026-11-07",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
+    "locator": "Bulk parameters / Volumetric mean radius",
+    "supports": "地球体积平均半径6371.000 km。",
+    "boundary": "本题用作球形地球近似；不是赤道半径或大气位势换算半径。",
+    "accessed_UTC": "2026-11-07"
+  },
+  {
+    "id": "S4",
+    "title": "IERS Conventions (2010), Technical Note 36",
+    "institution": "IERS",
+    "year": "2010",
+    "url": "https://iers-conventions.obspm.fr/conventions/content/tn36.pdf",
+    "locator": "表1.1；PDF第18页",
+    "supports": "地心引力常数GM=3.986004418×10^14 m³/s²。",
+    "boundary": "取其数值用于牛顿球对称重力；不实现相对论/潮汐/椭球模型。",
+    "accessed_UTC": "2026-11-07"
+  },
+  {
+    "id": "S5",
+    "title": "Engines — BE-4",
+    "institution": "Blue Origin",
+    "year": "网页，检索于2026-11-07",
+    "url": "https://www.blueorigin.com/engines",
+    "locator": "BE-4段落",
+    "supports": "网页标称推力2846 kN、深度节流至978 kN；LOX/LNG。",
+    "boundary": "该页没有明确这些数值的环境压强，也未列比冲；LNG不能直接视为题中纯甲烷。",
+    "accessed_UTC": "2026-11-07"
+  },
+  {
+    "id": "S6",
+    "title": "CNES Future Launcher Roadmap — La Sapienza",
+    "institution": "Jean-Marc Astorg / CNES",
+    "year": "2019-05-07",
+    "url": "https://satelliteobservation.net/wp-content/uploads/2020/01/astorg-conference-7-may-2019.pdf",
+    "locator": "第50页：Prometheus: An efficient versatile engine",
+    "supports": "早期设计：真空推力1000 kN；一级Isp 320 s、上面级360 s；混合比3.4；节流30%–110%。",
+    "boundary": "CNES作者的一手讲义，现由镜像站托管；历史设计值，非题中发动机认证性能。",
+    "accessed_UTC": "2026-11-07"
+  },
+  {
+    "id": "S7",
+    "title": "Specific Impulse",
+    "institution": "NASA Glenn Research Center",
+    "year": "网页，检索于2026-11-07",
+    "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+    "locator": "Specific impulse / thrust equation",
+    "supports": "比冲与总推进剂质量流率的关系。",
+    "boundary": "只支持公式，不提供本题发动机的Isp数值。",
+    "accessed_UTC": "2026-11-07"
+  },
+  {
+    "id": "S8",
+    "title": "Drag Coefficient",
+    "institution": "NASA Glenn Research Center",
+    "year": "网页，检索于2026-11-07",
+    "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/drag-coefficient/",
+    "locator": "Reference area / viscosity and compressibility",
+    "supports": "阻力参考面积以及形状、姿态、Mach/Re匹配要求。",
+    "boundary": "不能据此给本题火箭指定固定实测Cd。",
+    "accessed_UTC": "2026-11-07"
+  },
+  {
+    "id": "S9",
+    "title": "Hypersonic retro propulsion for reusable launch vehicles tested in the H2K wind tunnel",
+    "institution": "Marwege, Kirchheck, Klevanski & Gülhan / DLR",
+    "year": "2022",
+    "url": "https://elib.dlr.de/188153/",
+    "doi": "10.1007/s12567-022-00457-w",
+    "locator": "CEAS Space Journal 14:473–499；摘要及试验条件",
+    "supports": "M=5.3和7.0、单/三发动机逆向喷流试验；推力系数和姿态影响气动。",
+    "boundary": "不同外形与模拟喷流条件；不能把其系数无条件移植到题中助推器。",
+    "accessed_UTC": "2026-11-07"
+  },
+  {
+    "id": "S10",
+    "title": "A general stagnation-point convective heating equation for arbitrary gas mixtures",
+    "institution": "Sutton & Graves / NASA Langley",
+    "year": "1971",
+    "url": "https://ntrs.nasa.gov/citations/19720003329",
+    "locator": "NASA-TR-R-376",
+    "supports": "钝体驻点对流加热关联式的物理背景。",
+    "boundary": "发动机朝前、喷流作用及有效曲率未闭合；本版不指定热流系数或热防护安全阈值。",
+    "accessed_UTC": "2026-11-07"
+  }
+]

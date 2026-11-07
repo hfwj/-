@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "parameter_records": 68,
+  "source_records": 10,
+  "pdf_pages": 7,
+  "pdf_source_links": 12,
+  "checks": [
+    "unique parameter/source identifiers",
+    "unknown entries remain null",
+    "CSV row count",
+    "PDF page count and links",
+    "local Markdown links excluding not-yet-built package"
+  ],
+  "limits": "Formatting and data consistency only; no flight trajectory or fuel optimization."
+}

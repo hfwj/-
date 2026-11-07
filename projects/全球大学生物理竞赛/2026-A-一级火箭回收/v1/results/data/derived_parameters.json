@@ -1,0 +1,16 @@
+{
+  "speed_m_s": 1666.6666666666665,
+  "area_ref_m2": 38.48451000647496,
+  "geometric_side_area_m2": 455,
+  "dry_weight_standard_N": 1274864.5,
+  "gravity_sea_model_m_s2": 9.820250487063928,
+  "gravity_70km_m_s2": 9.607959802616183,
+  "mach_initial_no_wind": 5.6105117155612945,
+  "dynamic_pressure_initial_no_wind_Pa": 115.03978598859673,
+  "virtual_nominal_mass_flow_one_engine_kg_s": 318.6613165556026,
+  "virtual_one_engine_max_dry_TWR": 0.8628367955967086,
+  "virtual_two_engine_max_dry_TWR": 1.7256735911934171,
+  "virtual_two_engine_max_support_mass_kg": 224337.56685514422,
+  "methane_fraction_at_OF_3p4": 0.22727272727272727,
+  "oxygen_fraction_at_OF_3p4": 0.7727272727272726
+}

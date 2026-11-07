@@ -1,0 +1,810 @@
+{
+  "version": "v1",
+  "date_UTC": "2026-11-07",
+  "baseline": "fcc2c33f7f26502c4095c69963da79f4b77f25e6",
+  "status_legend": {
+    "G": "题目给定",
+    "L": "文献/标准参考，不自动属于题中实机",
+    "D": "条件已注明的公式推算",
+    "H": "本报告人为假设/探索场景",
+    "U": "未知/待定"
+  },
+  "parameters": [
+    {
+      "id": "h0",
+      "category": "题目给定",
+      "name": "分离几何高度",
+      "symbol": "h₀",
+      "value": 70000,
+      "unit": "m",
+      "status": "G",
+      "source_ids": "S1",
+      "note": "题中高度按海平面几何高度解释。"
+    },
+    {
+      "id": "v0_given",
+      "category": "题目给定",
+      "name": "分离速率（原始）",
+      "symbol": "V₀",
+      "value": 6000,
+      "unit": "km/h",
+      "status": "G",
+      "source_ids": "S1",
+      "note": "仅给速率，方向与参考系没有说明。"
+    },
+    {
+      "id": "mdry",
+      "category": "题目给定",
+      "name": "干质量",
+      "symbol": "m_d",
+      "value": 130000,
+      "unit": "kg",
+      "status": "G",
+      "source_ids": "S1",
+      "note": "不加推进剂；按题意固定。"
+    },
+    {
+      "id": "length",
+      "category": "题目给定",
+      "name": "箭体高度",
+      "symbol": "L",
+      "value": 65,
+      "unit": "m",
+      "status": "G",
+      "source_ids": "S1",
+      "note": "未给着陆腿尺寸与重心位置。"
+    },
+    {
+      "id": "diameter",
+      "category": "题目给定",
+      "name": "箭体直径",
+      "symbol": "d",
+      "value": 7.0,
+      "unit": "m",
+      "status": "G",
+      "source_ids": "S1",
+      "note": "用于统一阻力参考面积。"
+    },
+    {
+      "id": "propellant_type",
+      "category": "题目给定",
+      "name": "推进剂类型",
+      "symbol": "—",
+      "value": "LOX / CH4",
+      "unit": "—",
+      "status": "G",
+      "source_ids": "S1",
+      "note": "氧化剂为液氧，燃料为甲烷。"
+    },
+    {
+      "id": "ship_location",
+      "category": "题目给定",
+      "name": "船位选择",
+      "symbol": "x_ship",
+      "value": "可选",
+      "unit": "m",
+      "status": "G",
+      "source_ids": "S1",
+      "note": "每次候选轨迹中固定；不是随火箭运动的目标。"
+    },
+    {
+      "id": "v0",
+      "category": "直接推算",
+      "name": "分离速率（SI）",
+      "symbol": "V₀",
+      "value": 1666.6666666666665,
+      "unit": "m/s",
+      "status": "D",
+      "source_ids": "S1",
+      "note": "6000/3.6；不可直接作为竖直速度。"
+    },
+    {
+      "id": "area",
+      "category": "直接推算",
+      "name": "统一参考面积",
+      "symbol": "A_ref",
+      "value": 38.48451000647496,
+      "unit": "m²",
+      "status": "D",
+      "source_ids": "S1;S8",
+      "note": "πd²/4；攻角影响放入同一参考面积定义下的Cd。"
+    },
+    {
+      "id": "side_area",
+      "category": "直接推算",
+      "name": "侧向几何投影尺度",
+      "symbol": "Ld",
+      "value": 455,
+      "unit": "m²",
+      "status": "D",
+      "source_ids": "S1",
+      "note": "几何尺度，不用它再次乘已经含姿态效应的Cd。"
+    },
+    {
+      "id": "weight_std",
+      "category": "直接推算",
+      "name": "按标准重力计的干重",
+      "symbol": "m_d g₀",
+      "value": 1274864.5,
+      "unit": "N",
+      "status": "D",
+      "source_ids": "S1;S2",
+      "note": "用于量级/常规推重比检查；实际运动用g(h)。"
+    },
+    {
+      "id": "g70",
+      "category": "直接推算",
+      "name": "球对称模型70 km重力",
+      "symbol": "g(70km)",
+      "value": 9.607959802616183,
+      "unit": "m/s²",
+      "status": "D",
+      "source_ids": "S3;S4",
+      "note": "GM/(R_E+h)²。"
+    },
+    {
+      "id": "M0",
+      "category": "直接推算",
+      "name": "无风条件初始马赫数",
+      "symbol": "M₀",
+      "value": 5.6105117155612945,
+      "unit": "1",
+      "status": "D",
+      "source_ids": "S1;S2",
+      "note": "条件性推算：题中速度按地面相对速度，零风，忽略地球自转。"
+    },
+    {
+      "id": "q0",
+      "category": "直接推算",
+      "name": "无风条件初始动压",
+      "symbol": "q₀",
+      "value": 115.03978598859673,
+      "unit": "Pa",
+      "status": "D",
+      "source_ids": "S1;S2",
+      "note": "同上；不代表全程最大动压。"
+    },
+    {
+      "id": "RE",
+      "category": "标准环境",
+      "name": "球形地球平均半径",
+      "symbol": "R_E",
+      "value": 6371000,
+      "unit": "m",
+      "status": "L",
+      "source_ids": "S3",
+      "note": "选用体积平均半径，构成球形地球近似。"
+    },
+    {
+      "id": "GME",
+      "category": "标准环境",
+      "name": "地心引力常数",
+      "symbol": "GM_E",
+      "value": 398600441800000.0,
+      "unit": "m³/s²",
+      "status": "L",
+      "source_ids": "S4",
+      "note": "不再另取G与地球质量相乘。"
+    },
+    {
+      "id": "g0",
+      "category": "标准环境",
+      "name": "标准重力",
+      "symbol": "g₀",
+      "value": 9.80665,
+      "unit": "m/s²",
+      "status": "L",
+      "source_ids": "S2",
+      "note": "比冲与质量流率换算常数，不替代动力学g(h)。"
+    },
+    {
+      "id": "Ratm",
+      "category": "标准环境",
+      "name": "大气位势换算半径",
+      "symbol": "R_atm",
+      "value": 6356766,
+      "unit": "m",
+      "status": "L",
+      "source_ids": "S2",
+      "note": "H=R_atm h/(R_atm+h)；用途不同于R_E。"
+    },
+    {
+      "id": "Tsea",
+      "category": "标准环境",
+      "name": "标准海平面温度",
+      "symbol": "T₀",
+      "value": 288.15,
+      "unit": "K",
+      "status": "L",
+      "source_ids": "S2",
+      "note": "标准环境，不是当天实测。"
+    },
+    {
+      "id": "psea",
+      "category": "标准环境",
+      "name": "标准海平面压强",
+      "symbol": "p₀",
+      "value": 101325,
+      "unit": "Pa",
+      "status": "L",
+      "source_ids": "S2",
+      "note": "标准环境。"
+    },
+    {
+      "id": "Rair",
+      "category": "标准环境",
+      "name": "空气比气体常数",
+      "symbol": "R_air",
+      "value": 287.05307204706463,
+      "unit": "J/(kg·K)",
+      "status": "L",
+      "source_ids": "S2",
+      "note": "8314.32/28.9644；固定组成近似用于0–70 km。"
+    },
+    {
+      "id": "gamma_air",
+      "category": "标准环境",
+      "name": "空气比热比",
+      "symbol": "γ_air",
+      "value": 1.4,
+      "unit": "1",
+      "status": "L",
+      "source_ids": "S2",
+      "note": "用于环境声速；不描述高温激波层热化学。"
+    },
+    {
+      "id": "visc_beta",
+      "category": "标准环境",
+      "name": "Sutherland系数",
+      "symbol": "β",
+      "value": 1.458e-06,
+      "unit": "kg/(m·s·K^0.5)",
+      "status": "L",
+      "source_ids": "S2",
+      "note": "μ=βT^1.5/(T+S)。"
+    },
+    {
+      "id": "visc_S",
+      "category": "标准环境",
+      "name": "Sutherland温度",
+      "symbol": "S",
+      "value": 110.4,
+      "unit": "K",
+      "status": "L",
+      "source_ids": "S2",
+      "note": "空气动力黏度估算。"
+    },
+    {
+      "id": "H_layers",
+      "category": "标准环境",
+      "name": "分层位势高度",
+      "symbol": "H_b",
+      "value": [
+        0.0,
+        11000.0,
+        20000.0,
+        32000.0,
+        47000.0,
+        51000.0,
+        71000.0,
+        84852.0
+      ],
+      "unit": "m",
+      "status": "L",
+      "source_ids": "S2",
+      "note": "本版计算仅开放几何高度0–70 km。"
+    },
+    {
+      "id": "lapse",
+      "category": "标准环境",
+      "name": "各层温度梯度",
+      "symbol": "λ_b",
+      "value": [
+        -0.0065,
+        0.0,
+        0.001,
+        0.0028,
+        0.0,
+        -0.0028,
+        -0.002
+      ],
+      "unit": "K/m",
+      "status": "L",
+      "source_ids": "S2",
+      "note": "按H_layers次序对应。"
+    },
+    {
+      "id": "BE4_Tmax",
+      "category": "真实资料对照",
+      "name": "BE-4网页标称推力",
+      "symbol": "T_web",
+      "value": 2846000,
+      "unit": "N",
+      "status": "L",
+      "source_ids": "S5",
+      "note": "网页四舍五入SI数值；页面未明确压强条件。不是题中发动机。"
+    },
+    {
+      "id": "BE4_Tmin",
+      "category": "真实资料对照",
+      "name": "BE-4网页节流下限",
+      "symbol": "T_low_web",
+      "value": 978000,
+      "unit": "N",
+      "status": "L",
+      "source_ids": "S5",
+      "note": "和标称值来自同一网页；未给Isp。"
+    },
+    {
+      "id": "BE4_prop",
+      "category": "真实资料对照",
+      "name": "BE-4推进剂",
+      "symbol": "—",
+      "value": "LOX / LNG",
+      "unit": "—",
+      "status": "L",
+      "source_ids": "S5",
+      "note": "LNG成分不等于已知纯甲烷；仅量级对照。"
+    },
+    {
+      "id": "P_Tvac",
+      "category": "真实资料对照",
+      "name": "Prometheus历史设计真空推力",
+      "symbol": "T_vac",
+      "value": 1000000,
+      "unit": "N",
+      "status": "L",
+      "source_ids": "S6",
+      "note": "2019设计资料；不能直接等于海平面回收推力。"
+    },
+    {
+      "id": "P_Isp_first",
+      "category": "真实资料对照",
+      "name": "Prometheus历史一级设计比冲",
+      "symbol": "Isp_first",
+      "value": 320,
+      "unit": "s",
+      "status": "L",
+      "source_ids": "S6",
+      "note": "原表标一级，未提供完整环境压强/节流性能图。"
+    },
+    {
+      "id": "P_Isp_upper",
+      "category": "真实资料对照",
+      "name": "Prometheus历史上面级设计比冲",
+      "symbol": "Isp_upper",
+      "value": 360,
+      "unit": "s",
+      "status": "L",
+      "source_ids": "S6",
+      "note": "不是同一一级喷管的已知真空比冲。"
+    },
+    {
+      "id": "P_OF",
+      "category": "真实资料对照",
+      "name": "Prometheus历史设计氧燃质量比",
+      "symbol": "r_OF",
+      "value": 3.4,
+      "unit": "kg/kg",
+      "status": "L",
+      "source_ids": "S6",
+      "note": "LOX/CH4质量比；不是4.4倍的燃料质量。"
+    },
+    {
+      "id": "P_throttle",
+      "category": "真实资料对照",
+      "name": "Prometheus历史设计节流范围",
+      "symbol": "u",
+      "value": [
+        0.3,
+        1.1
+      ],
+      "unit": "1",
+      "status": "L",
+      "source_ids": "S6",
+      "note": "相对名义推力；关机独立于点火态下限。"
+    },
+    {
+      "id": "V0_Tref",
+      "category": "可选虚拟与情景",
+      "name": "V0虚拟发动机名义等效推力",
+      "symbol": "T_ref",
+      "value": 1000000,
+      "unit": "N",
+      "status": "H",
+      "source_ids": "本报告假设；量级参考S6",
+      "note": "受S6量级启发；人为设为常量，未做背压修正，非Prometheus海平面性能。"
+    },
+    {
+      "id": "V0_Isp",
+      "category": "可选虚拟与情景",
+      "name": "V0虚拟常数比冲",
+      "symbol": "Isp_eff",
+      "value": 320,
+      "unit": "s",
+      "status": "H",
+      "source_ids": "本报告假设；量级参考S6",
+      "note": "采用一级设计量级作等效假设；不是实测曲线。"
+    },
+    {
+      "id": "V0_throttle",
+      "category": "可选虚拟与情景",
+      "name": "V0点火状态节流区间",
+      "symbol": "u",
+      "value": [
+        0.3,
+        1.1
+      ],
+      "unit": "1",
+      "status": "H",
+      "source_ids": "本报告假设；量级参考S6",
+      "note": "人为沿用参考设计范围；发动机关闭时T=0。"
+    },
+    {
+      "id": "V0_N",
+      "category": "可选虚拟与情景",
+      "name": "V0同时开机数量候选",
+      "symbol": "N_on",
+      "value": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "unit": "台",
+      "status": "H",
+      "source_ids": "本报告假设；量级参考S6",
+      "note": "仅程序调试候选；不意味着题目实际安装三台发动机。"
+    },
+    {
+      "id": "V0_OF",
+      "category": "可选虚拟与情景",
+      "name": "V0固定氧燃比",
+      "symbol": "r_OF",
+      "value": 3.4,
+      "unit": "kg/kg",
+      "status": "H",
+      "source_ids": "本报告假设；量级参考S6",
+      "note": "用于把总推进剂分解为液氧与甲烷。"
+    },
+    {
+      "id": "Isp_scan",
+      "category": "可选虚拟与情景",
+      "name": "探索比冲网格",
+      "symbol": "Isp_eff",
+      "value": [
+        300,
+        320,
+        340
+      ],
+      "unit": "s",
+      "status": "H",
+      "source_ids": "本报告假设；量级参考S6",
+      "note": "人为敏感性取点，不是实机置信区间；参数组合只是虚拟族。"
+    },
+    {
+      "id": "Cd_placeholder",
+      "category": "可选虚拟与情景",
+      "name": "早期占位阻力系数",
+      "symbol": "Cd",
+      "value": 0.5,
+      "unit": "1",
+      "status": "H",
+      "source_ids": "本报告假设",
+      "note": "仅程序连通性检查；恒定Cd不作为最终跨声速气动结论。"
+    },
+    {
+      "id": "Cd_scan",
+      "category": "可选虚拟与情景",
+      "name": "探索Cd网格",
+      "symbol": "Cd",
+      "value": [
+        0.3,
+        0.5,
+        0.8,
+        1.0
+      ],
+      "unit": "1",
+      "status": "H",
+      "source_ids": "本报告假设",
+      "note": "统一A_ref；人为网格，不代表经验上下界或最坏情况。"
+    },
+    {
+      "id": "gamma_scan",
+      "category": "可选虚拟与情景",
+      "name": "分离航迹角探索网格",
+      "symbol": "γ₀",
+      "value": [
+        0,
+        15,
+        30,
+        45,
+        60,
+        90
+      ],
+      "unit": "deg",
+      "status": "H",
+      "source_ids": "本报告假设",
+      "note": "相对当地水平向上为正；不等于真实方向概率，也不排除负角场景。"
+    },
+    {
+      "id": "wind_base",
+      "category": "可选虚拟与情景",
+      "name": "基准风",
+      "symbol": "w",
+      "value": 0,
+      "unit": "m/s",
+      "status": "H",
+      "source_ids": "本报告假设",
+      "note": "忽略风，后续使用指定风剖面做扰动检验。"
+    },
+    {
+      "id": "rho_scale",
+      "category": "可选虚拟与情景",
+      "name": "大气密度倍率探索",
+      "symbol": "k_ρ",
+      "value": [
+        0.8,
+        1.0,
+        1.2
+      ],
+      "unit": "1",
+      "status": "H",
+      "source_ids": "本报告假设",
+      "note": "围绕标准值的人为扰动，不是当地气象统计区间。"
+    },
+    {
+      "id": "earth_spin",
+      "category": "可选虚拟与情景",
+      "name": "首版地球自转",
+      "symbol": "Ω_E",
+      "value": 0,
+      "unit": "rad/s",
+      "status": "H",
+      "source_ids": "本报告假设",
+      "note": "二维初算忽略；用时、航程和纬度确定后再评估误差。"
+    },
+    {
+      "id": "dry_mass_fixed",
+      "category": "可选虚拟与情景",
+      "name": "首版干质量演化",
+      "symbol": "m_d",
+      "value": "固定130000",
+      "unit": "kg",
+      "status": "H",
+      "source_ids": "本报告假设",
+      "note": "不模拟部件抛弃、烧蚀或气体泄漏。"
+    },
+    {
+      "id": "residual_ideal",
+      "category": "可选虚拟与情景",
+      "name": "理想下界的触地残余",
+      "symbol": "m_res",
+      "value": 0,
+      "unit": "kg",
+      "status": "H",
+      "source_ids": "本报告假设",
+      "note": "仅理想理论分支；工程方案需另加可用余量、不可用残余与启动消耗。"
+    },
+    {
+      "id": "gamma_true",
+      "category": "待定参数",
+      "name": "真实分离航迹角",
+      "symbol": "γ₀",
+      "value": null,
+      "unit": "deg",
+      "status": "U",
+      "source_ids": "S1未给；需另行建模/查证",
+      "note": "影响上升续飞与重返条件；优先参数化。"
+    },
+    {
+      "id": "speed_frame",
+      "category": "待定参数",
+      "name": "题中速度参考系",
+      "symbol": "frame",
+      "value": null,
+      "unit": "—",
+      "status": "U",
+      "source_ids": "S1未给；需另行建模/查证",
+      "note": "地面系/惯性系未说明；初算采用地面相对速率。"
+    },
+    {
+      "id": "engine_actual",
+      "category": "待定参数",
+      "name": "实际发动机与安装数",
+      "symbol": "engine,N_inst",
+      "value": null,
+      "unit": "—",
+      "status": "U",
+      "source_ids": "S1未给；需另行建模/查证",
+      "note": "不可把BE-4推力和Prometheus比冲拼成已验证实机。"
+    },
+    {
+      "id": "engine_map",
+      "category": "待定参数",
+      "name": "实际发动机性能图",
+      "symbol": "T(p_a,u),Isp(p_a,u)",
+      "value": null,
+      "unit": "N,s",
+      "status": "U",
+      "source_ids": "S1未给；需另行建模/查证",
+      "note": "需同一喷管、同一节流和环境条件下的数据。"
+    },
+    {
+      "id": "nozzle_exit",
+      "category": "待定参数",
+      "name": "喷管出口面积",
+      "symbol": "A_e",
+      "value": null,
+      "unit": "m²",
+      "status": "U",
+      "source_ids": "S1未给；需另行建模/查证",
+      "note": "真空推力转海平面推力所需；缺少时不能任意背压修正。"
+    },
+    {
+      "id": "ignition",
+      "category": "待定参数",
+      "name": "点火延迟/启动耗剂/重启能力",
+      "symbol": "τ_ign,m_start",
+      "value": null,
+      "unit": "s,kg",
+      "status": "U",
+      "source_ids": "S1未给；需另行建模/查证",
+      "note": "影响最后点火高度及余量；不可默认文献发动机已匹配。"
+    },
+    {
+      "id": "gimbal",
+      "category": "待定参数",
+      "name": "推力摆角与摆速",
+      "symbol": "δ_max,δdot_max",
+      "value": null,
+      "unit": "deg,deg/s",
+      "status": "U",
+      "source_ids": "S1未给；需另行建模/查证",
+      "note": "决定65 m长箭体能否跟随质点模型控制。"
+    },
+    {
+      "id": "aero",
+      "category": "待定参数",
+      "name": "真实阻力/法向力/力矩图",
+      "symbol": "Cd,CN,Cm",
+      "value": null,
+      "unit": "1",
+      "status": "U",
+      "source_ids": "S1未给；需另行建模/查证",
+      "note": "需匹配Mach、Re、攻角、推力系数和参考面积。"
+    },
+    {
+      "id": "CG",
+      "category": "待定参数",
+      "name": "重心到脚部接触点距离",
+      "symbol": "l_CG-foot",
+      "value": null,
+      "unit": "m",
+      "status": "U",
+      "source_ids": "S1未给；需另行建模/查证",
+      "note": "随燃料变化，未给；不可直接认定为L/2。"
+    },
+    {
+      "id": "inertia",
+      "category": "待定参数",
+      "name": "姿态转动惯量",
+      "symbol": "I_pitch(t)",
+      "value": null,
+      "unit": "kg·m²",
+      "status": "U",
+      "source_ids": "S1未给；需另行建模/查证",
+      "note": "质量分布未知，不能由m和L唯一确定。"
+    },
+    {
+      "id": "q_limit",
+      "category": "待定参数",
+      "name": "最大允许动压",
+      "symbol": "q_lim",
+      "value": null,
+      "unit": "Pa",
+      "status": "U",
+      "source_ids": "S1未给；需另行建模/查证",
+      "note": "需结构/载荷依据；不能直接借用他型运载器最大动压。"
+    },
+    {
+      "id": "load_limit",
+      "category": "待定参数",
+      "name": "允许非重力载荷",
+      "symbol": "n_lim",
+      "value": null,
+      "unit": "g₀",
+      "status": "U",
+      "source_ids": "S1未给；需另行建模/查证",
+      "note": "以|T+F_aero|/(m g₀)定义；不等于|dv/dt|/g₀。"
+    },
+    {
+      "id": "radius_thermal",
+      "category": "待定参数",
+      "name": "有效驻点曲率半径",
+      "symbol": "R_n",
+      "value": null,
+      "unit": "m",
+      "status": "U",
+      "source_ids": "S1未给；需另行建模/查证",
+      "note": "发动机底部迎风，不能自动设为d/2。"
+    },
+    {
+      "id": "heat_coeff",
+      "category": "待定参数",
+      "name": "热流代理系数",
+      "symbol": "k_SG",
+      "value": null,
+      "unit": "依约定SI量纲",
+      "status": "U",
+      "source_ids": "S1未给；需另行建模/查证",
+      "note": "需要气体/壁温/几何适用性；本版未赋值。"
+    },
+    {
+      "id": "heat_limits",
+      "category": "待定参数",
+      "name": "热流/累积热负荷/壁温限值",
+      "symbol": "qdot_lim,Q_lim,T_lim",
+      "value": null,
+      "unit": "W/m²,J/m²,K",
+      "status": "U",
+      "source_ids": "S1未给；需另行建模/查证",
+      "note": "材料、TPS与喷流热作用未知；需参数化而非假定已安全。"
+    },
+    {
+      "id": "ship_deck",
+      "category": "待定参数",
+      "name": "甲板高度/尺寸/运动",
+      "symbol": "h_deck,a_deck(t)",
+      "value": null,
+      "unit": "m,m/s²",
+      "status": "U",
+      "source_ids": "S1未给；需另行建模/查证",
+      "note": "首轮可把静止甲板作为H场景；实际条件待定。"
+    },
+    {
+      "id": "touchdown_speed",
+      "category": "待定参数",
+      "name": "可接受触地速度",
+      "symbol": "v_td",
+      "value": null,
+      "unit": "m/s",
+      "status": "U",
+      "source_ids": "S1未给；需另行建模/查证",
+      "note": "需着陆腿能力与相对甲板速度判据；本版不自定安全数值。"
+    },
+    {
+      "id": "touchdown_pose",
+      "category": "待定参数",
+      "name": "允许触地倾角/角速度",
+      "symbol": "θ_td,ω_td",
+      "value": null,
+      "unit": "deg,deg/s",
+      "status": "U",
+      "source_ids": "S1未给；需另行建模/查证",
+      "note": "竖直落地是目标；工程容差待确定。"
+    },
+    {
+      "id": "reserve",
+      "category": "待定参数",
+      "name": "安全储备与不可用残余",
+      "symbol": "m_reserve,m_unusable",
+      "value": null,
+      "unit": "kg",
+      "status": "U",
+      "source_ids": "S1未给；需另行建模/查证",
+      "note": "在收敛控制和误差试验后给出，不宣称统一10%规则。"
+    },
+    {
+      "id": "mp0",
+      "category": "待定参数",
+      "name": "所求分离时总推进剂",
+      "symbol": "m_p,0",
+      "value": null,
+      "unit": "kg",
+      "status": "U",
+      "source_ids": "S1未给；需另行建模/查证",
+      "note": "待轨迹与约束求解；总量包括液氧和甲烷，甲烷另列。"
+    }
+  ]
+}

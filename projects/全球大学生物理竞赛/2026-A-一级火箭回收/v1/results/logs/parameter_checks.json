@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "checks": [
+    "sea-level T/p/rho/a benchmark",
+    "layer-boundary T/p continuity",
+    "pressure decreases on 100 m grid",
+    "virtual thrust feasibility and mixture mass balance",
+    "out-of-domain rejection"
+  ],
+  "internal_geopotential_boundaries_checked_m": [
+    11000.0,
+    20000.0,
+    32000.0,
+    47000.0,
+    51000.0
+  ],
+  "limits": "Arithmetic checks only. No real booster calibration, trajectory, safety certification, or fuel solution.",
+  "geometric_70km": {
+    "h_geometric_m": 70000,
+    "H_geopotential_m": 69237.56365176513,
+    "temperature_K": 219.5848217750576,
+    "pressure_Pa": 5.220896430066228,
+    "density_kg_m3": 8.282864591178967e-05,
+    "sound_speed_m_s": 297.06143595494257,
+    "dynamic_viscosity_Pa_s": 1.4376959051981398e-05,
+    "gravity_m_s2": 9.607959802616183
+  },
+  "derived": {
+    "speed_m_s": 1666.6666666666665,
+    "area_ref_m2": 38.48451000647496,
+    "geometric_side_area_m2": 455,
+    "dry_weight_standard_N": 1274864.5,
+    "gravity_sea_model_m_s2": 9.820250487063928,
+    "gravity_70km_m_s2": 9.607959802616183,
+    "mach_initial_no_wind": 5.6105117155612945,
+    "dynamic_pressure_initial_no_wind_Pa": 115.03978598859673,
+    "virtual_nominal_mass_flow_one_engine_kg_s": 318.6613165556026,
+    "virtual_one_engine_max_dry_TWR": 0.8628367955967086,
+    "virtual_two_engine_max_dry_TWR": 1.7256735911934171,
+    "virtual_two_engine_max_support_mass_kg": 224337.56685514422,
+    "methane_fraction_at_OF_3p4": 0.22727272727272727,
+    "oxygen_fraction_at_OF_3p4": 0.7727272727272726
+  }
+}
