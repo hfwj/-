@@ -1,0 +1,10 @@
+{
+  "standalone_archive_commands_pass": true,
+  "diagnostics_equal": true,
+  "historical_inputs": [
+    "v4/results/data/safety_criteria.csv",
+    "v8/results/data/controls_N320.npz",
+    "v8/results/data/replay_summary.json",
+    "v9/results/data/independent_trajectory.csv"
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "checks": {
+    "clearance_max_absolute_error_m": 0.0,
+    "foot_velocity_finite_difference_max_error_m_s": 5.235771816103352e-10,
+    "tilted_contact_event_error_s": 4.440892098500626e-16,
+    "inverted_body_collision_detected": true,
+    "spherical_sea_segment_interior_collision_detected": true,
+    "spherical_sea_segment_minimum_clearance_m": -0.009999999776482582
+  },
+  "summary": {
+    "full_M1_status": "NOT_VERIFIED",
+    "angle_only_necessary_condition": "no torque/rate/attitude trajectory guarantee",
+    "attitude_interval_conflict_sample_count": 0,
+    "minimum_required_peak_relative_deflection_deg": 24.782743166545107,
+    "binding_sample": {
+      "time_s": 175.41825792813825,
+      "height_m": 5306.299950209245,
+      "q_Pa": 46985.81548065616,
+      "beta_deg": -14.340450771384116
+    },
+    "binding_incoming_direction_deg": -44.12319393792922,
+    "deflection_scan": [
+      {
+        "assumed_net_deflection_limit_deg": 3,
+        "sampled_angle_necessary_condition_pass": false,
+        "approximate_incompatible_duration_s": 104.2
+      },
+      {
+        "assumed_net_deflection_limit_deg": 5,
+        "sampled_angle_necessary_condition_pass": false,
+        "approximate_incompatible_duration_s": 103.8
+      },
+      {
+        "assumed_net_deflection_limit_deg": 10,
+        "sampled_angle_necessary_condition_pass": false,
+        "approximate_incompatible_duration_s": 100.55000000000001
+      },
+      {
+        "assumed_net_deflection_limit_deg": 15,
+        "sampled_angle_necessary_condition_pass": false,
+        "approximate_incompatible_duration_s": 87.65
+      },
+      {
+        "assumed_net_deflection_limit_deg": 20,
+        "sampled_angle_necessary_condition_pass": false,
+        "approximate_incompatible_duration_s": 26.508421848750586
+      },
+      {
+        "assumed_net_deflection_limit_deg": 25,
+        "sampled_angle_necessary_condition_pass": true,
+        "approximate_incompatible_duration_s": 0.0
+      },
+      {
+        "assumed_net_deflection_limit_deg": 30,
+        "sampled_angle_necessary_condition_pass": true,
+        "approximate_incompatible_duration_s": 0.0
+      }
+    ],
+    "near_ground_required_relative_deflection_deg": 15.278320241372196,
+    "binding_moment_surrogate": {
+      "thrust_N": 1369428.366317297,
+      "assumed_engine_axial_lever_m": 32.5,
+      "required_relative_deflection_deg": 24.782743166545107,
+      "thrust_moment_N_m": -18656141.905408822,
+      "aero_drag_force_N": 904113.0430138491,
+      "status": "illustration only: real engine lever, aerodynamic moment, mass properties unknown"
+    },
+    "uniform_dry_cylinder_surrogate_inertia_kg_m2": 46168958.333333336,
+    "minimum_bang_bang_coast_torque_90deg_in_5s_N_m": 11603524.825911462,
+    "geometry_examples": [
+      {
+        "theta_deg": 0,
+        "foot_height_difference_m": 0.0,
+        "cg_height_at_lowest_foot_contact_m": 32.5,
+        "reference_height_difference_m": 0.0,
+        "body_min_clearance_at_foot_contact_m": 2.0,
+        "body_clears_at_foot_contact": true
+      },
+      {
+        "theta_deg": 2,
+        "foot_height_difference_m": 0.3489949670250097,
+        "cg_height_at_lowest_foot_contact_m": 32.654699361633114,
+        "reference_height_difference_m": 0.1546993616331136,
+        "body_min_clearance_at_foot_contact_m": 2.05113089909194,
+        "body_clears_at_foot_contact": true
+      },
+      {
+        "theta_deg": 5,
+        "foot_height_difference_m": 0.8715574274765816,
+        "cg_height_at_lowest_foot_contact_m": 32.81210640172002,
+        "reference_height_difference_m": 0.3121064017200226,
+        "body_min_clearance_at_foot_contact_m": 2.1231230103049814,
+        "body_clears_at_foot_contact": true
+      },
+      {
+        "theta_deg": 20,
+        "foot_height_difference_m": 3.420201433256687,
+        "cg_height_at_lowest_foot_contact_m": 32.25011089217037,
+        "reference_height_difference_m": -0.24988910782963103,
+        "body_min_clearance_at_foot_contact_m": 2.3924154565603204,
+        "body_clears_at_foot_contact": true
+      },
+      {
+        "theta_deg": 45,
+        "foot_height_difference_m": 7.071067811865475,
+        "cg_height_at_lowest_foot_contact_m": 26.516504294495533,
+        "reference_height_difference_m": -5.983495705504467,
+        "body_min_clearance_at_foot_contact_m": 2.4748737341529177,
+        "body_clears_at_foot_contact": true
+      },
+      {
+        "theta_deg": 85,
+        "foot_height_difference_m": 9.961946980917455,
+        "cg_height_at_lowest_foot_contact_m": 7.813535129757617,
+        "reference_height_difference_m": -24.686464870242382,
+        "body_min_clearance_at_foot_contact_m": 1.6686035326329343,
+        "body_clears_at_foot_contact": true
+      },
+      {
+        "theta_deg": 100,
+        "foot_height_difference_m": 9.84807753012208,
+        "cg_height_at_lowest_foot_contact_m": -0.719527009114195,
+        "reference_height_difference_m": -33.219527009114195,
+        "body_min_clearance_at_foot_contact_m": -9.809919918832158,
+        "body_clears_at_foot_contact": false
+      },
+      {
+        "theta_deg": 120,
+        "foot_height_difference_m": 8.660254037844387,
+        "cg_height_at_lowest_foot_contact_m": -11.919872981077798,
+        "reference_height_difference_m": -44.4198729810778,
+        "body_min_clearance_at_foot_contact_m": -31.200961894323328,
+        "body_clears_at_foot_contact": false
+      }
+    ],
+    "conditional_foot_velocity_examples": [
+      {
+        "theta_deg": 0,
+        "omega_deg_s": 0.5,
+        "foot_vx_m_s": [
+          -0.28361600344907856,
+          -0.28361600344907856
+        ],
+        "foot_vz_m_s": [
+          -0.9563667687001418,
+          -1.0436332312998582
+        ],
+        "horizontal_reference_limit_pass": true
+      },
+      {
+        "theta_deg": 0,
+        "omega_deg_s": 4.9,
+        "foot_vx_m_s": [
+          -2.77943683380097,
+          -2.77943683380097
+        ],
+        "foot_vz_m_s": [
+          -0.5723943332613892,
+          -1.4276056667386108
+        ],
+        "horizontal_reference_limit_pass": false
+      }
+    ],
+    "conditional_shutdown_tail": {
+      "initial_per_engine_throttle": 0.6133249515166754,
+      "total_impulse_N_s": 386167.4961529323,
+      "propellant_kg": 123.056642735074,
+      "assumptions": "same response as v8, immediate off command, two engines; no extra off delay or plume/ground effect"
+    },
+    "upright_static_tip_angle_deg": 8.74616226255521,
+    "energy_only_contact_screen": {
+      "mass_kg": 131457.6045045,
+      "vertical_kinetic_at_1m_s_J": 65728.80225225,
+      "horizontal_kinetic_at_point5m_s_J": 16432.2005630625,
+      "rigid_pivot_tip_barrier_J": 492930.5844264661,
+      "total_translation_energy_J": 82161.0028153125,
+      "energy_barrier_pass": true,
+      "status": "A limited energy screen only for zero thrust, zero initial angular rate, no external work, rigid pivot/no sliding and upright initial body; not C18 verification"
+    },
+    "energy_absorption_stroke_scan": [
+      {
+        "assumed_stroke_m": 0.2,
+        "vertical_initial_speed_m_s": 1.0,
+        "minimum_mean_total_support_N": 1617802.7284753048,
+        "mean_support_over_weight": 1.2549290532444821
+      },
+      {
+        "assumed_stroke_m": 0.2,
+        "vertical_initial_speed_m_s": 2.0,
+        "minimum_mean_total_support_N": 2603734.7622590545,
+        "mean_support_over_weight": 2.0197162129779285
+      },
+      {
+        "assumed_stroke_m": 0.5,
+        "vertical_initial_speed_m_s": 1.0,
+        "minimum_mean_total_support_N": 1420616.3217185547,
+        "mean_support_over_weight": 1.1019716212977928
+      },
+      {
+        "assumed_stroke_m": 0.5,
+        "vertical_initial_speed_m_s": 2.0,
+        "minimum_mean_total_support_N": 1814989.1352320546,
+        "mean_support_over_weight": 1.4078864851911712
+      },
+      {
+        "assumed_stroke_m": 1.0,
+        "vertical_initial_speed_m_s": 1.0,
+        "minimum_mean_total_support_N": 1354887.5194663047,
+        "mean_support_over_weight": 1.0509858106488965
+      },
+      {
+        "assumed_stroke_m": 1.0,
+        "vertical_initial_speed_m_s": 2.0,
+        "minimum_mean_total_support_N": 1552073.9262230548,
+        "mean_support_over_weight": 1.2039432425955856
+      }
+    ]
+  }
+}

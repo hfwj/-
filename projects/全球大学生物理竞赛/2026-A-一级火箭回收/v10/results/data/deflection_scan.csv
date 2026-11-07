@@ -1,0 +1,8 @@
+assumed_net_deflection_limit_deg,sampled_angle_necessary_condition_pass,approximate_incompatible_duration_s
+3,False,104.2
+5,False,103.8
+10,False,100.55000000000001
+15,False,87.65
+20,False,26.508421848750586
+25,True,0.0
+30,True,0.0

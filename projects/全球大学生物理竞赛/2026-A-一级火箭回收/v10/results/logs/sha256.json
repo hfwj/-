@@ -1,0 +1,21 @@
+{
+  "README.md": "98a723c08f818639a115e18b175ee23476d37a443606f961c8fcf98608201ea3",
+  "references/parameter_requirements.csv": "19ecfb00264982394f253fac5f74c1563e2be2a4c38a714f4fc3e11569c91a05",
+  "references/README.md": "2c39d365c1f55ef7196053926028485a728305c6e19f305f6d9c173dc5e5cd5d",
+  "reports/2026_UPC_A题_姿态与安全讨论.pdf": "d041185a2f89b46c86e059ecc5b942795211855be785e0a32418d05a17958b71",
+  "reports/姿态与安全讨论.md": "4176a14493e786d7f1a28c2d8e13f7e54d4432d3b73f561b1ca6481fa66eb7c7",
+  "reports/2026_UPC_A题_姿态与安全讨论.docx": "8e9aa9b51c8e8cdb9e7896e6624f1cf6987e9827bcd8e49b506079bc22db16ef",
+  "simulation/attitude_safety.py": "dd16ed9786412270ed5f844a0c3cbb0677fba1ff11c4dacf3f7e22f3db56eb98",
+  "simulation/build_report.py": "c6ee4e794e00fe238d4f187c85b9244ad21a66140018ef7dc88236e8ec3673d8",
+  "simulation/requirements.txt": "c50e29018ba604fe231051b6d7c26f2c7b8bc27abfa98f0ba928e855efa17cf6",
+  "simulation/README.md": "60086dc748e9d4e2f4f544bb23358125312486adc900e77ba9872210f858b926",
+  "results/logs/archive_reproduction.json": "63cad653568d364d7de427fdf2a9cd34b47b926f31a05c4016e5ef92273c0f70",
+  "results/logs/report_build.log": "07369bbd415903438eb61599c99e65287316100103d84ba0ec3b88b346ad9b84",
+  "results/logs/environment.json": "8a7ab816fe693ae2c31be721f1826d2d6e6f1e8e8ea23551de6de92023eecafc",
+  "results/logs/geometry_checks.json": "98e03eb97a01cc1581849ffcc46de1201757254a4e7b15988b630edd46113fb1",
+  "results/logs/diagnostics.log": "be2965be6da51651cb8edb6687b3c62e97f59fb127c79d6d70b1df3c06bb1234",
+  "results/logs/historical_integrity.json": "317ba94fae80bb22934b05e608a2acdce6f738b64dca21845a0ac2d643bc3b9f",
+  "results/data/diagnostics.json": "deaf2e02e79cc6089205d3549fae832ab742f8ac789e68fb65f04c3855f73b12",
+  "results/data/deflection_scan.csv": "d48169e2be87a43be6988c0a8559e0c91bb4eb448ab3676cdd4f86376b2cd5b7",
+  "results/data/safety_matrix.csv": "15d4d8e1face29e7474ff03567d4f4dc9b2486689516ff99adef23d5047fe0ef"
+}

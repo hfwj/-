@@ -1,0 +1,8 @@
+{
+  "clearance_max_absolute_error_m": 0.0,
+  "foot_velocity_finite_difference_max_error_m_s": 5.235771816103352e-10,
+  "tilted_contact_event_error_s": 4.440892098500626e-16,
+  "inverted_body_collision_detected": true,
+  "spherical_sea_segment_interior_collision_detected": true,
+  "spherical_sea_segment_minimum_clearance_m": -0.009999999776482582
+}
