@@ -1,0 +1,16 @@
+{
+  "uploaded_document": "回收仿真_七机两段点火.docx",
+  "uploaded_sha256": "4f466f9c7dc758a4b93049b87bedf62b30938160efd7dd8237f23b3a9c6ac443",
+  "numerical_baseline": "v15 final140_rate_margin.npz, independent verification frozen unchanged",
+  "manuscript_language": "English",
+  "primary_layout_reference": "2025-GM-A-112",
+  "secondary_structure_reference": "2023-GM-A-227",
+  "original_pdfs_not_redistributed": true,
+  "frozen_data_sha256": {
+    "metrics.json": "322cd9ca136b9fe7d5909bce4c3b8934d17a44c02cb634aee991de55370061b1",
+    "verification.json": "9d7c8d3e0359cd4b7ceb9de63819ed88d191ab151c1593c7fdddd770d542a729",
+    "physics_checks.json": "14328434fcd83d19a4d380a2e74e6bea1e5048fb4bc0f069e172a490cb6006a5",
+    "optimized_controls.npz": "82fcd9002399ac0c85e864859895931ed6051993039ed0d3facf7f460e4d546b",
+    "nominal_replay.npz": "7354351637fc25a8e9b5c5c1543c164ed8d5a15253b57aa7a5da6d34f4d2daf8"
+  }
+}

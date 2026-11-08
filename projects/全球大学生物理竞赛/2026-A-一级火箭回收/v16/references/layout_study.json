@@ -1,0 +1,142 @@
+[
+  {
+    "filename": "2025-GM-A-112.pdf",
+    "sha256": "e70c742d7bbd9ced3e806c2044b932745187c0bf50cb993f443c54fa10a5c4d3",
+    "pages": 26,
+    "page_width_pdf_pt": 595.2760009765625,
+    "page_height_pdf_pt": 841.8900146484375,
+    "font_measurements": [
+      {
+        "font": "SFRM1095",
+        "size_pdf_pt": 10.91,
+        "characters": 47411
+      },
+      {
+        "font": "SFRM1200",
+        "size_pdf_pt": 11.96,
+        "characters": 2356
+      },
+      {
+        "font": "SFBX1095",
+        "size_pdf_pt": 10.91,
+        "characters": 2272
+      },
+      {
+        "font": "SFBX1440",
+        "size_pdf_pt": 14.35,
+        "characters": 1166
+      },
+      {
+        "font": "SFTI1095",
+        "size_pdf_pt": 10.91,
+        "characters": 791
+      },
+      {
+        "font": "CMR10",
+        "size_pdf_pt": 10.91,
+        "characters": 446
+      },
+      {
+        "font": "CMMI10",
+        "size_pdf_pt": 10.91,
+        "characters": 353
+      },
+      {
+        "font": "SFBX1200",
+        "size_pdf_pt": 11.96,
+        "characters": 337
+      },
+      {
+        "font": "SFBX1728",
+        "size_pdf_pt": 17.22,
+        "characters": 318
+      },
+      {
+        "font": "SFRM1200",
+        "size_pdf_pt": 8.18,
+        "characters": 265
+      },
+      {
+        "font": "SFBI1095",
+        "size_pdf_pt": 10.91,
+        "characters": 228
+      },
+      {
+        "font": "SFTI1200",
+        "size_pdf_pt": 11.96,
+        "characters": 165
+      }
+    ],
+    "use": "Layout and structure only; no substantive claims or illustrations reused."
+  },
+  {
+    "filename": "2023-GM-A-227.pdf",
+    "sha256": "eae44754641f7feca7ca1d7202452fbfa2fd1adbd53eb2bc9fc921c19999e89b",
+    "pages": 22,
+    "page_width_pdf_pt": 612.0,
+    "page_height_pdf_pt": 792.0,
+    "font_measurements": [
+      {
+        "font": "URWPalladioL-Roma",
+        "size_pdf_pt": 11.96,
+        "characters": 18141
+      },
+      {
+        "font": "NimbusMonL-Regu",
+        "size_pdf_pt": 9.96,
+        "characters": 4730
+      },
+      {
+        "font": "URWPalladioL-Bold",
+        "size_pdf_pt": 11.96,
+        "characters": 625
+      },
+      {
+        "font": "CMMI12",
+        "size_pdf_pt": 11.96,
+        "characters": 620
+      },
+      {
+        "font": "CMR12",
+        "size_pdf_pt": 11.96,
+        "characters": 586
+      },
+      {
+        "font": "NimbusSanL-Regu",
+        "size_pdf_pt": 10.91,
+        "characters": 474
+      },
+      {
+        "font": "DejaVuSans",
+        "size_pdf_pt": 9.23,
+        "characters": 339
+      },
+      {
+        "font": "NimbusMonL-Bold",
+        "size_pdf_pt": 9.96,
+        "characters": 254
+      },
+      {
+        "font": "URWPalladioL-Bold",
+        "size_pdf_pt": 14.35,
+        "characters": 232
+      },
+      {
+        "font": "URWPalladioL-Ital",
+        "size_pdf_pt": 11.96,
+        "characters": 220
+      },
+      {
+        "font": "URWPalladioL-Bold",
+        "size_pdf_pt": 17.22,
+        "characters": 143
+      },
+      {
+        "font": "CMR8",
+        "size_pdf_pt": 7.97,
+        "characters": 117
+      }
+    ],
+    "use": "Layout and structure only; no substantive claims or illustrations reused."
+  }
+]

@@ -1,0 +1,55 @@
+{
+  "pdf_pages": 23,
+  "page_format": "A4",
+  "abstract_words": 224,
+  "main_figures": 8,
+  "main_tables": 8,
+  "bibliography_entries": 13,
+  "dominant_fonts": [
+    {
+      "font": "LMRoman10-Regular",
+      "pdf_points": 10.91,
+      "characters": 35720
+    },
+    {
+      "font": "LMRoman10-Regular",
+      "pdf_points": 9.96,
+      "characters": 8923
+    },
+    {
+      "font": "LMRoman12-Bold",
+      "pdf_points": 11.96,
+      "characters": 1083
+    },
+    {
+      "font": "LMMono10-Regular",
+      "pdf_points": 9.96,
+      "characters": 530
+    },
+    {
+      "font": "LMRoman12-Bold",
+      "pdf_points": 14.35,
+      "characters": 370
+    },
+    {
+      "font": "LMRoman10-Bold",
+      "pdf_points": 9.96,
+      "characters": 366
+    },
+    {
+      "font": "LMRoman8-Regular",
+      "pdf_points": 8.25,
+      "characters": 295
+    }
+  ],
+  "all_pages_have_team_header": true,
+  "overfull_boxes": 0,
+  "missing_glyphs": 0,
+  "unresolved_references": 0,
+  "figure_pdfs_have_no_raster_images": true,
+  "frozen_v15_data_unchanged": true,
+  "scope": "Typesetting and data-consistency validation; no new dynamics or safety validation.",
+  "isolated_source_compile": "PASS",
+  "isolated_pdf_text_matches_main": true,
+  "isolated_compile_has_no_repository_dependencies": true
+}
