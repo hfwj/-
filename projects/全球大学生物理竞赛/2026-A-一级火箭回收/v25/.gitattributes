@@ -1,0 +1,2 @@
+# Preserve generated CSV bytes for SHA-256 verification.
+*.csv -text
