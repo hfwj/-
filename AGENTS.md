@@ -18,7 +18,7 @@ Apply this to simulation-only modifications too. For documentation or workflow-o
 
 ## Wiring connection preference
 
-The user explicitly instructed: “以后的设计都不要用接线端子换一个能用粗导线连接的装置”. For future designs, do not use screw terminal blocks. Default power input/output connections to large plated through-hole wire solder pads, sized for the actual wire gauge and current; provide strain relief such as adjacent cable-tie holes. Do not assume a drill size until the wire size is known. Select a suitable rated crimp connector only when disconnectability is required. This preference does not by itself retroactively change archived schematics or BOMs; identify connector/footprint/BOM impacts when applying it to a revision.
+The user instructed “以后的设计都不要用接线端子” and then clarified “用可以用鳄鱼夹连接的装置”. For future power input/output designs, default to exposed metal binding posts / metal connection studs that crocodile clips can securely grip, mechanically secured with nuts and electrically insulated from other poles as appropriate. Choose post diameter, mounting holes, current rating, spacing and clip clearance for the actual clips/current; avoid recessed sockets as the sole contact. Do not use screw terminal blocks. This clarified preference supersedes the earlier default of soldering thick wire directly into large plated through-holes. Do not retroactively change archived schematics/BOMs without applying and documenting a design revision. When applied, identify connector, footprint, mechanical and BOM changes.
 
 ## Engineering evidence
 
