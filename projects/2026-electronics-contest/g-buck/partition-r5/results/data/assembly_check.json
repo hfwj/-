@@ -1,0 +1,22 @@
+{
+  "baseline": "0f47932 R4",
+  "total_components": 81,
+  "total_pins": 291,
+  "control": {
+    "components": 25,
+    "pins": 116,
+    "zones": 6
+  },
+  "auxiliary": {
+    "components": 11,
+    "pins": 34,
+    "zones": 3
+  },
+  "pin_maps_unchanged": true,
+  "external_power_links_unchanged": 4,
+  "IDC_pins_unchanged": 10,
+  "native_editor_erc": false,
+  "PCB": false,
+  "footprints_bound": false,
+  "hardware_test": false
+}

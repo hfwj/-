@@ -1,0 +1,18 @@
+﻿位号,数量,厂家型号,立创料号,推荐规格,封装,SMT库别
+Control.U6,1,STM32F103C8T6,,STM32F103C8T6,LQFP-48 7x7mm pitch0.5mm,沿用V1.1，库别未核实
+Control.JLCD,1,PCD8544 LCD,,PCD8544 LCD,Module header: verify actual silkscreen order,沿用V1.1，库别未核实
+Control.J1,1,2.54-2*5P简牛 BOOMELE,C5665,10针主板接口，接主板J3,THT 2x5 P2.54mm,插件焊接，具体订单审核
+Control.JSWD,1,SWD DEBUG,,SWD DEBUG,"1x4 2.54mm, voltage reference only",沿用V1.1，库别未核实
+Control.R14 Control.R15,2,4.7k,,4.7kΩ ±1% 1/8W,0805,沿用V1.1，库别未核实
+Control.R16 Control.R17 Control.R18 Control.R19 Control.R20 Control.R21,6,0805W8F1002T5E,C17414,10kΩ ±1% 1/8W,0805,基础库（沿用已核实料号）
+Control.C15 Control.C16 Control.C17 Control.C18 Control.C19 Control.C21,6,CC0805KRX7R9BB104,C49678,100nF 50V X7R ±10%,0805,基础库（沿用已核实料号）
+Control.K1 Control.K2 Control.K3,3,NO momentary,,NO momentary,2-pin normally-open switch; verify physical contacts,沿用V1.1，库别未核实
+Control.C20,1,4.7uF,,4.7uF ≥10V X7R/X5R,0805候选，偏压容值待核,沿用V1.1，库别未核实
+Control.C22,1,1uF,,1uF ≥10V X7R/X5R,0805候选，偏压容值待核,沿用V1.1，库别未核实
+Control.JPP Control.JPN Auxiliary.J1P Auxiliary.J1N Auxiliary.J2P Auxiliary.J2N,6,待定：四脚同体导通、横梁供鳄鱼夹夹持,,单极四脚板凳式焊接接线柱；按实际负载/瞬态/保护核对承流,THT 4P，尺寸/孔距/孔径待定,非SMT/通孔手焊
+Auxiliary.U7,1,TPS560430X3FDBVR,C2071721,固定3.3V/600mA/1.1MHz同步Buck,SOT-23-6 / DBV,扩展库（官网已核实）
+Auxiliary.L2,1,ZNR6028ST120M,C42429312,12uH ±20% Irms2A Isat2A DCR80mΩ,SMD 6x6x2.8mm，焊盘查原厂,库别待核实
+Auxiliary.C23,1,CL31B106KBHNNNE,C89632,10uF 50V X7R ±10%,1206,扩展库（沿用已核实选型）
+Auxiliary.C24 Auxiliary.C25,2,CC0805KRX7R9BB104,C49678,100nF 50V X7R ±10%,0805,基础库（沿用已核实选型）
+Auxiliary.C26,1,CL32B226KAJNNNE,C309062,22uF 25V X7R ±10%,1210,库别待核实
+Auxiliary.C27,1,EEE-FK1H220P,,22uF 50V 铝电解 SMD ±20%,SMD铝电解，准确焊盘查厂家图,库别/商城料号待核实

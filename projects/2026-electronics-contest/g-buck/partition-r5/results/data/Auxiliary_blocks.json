@@ -1,0 +1,130 @@
+{
+  "components": {
+    "J1P": {
+      "value": "BENCH POST 4P - TBD",
+      "zone": 1,
+      "pins": {
+        "1": "VIN_SYS",
+        "2": "VIN_SYS",
+        "3": "VIN_SYS",
+        "4": "VIN_SYS"
+      }
+    },
+    "J1N": {
+      "value": "BENCH POST 4P - TBD",
+      "zone": 1,
+      "pins": {
+        "1": "GND",
+        "2": "GND",
+        "3": "GND",
+        "4": "GND"
+      }
+    },
+    "C23": {
+      "value": "10uF 50V X7R",
+      "zone": 1,
+      "pins": {
+        "1": "VIN_SYS",
+        "2": "GND"
+      }
+    },
+    "C24": {
+      "value": "100nF 50V",
+      "zone": 1,
+      "pins": {
+        "1": "VIN_SYS",
+        "2": "GND"
+      }
+    },
+    "C27": {
+      "value": "22uF 50V AL SMD",
+      "zone": 1,
+      "pins": {
+        "1": "VIN_SYS",
+        "2": "GND"
+      }
+    },
+    "U7": {
+      "value": "TPS560430X3FDBVR",
+      "zone": 2,
+      "pins": {
+        "5": "VIN_SYS",
+        "4": "VIN_SYS",
+        "2": "GND",
+        "1": "CB_AUX",
+        "6": "SW_AUX",
+        "3": "+3V3"
+      }
+    },
+    "L2": {
+      "value": "12uH Isat>=2A",
+      "zone": 2,
+      "pins": {
+        "1": "SW_AUX",
+        "2": "+3V3"
+      }
+    },
+    "C25": {
+      "value": "100nF 50V",
+      "zone": 2,
+      "pins": {
+        "1": "CB_AUX",
+        "2": "SW_AUX"
+      }
+    },
+    "J2P": {
+      "value": "BENCH POST 4P - TBD",
+      "zone": 3,
+      "pins": {
+        "1": "+3V3",
+        "2": "+3V3",
+        "3": "+3V3",
+        "4": "+3V3"
+      }
+    },
+    "J2N": {
+      "value": "BENCH POST 4P - TBD",
+      "zone": 3,
+      "pins": {
+        "1": "GND",
+        "2": "GND",
+        "3": "GND",
+        "4": "GND"
+      }
+    },
+    "C26": {
+      "value": "22uF 25V X7R",
+      "zone": 3,
+      "pins": {
+        "1": "+3V3",
+        "2": "GND"
+      }
+    }
+  },
+  "zones": [
+    {
+      "number": 1,
+      "title": "输入接线柱与输入滤波",
+      "x": 20,
+      "y": 100,
+      "width": 1460,
+      "height": 1020
+    },
+    {
+      "number": 2,
+      "title": "同步Buck与自举",
+      "x": 1510,
+      "y": 100,
+      "width": 1460,
+      "height": 1020
+    },
+    {
+      "number": 3,
+      "title": "3.3V输出滤波与接线柱",
+      "x": 20,
+      "y": 1140,
+      "width": 1460,
+      "height": 1020
+    }
+  ]
+}

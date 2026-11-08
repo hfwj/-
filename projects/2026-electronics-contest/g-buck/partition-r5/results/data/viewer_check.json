@@ -1,0 +1,46 @@
+{
+  "project": "GBUCK_System_R5",
+  "format": "eprj3",
+  "openableDocuments": 3,
+  "results": [
+    {
+      "title": "Mainboard_6_Blocks",
+      "docType": "SCH_PAGE",
+      "objects": 291,
+      "layers": 0,
+      "report": {
+        "badLines": [],
+        "unknownTypes": [],
+        "placeholders": 0
+      },
+      "diagnostics": [],
+      "components": 45
+    },
+    {
+      "title": "Control_Blocks",
+      "docType": "SCH_PAGE",
+      "objects": 168,
+      "layers": 0,
+      "report": {
+        "badLines": [],
+        "unknownTypes": [],
+        "placeholders": 0
+      },
+      "diagnostics": [],
+      "components": 25
+    },
+    {
+      "title": "Auxiliary_Blocks",
+      "docType": "SCH_PAGE",
+      "objects": 78,
+      "layers": 0,
+      "report": {
+        "badLines": [],
+        "unknownTypes": [],
+        "placeholders": 0
+      },
+      "diagnostics": [],
+      "components": 11
+    }
+  ]
+}

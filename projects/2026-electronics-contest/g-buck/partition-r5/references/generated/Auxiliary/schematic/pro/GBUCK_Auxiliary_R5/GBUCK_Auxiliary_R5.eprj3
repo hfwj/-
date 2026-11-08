@@ -1,0 +1,62 @@
+{
+  "name": "GBUCK_Auxiliary_R5",
+  "owner_uuid": "",
+  "creator_uuid": "",
+  "modifier_uuid": "",
+  "created_at": "2026-11-08 12:00:00",
+  "updated_at": "2026-11-08 12:00:00",
+  "content": "R4 self-designed auxiliary buck; footprints TBD",
+  "archive": false,
+  "cbb_project": 0,
+  "thumb": "",
+  "ticket": 1,
+  "g_ticket": 1,
+  "boards": [],
+  "block_symbol_attrs_groups": {},
+  "default_sheet": "e47ca70c15c6fcd8",
+  "branch_uuid": "",
+  "pcb_count": 0,
+  "format": "folder",
+  "profile": {
+    "boards": {
+      "4f37c1ccacc0e640": {
+        "uuid": "4f37c1ccacc0e640",
+        "title": "Auxiliary_R5",
+        "zIndex": 1
+      }
+    },
+    "schematics": {
+      "94d1b90801028e25": {
+        "uuid": "94d1b90801028e25",
+        "name": "Auxiliary",
+        "board": "4f37c1ccacc0e640",
+        "source": "",
+        "version": "1794119317049",
+        "updateTime": 1794119317049
+      }
+    },
+    "sheets": {
+      "e47ca70c15c6fcd8": {
+        "uuid": "e47ca70c15c6fcd8",
+        "title": "Auxiliary_Blocks",
+        "schematic_uuid": "94d1b90801028e25",
+        "zIndex": 1,
+        "source": "",
+        "version": "1794119317049",
+        "updateTime": 1794119317049
+      }
+    },
+    "pcbs": {},
+    "panels": {},
+    "blockSymbols": {},
+    "owner": {
+      "uuid": ""
+    },
+    "simSchematics": {},
+    "simulations": {}
+  },
+  "config": {
+    "defaultSheet": "e47ca70c15c6fcd8",
+    "settings": {}
+  }
+}

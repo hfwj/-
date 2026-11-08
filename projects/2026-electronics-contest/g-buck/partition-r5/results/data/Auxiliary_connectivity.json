@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "components": 11,
+  "pins": 34,
+  "no_connect_pins": 0,
+  "wire_segments": 39,
+  "embedded_symbols": 11,
+  "index_sheet_resolved": true,
+  "comparison": "R5: all component pin maps equal R4 baseline",
+  "errors": [],
+  "native_editor_erc": "NOT RUN",
+  "footprints": "NOT ASSIGNED",
+  "hardware": "NOT TESTED"
+}

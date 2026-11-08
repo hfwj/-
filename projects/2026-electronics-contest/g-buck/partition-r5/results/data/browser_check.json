@@ -1,0 +1,33 @@
+{
+  "errors": [],
+  "context": {
+    "projectId": "GBUCK_R5",
+    "revision": "R5",
+    "documents": [
+      {
+        "id": "schematic:313b0a653222b232",
+        "nodeId": "sheet2",
+        "group": "schematic",
+        "title": "Mainboard_6_Blocks"
+      },
+      {
+        "id": "schematic:9883b2d67d071cd9",
+        "nodeId": "sheet4",
+        "group": "schematic",
+        "title": "Control_Blocks"
+      },
+      {
+        "id": "schematic:e47ca70c15c6fcd8",
+        "nodeId": "sheet6",
+        "group": "schematic",
+        "title": "Auxiliary_Blocks"
+      }
+    ],
+    "currentDocument": {
+      "id": "schematic:313b0a653222b232",
+      "nodeId": "sheet2",
+      "group": "schematic",
+      "title": "Mainboard_6_Blocks"
+    }
+  }
+}

@@ -1,0 +1,82 @@
+﻿板,功能区,位号,原标称,推荐规格,厂家型号,立创料号,封装,SMT库别,备注,核对日期,来源
+Mainboard,1,C9,100nF,100nF 50V X7R ±10%,CC0805KRX7R9BB104,C49678,0805,基础库（官网已核实）,统一7只；C4由16V额定提升50V，标称容值不变,2026-11-08,https://jlcpcb.com/partdetail/C49678
+Mainboard,1,F1,2A fuse,2A 63V保险丝,0466002.NRHF,C3105,1206保险丝,待核实库别,非自恢复保险；不提供精确1A限流,2026-11-08,https://jlcpcb.com/partdetail/C3105
+Mainboard,1,J1N,J1.2,单极四脚板凳式焊接接线柱；按实际负载/瞬态/保护核对承流,待定：四脚同体导通、横梁可供鳄鱼夹夹持,,THT四脚，孔距/孔径/高度待厂家尺寸图,非SMT/通孔手焊,替代J1.2；四焊脚均接GND；不得按四路连接器使用；未核实厂家额定电流，不能直接下单；取消统一≥5A采购要求；不影响L1的Isat≥5A要求,2026-11-08,
+Mainboard,1,J1P,J1.1,单极四脚板凳式焊接接线柱；按实际负载/瞬态/保护核对承流,待定：四脚同体导通、横梁可供鳄鱼夹夹持,,THT四脚，孔距/孔径/高度待厂家尺寸图,非SMT/通孔手焊,替代J1.1；四焊脚均接RAW+；不得按四路连接器使用；未核实厂家额定电流，不能直接下单；取消统一≥5A采购要求；不影响L1的Isat≥5A要求,2026-11-08,
+Mainboard,1,J3,TO BOARD C,带防呆10针连接器,2.54-2*5P简牛 BOOMELE,C5665,THT 2x5 P2.54mm,非SMT/手焊,核对1脚三角标记和外壳尺寸,2026-11-08,https://jlcpcb.com/partdetail/C5665
+Mainboard,1,RS1,0.05R 1% 1W,0.05Ω ±1% 1W,RL2512FK-070R05L,C876461,2512,待核实库别,电流取样两端用Kelvin引线,2026-11-08,https://jlcpcb.com/partdetail/C876461
+Mainboard,1,U3,INA226AIDGSR,输入电流/电压监测,INA226AIDGSR,C49851,VSSOP-10 / DGS P0.5mm,待核实库别,不能与MSOP外形想当然互换,2026-11-08,https://jlcpcb.com/partdetail/C49851
+Mainboard,2,C1,100uF 50V,100µF 50V 铝电解,50YXF100MEFC8X11.5,C88728,THT D8x11.5mm P3.5mm,非SMT/手焊,注意极性，1正极、2GND,2026-11-08,https://jlcpcb.com/partdetail/C88728
+Mainboard,2,C2,10uF 50V X7R,10µF 50V X7R ±10%,CL31B106KBHNNNE,C89632,1206,扩展库（官网）,输入最高25V，保留50V耐压,2026-11-08,https://jlcpcb.com/partdetail/C89632
+Mainboard,2,C3,100nF 50V,100nF 50V X7R ±10%,CC0805KRX7R9BB104,C49678,0805,基础库（官网已核实）,统一7只；C4由16V额定提升50V，标称容值不变,2026-11-08,https://jlcpcb.com/partdetail/C49678
+Mainboard,2,C4,100nF 16V,100nF 50V X7R ±10%,CC0805KRX7R9BB104,C49678,0805,基础库（官网已核实）,统一7只；C4由16V额定提升50V，标称容值不变,2026-11-08,https://jlcpcb.com/partdetail/C49678
+Mainboard,2,C5,22uF 25V X7R,22µF 25V X7R ±10%,CL32B226KAJNNNE,C309062,1210,待核实库别,有条件候选：10V偏压下两只合计有效容量需≥22µF；需曲线或实测,2026-11-08,https://jlcpcb.com/partdetail/C309062
+Mainboard,2,C6,22uF 25V X7R,22µF 25V X7R ±10%,CL32B226KAJNNNE,C309062,1210,待核实库别,有条件候选：10V偏压下两只合计有效容量需≥22µF；需曲线或实测,2026-11-08,https://jlcpcb.com/partdetail/C309062
+Mainboard,2,J2N,J2.2,单极四脚板凳式焊接接线柱；按实际负载/瞬态/保护核对承流,待定：四脚同体导通、横梁可供鳄鱼夹夹持,,THT四脚，孔距/孔径/高度待厂家尺寸图,非SMT/通孔手焊,替代J2.2；四焊脚均接GND；不得按四路连接器使用；未核实厂家额定电流，不能直接下单；取消统一≥5A采购要求；不影响L1的Isat≥5A要求,2026-11-08,
+Mainboard,2,J2P,J2.1,单极四脚板凳式焊接接线柱；按实际负载/瞬态/保护核对承流,待定：四脚同体导通、横梁可供鳄鱼夹夹持,,THT四脚，孔距/孔径/高度待厂家尺寸图,非SMT/通孔手焊,替代J2.1；四焊脚均接OUT+；不得按四路连接器使用；未核实厂家额定电流，不能直接下单；取消统一≥5A采购要求；不影响L1的Isat≥5A要求,2026-11-08,
+Mainboard,2,L1,22uH Isat>=5A,22µH ±20% 额定4A Isat5A DCR80mΩ,ZD0850-220M,C46956554,8.8x8.2mm型号专用焊盘,待核实库别,焊盘尺寸需查原厂图；不能按名称选通用8x8封装,2026-11-08,https://jlcpcb.com/partdetail/C46956554
+Mainboard,2,RS2,0.05R 1% 1W,0.05Ω ±1% 1W,RL2512FK-070R05L,C876461,2512,待核实库别,电流取样两端用Kelvin引线,2026-11-08,https://jlcpcb.com/partdetail/C876461
+Mainboard,2,U1,TPS54302DDCR,同步Buck 4.5–28V/3A,TPS54302DDCR,C311983,SOT-23-THIN6 / DDC,待核实库别,不得用通用SOT23-6直接代替DDC焊盘,2026-11-08,https://jlcpcb.com/partdetail/C311983
+Mainboard,3,D1,"BAT54 (1=A,3=K)",单肖特基二极管,"BAT54,215 Nexperia",C85084,SOT-23,待核实库别,1=A，3=K，2=NC；不用BAT54A/C/S,2026-11-08,https://jlcpcb.com/partdetail/C85084
+Mainboard,3,R1,100k 0.1%,100kΩ ±0.1% 1/8W,RT0805BRD07100KL,C122537,0805,待核实库别,保留采样/反馈精度，不换1%凑基础库,2026-11-08,https://jlcpcb.com/partdetail/C122537
+Mainboard,3,R2,5.49k 0.1%,5.49kΩ ±0.1% 1/8W,RT0805BRD075K49L,C865577,0805,待核实库别,不改5.49k标称值,2026-11-08,https://jlcpcb.com/partdetail/C865577
+Mainboard,3,R3,56k 0.1%,56kΩ ±0.1% 1/8W,TC0550B5602T5G,C2989136,0805,待核实库别,56k，不能替换为56.2k,2026-11-08,https://jlcpcb.com/partdetail/C2989136
+Mainboard,3,R4,10k 1%,10kΩ ±1% 1/8W,0805W8F1002T5E,C17414,0805,基础库（官网已核实）,保持原规格,2026-11-08,https://jlcpcb.com/partdetail/C17414
+Mainboard,3,R5,1k,1kΩ ±1% 1/8W,0805W8F1001T5E,C17513,0805,基础库（官网已核实）,保持原标称值,2026-11-08,https://jlcpcb.com/partdetail/C17513
+Mainboard,3,R6,100k,100kΩ ±1% 100mW 75V,0603WAF1003T5E,C25803,0603,基础库（官网已核实）,替代旧推荐0805 C17407（现官网为扩展库）；阻值/精度不变，封装改0603，最大3.3V时功耗约0.109mW,2026-11-08,https://jlcpcb.com/partdetail/C25803
+Mainboard,4,C7,10nF,10nF 50V X7R ±10%,CL21B103KBANNNC,C1710,0805,基础库（官网已核实）,输出分压滤波和电流滤波,2026-11-08,https://jlcpcb.com/partdetail/C1710
+Mainboard,4,C8,100nF,100nF 50V X7R ±10%,CC0805KRX7R9BB104,C49678,0805,基础库（官网已核实）,统一7只；C4由16V额定提升50V，标称容值不变,2026-11-08,https://jlcpcb.com/partdetail/C49678
+Mainboard,4,R7,100k 0.1%,100kΩ ±0.1% 1/8W,RT0805BRD07100KL,C122537,0805,待核实库别,保留采样/反馈精度，不换1%凑基础库,2026-11-08,https://jlcpcb.com/partdetail/C122537
+Mainboard,4,R8,10k 0.1%,10kΩ ±0.1% 1/8W,RT0805BRD0710KL,C110775,0805,待核实库别,保留输出电压采样精度,2026-11-08,https://jlcpcb.com/partdetail/C110775
+Mainboard,4,U2,INA180A1IDBVR,电流检测增益20,INA180A1IDBVR,C122228,SOT-23-5 / DBV,待核实库别,必须A1；B1脚序不同，A2增益不同,2026-11-08,https://jlcpcb.com/partdetail/C122228
+Mainboard,5,C10,100nF,100nF 50V X7R ±10%,CC0805KRX7R9BB104,C49678,0805,基础库（官网已核实）,统一7只；C4由16V额定提升50V，标称容值不变,2026-11-08,https://jlcpcb.com/partdetail/C49678
+Mainboard,5,C12,100nF,100nF 50V X7R ±10%,CC0805KRX7R9BB104,C49678,0805,基础库（官网已核实）,统一7只；C4由16V额定提升50V，标称容值不变,2026-11-08,https://jlcpcb.com/partdetail/C49678
+Mainboard,5,R10,1k,1kΩ ±1% 1/8W,0805W8F1001T5E,C17513,0805,基础库（官网已核实）,保持原标称值,2026-11-08,https://jlcpcb.com/partdetail/C17513
+Mainboard,5,R9,100k,100kΩ ±1% 100mW 75V,0603WAF1003T5E,C25803,0603,基础库（官网已核实）,替代旧推荐0805 C17407（现官网为扩展库）；阻值/精度不变，封装改0603，最大3.3V时功耗约0.109mW,2026-11-08,https://jlcpcb.com/partdetail/C25803
+Mainboard,5,U4,MCP4728-E/UN,四通道DAC,MCP4728-E/UN,C108207,MSOP-10 P0.5mm,扩展库（官网）,C/D通道不用；3.3V供电,2026-11-08,https://jlcpcb.com/partdetail/C108207
+Mainboard,6,C11,100nF,100nF 50V X7R ±10%,CC0805KRX7R9BB104,C49678,0805,基础库（官网已核实）,统一7只；C4由16V额定提升50V，标称容值不变,2026-11-08,https://jlcpcb.com/partdetail/C49678
+Mainboard,6,C13,10nF,10nF 50V X7R ±10%,CL21B103KBANNNC,C1710,0805,基础库（官网已核实）,输出分压滤波和电流滤波,2026-11-08,https://jlcpcb.com/partdetail/C1710
+Mainboard,6,C14,220nF X7R,220nF 50V X7R ±10%,CL21B224KBFNNNE,C5378,0805,库别待核实（不计基础库）,保留0805/50V选择；当前未核实官网Basic状态；需核对直流偏压有效容值,2026-11-08,https://jlcpcb.com/partdetail/C5378
+Mainboard,6,D2,"BAT54 (1=A,3=K)",单肖特基二极管,"BAT54,215 Nexperia",C85084,SOT-23,待核实库别,1=A，3=K，2=NC；不用BAT54A/C/S,2026-11-08,https://jlcpcb.com/partdetail/C85084
+Mainboard,6,R11,1k,1kΩ ±1% 1/8W,0805W8F1001T5E,C17513,0805,基础库（官网已核实）,保持原标称值,2026-11-08,https://jlcpcb.com/partdetail/C17513
+Mainboard,6,R12,100k 1%,100kΩ ±1% 100mW 75V,0603WAF1003T5E,C25803,0603,基础库（官网已核实）,替代旧推荐0805 C17407（现官网为扩展库）；阻值/精度不变，封装改0603，最大3.3V时功耗约0.109mW,2026-11-08,https://jlcpcb.com/partdetail/C25803
+Mainboard,6,R13,1k 1%,1kΩ ±1% 1/8W,0805W8F1001T5E,C17513,0805,基础库（官网已核实）,保持原标称值,2026-11-08,https://jlcpcb.com/partdetail/C17513
+Mainboard,6,U5,MCP6002-I/SN,双运放,MCP6002T-I/SN,C7377,SOIC-8 3.9mm P1.27mm,扩展库（官网）,原MCP6002-I/SN加T仅卷带包装；同一只IC两个单元,2026-11-08,https://jlcpcb.com/partdetail/C7377
+Mainboard,辅助供电接口,J4P,J4,单极四脚板凳式焊接接线柱；按实际负载/瞬态/保护核对承流,待定：四脚同体导通、横梁供鳄鱼夹夹持,,THT 4P，尺寸/孔距/孔径待定,非SMT/通孔手焊,四脚全部接VIN_SYS；替代原J4相应电极；需核实厂家承流与机械图；取消统一≥5A采购要求；不影响L1的Isat≥5A要求,2026-11-08,
+Mainboard,辅助供电接口,J4N,J4,单极四脚板凳式焊接接线柱；按实际负载/瞬态/保护核对承流,待定：四脚同体导通、横梁供鳄鱼夹夹持,,THT 4P，尺寸/孔距/孔径待定,非SMT/通孔手焊,四脚全部接GND；替代原J4相应电极；需核实厂家承流与机械图；取消统一≥5A采购要求；不影响L1的Isat≥5A要求,2026-11-08,
+Control,02 MCU最小系统、复位与启动,U6,STM32F103C8T6,STM32F103C8T6,STM32F103C8T6,,LQFP-48 7x7mm pitch0.5mm,沿用V1.1，库别未核实,本轮仅改电源接口，非接口器件沿用基准；未重新选型,2026-11-08,
+Control,04 PCD8544液晶接口与去耦,JLCD,PCD8544 LCD,PCD8544 LCD,PCD8544 LCD,,Module header: verify actual silkscreen order,沿用V1.1，库别未核实,本轮仅改电源接口，非接口器件沿用基准；未重新选型,2026-11-08,
+Control,03 主板接口与I2C上拉,J1,TO BOARD B,10针主板接口，接主板J3,2.54-2*5P简牛 BOOMELE,C5665,THT 2x5 P2.54mm,插件焊接，具体订单审核,本轮仅改电源接口，非接口器件沿用基准；未重新选型,2026-11-08,
+Control,06 SWD下载调试,JSWD,SWD DEBUG,SWD DEBUG,SWD DEBUG,,"1x4 2.54mm, voltage reference only",沿用V1.1，库别未核实,本轮仅改电源接口，非接口器件沿用基准；未重新选型,2026-11-08,
+Control,03 主板接口与I2C上拉,R14,4.7k,4.7kΩ ±1% 1/8W,4.7k,,0805,沿用V1.1，库别未核实,本轮仅改电源接口，非接口器件沿用基准；未重新选型；料号待核实,2026-11-08,
+Control,03 主板接口与I2C上拉,R15,4.7k,4.7kΩ ±1% 1/8W,4.7k,,0805,沿用V1.1，库别未核实,本轮仅改电源接口，非接口器件沿用基准；未重新选型；料号待核实,2026-11-08,
+Control,02 MCU最小系统、复位与启动,R16,10k,10kΩ ±1% 1/8W,0805W8F1002T5E,C17414,0805,基础库（沿用已核实料号）,补全主控建议选型，10k标称值不变，未绑定封装,2026-11-08,https://jlcpcb.com/partdetail/C17414
+Control,02 MCU最小系统、复位与启动,C15,100nF,100nF 50V X7R ±10%,CC0805KRX7R9BB104,C49678,0805,基础库（沿用已核实料号）,补全建议耐压/封装，100nF标称值不变；未绑定封装,2026-11-08,https://jlcpcb.com/partdetail/C49678
+Control,02 MCU最小系统、复位与启动,R17,10k,10kΩ ±1% 1/8W,0805W8F1002T5E,C17414,0805,基础库（沿用已核实料号）,补全主控建议选型，10k标称值不变，未绑定封装,2026-11-08,https://jlcpcb.com/partdetail/C17414
+Control,02 MCU最小系统、复位与启动,R18,10k,10kΩ ±1% 1/8W,0805W8F1002T5E,C17414,0805,基础库（沿用已核实料号）,补全主控建议选型，10k标称值不变，未绑定封装,2026-11-08,https://jlcpcb.com/partdetail/C17414
+Control,05 按键与上拉,R19,10k,10kΩ ±1% 1/8W,0805W8F1002T5E,C17414,0805,基础库（沿用已核实料号）,补全主控建议选型，10k标称值不变，未绑定封装,2026-11-08,https://jlcpcb.com/partdetail/C17414
+Control,05 按键与上拉,R20,10k,10kΩ ±1% 1/8W,0805W8F1002T5E,C17414,0805,基础库（沿用已核实料号）,补全主控建议选型，10k标称值不变，未绑定封装,2026-11-08,https://jlcpcb.com/partdetail/C17414
+Control,05 按键与上拉,R21,10k,10kΩ ±1% 1/8W,0805W8F1002T5E,C17414,0805,基础库（沿用已核实料号）,补全主控建议选型，10k标称值不变，未绑定封装,2026-11-08,https://jlcpcb.com/partdetail/C17414
+Control,05 按键与上拉,K1,NO momentary,NO momentary,NO momentary,,2-pin normally-open switch; verify physical contacts,沿用V1.1，库别未核实,本轮仅改电源接口，非接口器件沿用基准；未重新选型,2026-11-08,
+Control,05 按键与上拉,K2,NO momentary,NO momentary,NO momentary,,2-pin normally-open switch; verify physical contacts,沿用V1.1，库别未核实,本轮仅改电源接口，非接口器件沿用基准；未重新选型,2026-11-08,
+Control,05 按键与上拉,K3,NO momentary,NO momentary,NO momentary,,2-pin normally-open switch; verify physical contacts,沿用V1.1，库别未核实,本轮仅改电源接口，非接口器件沿用基准；未重新选型,2026-11-08,
+Control,01 供电输入与去耦,C16,100nF,100nF 50V X7R ±10%,CC0805KRX7R9BB104,C49678,0805,基础库（沿用已核实料号）,补全建议耐压/封装，100nF标称值不变；未绑定封装,2026-11-08,https://jlcpcb.com/partdetail/C49678
+Control,01 供电输入与去耦,C17,100nF,100nF 50V X7R ±10%,CC0805KRX7R9BB104,C49678,0805,基础库（沿用已核实料号）,补全建议耐压/封装，100nF标称值不变；未绑定封装,2026-11-08,https://jlcpcb.com/partdetail/C49678
+Control,01 供电输入与去耦,C18,100nF,100nF 50V X7R ±10%,CC0805KRX7R9BB104,C49678,0805,基础库（沿用已核实料号）,补全建议耐压/封装，100nF标称值不变；未绑定封装,2026-11-08,https://jlcpcb.com/partdetail/C49678
+Control,01 供电输入与去耦,C19,100nF,100nF 50V X7R ±10%,CC0805KRX7R9BB104,C49678,0805,基础库（沿用已核实料号）,补全建议耐压/封装，100nF标称值不变；未绑定封装,2026-11-08,https://jlcpcb.com/partdetail/C49678
+Control,01 供电输入与去耦,C20,4.7uF,4.7uF ≥10V X7R/X5R,4.7uF,,0805候选，偏压容值待核,沿用V1.1，库别未核实,本轮仅改电源接口，非接口器件沿用基准；未重新选型；完整料号待核实,2026-11-08,
+Control,04 PCD8544液晶接口与去耦,C21,100nF,100nF 50V X7R ±10%,CC0805KRX7R9BB104,C49678,0805,基础库（沿用已核实料号）,补全建议耐压/封装，100nF标称值不变；未绑定封装,2026-11-08,https://jlcpcb.com/partdetail/C49678
+Control,04 PCD8544液晶接口与去耦,C22,1uF,1uF ≥10V X7R/X5R,1uF,,0805候选，偏压容值待核,沿用V1.1，库别未核实,本轮仅改电源接口，非接口器件沿用基准；未重新选型；完整料号待核实,2026-11-08,
+Control,01 供电输入与去耦,JPP,JP,单极四脚板凳式焊接接线柱；按实际负载/瞬态/保护核对承流,待定：四脚同体导通、横梁供鳄鱼夹夹持,,THT 4P，尺寸/孔距/孔径待定,非SMT/通孔手焊,四脚全部接+3V3；替代原JP相应电极；需核实厂家承流与机械图；取消统一≥5A采购要求；不影响L1的Isat≥5A要求,2026-11-08,
+Control,01 供电输入与去耦,JPN,JP,单极四脚板凳式焊接接线柱；按实际负载/瞬态/保护核对承流,待定：四脚同体导通、横梁供鳄鱼夹夹持,,THT 4P，尺寸/孔距/孔径待定,非SMT/通孔手焊,四脚全部接GND；替代原JP相应电极；需核实厂家承流与机械图；取消统一≥5A采购要求；不影响L1的Isat≥5A要求,2026-11-08,
+Auxiliary,01 输入接线柱与输入滤波,J1P,J1,单极四脚板凳式焊接接线柱；按实际负载/瞬态/保护核对承流,待定：四脚同体导通、横梁供鳄鱼夹夹持,,THT 4P，尺寸/孔距/孔径待定,非SMT/通孔手焊,四脚全部接VIN_SYS；替代原J1相应电极；需核实厂家承流与机械图；取消统一≥5A采购要求；不影响L1的Isat≥5A要求,2026-11-08,
+Auxiliary,01 输入接线柱与输入滤波,J1N,J1,单极四脚板凳式焊接接线柱；按实际负载/瞬态/保护核对承流,待定：四脚同体导通、横梁供鳄鱼夹夹持,,THT 4P，尺寸/孔距/孔径待定,非SMT/通孔手焊,四脚全部接GND；替代原J1相应电极；需核实厂家承流与机械图；取消统一≥5A采购要求；不影响L1的Isat≥5A要求,2026-11-08,
+Auxiliary,03 3.3V输出滤波与接线柱,J2P,J2,单极四脚板凳式焊接接线柱；按实际负载/瞬态/保护核对承流,待定：四脚同体导通、横梁供鳄鱼夹夹持,,THT 4P，尺寸/孔距/孔径待定,非SMT/通孔手焊,四脚全部接+3V3；替代原J2相应电极；需核实厂家承流与机械图；取消统一≥5A采购要求；不影响L1的Isat≥5A要求,2026-11-08,
+Auxiliary,03 3.3V输出滤波与接线柱,J2N,J2,单极四脚板凳式焊接接线柱；按实际负载/瞬态/保护核对承流,待定：四脚同体导通、横梁供鳄鱼夹夹持,,THT 4P，尺寸/孔距/孔径待定,非SMT/通孔手焊,四脚全部接GND；替代原J2相应电极；需核实厂家承流与机械图；取消统一≥5A采购要求；不影响L1的Isat≥5A要求,2026-11-08,
+Auxiliary,02 同步Buck与自举,U7,替代M1内部功能,固定3.3V/600mA/1.1MHz同步Buck,TPS560430X3FDBVR,C2071721,SOT-23-6 / DBV,扩展库（官网已核实）,不得替换成可调版XF/X/Y；FB直接接输出,2026-11-08,https://jlcpcb.com/partdetail/TexasInstruments-TPS560430X3FDBVR/C2071721
+Auxiliary,02 同步Buck与自举,L2,替代M1内部功能,12uH ±20% Irms2A Isat2A DCR80mΩ,ZNR6028ST120M,C42429312,SMD 6x6x2.8mm，焊盘查原厂,库别待核实,目录参数已核实；不是通用6x6焊盘,2026-11-08,https://item.szlcsc.com/44450897.html
+Auxiliary,01 输入接线柱与输入滤波,C23,替代M1内部功能,10uF 50V X7R ±10%,CL31B106KBHNNNE,C89632,1206,扩展库（沿用已核实选型）,25V偏压下有效输入陶瓷容量目标≥2.2uF；需曲线/实测,2026-11-08,https://jlcpcb.com/partdetail/CL31B106KBHNNNE/C89632
+Auxiliary,01 输入接线柱与输入滤波,C24,替代M1内部功能,100nF 50V X7R ±10%,CC0805KRX7R9BB104,C49678,0805,基础库（沿用已核实选型）,贴近VIN与GND,2026-11-08,https://jlcpcb.com/partdetail/C49678
+Auxiliary,02 同步Buck与自举,C25,替代M1内部功能,100nF 50V X7R ±10%,CC0805KRX7R9BB104,C49678,0805,基础库（沿用已核实选型）,自举电容：CB与SW之间，不能接地,2026-11-08,https://jlcpcb.com/partdetail/C49678
+Auxiliary,03 3.3V输出滤波与接线柱,C26,替代M1内部功能,22uF 25V X7R ±10%,CL32B226KAJNNNE,C309062,1210,库别待核实,3.3V偏压有效容量设计目标≥15uF需复核；非实测保证,2026-11-08,https://www.lcsc.com/product-detail/C309062.html
+Auxiliary,01 输入接线柱与输入滤波,C27,替代M1内部功能,22uF 50V 铝电解 SMD ±20%,EEE-FK1H220P,,SMD铝电解，准确焊盘查厂家图,库别/商城料号待核实,输入缓冲与阻尼候选；需核对原厂尺寸、ESR和纹波额定；1正2负,2026-11-08,https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEEFK1H220P

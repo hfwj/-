@@ -1,0 +1,16 @@
+[
+  {
+    "board": "Control",
+    "components": 25,
+    "pins": 116,
+    "zones": 6,
+    "pin_map_equals_R4": true
+  },
+  {
+    "board": "Auxiliary",
+    "components": 11,
+    "pins": 34,
+    "zones": 3,
+    "pin_map_equals_R4": true
+  }
+]

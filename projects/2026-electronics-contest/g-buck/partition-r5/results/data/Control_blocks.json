@@ -1,0 +1,320 @@
+{
+  "components": {
+    "JPP": {
+      "value": "BENCH POST 4P - TBD",
+      "zone": 1,
+      "pins": {
+        "1": "+3V3",
+        "2": "+3V3",
+        "3": "+3V3",
+        "4": "+3V3"
+      }
+    },
+    "JPN": {
+      "value": "BENCH POST 4P - TBD",
+      "zone": 1,
+      "pins": {
+        "1": "GND",
+        "2": "GND",
+        "3": "GND",
+        "4": "GND"
+      }
+    },
+    "C16": {
+      "value": "100nF 50V",
+      "zone": 1,
+      "pins": {
+        "1": "+3V3",
+        "2": "GND"
+      }
+    },
+    "C17": {
+      "value": "100nF 50V",
+      "zone": 1,
+      "pins": {
+        "1": "+3V3",
+        "2": "GND"
+      }
+    },
+    "C18": {
+      "value": "100nF 50V",
+      "zone": 1,
+      "pins": {
+        "1": "+3V3",
+        "2": "GND"
+      }
+    },
+    "C19": {
+      "value": "100nF 50V",
+      "zone": 1,
+      "pins": {
+        "1": "+3V3",
+        "2": "GND"
+      }
+    },
+    "C20": {
+      "value": "4.7uF",
+      "zone": 1,
+      "pins": {
+        "1": "+3V3",
+        "2": "GND"
+      }
+    },
+    "U6": {
+      "value": "STM32F103C8T6",
+      "zone": 2,
+      "pins": {
+        "1": "+3V3",
+        "2": "NC",
+        "3": "NC",
+        "4": "NC",
+        "5": "NC",
+        "6": "NC",
+        "7": "NRST",
+        "8": "GND",
+        "9": "+3V3",
+        "10": "VOUT_ADC",
+        "11": "ISENSE",
+        "12": "NC",
+        "13": "NC",
+        "14": "LCD_CE",
+        "15": "LCD_CLK",
+        "16": "NC",
+        "17": "LCD_DIN",
+        "18": "LCD_DC",
+        "19": "LCD_RST",
+        "20": "BOOT1",
+        "21": "NC",
+        "22": "NC",
+        "23": "GND",
+        "24": "+3V3",
+        "25": "NC",
+        "26": "NC",
+        "27": "NC",
+        "28": "NC",
+        "29": "RUN",
+        "30": "KEY_SET",
+        "31": "KEY_UP",
+        "32": "KEY_DOWN",
+        "33": "NC",
+        "34": "SWDIO",
+        "35": "GND",
+        "36": "+3V3",
+        "37": "SWCLK",
+        "38": "NC",
+        "39": "NC",
+        "40": "NC",
+        "41": "NC",
+        "42": "SCL",
+        "43": "SDA",
+        "44": "BOOT0",
+        "45": "NC",
+        "46": "NC",
+        "47": "GND",
+        "48": "+3V3"
+      }
+    },
+    "R16": {
+      "value": "10k",
+      "zone": 2,
+      "pins": {
+        "1": "NRST",
+        "2": "+3V3"
+      }
+    },
+    "C15": {
+      "value": "100nF 50V",
+      "zone": 2,
+      "pins": {
+        "1": "NRST",
+        "2": "GND"
+      }
+    },
+    "R17": {
+      "value": "10k",
+      "zone": 2,
+      "pins": {
+        "1": "BOOT0",
+        "2": "GND"
+      }
+    },
+    "R18": {
+      "value": "10k",
+      "zone": 2,
+      "pins": {
+        "1": "BOOT1",
+        "2": "GND"
+      }
+    },
+    "J1": {
+      "value": "TO MAINBOARD J3",
+      "zone": 3,
+      "pins": {
+        "1": "+3V3",
+        "2": "GND",
+        "3": "SCL",
+        "4": "SDA",
+        "5": "VSET_DRV",
+        "6": "CC_OUT",
+        "7": "ISENSE",
+        "8": "VOUT_ADC",
+        "9": "RUN",
+        "10": "GND"
+      }
+    },
+    "R14": {
+      "value": "4.7k",
+      "zone": 3,
+      "pins": {
+        "1": "SCL",
+        "2": "+3V3"
+      }
+    },
+    "R15": {
+      "value": "4.7k",
+      "zone": 3,
+      "pins": {
+        "1": "SDA",
+        "2": "+3V3"
+      }
+    },
+    "JLCD": {
+      "value": "PCD8544 LCD",
+      "zone": 4,
+      "pins": {
+        "1": "LCD_RST",
+        "2": "LCD_CE",
+        "3": "LCD_DC",
+        "4": "LCD_DIN",
+        "5": "LCD_CLK",
+        "6": "+3V3",
+        "7": "NC",
+        "8": "GND"
+      }
+    },
+    "C21": {
+      "value": "100nF 50V",
+      "zone": 4,
+      "pins": {
+        "1": "+3V3",
+        "2": "GND"
+      }
+    },
+    "C22": {
+      "value": "1uF",
+      "zone": 4,
+      "pins": {
+        "1": "+3V3",
+        "2": "GND"
+      }
+    },
+    "R19": {
+      "value": "10k",
+      "zone": 5,
+      "pins": {
+        "1": "KEY_SET",
+        "2": "+3V3"
+      }
+    },
+    "K1": {
+      "value": "NO momentary",
+      "zone": 5,
+      "pins": {
+        "1": "KEY_SET",
+        "2": "GND"
+      }
+    },
+    "R20": {
+      "value": "10k",
+      "zone": 5,
+      "pins": {
+        "1": "KEY_UP",
+        "2": "+3V3"
+      }
+    },
+    "K2": {
+      "value": "NO momentary",
+      "zone": 5,
+      "pins": {
+        "1": "KEY_UP",
+        "2": "GND"
+      }
+    },
+    "R21": {
+      "value": "10k",
+      "zone": 5,
+      "pins": {
+        "1": "KEY_DOWN",
+        "2": "+3V3"
+      }
+    },
+    "K3": {
+      "value": "NO momentary",
+      "zone": 5,
+      "pins": {
+        "1": "KEY_DOWN",
+        "2": "GND"
+      }
+    },
+    "JSWD": {
+      "value": "SWD DEBUG",
+      "zone": 6,
+      "pins": {
+        "1": "+3V3",
+        "2": "SWDIO",
+        "3": "GND",
+        "4": "SWCLK"
+      }
+    }
+  },
+  "zones": [
+    {
+      "number": 1,
+      "title": "供电输入与去耦",
+      "x": 20,
+      "y": 100,
+      "width": 1460,
+      "height": 1020
+    },
+    {
+      "number": 2,
+      "title": "MCU最小系统、复位与启动",
+      "x": 1510,
+      "y": 100,
+      "width": 1460,
+      "height": 1020
+    },
+    {
+      "number": 3,
+      "title": "主板接口与I2C上拉",
+      "x": 20,
+      "y": 1140,
+      "width": 1460,
+      "height": 1020
+    },
+    {
+      "number": 4,
+      "title": "PCD8544液晶接口与去耦",
+      "x": 1510,
+      "y": 1140,
+      "width": 1460,
+      "height": 1020
+    },
+    {
+      "number": 5,
+      "title": "按键与上拉",
+      "x": 20,
+      "y": 2180,
+      "width": 1460,
+      "height": 1020
+    },
+    {
+      "number": 6,
+      "title": "SWD下载调试",
+      "x": 1510,
+      "y": 2180,
+      "width": 1460,
+      "height": 1020
+    }
+  ]
+}

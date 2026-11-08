@@ -1,0 +1,106 @@
+{
+  "name": "GBUCK_System_R5",
+  "owner_uuid": "",
+  "creator_uuid": "",
+  "modifier_uuid": "",
+  "created_at": "2026-11-08 12:00:00",
+  "updated_at": "2026-11-08 12:00:00",
+  "content": "R5主控六区/辅源三区；81件291脚，参数与网络沿用R4；封装未绑定",
+  "archive": false,
+  "cbb_project": 0,
+  "thumb": "",
+  "ticket": 1,
+  "g_ticket": 1,
+  "boards": [],
+  "block_symbol_attrs_groups": {},
+  "default_sheet": "313b0a653222b232",
+  "branch_uuid": "",
+  "pcb_count": 0,
+  "format": "folder",
+  "profile": {
+    "boards": {
+      "f46521e53c6c0917": {
+        "uuid": "f46521e53c6c0917",
+        "title": "Mainboard_R3",
+        "zIndex": 1
+      },
+      "1ac68d5ce32eb0b2": {
+        "uuid": "1ac68d5ce32eb0b2",
+        "title": "Control_R5",
+        "zIndex": 1
+      },
+      "4f37c1ccacc0e640": {
+        "uuid": "4f37c1ccacc0e640",
+        "title": "Auxiliary_R5",
+        "zIndex": 1
+      }
+    },
+    "schematics": {
+      "1c2dc8266a1e8204": {
+        "uuid": "1c2dc8266a1e8204",
+        "name": "Mainboard",
+        "board": "f46521e53c6c0917",
+        "source": "",
+        "version": "1794117407572",
+        "updateTime": 1794117407572
+      },
+      "1eed914b77526386": {
+        "uuid": "1eed914b77526386",
+        "name": "Control",
+        "board": "1ac68d5ce32eb0b2",
+        "source": "",
+        "version": "1794119316938",
+        "updateTime": 1794119316938
+      },
+      "94d1b90801028e25": {
+        "uuid": "94d1b90801028e25",
+        "name": "Auxiliary",
+        "board": "4f37c1ccacc0e640",
+        "source": "",
+        "version": "1794119317049",
+        "updateTime": 1794119317049
+      }
+    },
+    "sheets": {
+      "313b0a653222b232": {
+        "uuid": "313b0a653222b232",
+        "title": "Mainboard_6_Blocks",
+        "schematic_uuid": "1c2dc8266a1e8204",
+        "zIndex": 1,
+        "source": "",
+        "version": "1794117407572",
+        "updateTime": 1794117407572
+      },
+      "9883b2d67d071cd9": {
+        "uuid": "9883b2d67d071cd9",
+        "title": "Control_Blocks",
+        "schematic_uuid": "1eed914b77526386",
+        "zIndex": 1,
+        "source": "",
+        "version": "1794119316938",
+        "updateTime": 1794119316938
+      },
+      "e47ca70c15c6fcd8": {
+        "uuid": "e47ca70c15c6fcd8",
+        "title": "Auxiliary_Blocks",
+        "schematic_uuid": "94d1b90801028e25",
+        "zIndex": 1,
+        "source": "",
+        "version": "1794119317049",
+        "updateTime": 1794119317049
+      }
+    },
+    "pcbs": {},
+    "panels": {},
+    "blockSymbols": {},
+    "owner": {
+      "uuid": ""
+    },
+    "simSchematics": {},
+    "simulations": {}
+  },
+  "config": {
+    "defaultSheet": "313b0a653222b232",
+    "settings": {}
+  }
+}
