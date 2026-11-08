@@ -1,0 +1,18 @@
+{
+  "drag_power_max_W": -39.3811597602462,
+  "mass_budget_error_kg": 0.0,
+  "entry_plus_terminal_error_kg": 0.0,
+  "measured_throttle_slew_per_s": 1.0000000000009104,
+  "vacuum": {
+    "energy_relative_drift": 2.4631655102773746e-16,
+    "angular_momentum_relative_drift": 4.145977832091672e-15,
+    "constant_mass_error_kg": 0.0,
+    "contact_event": 1.0
+  },
+  "all_three_steps_pass": true,
+  "step_change_fine_mass_kg": 0.016017910587834194,
+  "step_change_fine_speed_mps": -0.00022124933308909078,
+  "step_change_fine_q_pa": -0.05506642397813266,
+  "step_change_fine_contact_s": 2.079657303966087e-05,
+  "independent_smooth_interval_massflow_error_kg": 0.012884579031378962
+}

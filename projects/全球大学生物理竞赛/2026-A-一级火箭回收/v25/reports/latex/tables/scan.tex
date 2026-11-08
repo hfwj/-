@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\centering\small
+\caption{Sequential 10 t load search; each row has its own searched control.}
+\label{tab:scan}
+\begin{tabularx}{\linewidth}{@{}rrrrrX@{}}
+\toprule
+Load (t) & Used (t) & Entry (t) & Terminal (t) & $q_{max}$ (kPa) & Outcome \\
+\midrule
+90 & 90.000 & 56.641 & 33.359 & 102.59 & Fail \\
+100 & 98.620 & 60.188 & 38.432 & 96.49 & Fail \\
+110 & 108.600 & 63.990 & 44.611 & 84.15 & Fail \\
+120 & 118.577 & 68.116 & 50.461 & 68.96 & Fail \\
+130 & 128.078 & 71.374 & 56.704 & 45.94 & Pass \\
+\bottomrule
+\end{tabularx}
+\par\smallskip{\footnotesize Search uses 0.1 s and validation 0.02 s. Failed rows show consumption before contact or exhaustion, not the fuel required for a successful terminal burn. Failure details and every row's parameters are retained in \texttt{load\_search.json}.}
+\end{table}

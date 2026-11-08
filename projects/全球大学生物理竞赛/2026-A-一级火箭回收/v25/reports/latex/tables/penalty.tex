@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+\centering\small
+\caption{Dimensionless penalties and separate acceptance limits.}
+\label{tab:penalty}
+\begin{tabularx}{\linewidth}{@{}lXlX@{}}
+\toprule
+Channel & Design scale & $r_i$ & Acceptance \\
+\midrule
+Downward speed & 2.2 m/s & $[-w_f/2.2-1]_+$ & 2.5 m/s \\
+Upward velocity & 2.2 m/s & $[w_f/2.2]_+$ & $w_f\le0$ \\
+Horizontal speed & 0.8 m/s & $[|u_f|/0.8-1]_+$ & 1.0 m/s \\
+Peak pressure & 47.5 kPa & $[q_{max}/47500-1]_+$ & 50 kPa \\
+Load factor & 3.9 & $[n_{max}/3.9-1]_+$ & 4.0 \\
+Final tilt & $1.8^\circ$ & $[|\theta_f|/1.8^\circ-1]_+$ & $2^\circ$ \\
+Residual propellant & 1500 kg & $[(1500-m_{res})/1500]_+$ & 1000 kg \\
+\bottomrule
+\end{tabularx}
+\par\smallskip{\footnotesize $[x]_+=\max(x,0)$. Pressure in the residual is expressed in Pa; angles use the displayed degree ratio. The mass scale is $m_*=100000$ kg, the common penalty weight is 1000, and a no-contact run receives $10^8+m_{used}/m_*$.}
+\end{table}

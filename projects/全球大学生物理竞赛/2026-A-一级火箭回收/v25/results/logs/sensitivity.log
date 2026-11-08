@@ -1,0 +1,8 @@
+Cd -10% 0.0 129773.4 46613.1 -2.229 32.01
+Cd +10% 1.0 126545.9 45486.8 -2.184 -34.83
+Wind x1.25 1.0 128004.2 45559.1 -2.197 1.48
+Isp -2% 0.0 129754.8 45554.2 -2.226 -12.9
+Ignition delay 0.7 s 1.0 127778.1 49554.0 -2.2 69.0
+Upper scale 5 km 1.0 128078.3 45943.0 -2.203 0.75
+Upper scale 10 km 1.0 128078.2 45941.0 -2.203 -1.15
+Vacuum invariants {'energy_relative_drift': 2.4631655102773746e-16, 'angular_momentum_relative_drift': 4.145977832091672e-15, 'constant_mass_error_kg': 0.0, 'contact_event': 1.0}

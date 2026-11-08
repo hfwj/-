@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+\centering\small
+\caption{Fixed-control perturbations at the selected load.}
+\label{tab:sensitivity}
+\begin{tabularx}{\linewidth}{@{}Xrrrrl@{}}
+\toprule
+Change & Used (t) & $|w_f|$ (m/s) & $q_{max}$ (kPa) & $\Delta s$ (m) & Screen \\
+\midrule
+Cd -10\% & 129.773 & 2.229 & 46.61 & 32.0 & Fail \\
+Cd +10\% & 126.546 & 2.184 & 45.49 & -34.8 & Pass \\
+Wind x1.25 & 128.004 & 2.197 & 45.56 & 1.5 & Pass \\
+Isp -2\% & 129.755 & 2.226 & 45.55 & -12.9 & Fail \\
+Ignition delay 0.7 s & 127.778 & 2.200 & 49.55 & 69.0 & Pass \\
+Upper scale 5 km & 128.078 & 2.203 & 45.94 & 0.7 & Pass \\
+Upper scale 10 km & 128.078 & 2.203 & 45.94 & -1.2 & Pass \\
+\bottomrule
+\end{tabularx}
+\par\smallskip{\footnotesize The screen tests velocity, load, tilt and fuel, not a fixed-ship position constraint. Range shifts are measured relative to the nominal ship location; passing the screen does not establish robust deck capture.}
+\end{table}

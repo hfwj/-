@@ -1,0 +1,62 @@
+parameter,value,class,source_or_basis
+RE,6371000.0,P,Standard atmosphere / conventional Earth reference values
+RA,6356766.0,P,Standard atmosphere / conventional Earth reference values
+MU,398600441800000.0,P,Standard atmosphere / conventional Earth reference values
+G0,9.80665,P,Standard atmosphere / conventional Earth reference values
+R_AIR,287.05287,P,Standard atmosphere / conventional Earth reference values
+GAMMA_AIR,1.4,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+DRY,130000.0,G,Problem data
+LENGTH,65.0,G,Problem data
+DIAMETER,7.0,G,Problem data
+FOOT_SPAN,5.0,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+H0,70000.0,G,Problem data
+V0,1666.6666666666665,G,Problem data
+GAMMA0_DEG,45.0,H,Fixed upward-angle scenario assumption specified for this study
+ISP,330.0,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+ENGINE_T,1000000.0,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+THROTTLE_MIN,0.3,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+THROTTLE_MAX,1.1,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+IGN_DELAY,0.5,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+ENGINE_TAU,0.1,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+SLEW,1.0,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+ATT_TAU,1.0,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+ATT_RATE_DEG,5.0,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+HIGH_H,7000.0,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+PD_TRIGGER,25000.0,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+Q_SOFT,35000.0,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+Q_LIMIT,50000.0,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+N_CONTROL,3.7,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+N_LIMIT,4.0,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+VZ_LIMIT,2.5,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+VX_LIMIT,1.0,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+TILT_LIMIT_DEG,2.0,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+RESERVE,1000.0,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+CD_M,"[0.0, 0.3, 0.6, 0.8, 0.95, 1.0, 1.1, 1.3, 1.6, 2.0, 3.0, 8.0]",H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+CD_Y,"[0.5, 0.5, 0.55, 0.75, 1.1, 1.35, 1.5, 1.35, 1.15, 1.0, 0.85, 0.75]",H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+WIND_H,"[0.0, 2000.0, 6000.0, 12000.0, 20000.0, 35000.0, 70000.0, 200000.0]",H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+WIND_U,"[8.0, 8.0, 16.0, 35.0, 20.0, 5.0, 0.0, 0.0]",H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+SEARCH_LO,"[35000.0, 450.0, 0.95, 0.5]",H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+SEARCH_HI,"[82000.0, 1150.0, 1.6, 2.0]",H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+note,"""New independently specified screening model. Cd anchors, 7 km density scale height, prescribed wind, actuator and safety settings are H assumptions, not recovered original values.""",H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+CLEAR_FLOOR,0.5,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+TGO_FLOOR,0.5,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+KX,2.0,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+TILT_LOW_DEG,2.0,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+TILT_HIGH_DEG,60.0,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+TILT_HEIGHT,5000.0,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+STAGE3_H,15000.0,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+STAGE3_REQ,3050000.0,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+STAGE3_ACT,3100000.0,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+STAGE2_H,2000.0,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+STAGE2_REQ,2050000.0,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+STAGE2_ACT,2100000.0,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+COST_MASS,100000.0,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+COST_WEIGHT,1000.0,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+DESIGN_VZ,2.2,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+DESIGN_VX,0.8,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+DESIGN_Q,47500.0,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+DESIGN_N,3.9,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+DESIGN_TILT,1.8,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+DESIGN_RESERVE,1500.0,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+NONCONTACT_COST,100000000.0,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware
+FOOT_LENGTH,35.0,H,Explicit new modeling assumption; not recovered from the old manuscript or certified hardware

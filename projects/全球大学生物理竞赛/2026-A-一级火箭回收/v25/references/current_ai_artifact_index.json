@@ -1,0 +1,14 @@
+{
+  "status": "Visible request record and artifact index, not a complete historical AI transcript",
+  "current_request": "问题1：补CD(M)12个锚点、86km以上scale height、式(11)归一化；附录代码换成真能跑出表的脚本或删可复现暗示。问题2：实际运行三档步长，列耗量、着陆速度、峰值压力和事件时间变化。问题3：统一51 vs 70区间口径。问题4：解释式(8)分母Cd与阻力触发的关系。",
+  "chosen_route": "新建完整、明确标注假设的模型，重算并替换关联结果",
+  "artifacts": [
+    "simulation/config.json",
+    "simulation/core.cpp",
+    "simulation/reproduce.py",
+    "results/data",
+    "results/logs",
+    "reports/856A.pdf"
+  ],
+  "current_request_record_type": "Task index; not represented as verbatim full prompt/output export"
+}

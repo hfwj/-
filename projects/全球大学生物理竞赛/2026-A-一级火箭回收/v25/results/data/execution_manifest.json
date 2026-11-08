@@ -1,0 +1,19 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "inputs": {
+    "core.cpp": "a08358c8f3ba333033e28e5d2b93d67104f12320b9d84f47a8dce87b0b4dbf66",
+    "validate.py": "451f6771b0774c9dc8a4077588deb39440174abb0755884da605225c816bf370",
+    "search.py": "e813785b96639cd3a895071c8103683649b1e7197de302e8990475d4702eb106",
+    "analyze.py": "a0372c8e2ceb6d12c9f8c32d624771ea00a39ea2929c6e7d607a5142e39f8338",
+    "model.py": "2b1ed9662b423072346210aea4872ae2e8c5c864e766325f3f6b9e527f0e16e0",
+    "sensitivity.py": "95bb8e5e6fcd222646849e8aac70d6579c2e654933f3df73bfecdb06216b0831",
+    "reproduce.py": "a4b1cce96773332e4252130333fd2c0134d58a906defe5987e59aa1e8aa609fd",
+    "publish.py": "c873c136c0b6626eccaac65fb8dc47c68e92a9909e2500cd37d31cd0ebbe4ed5",
+    "config.json": "b24a1adf07a0cd851213f273bebd918300e5480ce5cdcb651fc552b11a0e5dd8"
+  },
+  "no_original_manuscript_data_used": true
+}

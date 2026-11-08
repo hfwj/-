@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+simulation/*.so
+simulation/build.sha256
+reports/latex/build/

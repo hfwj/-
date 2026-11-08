@@ -1,0 +1,22 @@
+\begin{table}[htbp]
+\centering\small
+\caption{Actual event-time comparison under step halving.}
+\label{tab:events}
+\begin{tabularx}{\linewidth}{@{}Xrrr@{}}
+\toprule
+Event & 0.02 s step & 0.01 s step & 0.005 s step \\
+\midrule
+Entry request & 264.891636490 & 264.891636489 & 264.891636489 \\
+Entry thrust begins & 265.391636490 & 265.391636489 & 265.391636489 \\
+Entry cutoff & 299.630971081 & 299.630970973 & 299.630970962 \\
+Terminal request & 299.630971081 & 299.630970973 & 299.630970962 \\
+Terminal thrust begins & 300.130971081 & 300.130970973 & 300.130970962 \\
+Pressure override on & 300.738953379 & 300.738956337 & 300.738955479 \\
+Pressure override off & 318.134575569 & 318.134513040 & 318.134535141 \\
+7 to 3 engines & 318.285945992 & 318.285884085 & 318.285905965 \\
+3 to 2 engines & 369.480378970 & 369.480449585 & 369.480418601 \\
+Geometric contact & 369.581277792 & 369.581324869 & 369.581304073 \\
+\bottomrule
+\end{tabularx}
+\par\smallskip{\footnotesize All entries are seconds after separation. Crossing guards are located by 30 bisections of a re-integrated RK4 substep; actuator saturation remains piecewise smooth.}
+\end{table}

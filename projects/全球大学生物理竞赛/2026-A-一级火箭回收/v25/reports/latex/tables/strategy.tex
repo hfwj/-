@@ -1,0 +1,15 @@
+\begin{table}[htbp]
+\centering\small
+\caption{Three strategies at the selected initial load, all replayed at 0.005 s.}
+\label{tab:strategy}
+\begin{tabularx}{\linewidth}{@{}lrrrrX@{}}
+\toprule
+Policy & Entry (t) & Terminal (t) & $|w_f|$ (m/s) & $q_{max}$ (kPa) & Screen \\
+\midrule
+S0 & 38.828 & 91.172 & 253.543 & 39.45 & Fail \\
+S1 & 77.929 & 52.071 & 45.505 & 53.63 & Fail \\
+S2 & 71.374 & 56.704 & 2.203 & 45.94 & Pass \\
+\bottomrule
+\end{tabularx}
+\par\smallskip{\footnotesize S0: entry from 75 to 55 km, k=1.30 and target 1.50 m/s; S1: 75 km entry with a 750 m/s cutoff, k=1.40 and target 1.50 m/s; S2: searched parameters in the search-domain table. All three use the same environment, actuator model, acceptance screen, and terminal law.}
+\end{table}
