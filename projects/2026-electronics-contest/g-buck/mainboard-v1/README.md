@@ -13,6 +13,12 @@
 | 05 DAC电压/电流设定与滤波 | [PNG](schematic/previews/05_Block.png) |
 | 06 CC恒流补偿与设定缓冲 | [PNG](schematic/previews/06_Block.png) |
 
+## 手动画图资料（SMT基础库优先）
+
+[Word指南](reports/manual-drawing-2026-11-08/Mainboard_Manual.docx) · [PDF指南](reports/manual-drawing-2026-11-08/Mainboard_Manual.pdf) · [BOM Excel](reports/manual-drawing-2026-11-08/Mainboard_BOM.xlsx) · [全部打包](downloads/GBUCK_Manual_BOM_BasicFirst.zip) · [在线阅读](reports/manual-drawing-2026-11-08/README.md)
+
+六区/42件/123脚。官网已核实基础库14件，另4件候选待复核；明确区分扩展库、待核实和通孔手焊。基础库优先不降低精密电阻和功率电容要求。比较fb6e66e：连接/脚序/标称阻容值不变，新增推荐选型（含C4耐压16→50V、U5卷带包装），旧JSON/旧BOM不覆盖；模型/固件无改动，尚未绑定封装或完成PCB/实测。
+
 ## 嘉立创打开方法
 
 原生文件是嘉立创EDA标准版JSON、docType=5、一个原理图页，不是专业版eprj工程。

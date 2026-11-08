@@ -1,0 +1,17 @@
+{
+  "baseline": "fb6e66e",
+  "references": 42,
+  "pins": 123,
+  "confirmed_basic_references": 14,
+  "basic_candidate_references": 4,
+  "status_counts": {
+    "非SMT/手焊": 5,
+    "待核实库别": 16,
+    "基础库（官网已核实）": 14,
+    "扩展库（官网）": 3,
+    "基础库候选/待官网复核": 4
+  },
+  "netlist_changed": false,
+  "native_erc": false,
+  "hardware_test": false
+}

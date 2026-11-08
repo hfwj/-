@@ -1,0 +1,43 @@
+﻿功能区,位号,原标称,推荐规格,厂家型号,立创料号,封装,SMT库别,备注,核对日期,来源
+1,J1,INPUT 15-25V,2位接线端子,WJ500V-5.08-2P,C8465,THT P5.08mm,非SMT/手焊,按原厂机械图；1正极、2GND，勿混用5.00mm,2026-11-08,https://jlcpcb.com/partdetail/C8465
+1,F1,2A fuse,2A 63V保险丝,0466002.NRHF,C3105,1206保险丝,待核实库别,非自恢复保险；不提供精确1A限流,2026-11-08,https://jlcpcb.com/partdetail/C3105
+1,RS1,0.05R 1% 1W,0.05Ω ±1% 1W,RL2512FK-070R05L,C876461,2512,待核实库别,电流取样两端用Kelvin引线,2026-11-08,https://jlcpcb.com/partdetail/C876461
+1,J4,TO AUX D,2针辅助供电接口,2.54mm 1x2直插排针,,THT 1x2 P2.54mm,非SMT/手焊,参数选型；未指定商城料号；1 VIN_SYS，2 GND,2026-11-08,
+1,U3,INA226AIDGSR,输入电流/电压监测,INA226AIDGSR,C49851,VSSOP-10 / DGS P0.5mm,待核实库别,不能与MSOP外形想当然互换,2026-11-08,https://jlcpcb.com/partdetail/C49851
+1,C9,100nF,100nF 50V X7R ±10%,CC0805KRX7R9BB104,C49678,0805,基础库（官网已核实）,统一7只；C4由16V额定提升50V，标称容值不变,2026-11-08,https://jlcpcb.com/partdetail/C49678
+1,J3,TO BOARD C,带防呆10针连接器,2.54-2*5P简牛 BOOMELE,C5665,THT 2x5 P2.54mm,非SMT/手焊,核对1脚三角标记和外壳尺寸,2026-11-08,https://jlcpcb.com/partdetail/C5665
+2,U1,TPS54302DDCR,同步Buck 4.5–28V/3A,TPS54302DDCR,C311983,SOT-23-THIN6 / DDC,待核实库别,不得用通用SOT23-6直接代替DDC焊盘,2026-11-08,https://jlcpcb.com/partdetail/C311983
+2,C1,100uF 50V,100µF 50V 铝电解,50YXF100MEFC8X11.5,C88728,THT D8x11.5mm P3.5mm,非SMT/手焊,注意极性，1正极、2GND,2026-11-08,https://jlcpcb.com/partdetail/C88728
+2,C2,10uF 50V X7R,10µF 50V X7R ±10%,CL31B106KBHNNNE,C89632,1206,扩展库（官网）,输入最高25V，保留50V耐压,2026-11-08,https://jlcpcb.com/partdetail/C89632
+2,C3,100nF 50V,100nF 50V X7R ±10%,CC0805KRX7R9BB104,C49678,0805,基础库（官网已核实）,统一7只；C4由16V额定提升50V，标称容值不变,2026-11-08,https://jlcpcb.com/partdetail/C49678
+2,L1,22uH Isat>=5A,22µH ±20% 额定4A Isat5A DCR80mΩ,ZD0850-220M,C46956554,8.8x8.2mm型号专用焊盘,待核实库别,焊盘尺寸需查原厂图；不能按名称选通用8x8封装,2026-11-08,https://jlcpcb.com/partdetail/C46956554
+2,RS2,0.05R 1% 1W,0.05Ω ±1% 1W,RL2512FK-070R05L,C876461,2512,待核实库别,电流取样两端用Kelvin引线,2026-11-08,https://jlcpcb.com/partdetail/C876461
+2,J2,OUTPUT LOAD,2位接线端子,WJ500V-5.08-2P,C8465,THT P5.08mm,非SMT/手焊,按原厂机械图；1正极、2GND，勿混用5.00mm,2026-11-08,https://jlcpcb.com/partdetail/C8465
+2,C5,22uF 25V X7R,22µF 25V X7R ±10%,CL32B226KAJNNNE,C309062,1210,待核实库别,有条件候选：10V偏压下两只合计有效容量需≥22µF；需曲线或实测,2026-11-08,https://jlcpcb.com/partdetail/C309062
+2,C6,22uF 25V X7R,22µF 25V X7R ±10%,CL32B226KAJNNNE,C309062,1210,待核实库别,有条件候选：10V偏压下两只合计有效容量需≥22µF；需曲线或实测,2026-11-08,https://jlcpcb.com/partdetail/C309062
+2,C4,100nF 16V,100nF 50V X7R ±10%,CC0805KRX7R9BB104,C49678,0805,基础库（官网已核实）,统一7只；C4由16V额定提升50V，标称容值不变,2026-11-08,https://jlcpcb.com/partdetail/C49678
+3,R1,100k 0.1%,100kΩ ±0.1% 1/8W,RT0805BRD07100KL,C122537,0805,待核实库别,保留采样/反馈精度，不换1%凑基础库,2026-11-08,https://jlcpcb.com/partdetail/C122537
+3,R2,5.49k 0.1%,5.49kΩ ±0.1% 1/8W,RT0805BRD075K49L,C865577,0805,待核实库别,不改5.49k标称值,2026-11-08,https://jlcpcb.com/partdetail/C865577
+3,R3,56k 0.1%,56kΩ ±0.1% 1/8W,TC0550B5602T5G,C2989136,0805,待核实库别,56k，不能替换为56.2k,2026-11-08,https://jlcpcb.com/partdetail/C2989136
+3,D1,"BAT54 (1=A,3=K)",单肖特基二极管,"BAT54,215 Nexperia",C85084,SOT-23,待核实库别,1=A，3=K，2=NC；不用BAT54A/C/S,2026-11-08,https://jlcpcb.com/partdetail/C85084
+3,R4,10k 1%,10kΩ ±1% 1/8W,0805W8F1002T5E,C17414,0805,基础库（官网已核实）,保持原规格,2026-11-08,https://jlcpcb.com/partdetail/C17414
+3,R5,1k,1kΩ ±1% 1/8W,0805W8F1001T5E,C17513,0805,基础库（官网已核实）,保持原标称值,2026-11-08,https://jlcpcb.com/partdetail/C17513
+3,R6,100k,100kΩ ±1% 1/8W,0805W8F1003T5E,C17407,0805,基础库候选/待官网复核,不涉及R1/R7精密100k；R12为补偿电阻,2026-11-08,https://jlcpcb.com/partdetail/C17407
+4,U2,INA180A1IDBVR,电流检测增益20,INA180A1IDBVR,C122228,SOT-23-5 / DBV,待核实库别,必须A1；B1脚序不同，A2增益不同,2026-11-08,https://jlcpcb.com/partdetail/C122228
+4,C8,100nF,100nF 50V X7R ±10%,CC0805KRX7R9BB104,C49678,0805,基础库（官网已核实）,统一7只；C4由16V额定提升50V，标称容值不变,2026-11-08,https://jlcpcb.com/partdetail/C49678
+4,R7,100k 0.1%,100kΩ ±0.1% 1/8W,RT0805BRD07100KL,C122537,0805,待核实库别,保留采样/反馈精度，不换1%凑基础库,2026-11-08,https://jlcpcb.com/partdetail/C122537
+4,R8,10k 0.1%,10kΩ ±0.1% 1/8W,RT0805BRD0710KL,C110775,0805,待核实库别,保留输出电压采样精度,2026-11-08,https://jlcpcb.com/partdetail/C110775
+4,C7,10nF,10nF 50V X7R ±10%,CL21B103KBANNNC,C1710,0805,基础库（官网已核实）,输出分压滤波和电流滤波,2026-11-08,https://jlcpcb.com/partdetail/C1710
+5,U4,MCP4728-E/UN,四通道DAC,MCP4728-E/UN,C108207,MSOP-10 P0.5mm,扩展库（官网）,C/D通道不用；3.3V供电,2026-11-08,https://jlcpcb.com/partdetail/C108207
+5,C10,100nF,100nF 50V X7R ±10%,CC0805KRX7R9BB104,C49678,0805,基础库（官网已核实）,统一7只；C4由16V额定提升50V，标称容值不变,2026-11-08,https://jlcpcb.com/partdetail/C49678
+5,R9,100k,100kΩ ±1% 1/8W,0805W8F1003T5E,C17407,0805,基础库候选/待官网复核,不涉及R1/R7精密100k；R12为补偿电阻,2026-11-08,https://jlcpcb.com/partdetail/C17407
+5,R10,1k,1kΩ ±1% 1/8W,0805W8F1001T5E,C17513,0805,基础库（官网已核实）,保持原标称值,2026-11-08,https://jlcpcb.com/partdetail/C17513
+5,C12,100nF,100nF 50V X7R ±10%,CC0805KRX7R9BB104,C49678,0805,基础库（官网已核实）,统一7只；C4由16V额定提升50V，标称容值不变,2026-11-08,https://jlcpcb.com/partdetail/C49678
+6,U5,MCP6002-I/SN,双运放,MCP6002T-I/SN,C7377,SOIC-8 3.9mm P1.27mm,扩展库（官网）,原MCP6002-I/SN加T仅卷带包装；同一只IC两个单元,2026-11-08,https://jlcpcb.com/partdetail/C7377
+6,R11,1k,1kΩ ±1% 1/8W,0805W8F1001T5E,C17513,0805,基础库（官网已核实）,保持原标称值,2026-11-08,https://jlcpcb.com/partdetail/C17513
+6,C13,10nF,10nF 50V X7R ±10%,CL21B103KBANNNC,C1710,0805,基础库（官网已核实）,输出分压滤波和电流滤波,2026-11-08,https://jlcpcb.com/partdetail/C1710
+6,R12,100k 1%,100kΩ ±1% 1/8W,0805W8F1003T5E,C17407,0805,基础库候选/待官网复核,不涉及R1/R7精密100k；R12为补偿电阻,2026-11-08,https://jlcpcb.com/partdetail/C17407
+6,R13,1k 1%,1kΩ ±1% 1/8W,0805W8F1001T5E,C17513,0805,基础库（官网已核实）,保持原标称值,2026-11-08,https://jlcpcb.com/partdetail/C17513
+6,C14,220nF X7R,220nF 50V X7R ±10%,CL21B224KBFNNNE,C5378,0805,基础库候选/待官网复核,不得仅凭第三方历史Basic标记下单；核对有效容值,2026-11-08,https://jlcpcb.com/partdetail/C5378
+6,D2,"BAT54 (1=A,3=K)",单肖特基二极管,"BAT54,215 Nexperia",C85084,SOT-23,待核实库别,1=A，3=K，2=NC；不用BAT54A/C/S,2026-11-08,https://jlcpcb.com/partdetail/C85084
+6,C11,100nF,100nF 50V X7R ±10%,CC0805KRX7R9BB104,C49678,0805,基础库（官网已核实）,统一7只；C4由16V额定提升50V，标称容值不变,2026-11-08,https://jlcpcb.com/partdetail/C49678
