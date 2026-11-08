@@ -4,6 +4,8 @@
 
 设计约定（2026-11-08，按最新要求）：后续不用螺丝接线端子；电源输入/输出优先用鳄鱼夹可夹持的裸露金属接线柱，带螺母机械固定，正负极分开并预留夹持间距，额定电流及安装尺寸按实际选型确定。此要求替代此前默认通孔焊线焊盘方案。相对7569546，本次仅更新偏好，现有原理图、器件/BOM、PCB、仿真及固件均未修改。详见[仓库约定](AGENTS.md)。
 
+交付格式约定：后续嘉立创EDA工程统一采用专业版 **`.eprj3`**，必须是真实工程文件，不可仅修改JSON后缀。本次相对d38634b仅记录格式要求，既有文件尚未转换，原理图、器件/BOM、PCB、仿真及固件不变。
+
 ## 项目目录
 
 2026-11-08：[最新G题主板R2嘉立创原理图](projects/2026-electronics-contest/g-buck/mainboard-r2/README.md) · [JSON/PDF/BOM整包](projects/2026-electronics-contest/g-buck/mainboard-r2/downloads/GBUCK_Mainboard_R2_EasyEDA_Std.zip)。44件/135脚静态通过；同步四只板凳柱和0603基础库选型，保留J3脚序；未绑定封装，未做原生ERC/PCB或实测。

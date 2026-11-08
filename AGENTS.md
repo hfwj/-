@@ -20,6 +20,10 @@ Apply this to simulation-only modifications too. For documentation or workflow-o
 
 Latest user preference: “板凳式焊接接线柱” for crocodile-clip power connections. For future designs use exposed bench-style solder posts mounted directly through the PCB, preferably four conductive feet and a sturdy clip-accessible bridge. Each conductive post is one electrical pole; all its conductive feet connect to that pole. Input positive/negative and output positive/negative require four separate posts. Verify manufacturer rating (procurement target >=5A), material, dimensions, drill/pitch and clip clearance before footprint binding. Do not invent part numbers or dimensions from generic PCB-1 descriptions. This supersedes earlier solder-pad and panel-binding-post defaults. Keep signal headers unless a design revision explicitly changes them. Apply and document connector, footprint, mechanical and BOM impacts; preserve archived versions.
 
+## EDA delivery format preference
+
+The user explicitly instructed: “.eprj3文件 以后都是”. Future JLCEDA deliverables must use genuine JLCEDA Professional .eprj3 project files as the primary editable artifact. Do not substitute Standard Edition JSON as the final requested project or rename JSON/ZIP to .eprj3. Verify the native format and report actual import/open validation status. If native generation/conversion is unavailable, state that limitation explicitly rather than claiming delivery. Preserve archived prior-format artifacts. Recording this preference alone does not convert existing files.
+
 ## Engineering evidence
 
 Keep assumptions, model validation, actual firmware tests and hardware measurements distinct. Do not describe behavioral switching models as manufacturer transistor models. Existing G题 results do not establish total efficiency, real firmware behavior, PCB/ERC/DRC readiness, or safe battery operation.
