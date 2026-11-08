@@ -1,0 +1,10 @@
+{
+  "density_comparison_points": 109,
+  "density_max_relative_difference": 1.6748561460573984e-10,
+  "vacuum_apogee_time_s": 127.40059215242422,
+  "vacuum_apogee_height_m": 144786.0488887485,
+  "vacuum_specific_energy_max_drift_J_kg": 3.725290298461914e-08,
+  "vacuum_specific_angular_momentum_max_drift_m2_s": 1.049041748046875e-05,
+  "initial_vt_m_s": 1178.511301977579,
+  "initial_vr_m_s": 1178.511301977579
+}

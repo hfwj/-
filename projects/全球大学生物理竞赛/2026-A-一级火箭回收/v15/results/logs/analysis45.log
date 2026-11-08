@@ -1,0 +1,136 @@
+/workspace/-/projects/全球大学生物理竞赛/2026-A-一级火箭回收/v15/simulation/analyze45.py:19: UserWarning: Glyph 8320 (\N{SUBSCRIPT ZERO}) missing from font(s) Noto Sans CJK JP.
+  def savefig(name):plt.tight_layout();plt.savefig(F/(name+'.png'),dpi=190);plt.savefig(F/(name+'.pdf'));plt.close()
+/workspace/-/projects/全球大学生物理竞赛/2026-A-一级火箭回收/v15/simulation/analyze45.py:19: UserWarning: Glyph 8320 (\N{SUBSCRIPT ZERO}) missing from font(s) Noto Sans CJK JP.
+  def savefig(name):plt.tight_layout();plt.savefig(F/(name+'.png'),dpi=190);plt.savefig(F/(name+'.pdf'));plt.close()
+/workspace/-/projects/全球大学生物理竞赛/2026-A-一级火箭回收/v15/simulation/analyze45.py:19: UserWarning: Glyph 8320 (\N{SUBSCRIPT ZERO}) missing from font(s) Noto Sans CJK JP.
+  def savefig(name):plt.tight_layout();plt.savefig(F/(name+'.png'),dpi=190);plt.savefig(F/(name+'.pdf'));plt.close()
+/workspace/-/projects/全球大学生物理竞赛/2026-A-一级火箭回收/v15/simulation/analyze45.py:19: UserWarning: Glyph 8320 (\N{SUBSCRIPT ZERO}) missing from font(s) Noto Sans CJK JP.
+  def savefig(name):plt.tight_layout();plt.savefig(F/(name+'.png'),dpi=190);plt.savefig(F/(name+'.pdf'));plt.close()
+{
+  "propellant_initial_t": 140.0,
+  "initial_mass_t": 270.0,
+  "event": "contact",
+  "all_selected_checks_pass": true,
+  "checks": {
+    "contact": true,
+    "q": true,
+    "n_sum": true,
+    "foot_vertical_speed": true,
+    "foot_horizontal_speed": true,
+    "contact_tilt": true,
+    "contact_rate": true,
+    "alpha_highq": true,
+    "theta_lowheight": true,
+    "deck_coverage": true,
+    "body_clearance": true,
+    "reserve": true
+  },
+  "ignition1_s": 260.0,
+  "shutdown1_command_s": 310.6510578543269,
+  "ignition2_s": 315.6510608190217,
+  "contact_s": 364.15706437717205,
+  "range_km": 347.62741882169473,
+  "first_burn_t": 98.32443557778498,
+  "second_burn_t": 38.90354853845862,
+  "remaining_t": 2.772015883756394,
+  "qmax_kPa": 47.02288455159363,
+  "n_sum_max": 3.800243229454368,
+  "vr_contact_m_s": -0.9996686509692597,
+  "vt_contact_m_s": -0.00045782280533723677,
+  "theta_contact_deg": -1.955966292636255e-06,
+  "omega_contact_deg_s": 0.0020760872430754186,
+  "alpha_highq_max_deg": 4.994276463528248,
+  "low_height_max_tilt_deg": 3.6929565326148794,
+  "max_gimbal_deg": 3.0218876530333225,
+  "max_omega_deg_s": 3.5808908704018827,
+  "apogee_km": 144.78201796984115,
+  "apogee_time_s": 127.4,
+  "geometry": {
+    "ship_phi": 0.05456402744022834,
+    "foot_x": [
+      -4.999998890485636,
+      5.000001109494301
+    ],
+    "foot_vertical": [
+      -0.9994874782197097,
+      -0.9998498237992128
+    ],
+    "foot_horizontal": [
+      -0.0016354459449074508,
+      -0.0016354459325376828
+    ],
+    "body_min_clearance": 1.9999980885030686
+  },
+  "refine_contact_time_difference_s": 1.364211431109652e-05,
+  "refine_range_difference_m": 3.6508485209196806e-05,
+  "refine_vr_difference_m_s": 5.968511838982948e-06,
+  "refine_mass_difference_kg": 0.005237308272626251,
+  "stages": [
+    {
+      "stage": "无推力上升",
+      "start_s": 0,
+      "end_s": 127.4,
+      "start_h_km": 70.0,
+      "end_h_km": 144.78201796984115,
+      "start_speed_m_s": 1666.6666666666665,
+      "end_speed_m_s": 1164.952043973965,
+      "propellant_t": 0.0,
+      "Tmax_MN": 0.0,
+      "beta_min_deg": null,
+      "beta_max_deg": null
+    },
+    {
+      "stage": "无推力下降",
+      "start_s": 127.4,
+      "end_s": 260.0,
+      "start_h_km": 144.78201796984115,
+      "end_h_km": 63.73776558574382,
+      "start_speed_m_s": 1164.952043973965,
+      "end_speed_m_s": 1702.2613774701895,
+      "propellant_t": 0.0,
+      "Tmax_MN": 0.0,
+      "beta_min_deg": null,
+      "beta_max_deg": null
+    },
+    {
+      "stage": "七机再入燃烧",
+      "start_s": 260.0,
+      "end_s": 310.6510578543269,
+      "start_h_km": 63.73776558574382,
+      "end_h_km": 15.466784162654541,
+      "start_speed_m_s": 1702.2613774701895,
+      "end_speed_m_s": 571.3595699800516,
+      "propellant_t": 97.5199113381771,
+      "Tmax_MN": 7.698786907222902,
+      "beta_min_deg": -45.981313262194966,
+      "beta_max_deg": -30.284793994018514
+    },
+    {
+      "stage": "关机尾流与滑行",
+      "start_s": 310.6510578543269,
+      "end_s": 315.6510608190217,
+      "start_h_km": 15.466784162654541,
+      "end_h_km": 13.12614594476018,
+      "start_speed_m_s": 571.3595699800516,
+      "end_speed_m_s": 577.510280710584,
+      "propellant_t": 0.8045242396078829,
+      "Tmax_MN": 5.876786324783383,
+      "beta_min_deg": -30.285808762933698,
+      "beta_max_deg": -29.20034610566904
+    },
+    {
+      "stage": "三机着陆燃烧",
+      "start_s": 315.6510608190217,
+      "end_s": 364.15706437717205,
+      "start_h_km": 13.12614594476018,
+      "end_h_km": 0.032499998208135365,
+      "start_speed_m_s": 577.510280710584,
+      "end_speed_m_s": 0.9996687558048518,
+      "propellant_t": 38.90354853845862,
+      "Tmax_MN": 3.2999663735524853,
+      "beta_min_deg": -31.847925211968384,
+      "beta_max_deg": 3.0218856970670296
+    }
+  ]
+}
+PERTURBATIONS [{'case': 'Cd −15%', 'event': 'contact', 'time_s': np.float64(354.54931283552156), 'height_m': np.float64(32.79656775388867), 'vr_m_s': np.float64(-121.28069063608723), 'vt_m_s': np.float64(22.545366913901336), 'qmax_kPa': np.float64(53.81810290123573), 'remaining_t': np.float64(11.053061890874757), 'downrange_error_m': np.float64(564.0234022017685), 'selected_subset_pass': False}, {'case': 'Cd −20%', 'event': 'contact', 'time_s': np.float64(353.247917992221), 'height_m': np.float64(32.73620646074414), 'vr_m_s': np.float64(-145.930224709495), 'vt_m_s': np.float64(31.3410719757486), 'qmax_kPa': np.float64(56.38063516764154), 'remaining_t': np.float64(12.380050266982959), 'downrange_error_m': np.float64(761.4404787113308), 'selected_subset_pass': False}, {'case': 'Isp −2%', 'event': 'usable_propellant_exhausted', 'time_s': np.float64(363.21339713868633), 'height_m': np.float64(462.0681511508301), 'vr_m_s': np.float64(1.9018836971624555), 'vt_m_s': np.float64(-0.030265501157544634), 'qmax_kPa': np.float64(44.79103169597294), 'remaining_t': np.float64(0.7), 'downrange_error_m': np.float64(-204.29855827230494), 'selected_subset_pass': False}, {'case': '风 ×2', 'event': 'time_limit', 'time_s': np.float64(369.1578412871029), 'height_m': np.float64(156.52749881893396), 'vr_m_s': np.float64(-5.780571256914623), 'vt_m_s': np.float64(0.18436863422892127), 'qmax_kPa': np.float64(45.904796283152756), 'remaining_t': np.float64(0.8553154904225958), 'downrange_error_m': np.float64(1005.4103070521378), 'selected_subset_pass': False}, {'case': '风 ×3', 'event': 'time_limit', 'time_s': np.float64(369.1578412871029), 'height_m': np.float64(296.4305411297828), 'vr_m_s': np.float64(-7.4682555197698965), 'vt_m_s': np.float64(8.354731125518313), 'qmax_kPa': np.float64(44.7744305657232), 'remaining_t': np.float64(0.8553154899533402), 'downrange_error_m': np.float64(2048.0366078869556), 'selected_subset_pass': False}, {'case': '组合：Cd−15%/Isp−2%/风×2', 'event': 'contact', 'time_s': np.float64(361.2781588021792), 'height_m': np.float64(32.86315863300115), 'vr_m_s': np.float64(-44.6322600691994), 'vt_m_s': np.float64(12.400932760736577), 'qmax_kPa': np.float64(49.11799395174672), 'remaining_t': np.float64(2.71241740102935), 'downrange_error_m': np.float64(1341.8407120194752), 'selected_subset_pass': False}]

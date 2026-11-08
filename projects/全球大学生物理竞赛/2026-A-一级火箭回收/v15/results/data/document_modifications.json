@@ -1,0 +1,82 @@
+[
+  {
+    "original_location": "封面、表0、§0",
+    "original_issue": "原稿已写γ0=45°，但各版本结论混用",
+    "revision": "统一为γ0=+45°向上分离，给出vt0=vr0=1178.511 m/s；新结论只引用本次实际计算"
+  },
+  {
+    "original_location": "§1.1–1.2及原公式图1–3",
+    "original_issue": "称球面模型，但速度方程没有曲率项，β文字与分量写法不一致",
+    "revision": "补−vr vt/r与+vt²/r；统一β从当地天顶量起；推力分量为T sinβ、T cosβ"
+  },
+  {
+    "original_location": "§1.3、参数表、远地点",
+    "original_issue": "约143 km远地点；>86 km模型未充分定义",
+    "revision": "USSA下层加连续指数密度延拓，尺度7 km明确标H；独立计算远地点约144.8 km"
+  },
+  {
+    "original_location": "§1.3、§9.1",
+    "original_issue": "提到Cd(M)12锚点但未提供数值；面积律与姿态模型分散",
+    "revision": "主算例显式采用Cd=0.5并保留迎角面积律；这是模型变更，不是对原曲线的复现"
+  },
+  {
+    "original_location": "§1.4及原公式图7",
+    "original_issue": "动压触发速度公式含Cd，且称强制满推力保证不越界",
+    "revision": "改用q=ρVa²/2，去掉错误Cd；直接施加路径约束并独立查峰，满推力不再被称为保证"
+  },
+  {
+    "original_location": "§1.4、§5与§9.3",
+    "original_issue": "七台微弱节流及7→3→1混用，末段单机能力解释不足",
+    "revision": "采用7→3、两次点火策略；1.1 MN小于干重约1.275 MN，单机不具备近地低速悬停/向上加速能力；不据此排除所有单机短时弹道接触"
+  },
+  {
+    "original_location": "§7.2及§9.1",
+    "original_issue": "独立RCS量级分析、一阶姿态滞后后断言“姿态不是瓶颈”",
+    "revision": "点火后联立俯仰、TVC和差动节流；点火前仍是理想翻转参考；撤回真实姿态余量和605 kg冷气结论"
+  },
+  {
+    "original_location": "§7.3与原表12",
+    "original_issue": "参数化喷流敏感性被表述为已补完整证据链",
+    "revision": "本次没有喷流CFD/风洞标定，不输出“影响仅1 t”的结论；热流与底部载荷仍待验证"
+  },
+  {
+    "original_location": "§8.1–8.3",
+    "original_issue": "称没有CasADi/IPOPT，使用Powell罚函数",
+    "revision": "改为实际可运行的CasADi/IPOPT直接多重打靶；记录成功、局部解差异及未完成的运行"
+  },
+  {
+    "original_location": "§3.5–3.6、§8.4、§9.5",
+    "original_issue": "104/96/102 t称理论或数学下限；110/120 t称鲁棒推荐",
+    "revision": "撤回无全局证明的下限及缺乏本次复算支持的鲁棒结论；报告140 t参考候选与搜索预算"
+  },
+  {
+    "original_location": "§3各图、§4阶段表、§5耗剂表",
+    "original_issue": "旧图表含多个模型版本的数值",
+    "revision": "全部换成本次独立SI回放的轨迹、速度、航迹角、高度、姿态、推力、阶段和耗剂结果；旧图表随原稿存档"
+  },
+  {
+    "original_location": "§6风及原扰动表",
+    "original_issue": "用少量固定扰动结果推断通用鲁棒能力",
+    "revision": "沿用风锚点但标H；六个固定开环扰动单独复算，不作为概率或闭环能力判断"
+  },
+  {
+    "original_location": "§9–10的启停与局限",
+    "original_issue": "一处声称已实现节流/延迟，另一处又称没有这些限制",
+    "revision": "统一保留逐台节流、开启延迟、关机尾流、一阶响应及速率限制，局限只列仍未实现的内容"
+  },
+  {
+    "original_location": "执行器连续验收",
+    "original_issue": "本次初次候选节点满足5°/s，但节点间出现约5.13°/s",
+    "revision": "拒绝初次候选，将优化速率收紧到4.5°/s、验收仍5°/s，最终图表全部重算"
+  },
+  {
+    "original_location": "首次触地与关机表述",
+    "original_issue": "触地h=0且发动机立即关机，未区分质心和脚",
+    "revision": "用脚端连续零事件，质心触地高度约32.5 m；预留关机储备但不声称已模拟支腿压缩与停稳"
+  },
+  {
+    "original_location": "引用与可复现性",
+    "original_issue": "仅有文稿，未随附所述tools脚本及完整锚点",
+    "revision": "提供此次实际代码、控制节点、逐时CSV、验证JSON与日志；未核验旧引用不作为新参数数据依据"
+  }
+]

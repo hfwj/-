@@ -1,0 +1,22 @@
+
+******************************************************************************
+This program contains Ipopt, a library for large-scale nonlinear optimization.
+ Ipopt is released as open source code under the Eclipse Public License (EPL).
+         For more information visit https://github.com/coin-or/Ipopt
+******************************************************************************
+
+90 ion "return_success(accept_limit)" failed:
+Solver failed. You may use opti.debug.value to investigate the latest values of variables. return_status is 'Maximum_Iterations_Exceeded'
+{'propellant_t': 90, 'nodes_per_burn': 30, 'max_iterations': 90, 'status': 'SEARCH_BUDGET_NO_VALIDATED_SOLUTION', 'seconds': 70.92364525794983}
+100 ion "return_success(accept_limit)" failed:
+Solver failed. You may use opti.debug.value to investigate the latest values of variables. return_status is 'Maximum_Iterations_Exceeded'
+{'propellant_t': 100, 'nodes_per_burn': 30, 'max_iterations': 90, 'status': 'SEARCH_BUDGET_NO_VALIDATED_SOLUTION', 'seconds': 56.65858602523804}
+110 ion "return_success(accept_limit)" failed:
+Solver failed. You may use opti.debug.value to investigate the latest values of variables. return_status is 'Maximum_Iterations_Exceeded'
+{'propellant_t': 110, 'nodes_per_burn': 30, 'max_iterations': 90, 'status': 'SEARCH_BUDGET_NO_VALIDATED_SOLUTION', 'seconds': 57.43176555633545}
+120 ion "return_success(accept_limit)" failed:
+Solver failed. You may use opti.debug.value to investigate the latest values of variables. return_status is 'Maximum_Iterations_Exceeded'
+{'propellant_t': 120, 'nodes_per_burn': 30, 'max_iterations': 90, 'status': 'SEARCH_BUDGET_NO_VALIDATED_SOLUTION', 'seconds': 57.12975859642029}
+130 ion "return_success(accept_limit)" failed:
+Solver failed. You may use opti.debug.value to investigate the latest values of variables. return_status is 'Maximum_Iterations_Exceeded'
+{'propellant_t': 130, 'nodes_per_burn': 30, 'max_iterations': 90, 'status': 'SEARCH_BUDGET_NO_VALIDATED_SOLUTION', 'seconds': 58.72296667098999}

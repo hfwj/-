@@ -1,0 +1,18 @@
+[WARNING] Could not load translations for zh-CN
+  data file translations/zh.yaml not found
+[WARNING] The term Table has no translation defined.
+[WARNING] The term Table has no translation defined.
+[WARNING] The term Table has no translation defined.
+[WARNING] The term Figure has no translation defined.
+[WARNING] The term Figure has no translation defined.
+[WARNING] The term Figure has no translation defined.
+[WARNING] The term Figure has no translation defined.
+[WARNING] The term Table has no translation defined.
+[WARNING] The term Table has no translation defined.
+[WARNING] The term Table has no translation defined.
+[WARNING] The term Table has no translation defined.
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+convert /workspace/-/projects/全球大学生物理竞赛/2026-A-一级火箭回收/v15/reports/回收仿真_七机两段点火_γ45_CasADi修订.docx as a Writer document -> /workspace/-/projects/全球大学生物理竞赛/2026-A-一级火箭回收/v15/reports/回收仿真_七机两段点火_γ45_CasADi修订.pdf using filter : writer_pdf_Export
+Overwriting: /workspace/-/projects/全球大学生物理竞赛/2026-A-一级火箭回收/v15/reports/回收仿真_七机两段点火_γ45_CasADi修订.pdf
