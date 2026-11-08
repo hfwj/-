@@ -1,0 +1,7 @@
+{
+  "status": "REJECTED",
+  "reason": "Continuous replay: low-altitude tilt exceeds selected 5-degree limit",
+  "t_s": 176.82840174311227,
+  "h_m": 229.5649576652795,
+  "theta_deg": -5.355316713110131
+}

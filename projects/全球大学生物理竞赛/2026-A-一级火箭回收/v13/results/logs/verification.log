@@ -1,0 +1,28 @@
+{
+  "independent_rhs_random_cases": 80,
+  "max_component_absolute_error": 4.4065018300898373e-10,
+  "actuator_checks": [
+    {
+      "n": 7,
+      "actual_min": 0.30033233484438776,
+      "actual_max": 1.0999440221613932,
+      "rate_max": 0.8493255400216274,
+      "command_min": 0.30007448158636596,
+      "command_max": 1.099963961180256,
+      "gimbal_max_deg": 2.9841809671772666,
+      "gimbal_rate_deg_s": 3.668241898071848
+    },
+    {
+      "n": 3,
+      "actual_min": 0.3004434550033251,
+      "actual_max": 1.099996624233817,
+      "rate_max": 0.7149470166323765,
+      "command_min": 0.30000586838110216,
+      "command_max": 1.0999977212338725,
+      "gimbal_max_deg": 2.9675415674521015,
+      "gimbal_rate_deg_s": 2.8729936224990684
+    }
+  ],
+  "startup_shutdown_checks": "PASS",
+  "limitations": "Does not validate actual aerodynamics, mass properties, wind forecast, hardware or 3D control."
+}

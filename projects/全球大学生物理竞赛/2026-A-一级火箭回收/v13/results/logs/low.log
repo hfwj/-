@@ -1,0 +1,22 @@
+
+******************************************************************************
+This program contains Ipopt, a library for large-scale nonlinear optimization.
+ Ipopt is released as open source code under the Eclipse Public License (EPL).
+         For more information visit https://github.com/coin-or/Ipopt
+******************************************************************************
+
+90 n_success(accept_limit)" failed:
+Solver failed. You may use opti.debug.value to investigate the latest values of variables. return_status is 'Maximum_Iterations_Exceeded'
+{'propellant_t': 90, 'status': 'SEARCH_BUDGET_NO_SOLUTION', 'seconds': 48.902567625045776, 'N': 30, 'max_iterations': 90}
+100 n_success(accept_limit)" failed:
+Solver failed. You may use opti.debug.value to investigate the latest values of variables. return_status is 'Maximum_Iterations_Exceeded'
+{'propellant_t': 100, 'status': 'SEARCH_BUDGET_NO_SOLUTION', 'seconds': 48.205437660217285, 'N': 30, 'max_iterations': 90}
+110 n_success(accept_limit)" failed:
+Solver failed. You may use opti.debug.value to investigate the latest values of variables. return_status is 'Maximum_Iterations_Exceeded'
+{'propellant_t': 110, 'status': 'SEARCH_BUDGET_NO_SOLUTION', 'seconds': 47.8823356628418, 'N': 30, 'max_iterations': 90}
+120 n_success(accept_limit)" failed:
+Solver failed. You may use opti.debug.value to investigate the latest values of variables. return_status is 'Maximum_Iterations_Exceeded'
+{'propellant_t': 120, 'status': 'SEARCH_BUDGET_NO_SOLUTION', 'seconds': 48.14097833633423, 'N': 30, 'max_iterations': 90}
+130 n_success(accept_limit)" failed:
+Solver failed. You may use opti.debug.value to investigate the latest values of variables. return_status is 'Maximum_Iterations_Exceeded'
+{'propellant_t': 130, 'status': 'SEARCH_BUDGET_NO_SOLUTION', 'seconds': 48.39844012260437, 'N': 30, 'max_iterations': 90}

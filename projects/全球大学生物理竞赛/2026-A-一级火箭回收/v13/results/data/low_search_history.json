@@ -1,0 +1,37 @@
+[
+  {
+    "propellant_t": 90,
+    "status": "SEARCH_BUDGET_NO_SOLUTION",
+    "seconds": 48.902567625045776,
+    "N": 30,
+    "max_iterations": 90
+  },
+  {
+    "propellant_t": 100,
+    "status": "SEARCH_BUDGET_NO_SOLUTION",
+    "seconds": 48.205437660217285,
+    "N": 30,
+    "max_iterations": 90
+  },
+  {
+    "propellant_t": 110,
+    "status": "SEARCH_BUDGET_NO_SOLUTION",
+    "seconds": 47.8823356628418,
+    "N": 30,
+    "max_iterations": 90
+  },
+  {
+    "propellant_t": 120,
+    "status": "SEARCH_BUDGET_NO_SOLUTION",
+    "seconds": 48.14097833633423,
+    "N": 30,
+    "max_iterations": 90
+  },
+  {
+    "propellant_t": 130,
+    "status": "SEARCH_BUDGET_NO_SOLUTION",
+    "seconds": 48.39844012260437,
+    "N": 30,
+    "max_iterations": 90
+  }
+]

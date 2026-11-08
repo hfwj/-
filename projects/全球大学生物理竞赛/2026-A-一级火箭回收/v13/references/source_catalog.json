@@ -1,0 +1,100 @@
+[
+  {
+    "id": "S01",
+    "title": "U.S. Standard Atmosphere, 1976; NOAA/NASA/USAF; NASA-TM-X-74335",
+    "url": "https://ntrs.nasa.gov/citations/19770009539",
+    "use": "分层大气公式与常数；不提供实际天气",
+    "accessed": "2026-11-08"
+  },
+  {
+    "id": "S02",
+    "title": "Jean-Marc Astorg, CNES Future Launcher Roadmap, La Sapienza, 7 May 2019, p.50",
+    "url": "https://satelliteobservation.net/wp-content/uploads/2020/01/astorg-conference-7-may-2019.pdf",
+    "use": "历史设计表：1000 kN、一级320 s、O/F3.4、30–110%；仅启发虚拟发动机，镜像原讲稿",
+    "accessed": "2026-11-08"
+  },
+  {
+    "id": "S03",
+    "title": "ESA, Prometheus",
+    "url": "https://www.esa.int/Enabling_Support/Space_Transportation/Future_space_transportation/Prometheus",
+    "use": "LOX/CH4与30–110%调节范围；未给本箭发动机试验图谱",
+    "accessed": "2026-11-08"
+  },
+  {
+    "id": "S04",
+    "title": "NASA Glenn, Specific Impulse",
+    "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/",
+    "use": "推力、质量流率、等效排气速度关系",
+    "accessed": "2026-11-08"
+  },
+  {
+    "id": "S05",
+    "title": "NASA Glenn, Drag Coefficient",
+    "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/drag-coefficient/",
+    "use": "阻力定义；Cd随形状、马赫数等变化；不支持本算例Cd固定0.5",
+    "accessed": "2026-11-08"
+  },
+  {
+    "id": "S06",
+    "title": "IERS Conventions (2010), Technical Note 36",
+    "url": "https://iers-conventions.obspm.fr/conventions/content/tn36.pdf",
+    "use": "地球引力参数3.986004418e14 m³/s²",
+    "accessed": "2026-11-08"
+  },
+  {
+    "id": "S07",
+    "title": "NASA Earth Fact Sheet",
+    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
+    "use": "平均地球半径6371 km",
+    "accessed": "2026-11-08"
+  },
+  {
+    "id": "S08",
+    "title": "Gäßler et al., Variable-Mass Dynamics Implementation in Multi-Physics Environment for Reusable Launcher Simulations, EUCASS2022, DOI10.13009/EUCASS2022-6124",
+    "url": "https://www.eucass.eu/doi/EUCASS2022-6124.pdf",
+    "use": "变质量平动/转动、惯量变化及射流阻尼的一般建模依据；本文简化流动与质量分布另列H",
+    "accessed": "2026-11-08"
+  },
+  {
+    "id": "S09",
+    "title": "Copernicus Climate Change Service, Climate reanalysis",
+    "url": "https://climate.copernicus.eu/climate-reanalysis",
+    "use": "实际风场可由ERA5按地点日期获取；本文未使用ERA5数值",
+    "accessed": "2026-11-08"
+  },
+  {
+    "id": "S10",
+    "title": "NASA CCMC, HWM14",
+    "url": "https://ccmc.gsfc.nasa.gov/models/HWM14~2014/",
+    "use": "高空中性风经验模型；本文未运行HWM14",
+    "accessed": "2026-11-08"
+  },
+  {
+    "id": "S11",
+    "title": "Andersson et al., CasADi: a software framework for nonlinear optimization and optimal control, 2019, DOI10.1007/s12532-018-0139-4",
+    "url": "https://web.casadi.org/publications/",
+    "use": "自动微分与非线性最优控制实现",
+    "accessed": "2026-11-08"
+  },
+  {
+    "id": "S12",
+    "title": "Wächter and Biegler, On the implementation of an interior-point filter line-search algorithm for large-scale nonlinear programming, 2006, DOI10.1007/s10107-004-0559-y",
+    "url": "https://doi.org/10.1007/s10107-004-0559-y",
+    "use": "IPOPT局部非线性规划，非全局最优证明",
+    "accessed": "2026-11-08"
+  },
+  {
+    "id": "S13",
+    "title": "SciPy solve_ivp documentation",
+    "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html",
+    "use": "独立DOP853事件积分与容差设置",
+    "accessed": "2026-11-08"
+  },
+  {
+    "id": "S14",
+    "title": "Marwege, Kirchheck, Klevanski and Gülhan, Hypersonic retro propulsion for reusable launch vehicles tested in the H2K wind tunnel, CEAS Space Journal 14(3):473–499, 2022, DOI10.1007/s12567-022-00457-w",
+    "url": "https://elib.dlr.de/188153/",
+    "use": "再入反推气动/热流复杂性背景；未据此生成本箭气动系数",
+    "accessed": "2026-11-08"
+  }
+]

@@ -1,0 +1,18 @@
+
+******************************************************************************
+This program contains Ipopt, a library for large-scale nonlinear optimization.
+ Ipopt is released as open source code under the Eclipse Public License (EPL).
+         For more information visit https://github.com/coin-or/Ipopt
+******************************************************************************
+
+Traceback (most recent call last):
+  File "<stdin>", line 3, in <module>
+  File "/workspace/work/rocket7/solve7.py", line 108, in solve
+    sol=op.solve();out={k:np.array(sol.value(v)) for k,v in variables.items()};out.update(m0=float(sol.value(m0)),dur1=float(sol.value(dur1)),gap=float(sol.value(gap)),dur2=float(sol.value(dur2)),ignition=ignition,N=N)
+        ^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/casadi/casadi.py", line 51396, in solve
+    return _casadi.Opti_solve(self, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Error in Opti::solve [OptiNode] at .../casadi/core/optistack.cpp:217:
+.../casadi/core/optistack_internal.cpp:1338: Assertion "return_success(accept_limit)" failed:
+Solver failed. You may use opti.debug.value to investigate the latest values of variables. return_status is 'Maximum_Iterations_Exceeded'
