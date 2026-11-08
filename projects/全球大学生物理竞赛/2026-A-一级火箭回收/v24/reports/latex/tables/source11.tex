@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+\caption{Simulation one-degree-of-freedom attitude and control-authority estimates.}
+\label{tab:src11}
+\small
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabularx}{\linewidth}{@{}p{.28\linewidth}p{.32\linewidth}X@{}}
+\toprule
+Quantity & Value & Interpretation \\
+\midrule
+Transverse inertia & $8.88\times10^7$ kg m$^2$ & 250 t cylinder surrogate \\
+RCS moment & 0.12 MN m & 4 kN at a 30 m lever \\
+Angular acceleration & $1.35\times10^{-3}$ rad/s$^2$ & $M/I$ \\
+Half-turn duration & 96 s & Bang-bang $180^\circ$ maneuver \\
+Cold-gas use & 605 kg & $I_{sp}=65$ s \\
+Direction slew & $\le0.63^\circ$/s & Simulation reported requirement \\
+Aerodynamic moment & 0.83 MN m at $\alpha=5^\circ$ & $C_{m\alpha}=0.08$/rad \\
+TVC moment & 18.3 MN m at $\delta=5^\circ$ & Reported scale ratio about 22 \\
+\bottomrule
+\end{tabularx}
+\par\smallskip{\footnotesize Separate RCS and moment-scale estimates; not a coupled trajectory version. See \cref{tab:versions}.}
+\end{table}

@@ -1,0 +1,47 @@
+{
+  "rule": "For phase-allocation tables, display totals are recomputed from displayed components; these are arithmetic corrections, not new simulations. Raw extracted inputs retained unchanged.",
+  "corrections": [
+    {
+      "location": "Table 10 / 3D",
+      "components_t": [
+        42.4,
+        69.5
+      ],
+      "old_total_t": 111.8,
+      "new_displayed_sum_t": 111.9
+    },
+    {
+      "location": "Table 12 / jet 0",
+      "components_t": [
+        42.4,
+        70.5
+      ],
+      "old_total_t": 112.8,
+      "new_displayed_sum_t": 112.9
+    },
+    {
+      "location": "Table 12 / jet 0.3",
+      "components_t": [
+        42.4,
+        69.5
+      ],
+      "old_total_t": 111.8,
+      "new_displayed_sum_t": 111.9
+    },
+    {
+      "location": "Table 12 / jet 0.6",
+      "components_t": [
+        42.4,
+        69.6
+      ],
+      "old_total_t": 111.9,
+      "new_displayed_sum_t": 112.0
+    }
+  ],
+  "combined_110t": {
+    "total_t": 106.6,
+    "residual_t": 3.4,
+    "action": "Removed unverifiable 45.2/61.5 split; retained total consistently listed in two result tables."
+  },
+  "separate_parameterized_baseline_111_8_t": "Not changed: different model comparison, no component sum specified."
+}

@@ -1,0 +1,128 @@
+[
+  {
+    "source_table_index": 4,
+    "label": "tab:src4",
+    "caption": "Parameters of the supplied simulation study.",
+    "source_rows": 12,
+    "typeset_rows": 12
+  },
+  {
+    "source_table_index": 3,
+    "label": "tab:src3",
+    "caption": "Along-track wind anchors retained from the source.",
+    "source_rows": 5,
+    "typeset_rows": 5
+  },
+  {
+    "source_table_index": 2,
+    "label": "tab:src2",
+    "caption": "Reported baseline load scan; fuel entries include both oxygen and methane.",
+    "source_rows": 6,
+    "typeset_rows": 6
+  },
+  {
+    "source_table_index": 6,
+    "label": "tab:src6",
+    "caption": "Source stage history for the 150 t baseline case.",
+    "source_rows": 6,
+    "typeset_rows": 6
+  },
+  {
+    "source_table_index": 7,
+    "label": "tab:src7",
+    "caption": "Reported entry-burn characteristics.",
+    "source_rows": 5,
+    "typeset_rows": 5
+  },
+  {
+    "source_table_index": 8,
+    "label": "tab:src8",
+    "caption": "Reported terminal-burn characteristics of the baseline.",
+    "source_rows": 5,
+    "typeset_rows": 5
+  },
+  {
+    "source_table_index": 5,
+    "label": "tab:src5",
+    "caption": "Source baseline perturbation tests. Failed numerical entries are terminal speeds in m/s; parenthesized successful entries are remaining propellant in tonnes.",
+    "source_rows": 4,
+    "typeset_rows": 4
+  },
+  {
+    "source_table_index": 9,
+    "label": "tab:src9",
+    "caption": "Source wind comparison for the 150 t case.",
+    "source_rows": 3,
+    "typeset_rows": 3
+  },
+  {
+    "source_table_index": 10,
+    "label": "tab:src10",
+    "caption": "Source three-dimensional extension at 120 t initial load.",
+    "source_rows": 4,
+    "typeset_rows": 4
+  },
+  {
+    "source_table_index": 11,
+    "label": "tab:src11",
+    "caption": "Source one-degree-of-freedom attitude and control-authority estimates.",
+    "source_rows": 8,
+    "typeset_rows": 8
+  },
+  {
+    "source_table_index": 12,
+    "label": "tab:src12",
+    "caption": "Source jet-interaction sensitivity at 120 t initial load.",
+    "source_rows": 3,
+    "typeset_rows": 3
+  },
+  {
+    "source_table_index": 13,
+    "label": "tab:src13",
+    "caption": "Source summary of separate model extensions.",
+    "source_rows": 4,
+    "typeset_rows": 4
+  },
+  {
+    "source_table_index": 14,
+    "label": "tab:src14",
+    "caption": "Four variables in the reported Powell and grid search.",
+    "source_rows": 4,
+    "typeset_rows": 4
+  },
+  {
+    "source_table_index": 15,
+    "label": "tab:src15",
+    "caption": "Source comparison between baseline and parameterized guidance.",
+    "source_rows": 5,
+    "typeset_rows": 5
+  },
+  {
+    "source_table_index": 16,
+    "label": "tab:src16",
+    "caption": "Source perturbation results for parameterized guidance. Numeric successful entries are consumed propellant in tonnes.",
+    "source_rows": 4,
+    "typeset_rows": 4
+  },
+  {
+    "source_table_index": 17,
+    "label": "tab:src17",
+    "caption": "Source area-law comparison before the final combined model.",
+    "source_rows": 2,
+    "typeset_rows": 2
+  },
+  {
+    "source_table_index": 18,
+    "label": "tab:src18",
+    "caption": "Source ablation of area law, finite engine response, and engine-count staging.",
+    "source_rows": 5,
+    "typeset_rows": 5
+  },
+  {
+    "source_table_index": 19,
+    "label": "tab:src19",
+    "caption": "Source final load scan with area law, finite response, and staged engine selection.",
+    "source_rows": 5,
+    "typeset_rows": 5
+  }
+]

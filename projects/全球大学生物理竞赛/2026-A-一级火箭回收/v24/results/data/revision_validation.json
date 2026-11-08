@@ -1,0 +1,24 @@
+{
+  "baseline": "v23 697ee67",
+  "pages": 28,
+  "team": 856,
+  "version_register_number": 20,
+  "baseline_scan_number": 4,
+  "baseline_scan_pdf_page": 11,
+  "version_register_pdf_page": 19,
+  "code_appendix_pages": [
+    24,
+    25,
+    26,
+    27,
+    28
+  ],
+  "ai_section": 10,
+  "ai_full_history_complete": false,
+  "raw_data_unchanged": true,
+  "reference_code_unchanged": true,
+  "new_dynamics_run": false,
+  "latex_issues": [],
+  "review_response": "reports/剩余问题逐项处理.md",
+  "isolated_source_compile": "PASS"
+}

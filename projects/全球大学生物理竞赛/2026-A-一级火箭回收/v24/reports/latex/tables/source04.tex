@@ -1,0 +1,25 @@
+\begin{table}[htbp]
+\caption{Parameters of the simulation study.}
+\label{tab:src4}
+\small
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabularx}{\linewidth}{@{}p{.26\linewidth}p{.36\linewidth}X@{}}
+\toprule
+Parameter & Value & Basis / status \\
+\midrule
+Dry mass; dimensions & 130 t; 65 m; 7.0 m & Problem data (G) \\
+Separation altitude; speed & 70 km; 1666.667 m/s & Problem data (G) \\
+Initial flight-path angle & $45^\circ$ & Scenario (H) \\
+Engine system & $7\times1$ MN; $I_{sp}=330$ s & Virtual reference (H) \\
+Oxygen/methane ratio & 3.4 & Scenario (H) \\
+Reference area & 38.4845 m$^2$ & Derived from diameter (D) \\
+Mach-dependent drag & 12 anchors; maximum $C_D=1.50$ & Simulation drag model (H) \\
+Atmosphere & USSA 1976 layers; exponential above 86 km & Reference plus extension \\
+Earth & $R_E=6371$ km; $\mu=3.986\times10^{14}$ m$^3$/s$^2$ & Reference constants \\
+Wind profile & Height-dependent; see Table~\ref{tab:src3} & Scenario (H) \\
+Pressure limit & 50 kPa & Screening target (H) \\
+Target touchdown speed & 1.5 m/s; baseline test below 3 m/s & Guidance and acceptance choices (H) \\
+\bottomrule
+\end{tabularx}
+\par\smallskip{\footnotesize Shared problem data and reference assumptions; calculation-series identifiers are listed in \cref{tab:versions}. See \cref{tab:versions}.}
+\end{table}
