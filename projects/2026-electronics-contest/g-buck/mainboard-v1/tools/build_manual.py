@@ -51,7 +51,7 @@ assert sum(len(v['pins']) for v in parts.values())==123
 rows.sort(key=lambda r:(r['功能区'],list(parts).index(r['位号'])))
 def writecsv(path,data):
  with path.open('w',encoding='utf-8-sig',newline='') as f:
-  w=csv.DictWriter(f,fieldnames=list(data[0]));w.writeheader();w.writerows(data)
+  w=csv.DictWriter(f,fieldnames=list(data[0]),lineterminator="\n");w.writeheader();w.writerows(data)
 writecsv(O/'BOM_ByReference.csv',rows)
 grouped=[{'位号':r,'数量':len(r.split()),'型号':m,'料号':c,'规格':s,'封装':p,'库别':t,'备注':n,'目录链接':'https://jlcpcb.com/partdetail/'+c if c else ''} for r,m,c,s,p,t,n in G]
 writecsv(O/'BOM_Grouped.csv',grouped)
