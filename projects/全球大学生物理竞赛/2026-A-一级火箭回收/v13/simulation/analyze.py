@@ -11,7 +11,7 @@ CJK_FONT=font_manager.FontProperties(fname="/usr/share/fonts/opentype/noto/NotoS
 plt.rcParams.update({'font.family':CJK_FONT,'axes.unicode_minus':False,'font.size':10,'savefig.dpi':190})
 def scalar(x):return float(x)
 def writecsv(p,rows):
- with open(p,'w',newline='',encoding='utf-8-sig') as f:w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
+ with open(p,'w',newline='',encoding='utf-8-sig') as f:w=csv.DictWriter(f,fieldnames=list(rows[0]),lineterminator="\n");w.writeheader();w.writerows(rows)
 def savefig(name):
  plt.tight_layout();plt.savefig(F/(name+'.png'));plt.savefig(F/(name+'.pdf'));plt.close()
 def main():

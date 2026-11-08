@@ -22,6 +22,6 @@ for i,t in enumerate(d['t']):
  y=d['state'][i];z=r.quantities(t,y,t<r.ig);u,a,de=r.control(t);vt=z['vt']-z['wind'];vr=z['vr'];V=z['airspeed'];row=dict(t_s=t,thrust_tangential_N=z['T']*np.sin(z['beta']),thrust_radial_N=z['T']*np.cos(z['beta']),drag_tangential_N=-z['D']*vt/V,drag_radial_N=-z['D']*vr/V,gravity_radial_N=-y[4]*MU/(R+z['h'])**2,propellant_flow_kg_s=z['T']/VE,methane_flow_kg_s=z['T']/VE/4.4,lox_flow_kg_s=z['T']/VE*3.4/4.4,thrust_torque_Nm=z['mt'],aero_torque_Nm=z['ma'],jet_inertia_torque_Nm=z['mj'],gravity_gradient_torque_Nm=z['mg'],engine_set_size=len(u))
  for j in range(7):row[f'active_set_engine{j+1}_throttle']=float(u[j]) if j<len(u) else 0
  rows.append(row)
-with open(D/'force_moment_engine_timeseries.csv','w',newline='',encoding='utf-8-sig') as f:wr=csv.DictWriter(f,fieldnames=list(rows[0]));wr.writeheader();wr.writerows(rows)
+with open(D/'force_moment_engine_timeseries.csv','w',newline='',encoding='utf-8-sig') as f:wr=csv.DictWriter(f,fieldnames=list(rows[0]),lineterminator="\n");wr.writeheader();wr.writerows(rows)
 m=json.load(open(D/'metrics.json'));m['low_height_max_tilt_deg']=float(np.max(abs(np.degrees(d['theta'][d['h']<=232.5]))));m['touchdown_thrust_MN']=float(d['T'][-1]/1e6);m['touchdown_thrust_beta_deg']=float(np.degrees(d['beta'][-1]));json.dump(m,open(D/'metrics.json','w'),ensure_ascii=False,indent=2)
 print('Extra outputs completed; low-height max tilt:',m['low_height_max_tilt_deg'])
