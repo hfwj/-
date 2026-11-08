@@ -1,0 +1,48 @@
+{
+  "source": "source14.png",
+  "method": "Colored source pixels mapped to the original axes; no new simulation, no bridging of gaps. Original legend footprint excluded; obscured data are not reconstructed.",
+  "traces": [
+    {
+      "panel": 0,
+      "color": "blue",
+      "pixels": 5613,
+      "interpolation": false
+    },
+    {
+      "panel": 1,
+      "color": "red",
+      "pixels": 4062,
+      "interpolation": false
+    },
+    {
+      "panel": 2,
+      "color": "blue",
+      "pixels": 4536,
+      "interpolation": false
+    },
+    {
+      "panel": 3,
+      "color": "red",
+      "pixels": 1378,
+      "interpolation": false
+    },
+    {
+      "panel": 4,
+      "color": "green",
+      "pixels": 5510,
+      "interpolation": false
+    },
+    {
+      "panel": 5,
+      "color": "red",
+      "pixels": 7327,
+      "interpolation": false
+    },
+    {
+      "panel": 6,
+      "color": "blue",
+      "pixels": 1936,
+      "interpolation": false
+    }
+  ]
+}

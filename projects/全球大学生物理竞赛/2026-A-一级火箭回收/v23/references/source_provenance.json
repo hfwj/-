@@ -1,0 +1,28 @@
+{
+  "document": "回收仿真_七机两段点火_本次原稿.docx",
+  "sha256": "4f466f9c7dc758a4b93049b87bedf62b30938160efd7dd8237f23b3a9c6ac443",
+  "paragraphs": 147,
+  "tables": 20,
+  "media_sha256": {
+    "image1.png": "bb2b371d1252f704f288ac00e597cf0053206055d73ac685a19658a219c7fcce",
+    "image2.png": "96350bdb3ae811c83e4703c454bb52e9210d2bf294b3ca7e2d660083944f3802",
+    "image3.png": "2f51835b8ea78659e971dacf6adc468a460e8591304090d5cb6a4f1b7b2741b6",
+    "image4.png": "139063342a772c350e80f05ef1dbe1446b0ab5d2fce1439635968f9068a66884",
+    "image5.png": "bd224da88e3b39179ed14790e6071cf08aaf1c6efd51e7b6d4088cda17b0bbdf",
+    "image6.png": "eafef576882c883b933b51b1e174e3a2b5e5bc389c7dcab363f10e37273e25b1",
+    "image7.png": "78f375907fdfc26f8d77686a85b55f4a9008c3324535f44f548b5b2ac94cab9a",
+    "image8.png": "0fe91e892168ef28d1675ed011c52b6ce6b903a95fe78026e42b801e5b0dfa67",
+    "image9.png": "4d3cf47f906bcbdde2691fc4bd3ef3e2aea837774d52f484981abaf87cb5f380",
+    "image10.png": "dbbcff7cfd7221b6e405813dc97e822363ec0b8499158a5d17656764fbf9752e",
+    "image11.png": "57de1f27ca898e8a3ffea45d2f2e00b3f0be87b8682f8c0cd5f1170f30410217",
+    "image12.png": "3a3c5572ed75870b42e38927c0641fe1b68b60b0f7a69c3a544e62acb68e1649",
+    "image13.png": "d35fa4be562d1067d2d847f08b0ccc0197aa7186910da0898a6353219fe64e45",
+    "image14.png": "d08ba9f299d6a9a76da8d504dcbd95db5a53503f929ade52e8d8e8f337d6c477",
+    "image15.png": "f99fc009435c31ba7a9a35ca359e1e2de206a5188cfc3a3b0649ed810160325f",
+    "image16.png": "fbb7149cae00e4c40e7fda7e6e2a18c2ebf53c1b73dda4b12b370c69b7971e53",
+    "image17.png": "e365723520344f22ffdf2f1c86c8a2922fe4aaac978c9535e89c66a346524b0c"
+  },
+  "content_source": "Only the document uploaded in this turn",
+  "simulation_rerun": false,
+  "prior_manuscript_or_simulation_data_used": false
+}

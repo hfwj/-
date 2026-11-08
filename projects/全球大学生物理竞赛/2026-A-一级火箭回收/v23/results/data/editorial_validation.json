@@ -1,0 +1,23 @@
+{
+  "baseline": "v22 108a38b",
+  "pages": 27,
+  "team": 856,
+  "ai_section": 10,
+  "ai_full_history_complete": false,
+  "code_appendix_pages": [
+    23,
+    24,
+    25,
+    26,
+    27
+  ],
+  "listed_instructions_removed": true,
+  "phase_sum_arithmetic": "PASS",
+  "unrelated_tables_unchanged": true,
+  "combined_total_t": 106.6,
+  "unsupported_combined_split_removed": true,
+  "physical_simulation_rerun": false,
+  "latex_issues": [],
+  "isolated_source_compile": "PASS",
+  "regenerated_phase_total_checks": "PASS"
+}

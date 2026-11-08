@@ -1,0 +1,14 @@
+# 代码与复现边界
+
+`reference/`为本轮新写的五页说明性参考代码；与论文附录一一对应。需要numpy与scipy。运行基础检查：
+
+```
+cd simulation
+python check_reference.py
+```
+
+检查光滑问题RK4阶数、质量流率、阻力方向、干质量与耗尽分步、触地插值、初始滑行/再入点火及玩具目标的有界搜索；不复现论文任务表格。
+
+完整的环境、气动节点需用户提供；Environment对超出表范围直接报错，不会悄悄外推。`TwoBurnPolicy`仅示例，省略末次执行响应/节流下限/7→3→1分级和另一经验触发；search中的归一化罚函数也不是原数值结果的目标实现。不要直接用这些文件声称重现论文结论。
+
+根目录其他脚本用于源数据提取、表格和图表排版，保留供追溯。论文编译：`cd ../reports/latex && latexmk -xelatex -outdir=build main.tex`。

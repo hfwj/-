@@ -1,0 +1,737 @@
+[
+  {
+    "index": 0,
+    "style": "Normal",
+    "text": "UPC 2026 · PROBLEM A · 回收仿真"
+  },
+  {
+    "index": 1,
+    "style": "Normal",
+    "text": "七机两段点火的"
+  },
+  {
+    "index": 2,
+    "style": "Normal",
+    "text": "回收弹道仿真"
+  },
+  {
+    "index": 3,
+    "style": "Normal",
+    "text": "130 t 干质量 · 90–200 t 装载扫描 · 含风场"
+  },
+  {
+    "index": 4,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 5,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 6,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 7,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 8,
+    "style": "Heading 1",
+    "text": "0. 结论摘要"
+  },
+  {
+    "index": 9,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 10,
+    "style": "Normal",
+    "text": "三个要点：再入点火几乎恒定在 40–44 t（它只负责把速度从 1600 压到 1300 左右，与质量关系不大）；着陆点火从 51 t 涨到 121 t（质量越大，需要的制动距离越长、点火越早、重力损失越大）；90–100 t 失败在“没有燃料完成着陆段”，不是姿态或结构。"
+  },
+  {
+    "index": 11,
+    "style": "Heading 1",
+    "text": "1. 仿真方法"
+  },
+  {
+    "index": 12,
+    "style": "Heading 2",
+    "text": "1.1 坐标系与状态量"
+  },
+  {
+    "index": 13,
+    "style": "Normal",
+    "text": "二维竖直平面（分离速度矢量与地心确定），状态量 (s,h,u,w,m)：射程、几何高度、水平/垂直速度、质量。r=RE+h。"
+  },
+  {
+    "index": 14,
+    "style": "Heading 2",
+    "text": "1.2 运动方程"
+  },
+  {
+    "index": 15,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 16,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 17,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 18,
+    "style": "Normal",
+    "text": "其中 β 是推力方向（相对当地竖直），χ 是阻力方向。阻力沿相对气流方向，推力方向由制导给定。"
+  },
+  {
+    "index": 19,
+    "style": "Heading 2",
+    "text": "1.3 大气、气动与风"
+  },
+  {
+    "index": 20,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 21,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 22,
+    "style": "Normal",
+    "text": "风廓线（H 类假设，中纬度典型）："
+  },
+  {
+    "index": 23,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 24,
+    "style": "Heading 2",
+    "text": "1.4 两段点火制导"
+  },
+  {
+    "index": 25,
+    "style": "Normal",
+    "text": "再入点火：下降到 75 km 时，7 台全开、沿相对速度反方向点火，直到 55 km 关机。"
+  },
+  {
+    "index": 26,
+    "style": "Normal",
+    "text": "着陆点火：满足下列任一条件即点火，之后推力按下式调节（限幅 [0,7 MN]）："
+  },
+  {
+    "index": 27,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 28,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 29,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 30,
+    "style": "Normal",
+    "text": "其中 Vg=√(u2+w2) 是对地速度（不是空速——着陆要对甲板静止），Vtd=1.5 m/s 是目标触地速度，aeff=Tmax/m-g，qlim=50 kPa。若 q>0.95qlim 则强制满推力，保证动压不越界。"
+  },
+  {
+    "index": 31,
+    "style": "Heading 2",
+    "text": "1.5 数值方法"
+  },
+  {
+    "index": 32,
+    "style": "Normal",
+    "text": "定步长四阶 Runge–Kutta，Δ t=0.02 s，落地事件线性插值。单工况约 2 万步，12 个工况全扫描在 1 分钟内完成。"
+  },
+  {
+    "index": 33,
+    "style": "Heading 1",
+    "text": "2. 参数与出处"
+  },
+  {
+    "index": 34,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 35,
+    "style": "Heading 1",
+    "text": "3. 计算结果"
+  },
+  {
+    "index": 36,
+    "style": "Heading 2",
+    "text": "3.1 弹道"
+  },
+  {
+    "index": 37,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 38,
+    "style": "Normal",
+    "text": "图 1　（a）全弹道：所有装载的上升段与下滑段几乎重合（无动力段与质量无关），差异只出现在着陆点火（圆点）之后；（b）60 km 以下放大：装载越大，点火越早（27.7 km → 54.2 km），末段越“平”。"
+  },
+  {
+    "index": 39,
+    "style": "Heading 2",
+    "text": "3.2 速度—时间"
+  },
+  {
+    "index": 40,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 41,
+    "style": "Normal",
+    "text": "图 2　速度历程。0–245 s 三段几乎重合（滑行到 75 km），245–265 s 为再入点火（−300~−350 m/s），随后进入末端制动。90 t 与 100 t 在 300 s 后掉头向下坠（燃料耗尽）。"
+  },
+  {
+    "index": 42,
+    "style": "Heading 2",
+    "text": "3.3 航迹角—时间"
+  },
+  {
+    "index": 43,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 44,
+    "style": "Normal",
+    "text": "图 3　航迹角从 +45° 单调转到 −90°，在 245 s 前几乎不随装载变化；再入点火使转角速率略变，末端制动把航迹角快速拉向 −90°（垂直下落）。"
+  },
+  {
+    "index": 45,
+    "style": "Heading 2",
+    "text": "3.4 高度—时间"
+  },
+  {
+    "index": 46,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 47,
+    "style": "Normal",
+    "text": "图 4　高度历程。远地点约 143 km（127 s），再入点火在 245 s / 75 km；末端制动段的高度曲线近似直线（匀速下降），这是推力节流跟踪“恒定减速”的结果。"
+  },
+  {
+    "index": 48,
+    "style": "Heading 2",
+    "text": "3.5 燃料分配"
+  },
+  {
+    "index": 49,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 50,
+    "style": "Normal",
+    "text": "图 5　两次点火的燃料分配。虚线是可用装载上限，两者相交处即最小可行装载（约 105 t）；再入点火稳定在 40–44 t，着陆点火随总质量线性增长。"
+  },
+  {
+    "index": 51,
+    "style": "Heading 2",
+    "text": "3.6 最佳装载：最小值与鲁棒值（启发式制导）"
+  },
+  {
+    "index": 52,
+    "style": "Normal",
+    "text": "细扫 100–115 t（步长 1 t）得到：103 t 触地 5.8 m/s，104 t 成功（2.48 m/s，残余 0.2 t）。所以理论下限是 104 t，但它是“零余量”的——任何参数偏差都会失败。"
+  },
+  {
+    "index": 53,
+    "style": "Normal",
+    "text": "对 104/110/115/120 t 施加扰动集，看是否仍能软着陆（<3 m/s）："
+  },
+  {
+    "index": 54,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 55,
+    "style": "Normal",
+    "text": "结论（启发式制导下；第 8 节的优化版把这两个数降到 96 t 与 110 t）："
+  },
+  {
+    "index": 56,
+    "style": "Normal",
+    "text": "•  104 t 是数学下限，只对“参数完全准确”成立；"
+  },
+  {
+    "index": 57,
+    "style": "Normal",
+    "text": "•  115 t 能扛 CD ±15%，但 CD −20% 仍会失败（8.2 m/s）；"
+  },
+  {
+    "index": 58,
+    "style": "Normal",
+    "text": "•  120 t 是能扛住整个扰动集的最小值，最坏情形（组合扰动）残余 1.6 t；"
+  },
+  {
+    "index": 59,
+    "style": "Normal",
+    "text": "•  继续加到 130 t 只多买 8 t 余量，却要多消耗 1 t、多带 10 t 发射质量——不划算。"
+  },
+  {
+    "index": 60,
+    "style": "Normal",
+    "text": "另外一个反直觉的事实：装得越多，烧得越多（110 t 烧 107.2，200 t 烧 160.7）。因为质量越大，制动距离越长、点火越早、重力损失越大。所以“多带燃料”从来不是免费的，最优一定在可行域的低端，而不是中间。"
+  },
+  {
+    "index": 61,
+    "style": "Heading 1",
+    "text": "4. 阶段说明（以 150 t 装载为例）"
+  },
+  {
+    "index": 62,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 63,
+    "style": "Normal",
+    "text": "注意 ④ 段只有 7 s——因为 aeff=T/m-g=19.7 m/s²，从 1289 m/s 停住需要 42 km，而当时只剩 47 km，必须立刻点火。这不是“着陆点火”，而是一段从平流层开始的持续制动。"
+  },
+  {
+    "index": 64,
+    "style": "Heading 1",
+    "text": "5. 两次点火：燃料、推力与方向"
+  },
+  {
+    "index": 65,
+    "style": "Heading 2",
+    "text": "5.1 再入点火"
+  },
+  {
+    "index": 66,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 67,
+    "style": "Heading 2",
+    "text": "5.2 末端制动（着陆点火）"
+  },
+  {
+    "index": 68,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 69,
+    "style": "Normal",
+    "text": "推力方向的物理解释：再入时速度朝下前方，反推就朝上后方；随着航迹角转向垂直，推力也转向竖直。“姿态”在这套制导里就是推力的反方向——因为假设翻转瞬时完成，机身始终对准推力轴。"
+  },
+  {
+    "index": 70,
+    "style": "Heading 1",
+    "text": "6. 风的影响"
+  },
+  {
+    "index": 71,
+    "style": "Normal",
+    "text": "对 150 t 装载做三组对照："
+  },
+  {
+    "index": 72,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 73,
+    "style": "Normal",
+    "text": "结论：风对燃料的影响 <0.5%，但对着陆是决定性的——如果不做对地速度修正，8 m/s 的海风会让箭体以 8.5 m/s 的横向速度砸上甲板（本仿真第一版就是这样失败的）。风把落点沿下风向推 0.5 km 量级，必须靠制导吃掉。"
+  },
+  {
+    "index": 74,
+    "style": "Heading 1",
+    "text": "7. 改进版：三维、姿态与喷流"
+  },
+  {
+    "index": 75,
+    "style": "Normal",
+    "text": "针对上一版的三条局限（无姿态动力学、CD 未计喷流、二维无横风），重建了一个三维仿真器 tools/booster_sim3d.py，并单独做了姿态分析 tools/attitude_analysis.py。"
+  },
+  {
+    "index": 76,
+    "style": "Heading 2",
+    "text": "7.1 三维与横风"
+  },
+  {
+    "index": 77,
+    "style": "Normal",
+    "text": "状态扩为 (x,y,z) 三轴，横风取 8 m/s（与海风同量级），全部高度层恒定。120 t 装载的结果："
+  },
+  {
+    "index": 78,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 79,
+    "style": "Normal",
+    "text": "漂移只有 0.35 km，比“8 m/s × 360 s ≈ 3 km”的直觉小一个量级。原因是横向气动加速度只有 ay ≈ (D/m)(wy/V) ≈ 0.5 m/s² 量级，且只在稠密大气段作用几十秒；末段制导又把横向速度归零。结论：横风对燃料和落点的影响都在 1% 量级，但如果不做横向修正，触地横向速度会有 8 m/s——那不是漂移问题，是砸的问题。"
+  },
+  {
+    "index": 80,
+    "style": "Heading 2",
+    "text": "7.2 姿态动力学"
+  },
+  {
+    "index": 81,
+    "style": "Normal",
+    "text": "不再假设“瞬时翻转”，改为 1 自由度刚体 + RCS 力矩："
+  },
+  {
+    "index": 82,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 83,
+    "style": "Normal",
+    "text": "图 6　（a）RCS 翻转：180° 用 96 s，峰值角速率 3.7°/s；（b）制导要求的推力方向变化率最大 0.63°/s，远低于 5°/s 的工程限值；（c）气动力矩（迎角 5°）峰值 0.83 MN·m，TVC 可用 18.3 MN·m，栅格翼 22.8 MN·m。"
+  },
+  {
+    "index": 84,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 85,
+    "style": "Normal",
+    "text": "结论：姿态不是瓶颈。翻转可以慢（96 s），不必动用主发动机；真正需要主发动机的是弹道，不是姿态。代价是 0.6 t 冷气，相当于总推进剂的 0.5%。"
+  },
+  {
+    "index": 86,
+    "style": "Heading 2",
+    "text": "7.3 喷流干扰"
+  },
+  {
+    "index": 87,
+    "style": "Normal",
+    "text": "再入点火期间，喷流会改变底部流场，CD 不再是钝头圆柱的值。用推力系数 CT=T/(qA) 做参数化："
+  },
+  {
+    "index": 88,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 89,
+    "style": "Normal",
+    "text": "取 kjet=0/0.3/0.6 三档（0 为无喷流，0.6 为强干扰上限），120 t 装载："
+  },
+  {
+    "index": 90,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 91,
+    "style": "Normal",
+    "text": "喷流对燃料的影响约 1 t（低于 1%）——因为点火段气动力只有推力的百分之几。但它对热流与底部载荷的影响远大于此（本仿真未算），这才是喷流建模的真正理由。"
+  },
+  {
+    "index": 92,
+    "style": "Heading 2",
+    "text": "7.4 改进后的结论"
+  },
+  {
+    "index": 93,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 94,
+    "style": "Normal",
+    "text": "三条改进都没有改变“最佳装载 120 t”的结论，只是把它的证据链补完整了：原来“姿态理想、CD 无喷流、二维无横风”是三个未验证的假设，现在它们各自有了量级——姿态余量 22 倍、喷流影响 1 t、横风影响 0.35 km 与 8 m/s 的横向速度。"
+  },
+  {
+    "index": 95,
+    "style": "Heading 1",
+    "text": "8. 最小燃料：直接优化"
+  },
+  {
+    "index": 96,
+    "style": "Heading 2",
+    "text": "8.1 为什么不是 CasADi/IPOPT"
+  },
+  {
+    "index": 97,
+    "style": "Normal",
+    "text": "原计划用 CasADi + IPOPT 做直接法最优控制，但本机没有这两个包，pip 也连不上外网。退而求其次，用 scipy 的无导数优化（Powell）+ 网格细扫，同样是直接打靶法，只是把内点法换成了 Powell。对相位切换的仿真来说，无导数方法反而更稳。"
+  },
+  {
+    "index": 98,
+    "style": "Heading 2",
+    "text": "8.2 优化问题"
+  },
+  {
+    "index": 99,
+    "style": "Normal",
+    "text": "决策变量取 4 个（控制律的参数化）："
+  },
+  {
+    "index": 100,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 101,
+    "style": "Normal",
+    "text": "目标函数：燃料 + 违约罚项"
+  },
+  {
+    "index": 102,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 103,
+    "style": "Normal",
+    "text": "约束：触地速度 <2.5 m/s、qmax≤50 kPa、燃料 ≤ 装载、燃料耗尽即失败。"
+  },
+  {
+    "index": 104,
+    "style": "Heading 2",
+    "text": "8.3 结果：最优结构与启发式的差别"
+  },
+  {
+    "index": 105,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 106,
+    "style": "Normal",
+    "text": "最优结构是“晚点火、短点火”：再入点火从 75 km 下移到 55 km，燃烧时间缩短一半，燃料从 42 t 降到 27 t。原因很直接——在 75–55 km 段动压只有几百帕，阻力帮不上忙，发动机却要一直对抗重力；等到 55 km 再点，阻力已经开始工作，同样的减速效果只需更少的推进剂。"
+  },
+  {
+    "index": 107,
+    "style": "Heading 2",
+    "text": "8.4 优化后的装载建议"
+  },
+  {
+    "index": 108,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 109,
+    "style": "Normal",
+    "text": "推荐装载从 120 t 下调到 110 t：优化后的制导在 110 t 时能扛住整套扰动（最坏残余 1.2 t），比原来的 120 t 少带 10 t，直接省下 10 t 的发射质量。"
+  },
+  {
+    "index": 110,
+    "style": "Heading 1",
+    "text": "9. v4：迎角面积律与执行机构滞后"
+  },
+  {
+    "index": 111,
+    "style": "Heading 2",
+    "text": "9.1 迎角耦合的有效面积（已实现）"
+  },
+  {
+    "index": 112,
+    "style": "Normal",
+    "text": "参照那份 v13 报告的做法，把阻力面积改成随迎角变化："
+  },
+  {
+    "index": 113,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 114,
+    "style": "Normal",
+    "text": "发动机朝前飞行时 α≈180°，Aeff≈ A（底面积）；姿态一旦偏转，面积迅速放大到 455 m²。实现时给机身加了一阶姿态滞后（τ=1 s），否则制导的“理想对准”会让面积律永远不起作用。"
+  },
+  {
+    "index": 115,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 116,
+    "style": "Normal",
+    "text": "面积律让燃料略降：姿态滞后期间有效面积变大、阻力变大，等于白捡了一点减速。幅度约 1%，但方向是“更省”，而且让模型在姿态偏差时不会严重低估阻力。"
+  },
+  {
+    "index": 117,
+    "style": "Heading 2",
+    "text": "9.2 双门限"
+  },
+  {
+    "index": 118,
+    "style": "Normal",
+    "text": "设计时动压触发用 47 kPa，验收看 50 kPa。v4 的峰值动压落在 44.7–45.6 kPa，距 50 kPa 还有约 5 kPa 余量——这 5 kPa 就是留给 CD 与风的不确定度的。"
+  },
+  {
+    "index": 119,
+    "style": "Heading 2",
+    "text": "9.3 执行机构滞后：问题出在油门下限，不在延迟"
+  },
+  {
+    "index": 120,
+    "style": "Normal",
+    "text": "给发动机加 0.5 s 延迟 + 0.1 s 一阶 + 1 s⁻¹ 速率限幅后，第一版 v4 失败了：110 t 与 120 t 都在燃料耗尽后以 160–180 m/s 触地。"
+  },
+  {
+    "index": 121,
+    "style": "Normal",
+    "text": "打点诊断（每 5 s 输出一次状态）后找到真凶：不是延迟，是油门下限。末端制导要求 10–18% 的油门，而 7 台机的最低稳定油门是 30%——2.1 MN 作用在 150 t 上，T/W=1.45，悬停不了。箭体被过度减速、在 2.6 km 处速度掉到 28 m/s，随后只能重新下落，最后燃料烧光。"
+  },
+  {
+    "index": 122,
+    "style": "Normal",
+    "text": "修复办法是分级关机：7 台（再入）→ 3 台（中段）→ 1 台（末段），每级内部仍在 30–110% 油门范围内调节。单机 0.3 MN 的下限，比七机同时 30% 细得多。这与那份 v13 报告“7 台再入、3 台着陆”的做法一致——不是抄它的数字，而是同一个物理约束逼出来的同一个解。"
+  },
+  {
+    "index": 123,
+    "style": "Normal",
+    "text": "修复后（110 t 装载）：触地 2.02 m/s，燃料 45.2 + 61.5 = 106.6 t。"
+  },
+  {
+    "index": 124,
+    "style": "Heading 2",
+    "text": "9.4 v4 汇总"
+  },
+  {
+    "index": 125,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 126,
+    "style": "Normal",
+    "text": "净效果有意思：面积律省 1.4 t，启停瞬态与分级关机又省 0.6 t——分级关机让末段用单机细调，比七机微弱节流更省。所以 v4 反而比理想化的 v3 更省。"
+  },
+  {
+    "index": 127,
+    "style": "Heading 2",
+    "text": "9.5 装载扫描（v4 完整模型）"
+  },
+  {
+    "index": 128,
+    "style": "Normal",
+    "text": ""
+  },
+  {
+    "index": 129,
+    "style": "Normal",
+    "text": "计入面积律、执行滞后与分级关机后，最小装载 102 t，推荐装载仍是 110–112 t（扰动余量约 8 t）。"
+  },
+  {
+    "index": 130,
+    "style": "Heading 1",
+    "text": "10. 局限（改进后仍存在的）"
+  },
+  {
+    "index": 131,
+    "style": "Normal",
+    "text": "1. 制导仍是启发式。再入关机高度（55 km）、动压限幅点火、末端节流律都是人为设定；真正的最小燃料要用 CasADi/IPOPT 求。"
+  },
+  {
+    "index": 132,
+    "style": "Normal",
+    "text": "2. 发动机模型理想化：推力恒定、比冲恒定、无节流下限、无点火延迟、无单机失效。"
+  },
+  {
+    "index": 133,
+    "style": "Normal",
+    "text": "3. 热流未计算。喷流对底部热环境的影响可能远大于对弹道的影响，需要 Sutton–Graves 加喷流遮蔽模型。"
+  },
+  {
+    "index": 134,
+    "style": "Normal",
+    "text": "4. 姿态是后验分析，没有闭环耦合进弹道（姿态跟不上时不会反过来改变轨迹）。"
+  },
+  {
+    "index": 135,
+    "style": "Normal",
+    "text": "5. 风廓线是假设（海风 8、急流 35），未用实测气象。"
+  },
+  {
+    "index": 136,
+    "style": "Heading 1",
+    "text": "11. 参考文献"
+  },
+  {
+    "index": 137,
+    "style": "Normal",
+    "text": "[1] University Physics Competition. *2026 Problems*, Problem A."
+  },
+  {
+    "index": 138,
+    "style": "Normal",
+    "text": "[2] NOAA/NASA/USAF. *U.S. Standard Atmosphere, 1976*. NASA-TM-X-74335, 1976."
+  },
+  {
+    "index": 139,
+    "style": "Normal",
+    "text": "[3] NASA NSSDC. *Earth Fact Sheet*."
+  },
+  {
+    "index": 140,
+    "style": "Normal",
+    "text": "[4] IERS. *IERS Conventions (2010)*, TN 36."
+  },
+  {
+    "index": 141,
+    "style": "Normal",
+    "text": "[5] A. Marwege et al. Hypersonic retro propulsion for reusable launch vehicles tested in the H2K wind tunnel. *CEAS Space J.* 14:473–499, 2022. DOI 10.1007/s12567-022-00457-w."
+  },
+  {
+    "index": 142,
+    "style": "Normal",
+    "text": "[6] A. M. Korzun, R. D. Braun. Conceptual modeling of supersonic retropropulsion flow interactions. *J. Spacecraft and Rockets* 50:1121–1133, 2013. DOI 10.2514/1.A32464."
+  },
+  {
+    "index": 143,
+    "style": "Normal",
+    "text": "[7] J. Wilken, S. Stappert. Comparative analysis of European vertical landing reusable first stage concepts. *CEAS Space J.* 17:113–130, 2025. DOI 10.1007/s12567-024-00549-9."
+  },
+  {
+    "index": 144,
+    "style": "Normal",
+    "text": "[8] P. Simplício, A. Marcos, S. Bennani. Guidance of reusable launchers: improving descent and landing performance. *J. Guidance, Control, and Dynamics* 42:2206–2219, 2019. DOI 10.2514/1.G004155."
+  },
+  {
+    "index": 145,
+    "style": "Normal",
+    "text": "[9] A. Botelho et al. Design of the landing guidance for the retro-propulsive vertical landing of a reusable rocket stage. *CEAS Space J.* 14:551–564, 2022. DOI 10.1007/s12567-022-00423-6."
+  },
+  {
+    "index": 146,
+    "style": "Normal",
+    "text": "[10] P. Theerthamalai, M. Nagarathinam. Aerodynamic analysis of grid-fin configurations at supersonic speeds. *J. Spacecraft and Rockets* 43:750–756, 2006. DOI 10.2514/1.16741."
+  }
+]
