@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "components": 44,
+  "pins": 135,
+  "no_connect_pins": 5,
+  "wire_segments": 155,
+  "embedded_symbols": 44,
+  "index_sheet_resolved": true,
+  "comparison": "d38634b R2 standard-format expected pin map",
+  "errors": [],
+  "native_editor_erc": "NOT RUN",
+  "footprints": "NOT ASSIGNED",
+  "hardware": "NOT TESTED"
+}

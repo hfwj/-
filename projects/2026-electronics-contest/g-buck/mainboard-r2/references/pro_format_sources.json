@@ -1,0 +1,17 @@
+{
+  "checked": "2026-11-08",
+  "format": {
+    "repository": "https://github.com/easyeda/easyeda-pro-eprj3-format",
+    "commit": "211ebee8cb269a7c7b05950e4f9f1d443b293859"
+  },
+  "schema": {
+    "repository": "https://github.com/easyeda/easyeda-format-skill",
+    "commit": "4fcab1747d47b2ae01d7f93a485859970c5cf933"
+  },
+  "viewer": {
+    "repository": "https://github.com/easyeda/easyeda-viewer",
+    "commit": "f5f55c7fc08437f92687a71f95dd5856fb72769d",
+    "version": "0.7.1"
+  },
+  "native_editor_validation": false
+}

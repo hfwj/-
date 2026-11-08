@@ -8,6 +8,8 @@
 
 ## 项目目录
 
+2026-11-08：[G题主板R2专业版eprj3完整工程](projects/2026-electronics-contest/g-buck/mainboard-r2/downloads/GBUCK_Mainboard_R2_EPRJ3.zip) · [说明](projects/2026-electronics-contest/g-buck/mainboard-r2/reports/eprj3交付说明.md)。格式转换保留44件/135脚，官方Schema及查看器显示通过；BOM/硬件/固件/模型不变，原生编辑保存/ERC尚未验证，封装未绑定。
+
 2026-11-08：[最新G题主板R2嘉立创原理图](projects/2026-electronics-contest/g-buck/mainboard-r2/README.md) · [JSON/PDF/BOM整包](projects/2026-electronics-contest/g-buck/mainboard-r2/downloads/GBUCK_Mainboard_R2_EasyEDA_Std.zip)。44件/135脚静态通过；同步四只板凳柱和0603基础库选型，保留J3脚序；未绑定封装，未做原生ERC/PCB或实测。
 
 2026-11-08：[主板BOM R2：板凳式接线柱、SMT基础库优先](projects/2026-electronics-contest/g-buck/mainboard-v1/reports/bom-r2-bench-posts/README.md) · [Excel](projects/2026-electronics-contest/g-buck/mainboard-v1/reports/bom-r2-bench-posts/Mainboard_BOM_R2.xlsx)。44件，17件官网已核实基础库；4只接线柱型号/封装待定。接口需重画，R6/R9/R12改0603；主电路标称值不变，模型/固件不改。

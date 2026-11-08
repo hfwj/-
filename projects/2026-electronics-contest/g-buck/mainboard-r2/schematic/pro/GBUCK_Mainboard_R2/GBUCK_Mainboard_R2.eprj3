@@ -1,0 +1,62 @@
+{
+  "name": "GBUCK_Mainboard_R2",
+  "owner_uuid": "",
+  "creator_uuid": "",
+  "modifier_uuid": "",
+  "created_at": "2026-11-08 12:00:00",
+  "updated_at": "2026-11-08 12:00:00",
+  "content": "G题主功率+CC主板R2；封装未绑定；接线柱型号和尺寸待定",
+  "archive": false,
+  "cbb_project": 0,
+  "thumb": "",
+  "ticket": 1,
+  "g_ticket": 1,
+  "boards": [],
+  "block_symbol_attrs_groups": {},
+  "default_sheet": "0f2ef1dfcb08d7e5",
+  "branch_uuid": "",
+  "pcb_count": 0,
+  "format": "folder",
+  "profile": {
+    "boards": {
+      "5580dab714d6109f": {
+        "uuid": "5580dab714d6109f",
+        "title": "Mainboard_R2",
+        "zIndex": 1
+      }
+    },
+    "schematics": {
+      "4f9ffaf2b96116f1": {
+        "uuid": "4f9ffaf2b96116f1",
+        "name": "Mainboard",
+        "board": "5580dab714d6109f",
+        "source": "",
+        "version": "1794115551483",
+        "updateTime": 1794115551483
+      }
+    },
+    "sheets": {
+      "0f2ef1dfcb08d7e5": {
+        "uuid": "0f2ef1dfcb08d7e5",
+        "title": "Mainboard_6_Blocks",
+        "schematic_uuid": "4f9ffaf2b96116f1",
+        "zIndex": 1,
+        "source": "",
+        "version": "1794115551483",
+        "updateTime": 1794115551483
+      }
+    },
+    "pcbs": {},
+    "panels": {},
+    "blockSymbols": {},
+    "owner": {
+      "uuid": ""
+    },
+    "simSchematics": {},
+    "simulations": {}
+  },
+  "config": {
+    "defaultSheet": "0f2ef1dfcb08d7e5",
+    "settings": {}
+  }
+}

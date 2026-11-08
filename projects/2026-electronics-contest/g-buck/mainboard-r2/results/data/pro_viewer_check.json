@@ -1,0 +1,20 @@
+{
+  "project": "GBUCK_Mainboard_R2",
+  "format": "eprj3",
+  "openableDocuments": 1,
+  "results": [
+    {
+      "title": "Mainboard_6_Blocks",
+      "docType": "SCH_PAGE",
+      "objects": 279,
+      "layers": 0,
+      "report": {
+        "badLines": [],
+        "unknownTypes": [],
+        "placeholders": 0
+      },
+      "diagnostics": [],
+      "components": 44
+    }
+  ]
+}

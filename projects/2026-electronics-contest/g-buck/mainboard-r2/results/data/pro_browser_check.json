@@ -1,0 +1,21 @@
+{
+  "errors": [],
+  "context": {
+    "projectId": "GBUCK_R2",
+    "revision": "R2",
+    "documents": [
+      {
+        "id": "schematic:0f2ef1dfcb08d7e5",
+        "nodeId": "sheet2",
+        "group": "schematic",
+        "title": "Mainboard_6_Blocks"
+      }
+    ],
+    "currentDocument": {
+      "id": "schematic:0f2ef1dfcb08d7e5",
+      "nodeId": "sheet2",
+      "group": "schematic",
+      "title": "Mainboard_6_Blocks"
+    }
+  }
+}
