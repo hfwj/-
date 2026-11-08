@@ -1,0 +1,17 @@
+{
+  "baseline": "v19 340a433",
+  "pages": 21,
+  "photo_inserted": true,
+  "photo_pdf_page": 3,
+  "photo_printed_page": 1,
+  "photo_pixels": [
+    1920,
+    1280
+  ],
+  "photo_unchanged": true,
+  "latex_compile": "PASS",
+  "overfull_boxes": false,
+  "undefined_references": false,
+  "new_simulation_run": false,
+  "isolated_source_package_compile": "PASS"
+}

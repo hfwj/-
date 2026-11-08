@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\caption{Along-track wind profile anchors.}
+\label{tab:src3}
+\small
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabularx}{\linewidth}{@{}lXX@{}}
+\toprule
+Altitude & Wind (m/s) & Interpretation \\
+\midrule
+0--100 m & 8 & Sea wind \\
+2 km & 15 & Boundary layer \\
+11 km & 35 & Jet-level anchor \\
+20 km & 20 & Lower stratosphere \\
+Above 20 km & $20e^{-(h_{\rm km}-20)/15}$ & Exponential decay \\
+\bottomrule
+\end{tabularx}
+\end{table}
