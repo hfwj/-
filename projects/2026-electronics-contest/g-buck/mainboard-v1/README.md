@@ -13,6 +13,12 @@
 | 05 DAC电压/电流设定与滤波 | [PNG](schematic/previews/05_Block.png) |
 | 06 CC恒流补偿与设定缓冲 | [PNG](schematic/previews/06_Block.png) |
 
+## 最新BOM R2：板凳式焊接接线柱
+
+[Excel BOM](reports/bom-r2-bench-posts/Mainboard_BOM_R2.xlsx) · [PDF说明](reports/bom-r2-bench-posts/Mainboard_BOM_R2.pdf) · [Word说明](reports/bom-r2-bench-posts/Mainboard_BOM_R2.docx) · [在线清单及影响](reports/bom-r2-bench-posts/README.md) · [完整下载](downloads/GBUCK_Mainboard_BOM_R2.zip)
+
+2026-11-08：J1/J2改四只单极四脚板凳式接线柱，44件；端子型号、电流额定及四脚封装未核实，待定不可直接下单。R6/R9/R12由0805 C17407改0603基础库C25803；已核实基础库17件。其它电气标称值和主电路网络不改；旧JSON未更新接口符号，不能直接与R2 BOM配套制板。模型/固件无改动。
+
 ## 手动画图资料（SMT基础库优先）
 
 [Word指南](reports/manual-drawing-2026-11-08/Mainboard_Manual.docx) · [PDF指南](reports/manual-drawing-2026-11-08/Mainboard_Manual.pdf) · [BOM Excel](reports/manual-drawing-2026-11-08/Mainboard_BOM.xlsx) · [全部打包](downloads/GBUCK_Manual_BOM_BasicFirst.zip) · [在线阅读](reports/manual-drawing-2026-11-08/README.md)

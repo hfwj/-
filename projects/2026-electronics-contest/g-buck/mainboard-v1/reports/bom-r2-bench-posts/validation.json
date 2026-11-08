@@ -1,0 +1,12 @@
+{
+  "references": 44,
+  "grouped_quantity": 44,
+  "basic_confirmed": 17,
+  "proposed_pin_records": 135,
+  "retained_components": 40,
+  "retained_pin_mapping_unchanged": true,
+  "native_schematic_updated": false,
+  "terminal_part_and_footprint_verified": false,
+  "native_erc": false,
+  "hardware_measurement": false
+}

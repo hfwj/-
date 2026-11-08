@@ -1,0 +1,12 @@
+2026-11-08 SMT classification check
+
+C49678: Basic; https://jlcpcb.com/partdetail/C49678
+C17513: Basic; https://jlcpcb.com/partdetail/C17513
+C17414: Basic; https://jlcpcb.com/partdetail/C17414
+C1710: Basic; https://jlcpcb.com/partdetail/2062-CL21B103KBANNNC/C1710
+C25803: Basic; https://jlcpcb.com/partdetail/C25803
+C17407: Extended; https://jlcpcb.com/partdetail/uni_royal_uniroyal_elec-C17407/C17407
+C5378: current official classification not verified; not counted as Basic.
+
+These are JLCPCB web catalogue classifications, not a guarantee of domestic JLC SMT order availability or classification. Recheck on the ordering platform.
+Four-leg bench-style solder posts: no verified manufacturer part number, current rating or mechanical footprint obtained. Procurement requirement >=5A is not a verified product rating. No invented LCSC code or drill/pitch is supplied.

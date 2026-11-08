@@ -6,6 +6,8 @@
 
 ## 项目目录
 
+2026-11-08：[主板BOM R2：板凳式接线柱、SMT基础库优先](projects/2026-electronics-contest/g-buck/mainboard-v1/reports/bom-r2-bench-posts/README.md) · [Excel](projects/2026-electronics-contest/g-buck/mainboard-v1/reports/bom-r2-bench-posts/Mainboard_BOM_R2.xlsx)。44件，17件官网已核实基础库；4只接线柱型号/封装待定。接口需重画，R6/R9/R12改0603；主电路标称值不变，模型/固件不改。
+
 2026-11-08：[G题主板手绘分区与BOM（SMT基础库优先）](projects/2026-electronics-contest/g-buck/mainboard-v1/reports/manual-drawing-2026-11-08/README.md) · [Word/PDF/Excel资料包](projects/2026-electronics-contest/g-buck/mainboard-v1/downloads/GBUCK_Manual_BOM_BasicFirst.zip)。42件/123脚，基础库已核实14件，另4件候选；连接和标称值不变，新增推荐封装与选型，未改模型/固件。
 
 2026-11-08：[G题主功率＋CC主板：六功能区已连线](projects/2026-electronics-contest/g-buck/mainboard-v1/README.md) · [嘉立创JSON资料包](projects/2026-electronics-contest/g-buck/mainboard-v1/downloads/GBUCK_Mainboard_Functional_Std.zip)。42件/123脚静态核对通过；减少两只板间插座，保留芯片与阻容参数；尚未绑定封装/设计PCB或实测。
