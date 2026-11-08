@@ -38,7 +38,7 @@
 
 | 项目 | 资料入口 | 当前结论 |
 |---|---|---|
-| 全球大学生物理竞赛（UPC） | [项目首页](projects/全球大学生物理竞赛/README.md) · [七发动机回收算例 v13](projects/全球大学生物理竞赛/2026-A-一级火箭回收/v13/README.md) · [A题五图论文](projects/全球大学生物理竞赛/2026-A-一级火箭回收/v12/README.md) · [B题主模型](projects/全球大学生物理竞赛/2026-B-点球轨迹预测/v3/README.md) | 新增七机/三机两次点火、风与俯仰联立：140 t名义候选、独立回放和图文；原理图/器件/BOM/PCB/固件不改 |
+| 全球大学生物理竞赛（UPC） | [项目首页](projects/全球大学生物理竞赛/README.md) · [论文文字修订 v14](projects/全球大学生物理竞赛/2026-A-一级火箭回收/v14/README.md) · [七发动机回收算例 v13](projects/全球大学生物理竞赛/2026-A-一级火箭回收/v13/README.md) · [A题五图论文](projects/全球大学生物理竞赛/2026-A-一级火箭回收/v12/README.md) · [B题主模型](projects/全球大学生物理竞赛/2026-B-点球轨迹预测/v3/README.md) | 新增七机/三机两次点火、风与俯仰联立：140 t名义候选、独立回放和图文；原理图/器件/BOM/PCB/固件不改 |
 | 2026 电子电赛 G题：辅助模块实物端口 | [XL7015_V2背面照片接线](projects/2026-electronics-contest/g-buck/rev-c2/reports/external-wiring-2026-11-01/XL7015_V2_背面照片接线.md) | 记录一块PCB丝印/四角端口，正面型号与两路分配待核；主板设计/PCB不改，外接模块差异单列 |
 | 2026 电子电赛 G题：板外模块接线 | [三张接线图/PDF及外置电阻/开关、降压模块、STM32、LCD接线表](projects/2026-electronics-contest/g-buck/rev-c2/reports/external-wiring-2026-11-01/README.md) | 按当前接口整理，实物板版本与电源方向待核；仅文档，原理图/器件/PCB/仿真/固件不改 |
 | 2026 电子电赛 G题：直插与功率件图 | [位置、极性、接线及PDF](projects/2026-electronics-contest/g-buck/rev-c2/reports/through-hole-power-placement-2026-11-01/README.md) | 覆盖22位号，区分外置R_PRE与板上件；仅图文，原理图/器件/PCB/仿真/固件不改 |

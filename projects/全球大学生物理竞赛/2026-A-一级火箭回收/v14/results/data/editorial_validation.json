@@ -1,0 +1,12 @@
+{
+  "original_body_words": 6376,
+  "revised_body_words": 5582,
+  "abstract_words": 220,
+  "change_records": 112,
+  "math_objects": 16,
+  "math_preserved": true,
+  "image_files": 4,
+  "images_preserved": true,
+  "tables": 9,
+  "baseline": "Uploaded TBA_A_Draft02.docx; virtual three-engine, wind-free M0 scenario; no v13 data substitution"
+}
