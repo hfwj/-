@@ -1,0 +1,26 @@
+{
+  "baseline": "v20 425556f",
+  "pages": 29,
+  "team_number": 856,
+  "team_number_on_all_pages": true,
+  "code_appendix_pages": [
+    23,
+    24,
+    25,
+    26,
+    27
+  ],
+  "code_appendix_page_count": 5,
+  "rationale_section": "3.6",
+  "ai_report_retained": true,
+  "ai_full_transcript_complete": false,
+  "original_tables_unchanged": true,
+  "original_photo_unchanged": true,
+  "mission_results_recomputed": false,
+  "reference_code_elementary_tests": "PASS",
+  "latex_overfull_boxes": false,
+  "latex_missing_glyphs": false,
+  "latex_undefined_references": false,
+  "isolated_source_compile": "PASS",
+  "isolated_reference_tests": "PASS"
+}

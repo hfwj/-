@@ -1,0 +1,14 @@
+{
+  "rk4_smooth_error_ratios": [
+    14.423885923280164,
+    15.189765055592902
+  ],
+  "thrust_mass_flow": "PASS",
+  "drag_opposes_relative_flow": "PASS",
+  "touchdown_event": "PASS",
+  "dry_mass_bound": "PASS",
+  "fuel_exhaustion_split": "PASS",
+  "two_burn_coast_and_entry": "PASS",
+  "bounded_toy_search": "PASS",
+  "mission_table_reproduction": false
+}
