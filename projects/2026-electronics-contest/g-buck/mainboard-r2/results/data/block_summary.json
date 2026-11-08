@@ -1,0 +1,59 @@
+{
+  "components": 44,
+  "pins": 135,
+  "zones": [
+    {
+      "number": 1,
+      "title": "输入保护、输入采样与接口",
+      "x": 20,
+      "y": 100,
+      "width": 1460,
+      "height": 1020
+    },
+    {
+      "number": 2,
+      "title": "同步Buck主功率与输出端",
+      "x": 1510,
+      "y": 100,
+      "width": 1460,
+      "height": 1020
+    },
+    {
+      "number": 3,
+      "title": "恒压反馈、恒流注入与使能",
+      "x": 20,
+      "y": 1140,
+      "width": 1460,
+      "height": 1020
+    },
+    {
+      "number": 4,
+      "title": "输出电流及输出电压采样",
+      "x": 1510,
+      "y": 1140,
+      "width": 1460,
+      "height": 1020
+    },
+    {
+      "number": 5,
+      "title": "DAC电压/电流设定与电压滤波",
+      "x": 20,
+      "y": 2180,
+      "width": 1460,
+      "height": 1020
+    },
+    {
+      "number": 6,
+      "title": "CC恒流补偿与设定缓冲",
+      "x": 1510,
+      "y": 2180,
+      "width": 1460,
+      "height": 1020
+    }
+  ],
+  "removed_connectors": [
+    "old A.J3 to B",
+    "old B.J1 to A"
+  ],
+  "external_control_connector": "old B.J2 renamed mainboard J3, same 10-pin mapping"
+}

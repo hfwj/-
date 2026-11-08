@@ -1,0 +1,38 @@
+{
+  "baseline": "4482aa4 BOM R2 / fb6e66e original mainboard schematic",
+  "retained_components": 40,
+  "retained_pin_maps_unchanged": true,
+  "J3_10pin_mapping_unchanged": true,
+  "new_posts": {
+    "J1P": {
+      "1": "RAW+",
+      "2": "RAW+",
+      "3": "RAW+",
+      "4": "RAW+"
+    },
+    "J1N": {
+      "1": "GND",
+      "2": "GND",
+      "3": "GND",
+      "4": "GND"
+    },
+    "J2P": {
+      "1": "OUT+",
+      "2": "OUT+",
+      "3": "OUT+",
+      "4": "OUT+"
+    },
+    "J2N": {
+      "1": "GND",
+      "2": "GND",
+      "3": "GND",
+      "4": "GND"
+    }
+  },
+  "selected_package_changes": [
+    "R6",
+    "R9",
+    "R12"
+  ],
+  "footprint_binding": false
+}

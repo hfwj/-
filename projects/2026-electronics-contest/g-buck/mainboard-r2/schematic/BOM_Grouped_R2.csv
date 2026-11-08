@@ -1,0 +1,26 @@
+﻿位号,数量,厂家型号,立创料号,推荐规格,封装,SMT库别,来源,备注
+C9 C3 C4 C8 C10 C12 C11,7,CC0805KRX7R9BB104,C49678,100nF 50V X7R ±10%,0805,基础库（官网已核实）,https://jlcpcb.com/partdetail/C49678,统一7只；C4由16V额定提升50V，标称容值不变
+F1,1,0466002.NRHF,C3105,2A 63V保险丝,1206保险丝,待核实库别,https://jlcpcb.com/partdetail/C3105,非自恢复保险；不提供精确1A限流
+J1N J1P J2N J2P,4,待定：四脚同体导通、横梁可供鳄鱼夹夹持,,单极四脚板凳式焊接接线柱，设计采购要求≥5A,THT四脚，孔距/孔径/高度待厂家尺寸图,非SMT/通孔手焊,,共4只、每只单极；J1P→RAW+，J1N→GND，J2P→OUT+，J2N→GND；每只四脚同网。厂家/电流额定/尺寸待核实。
+J3,1,2.54-2*5P简牛 BOOMELE,C5665,带防呆10针连接器,THT 2x5 P2.54mm,非SMT/手焊,https://jlcpcb.com/partdetail/C5665,核对1脚三角标记和外壳尺寸
+J4,1,2.54mm 1x2直插排针,,2针辅助供电接口,THT 1x2 P2.54mm,非SMT/手焊,,参数选型；未指定商城料号；1 VIN_SYS，2 GND
+RS1 RS2,2,RL2512FK-070R05L,C876461,0.05Ω ±1% 1W,2512,待核实库别,https://jlcpcb.com/partdetail/C876461,电流取样两端用Kelvin引线
+U3,1,INA226AIDGSR,C49851,输入电流/电压监测,VSSOP-10 / DGS P0.5mm,待核实库别,https://jlcpcb.com/partdetail/C49851,不能与MSOP外形想当然互换
+C1,1,50YXF100MEFC8X11.5,C88728,100µF 50V 铝电解,THT D8x11.5mm P3.5mm,非SMT/手焊,https://jlcpcb.com/partdetail/C88728,注意极性，1正极、2GND
+C2,1,CL31B106KBHNNNE,C89632,10µF 50V X7R ±10%,1206,扩展库（官网）,https://jlcpcb.com/partdetail/C89632,输入最高25V，保留50V耐压
+C5 C6,2,CL32B226KAJNNNE,C309062,22µF 25V X7R ±10%,1210,待核实库别,https://jlcpcb.com/partdetail/C309062,有条件候选：10V偏压下两只合计有效容量需≥22µF；需曲线或实测
+L1,1,ZD0850-220M,C46956554,22µH ±20% 额定4A Isat5A DCR80mΩ,8.8x8.2mm型号专用焊盘,待核实库别,https://jlcpcb.com/partdetail/C46956554,焊盘尺寸需查原厂图；不能按名称选通用8x8封装
+U1,1,TPS54302DDCR,C311983,同步Buck 4.5–28V/3A,SOT-23-THIN6 / DDC,待核实库别,https://jlcpcb.com/partdetail/C311983,不得用通用SOT23-6直接代替DDC焊盘
+D1 D2,2,"BAT54,215 Nexperia",C85084,单肖特基二极管,SOT-23,待核实库别,https://jlcpcb.com/partdetail/C85084,1=A，3=K，2=NC；不用BAT54A/C/S
+R1 R7,2,RT0805BRD07100KL,C122537,100kΩ ±0.1% 1/8W,0805,待核实库别,https://jlcpcb.com/partdetail/C122537,保留采样/反馈精度，不换1%凑基础库
+R2,1,RT0805BRD075K49L,C865577,5.49kΩ ±0.1% 1/8W,0805,待核实库别,https://jlcpcb.com/partdetail/C865577,不改5.49k标称值
+R3,1,TC0550B5602T5G,C2989136,56kΩ ±0.1% 1/8W,0805,待核实库别,https://jlcpcb.com/partdetail/C2989136,56k，不能替换为56.2k
+R4,1,0805W8F1002T5E,C17414,10kΩ ±1% 1/8W,0805,基础库（官网已核实）,https://jlcpcb.com/partdetail/C17414,保持原规格
+R5 R10 R11 R13,4,0805W8F1001T5E,C17513,1kΩ ±1% 1/8W,0805,基础库（官网已核实）,https://jlcpcb.com/partdetail/C17513,保持原标称值
+R6 R9 R12,3,0603WAF1003T5E,C25803,100kΩ ±1% 100mW 75V,0603,基础库（官网已核实）,https://jlcpcb.com/partdetail/C25803,替代旧推荐0805 C17407（现官网为扩展库）；阻值/精度不变，封装改0603，最大3.3V时功耗约0.109mW
+C7 C13,2,CL21B103KBANNNC,C1710,10nF 50V X7R ±10%,0805,基础库（官网已核实）,https://jlcpcb.com/partdetail/C1710,输出分压滤波和电流滤波
+R8,1,RT0805BRD0710KL,C110775,10kΩ ±0.1% 1/8W,0805,待核实库别,https://jlcpcb.com/partdetail/C110775,保留输出电压采样精度
+U2,1,INA180A1IDBVR,C122228,电流检测增益20,SOT-23-5 / DBV,待核实库别,https://jlcpcb.com/partdetail/C122228,必须A1；B1脚序不同，A2增益不同
+U4,1,MCP4728-E/UN,C108207,四通道DAC,MSOP-10 P0.5mm,扩展库（官网）,https://jlcpcb.com/partdetail/C108207,C/D通道不用；3.3V供电
+C14,1,CL21B224KBFNNNE,C5378,220nF 50V X7R ±10%,0805,库别待核实（不计基础库）,https://jlcpcb.com/partdetail/C5378,保留0805/50V选择；当前未核实官网Basic状态；需核对直流偏压有效容值
+U5,1,MCP6002T-I/SN,C7377,双运放,SOIC-8 3.9mm P1.27mm,扩展库（官网）,https://jlcpcb.com/partdetail/C7377,原MCP6002-I/SN加T仅卷带包装；同一只IC两个单元
