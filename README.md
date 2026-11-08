@@ -10,6 +10,8 @@
 
 ## 项目目录
 
+2026-11-08：[R6插拔式主控适配前置核对](projects/2026-electronics-contest/g-buck/socket-adaptation-r6/README.md)。用户已有STM32核心板和屏幕，待提供具体型号；仅整理接口要求，R5原理图/BOM、模型与固件未改，尚无R6工程。
+
 2026-11-08：[R5主控六区＋辅助降压三区原理图及BOM](projects/2026-electronics-contest/g-buck/partition-r5/README.md) · [eprj3完整工程](projects/2026-electronics-contest/g-buck/partition-r5/downloads/GBUCK_System_R5_EPRJ3.zip)。两板36件150脚，重画分区及实际连线，保留R4网络/标称值；补全部分0805建议选型，固件/模型不改。用户确认保留通孔件，由工厂贴片＋插件焊接，替代此前全SMT要求；实际料号/订单审核、封装/PCB/实测仍待完成。
 
 2026-11-08：[G题R4：自设计3.3V贴片辅助电源](projects/2026-electronics-contest/g-buck/self-aux-r4/README.md) · [eprj3完整工程](projects/2026-electronics-contest/g-buck/self-aux-r4/downloads/GBUCK_System_R4_EPRJ3.zip)。TPS560430X3F＋6只外围贴片元件替代成品M1，保留板凳柱；辅助板11件，主板/主控及固件/模型不改；格式/静态检查通过，PCB/实测待完成。
