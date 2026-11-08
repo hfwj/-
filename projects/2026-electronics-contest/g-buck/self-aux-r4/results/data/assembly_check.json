@@ -1,0 +1,18 @@
+{
+  "baseline": "c3c66c5 / R3",
+  "boards": 3,
+  "total_components": 81,
+  "total_pins": 291,
+  "aux_components": 11,
+  "aux_pins": 34,
+  "smd_aux_components": 7,
+  "through_hole_posts_aux": 4,
+  "main_control_documents_byte_identical": true,
+  "external_power_links_unchanged": 4,
+  "IDC_pins_unchanged": 10,
+  "native_editor_erc": false,
+  "footprints_bound": false,
+  "hardware_test": false,
+  "design_load_A": 0.3,
+  "chip_rating_A": 0.6
+}

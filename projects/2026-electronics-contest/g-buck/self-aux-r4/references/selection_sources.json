@@ -1,0 +1,20 @@
+{
+  "checked": "2026-11-08",
+  "datasheet": "https://www.ti.com/lit/ds/symlink/tps560430.pdf",
+  "sections": [
+    "5/6 variants and pin map",
+    "7.5 fixed3.3V limits and current limit",
+    "8.4.5 FPWM",
+    "9.2 Table1 3.3V/1.1MHz:12uH/22uF",
+    "9.2.2.6 input capacitor",
+    "10 input bulk capacitor for cable-fed supply",
+    "11 layout"
+  ],
+  "IC_catalog": "https://jlcpcb.com/partdetail/TexasInstruments-TPS560430X3FDBVR/C2071721",
+  "IC_library_class": "Extended",
+  "L_catalog": "https://item.szlcsc.com/44450897.html",
+  "capacitors": "C23,C24,C25,C26 reuse previously checked selections; C27 manufacturer candidate EEE-FK1H220P, LCSC code not verified",
+  "C27_supplier": "https://www.digikey.in/en/products/detail/panasonic-industry/EEE-FK1H220P/766187",
+  "C27_manufacturer_page_check": "not accessible; footprint/ESR/ripple rating still need manufacturer confirmation",
+  "hardware_test": false
+}

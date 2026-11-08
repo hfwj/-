@@ -8,6 +8,8 @@
 
 ## 项目目录
 
+2026-11-08：[G题R4：自设计3.3V贴片辅助电源](projects/2026-electronics-contest/g-buck/self-aux-r4/README.md) · [eprj3完整工程](projects/2026-electronics-contest/g-buck/self-aux-r4/downloads/GBUCK_System_R4_EPRJ3.zip)。TPS560430X3F＋6只外围贴片元件替代成品M1，保留板凳柱；辅助板11件，主板/主控及固件/模型不改；格式/静态检查通过，PCB/实测待完成。
+
 2026-11-08：[G题R3：三板辅助供电接口改板凳式焊接接线柱](projects/2026-electronics-contest/g-buck/aux-posts-r3/README.md) · [专业版eprj3整包](projects/2026-electronics-contest/g-buck/aux-posts-r3/downloads/GBUCK_System_R3_EPRJ3.zip)。主板J4、辅源输入/输出、主控JP四个接口改八只单极四脚柱；75件/277脚核对通过，主功率/控制参数、模型及固件不变；封装待定，原生ERC/实测未验证。
 
 2026-11-08：[G题主板R2专业版eprj3完整工程](projects/2026-electronics-contest/g-buck/mainboard-r2/downloads/GBUCK_Mainboard_R2_EPRJ3.zip) · [说明](projects/2026-electronics-contest/g-buck/mainboard-r2/reports/eprj3交付说明.md)。格式转换保留44件/135脚，官方Schema及查看器显示通过；BOM/硬件/固件/模型不变，原生编辑保存/ERC尚未验证，封装未绑定。

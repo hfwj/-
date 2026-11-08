@@ -1,0 +1,33 @@
+{
+  "errors": [],
+  "context": {
+    "projectId": "GBUCK_R4",
+    "revision": "R4",
+    "documents": [
+      {
+        "id": "schematic:4bffab185d72a744",
+        "nodeId": "sheet2",
+        "group": "schematic",
+        "title": "MCU_LCD"
+      },
+      {
+        "id": "schematic:313b0a653222b232",
+        "nodeId": "sheet4",
+        "group": "schematic",
+        "title": "Mainboard_6_Blocks"
+      },
+      {
+        "id": "schematic:620ed9c2072f32d8",
+        "nodeId": "sheet6",
+        "group": "schematic",
+        "title": "Aux_Power"
+      }
+    ],
+    "currentDocument": {
+      "id": "schematic:4bffab185d72a744",
+      "nodeId": "sheet2",
+      "group": "schematic",
+      "title": "MCU_LCD"
+    }
+  }
+}

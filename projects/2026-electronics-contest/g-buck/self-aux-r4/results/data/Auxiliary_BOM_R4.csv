@@ -1,0 +1,12 @@
+﻿板,功能区,位号,原标称,推荐规格,厂家型号,立创料号,封装,SMT库别,备注,核对日期,来源
+Auxiliary,辅助供电接口,J1P,J1,单极四脚板凳式焊接接线柱，采购要求≥5A,待定：四脚同体导通、横梁供鳄鱼夹夹持,,THT 4P，尺寸/孔距/孔径待定,非SMT/通孔手焊,四脚全部接VIN_SYS；替代原J1相应电极；需核实厂家承流与机械图,2026-11-08,
+Auxiliary,辅助供电接口,J1N,J1,单极四脚板凳式焊接接线柱，采购要求≥5A,待定：四脚同体导通、横梁供鳄鱼夹夹持,,THT 4P，尺寸/孔距/孔径待定,非SMT/通孔手焊,四脚全部接GND；替代原J1相应电极；需核实厂家承流与机械图,2026-11-08,
+Auxiliary,辅助供电接口,J2P,J2,单极四脚板凳式焊接接线柱，采购要求≥5A,待定：四脚同体导通、横梁供鳄鱼夹夹持,,THT 4P，尺寸/孔距/孔径待定,非SMT/通孔手焊,四脚全部接+3V3；替代原J2相应电极；需核实厂家承流与机械图,2026-11-08,
+Auxiliary,辅助供电接口,J2N,J2,单极四脚板凳式焊接接线柱，采购要求≥5A,待定：四脚同体导通、横梁供鳄鱼夹夹持,,THT 4P，尺寸/孔距/孔径待定,非SMT/通孔手焊,四脚全部接GND；替代原J2相应电极；需核实厂家承流与机械图,2026-11-08,
+Auxiliary,自设计辅助Buck,U7,替代M1内部功能,固定3.3V/600mA/1.1MHz同步Buck,TPS560430X3FDBVR,C2071721,SOT-23-6 / DBV,扩展库（官网已核实）,不得替换成可调版XF/X/Y；FB直接接输出,2026-11-08,https://jlcpcb.com/partdetail/TexasInstruments-TPS560430X3FDBVR/C2071721
+Auxiliary,自设计辅助Buck,L2,替代M1内部功能,12uH ±20% Irms2A Isat2A DCR80mΩ,ZNR6028ST120M,C42429312,SMD 6x6x2.8mm，焊盘查原厂,库别待核实,目录参数已核实；不是通用6x6焊盘,2026-11-08,https://item.szlcsc.com/44450897.html
+Auxiliary,自设计辅助Buck,C23,替代M1内部功能,10uF 50V X7R ±10%,CL31B106KBHNNNE,C89632,1206,扩展库（沿用已核实选型）,25V偏压下有效输入陶瓷容量目标≥2.2uF；需曲线/实测,2026-11-08,https://jlcpcb.com/partdetail/CL31B106KBHNNNE/C89632
+Auxiliary,自设计辅助Buck,C24,替代M1内部功能,100nF 50V X7R ±10%,CC0805KRX7R9BB104,C49678,0805,基础库（沿用已核实选型）,贴近VIN与GND,2026-11-08,https://jlcpcb.com/partdetail/C49678
+Auxiliary,自设计辅助Buck,C25,替代M1内部功能,100nF 50V X7R ±10%,CC0805KRX7R9BB104,C49678,0805,基础库（沿用已核实选型）,自举电容：CB与SW之间，不能接地,2026-11-08,https://jlcpcb.com/partdetail/C49678
+Auxiliary,自设计辅助Buck,C26,替代M1内部功能,22uF 25V X7R ±10%,CL32B226KAJNNNE,C309062,1210,库别待核实,3.3V偏压有效容量设计目标≥15uF需复核；非实测保证,2026-11-08,https://www.lcsc.com/product-detail/C309062.html
+Auxiliary,自设计辅助Buck,C27,替代M1内部功能,22uF 50V 铝电解 SMD ±20%,EEE-FK1H220P,,SMD铝电解，准确焊盘查厂家图,库别/商城料号待核实,输入缓冲与阻尼候选；需核对原厂尺寸、ESR和纹波额定；1正2负,2026-11-08,https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEEFK1H220P

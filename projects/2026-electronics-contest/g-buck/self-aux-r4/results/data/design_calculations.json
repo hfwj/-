@@ -1,0 +1,35 @@
+{
+  "design_load_target_A": 0.3,
+  "chip_max_current_A": 0.6,
+  "Vin_system_V": [
+    15,
+    25
+  ],
+  "Vout_nominal_V": 3.3,
+  "L_nominal_uH": 12,
+  "Cout_nominal_uF": 22,
+  "calculations": {
+    "(15, 1.2e-05)": {
+      "ripple_A_pp": 0.19499999999999998,
+      "peak_at_0_3A": 0.39749999999999996,
+      "assumption": "ideal CCM, nominal 1.1MHz; not a switching simulation"
+    },
+    "(15, 9.6e-06)": {
+      "ripple_A_pp": 0.24375000000000002,
+      "peak_at_0_3A": 0.421875,
+      "assumption": "ideal CCM, nominal 1.1MHz; not a switching simulation"
+    },
+    "(25, 1.2e-05)": {
+      "ripple_A_pp": 0.21699999999999997,
+      "peak_at_0_3A": 0.4085,
+      "assumption": "ideal CCM, nominal 1.1MHz; not a switching simulation"
+    },
+    "(25, 9.6e-06)": {
+      "ripple_A_pp": 0.27125,
+      "peak_at_0_3A": 0.435625,
+      "assumption": "ideal CCM, nominal 1.1MHz; not a switching simulation"
+    }
+  },
+  "measurements": "NOT DONE",
+  "main_control_documents_byte_identical": true
+}

@@ -1,0 +1,15 @@
+﻿起点板,起点接线柱,终点板,终点接线柱,网络,用途,连接方式
+Mainboard,J4P,Auxiliary,J1P,VIN_SYS,15–25V辅源输入正极,鳄鱼夹导线连接两柱；每柱四焊脚同网，任选横梁夹持位置
+Mainboard,J4N,Auxiliary,J1N,GND,辅源输入负极,鳄鱼夹导线连接两柱；每柱四焊脚同网，任选横梁夹持位置
+Auxiliary,J2P,Control,JPP,+3V3,辅源3.3V输出正极,鳄鱼夹导线连接两柱；每柱四焊脚同网，任选横梁夹持位置
+Auxiliary,J2N,Control,JPN,GND,辅源输出负极,鳄鱼夹导线连接两柱；每柱四焊脚同网，任选横梁夹持位置
+Mainboard,J3.1,Control,J1.1,+3V3,保留10芯IDC排线；5/6仅测试，不接主控驱动,同脚号直通；负载电流不走排线
+Mainboard,J3.2,Control,J1.2,GND,保留10芯IDC排线；5/6仅测试，不接主控驱动,同脚号直通；负载电流不走排线
+Mainboard,J3.3,Control,J1.3,SCL,保留10芯IDC排线；5/6仅测试，不接主控驱动,同脚号直通；负载电流不走排线
+Mainboard,J3.4,Control,J1.4,SDA,保留10芯IDC排线；5/6仅测试，不接主控驱动,同脚号直通；负载电流不走排线
+Mainboard,J3.5,Control,J1.5,VSET_DRV,保留10芯IDC排线；5/6仅测试，不接主控驱动,同脚号直通；负载电流不走排线
+Mainboard,J3.6,Control,J1.6,CC_OUT,保留10芯IDC排线；5/6仅测试，不接主控驱动,同脚号直通；负载电流不走排线
+Mainboard,J3.7,Control,J1.7,ISENSE,保留10芯IDC排线；5/6仅测试，不接主控驱动,同脚号直通；负载电流不走排线
+Mainboard,J3.8,Control,J1.8,VOUT_ADC,保留10芯IDC排线；5/6仅测试，不接主控驱动,同脚号直通；负载电流不走排线
+Mainboard,J3.9,Control,J1.9,RUN,保留10芯IDC排线；5/6仅测试，不接主控驱动,同脚号直通；负载电流不走排线
+Mainboard,J3.10,Control,J1.10,GND,保留10芯IDC排线；5/6仅测试，不接主控驱动,同脚号直通；负载电流不走排线
