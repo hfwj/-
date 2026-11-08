@@ -1,0 +1,93 @@
+{
+  "editorVersion": "6.5.51",
+  "docType": "5",
+  "title": "GBUCK_Aux_R3 / Bench post auxiliary interfaces",
+  "description": "Independent board schematic. DRAFT, no PCB or bound footprints.",
+  "colors": {},
+  "schematics": [
+    {
+      "docType": "1",
+      "title": "D_Aux_Power",
+      "description": "",
+      "dataStr": {
+        "head": {
+          "docType": "1",
+          "editorVersion": "6.5.51",
+          "newgId": true,
+          "c_para": {
+            "Prefix Start": "1"
+          },
+          "c_spiceCmd": null,
+          "x": "0",
+          "y": "0",
+          "hasIdFlag": false
+        },
+        "canvas": "CA~1570~1140~#FFFFFF~yes~#CCCCCC~5~1570~1140~line~5~pixel~5~0~0",
+        "shape": [
+          "T~L~50~45~0~#000080~Arial~22pt~~~~comment~D 板：3.3V 辅助电源（题目允许成品辅源）~1~start~gge1108~0~",
+          "T~L~50~75~0~#000080~Arial~12pt~~~~comment~G题 / 三块板独立制作 / R3辅助电源接线柱 / DRAFT：未经实物验证 / 同名网络相连 / NC 为不连接~1~start~gge1109~0~",
+          "LIB~530~220~package``nameAlias`Value`name`Aux buck module: 15-25V to 3.3V`Manufacturer Part`Aux buck module: 15-25V to 3.3V`spicePre`U`Contributor`Custom_G_Draft`Recommended footprint`Purchased auxiliary module; custom pin mapping only`Status`DRAFT - footprint unbound~~0~gge1127~~2fdc011f4122450183b8312054f8834d~0~~yes~yes#@$R~530~220~~~220~80~#880000~1~0~none~gge1120~0~#@$T~P~530~196~0~#000080~Arial~12pt~~~~comment~M1~1~start~gge1121~0~#@$T~N~530~212~0~#000080~Arial~10pt~~~~comment~Aux buck module: 15-25V to 3.3V~1~start~gge1122~0~#@$P~show~0~1~510~240~180~gge1123~0^^510~240^^M 510 240 L 530 240~#880000^^1~534~243~0~IN+~start~Arial~8pt~#000080^^1~518~236~0~1~start~Arial~7pt~#000080^^0~530~240^^0~M 530 240 L 530 240#@$P~show~0~2~510~265~180~gge1124~0^^510~265^^M 510 265 L 530 265~#880000^^1~534~268~0~IN-~start~Arial~8pt~#000080^^1~518~261~0~2~start~Arial~7pt~#000080^^0~530~265^^0~M 530 265 L 530 265#@$P~show~0~3~770~240~0~gge1125~0^^770~240^^M 770 240 L 750 240~#880000^^1~746~243~0~OUT+~end~Arial~8pt~#000080^^1~762~236~0~3~end~Arial~7pt~#000080^^0~750~240^^0~M 750 240 L 750 240#@$P~show~0~4~770~265~0~gge1126~0^^770~265^^M 770 265 L 750 265~#880000^^1~746~268~0~OUT-~end~Arial~8pt~#000080^^1~762~261~0~4~end~Arial~7pt~#000080^^0~750~265^^0~M 750 265 L 750 265",
+          "W~510 240 445 240~#008000~1~0~none~gge1128~0",
+          "N~445~240~0~#000080~VIN_SYS~gge1129~end~445~236~Arial~9pt~0",
+          "W~510 265 445 265~#008000~1~0~none~gge1130~0",
+          "N~445~265~0~#000080~GND~gge1131~end~445~261~Arial~9pt~0",
+          "W~770 240 835 240~#008000~1~0~none~gge1132~0",
+          "N~835~240~0~#000080~+3V3~gge1133~start~835~236~Arial~9pt~0",
+          "W~770 265 835 265~#008000~1~0~none~gge1134~0",
+          "N~835~265~0~#000080~GND~gge1135~start~835~261~Arial~9pt~0",
+          "T~L~60~550~0~#000080~Arial~13pt~~~~comment~仅作为 MCU、液晶、采样和 DAC 的辅助供电，禁止代替 A 板主功率电路。~1~start~gge1146~0~",
+          "T~L~60~590~0~#000080~Arial~13pt~~~~comment~可选 MP1584EN 辅源小板；上机前独立调整到 3.30V，输出额定电流不小于0.3A。~1~start~gge1147~0~",
+          "T~L~60~630~0~#000080~Arial~13pt~~~~comment~M1 的 1/2/3/4 是本图自定义端口号，实际接模块 IN+/IN-/OUT+/OUT- 丝印。~1~start~gge1148~0~",
+          "T~L~60~670~0~#000080~Arial~13pt~~~~comment~所有板均由同一输入取电；本方案不接真实电池。~1~start~gge1149~0~",
+          "T~L~1125~60~0~#173d70~Arial~18pt~~~~comment~R3 辅助供电接线柱~1~start~ggeR38e8f696df795~0~",
+          "T~L~1125~90~0~#173d70~Arial~11pt~~~~comment~每只4脚同网，型号/尺寸待定~1~start~ggeR365f588ab5949~0~",
+          "LIB~1230~160~package``name`BENCH POST 4P - TBD`spicePre`J`Status`TBD model and footprint~~0~ggeR376aec42a2328~~76aec42a23285105954f5d5502dbfb66~0~~yes~yes#@$T~P~1230~130~0~#173d70~Arial~13pt~~~~comment~J1P~1~start~ggeR3d9549486f68e~0~#@$T~N~1230~148~0~#173d70~Arial~10pt~~~~comment~BENCH POST 4P - TBD~1~start~ggeR37d4ee044a71e~0~#@$R~1230~160~~~120~150~#8b2323~1~0~none~ggeR32b1b7942fa35~0~#@$P~show~0~1~1210~210~180~ggeR3aff6c2549e3a~0^^1210~210^^M 1210 210 L 1230 210~#8b2323^^1~1236~214~0~1~start~Arial~9pt~#173d70^^1~1217~205~0~1~start~Arial~8pt~#173d70^^0~1230~210^^0~M 1230 210 L 1230 210#@$P~show~0~2~1210~235~180~ggeR31c4023b9db7c~0^^1210~235^^M 1210 235 L 1230 235~#8b2323^^1~1236~239~0~2~start~Arial~9pt~#173d70^^1~1217~230~0~2~start~Arial~8pt~#173d70^^0~1230~235^^0~M 1230 235 L 1230 235#@$P~show~0~3~1210~260~180~ggeR338d927779d3e~0^^1210~260^^M 1210 260 L 1230 260~#8b2323^^1~1236~264~0~3~start~Arial~9pt~#173d70^^1~1217~255~0~3~start~Arial~8pt~#173d70^^0~1230~260^^0~M 1230 260 L 1230 260#@$P~show~0~4~1210~285~180~ggeR305b5676662c9~0^^1210~285^^M 1210 285 L 1230 285~#8b2323^^1~1236~289~0~4~start~Arial~9pt~#173d70^^1~1217~280~0~4~start~Arial~8pt~#173d70^^0~1230~285^^0~M 1230 285 L 1230 285",
+          "W~1135 210 1210 210~#14803c~1~0~none~ggeR34f8ac22d0bdb~0",
+          "N~1135~210~0~#173d70~VIN_SYS~ggeR3cd64d5684dda~start~1135~205~Arial~10pt~0",
+          "W~1135 235 1210 235~#14803c~1~0~none~ggeR3046a5002bdc5~0",
+          "N~1135~235~0~#173d70~VIN_SYS~ggeR3577e67f6531c~start~1135~230~Arial~10pt~0",
+          "W~1135 260 1210 260~#14803c~1~0~none~ggeR3f8c6539b279e~0",
+          "N~1135~260~0~#173d70~VIN_SYS~ggeR31e0c658f33da~start~1135~255~Arial~10pt~0",
+          "W~1135 285 1210 285~#14803c~1~0~none~ggeR375dadc28e78e~0",
+          "N~1135~285~0~#173d70~VIN_SYS~ggeR35708a21a0ebc~start~1135~280~Arial~10pt~0",
+          "LIB~1230~390~package``name`BENCH POST 4P - TBD`spicePre`J`Status`TBD model and footprint~~0~ggeR3b86994081fa0~~b86994081fa03251403d6c0a88c15f5e~0~~yes~yes#@$T~P~1230~360~0~#173d70~Arial~13pt~~~~comment~J1N~1~start~ggeR358567e877672~0~#@$T~N~1230~378~0~#173d70~Arial~10pt~~~~comment~BENCH POST 4P - TBD~1~start~ggeR3894880560653~0~#@$R~1230~390~~~120~150~#8b2323~1~0~none~ggeR386a87d1f30b6~0~#@$P~show~0~1~1210~440~180~ggeR3c7d7ea20f3e0~0^^1210~440^^M 1210 440 L 1230 440~#8b2323^^1~1236~444~0~1~start~Arial~9pt~#173d70^^1~1217~435~0~1~start~Arial~8pt~#173d70^^0~1230~440^^0~M 1230 440 L 1230 440#@$P~show~0~2~1210~465~180~ggeR3ac14ab5c2818~0^^1210~465^^M 1210 465 L 1230 465~#8b2323^^1~1236~469~0~2~start~Arial~9pt~#173d70^^1~1217~460~0~2~start~Arial~8pt~#173d70^^0~1230~465^^0~M 1230 465 L 1230 465#@$P~show~0~3~1210~490~180~ggeR35cf54e049c51~0^^1210~490^^M 1210 490 L 1230 490~#8b2323^^1~1236~494~0~3~start~Arial~9pt~#173d70^^1~1217~485~0~3~start~Arial~8pt~#173d70^^0~1230~490^^0~M 1230 490 L 1230 490#@$P~show~0~4~1210~515~180~ggeR387787cbb8159~0^^1210~515^^M 1210 515 L 1230 515~#8b2323^^1~1236~519~0~4~start~Arial~9pt~#173d70^^1~1217~510~0~4~start~Arial~8pt~#173d70^^0~1230~515^^0~M 1230 515 L 1230 515",
+          "W~1135 440 1210 440~#14803c~1~0~none~ggeR3c9b9ebc7e477~0",
+          "N~1135~440~0~#173d70~GND~ggeR365f596f3da09~start~1135~435~Arial~10pt~0",
+          "W~1135 465 1210 465~#14803c~1~0~none~ggeR3d15f8fffa7f2~0",
+          "N~1135~465~0~#173d70~GND~ggeR3de72c50ec489~start~1135~460~Arial~10pt~0",
+          "W~1135 490 1210 490~#14803c~1~0~none~ggeR3ee7d05f0ed1b~0",
+          "N~1135~490~0~#173d70~GND~ggeR381bb0b564a1e~start~1135~485~Arial~10pt~0",
+          "W~1135 515 1210 515~#14803c~1~0~none~ggeR303ac59b40999~0",
+          "N~1135~515~0~#173d70~GND~ggeR3fab085839281~start~1135~510~Arial~10pt~0",
+          "T~L~1125~575~0~#173d70~Arial~11pt~~~~comment~J1 → J1P / J1N~1~start~ggeR3909b5a4119e1~0~",
+          "LIB~1230~620~package``name`BENCH POST 4P - TBD`spicePre`J`Status`TBD model and footprint~~0~ggeR3a03d16c688b2~~a03d16c688b21a97699225b716e24f9d~0~~yes~yes#@$T~P~1230~590~0~#173d70~Arial~13pt~~~~comment~J2P~1~start~ggeR3713400064e96~0~#@$T~N~1230~608~0~#173d70~Arial~10pt~~~~comment~BENCH POST 4P - TBD~1~start~ggeR3d6d5389f8eb3~0~#@$R~1230~620~~~120~150~#8b2323~1~0~none~ggeR3e82dd3775846~0~#@$P~show~0~1~1210~670~180~ggeR3d5881c335a3d~0^^1210~670^^M 1210 670 L 1230 670~#8b2323^^1~1236~674~0~1~start~Arial~9pt~#173d70^^1~1217~665~0~1~start~Arial~8pt~#173d70^^0~1230~670^^0~M 1230 670 L 1230 670#@$P~show~0~2~1210~695~180~ggeR3df3fbaf3ca4d~0^^1210~695^^M 1210 695 L 1230 695~#8b2323^^1~1236~699~0~2~start~Arial~9pt~#173d70^^1~1217~690~0~2~start~Arial~8pt~#173d70^^0~1230~695^^0~M 1230 695 L 1230 695#@$P~show~0~3~1210~720~180~ggeR3e4a0b2b5d110~0^^1210~720^^M 1210 720 L 1230 720~#8b2323^^1~1236~724~0~3~start~Arial~9pt~#173d70^^1~1217~715~0~3~start~Arial~8pt~#173d70^^0~1230~720^^0~M 1230 720 L 1230 720#@$P~show~0~4~1210~745~180~ggeR3d36964ad6375~0^^1210~745^^M 1210 745 L 1230 745~#8b2323^^1~1236~749~0~4~start~Arial~9pt~#173d70^^1~1217~740~0~4~start~Arial~8pt~#173d70^^0~1230~745^^0~M 1230 745 L 1230 745",
+          "W~1135 670 1210 670~#14803c~1~0~none~ggeR31d317319a590~0",
+          "N~1135~670~0~#173d70~+3V3~ggeR3543f56f481e9~start~1135~665~Arial~10pt~0",
+          "W~1135 695 1210 695~#14803c~1~0~none~ggeR3fcb15a20f5a4~0",
+          "N~1135~695~0~#173d70~+3V3~ggeR3357ecb482a18~start~1135~690~Arial~10pt~0",
+          "W~1135 720 1210 720~#14803c~1~0~none~ggeR37705b81a1d03~0",
+          "N~1135~720~0~#173d70~+3V3~ggeR3a3554725dd7e~start~1135~715~Arial~10pt~0",
+          "W~1135 745 1210 745~#14803c~1~0~none~ggeR340517d701005~0",
+          "N~1135~745~0~#173d70~+3V3~ggeR33d1b308fca8a~start~1135~740~Arial~10pt~0",
+          "LIB~1230~850~package``name`BENCH POST 4P - TBD`spicePre`J`Status`TBD model and footprint~~0~ggeR3c33909a55d52~~c33909a55d52cf26a152cf20d748b0d4~0~~yes~yes#@$T~P~1230~820~0~#173d70~Arial~13pt~~~~comment~J2N~1~start~ggeR3c056ff70bb36~0~#@$T~N~1230~838~0~#173d70~Arial~10pt~~~~comment~BENCH POST 4P - TBD~1~start~ggeR321daede50148~0~#@$R~1230~850~~~120~150~#8b2323~1~0~none~ggeR31293b20227e5~0~#@$P~show~0~1~1210~900~180~ggeR333ed87ffe0a6~0^^1210~900^^M 1210 900 L 1230 900~#8b2323^^1~1236~904~0~1~start~Arial~9pt~#173d70^^1~1217~895~0~1~start~Arial~8pt~#173d70^^0~1230~900^^0~M 1230 900 L 1230 900#@$P~show~0~2~1210~925~180~ggeR3fe95a0a4cedf~0^^1210~925^^M 1210 925 L 1230 925~#8b2323^^1~1236~929~0~2~start~Arial~9pt~#173d70^^1~1217~920~0~2~start~Arial~8pt~#173d70^^0~1230~925^^0~M 1230 925 L 1230 925#@$P~show~0~3~1210~950~180~ggeR30b98089bf076~0^^1210~950^^M 1210 950 L 1230 950~#8b2323^^1~1236~954~0~3~start~Arial~9pt~#173d70^^1~1217~945~0~3~start~Arial~8pt~#173d70^^0~1230~950^^0~M 1230 950 L 1230 950#@$P~show~0~4~1210~975~180~ggeR3e1aa5b801bd8~0^^1210~975^^M 1210 975 L 1230 975~#8b2323^^1~1236~979~0~4~start~Arial~9pt~#173d70^^1~1217~970~0~4~start~Arial~8pt~#173d70^^0~1230~975^^0~M 1230 975 L 1230 975",
+          "W~1135 900 1210 900~#14803c~1~0~none~ggeR324b4fbd97e8e~0",
+          "N~1135~900~0~#173d70~GND~ggeR30a4d40d9519c~start~1135~895~Arial~10pt~0",
+          "W~1135 925 1210 925~#14803c~1~0~none~ggeR34860f8f95480~0",
+          "N~1135~925~0~#173d70~GND~ggeR3c04589310197~start~1135~920~Arial~10pt~0",
+          "W~1135 950 1210 950~#14803c~1~0~none~ggeR326818a3f317f~0",
+          "N~1135~950~0~#173d70~GND~ggeR3601eea97f008~start~1135~945~Arial~10pt~0",
+          "W~1135 975 1210 975~#14803c~1~0~none~ggeR387028f40c346~0",
+          "N~1135~975~0~#173d70~GND~ggeR39ce7420376cc~start~1135~970~Arial~10pt~0",
+          "T~L~1125~1035~0~#173d70~Arial~11pt~~~~comment~J2 → J2P / J2N~1~start~ggeR3a7b5efd957a6~0~"
+        ],
+        "BBox": {
+          "x": 0,
+          "y": 0,
+          "width": 1570,
+          "height": 1140
+        },
+        "colors": {}
+      }
+    }
+  ]
+}

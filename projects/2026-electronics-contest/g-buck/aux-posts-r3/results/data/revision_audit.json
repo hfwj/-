@@ -1,0 +1,53 @@
+[
+  {
+    "board": "Mainboard",
+    "before_components": 44,
+    "after_components": 45,
+    "before_pins": 135,
+    "after_pins": 141,
+    "removed": [
+      "J4"
+    ],
+    "added": [
+      "J4P",
+      "J4N"
+    ],
+    "retained_pin_maps_unchanged": true,
+    "source": "projects/2026-electronics-contest/g-buck/mainboard-r2/schematic/native/Mainboard_Functional_Blocks.json"
+  },
+  {
+    "board": "Control",
+    "before_components": 24,
+    "after_components": 25,
+    "before_pins": 110,
+    "after_pins": 116,
+    "removed": [
+      "JP"
+    ],
+    "added": [
+      "JPP",
+      "JPN"
+    ],
+    "retained_pin_maps_unchanged": true,
+    "source": "projects/2026-electronics-contest/g-buck/modular-v1-1/schematic/standard_json/C_MCU_LCD.json"
+  },
+  {
+    "board": "Auxiliary",
+    "before_components": 3,
+    "after_components": 5,
+    "before_pins": 8,
+    "after_pins": 20,
+    "removed": [
+      "J2",
+      "J1"
+    ],
+    "added": [
+      "J1P",
+      "J1N",
+      "J2P",
+      "J2N"
+    ],
+    "retained_pin_maps_unchanged": true,
+    "source": "projects/2026-electronics-contest/g-buck/modular-v1-1/schematic/standard_json/D_Aux_Power.json"
+  }
+]

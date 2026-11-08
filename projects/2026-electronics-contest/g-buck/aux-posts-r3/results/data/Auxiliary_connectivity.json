@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "components": 5,
+  "pins": 20,
+  "no_connect_pins": 0,
+  "wire_segments": 20,
+  "embedded_symbols": 5,
+  "index_sheet_resolved": true,
+  "comparison": "R3 expected pin map; retained non-interface pins audited against baseline",
+  "errors": [],
+  "native_editor_erc": "NOT RUN",
+  "footprints": "NOT ASSIGNED",
+  "hardware": "NOT TESTED"
+}

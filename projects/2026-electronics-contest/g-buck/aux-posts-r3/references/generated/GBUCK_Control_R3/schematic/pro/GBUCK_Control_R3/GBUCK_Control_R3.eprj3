@@ -1,0 +1,62 @@
+{
+  "name": "GBUCK_Control_R3",
+  "owner_uuid": "",
+  "creator_uuid": "",
+  "modifier_uuid": "",
+  "created_at": "2026-11-08 12:00:00",
+  "updated_at": "2026-11-08 12:00:00",
+  "content": "G题主功率+CC主板R2；封装未绑定；接线柱型号和尺寸待定",
+  "archive": false,
+  "cbb_project": 0,
+  "thumb": "",
+  "ticket": 1,
+  "g_ticket": 1,
+  "boards": [],
+  "block_symbol_attrs_groups": {},
+  "default_sheet": "4bffab185d72a744",
+  "branch_uuid": "",
+  "pcb_count": 0,
+  "format": "folder",
+  "profile": {
+    "boards": {
+      "c35cb75ab5e27dab": {
+        "uuid": "c35cb75ab5e27dab",
+        "title": "Control_R3",
+        "zIndex": 1
+      }
+    },
+    "schematics": {
+      "41f3976928a82138": {
+        "uuid": "41f3976928a82138",
+        "name": "Control",
+        "board": "c35cb75ab5e27dab",
+        "source": "",
+        "version": "1794117407452",
+        "updateTime": 1794117407452
+      }
+    },
+    "sheets": {
+      "4bffab185d72a744": {
+        "uuid": "4bffab185d72a744",
+        "title": "MCU_LCD",
+        "schematic_uuid": "41f3976928a82138",
+        "zIndex": 1,
+        "source": "",
+        "version": "1794117407452",
+        "updateTime": 1794117407452
+      }
+    },
+    "pcbs": {},
+    "panels": {},
+    "blockSymbols": {},
+    "owner": {
+      "uuid": ""
+    },
+    "simSchematics": {},
+    "simulations": {}
+  },
+  "config": {
+    "defaultSheet": "4bffab185d72a744",
+    "settings": {}
+  }
+}
