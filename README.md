@@ -10,7 +10,7 @@
 
 ## 项目目录
 
-2026-11-08：[R6插拔式主控适配前置核对](projects/2026-electronics-contest/g-buck/socket-adaptation-r6/README.md)。用户已有STM32核心板和屏幕，待提供具体型号；仅整理接口要求，R5原理图/BOM、模型与固件未改，尚无R6工程。
+2026-11-08：[R6可拔插主控与屏幕：已选模块、原理图及BOM](projects/2026-electronics-contest/g-buck/socket-adaptation-r6/README.md) · [eprj3完整工程](projects/2026-electronics-contest/g-buck/socket-adaptation-r6/downloads/GBUCK_System_R6_EPRJ3.zip)。WeAct BluePill-Plus V1.1/ST STM32F103C8T6＋Joy-IT SBC-LCD84x48 Rev.2，通过排母安装；主控底板17件88脚，另采购两个模块。相对R5更改插座/JLCD脚序、电压ADC至PA2及减小键至PB10，需改固件配置；主功率/辅源图页和10针接口不变，模型未改。静态网络及官方只读查看器通过；封装/PCB、供电容差、实物和代焊订单仍待核。
 
 2026-11-08：[R5主控六区＋辅助降压三区原理图及BOM](projects/2026-electronics-contest/g-buck/partition-r5/README.md) · [eprj3完整工程](projects/2026-electronics-contest/g-buck/partition-r5/downloads/GBUCK_System_R5_EPRJ3.zip)。两板36件150脚，重画分区及实际连线，保留R4网络/标称值；补全部分0805建议选型，固件/模型不改。用户确认保留通孔件，由工厂贴片＋插件焊接，替代此前全SMT要求；实际料号/订单审核、封装/PCB/实测仍待完成。
 

@@ -1,0 +1,3 @@
+﻿位号,数量,厂家,型号,装配,接口,采购约束,基础库,来源
+MCORE,1,WeAct Studio,BluePill-Plus V1.1 / STM32F103C8T6,现成核心板，需已焊两条1x20直排针；插入JCORE1/JCORE2,P1/P2各20针，2.54mm；P3为核心板自身SWD,必须ST STM32F103C8T6版；U3 SPI Flash不装；SB1默认断开；不能用GD/APM/CH版或通用Blue Pill替代,成品模块，非SMT基础库；单独采购；不承诺代插装,https://github.com/WeActStudio/BluePill-Plus
+MLCD,1,Joy-IT,SBC-LCD84x48 Revision 2 / PCD8544,现成84x48液晶，需已焊1x8直排针；插入JLCD,8针；仅3.3V逻辑/供电；Rev.2专用脚序,锁定Revision 2；到货按原厂手册逐脚核对；确认针距2.54mm及针长可配排母,成品模块，非SMT基础库；单独采购；不承诺代插装,https://joy-it.net/en/products/SBC-LCD84x48

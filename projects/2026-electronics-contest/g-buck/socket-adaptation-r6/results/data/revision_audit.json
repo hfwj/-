@@ -1,0 +1,36 @@
+{
+  "baseline": "75ab883 R5 actual schematic; 78c6cb6 pending R6 requirements",
+  "carrier_components": 17,
+  "carrier_pins": 88,
+  "carrier_NC": 23,
+  "system_board_mounted_components": 73,
+  "plug_in_modules": 2,
+  "removed_carrier_refs": [
+    "U6",
+    "R16",
+    "C15",
+    "R17",
+    "R18",
+    "C16",
+    "C17",
+    "C18",
+    "C19",
+    "JSWD"
+  ],
+  "GPIO_changes": {
+    "VOUT_ADC": [
+      "PA0/ADC_IN0",
+      "PA2/ADC_IN2"
+    ],
+    "KEY_DOWN": [
+      "PA11",
+      "PB10"
+    ]
+  },
+  "main_auxiliary_sheets_byte_identical_to_R5": true,
+  "IDC_J1_equals_R5": true,
+  "native_editor_ERC": false,
+  "footprints_bound": false,
+  "PCB": false,
+  "hardware_test": false
+}

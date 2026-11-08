@@ -1,0 +1,65 @@
+{
+  "core": {
+    "P1": [
+      "VCC",
+      "GND",
+      "3V3",
+      "NRST",
+      "PB11",
+      "PB10",
+      "PB1",
+      "PB0",
+      "PA7",
+      "PA6",
+      "PA5",
+      "PA4",
+      "PA3",
+      "PA2",
+      "PA1",
+      "PA0",
+      "PC15",
+      "PC14",
+      "PC13",
+      "VB"
+    ],
+    "P2": [
+      "PB12",
+      "PB13",
+      "PB14",
+      "PB15",
+      "PA8",
+      "PA9",
+      "PA10",
+      "PA11",
+      "PA12",
+      "PA15",
+      "PB3",
+      "PB4",
+      "PB5",
+      "PB6",
+      "PB7",
+      "PB8",
+      "PB9",
+      "VCC",
+      "GND",
+      "3V3"
+    ],
+    "P3": [
+      "3V3",
+      "SWDIO",
+      "SWCLK",
+      "GND"
+    ]
+  },
+  "lcd_revision_2": [
+    "GND",
+    "LIGHT",
+    "VCC",
+    "CLK",
+    "DIN",
+    "DC",
+    "CE",
+    "RST"
+  ],
+  "weact_source_commit": "8d9dbd901587487274645c4afd3bf812a54ae351"
+}

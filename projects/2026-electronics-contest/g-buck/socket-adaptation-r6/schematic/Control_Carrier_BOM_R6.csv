@@ -1,0 +1,18 @@
+﻿板,功能区,位号,原标称,推荐规格,厂家型号,立创料号,封装,SMT库别,备注,核对日期,来源
+Control,04 可拔插Joy-IT Rev.2屏幕,JLCD,8针屏幕接口,Harwin 1x8排母 P2.54mm；配Joy-IT SBC-LCD84x48 Rev.2,M20-7820846,未核实,THT 1x8 P2.54mm；3mm焊尾；封装待绑定,通孔件，非SMT基础库；代焊需订单审核,新脚序：1GND/2LIGHT接GND/3VCC/4CLK/5DIN/6DC/7CE/8RST；禁止接Rev.1；模块需带已焊排针；装配前确认针距、方向、插入长度,2026-11-08,https://www.harwin.com/products/M20-7820846
+Control,03 主功率板接口与I2C上拉,J1,TO BOARD B,10针主板接口，接主板J3,2.54-2*5P简牛 BOOMELE,C5665,THT 2x5 P2.54mm,插件焊接，具体订单审核,本轮仅改电源接口，非接口器件沿用基准；未重新选型,2026-11-08,
+Control,03 主功率板接口与I2C上拉,R14,4.7k,4.7kΩ ±1% 1/8W,4.7k,,0805,沿用V1.1，库别未核实,本轮仅改电源接口，非接口器件沿用基准；未重新选型；料号待核实,2026-11-08,
+Control,03 主功率板接口与I2C上拉,R15,4.7k,4.7kΩ ±1% 1/8W,4.7k,,0805,沿用V1.1，库别未核实,本轮仅改电源接口，非接口器件沿用基准；未重新选型；料号待核实,2026-11-08,
+Control,05 三个操作按键与上拉,R19,10k,10kΩ ±1% 1/8W,0805W8F1002T5E,C17414,0805,基础库（沿用已核实料号）,补全主控建议选型，10k标称值不变，未绑定封装,2026-11-08,https://jlcpcb.com/partdetail/C17414
+Control,05 三个操作按键与上拉,R20,10k,10kΩ ±1% 1/8W,0805W8F1002T5E,C17414,0805,基础库（沿用已核实料号）,补全主控建议选型，10k标称值不变，未绑定封装,2026-11-08,https://jlcpcb.com/partdetail/C17414
+Control,05 三个操作按键与上拉,R21,10k,10kΩ ±1% 1/8W,0805W8F1002T5E,C17414,0805,基础库（沿用已核实料号）,补全主控建议选型，10k标称值不变，未绑定封装；KEY_DOWN现在接核心板PB10，原PA11保留给USB,2026-11-08,https://jlcpcb.com/partdetail/C17414
+Control,05 三个操作按键与上拉,K1,NO momentary,NO momentary,NO momentary,,2-pin normally-open switch; verify physical contacts,沿用V1.1，库别未核实,本轮仅改电源接口，非接口器件沿用基准；未重新选型,2026-11-08,
+Control,05 三个操作按键与上拉,K2,NO momentary,NO momentary,NO momentary,,2-pin normally-open switch; verify physical contacts,沿用V1.1，库别未核实,本轮仅改电源接口，非接口器件沿用基准；未重新选型,2026-11-08,
+Control,05 三个操作按键与上拉,K3,NO momentary,NO momentary,NO momentary,,2-pin normally-open switch; verify physical contacts,沿用V1.1，库别未核实,本轮仅改电源接口，非接口器件沿用基准；未重新选型；KEY_DOWN现在接核心板PB10，原PA11保留给USB,2026-11-08,
+Control,01 供电接线柱与底板储能,C20,4.7uF,4.7uF ≥10V X7R/X5R,4.7uF,,0805候选，偏压容值待核,沿用V1.1，库别未核实,保留4.7uF底板储能，放在核心板插座电源入口；模块内部去耦不在底板重复计数；完整料号/有效容值待核,2026-11-08,
+Control,04 可拔插Joy-IT Rev.2屏幕,C21,100nF,100nF 50V X7R ±10%,CC0805KRX7R9BB104,C49678,0805,基础库（沿用已核实料号）,补全建议耐压/封装，100nF标称值不变；未绑定封装,2026-11-08,https://jlcpcb.com/partdetail/C49678
+Control,04 可拔插Joy-IT Rev.2屏幕,C22,1uF,1uF ≥10V X7R/X5R,1uF,,0805候选，偏压容值待核,沿用V1.1，库别未核实,本轮仅改电源接口，非接口器件沿用基准；未重新选型；完整料号待核实,2026-11-08,
+Control,01 供电接线柱与底板储能,JPP,JP,单极四脚板凳式焊接接线柱；按实际负载/瞬态/保护核对承流,待定：四脚同体导通、横梁供鳄鱼夹夹持,,THT 4P，尺寸/孔距/孔径待定,非SMT/通孔手焊,四脚全部接+3V3；替代原JP相应电极；需核实厂家承流与机械图；取消统一≥5A采购要求；不影响L1的Isat≥5A要求,2026-11-08,
+Control,01 供电接线柱与底板储能,JPN,JP,单极四脚板凳式焊接接线柱；按实际负载/瞬态/保护核对承流,待定：四脚同体导通、横梁供鳄鱼夹夹持,,THT 4P，尺寸/孔距/孔径待定,非SMT/通孔手焊,四脚全部接GND；替代原JP相应电极；需核实厂家承流与机械图；取消统一≥5A采购要求；不影响L1的Isat≥5A要求,2026-11-08,
+Control,02 可拔插WeAct核心板：两条20针排母,JCORE1,新增核心板插座,Harwin 1x20排母 P2.54mm；0.64mm方针；板上高8.5mm,M20-7822046,未核实,THT 1x20 P2.54mm；3mm焊尾；封装待绑定,通孔件，非SMT基础库；代焊需订单审核,两条排母共同承接一块WeAct BluePill-Plus V1.1；两排中心距原厂外形图标15.22mm，实物复核后布局；非2x20连接器,2026-11-08,https://www.harwin.com/products/M20-7822046
+Control,02 可拔插WeAct核心板：两条20针排母,JCORE2,新增核心板插座,Harwin 1x20排母 P2.54mm；0.64mm方针；板上高8.5mm,M20-7822046,未核实,THT 1x20 P2.54mm；3mm焊尾；封装待绑定,通孔件，非SMT基础库；代焊需订单审核,两条排母共同承接一块WeAct BluePill-Plus V1.1；两排中心距原厂外形图标15.22mm，实物复核后布局；非2x20连接器,2026-11-08,https://www.harwin.com/products/M20-7822046

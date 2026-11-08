@@ -1,0 +1,33 @@
+{
+  "errors": [],
+  "context": {
+    "projectId": "GBUCK_R6",
+    "revision": "R6",
+    "documents": [
+      {
+        "id": "schematic:313b0a653222b232",
+        "nodeId": "sheet2",
+        "group": "schematic",
+        "title": "Mainboard_6_Blocks"
+      },
+      {
+        "id": "schematic:e47ca70c15c6fcd8",
+        "nodeId": "sheet4",
+        "group": "schematic",
+        "title": "Auxiliary_Blocks"
+      },
+      {
+        "id": "schematic:713ce91431fc68bd",
+        "nodeId": "sheet6",
+        "group": "schematic",
+        "title": "Control_Sockets_R6"
+      }
+    ],
+    "currentDocument": {
+      "id": "schematic:313b0a653222b232",
+      "nodeId": "sheet2",
+      "group": "schematic",
+      "title": "Mainboard_6_Blocks"
+    }
+  }
+}
