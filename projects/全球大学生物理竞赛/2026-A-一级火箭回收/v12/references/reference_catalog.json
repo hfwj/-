@@ -1,0 +1,111 @@
+[
+  {
+    "id": 1,
+    "bibliography": "[1] University Physics Competition. *The 2026 University Physics Competition Problems*, Problem A. <https://university-physics-competition.com/2026-competition>. Accessed 7 November 2026.",
+    "urls": [
+      "https://university-physics-competition.com/2026-competition"
+    ],
+    "checked_UTC_date": "2026-11-07",
+    "verification": "Primary-source pages or official software publication/documentation records consulted"
+  },
+  {
+    "id": 2,
+    "bibliography": "[2] NOAA, NASA, and U.S. Air Force. *U.S. Standard Atmosphere, 1976*. NOAA-S/T-76-1562; NASA-TM-X-74335, 1976. <https://ntrs.nasa.gov/citations/19770009539>.",
+    "urls": [
+      "https://ntrs.nasa.gov/citations/19770009539"
+    ],
+    "checked_UTC_date": "2026-11-07",
+    "verification": "Primary-source pages or official software publication/documentation records consulted"
+  },
+  {
+    "id": 3,
+    "bibliography": "[3] NASA NSSDC. *Earth Fact Sheet*. Volumetric mean radius and standard gravitational acceleration. <https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html>. Accessed 7 November 2026.",
+    "urls": [
+      "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+    ],
+    "checked_UTC_date": "2026-11-07",
+    "verification": "Primary-source pages or official software publication/documentation records consulted"
+  },
+  {
+    "id": 4,
+    "bibliography": "[4] G. Petit and B. Luzum, eds. *IERS Conventions (2010)*. IERS Technical Note 36, numerical standards, 2010. <https://iers-conventions.obspm.fr/conventions/content/tn36.pdf>.",
+    "urls": [
+      "https://iers-conventions.obspm.fr/conventions/content/tn36.pdf"
+    ],
+    "checked_UTC_date": "2026-11-07",
+    "verification": "Primary-source pages or official software publication/documentation records consulted"
+  },
+  {
+    "id": 5,
+    "bibliography": "[5] NASA Glenn Research Center. *Specific Impulse*. <https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/>. Accessed 7 November 2026.",
+    "urls": [
+      "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/specific-impulse/"
+    ],
+    "checked_UTC_date": "2026-11-07",
+    "verification": "Primary-source pages or official software publication/documentation records consulted"
+  },
+  {
+    "id": 6,
+    "bibliography": "[6] NASA Glenn Research Center. *Drag Coefficient*. <https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/drag-coefficient/>. Accessed 7 November 2026.",
+    "urls": [
+      "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/drag-coefficient/"
+    ],
+    "checked_UTC_date": "2026-11-07",
+    "verification": "Primary-source pages or official software publication/documentation records consulted"
+  },
+  {
+    "id": 7,
+    "bibliography": "[7] J. A. E. Andersson, J. Gillis, G. Horn, J. B. Rawlings, and M. Diehl. CasADi: A software framework for nonlinear optimization and optimal control. *Mathematical Programming Computation*, 11:1--36, 2019. <https://doi.org/10.1007/s12532-018-0139-4>.",
+    "urls": [
+      "https://doi.org/10.1007/s12532-018-0139-4"
+    ],
+    "checked_UTC_date": "2026-11-07",
+    "verification": "Primary-source pages or official software publication/documentation records consulted"
+  },
+  {
+    "id": 8,
+    "bibliography": "[8] A. Wächter and L. T. Biegler. On the implementation of a primal-dual interior point filter line search algorithm for large-scale nonlinear programming. *Mathematical Programming*, 106:25--57, 2006. <https://doi.org/10.1007/s10107-004-0559-y>.",
+    "urls": [
+      "https://doi.org/10.1007/s10107-004-0559-y"
+    ],
+    "checked_UTC_date": "2026-11-07",
+    "verification": "Primary-source pages or official software publication/documentation records consulted"
+  },
+  {
+    "id": 9,
+    "bibliography": "[9] SciPy developers. *solve_ivp: Initial-value problem solvers*. SciPy documentation. <https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html>. Accessed 7 November 2026; computations used SciPy 1.17.0.",
+    "urls": [
+      "https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html"
+    ],
+    "checked_UTC_date": "2026-11-07",
+    "verification": "Primary-source pages or official software publication/documentation records consulted"
+  },
+  {
+    "id": 10,
+    "bibliography": "[10] A. Marwege, D. Kirchheck, J. Klevanski, and A. Gülhan. Hypersonic retro propulsion for reusable launch vehicles tested in the H2K wind tunnel. *CEAS Space Journal*, 14:473--499, 2022. <https://doi.org/10.1007/s12567-022-00457-w>; author-institution record: <https://elib.dlr.de/188153/>.",
+    "urls": [
+      "https://doi.org/10.1007/s12567-022-00457-w",
+      "https://elib.dlr.de/188153/"
+    ],
+    "checked_UTC_date": "2026-11-07",
+    "verification": "Primary-source pages or official software publication/documentation records consulted"
+  },
+  {
+    "id": 11,
+    "bibliography": "[11] K. Sutton and R. A. Graves, Jr. *A General Stagnation-Point Convective Heating Equation for Arbitrary Gas Mixtures*. NASA-TR-R-376, 1971. <https://ntrs.nasa.gov/citations/19720003329>.",
+    "urls": [
+      "https://ntrs.nasa.gov/citations/19720003329"
+    ],
+    "checked_UTC_date": "2026-11-07",
+    "verification": "Primary-source pages or official software publication/documentation records consulted"
+  },
+  {
+    "id": 12,
+    "bibliography": "[12] University Physics Competition. *Contest Rules*, solution papers and generative AI provisions. <https://university-physics-competition.com/contest-rules>. Accessed 7 November 2026.",
+    "urls": [
+      "https://university-physics-competition.com/contest-rules"
+    ],
+    "checked_UTC_date": "2026-11-07",
+    "verification": "Primary-source pages or official software publication/documentation records consulted"
+  }
+]

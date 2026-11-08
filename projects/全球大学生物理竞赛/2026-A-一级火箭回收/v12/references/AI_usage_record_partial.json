@@ -1,0 +1,19 @@
+{
+  "system": "ChatGPT via Codex workspace assistant",
+  "verified_model_release": null,
+  "current_manuscript_output": "reports/UPC_2026_A_Paper_Draft02_EN.md",
+  "scope": [
+    "manuscript drafting",
+    "numerical-source consolidation",
+    "figure generation",
+    "document formatting and checks",
+    "figure revision",
+    "same-model frozen-plan trajectory export"
+  ],
+  "earlier_full_queries_and_outputs_available_as_verified_transcript": false,
+  "disclosure_complete": false,
+  "required_next_step": "Append verbatim queries and complete outputs from actual session exports; do not replace with summaries or repository links",
+  "revision_request_readable": "Add mission/geometry schematic, M0-optimization-M1 workflow with G/L/H/U, nine-case trajectory sensitivity grid, passive height-range curves, and throttle-response figure; integrate into paper.",
+  "revision_request_verified_verbatim_export": false,
+  "initial_drafting_prompt_exact": "写出最终论文初版"
+}

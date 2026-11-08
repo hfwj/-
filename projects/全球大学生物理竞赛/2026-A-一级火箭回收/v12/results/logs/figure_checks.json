@@ -1,0 +1,75 @@
+{
+  "main_figures": 9,
+  "requested_added_figures": 5,
+  "supplement_full_history": true,
+  "sensitivity_cases": [
+    {
+      "case": "Cd_minus10pct",
+      "samples": 4657,
+      "event": "REFERENCE_CONTACT",
+      "no_extrapolation_past_recorded_event": true,
+      "original_endpoint_difference": 0.0
+    },
+    {
+      "case": "Cd_plus10pct",
+      "samples": 5001,
+      "event": "NO_CONTACT_BY_PLANNED_END",
+      "no_extrapolation_past_recorded_event": true,
+      "original_endpoint_difference": 0.0
+    },
+    {
+      "case": "Isp_minus1pct",
+      "samples": 4970,
+      "event": "USABLE_PROPELLANT_EXHAUSTED",
+      "no_extrapolation_past_recorded_event": true,
+      "original_endpoint_difference": 0.0
+    },
+    {
+      "case": "Isp_plus1pct",
+      "samples": 4777,
+      "event": "REFERENCE_CONTACT",
+      "no_extrapolation_past_recorded_event": true,
+      "original_endpoint_difference": 0.0
+    },
+    {
+      "case": "rho_minus5pct",
+      "samples": 4758,
+      "event": "REFERENCE_CONTACT",
+      "no_extrapolation_past_recorded_event": true,
+      "original_endpoint_difference": 0.0
+    },
+    {
+      "case": "rho_plus5pct",
+      "samples": 5001,
+      "event": "NO_CONTACT_BY_PLANNED_END",
+      "no_extrapolation_past_recorded_event": true,
+      "original_endpoint_difference": 0.0
+    },
+    {
+      "case": "initial_vt_minus1m_s",
+      "samples": 4954,
+      "event": "REFERENCE_CONTACT",
+      "no_extrapolation_past_recorded_event": true,
+      "original_endpoint_difference": 0.0
+    },
+    {
+      "case": "initial_vt_plus1m_s",
+      "samples": 5001,
+      "event": "NO_CONTACT_BY_PLANNED_END",
+      "no_extrapolation_past_recorded_event": true,
+      "original_endpoint_difference": 0.0
+    },
+    {
+      "case": "initial_vr_minus1m_s",
+      "samples": 4870,
+      "event": "REFERENCE_CONTACT",
+      "no_extrapolation_past_recorded_event": true,
+      "original_endpoint_difference": 0.0
+    }
+  ],
+  "passive_endpoints_match": true,
+  "response_max_difference_from_original": 0.0,
+  "geometry_G_H_dimensions_consistent": true,
+  "M1_stage_displayed_as_pending": true,
+  "full_safety_verified": false
+}

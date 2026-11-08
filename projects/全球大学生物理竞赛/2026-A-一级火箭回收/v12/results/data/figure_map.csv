@@ -1,0 +1,10 @@
+figure,section,file_stem,scope
+1,1,mission_geometry,M0 path and illustrative H geometry
+2,2.1,method_workflow,Implemented M0/search; M1 pending
+3,3.1,passive_diagnostics,Dry 130 t cases; not fueled-candidate impacts
+4,4.3,throttle_response,Assumed Eq.6; not measured engine data
+5,6.1,trajectory,Existing nominal M0
+6,6.1,controls,Existing actual throttle / thrust direction
+7,7.2,sensitivity_grid,Nine same-model replays; actual stop events
+8,8.1,attitude,"Necessary angular bounds, not solved M1"
+9,9.1,contact_geometry,Assumed deployed geometry

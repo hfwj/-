@@ -1,0 +1,20 @@
+[
+  {
+    "case": "vacuum_130t",
+    "surface_speed_m_s": 2034.126669272234,
+    "range_km": 204.7460185259253,
+    "height_m": 0.0
+  },
+  {
+    "case": "air_130t_Cd0.5",
+    "surface_speed_m_s": 607.8044811036324,
+    "range_km": 202.01930813217513,
+    "height_m": 0.0
+  },
+  {
+    "case": "air_130t_Cd1",
+    "surface_speed_m_s": 295.8214798254607,
+    "range_km": 198.4985867546403,
+    "height_m": 0.0
+  }
+]
