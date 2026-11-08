@@ -16,9 +16,11 @@ The user also explicitly instructed: “以后每次修改 都标明对原理图
 
 Apply this to simulation-only modifications too. For documentation or workflow-only edits, state that the edit does not change the schematic or physical components. This reporting requirement does not introduce a new permission or approval step.
 
-## Wiring connection preference
+## Wiring connection and assembly preferences
 
-Latest user preference: “板凳式焊接接线柱” for crocodile-clip power connections. For future designs use exposed bench-style solder posts mounted directly through the PCB, preferably four conductive feet and a sturdy clip-accessible bridge. Each conductive post is one electrical pole; all its conductive feet connect to that pole. Input positive/negative and output positive/negative require four separate posts. Verify manufacturer rating (procurement target >=5A), material, dimensions, drill/pitch and clip clearance before footprint binding. Do not invent part numbers or dimensions from generic PCB-1 descriptions. This supersedes earlier solder-pad and panel-binding-post defaults. Keep signal headers unless a design revision explicitly changes them. Apply and document connector, footprint, mechanical and BOM impacts; preserve archived versions.
+Latest user requirement: “我要用SMT技术完成所有元器件”. All future board-mounted components must use genuine surface-mount/reflow-compatible packages, including power clip contacts, signal connectors, electrolytic capacitors, buttons, LCD connector and debug connector. Through-hole bench posts and headers do not satisfy this requirement. Prefer bridge/loop-shaped SMT contacts accessible to crocodile clips; assess clip size, pad peel/strain and manufacturer current rating. SMT assembly is separate from JLC SMT Basic-library classification; an SMT part may be Extended. Do not label a BOM all-SMT while package or mounting method remains unverified.
+
+The former >=5A procurement target for bench posts is superseded. The user queried “不一定要大于等于5v吧”: distinguish current (A) from voltage (V). Select current ratings for the specific rail's continuous current, known transients, fault protection and thermal derating; do not require every rail to be >=5A. Select voltage rating/spacing for the actual rail voltage and transients (system input remains15–25V; auxiliary output3.3V). A 5V-only rating is not sufficient for 25V input. Do not invent part numbers, ratings or package dimensions. Main power and control rails remain separately reviewed; preserve archived versions and document actual BOM/pin/footprint changes when implemented.
 
 ## EDA delivery format preference
 
