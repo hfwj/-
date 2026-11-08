@@ -1,0 +1,86 @@
+[
+  {
+    "file": "2023-GM-A-227.pdf",
+    "sha256": "eae44754641f7feca7ca1d7202452fbfa2fd1adbd53eb2bc9fc921c19999e89b",
+    "pages": 22,
+    "page_size_pdf_pt": [
+      612.0,
+      792.0
+    ],
+    "fonts": [
+      {
+        "font": "URWPalladioL-Roma",
+        "pdf_points": 11.96,
+        "characters": 18141
+      },
+      {
+        "font": "NimbusMonL-Regu",
+        "pdf_points": 9.96,
+        "characters": 4730
+      },
+      {
+        "font": "URWPalladioL-Bold",
+        "pdf_points": 11.96,
+        "characters": 625
+      },
+      {
+        "font": "CMMI12",
+        "pdf_points": 11.96,
+        "characters": 620
+      },
+      {
+        "font": "CMR12",
+        "pdf_points": 11.96,
+        "characters": 586
+      },
+      {
+        "font": "NimbusSanL-Regu",
+        "pdf_points": 10.91,
+        "characters": 474
+      }
+    ],
+    "use": "Structure, typography, figure and caption conventions only; not a source of rocket numerical results."
+  },
+  {
+    "file": "2025-GM-A-112.pdf",
+    "sha256": "e70c742d7bbd9ced3e806c2044b932745187c0bf50cb993f443c54fa10a5c4d3",
+    "pages": 26,
+    "page_size_pdf_pt": [
+      595.2760009765625,
+      841.8900146484375
+    ],
+    "fonts": [
+      {
+        "font": "SFRM1095",
+        "pdf_points": 10.91,
+        "characters": 47411
+      },
+      {
+        "font": "SFRM1200",
+        "pdf_points": 11.96,
+        "characters": 2356
+      },
+      {
+        "font": "SFBX1095",
+        "pdf_points": 10.91,
+        "characters": 2272
+      },
+      {
+        "font": "SFBX1440",
+        "pdf_points": 14.35,
+        "characters": 1166
+      },
+      {
+        "font": "SFTI1095",
+        "pdf_points": 10.91,
+        "characters": 791
+      },
+      {
+        "font": "CMR10",
+        "pdf_points": 10.91,
+        "characters": 446
+      }
+    ],
+    "use": "Structure, typography, figure and caption conventions only; not a source of rocket numerical results."
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "baseline": "v21 e3d2d16",
+  "team": 856,
+  "pages": 28,
+  "ai_section_number": 10,
+  "ai_subsections": [
+    "10.1 System Used",
+    "10.2 Scope and Nature of Use",
+    "10.3 Content Authorship",
+    "10.4 Quality Assurance"
+  ],
+  "ai_pdf_page": 22,
+  "ai_full_history_complete": false,
+  "code_appendix_pages": [
+    24,
+    25,
+    26,
+    27,
+    28
+  ],
+  "previous_task_recap_removed": true,
+  "tables_and_listed_code_unchanged": true,
+  "latex_issues": [],
+  "numerical_mission_recalculated": false,
+  "isolated_source_compile": "PASS"
+}

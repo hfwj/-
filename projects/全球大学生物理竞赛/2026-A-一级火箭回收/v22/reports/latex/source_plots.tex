@@ -1,0 +1,82 @@
+\definecolor{sourceRed}{RGB}{176,58,46}
+\definecolor{sourceOrange}{RGB}{224,138,60}
+\definecolor{sourceGreen}{RGB}{46,125,50}
+\definecolor{sourceBlue}{RGB}{31,78,121}
+\definecolor{sourcePurple}{RGB}{106,61,154}
+% Source PNG bytes remain unchanged. Only label regions are typeset over in LaTeX.
+\newcommand{\SourceHistory}[3]{%
+\begin{tikzpicture}
+\node[anchor=south west,inner sep=0] (im) at (0,0) {\includegraphics[width=\linewidth]{#1}};
+\begin{scope}[x={(im.south east)},y={(im.north west)}]
+\fill[white] (0,.14) rectangle (.042,.91);
+\fill[white] (0,0) rectangle (1,.085);
+\fill[white] (0,.915) rectangle (1,1);
+\node[rotate=90,font=\small] at (.021,.52) {#2};
+\node[font=\small] at (.53,.045) {Time after separation $t$ (s)};
+\node[font=\small] at (.53,.97) {#3};
+\end{scope}
+\end{tikzpicture}}
+\newcommand{\SourceTrajectory}{%
+\begin{tikzpicture}
+\node[anchor=south west,inner sep=0] (im) at (0,0) {\includegraphics[width=\linewidth]{source9.png}};
+\begin{scope}[x={(im.south east)},y={(im.north west)}]
+\fill[white] (0,0) rectangle (1,.085);
+\fill[white] (0,.925) rectangle (1,1);
+\fill[white] (0,.13) rectangle (.037,.91);
+\fill[white] (.565,.13) rectangle (.593,.91);
+\node[rotate=90,font=\footnotesize] at (.019,.52) {Altitude $h$ (km)};
+\node[rotate=90,font=\footnotesize] at (.581,.52) {Altitude $h$ (km)};
+\node[font=\footnotesize] at (.295,.045) {Surface range $s$ (km)};
+\node[font=\footnotesize] at (.795,.045) {Surface range $s$ (km)};
+\node[font=\footnotesize] at (.295,.968) {(a) Full trajectory; dots: landing ignition};
+\node[font=\footnotesize] at (.795,.968) {(b) Terminal region below 60 km};
+\fill[white] (.437,.68) rectangle (.542,.916);
+\foreach \yy/\cc/\txt in {.885/sourceRed/{90 t (fail)},.840/sourceOrange/{110 t},.795/sourceGreen/{130 t},.750/sourceBlue/{150 t},.705/sourcePurple/{200 t}}{
+\draw[\cc,line width=1pt] (.442,\yy)--(.464,\yy);
+\node[anchor=west,font=\scriptsize] at (.470,\yy) {\txt};}
+\end{scope}
+\end{tikzpicture}}
+\newcommand{\SourceFuelPlot}{%
+\begin{tikzpicture}
+\node[anchor=south west,inner sep=0] (im) at (0,0) {\includegraphics[width=\linewidth]{source13.png}};
+\begin{scope}[x={(im.south east)},y={(im.north west)}]
+\fill[white] (0,0) rectangle (1,.085);
+\fill[white] (0,.915) rectangle (1,1);
+\fill[white] (0,.16) rectangle (.042,.91);
+\node[rotate=90,font=\small] at (.021,.53) {Propellant consumed (t)};
+\node[font=\small] at (.53,.045) {Initial total propellant $m_{p,0}$ (t)};
+\node[font=\small] at (.53,.969) {Propellant allocation across the baseline load scan};
+\fill[white] (.106,.74) rectangle (.252,.905);
+\draw[dashed,line width=.8pt] (.113,.87)--(.14,.87);
+\node[anchor=west,font=\scriptsize] at (.15,.87) {Available load};
+\fill[sourceBlue] (.113,.81) rectangle (.14,.835);
+\node[anchor=west,font=\scriptsize] at (.15,.823) {Entry burn};
+\fill[sourceRed] (.113,.76) rectangle (.14,.785);
+\node[anchor=west,font=\scriptsize] at (.15,.773) {Landing burn};
+\fill[white] (.276,.82) rectangle (.39,.905);
+\node[anchor=west,font=\scriptsize,text=sourceGreen] at (.28,.875) {$\sim105$ t};
+\node[anchor=west,font=\scriptsize,text=sourceGreen] at (.28,.838) {graphical estimate};
+\end{scope}
+\end{tikzpicture}}
+\newcommand{\SourceAttitudePlot}{%
+\begin{tikzpicture}
+\node[anchor=south west,inner sep=0] (im) at (0,0) {\includegraphics[width=\linewidth]{source14.png}};
+\begin{scope}[x={(im.south east)},y={(im.north west)}]
+\fill[white] (0,0) rectangle (1,.088);
+\fill[white] (0,.915) rectangle (1,1);
+\foreach \xx in {.171,.523,.865}{\node[font=\scriptsize] at (\xx,.04) {Time $t$ (s)};}
+\node[font=\scriptsize] at (.175,.969) {(a) RCS reorientation};
+\node[font=\scriptsize] at (.523,.969) {(b) Required thrust direction};
+\node[font=\scriptsize] at (.865,.969) {(c) Moment scales};
+\foreach \xa/\xb in {0/.028,.325/.348,.350/.372,.668/.688,.690/.711}{\fill[white] (\xa,.14) rectangle (\xb,.90);}
+\node[font=\tiny,rotate=90,text=sourceBlue] at (.015,.52) {Rotation angle (deg)};
+\node[font=\tiny,rotate=90,text=sourceRed] at (.337,.52) {Angular rate (deg/s)};
+\node[font=\tiny,rotate=90] at (.361,.52) {Thrust angle (deg)};
+\node[font=\tiny,rotate=90,text=sourceRed] at (.678,.52) {Direction rate (deg/s)};
+\node[font=\tiny,rotate=90] at (.701,.52) {Moment (N m)};
+\fill[white] (.873,.10) rectangle (.989,.32);
+\draw[sourceGreen,line width=.8pt] (.88,.27)--(.90,.27);\node[anchor=west,font=\tiny,inner sep=0pt] at (.900,.27) {Aerodynamic};
+\draw[sourceRed,dashed,line width=.8pt] (.88,.21)--(.90,.21);\node[anchor=west,font=\tiny,inner sep=0pt] at (.900,.21) {TVC, $5^\circ$};
+\draw[sourceBlue,dotted,line width=.8pt] (.88,.15)--(.90,.15);\node[anchor=west,font=\tiny,inner sep=0pt] at (.900,.15) {Grid fins};
+\end{scope}
+\end{tikzpicture}}
