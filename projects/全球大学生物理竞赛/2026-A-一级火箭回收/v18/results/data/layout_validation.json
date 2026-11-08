@@ -1,0 +1,14 @@
+{
+  "baseline": "v17 95d69ed",
+  "pages": 22,
+  "notation_individual_rows": 28,
+  "photo_inserted": false,
+  "photo_blocker": "Chat inline image has no local file; original download hosts denied by environment policy",
+  "undefined_references": false,
+  "overfull_boxes": false,
+  "coast_label_present": true,
+  "legend_outside_axes": true,
+  "new_simulation_run": false,
+  "original_source_retained": true,
+  "isolated_source_package_compile": "PASS"
+}
