@@ -1,11 +1,11 @@
 # Fdb version 4
-["xdvipdfmx"] 1794141030.45184 "build/main.xdv" "build/main.pdf" "build/main" 1794141031.12087 0
-  "build/main.xdv" 1794141030.39692 521936 c99ff4ff0fa18a126e35abd9bf180c9c "xelatex"
+["xdvipdfmx"] 1794141317.5138 "build/main.xdv" "build/main.pdf" "build/main" 1794141318.17452 0
+  "build/main.xdv" 1794141317.45699 521936 8d926eafb0063b2f49e262128b03d09b "xelatex"
   (generated)
   "build/main.pdf"
   (rewritten before read)
-["xelatex"] 1794141029.72002 "main.tex" "build/main.xdv" "main" 1794141031.11916 0
-  "../../results/figures/attitude_relayout.pdf" 1794140949.28079 39610 dde792e5a599ebd64a2974d52e18951c ""
+["xelatex"] 1794141316.62435 "main.tex" "build/main.xdv" "main" 1794141318.17277 0
+  "../../results/figures/attitude_relayout.pdf" 1794141316.32898 39635 325c4f826847d9e2faf72b50caa3410b ""
   "../../results/figures/source10.png" 1794138168.07929 116617 86e39e1f2c36ef014e446d0089efa55b ""
   "../../results/figures/source11.png" 1794138168.07964 89464 099f86d135982252e77669af9e75d0f6 ""
   "../../results/figures/source12.png" 1794138168.08 91959 5a857cbeaa59ccbf4a4521b152cb668f ""
@@ -201,9 +201,9 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1741904018 41538 c016915c1d51223b6dbbfe27341748a8 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1741904018 41538 c016915c1d51223b6dbbfe27341748a8 ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1792074917 4096195 6ef4e7695c045e1d6120477ead8f2f1b ""
-  "build/main.aux" 1794141030.39692 22782 2ec7be2a29d6e6fc4d18224fcd89541d "xelatex"
-  "build/main.out" 1794141030.39692 8894 13c16c39e141e2014cc4656fa38ce32f "xelatex"
-  "build/main.toc" 1794141030.39692 3729 825b751ce870cd4a848e0cd153360123 "xelatex"
+  "build/main.aux" 1794141317.45699 22782 2ec7be2a29d6e6fc4d18224fcd89541d "xelatex"
+  "build/main.out" 1794141317.45699 8894 13c16c39e141e2014cc4656fa38ce32f "xelatex"
+  "build/main.toc" 1794141317.45699 3729 825b751ce870cd4a848e0cd153360123 "xelatex"
   "config.tex" 1794138838.22129 30 e87950d693a4ed5bc2487ab0ba81fc01 ""
   "main.tex" 1794141029.6532 41605 0fe98092083ceade90e758e70b88e8f7 ""
   "source_plots.tex" 1794139411.2958 4704 5642add99c036f7b95d0cefc7974a482 ""

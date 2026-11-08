@@ -27,7 +27,7 @@ a=axs[0];a.set(xlim=(-5,101),ylim=(-9,189),ylabel='Rotation angle (deg)',title='
 ar=a.twinx();ar.set(ylim=(-.18,3.87),ylabel='Angular rate (deg/s)');trace(ar,(101,49,547,457),(-5,101),(-.18,3.87),'red');ar.tick_params(labelsize=9)
 a=axs[1];a.set(xlim=(245,379),ylim=(-48,2),ylabel='Thrust angle (deg)',title='(b) Powered-flight direction');trace(a,(717,49,1162,457),(245,379),(-48,2),'blue')
 ar=a.twinx();ar.set(ylim=(-3,3),ylabel='Direction rate (deg/s)');trace(ar,(717,49,1162,457),(245,379),(-3,3),'red');ar.tick_params(labelsize=9)
-a.axvspan(270,287,color='.92',zorder=-1);a.text(.5,-.27,'Gray band: unpowered coast\n(no thrust direction)',transform=a.transAxes,ha='center',fontsize=8)
+a.text(.5,-.27,'Unpowered coast between burns\n(no thrust direction)',transform=a.transAxes,ha='center',fontsize=8)
 a=axs[2];a.set(xlim=(-20,390),ylim=(1,1e8),ylabel='Moment (N m)',title='(c) Moment scales');a.set_yscale('log')
 for c,label,ls in [('green','Aerodynamic','-'),('red',r'TVC ($5^\circ$)','--'),('blue','Grid fins',':')]:
  trace(a,(1332,49,1779,457),(-20,390),(1,1e8),c,True,exclude=[(1572,380,1763,447)])

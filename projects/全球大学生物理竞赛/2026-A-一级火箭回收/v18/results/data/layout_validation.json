@@ -10,5 +10,6 @@
   "legend_outside_axes": true,
   "new_simulation_run": false,
   "original_source_retained": true,
-  "isolated_source_package_compile": "PASS"
+  "panel_b_gray_band": false,
+  "revision_baseline": "99ff509"
 }
