@@ -1,0 +1,3 @@
+reports/latex/build/
+__pycache__/
+*.pyc

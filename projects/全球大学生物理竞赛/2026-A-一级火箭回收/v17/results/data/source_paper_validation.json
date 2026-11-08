@@ -1,0 +1,54 @@
+{
+  "pdf_pages": 22,
+  "abstract_words": 232,
+  "figures": 10,
+  "tables": 19,
+  "source_tables_preserved": 18,
+  "source_curve_images_preserved": 6,
+  "references": 10,
+  "source_table_extraction_exact": true,
+  "source_curve_files_byte_identical": true,
+  "prior_result_arrays_used": false,
+  "simulation_rerun": false,
+  "baseline_perturbation_pass_cells": 15,
+  "parameterized_perturbation_pass_cells": 13,
+  "all_team_headers": true,
+  "overfull_boxes": 0,
+  "missing_glyphs": 0,
+  "unresolved_references": 0,
+  "font_profile": [
+    {
+      "font": "LMRoman10-Regular",
+      "pdf_points": 10.91,
+      "characters": 30672
+    },
+    {
+      "font": "LMRoman10-Regular",
+      "pdf_points": 9.96,
+      "characters": 8907
+    },
+    {
+      "font": "LMRoman12-Bold",
+      "pdf_points": 11.96,
+      "characters": 976
+    },
+    {
+      "font": "LMRoman12-Bold",
+      "pdf_points": 14.35,
+      "characters": 407
+    },
+    {
+      "font": "LMRoman10-Bold",
+      "pdf_points": 9.96,
+      "characters": 403
+    },
+    {
+      "font": "LMRoman9-Regular",
+      "pdf_points": 8.97,
+      "characters": 335
+    }
+  ],
+  "isolated_source_compilation": "PASS",
+  "isolated_pdf_text_matches": true,
+  "isolated_compile_uses_no_repository_paths": true
+}
