@@ -2,6 +2,8 @@
 
 按项目、版本和资料类型归档，报告、仿真源代码及验证数据一起保存。
 
+设计约定（2026-11-08）：后续不用螺丝接线端子；电源输入/输出优先用适配粗导线的大孔径通孔焊线焊盘，并预留导线固定措施。孔径随线径确定。相对e09c173，本次仅记录偏好，现有原理图、器件/BOM、PCB、仿真及固件均未修改。详见[仓库约定](AGENTS.md)。
+
 ## 项目目录
 
 2026-11-08：[G题主板手绘分区与BOM（SMT基础库优先）](projects/2026-electronics-contest/g-buck/mainboard-v1/reports/manual-drawing-2026-11-08/README.md) · [Word/PDF/Excel资料包](projects/2026-electronics-contest/g-buck/mainboard-v1/downloads/GBUCK_Manual_BOM_BasicFirst.zip)。42件/123脚，基础库已核实14件，另4件候选；连接和标称值不变，新增推荐封装与选型，未改模型/固件。

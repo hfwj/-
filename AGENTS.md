@@ -16,6 +16,10 @@ The user also explicitly instructed: “以后每次修改 都标明对原理图
 
 Apply this to simulation-only modifications too. For documentation or workflow-only edits, state that the edit does not change the schematic or physical components. This reporting requirement does not introduce a new permission or approval step.
 
+## Wiring connection preference
+
+The user explicitly instructed: “以后的设计都不要用接线端子换一个能用粗导线连接的装置”. For future designs, do not use screw terminal blocks. Default power input/output connections to large plated through-hole wire solder pads, sized for the actual wire gauge and current; provide strain relief such as adjacent cable-tie holes. Do not assume a drill size until the wire size is known. Select a suitable rated crimp connector only when disconnectability is required. This preference does not by itself retroactively change archived schematics or BOMs; identify connector/footprint/BOM impacts when applying it to a revision.
+
 ## Engineering evidence
 
 Keep assumptions, model validation, actual firmware tests and hardware measurements distinct. Do not describe behavioral switching models as manufacturer transistor models. Existing G题 results do not establish total efficiency, real firmware behavior, PCB/ERC/DRC readiness, or safe battery operation.
