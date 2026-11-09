@@ -1,0 +1,28 @@
+{
+  "design_baseline": "3c3574c R7",
+  "documentation_only": true,
+  "native_ERC_new_run": false,
+  "hardware_tests": false,
+  "sources": [
+    {
+      "path": "projects/2026-electronics-contest/g-buck/bluepill-carrier-r7/schematic/pro/GBUCK_System_R7/sch/Mainboard/Mainboard_6_Blocks.esch2",
+      "sha256": "b7ab1d67fbd6d45756d31257ba55e37c204a16507b3a4bd51030c5444e2292f5"
+    },
+    {
+      "path": "projects/2026-electronics-contest/g-buck/bluepill-carrier-r7/schematic/System_BOM_R7.csv",
+      "sha256": "eeecefca5b02915f4054b2e26176e36aa5290c4b9302d2e8056a1017cf8bcd2c"
+    },
+    {
+      "path": "projects/2026-electronics-contest/g-buck/aux-posts-r3/references/generated/GBUCK_Main_R3/results/data/expected_mainboard_pins.json",
+      "sha256": "3502b9d9a447979bcd1bb8b508c354941c30bdb1176c671c391e29324bd6987f"
+    },
+    {
+      "path": "projects/2026-electronics-contest/g-buck/rev-b/references/G题要求摘录.txt",
+      "sha256": "22e61d16232ae826746cb8ee4f4054b19e3184ced4d4ad26d6efacdce1ac68f5"
+    },
+    {
+      "path": "projects/2026-electronics-contest/g-buck/modular-v1-1/reports/C14偏压与7V余量补充核对.md",
+      "sha256": "99dd0691e7fa6093529749aba2609521eb8f51e640e58cc43abcdcca4f37987e"
+    }
+  ]
+}

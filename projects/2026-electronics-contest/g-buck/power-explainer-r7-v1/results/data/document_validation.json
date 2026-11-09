@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "baseline": "3c3574c R7",
+  "docx_container_valid": true,
+  "pdf_pages": 12,
+  "markdown_tables": 10,
+  "teaching_figures": 5,
+  "arithmetic_assertions_passed": true,
+  "selected_pin_topology_assertions_passed": true,
+  "PDF_has_extractable_Chinese": true,
+  "native_ERC_or_hardware_test": false,
+  "schematic_BOM_firmware_models_modified": false
+}

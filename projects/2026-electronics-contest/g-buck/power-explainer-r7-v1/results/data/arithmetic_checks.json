@@ -1,0 +1,27 @@
+{
+  "kind": "algebra_and_ideal_CCM_examples_only_not_hardware_or_dynamic_simulation",
+  "VFB_assumed_V": 0.596,
+  "VREG_offset_V": 12.516387717928701,
+  "VREG_gain_per_VSET": -1.7857142857142858,
+  "VSET_for_VREG_V": {
+    "10": 1.4091771220400726,
+    "8": 2.5291771220400725,
+    "7": 3.0891771220400726
+  },
+  "VSET_for_10V_load_at_0p5A_V": 1.3951771220400724,
+  "ISENSE_V_per_A": 1.0,
+  "DAC_A_LSB_V": 0.001,
+  "DAC_B_LSB_V": 0.0005,
+  "integrator_R12_C14_ms": {
+    "220": 22.0,
+    "160": 16.0,
+    "120": 12.0
+  },
+  "inductor_ripple_25V_to_10V_A": 0.6818181818181819,
+  "first_peak_estimates_A": {
+    "VREG10V_to8ohm": 1.2422360248447204,
+    "0p95A_8_to5ohm": 1.5143564356435644,
+    "1A_8_to5ohm": 1.5940594059405944
+  },
+  "efficiency_example_25V_8ohm_1A_85pct_input_A": 0.3764705882352941
+}

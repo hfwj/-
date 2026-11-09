@@ -26,6 +26,8 @@
 
 ## 项目目录
 
+2026-11-09：[G题主功率电路从零讲解（依据R7）](projects/2026-electronics-contest/g-buck/power-explainer-r7-v1/README.md) · [Word](projects/2026-electronics-contest/g-buck/power-explainer-r7-v1/reports/G_Buck_Mainboard_Explained_R7.docx) · [PDF](projects/2026-electronics-contest/g-buck/power-explainer-r7-v1/reports/G_Buck_Mainboard_Explained_R7.pdf)。12页图文说明，包含Buck原理、反馈设定、恒压恒流切换、采样换算与调试；只增文档、教学图和算术核对，不改原理图、器件/BOM、PCB、固件或控制模型。
+
 [R7：适配用户选购的STM32F103C8T6核心板](projects/2026-electronics-contest/g-buck/bluepill-carrier-r7/README.md) · [最新eprj3整包](projects/2026-electronics-contest/g-buck/bluepill-carrier-r7/downloads/GBUCK_System_R7_EPRJ3.zip)。相对R6，核心板换为用户截图同款，USB端上排首针改接GND，排间距要求改15.24mm；更新BOM，GPIO/屏幕/主功率与辅源/模型保留。实际连线及格式静态检查通过；尚无PCB/原生ERC/实物验收。
 
 2026-11-08：[R6可拔插主控与屏幕：已选模块、原理图及BOM](projects/2026-electronics-contest/g-buck/socket-adaptation-r6/README.md) · [eprj3完整工程](projects/2026-electronics-contest/g-buck/socket-adaptation-r6/downloads/GBUCK_System_R6_EPRJ3.zip)。WeAct BluePill-Plus V1.1/ST STM32F103C8T6＋Joy-IT SBC-LCD84x48 Rev.2，通过排母安装；主控底板17件88脚，另采购两个模块。相对R5更改插座/JLCD脚序、电压ADC至PA2及减小键至PB10，需改固件配置；主功率/辅源图页和10针接口不变，模型未改。静态网络及官方只读查看器通过；封装/PCB、供电容差、实物和代焊订单仍待核。
