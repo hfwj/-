@@ -122,7 +122,7 @@ assert pins['D1']['1']=='CC_OUT' and pins['D1']['3']=='CC_K' and pins['D2']['1']
 assert pins['U5']['3']=='I_FILT' and pins['U5']['2']=='I_ERR' and pins['U5']['7']=='VSET_DRV'
 main=[x for x in csv.DictReader(sources[1].open(encoding='utf-8-sig')) if x['板']=='Mainboard'];assert len(main)==45
 with (R/'results/data/Mainboard_BOM_Reference_R7.csv').open('w',encoding='utf-8-sig',newline='') as f:
-    w=csv.DictWriter(f,fieldnames=main[0]);w.writeheader();w.writerows(main)
+    w=csv.DictWriter(f,fieldnames=main[0],lineterminator='\n');w.writeheader();w.writerows(main)
 
 # One Markdown source -> Word and PDF. No browser/Office conversion is claimed.
 md=R/'reports/主功率电路从零讲解_R7.md';lines=md.read_text().splitlines()
