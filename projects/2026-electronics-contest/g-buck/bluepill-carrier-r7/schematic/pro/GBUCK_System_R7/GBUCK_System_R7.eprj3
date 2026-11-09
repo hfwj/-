@@ -1,0 +1,106 @@
+{
+  "name": "GBUCK_System_R7",
+  "owner_uuid": "",
+  "creator_uuid": "",
+  "modifier_uuid": "",
+  "created_at": "2026-11-08 12:00:00",
+  "updated_at": "2026-11-08 12:00:00",
+  "content": "R7 user-selected Blue Pill: USB-end upper contact GND, row pitch15.24mm; display unchanged; footprints unbound",
+  "archive": false,
+  "cbb_project": 0,
+  "thumb": "",
+  "ticket": 1,
+  "g_ticket": 1,
+  "boards": [],
+  "block_symbol_attrs_groups": {},
+  "default_sheet": "a442ed54914e1a86",
+  "branch_uuid": "",
+  "pcb_count": 0,
+  "format": "folder",
+  "profile": {
+    "boards": {
+      "f46521e53c6c0917": {
+        "uuid": "f46521e53c6c0917",
+        "title": "Mainboard_R3",
+        "zIndex": 1
+      },
+      "4f37c1ccacc0e640": {
+        "uuid": "4f37c1ccacc0e640",
+        "title": "Auxiliary_R5",
+        "zIndex": 1
+      },
+      "17e3c58eb40ba94d": {
+        "uuid": "17e3c58eb40ba94d",
+        "title": "Control_R7",
+        "zIndex": 1
+      }
+    },
+    "schematics": {
+      "1c2dc8266a1e8204": {
+        "uuid": "1c2dc8266a1e8204",
+        "name": "Mainboard",
+        "board": "f46521e53c6c0917",
+        "source": "",
+        "version": "1794117407572",
+        "updateTime": 1794117407572
+      },
+      "94d1b90801028e25": {
+        "uuid": "94d1b90801028e25",
+        "name": "Auxiliary",
+        "board": "4f37c1ccacc0e640",
+        "source": "",
+        "version": "1794119317049",
+        "updateTime": 1794119317049
+      },
+      "66677505eaee6bcb": {
+        "uuid": "66677505eaee6bcb",
+        "name": "Control",
+        "board": "17e3c58eb40ba94d",
+        "source": "",
+        "version": "1794196687891",
+        "updateTime": 1794196687891
+      }
+    },
+    "sheets": {
+      "313b0a653222b232": {
+        "uuid": "313b0a653222b232",
+        "title": "Mainboard_6_Blocks",
+        "schematic_uuid": "1c2dc8266a1e8204",
+        "zIndex": 1,
+        "source": "",
+        "version": "1794117407572",
+        "updateTime": 1794117407572
+      },
+      "e47ca70c15c6fcd8": {
+        "uuid": "e47ca70c15c6fcd8",
+        "title": "Auxiliary_Blocks",
+        "schematic_uuid": "94d1b90801028e25",
+        "zIndex": 1,
+        "source": "",
+        "version": "1794119317049",
+        "updateTime": 1794119317049
+      },
+      "a442ed54914e1a86": {
+        "uuid": "a442ed54914e1a86",
+        "title": "Control_Sockets_R7",
+        "schematic_uuid": "66677505eaee6bcb",
+        "zIndex": 1,
+        "source": "",
+        "version": "1794196687891",
+        "updateTime": 1794196687891
+      }
+    },
+    "pcbs": {},
+    "panels": {},
+    "blockSymbols": {},
+    "owner": {
+      "uuid": ""
+    },
+    "simSchematics": {},
+    "simulations": {}
+  },
+  "config": {
+    "defaultSheet": "a442ed54914e1a86",
+    "settings": {}
+  }
+}

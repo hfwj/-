@@ -1,0 +1,47 @@
+{
+  "baseline": "2fcaa7d R6",
+  "carrier_components": 17,
+  "carrier_pins": 88,
+  "carrier_NC": 22,
+  "system_board_mounted_components": 73,
+  "plug_in_modules": 2,
+  "removed_carrier_refs": [],
+  "GPIO_changes": {},
+  "main_auxiliary_sheets_byte_identical_to_R5": true,
+  "IDC_J1_equals_R5": true,
+  "native_editor_ERC": false,
+  "footprints_bound": false,
+  "PCB": false,
+  "hardware_test": false,
+  "historical_removed_carrier_refs_from_R5": [
+    "U6",
+    "R16",
+    "C15",
+    "R17",
+    "R18",
+    "C16",
+    "C17",
+    "C18",
+    "C19",
+    "JSWD"
+  ],
+  "carrier_pin_changes": [
+    {
+      "ref": "JCORE1",
+      "pin": "1",
+      "R6": "NC",
+      "R7": "GND"
+    }
+  ],
+  "GPIO_unchanged_from_R6": true,
+  "core_module_replaced": true,
+  "row_spacing_mm": {
+    "R6": 15.22,
+    "R7": 15.24
+  },
+  "main_auxiliary_sheets_byte_identical_to_R6": true,
+  "screen_pin_map_equals_R6": true,
+  "removed_carrier_refs_since_R6": [],
+  "core_identity_verified_by": "user screenshots and first-contact GND confirmation; no actual board test",
+  "official_viewer": "NOT RUN FOR R7"
+}

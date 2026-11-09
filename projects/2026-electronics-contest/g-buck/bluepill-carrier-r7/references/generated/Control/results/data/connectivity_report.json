@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "components": 17,
+  "pins": 88,
+  "no_connect_pins": 22,
+  "orthogonal_wire_segments": 75,
+  "errors": [],
+  "native_editor_erc": "NOT RUN",
+  "PCB": "NOT CREATED",
+  "footprints": "NOT ASSIGNED",
+  "hardware_validation": "NOT RUN"
+}

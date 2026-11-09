@@ -1,0 +1,244 @@
+{
+  "components": {
+    "JPP": {
+      "value": "3V3 BENCH POST 4P",
+      "zone": 1,
+      "pins": {
+        "1": "+3V3",
+        "2": "+3V3",
+        "3": "+3V3",
+        "4": "+3V3"
+      }
+    },
+    "JPN": {
+      "value": "GND BENCH POST 4P",
+      "zone": 1,
+      "pins": {
+        "1": "GND",
+        "2": "GND",
+        "3": "GND",
+        "4": "GND"
+      }
+    },
+    "C20": {
+      "value": "4.7uF",
+      "zone": 1,
+      "pins": {
+        "1": "+3V3",
+        "2": "GND"
+      }
+    },
+    "JCORE1": {
+      "value": "BLUEPILL UPPER 1x20",
+      "zone": 2,
+      "pins": {
+        "1": "GND",
+        "2": "GND",
+        "3": "+3V3",
+        "4": "NC",
+        "5": "NC",
+        "6": "KEY_DOWN",
+        "7": "LCD_RST",
+        "8": "LCD_DC",
+        "9": "LCD_DIN",
+        "10": "NC",
+        "11": "LCD_CLK",
+        "12": "LCD_CE",
+        "13": "NC",
+        "14": "VOUT_ADC",
+        "15": "ISENSE",
+        "16": "NC",
+        "17": "NC",
+        "18": "NC",
+        "19": "NC",
+        "20": "NC"
+      }
+    },
+    "JCORE2": {
+      "value": "BLUEPILL LOWER 1x20",
+      "zone": 2,
+      "pins": {
+        "1": "NC",
+        "2": "NC",
+        "3": "NC",
+        "4": "NC",
+        "5": "RUN",
+        "6": "KEY_SET",
+        "7": "KEY_UP",
+        "8": "NC",
+        "9": "NC",
+        "10": "NC",
+        "11": "NC",
+        "12": "NC",
+        "13": "NC",
+        "14": "SCL",
+        "15": "SDA",
+        "16": "NC",
+        "17": "NC",
+        "18": "NC",
+        "19": "GND",
+        "20": "+3V3"
+      }
+    },
+    "J1": {
+      "value": "TO MAINBOARD J3",
+      "zone": 3,
+      "pins": {
+        "1": "+3V3",
+        "2": "GND",
+        "3": "SCL",
+        "4": "SDA",
+        "5": "VSET_DRV",
+        "6": "CC_OUT",
+        "7": "ISENSE",
+        "8": "VOUT_ADC",
+        "9": "RUN",
+        "10": "GND"
+      }
+    },
+    "R14": {
+      "value": "4.7k",
+      "zone": 3,
+      "pins": {
+        "1": "SCL",
+        "2": "+3V3"
+      }
+    },
+    "R15": {
+      "value": "4.7k",
+      "zone": 3,
+      "pins": {
+        "1": "SDA",
+        "2": "+3V3"
+      }
+    },
+    "JLCD": {
+      "value": "JOY-IT REV.2 SOCKET 1x8",
+      "zone": 4,
+      "pins": {
+        "1": "GND",
+        "2": "GND",
+        "3": "+3V3",
+        "4": "LCD_CLK",
+        "5": "LCD_DIN",
+        "6": "LCD_DC",
+        "7": "LCD_CE",
+        "8": "LCD_RST"
+      }
+    },
+    "C21": {
+      "value": "100nF 50V",
+      "zone": 4,
+      "pins": {
+        "1": "+3V3",
+        "2": "GND"
+      }
+    },
+    "C22": {
+      "value": "1uF",
+      "zone": 4,
+      "pins": {
+        "1": "+3V3",
+        "2": "GND"
+      }
+    },
+    "R19": {
+      "value": "10k",
+      "zone": 5,
+      "pins": {
+        "1": "KEY_SET",
+        "2": "+3V3"
+      }
+    },
+    "K1": {
+      "value": "NO momentary",
+      "zone": 5,
+      "pins": {
+        "1": "KEY_SET",
+        "2": "GND"
+      }
+    },
+    "R20": {
+      "value": "10k",
+      "zone": 5,
+      "pins": {
+        "1": "KEY_UP",
+        "2": "+3V3"
+      }
+    },
+    "K2": {
+      "value": "NO momentary",
+      "zone": 5,
+      "pins": {
+        "1": "KEY_UP",
+        "2": "GND"
+      }
+    },
+    "R21": {
+      "value": "10k",
+      "zone": 5,
+      "pins": {
+        "1": "KEY_DOWN",
+        "2": "+3V3"
+      }
+    },
+    "K3": {
+      "value": "NO momentary",
+      "zone": 5,
+      "pins": {
+        "1": "KEY_DOWN",
+        "2": "GND"
+      }
+    }
+  },
+  "zones": [
+    {
+      "number": 1,
+      "title": "供电接线柱与底板储能",
+      "x": 20,
+      "y": 100,
+      "width": 1460,
+      "height": 1020
+    },
+    {
+      "number": 2,
+      "title": "可拔插用户选购Blue Pill：两条20针排母",
+      "x": 1510,
+      "y": 100,
+      "width": 1460,
+      "height": 1020
+    },
+    {
+      "number": 3,
+      "title": "主功率板接口与I2C上拉",
+      "x": 20,
+      "y": 1140,
+      "width": 1460,
+      "height": 1020
+    },
+    {
+      "number": 4,
+      "title": "可拔插Joy-IT Rev.2屏幕",
+      "x": 1510,
+      "y": 1140,
+      "width": 1460,
+      "height": 1020
+    },
+    {
+      "number": 5,
+      "title": "三个操作按键与上拉",
+      "x": 20,
+      "y": 2180,
+      "width": 1460,
+      "height": 1020
+    },
+    {
+      "number": 6,
+      "title": "供电、SWD与装配说明",
+      "x": 1510,
+      "y": 2180,
+      "width": 1460,
+      "height": 1020
+    }
+  ]
+}

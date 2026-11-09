@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "components": 17,
+  "pins": 88,
+  "no_connect_pins": 22,
+  "wire_segments": 75,
+  "embedded_symbols": 17,
+  "index_sheet_resolved": true,
+  "comparison": "R7 user-selected core: JCORE1.1 NC to GND; GPIO unchanged from R6",
+  "errors": [],
+  "native_editor_erc": "NOT RUN",
+  "footprints": "NOT ASSIGNED",
+  "hardware": "NOT TESTED"
+}

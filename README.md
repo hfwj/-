@@ -26,6 +26,8 @@
 
 ## 项目目录
 
+[R7：适配用户选购的STM32F103C8T6核心板](projects/2026-electronics-contest/g-buck/bluepill-carrier-r7/README.md) · [最新eprj3整包](projects/2026-electronics-contest/g-buck/bluepill-carrier-r7/downloads/GBUCK_System_R7_EPRJ3.zip)。相对R6，核心板换为用户截图同款，USB端上排首针改接GND，排间距要求改15.24mm；更新BOM，GPIO/屏幕/主功率与辅源/模型保留。实际连线及格式静态检查通过；尚无PCB/原生ERC/实物验收。
+
 2026-11-08：[R6可拔插主控与屏幕：已选模块、原理图及BOM](projects/2026-electronics-contest/g-buck/socket-adaptation-r6/README.md) · [eprj3完整工程](projects/2026-electronics-contest/g-buck/socket-adaptation-r6/downloads/GBUCK_System_R6_EPRJ3.zip)。WeAct BluePill-Plus V1.1/ST STM32F103C8T6＋Joy-IT SBC-LCD84x48 Rev.2，通过排母安装；主控底板17件88脚，另采购两个模块。相对R5更改插座/JLCD脚序、电压ADC至PA2及减小键至PB10，需改固件配置；主功率/辅源图页和10针接口不变，模型未改。静态网络及官方只读查看器通过；封装/PCB、供电容差、实物和代焊订单仍待核。
 
 2026-11-08：[R5主控六区＋辅助降压三区原理图及BOM](projects/2026-electronics-contest/g-buck/partition-r5/README.md) · [eprj3完整工程](projects/2026-electronics-contest/g-buck/partition-r5/downloads/GBUCK_System_R5_EPRJ3.zip)。两板36件150脚，重画分区及实际连线，保留R4网络/标称值；补全部分0805建议选型，固件/模型不改。用户确认保留通孔件，由工厂贴片＋插件焊接，替代此前全SMT要求；实际料号/订单审核、封装/PCB/实测仍待完成。

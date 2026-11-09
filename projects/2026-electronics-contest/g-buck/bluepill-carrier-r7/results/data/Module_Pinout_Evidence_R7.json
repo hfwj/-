@@ -1,0 +1,69 @@
+{
+  "core": {
+    "P1": [
+      "GND",
+      "GND",
+      "3V3",
+      "NRST",
+      "PB11",
+      "PB10",
+      "PB1",
+      "PB0",
+      "PA7",
+      "PA6",
+      "PA5",
+      "PA4",
+      "PA3",
+      "PA2",
+      "PA1",
+      "PA0",
+      "PC15",
+      "PC14",
+      "PC13",
+      "VB"
+    ],
+    "P2": [
+      "PB12",
+      "PB13",
+      "PB14",
+      "PB15",
+      "PA8",
+      "PA9",
+      "PA10",
+      "PA11",
+      "PA12",
+      "PA15",
+      "PB3",
+      "PB4",
+      "PB5",
+      "PB6",
+      "PB7",
+      "PB8",
+      "PB9",
+      "5V",
+      "GND",
+      "3V3"
+    ],
+    "P3": [
+      "3V3",
+      "SWDIO",
+      "SWCLK",
+      "GND"
+    ]
+  },
+  "lcd_revision_2": [
+    "GND",
+    "LIGHT",
+    "VCC",
+    "CLK",
+    "DIN",
+    "DC",
+    "CE",
+    "RST"
+  ],
+  "source": "用户商品截图（非厂家原理图）＋用户确认USB端上排首针GND",
+  "orientation": "元件面朝上，USB朝左，P1=上排，P2=下排，两排均从USB端编号1至20",
+  "row_pitch_mm": 15.24,
+  "pin_pitch_mm": 2.54,
+  "actual_board_verified": false
+}
